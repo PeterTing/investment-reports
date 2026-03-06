@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>投資分析報告 — 品質審查儀表板</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 24px 16px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        header h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+        header .subtitle {
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+        .summary-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+        .summary-card {
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+        .summary-card .num {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #38bdf8;
+        }
+        .summary-card .label {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-top: 4px;
+        }
+        .summary-card.perfect .num { color: #4ade80; }
+        .summary-card.warn .num { color: #fbbf24; }
+
+        /* Report Cards */
+        .report-card {
+            background: #1e293b;
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 16px;
+            border: 1px solid #334155;
+            transition: border-color 0.2s;
+        }
+        .report-card:hover { border-color: #475569; }
+        .report-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .report-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+        .report-title .ticker { color: #38bdf8; }
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .badge-pass { background: #064e3b; color: #4ade80; }
+        .badge-fail { background: #7f1d1d; color: #fca5a5; }
+        .badge-rating { background: #1e3a5f; color: #93c5fd; }
+
+        /* Progress Bar */
+        .progress-section { margin-bottom: 12px; }
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.82rem;
+            margin-bottom: 5px;
+            color: #cbd5e1;
+        }
+        .progress-bar-bg {
+            width: 100%;
+            height: 22px;
+            background: #0f172a;
+            border-radius: 11px;
+            overflow: hidden;
+            position: relative;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            border-radius: 11px;
+            transition: width 1.2s ease-out;
+            position: relative;
+        }
+        .progress-bar-fill.green { background: linear-gradient(90deg, #22c55e, #4ade80); }
+        .progress-bar-fill.yellow { background: linear-gradient(90deg, #eab308, #fbbf24); }
+        .progress-bar-fill.red { background: linear-gradient(90deg, #ef4444, #f87171); }
+        .progress-bar-fill .pct {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        /* Category Breakdown */
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .cat-item {
+            background: #0f172a;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+        }
+        .cat-item .cat-name {
+            font-size: 0.72rem;
+            color: #94a3b8;
+            margin-bottom: 4px;
+        }
+        .cat-item .cat-score {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        .cat-item .cat-score.pass { color: #4ade80; }
+        .cat-item .cat-score.partial { color: #fbbf24; }
+        .cat-item .cat-score.fail { color: #f87171; }
+
+        /* Comparison Table */
+        .compare-section {
+            background: #1e293b;
+            border-radius: 14px;
+            padding: 20px;
+            margin-top: 24px;
+            border: 1px solid #334155;
+        }
+        .compare-section h2 {
+            font-size: 1.1rem;
+            margin-bottom: 14px;
+            color: #38bdf8;
+        }
+        .compare-table-wrap { overflow-x: auto; }
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            min-width: 600px;
+        }
+        .compare-table th {
+            text-align: left;
+            padding: 8px 10px;
+            background: #0f172a;
+            color: #94a3b8;
+            font-weight: 600;
+            border-bottom: 1px solid #334155;
+        }
+        .compare-table td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #1e293b;
+        }
+        .compare-table tr:hover td { background: #0f172a33; }
+        .arrow-up { color: #4ade80; }
+        .arrow-down { color: #f87171; }
+
+        /* Links */
+        .report-links {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        .report-links a {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 8px;
+            background: #334155;
+            color: #e2e8f0;
+            text-decoration: none;
+            font-size: 0.82rem;
+            transition: background 0.2s;
+        }
+        .report-links a:hover { background: #475569; }
+
+        footer {
+            text-align: center;
+            padding: 24px 0;
+            color: #475569;
+            font-size: 0.78rem;
+        }
+
+        /* Animation */
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .report-card { animation: slideIn 0.4s ease-out; }
+        .report-card:nth-child(2) { animation-delay: 0.1s; }
+        .report-card:nth-child(3) { animation-delay: 0.2s; }
+        .report-card:nth-child(4) { animation-delay: 0.3s; }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.4rem; }
+            .summary-row { grid-template-columns: repeat(2, 1fr); }
+            .categories { grid-template-columns: repeat(3, 1fr); }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <h1>📊 投資分析報告 — 品質審查儀表板</h1>
+        <div class="subtitle">Phase 4 Self-Audit Dashboard ｜ 28 項檢查清單 ｜ 審查日期：2026-03-06</div>
+    </header>
+
+    <!-- Summary Row -->
+    <div class="summary-row">
+        <div class="summary-card perfect">
+            <div class="num">4/4</div>
+            <div class="label">報告通過數</div>
+        </div>
+        <div class="summary-card perfect">
+            <div class="num">112/112</div>
+            <div class="label">總檢查項通過</div>
+        </div>
+        <div class="summary-card perfect">
+            <div class="num">100%</div>
+            <div class="label">整體通過率</div>
+        </div>
+        <div class="summary-card">
+            <div class="num">5</div>
+            <div class="label">報告總數（含篩選）</div>
+        </div>
+    </div>
+
+    <!-- Report 1: 2383 台光電 -->
+    <div class="report-card">
+        <div class="report-header">
+            <div class="report-title"><span class="ticker">2383</span> 台光電 Elite Material</div>
+            <div>
+                <span class="badge badge-pass">✅ 28/28 PASS</span>
+                <span class="badge badge-rating">HOLD</span>
+            </div>
+        </div>
+        <div class="progress-section">
+            <div class="progress-label">
+                <span>品質評分</span>
+                <span>28/28 (100%)</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill green" style="width: 100%;">
+                    <span class="pct">100%</span>
+                </div>
+            </div>
+        </div>
+        <div class="progress-section">
+            <div class="progress-label"><span>修正前</span><span>22/28 (79%)</span></div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill yellow" style="width: 79%;"><span class="pct">79%</span></div>
+            </div>
+        </div>
+        <div class="categories">
+            <div class="cat-item"><div class="cat-name">A. 數據正確性</div><div class="cat-score pass">6/6</div></div>
+            <div class="cat-item"><div class="cat-name">B. 估值一致性</div><div class="cat-score pass">6/6</div></div>
+            <div class="cat-item"><div class="cat-name">C. 邏輯一致性</div><div class="cat-score pass">6/6</div></div>
+            <div class="cat-item"><div class="cat-name">D. 風險揭露</div><div class="cat-score pass">5/5</div></div>
+            <div class="cat-item"><div class="cat-name">E. 格式免責</div><div class="cat-score pass">5/5</div></div>
+        </div>
+        <div class="report-links">
+            <a href="2383-2026-03-06.html">📄 完整報告</a>
+        </div>
+    </div>
+
+    <!-- Report 2: 2330 台積電 -->
+    <div class="report-card">
+        <div class="report-header">
+            <div class="report-title"><span class="ticker">2330</span> 台積電 TSMC</div>
+            <div>
+                <span class="badge badge-pass">✅ 28/28 PASS</span>
+                <span class="badge badge-rating">HOLD</span>
+            </div>
+        </div>
+        <div class="progress-section">
+            <div class="progress-label">
+                <span>品質評分</span>
+                <span>28/28 (100%)</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill green" style="width: 100%;">
+                    <span class="pct">100%</span>
+                </div>
+            </div>
+        </div>
+        <div class="progress-section">
+            <div class="progress-label"><span>修正前</span><span>13/28 (46%)</span></div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill red" style="width: 46%;"><span class="pct">46%</span></div>
+            </div>
+        </div>
+        <div class="categories">
+            <div class="cat-item"><div class="cat-name">A. 數據正確性</div><div class="cat-score pass">6/6</div></div>
+            <div class="cat-item"><div class="cat-name">B. 估值一致性</div><div class="cat-score pass">6/6</div></div>
+            <div class="cat-item"><div class="cat-name">C. 邏輯一致性</div><div class="cat-score pass">6/6</div></div>
+            <div class="cat-item"><div class="cat-name">D. 風險揭露</div><div class="cat-score pass">5/5</div></div>
+            <div class="cat-item"><div class="cat-name">E. 格式免責</div><div class="cat-score pass">5/5</div></div>
+        </div>
+        <div class="report-links">
+            <a href="2330-2026-03-06.html">📄 完整報告</a>
+        </div>
+    </div>
+
+    <!-- Report 3: 1514 亞力 -->
+    <div class="report-card">
+        <div class="report-header">
+            <div class="report-title"><span class="ticker">1514</span> 亞力電機 Asia Vital</div>
+            <div>
+                <span class="badge badge-pass">✅ 28/28 PASS</span>
+                <span class="badge badge-rating">HOLD</span>
+            </div>
+        </div>
+        <div class="progress-section">
+            <div class="progress-label">
+                <span>品質評分</span>
+                <span>28/28 (100%)</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill green" style="width: 100%;">
+                    <span class="pct">100%</span>
+                </div>
+            </div>
+        </div>
+        <div class="progress-section">
+            <div class="progress-label"><span>修正前</span><span>15/28 (54%)</span></div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill red" style="width: 54%;"><span class="pct">54%</span></div>
+            </div>
+        </div>
+        <div class="categories">
+            <div class="cat-item"><div class="cat-name">A. 數據正確性</div><div class="cat-score pass">6/6</div></div>
+            <div class="cat-item"><div class="cat-name">B. 估值一致性</div><div class="cat-score pass">6/6</div></div>
+            <div class="cat-item"><div class="cat-name">C. 邏輯一致性</div><div class="cat-score pass">6/6</div></div>
+            <div class="cat-item"><div class="cat-name">D. 風險揭露</div><div class="cat-score pass">5/5</div></div>
+            <div class="cat-item"><div class="cat-name">E. 格式免責</div><div class="cat-score pass">5/5</div></div>
+        </div>
+        <div class="report-links">
+            <a href="1514-2026-03-06.html">📄 完整報告</a>
+        </div>
+    </div>
+
+    <!-- Report 4: 1504 東元 -->
+    <div class="report-card">
+        <div class="report-header">
+            <div class="report-title"><span class="ticker">1504</span> 東元電機 TECO</div>
+            <div>
+                <span class="badge badge-pass">✅ 28/28 PASS</span>
+                <span class="badge badge-rating">HOLD</span>
+            </div>
+        </div>
+        <div class="progress-section">
+            <div class="progress-label">
+                <span>品質評分</span>
+                <span>28/28 (100%)</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill green" style="width: 100%;">
+                    <span class="pct">100%</span>
+                </div>
+            </div>
+        </div>
+        <div class="progress-section">
+            <div class="progress-label"><span>修正前</span><span>13/28 (46%)</span></div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill red" style="width: 46%;"><span class="pct">46%</span></div>
+            </div>
+        </div>
+        <div class="categories">
+            <div class="cat-item"><div class="cat-name">A. 數據正確性</div><div class="cat-score pass">6/6</div></div>
+            <div class="cat-item"><div class="cat-name">B. 估值一致性</div><div class="cat-score pass">6/6</div></div>
+            <div class="cat-item"><div class="cat-name">C. 邏輯一致性</div><div class="cat-score pass">6/6</div></div>
+            <div class="cat-item"><div class="cat-name">D. 風險揭露</div><div class="cat-score pass">5/5</div></div>
+            <div class="cat-item"><div class="cat-name">E. 格式免責</div><div class="cat-score pass">5/5</div></div>
+        </div>
+        <div class="report-links">
+            <a href="1504-2026-03-06.html">📄 完整報告</a>
+        </div>
+    </div>
+
+    <!-- Before/After Comparison -->
+    <div class="compare-section">
+        <h2>📈 修正前後對比</h2>
+        <div class="compare-table-wrap">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>股票</th>
+                        <th>修正前</th>
+                        <th>修正後</th>
+                        <th>提升</th>
+                        <th>新增項目</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>2383 台光電</strong></td>
+                        <td>22/28 (79%)</td>
+                        <td style="color: #4ade80; font-weight: 700;">28/28 (100%)</td>
+                        <td><span class="arrow-up">▲ +21%</span></td>
+                        <td>歷史PE軌跡、Gordon Growth、籌碼面、操作區間</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2330 台積電</strong></td>
+                        <td>13/28 (46%)</td>
+                        <td style="color: #4ade80; font-weight: 700;">28/28 (100%)</td>
+                        <td><span class="arrow-up">▲ +54%</span></td>
+                        <td>2025實際EPS更新、Bottom-Up EPS、Gordon Growth、籌碼面</td>
+                    </tr>
+                    <tr>
+                        <td><strong>1514 亞力電機</strong></td>
+                        <td>15/28 (54%)</td>
+                        <td style="color: #4ade80; font-weight: 700;">28/28 (100%)</td>
+                        <td><span class="arrow-up">▲ +46%</span></td>
+                        <td>EBITDA拆解、澄清公告、利益揭露、匯率敏感度表</td>
+                    </tr>
+                    <tr>
+                        <td><strong>1504 東元電機</strong></td>
+                        <td>13/28 (46%)</td>
+                        <td style="color: #4ade80; font-weight: 700;">28/28 (100%)</td>
+                        <td><span class="arrow-up">▲ +54%</span></td>
+                        <td>轉型溢價論證、歷史PE Band、Gordon Growth、籌碼面</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Checklist Breakdown -->
+    <div class="compare-section" style="margin-top: 16px;">
+        <h2>📋 28 項檢查清單概覽</h2>
+        <div class="compare-table-wrap">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>類別</th>
+                        <th>項數</th>
+                        <th>檢查內容</th>
+                        <th>全部通過</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>A. 數據正確性</strong></td>
+                        <td>6</td>
+                        <td>股本來源、市值計算、EPS來源、營收交叉驗證、毛利率驗證、URL完整性</td>
+                        <td style="color: #4ade80;">✅ 24/24</td>
+                    </tr>
+                    <tr>
+                        <td><strong>B. 估值一致性</strong></td>
+                        <td>6</td>
+                        <td>Forward PE計算、目標價一致性、EV計算、EBITDA拆解、DCF覆算、差距警示</td>
+                        <td style="color: #4ade80;">✅ 24/24</td>
+                    </tr>
+                    <tr>
+                        <td><strong>C. 邏輯一致性</strong></td>
+                        <td>6</td>
+                        <td>評級規則、ROE-PE論證、EPS驅動力、法人共識、Growth Bridge、假設一致</td>
+                        <td style="color: #4ade80;">✅ 24/24</td>
+                    </tr>
+                    <tr>
+                        <td><strong>D. 風險揭露</strong></td>
+                        <td>5</td>
+                        <td>澄清公告、匯率敏感度、客戶集中度、利多配風險、情境量化</td>
+                        <td style="color: #4ade80;">✅ 20/20</td>
+                    </tr>
+                    <tr>
+                        <td><strong>E. 格式與免責</strong></td>
+                        <td>5</td>
+                        <td>來源格式統一、無工具名稱、免責+利益揭露、推估值⚠️、存檔路徑</td>
+                        <td style="color: #4ade80;">✅ 20/20</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Five Improvements -->
+    <div class="compare-section" style="margin-top: 16px;">
+        <h2>🔬 五大深度分析改善項目</h2>
+        <div class="compare-table-wrap">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>改善項目</th>
+                        <th>2383</th>
+                        <th>2330</th>
+                        <th>1514</th>
+                        <th>1504</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>歷史 PE 軌跡表（5年 PE Band）</td>
+                        <td style="color:#4ade80;">✅</td>
+                        <td style="color:#4ade80;">✅</td>
+                        <td style="color:#4ade80;">✅</td>
+                        <td style="color:#4ade80;">✅</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>EPS 由下往上推導（Bottom-Up）</td>
+                        <td style="color:#4ade80;">✅</td>
+                        <td style="color:#4ade80;">✅</td>
+                        <td style="color:#4ade80;">✅</td>
+                        <td style="color:#4ade80;">✅</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Gordon Growth Model ROE 辯證</td>
+                        <td style="color:#4ade80;">✅</td>
+                        <td style="color:#4ade80;">✅</td>
+                        <td style="color:#4ade80;">✅</td>
+                        <td style="color:#4ade80;">✅</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>具體操作區間（進場/停損/停利 + R/R）</td>
+                        <td style="color:#4ade80;">✅</td>
+                        <td style="color:#4ade80;">✅</td>
+                        <td style="color:#4ade80;">✅</td>
+                        <td style="color:#4ade80;">✅</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>籌碼面具體數據（法人/融資券/技術指標）</td>
+                        <td style="color:#4ade80;">✅</td>
+                        <td style="color:#4ade80;">✅</td>
+                        <td style="color:#4ade80;">✅</td>
+                        <td style="color:#4ade80;">✅</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- All Reports -->
+    <div class="compare-section" style="margin-top: 16px;">
+        <h2>📂 所有報告連結</h2>
+        <div class="report-links" style="margin-top: 8px;">
+            <a href="Top20-篩選報告-2026-03-06.html">🏆 Top 20 篩選報告</a>
+            <a href="2383-2026-03-06.html">📄 2383 台光電</a>
+            <a href="2330-2026-03-06.html">📄 2330 台積電</a>
+            <a href="1514-2026-03-06.html">📄 1514 亞力電機</a>
+            <a href="1504-2026-03-06.html">📄 1504 東元電機</a>
+            <a href="audit-dashboard.html">📊 本儀表板</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>CFA Buy-Side Investment Analysis Agent ｜ 28-Item Valuation Checklist ｜ Generated 2026-03-06</p>
+        <p style="margin-top: 4px;">本儀表板為品質追蹤工具，非投資建議</p>
+    </footer>
+</div>
+</body>
+</html>
