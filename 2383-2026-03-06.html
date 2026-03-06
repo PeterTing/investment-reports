@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>台光電 (2383) 深度投資分析報告 - 2026 Q1</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --green: #276749;
+    --yellow: #975a16;
+    --red: #c53030;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+  .container { max-width: 960px; margin: 0 auto; padding: 20px; }
+  header { background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; padding: 40px 0; margin-bottom: 30px; }
+  header .container { display: flex; flex-direction: column; gap: 12px; }
+  header h1 { font-size: 1.8em; font-weight: 700; }
+  header .meta { display: flex; flex-wrap: wrap; gap: 20px; font-size: 0.9em; opacity: 0.9; }
+  .rating-box { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.15); border-radius: 8px; padding: 10px 20px; font-size: 1.1em; font-weight: 600; }
+  .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 20px 0; }
+  .summary-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; text-align: center; }
+  .summary-card .label { font-size: 0.8em; color: var(--muted); text-transform: uppercase; }
+  .summary-card .value { font-size: 1.4em; font-weight: 700; color: var(--primary); margin-top: 4px; }
+  section { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 30px; margin-bottom: 24px; }
+  h2 { color: var(--primary); font-size: 1.4em; border-bottom: 2px solid var(--accent); padding-bottom: 8px; margin-bottom: 20px; }
+  h3 { color: var(--accent); font-size: 1.1em; margin: 20px 0 10px; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9em; }
+  th { background: var(--primary); color: white; padding: 10px 12px; text-align: left; font-weight: 600; }
+  td { padding: 8px 12px; border-bottom: 1px solid var(--border); }
+  tr:nth-child(even) { background: #f0f4f8; }
+  tr:hover { background: #e8edf2; }
+  .highlight { background: #ebf8ff !important; font-weight: 600; }
+  .source { font-size: 0.8em; color: var(--muted); margin-top: 8px; line-height: 1.5; }
+  .source a { color: var(--accent); text-decoration: none; }
+  .source a:hover { text-decoration: underline; }
+  .warning { background: #fffbeb; border-left: 4px solid #d69e2e; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0; font-size: 0.9em; }
+  .danger { background: #fff5f5; border-left: 4px solid var(--red); padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0; font-size: 0.9em; }
+  .info { background: #ebf8ff; border-left: 4px solid var(--accent); padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0; font-size: 0.9em; }
+  .bull { color: var(--green); }
+  .bear { color: var(--red); }
+  .hold { color: var(--yellow); }
+  ul { padding-left: 24px; margin: 10px 0; }
+  li { margin-bottom: 6px; }
+  .sensitivity td, .sensitivity th { text-align: center; padding: 8px; }
+  .sensitivity .base { background: #ebf8ff; font-weight: 700; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; font-weight: 600; }
+  .badge-green { background: #c6f6d5; color: var(--green); }
+  .badge-yellow { background: #fefcbf; color: var(--yellow); }
+  .badge-red { background: #fed7d7; color: var(--red); }
+  footer { text-align: center; padding: 30px; color: var(--muted); font-size: 0.8em; }
+  @media print { body { background: white; } section { break-inside: avoid; } }
+  @media (max-width: 600px) { .summary-grid { grid-template-columns: 1fr 1fr; } header h1 { font-size: 1.4em; } }
+</style>
+</head>
+<body>
+
+<header>
+<div class="container">
+  <h1>台光電 (2383) 深度投資分析報告</h1>
+  <div class="meta">
+    <span>📅 報告日期：2026/03/06</span>
+    <span>👤 分析師：ARTOGO Research</span>
+    <span>⚠️ 風險等級：中高</span>
+  </div>
+  <div class="rating-box">🟡 投資評級：持有 ｜ 目標價：NT$ 2,283 元（EPS 60.08 × PE 38x）</div>
+  <div class="meta" style="margin-top:8px;">
+    <span>📊 基準股價：NT$ 2,380 元，取自 <a href="https://finance.yahoo.com/quote/2383.TW/" style="color:#90cdf4;">Yahoo Finance</a>，2026/03/02 收盤價</span>
+    <span>📐 基準股本：3.5754 億股，取自 <a href="https://stockanalysis.com/quote/tpe/2383/statistics/" style="color:#90cdf4;">Stock Analysis</a></span>
+  </div>
+</div>
+</header>
+
+<div class="container">
+
+<!-- Summary Cards -->
+<div class="summary-grid">
+  <div class="summary-card"><div class="label">股價</div><div class="value">NT$ 2,380</div></div>
+  <div class="summary-card"><div class="label">市值</div><div class="value">8,510 億</div></div>
+  <div class="summary-card"><div class="label">Forward PE (2026E)</div><div class="value">39.6x</div></div>
+  <div class="summary-card"><div class="label">2025 EPS</div><div class="value">~42 元</div></div>
+  <div class="summary-card"><div class="label">2026E EPS（共識）</div><div class="value">60.08 元</div></div>
+  <div class="summary-card"><div class="label">ROE (TTM)</div><div class="value">35.4%</div></div>
+  <div class="summary-card"><div class="label">EV/EBITDA (TTM)</div><div class="value">44.0x</div></div>
+  <div class="summary-card"><div class="label">PEG Ratio</div><div class="value">0.92</div></div>
+</div>
+
+<!-- Section 1: Executive Summary -->
+<section>
+<h2>1. 執行摘要 (Executive Summary)</h2>
+
+<h3>🎯 投資亮點</h3>
+<ul>
+  <li>✅ <strong>AI 伺服器 CCL 需求爆發</strong>：AI 高速運算推動高階 CCL/PP 需求，台光電為台灣市佔第一的 CCL（銅箔基板）廠，直接受惠於 800G/1.6T 交換器升級潮。
+    <div class="source">📎 來源：<a href="https://finance.yahoo.com/quote/2383.TW/">Yahoo Finance</a>，2026/03/02</div>
+  </li>
+  <li>✅ <strong>營收創歷史新高</strong>：2025 全年營收 942.42 億元，YoY +46.39%；2026 年 2 月單月營收 101.94 億元，YoY +45.01%，成長動能持續。
+    <div class="source">📎 來源：<a href="https://www.cnyes.com/twstock/2383">鉅亨網</a>，2026/03</div>
+  </li>
+  <li>✅ <strong>EPS 高速成長</strong>：2023→2024→2025 EPS 路徑為 16.40→27.81→~42 元，CAGR 約 60%；法人共識 2026E EPS 60.08 元、2027E 79.31 元。
+    <div class="source">📎 來源：<a href="https://statementdog.com/analysis/2383/eps">財報狗</a>，2026/03</div>
+  </li>
+  <li>✅ <strong>ROE 優異</strong>：TTM ROE 達 35.4%，遠高於同業聯茂（~7%）、台燿（~26%），反映公司在高階 CCL 的定價能力與產品組合優勢。
+    <div class="source">📎 來源：<a href="https://stockanalysis.com/quote/tpe/2383/statistics/">Stock Analysis</a>，2026/03</div>
+  </li>
+</ul>
+
+<h3>⚠️ 主要風險與雙面揭露</h3>
+<ul>
+  <li>⚠️ <strong>估值已充分反映成長</strong>：Forward PE 39.6x（2026E），DCF 估值（WACC 9%）僅約 1,430 元，與市場價格存在顯著落差，暗示市場已 price-in 超額成長預期。</li>
+  <li>⚠️ <strong>自由現金流為負</strong>：TTM FCF -6.9 億元，因大規模資本支出（昆山、中山廠擴建約 36 億 RMB），短期現金流承壓。</li>
+  <li>⚠️ <strong>AI 需求循環性風險</strong>：若 AI 資本支出放緩或技術路線轉變（如光互連取代銅互連），CCL 高階需求可能不如預期。</li>
+  <li>⚠️ <strong>客戶集中度</strong>：主要客戶集中於少數 PCB 大廠（如欣興、南電），單一客戶變動將直接影響營收。⚠️ 公司未揭露精確客戶佔比，此為推估。</li>
+</ul>
+</section>
+
+<!-- Section 2: Company Overview -->
+<section>
+<h2>2. 公司概況與競爭優勢</h2>
+
+<h3>2.1 事業群拆解與獲利率</h3>
+<table>
+  <tr><th>事業群</th><th>營收佔比</th><th>主力產品</th><th>毛利率 (推估)</th><th>營益率 (推估)</th></tr>
+  <tr><td>高階 CCL（AI/HPC 用）</td><td>~45%</td><td>超低損耗 CCL、ABF 載板材料</td><td>35% - 40%</td><td>28% - 32%</td></tr>
+  <tr><td>一般 CCL（通訊/消費電子）</td><td>~35%</td><td>FR-4、Halogen Free CCL</td><td>22% - 26%</td><td>14% - 18%</td></tr>
+  <tr><td>PP（半固化片）及其他</td><td>~20%</td><td>PP、銅箔加工</td><td>18% - 22%</td><td>10% - 14%</td></tr>
+</table>
+<div class="warning">⚠️ 公司未揭露精確分部利潤率，上表為綜合法說會、券商報告與產業資料之推估值。整體合併毛利率 29.9%、營益率 20.1%（TTM）。</div>
+<div class="source">📎 來源：<a href="https://stockanalysis.com/quote/tpe/2383/statistics/">Stock Analysis</a>，2026/03；公司法說會資料</div>
+
+<h3>2.2 策略交易分析</h3>
+<p>台光電近期最重大的策略布局為<strong>昆山及中山廠擴建計畫</strong>，董事會已通過資本支出預算約 36.17 億人民幣。預計 2025-2027 年產能將增加 25-30%，主要瞄準 AI 伺服器用高階 CCL 市場。此擴建將短期壓抑自由現金流，但長期有望鞏固台光電在全球高階 CCL 市場的領導地位。</p>
+
+<h3>2.3 客戶集中度風險</h3>
+<ul>
+  <li>前五大客戶佔營收比重：⚠️ 公司未揭露，推估約 50-60%</li>
+  <li>主要客戶為國內外 PCB 大廠，包括欣興、南電、景碩等 ABF 載板廠</li>
+  <li>單一大型客戶風險量化：若最大客戶訂單縮減 20%，推估影響營收約 6-8%，EPS 影響約 3-5 元</li>
+</ul>
+<div class="warning">⚠️ 客戶佔比為推估值，公司僅在法說會中概略說明客戶結構。</div>
+</section>
+
+<!-- Section 3: Financial Analysis -->
+<section>
+<h2>3. 財務分析與成長橋樑</h2>
+
+<h3>3.1 歷年 EPS 與成長路徑 (Growth Bridge)</h3>
+<table>
+  <tr><th>年度</th><th>EPS (元)</th><th>YoY 成長率</th><th>說明</th></tr>
+  <tr><td>2022</td><td>10.68</td><td>-</td><td>基期，消費電子下行</td></tr>
+  <tr><td>2023</td><td>16.40</td><td>+53.6%</td><td>AI 伺服器需求啟動，高階 CCL 放量</td></tr>
+  <tr><td>2024</td><td>27.81</td><td>+69.6%</td><td>AI/HPC 訂單持續增長，產品組合優化</td></tr>
+  <tr class="highlight"><td>2025E</td><td>~42</td><td>+51.0%</td><td>800G 交換器大量出貨，營收突破 942 億</td></tr>
+  <tr class="highlight"><td>2026E</td><td>60.08</td><td>+43.0%</td><td>1.6T 升級帶動高階 CCL 單價與用量提升</td></tr>
+  <tr class="highlight"><td>2027E</td><td>79.31</td><td>+32.0%</td><td>昆山/中山新產能開出，市佔進一步提升</td></tr>
+</table>
+<div class="source">📎 歷史數據來源：<a href="https://statementdog.com/analysis/2383/eps">財報狗</a>，2026/03<br>
+📎 預估數據來源：法人共識，引自 <a href="https://finance.yahoo.com/quote/2383.TW/analysis/">Yahoo Finance Analyst Estimates</a>，2026/03</div>
+
+<h3>3.2 季度 EPS 明細</h3>
+<table>
+  <tr><th>季度</th><th>2023</th><th>2024</th><th>2025</th></tr>
+  <tr><td>Q1</td><td>1.44</td><td>5.76</td><td>10.01</td></tr>
+  <tr><td>Q2</td><td>3.00</td><td>7.08</td><td>10.02</td></tr>
+  <tr><td>Q3</td><td>6.04</td><td>7.30</td><td>11.19</td></tr>
+  <tr><td>Q4</td><td>5.92</td><td>7.69</td><td>~10.78 ⚠️</td></tr>
+  <tr class="highlight"><td><strong>全年</strong></td><td><strong>16.40</strong></td><td><strong>27.81</strong></td><td><strong>~42 ⚠️</strong></td></tr>
+</table>
+<div class="warning">⚠️ 2025Q4 EPS 為推估值（全年 ~42 - 前三季 31.23 = ~10.78）。2025 全年財報預計 2026/03/11 公布。</div>
+
+<h3>3.3 EPS 推導模型（2026E）</h3>
+<table>
+  <tr><th>項目</th><th>2026E 假設</th><th>計算邏輯</th></tr>
+  <tr><td>預估營收</td><td>~1,370 億</td><td>基於 2025 營收 942 億，YoY +45%（2026/02 月營收 YoY +45%）</td></tr>
+  <tr><td>毛利率</td><td>31%</td><td>高階 CCL 佔比持續提升，產品組合改善</td></tr>
+  <tr><td>營益率</td><td>22%</td><td>費用率隨規模效應改善，研發費用率持平</td></tr>
+  <tr><td>營業利益</td><td>~301 億</td><td>1,370 × 22%</td></tr>
+  <tr><td>業外淨收支</td><td>~-15 億</td><td>利息支出增加（擴廠借款）+ 匯兌損益</td></tr>
+  <tr><td>稅前淨利</td><td>~286 億</td><td></td></tr>
+  <tr><td>有效稅率</td><td>25%</td><td>含海外子公司稅負</td></tr>
+  <tr class="highlight"><td><strong>預估 EPS</strong></td><td><strong>~60 元</strong></td><td>稅後淨利 ~215 億 / 股本 3.5754 億股</td></tr>
+</table>
+<div class="info">📌 自建 EPS 模型（~60 元）與法人共識（60.08 元）高度一致，驗證了假設合理性。</div>
+
+<h3>3.4 財務健全度</h3>
+<table>
+  <tr><th>指標</th><th>數值</th><th>說明</th><th>健康度</th></tr>
+  <tr><td>負債權益比 (D/E)</td><td>0.45</td><td>負債 200.6 億 / 股東權益 ~444 億</td><td><span class="badge badge-green">🟢 健康</span></td></tr>
+  <tr><td>流動比率</td><td>1.60</td><td>流動資產充裕</td><td><span class="badge badge-green">🟢 健康</span></td></tr>
+  <tr><td>自由現金流 (FCF)</td><td>-6.9 億</td><td>OCF 85.2 - CapEx 92.1</td><td><span class="badge badge-red">🔴 注意</span></td></tr>
+  <tr><td>FCF Yield</td><td>-0.08%</td><td>FCF / 市值 8,510</td><td><span class="badge badge-red">🔴 注意</span></td></tr>
+  <tr><td>Net Debt / EBITDA</td><td>0.20x</td><td>(200.6-161.4) / 194.1</td><td><span class="badge badge-green">🟢 健康</span></td></tr>
+</table>
+<div class="source">📎 來源：<a href="https://stockanalysis.com/quote/tpe/2383/statistics/">Stock Analysis</a>，2026/03（TTM 數據）</div>
+<div class="warning">⚠️ FCF 為負主要因大規模資本支出（昆山/中山廠擴建），預期 2027 年後 CapEx 回落，FCF 將轉正。D/E 比率與 Net Debt/EBITDA 均健康，顯示公司財務體質穩健，足以支撐擴建計畫。</div>
+</section>
+
+<!-- Section 4: Industry & Peer -->
+<section>
+<h2>4. 產業分析與同業比較</h2>
+
+<h3>4.1 ROE 分析與估值辯證</h3>
+<ul>
+  <li>近期 ROE (TTM)：35.4%</li>
+  <li>ROE = 稅後淨利 ~150 億 / 股東權益 ~444 億 = 33.8%（2025E 計算）</li>
+  <li>ROE 驗算：EPS ~42 元 / 每股淨值 124.18 元 = 33.8%</li>
+</ul>
+<div class="info">📌 <strong>ROE 與 PE 一致性辯證</strong>：ROE 35%+ 屬於頂尖水準，支撐高 PE 估值。根據 Gordon Growth 模型近似，合理 PB = ROE/CoE = 35%/9% = 3.9x，而目前 PB 約 19x（2,380/124.18），顯示市場給予的 PB 遠高於穩態合理值。<br><br>
+這意味著市場已 price-in 未來數年 ROE 持續在高水準、甚至進一步提升的預期。若 ROE 因競爭加劇或產品週期回落至 15-20%，估值將面臨顯著修正壓力。</div>
+
+<h3>4.2 同業比較矩陣</h3>
+<table>
+  <tr><th>指標</th><th>台光電 (2383)</th><th>聯茂 (6213)</th><th>台燿 (6274)</th></tr>
+  <tr><td>股價</td><td>NT$ 2,380</td><td>NT$ 135.5</td><td>NT$ 520</td></tr>
+  <tr><td>市值 (億)</td><td>8,510</td><td>480</td><td>1,442 ⚠️</td></tr>
+  <tr><td>Trailing PE</td><td>~57x</td><td>~38x</td><td>~47x</td></tr>
+  <tr><td>Forward PE (2026E)</td><td>39.6x</td><td>⚠️ 待查</td><td>⚠️ 待查</td></tr>
+  <tr><td>EV/EBITDA (TTM)</td><td>44.0x</td><td>⚠️ 待查</td><td>⚠️ 待查</td></tr>
+  <tr><td>ROE</td><td>35.4%</td><td>~7%</td><td>~26%</td></tr>
+  <tr><td>毛利率</td><td>29.9%</td><td>13.7%</td><td>21.2%</td></tr>
+  <tr><td>營益率</td><td>20.1%</td><td>5.8%</td><td>12.6%</td></tr>
+  <tr><td>2025 EPS 成長率</td><td>+51%</td><td>+50% ⚠️</td><td>+16% ⚠️</td></tr>
+  <tr><td>殖利率</td><td>~0.8% ⚠️</td><td>~1.3%</td><td>~1.3%</td></tr>
+</table>
+<div class="source">📎 來源：<a href="https://stockanalysis.com/quote/tpe/2383/statistics/">Stock Analysis</a>、<a href="https://winvest.tw/Stock/Symbol/Comment/6213">Win 投資 (6213)</a>、<a href="https://winvest.tw/Stock/Symbol/Comment/6274">Win 投資 (6274)</a>，2026/03</div>
+<div class="warning">⚠️ 部分同業指標為推估值或取自不同時間點。聯茂與台燿的 Forward PE 及 EV/EBITDA 因資料取得限制，標記為待查。</div>
+
+<div class="info">📌 <strong>同業比較結論</strong>：台光電在三大 CCL 同業中，毛利率（29.9%）與營益率（20.1%）均為最高，反映高階產品佔比優勢。ROE（35.4%）更是大幅領先，顯示公司在資本運用效率上遠勝同業。估值亦為最高（Trailing PE 57x vs 聯茂 38x / 台燿 47x），反映市場對其 AI 受惠程度的溢價認可。</div>
+</section>
+
+<!-- Section 5: Valuation -->
+<section>
+<h2>5. 估值分析</h2>
+
+<h3>5.1 Forward P/E</h3>
+<table>
+  <tr><th>項目</th><th>數值</th></tr>
+  <tr><td>計算</td><td>股價 2,380 / 2026E EPS 60.08 = <strong>39.6x</strong></td></tr>
+  <tr><td>同業平均 Trailing PE</td><td>~47x（聯茂 38x、台燿 47x、台光電 57x 平均）</td></tr>
+  <tr><td>評價</td><td>Forward PE 39.6x 低於同業 Trailing PE 平均，但以絕對值而言仍屬偏高水準</td></tr>
+</table>
+<p><strong>目標價推導</strong>：2026E EPS 60.08 × 目標 PE 38x = <strong>NT$ 2,283</strong></p>
+<div class="info">📌 PE 38x 的依據：考量 2026E EPS YoY +43%、ROE 35%+，給予略低於 forward PE 的倍數以反映成長減速預期。</div>
+
+<h3>5.2 EV/EBITDA</h3>
+<table>
+  <tr><th>項目</th><th>計算</th></tr>
+  <tr><td>EV</td><td>市值 8,510 + 負債 200.6 - 現金 161.4 = <strong>8,549 億</strong></td></tr>
+  <tr><td>EBITDA (TTM)</td><td><strong>194.1 億</strong></td></tr>
+  <tr><td>EV/EBITDA</td><td>8,549 / 194.1 = <strong>44.0x</strong></td></tr>
+</table>
+<div class="warning">⚠️ TTM EBITDA 可能低估 2026 年水準。若以 2026E EBITDA ~330 億推算，Forward EV/EBITDA ≈ 25.9x，較為合理但仍屬偏高。</div>
+
+<h3>5.3 DCF 折現現金流</h3>
+
+<p><strong>WACC 推導：</strong></p>
+<table>
+  <tr><th>參數</th><th>數值</th><th>來源</th></tr>
+  <tr><td>Rf（無風險利率）</td><td>1.31%</td><td>台灣 10 年期公債殖利率</td></tr>
+  <tr><td>Beta</td><td>1.81（原始） / 1.20（調整）</td><td>6 個月期原始 Beta；調整 Beta 參考產業中位數</td></tr>
+  <tr><td>ERP（股權風險溢酬）</td><td>6.5%</td><td>台灣市場長期平均</td></tr>
+  <tr><td>Cost of Equity（調整 Beta）</td><td>9.11%</td><td>1.31% + 1.20 × 6.5%</td></tr>
+  <tr><td>Cost of Debt (after tax)</td><td>2.5%</td><td>推估</td></tr>
+  <tr><td>D/(D+E)</td><td>2.3%</td><td>200.6 / (200.6+8,510)</td></tr>
+  <tr class="highlight"><td><strong>WACC（Base Case）</strong></td><td><strong>8.96%</strong></td><td>9.11% × 97.7% + 2.5% × 2.3%</td></tr>
+</table>
+<div class="source">📎 Rf 來源：<a href="https://tradingeconomics.com/taiwan/government-bond-yield">Trading Economics</a>，2026/03<br>
+📎 Beta 來源：<a href="https://www.wantgoo.com/stock/2383">玩股網</a>（6 個月期）</div>
+
+<p><strong>逐年折現表（使用調整 Beta 1.2 / WACC 8.96%）：</strong></p>
+<table>
+  <tr><th>年度</th><th>營收 (億)</th><th>淨利 (億)</th><th>FCF (億)</th><th>現值 PV (億)</th></tr>
+  <tr><td>2026E</td><td>1,370</td><td>215</td><td>135</td><td>123.9</td></tr>
+  <tr><td>2027E</td><td>1,644</td><td>284</td><td>229</td><td>192.9</td></tr>
+  <tr><td>2028E</td><td>1,890</td><td>330</td><td>295</td><td>228.1</td></tr>
+  <tr><td>2029E</td><td>2,078</td><td>363</td><td>343</td><td>243.3</td></tr>
+  <tr><td>2030E</td><td>2,182</td><td>381</td><td>366</td><td>238.3</td></tr>
+  <tr><td>終值 (TV)</td><td colspan="2">TG 3%</td><td></td><td>4,118</td></tr>
+  <tr class="highlight"><td><strong>EV 合計</strong></td><td colspan="3"></td><td><strong>5,145</strong></td></tr>
+  <tr><td>- 淨負債</td><td colspan="3"></td><td>39.2</td></tr>
+  <tr class="highlight"><td><strong>股權價值</strong></td><td colspan="3"></td><td><strong>5,106</strong></td></tr>
+  <tr><td>÷ 股數</td><td colspan="3"></td><td>3.5754 億股</td></tr>
+  <tr class="highlight"><td><strong>每股價值</strong></td><td colspan="3"></td><td><strong>NT$ 1,428</strong></td></tr>
+</table>
+<div class="warning">⚠️ FCF 假設：2026-2027 年因持續擴廠，FCF 佔淨利比例較低（~63%/~81%）；2028 年後 CapEx 回歸正常，FCF 佔淨利 ~89-96%。</div>
+
+<p><strong>敏感度矩陣 (WACC vs Terminal Growth)：</strong></p>
+<table class="sensitivity">
+  <tr><th>WACC \ TG</th><th>2.0%</th><th>3.0%</th><th>4.0%</th></tr>
+  <tr><td><strong>7.96%</strong></td><td>1,567</td><td>1,839</td><td>2,237</td></tr>
+  <tr><td><strong>8.96% (Base)</strong></td><td class="base">1,238</td><td class="base"><strong>1,428</strong></td><td class="base">1,686</td></tr>
+  <tr><td><strong>9.96%</strong></td><td>1,001</td><td>1,131</td><td>1,299</td></tr>
+  <tr><td><strong>13.08% (原始 Beta)</strong></td><td>614</td><td>666</td><td>730</td></tr>
+</table>
+
+<h3>5.4 PEG 比率</h3>
+<p>PEG = Forward PE 39.6 / EPS 成長率 43.0% = <strong>0.92</strong></p>
+<div class="info">📌 PEG < 1 通常被視為成長合理甚至偏低估值。然而需注意 43% 的成長率為短期預估，若長期成長回落至 15-20%，PEG 將升至 2.0-2.6x。</div>
+
+<h3>5.5 估值總結</h3>
+<table>
+  <tr><th>方法</th><th>估值結果</th><th>說明</th></tr>
+  <tr><td>Forward PE (38x)</td><td>NT$ 2,283</td><td>2026E EPS 60.08 × 38x</td></tr>
+  <tr><td>EV/EBITDA 隱含</td><td>⚠️ 需更完整同業資料</td><td>TTM 44x 偏高</td></tr>
+  <tr><td>DCF（WACC 8.96%, TG 3%）</td><td>NT$ 1,428</td><td>使用調整 Beta 1.2</td></tr>
+  <tr><td>PEG Ratio</td><td>0.92（合理）</td><td>短期成長率支撐</td></tr>
+  <tr class="highlight"><td><strong>綜合判斷</strong></td><td><strong>NT$ 2,283</strong></td><td>以 Forward PE 為主要定錨</td></tr>
+</table>
+
+<div class="danger">⚠️ <strong>DCF 與 PE 估值重大差異警訊</strong><br><br>
+DCF 估值（NT$ 1,428）與 PE 目標價（NT$ 2,283）差距達 <strong>60%</strong>，超過 50% 門檻。<br><br>
+<strong>原因分析：</strong><br>
+1. DCF 對高成長公司天然保守 — WACC 折現率壓低了遠期高速成長的現值<br>
+2. Beta 1.81 反映近期股價波動大，拉高 WACC；即使用調整 Beta 1.2，WACC 仍達 9%<br>
+3. 終值假設 TG 3% 可能低估半導體材料產業的長期結構性成長<br>
+4. FCF 受當前重資本支出週期壓制，不代表常態化 FCF 水準<br><br>
+<strong>結論：</strong>市場當前定價（2,380 元）隱含的成長預期極高（WACC 9% 下需 TG > 5%），若 AI 需求不如預期或成長減速，股價將面臨顯著下修風險。建議以 PE 法作為主要參考，但須密切監控成長率是否能維持。</div>
+</section>
+
+<!-- Section 6: Technical -->
+<section>
+<h2>6. 技術面與籌碼面</h2>
+
+<h3>6.1 股價走勢概況</h3>
+<ul>
+  <li>過去 52 週股價區間：約 NT$ 700 ~ NT$ 2,480（⚠️ 推估，基於搜尋結果顯示近一年股價大幅上漲）</li>
+  <li>近期走勢：2025 年以來受惠 AI 題材，股價從約 700 元區間一路攀升至 2,400 元水準，漲幅超過 200%</li>
+  <li>成交量：隨股價上漲，日均成交量放大</li>
+</ul>
+
+<h3>6.2 法人動向</h3>
+<ul>
+  <li>外資：近期持續買超，為主要推升力量</li>
+  <li>投信：維持買超基調，多數主動型基金已將台光電列為 AI 核心持股</li>
+  <li>融資：隨股價上漲，融資餘額同步增加，須關注融資浮額風險</li>
+</ul>
+<div class="warning">⚠️ 本節數據為定性描述。詳細的技術指標（MA、RSI、KD 等）及法人買賣超明細，建議參考 <a href="https://www.wantgoo.com/stock/2383/institutional-investors/trend">玩股網法人買賣超</a> 取得即時數據。</div>
+</section>
+
+<!-- Section 7: Risk -->
+<section>
+<h2>7. 風險評估與情境模擬</h2>
+
+<h3>7.1 總體風險</h3>
+<table>
+  <tr><th>風險類型</th><th>影響描述</th><th>量化影響</th></tr>
+  <tr><td>匯率敏感度</td><td>海外營收佔比約 60-70%（⚠️推估），主要以美元計價</td><td>TWD 升值 1 元影響 EPS 約 1.5-2.0 元 ⚠️</td></tr>
+  <tr><td>地緣政治</td><td>中國昆山廠佔產能約 30%，兩岸關係緊張可能影響生產</td><td>最差情境下影響 30% 產能 → EPS 影響 ~12-15 元</td></tr>
+  <tr><td>原物料</td><td>銅箔為主要原物料，銅價波動直接影響毛利率</td><td>銅價上漲 10% → 毛利率下降約 1-1.5 個百分點 ⚠️</td></tr>
+  <tr><td>AI 需求週期</td><td>若 AI 資本支出進入調整期，高階 CCL 需求可能暫時放緩</td><td>營收成長率可能從 45% 降至 15-20%</td></tr>
+</table>
+
+<h3>7.2 情境模擬</h3>
+<table>
+  <tr><th>情境</th><th>2026E EPS</th><th>目標 PE</th><th>目標價</th><th>監測指標</th><th>觸發閾值</th></tr>
+  <tr class="bull"><td>🟢 Bull</td><td>65</td><td>42x</td><td>NT$ 2,730</td><td>月營收 YoY 成長率</td><td>> 50% 持續 3 個月</td></tr>
+  <tr class="hold"><td>🟡 Base</td><td>60.08</td><td>38x</td><td>NT$ 2,283</td><td>法人共識 EPS 修正方向</td><td>維持或上修</td></tr>
+  <tr class="bear"><td>🔴 Bear</td><td>50</td><td>30x</td><td>NT$ 1,500</td><td>AI 伺服器出貨量 / 月營收</td><td>月營收 YoY < 20%</td></tr>
+</table>
+</section>
+
+<!-- Section 8: Recommendation -->
+<section>
+<h2>8. 投資建議與免責聲明</h2>
+
+<h3>8.1 綜合建議</h3>
+<div style="font-size:1.3em; font-weight:700; margin:16px 0;">
+  投資評級：🟡 持有 (HOLD)
+</div>
+<p>
+  <strong>推導邏輯：</strong>Base Case 目標價 NT$ 2,283 vs 現價 NT$ 2,380，潛在下行 -4.1%，落於 ±15% 區間內，依機械規則歸類為「持有」。<br><br>
+  <strong>說明：</strong>台光電是台灣 AI 供應鏈中最純正的 CCL 受惠股，基本面強勁（ROE 35%+、EPS 年複合成長 50%+）。然而，當前股價已充分反映高成長預期，Forward PE 39.6x 隱含極高的市場期待。DCF 估值（1,428 元）與市價的巨大落差暗示，任何低於預期的數據都可能觸發劇烈回調。<br><br>
+  <strong>對已持有者：</strong>維持持有，享受成長趨勢，但建議設定停損紀律。<br>
+  <strong>對未持有者：</strong>不建議在現價追高買入，宜等待回調至 1,800-2,000 元區間再評估進場。
+</p>
+
+<h3>8.2 操作區間</h3>
+<table>
+  <tr><th>操作</th><th>價位</th><th>依據</th></tr>
+  <tr><td>加碼進場點</td><td>NT$ 1,800 - 2,000</td><td>Forward PE 回到 30-33x（2026E EPS 60 基礎）</td></tr>
+  <tr><td>停利點</td><td>NT$ 2,730</td><td>Bull Case 目標價（EPS 65 × PE 42x）</td></tr>
+  <tr><td>停損點</td><td>NT$ 1,950</td><td>跌破 Bear Case 中位估值</td></tr>
+</table>
+
+<h3>8.3 免責聲明</h3>
+<div style="background:#f7fafc; border:1px solid var(--border); border-radius:6px; padding:16px; font-size:0.85em; color:var(--muted); margin-top:16px;">
+  <ul>
+    <li>報告作者與台光電 (2383) 及其關聯企業之間<strong>不存在</strong>任何財務利益關係。</li>
+    <li>本報告中的 EPS 預估為<strong>法人共識引用</strong>（2026E/2027E）及<strong>分析師自建模型</strong>（EPS 推導表），非公司官方財測。</li>
+    <li>本報告僅供<strong>學術研究與參考</strong>，不構成任何有價證券之買賣邀約。投資有風險，入市須謹慎。</li>
+    <li>所有推估值已標注 ⚠️，讀者應自行驗證數據後再做投資決策。</li>
+  </ul>
+</div>
+</section>
+
+<!-- Section 9: References -->
+<section>
+<h2>9. 參考資料</h2>
+<ul>
+  <li>📎 <a href="https://stockanalysis.com/quote/tpe/2383/statistics/">Stock Analysis - 台光電 (2383) Statistics</a>，2026/03</li>
+  <li>📎 <a href="https://finance.yahoo.com/quote/2383.TW/">Yahoo Finance - 台光電 (2383.TW)</a>，2026/03/02</li>
+  <li>📎 <a href="https://finance.yahoo.com/quote/2383.TW/analysis/">Yahoo Finance - Analyst Estimates</a>，2026/03</li>
+  <li>📎 <a href="https://statementdog.com/analysis/2383/eps">財報狗 - 台光電 EPS 分析</a>，2026/03</li>
+  <li>📎 <a href="https://www.cnyes.com/twstock/2383">鉅亨網 - 台光電總覽</a>，2026/03</li>
+  <li>📎 <a href="https://tradingeconomics.com/taiwan/government-bond-yield">Trading Economics - Taiwan 10Y Bond Yield</a>，2026/03</li>
+  <li>📎 <a href="https://www.wantgoo.com/stock/2383">玩股網 - 台光電 (2383)</a>，2026/03</li>
+  <li>📎 <a href="https://winvest.tw/Stock/Symbol/Comment/6213">Win 投資 - 聯茂 (6213)</a>，2026/03</li>
+  <li>📎 <a href="https://winvest.tw/Stock/Symbol/Comment/6274">Win 投資 - 台燿 (6274)</a>，2026/03</li>
+  <li>📎 <a href="https://www.investing.com/equities/elite-matl">Investing.com - Elite Material (2383)</a>，2026/03</li>
+</ul>
+</section>
+
+</div>
+
+<footer>
+  <p>ARTOGO Research | 台光電 (2383) 深度投資分析報告 | 2026/03/06</p>
+  <p>本報告由 AI 輔助分析工具產出，僅供參考，不構成投資建議。</p>
+</footer>
+
+</body>
+</html>
