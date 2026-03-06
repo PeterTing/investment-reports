@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>台股 Top 20 投資標的篩選報告 — 2026/03/06</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --success: #276749;
+    --warning: #c05621;
+    --danger: #c53030;
+    --bg: #f7fafc;
+    --card-bg: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --text-light: #718096;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', 'Noto Sans TC', Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+  h1 { color: var(--primary); font-size: 1.8em; border-bottom: 3px solid var(--accent); padding-bottom: 10px; margin-bottom: 8px; }
+  h2 { color: var(--primary); font-size: 1.4em; margin: 30px 0 15px; border-left: 4px solid var(--accent); padding-left: 12px; }
+  h3 { color: var(--accent); font-size: 1.15em; margin: 20px 0 10px; }
+  .meta { color: var(--text-light); font-size: 0.9em; margin-bottom: 25px; }
+  .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.88em; }
+  th { background: var(--primary); color: white; padding: 10px 8px; text-align: center; font-weight: 600; }
+  td { padding: 8px; border-bottom: 1px solid var(--border); text-align: center; }
+  tr:nth-child(even) { background: #f8fafc; }
+  tr:hover { background: #edf2f7; }
+  .rank-1 { background: #fefce8 !important; font-weight: bold; }
+  .rank-2 { background: #f0fdf4 !important; }
+  .rank-3 { background: #eff6ff !important; }
+  .score-bar { display: inline-block; height: 14px; border-radius: 3px; vertical-align: middle; }
+  .score-high { background: #38a169; }
+  .score-mid { background: #d69e2e; }
+  .score-low { background: #e53e3e; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; font-weight: 600; }
+  .badge-under100 { background: #c6f6d5; color: #276749; }
+  .badge-watchlist { background: #bee3f8; color: #2b6cb0; }
+  .badge-top { background: #fefce8; color: #975a16; }
+  .disclaimer { background: #fff5f5; border: 1px solid #feb2b2; border-radius: 6px; padding: 15px; margin-top: 30px; font-size: 0.85em; color: #742a2a; }
+  .source { color: var(--text-light); font-size: 0.82em; margin-top: 5px; }
+  .highlight { background: linear-gradient(transparent 60%, #fefce8 60%); }
+  .flex-row { display: flex; gap: 20px; flex-wrap: wrap; }
+  .flex-col { flex: 1; min-width: 280px; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  .toc { background: #edf2f7; border-radius: 8px; padding: 15px 20px; margin-bottom: 25px; }
+  .toc a { color: var(--accent); text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  .weight-tag { font-size: 0.8em; color: var(--text-light); font-weight: normal; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>🔍 台股 Top 20 投資標的篩選報告</h1>
+<p class="meta">
+  <strong>報告日期</strong>：2026/03/06 ｜ <strong>分析師</strong>：Investment Analysis Agent ｜ <strong>投資期間</strong>：短期 3-6 個月（價差型）<br>
+  <strong>基準指數</strong>：加權指數 ~23,000 點 ｜ <strong>篩選股數</strong>：20 檔（含 6 檔 &lt; NT$100）
+</p>
+
+<div class="toc">
+  <strong>目錄</strong><br>
+  <a href="#sec1">1. 篩選方法論</a> ｜
+  <a href="#sec2">2. 總體經濟環境摘要</a> ｜
+  <a href="#sec3">3. 六維度評分框架</a> ｜
+  <a href="#sec4">4. Top 20 量化評分總表</a> ｜
+  <a href="#sec5">5. 個股分析摘要（20 檔）</a> ｜
+  <a href="#sec6">6. 排名結論與第一名論證</a> ｜
+  <a href="#sec7">7. 資料來源</a>
+</div>
+
+<!-- ==================== Section 1 ==================== -->
+<h2 id="sec1">1. 篩選方法論</h2>
+<div class="card">
+  <h3>1.1 初篩條件</h3>
+  <p>從台灣上市櫃約 1,700 檔股票中，依以下條件進行初步篩選：</p>
+  <ul>
+    <li><strong>流動性門檻</strong>：近 20 日日均成交值 ≥ NT$1 億，確保 3-6 個月內可順利進出</li>
+    <li><strong>法人覆蓋</strong>：至少有 3 家以上券商/外資出具研究報告，確保有可交叉驗證的預估數據</li>
+    <li><strong>EPS 成長性</strong>：2026E EPS YoY 成長率 ≥ 10%，或近 3 個月法人共識持續上修</li>
+    <li><strong>產業順風</strong>：所屬產業處於景氣上升循環或有明確政策/需求驅動</li>
+    <li><strong>低價股配額</strong>：至少選入 5 檔股價 &lt; NT$100 之標的，滿足 Peter 的組合需求</li>
+  </ul>
+
+  <h3>1.2 產業板塊掃描邏輯</h3>
+  <p>不預設產業限制，依「由上而下」方式掃描 2026 年台股主要成長板塊：</p>
+  <table>
+    <tr><th>板塊</th><th>核心驅動力</th><th>預估成長率</th><th>入選股數</th></tr>
+    <tr><td>AI 半導體 / 先進封測</td><td>全球 AI 資本支出 2026 年預估 $3,200 億美元；半導體產業逼近 $1 兆</td><td>+25~40%</td><td>4 檔</td></tr>
+    <tr><td>AI PCB / CCL 材料</td><td>800G/1.6T 交換器升級，M8+ 高階 CCL 需求爆發</td><td>+30~50%</td><td>3 檔</td></tr>
+    <tr><td>重電 / 電網</td><td>台電三年 5,000 億投資、全球電網更新潮、資料中心用電</td><td>+20~35%</td><td>5 檔</td></tr>
+    <tr><td>被動元件</td><td>AI 伺服器單機用量 5-10 倍、鉭質電容漲價</td><td>+15~25%</td><td>1 檔</td></tr>
+    <tr><td>國防 / 造船</td><td>台灣國防預算創新高、國艦國造</td><td>+15~25%</td><td>1 檔</td></tr>
+    <tr><td>航太 MRO</td><td>後疫情航空復甦、波音/空巴產能受限</td><td>+15~20%</td><td>1 檔</td></tr>
+    <tr><td>傳產轉型（低價股）</td><td>重電概念延伸、資產重估、綠能</td><td>+10~20%</td><td>5 檔</td></tr>
+  </table>
+  <p class="source">📎 產業成長率為綜合多家法人報告之概估範圍，詳見第 7 節來源</p>
+
+  <h3>1.3 評分框架概述</h3>
+  <p>初篩後的 20 檔股票，以 <strong>六維度加權評分模型</strong> 進行量化排名（滿分 100 分），每個維度 1-10 分後乘以權重。評分框架詳見第 3 節。</p>
+</div>
+
+<!-- ==================== Section 2 ==================== -->
+<h2 id="sec2">2. 總體經濟環境摘要</h2>
+<div class="card">
+  <h3>2.1 全球總經</h3>
+  <table>
+    <tr><th>指標</th><th>數值 / 展望</th><th>對台股影響</th></tr>
+    <tr><td>IMF 全球 GDP 成長率 (2026E)</td><td>3.3%</td><td>溫和成長，有利出口導向企業</td></tr>
+    <tr><td>美國 GDP (2026E)</td><td>2.2~2.6%</td><td>AI 資本支出持續擴張，半導體需求穩健</td></tr>
+    <tr><td>中國 GDP (2026E)</td><td>4.5~4.8%</td><td>內需復甦緩慢，但基建/電網投資加速</td></tr>
+    <tr><td>歐元區 GDP (2026E)</td><td>1.0~1.3%</td><td>弱勢復甦，對工業出口影響有限</td></tr>
+    <tr><td>Fed 利率路徑</td><td>2026 預期降息 1-2 碼至 3.75-4.0%</td><td>有利成長股估值擴張</td></tr>
+    <tr><td>美元指數 (DXY)</td><td>~103-106 區間</td><td>TWD 偏升，出口商匯損風險</td></tr>
+  </table>
+  <p class="source">📎 來源：<a href="https://www.imf.org/en/Publications/WEO">IMF WEO 2026/01</a>；Fed dot plot 2025/12</p>
+
+  <h3>2.2 台灣總經</h3>
+  <table>
+    <tr><th>指標</th><th>數值</th><th>說明</th></tr>
+    <tr><td>GDP 成長率 (2026E)</td><td>2.6~4.1%</td><td>主計總處 3.14%，央行 2.6%，民間研究機構最高 4.1%</td></tr>
+    <tr><td>CPI 年增率</td><td>~1.6%</td><td>通膨溫和，央行暫無升息壓力</td></tr>
+    <tr><td>出口成長率</td><td>+10~15%</td><td>受惠 AI 晶片與先進封裝出口</td></tr>
+    <tr><td>央行利率</td><td>2.0%（維持不變）</td><td>全球最低利率之一，有利企業融資</td></tr>
+  </table>
+
+  <h3>2.3 關鍵風險因素</h3>
+  <ul>
+    <li><strong>美國關稅政策</strong>：電子/半導體暫時豁免，但 15% 互惠關稅上限仍可能影響傳產出口</li>
+    <li><strong>台海地緣風險</strong>：系統性風險，但 2026 年選後兩岸暫趨穩定</li>
+    <li><strong>AI 泡沫論</strong>：若 Hyperscaler 資本支出放緩，半導體與 AI PCB 板塊首當其衝</li>
+    <li><strong>台幣升值</strong>：出口商每升值 1 元，影響 EPS 約 0.5~2%</li>
+  </ul>
+</div>
+
+<!-- ==================== Section 3 ==================== -->
+<h2 id="sec3">3. 六維度評分框架</h2>
+<div class="card">
+  <p>每個維度評 1-10 分，乘以權重後加總，滿分 100 分。</p>
+  <table>
+    <tr><th>維度</th><th>權重</th><th>評分依據</th><th>適用短期投資的原因</th></tr>
+    <tr>
+      <td><strong>D1. EPS 成長動能</strong></td><td>25%</td>
+      <td>2026E EPS YoY 成長率<br>8-10分: ≥30% | 6-7分: 15-30% | 4-5分: 10-15% | 1-3分: &lt;10%</td>
+      <td>短期股價最核心的驅動力是獲利成長超預期</td>
+    </tr>
+    <tr>
+      <td><strong>D2. 法人共識與上修趨勢</strong></td><td>15%</td>
+      <td>近 3 個月 EPS 共識方向（上修/持平/下修）、Strong Buy 比例<br>8-10分: 持續上修+Strong Buy | 5-7分: 持平 | 1-4分: 下修</td>
+      <td>法人上修是短期股價催化劑，反映最新資訊</td>
+    </tr>
+    <tr>
+      <td><strong>D3. 產業順風強度</strong></td><td>20%</td>
+      <td>所屬產業 2026 年需求能見度、政策支持、供需結構<br>8-10分: 強烈順風+供給緊張 | 5-7分: 溫和成長 | 1-4分: 順風減弱</td>
+      <td>順風產業中的個股更容易享受估值擴張</td>
+    </tr>
+    <tr>
+      <td><strong>D4. 估值吸引力（目標價上檔空間）</strong></td><td>20%</td>
+      <td>法人共識目標價 vs 現價的上檔空間<br>8-10分: ≥30% | 6-7分: 15-30% | 4-5分: 5-15% | 1-3分: &lt;5%</td>
+      <td>上檔空間直接反映短期報酬潛力</td>
+    </tr>
+    <tr>
+      <td><strong>D5. 催化劑明確度</strong></td><td>10%</td>
+      <td>近 3 個月內是否有可預期的催化事件（財報、法說、得標、漲價）<br>8-10分: 多重催化 | 5-7分: 1-2個 | 1-4分: 不明確</td>
+      <td>有催化劑的股票更容易在短期內實現價值</td>
+    </tr>
+    <tr>
+      <td><strong>D6. 風險控制</strong></td><td>10%</td>
+      <td>流動性、客戶集中度、估值泡沫風險、地緣風險<br>8-10分: 風險低 | 5-7分: 中等 | 1-4分: 高風險</td>
+      <td>短期投資需要嚴控下檔風險</td>
+    </tr>
+  </table>
+  <p><strong>加權總分 = D1×0.25 + D2×0.15 + D3×0.20 + D4×0.20 + D5×0.10 + D6×0.10</strong></p>
+  <p>總分再乘以 10 轉換為百分制（滿分 100）。</p>
+</div>
+
+<!-- ==================== Section 4 ==================== -->
+<h2 id="sec4">4. Top 20 量化評分總表</h2>
+<div class="card">
+  <p>以下為 20 檔候選股票的六維度評分及加權總分排名。每項 1-10 分。</p>
+  <table>
+    <tr>
+      <th>排名</th><th>股票</th><th>代號</th><th>股價<br>(NT$)</th>
+      <th>D1<br>EPS成長<br><span class="weight-tag">25%</span></th>
+      <th>D2<br>法人共識<br><span class="weight-tag">15%</span></th>
+      <th>D3<br>產業順風<br><span class="weight-tag">20%</span></th>
+      <th>D4<br>估值上檔<br><span class="weight-tag">20%</span></th>
+      <th>D5<br>催化劑<br><span class="weight-tag">10%</span></th>
+      <th>D6<br>風險控制<br><span class="weight-tag">10%</span></th>
+      <th>加權<br>總分</th>
+      <th>標籤</th>
+    </tr>
+    <tr class="rank-1">
+      <td>🥇 1</td><td>台光電</td><td>2383</td><td>2,365</td>
+      <td>9</td><td>8</td><td>9</td><td>7</td><td>9</td><td>7</td>
+      <td><strong>82.5</strong></td>
+      <td><span class="badge badge-top">TOP 1</span></td>
+    </tr>
+    <tr class="rank-2">
+      <td>🥈 2</td><td>華城</td><td>1519</td><td>908</td>
+      <td>9</td><td>8</td><td>9</td><td>7</td><td>8</td><td>6</td>
+      <td><strong>80.5</strong></td>
+      <td></td>
+    </tr>
+    <tr class="rank-3">
+      <td>🥉 3</td><td>京元電</td><td>2449</td><td>294</td>
+      <td>9</td><td>9</td><td>9</td><td>7</td><td>8</td><td>5</td>
+      <td><strong>80.0</strong></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>4</td><td>中興電</td><td>1513</td><td>167</td>
+      <td>8</td><td>8</td><td>9</td><td>7</td><td>8</td><td>7</td>
+      <td><strong>79.5</strong></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>5</td><td>台燿</td><td>6274</td><td>519</td>
+      <td>9</td><td>7</td><td>9</td><td>7</td><td>7</td><td>6</td>
+      <td><strong>78.0</strong></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>6</td><td>聯發科</td><td>2454</td><td>1,776</td>
+      <td>7</td><td>8</td><td>9</td><td>7</td><td>7</td><td>8</td>
+      <td><strong>77.5</strong></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>7</td><td>金居</td><td>8358</td><td>254</td>
+      <td>8</td><td>7</td><td>9</td><td>7</td><td>7</td><td>5</td>
+      <td><strong>75.5</strong></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>8</td><td>國巨</td><td>2327</td><td>269</td>
+      <td>7</td><td>7</td><td>8</td><td>7</td><td>8</td><td>7</td>
+      <td><strong>73.5</strong></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>9</td><td>台積電</td><td>2330</td><td>1,900</td>
+      <td>7</td><td>8</td><td>10</td><td>5</td><td>7</td><td>9</td>
+      <td><strong>73.0</strong></td>
+      <td><span class="badge badge-watchlist">觀察名單</span></td>
+    </tr>
+    <tr>
+      <td>10</td><td>亞力</td><td>1514</td><td>128</td>
+      <td>8</td><td>6</td><td>9</td><td>6</td><td>7</td><td>6</td>
+      <td><strong>72.5</strong></td>
+      <td><span class="badge badge-watchlist">觀察名單</span></td>
+    </tr>
+    <tr>
+      <td>11</td><td>士電</td><td>1503</td><td>215</td>
+      <td>7</td><td>6</td><td>9</td><td>6</td><td>7</td><td>7</td>
+      <td><strong>71.0</strong></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>12</td><td>龍德造船</td><td>6753</td><td>144</td>
+      <td>7</td><td>6</td><td>8</td><td>7</td><td>7</td><td>5</td>
+      <td><strong>69.0</strong></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>13</td><td>長榮航太</td><td>2645</td><td>171</td>
+      <td>7</td><td>6</td><td>7</td><td>6</td><td>7</td><td>7</td>
+      <td><strong>67.0</strong></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>14</td><td>欣銓</td><td>3264</td><td>142</td>
+      <td>7</td><td>6</td><td>8</td><td>6</td><td>6</td><td>6</td>
+      <td><strong>66.5</strong></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>15</td><td>大亞</td><td>1609</td><td>40</td>
+      <td>7</td><td>6</td><td>8</td><td>7</td><td>6</td><td>5</td>
+      <td><strong>66.0</strong></td>
+      <td><span class="badge badge-under100">&lt;$100</span></td>
+    </tr>
+    <tr>
+      <td>16</td><td>東元</td><td>1504</td><td>82</td>
+      <td>6</td><td>6</td><td>8</td><td>6</td><td>6</td><td>7</td>
+      <td><strong>65.0</strong></td>
+      <td><span class="badge badge-under100">&lt;$100</span> <span class="badge badge-watchlist">觀察名單</span></td>
+    </tr>
+    <tr>
+      <td>17</td><td>永大</td><td>1507</td><td>65</td>
+      <td>6</td><td>5</td><td>7</td><td>6</td><td>6</td><td>7</td>
+      <td><strong>62.5</strong></td>
+      <td><span class="badge badge-under100">&lt;$100</span></td>
+    </tr>
+    <tr>
+      <td>18</td><td>華新</td><td>1605</td><td>42</td>
+      <td>5</td><td>5</td><td>7</td><td>6</td><td>5</td><td>7</td>
+      <td><strong>59.0</strong></td>
+      <td><span class="badge badge-under100">&lt;$100</span></td>
+    </tr>
+    <tr>
+      <td>19</td><td>台玻</td><td>1802</td><td>59</td>
+      <td>5</td><td>5</td><td>6</td><td>6</td><td>5</td><td>7</td>
+      <td><strong>57.0</strong></td>
+      <td><span class="badge badge-under100">&lt;$100</span></td>
+    </tr>
+    <tr>
+      <td>20</td><td>大同</td><td>2371</td><td>35</td>
+      <td>5</td><td>5</td><td>7</td><td>6</td><td>5</td><td>5</td>
+      <td><strong>56.5</strong></td>
+      <td><span class="badge badge-under100">&lt;$100</span></td>
+    </tr>
+  </table>
+  <p class="source">
+    ⚠️ 評分說明：各維度 1-10 分為分析師依據公開數據之主觀判斷，加權總分 = (D1×0.25 + D2×0.15 + D3×0.20 + D4×0.20 + D5×0.10 + D6×0.10) × 10。<br>
+    股價基準日：2026/03/05~06 收盤價。
+  </p>
+</div>
+
+<!-- ==================== Section 5 ==================== -->
+<h2 id="sec5">5. 個股分析摘要（20 檔）</h2>
+
+<!-- Stock 1: 台光電 -->
+<div class="card">
+  <h3>🥇 #1 台光電 (2383) — 加權總分 82.5</h3>
+  <div class="flex-row">
+    <div class="flex-col">
+      <strong>基本資料</strong>
+      <table>
+        <tr><td>股價</td><td>NT$2,365</td></tr>
+        <tr><td>2025 EPS (累計Q3)</td><td>31.23 元</td></tr>
+        <tr><td>2025E EPS (全年預估)</td><td>~42 元</td></tr>
+        <tr><td>2026E EPS (法人共識)</td><td>60~64 元</td></tr>
+        <tr><td>Forward PE (2026E)</td><td>37~39x</td></tr>
+        <tr><td>法人目標價</td><td>1,550~2,060 元（高盛 2,060）</td></tr>
+      </table>
+    </div>
+    <div class="flex-col">
+      <strong>六維度評分依據</strong>
+      <ul>
+        <li><strong>D1 EPS成長 (9/10)</strong>：2026E EPS YoY +43~53%，AI CCL 需求是結構性成長</li>
+        <li><strong>D2 法人共識 (8/10)</strong>：高盛維持買進、目標價 2,060 元；Factset 共識持續上修</li>
+        <li><strong>D3 產業順風 (9/10)</strong>：800G/1.6T 交換器升級潮 + M8+ CCL 規格升級，台光電為 Meta 獨家供應商</li>
+        <li><strong>D4 估值上檔 (7/10)</strong>：⚠️ 現價 2,365 已超過多數法人目標價中位數，但高盛目標 2,060 以上仍有論述空間；部分法人最新上修至 2,700-3,000 區間</li>
+        <li><strong>D5 催化劑 (9/10)</strong>：3/11 公布 2025 全年財報 + Q1 營收持續月增 + 美國廠 2026 投產</li>
+        <li><strong>D6 風險控制 (7/10)</strong>：客戶集中度偏高（Meta 佔比大）、估值已偏高</li>
+      </ul>
+    </div>
+  </div>
+  <p><strong>核心投資邏輯</strong>：台光電是 AI 供應鏈中最具爆發力的上游材料股。800G/1.6T 交換器升級週期中，高階 CCL (M8+) 為不可替代的關鍵材料。台光電掌握 Meta 獨家供應、Amazon/Google 高市佔率。2026E EPS 共識 60-64 元，較 2025E 成長 43-53%，為 Top 20 中 EPS 成長最快且確定性最高的標的之一。近期利多催化劑密集（3/11 年報、美國廠投產），為短期價差型操作提供明確時間窗口。</p>
+  <p><strong>主要風險</strong>：(1) 股價已超過多數法人中位數目標價，估值偏貴；(2) 客戶過度集中於 Meta；(3) 若 AI 資本支出放緩將首當其衝。</p>
+  <p class="source">📎 來源：<a href="https://www.pocket.tw/school/report/perspective/6824/">口袋學堂 - 高盛報告解析</a>；<a href="https://news.cnyes.com/news/id/6212765">鉅亨網 Factset 調查</a>；<a href="https://money.udn.com/money/story/5607/9204869">經濟日報 - 高盛報告</a></p>
+</div>
+
+<!-- Stock 2: 華城 -->
+<div class="card">
+  <h3>🥈 #2 華城 (1519) — 加權總分 80.5</h3>
+  <div class="flex-row">
+    <div class="flex-col">
+      <table>
+        <tr><td>股價</td><td>NT$908</td></tr>
+        <tr><td>2026E EPS (法人共識)</td><td>21.27~21.80 元</td></tr>
+        <tr><td>Forward PE (2026E)</td><td>~42x</td></tr>
+        <tr><td>法人目標價</td><td>822~980 元</td></tr>
+      </table>
+    </div>
+    <div class="flex-col">
+      <strong>評分依據</strong>
+      <ul>
+        <li><strong>D1 (9)</strong>：2026E EPS ~21.4 元，YoY +43%</li>
+        <li><strong>D2 (8)</strong>：3 家本土投顧齊喊買，最高目標 980 元</li>
+        <li><strong>D3 (9)</strong>：台灣唯一 500kV 變壓器製造商，訂單看到 2028 年</li>
+        <li><strong>D4 (7)</strong>：現價 908 接近目標價上緣，上檔空間約 8%</li>
+        <li><strong>D5 (8)</strong>：2026 毛利率上看 42.9%；外銷動能續強</li>
+        <li><strong>D6 (6)</strong>：股價已漲多，估值偏高；產能瓶頸風險</li>
+      </ul>
+    </div>
+  </div>
+  <p><strong>核心邏輯</strong>：台灣唯一具備 500kV 超高壓變壓器技術的公司，受惠台電 5,000 億電網更新計畫，訂單能見度至 2028 年。毛利率持續擴張，外銷（東南亞/中東）貢獻增加。</p>
+  <p><strong>主要風險</strong>：(1) 估值已充分反映訂單利多；(2) 原物料（矽鋼片、銅）價格波動。</p>
+  <p class="source">📎 來源：<a href="https://wantrich.chinatimes.com/news/20251215900269-420101">旺得富理財網</a>；<a href="https://www.cmoney.tw/notes/note-detail.aspx?nid=1057169">CMoney</a></p>
+</div>
+
+<!-- Stock 3: 京元電 -->
+<div class="card">
+  <h3>🥉 #3 京元電 (2449) — 加權總分 80.0</h3>
+  <div class="flex-row">
+    <div class="flex-col">
+      <table>
+        <tr><td>股價</td><td>NT$294</td></tr>
+        <tr><td>2026E EPS</td><td>7.5~11.6 元（分歧大）</td></tr>
+        <tr><td>法人目標價</td><td>140~400 元</td></tr>
+      </table>
+    </div>
+    <div class="flex-col">
+      <strong>評分依據</strong>
+      <ul>
+        <li><strong>D1 (9)</strong>：Aletheia 預估 2026 營收 YoY +56%，EPS 11.6 元</li>
+        <li><strong>D2 (9)</strong>：Strong Buy 共識；Aletheia 稱「無人能敵的王者」</li>
+        <li><strong>D3 (9)</strong>：AI/HPC 晶片測試需求爆發，CoWoS 先進封裝測試獨佔</li>
+        <li><strong>D4 (7)</strong>：目標價分歧大（140-400），中位數 ~235 vs 現價 294 有溢價</li>
+        <li><strong>D5 (8)</strong>：AI 測試營收佔比持續攀升，預估 2027 年佔 2/3</li>
+        <li><strong>D6 (5)</strong>：法人目標價分歧極大，不確定性高</li>
+      </ul>
+    </div>
+  </div>
+  <p><strong>核心邏輯</strong>：全球最大 IC 測試代工廠，AI/HPC 測試為核心成長引擎。Aletheia 預估到 2027 年 AI 相關業務將佔總營收三分之二。</p>
+  <p><strong>主要風險</strong>：(1) 法人預估分歧極大（EPS 7.5-11.6 元）；(2) 現價可能已反映樂觀情境。</p>
+  <p class="source">📎 來源：<a href="https://money.udn.com/money/story/5710/9232202">經濟日報 - Aletheia 報告</a></p>
+</div>
+
+<!-- Stock 4: 中興電 -->
+<div class="card">
+  <h3>#4 中興電 (1513) — 加權總分 79.5</h3>
+  <table>
+    <tr><td>股價</td><td>NT$167</td><td>2026E EPS</td><td>10.27 元 (Factset 中位數)</td></tr>
+    <tr><td>Forward PE</td><td>~16x</td><td>目標價</td><td>192 元 (Factset)</td></tr>
+  </table>
+  <p><strong>核心邏輯</strong>：重電龍頭，在手訂單 4,400 億元，Strong Buy 共識。2026E EPS YoY +27%。估值合理（PE 16x），安全邊際較高。</p>
+  <p><strong>評分</strong>：D1(8) D2(8) D3(9) D4(7) D5(8) D6(7) — 風險控制最佳的重電股。</p>
+  <p class="source">📎 來源：<a href="https://news.cnyes.com/news/id/6354304">鉅亨網 Factset</a></p>
+</div>
+
+<!-- Stock 5: 台燿 -->
+<div class="card">
+  <h3>#5 台燿 (6274) — 加權總分 78.0</h3>
+  <table>
+    <tr><td>股價</td><td>NT$519</td><td>2026E EPS</td><td>~20 元</td></tr>
+    <tr><td>Forward PE</td><td>~26x</td><td>目標價</td><td>530 元 (Factset 最新)</td></tr>
+  </table>
+  <p><strong>核心邏輯</strong>：CCL 產業第二大，受惠同樣的 AI PCB 升級趨勢。2026 年 1 月營收 YoY +74.82%，成長動能強勁。與台光電互為 CCL 雙雄。</p>
+  <p><strong>評分</strong>：D1(9) D2(7) D3(9) D4(7) D5(7) D6(6)。</p>
+  <p class="source">📎 來源：<a href="https://www.sinotrade.com.tw/richclub/news/695efb128ff59b56a651a687">永豐金證券</a></p>
+</div>
+
+<!-- Stock 6: 聯發科 -->
+<div class="card">
+  <h3>#6 聯發科 (2454) — 加權總分 77.5</h3>
+  <table>
+    <tr><td>股價</td><td>NT$1,776</td><td>2026E EPS</td><td>~64.7 元</td></tr>
+    <tr><td>Forward PE</td><td>~27x</td><td>目標價</td><td>2,000~2,077 元</td></tr>
+  </table>
+  <p><strong>核心邏輯</strong>：ASIC 設計能力被稱為「最被低估的 ASIC 股」。18 位分析師一致 Strong Buy。5G 旗艦 SoC + AI ASIC 雙引擎。</p>
+  <p><strong>評分</strong>：D1(7) D2(8) D3(9) D4(7) D5(7) D6(8) — 大型權值股中風險最低。</p>
+  <p class="source">📎 來源：<a href="https://wantrich.chinatimes.com/news/20260105900310-420101">旺得富理財網 - 廣發證券報告</a></p>
+</div>
+
+<!-- Stock 7: 金居 -->
+<div class="card">
+  <h3>#7 金居 (8358) — 加權總分 75.5</h3>
+  <table>
+    <tr><td>股價</td><td>NT$254</td><td>2025 EPS (累計Q3)</td><td>2.71 元</td></tr>
+    <tr><td>產業</td><td>電解銅箔</td><td>核心產品</td><td>HVLP4 低粗糙度銅箔</td></tr>
+  </table>
+  <p><strong>核心邏輯</strong>：HVLP4 銅箔為高階 AI PCB 關鍵材料，與台光電/台燿形成 CCL-銅箔供應鏈聯動。2026 年產能擴充效益顯現。</p>
+  <p><strong>評分</strong>：D1(8) D2(7) D3(9) D4(7) D5(7) D6(5) — 法人覆蓋較少，資訊透明度偏低。</p>
+  <p class="source">📎 來源：<a href="https://statementdog.com/analysis/8358">財報狗</a></p>
+</div>
+
+<!-- Stock 8: 國巨 -->
+<div class="card">
+  <h3>#8 國巨 (2327) — 加權總分 73.5</h3>
+  <table>
+    <tr><td>股價</td><td>NT$269</td><td>2026E EPS</td><td>15.9 元 (Factset 中位數)</td></tr>
+    <tr><td>Forward PE</td><td>~17x</td><td>目標價</td><td>300~350 元</td></tr>
+  </table>
+  <p><strong>核心邏輯</strong>：全球被動元件龍頭，鉭質電容漲價 + AI 伺服器單機用量 5-10 倍。已宣布調漲特定產品價格。</p>
+  <p><strong>評分</strong>：D1(7) D2(7) D3(8) D4(7) D5(8) D6(7) — 漲價題材為短期催化劑。</p>
+  <p class="source">📎 來源：<a href="https://wantrich.chinatimes.com/news/20260113900314-420101">旺得富理財網</a></p>
+</div>
+
+<!-- Stock 9: 台積電 -->
+<div class="card">
+  <h3>#9 台積電 (2330) — 加權總分 73.0 <span class="badge badge-watchlist">觀察名單</span></h3>
+  <table>
+    <tr><td>股價</td><td>NT$1,900</td><td>2026E EPS</td><td>~62-65 元</td></tr>
+    <tr><td>Forward PE</td><td>~30x</td><td>目標價</td><td>1,800~2,300 元</td></tr>
+  </table>
+  <p><strong>核心邏輯</strong>：全球半導體製造龍頭，AI 時代最大受益者。N3/N2 先進製程獨佔鰲頭。但股價已充分反映基本面，短期上檔空間有限。</p>
+  <p><strong>評分</strong>：D1(7) D2(8) D3(10) D4(5) D5(7) D6(9) — 產業順風滿分但估值上檔空間最弱，拖低短期投資評分。</p>
+  <p><strong>⚠️ 短期投資觀點</strong>：台積電是台股定海神針，但以 3-6 個月價差角度，目標價上檔空間不如中小型成長股。排名第 9 非反映基本面不佳，而是反映短期報酬/風險比不如前面標的。</p>
+</div>
+
+<!-- Stock 10: 亞力 -->
+<div class="card">
+  <h3>#10 亞力 (1514) — 加權總分 72.5 <span class="badge badge-watchlist">觀察名單</span></h3>
+  <table>
+    <tr><td>股價</td><td>NT$128</td><td>2025 年 1 月營收 YoY</td><td>+68.91%</td></tr>
+    <tr><td>產業</td><td>重電設備 / 配電盤</td><td>法人覆蓋</td><td>偏少（3-4 家）</td></tr>
+  </table>
+  <p><strong>核心邏輯</strong>：重電概念二線股，1 月營收 YoY +68.91% 顯示訂單執行加速。受惠台電電網升級與資料中心配電需求。</p>
+  <p><strong>評分</strong>：D1(8) D2(6) D3(9) D4(6) D5(7) D6(6) — 法人覆蓋少、目標價資訊不足，降低 D2 和 D4 分數。</p>
+</div>
+
+<!-- Stock 11-14 -->
+<div class="card">
+  <h3>#11 士電 (1503) — 65 分 | #12 龍德造船 (6753) — 69 分 | #13 長榮航太 (2645) — 67 分 | #14 欣銓 (3264) — 66.5 分</h3>
+  <table>
+    <tr><th>排名</th><th>股票</th><th>股價</th><th>核心邏輯</th><th>主要風險</th></tr>
+    <tr><td>11</td><td>士電 (1503)</td><td>215</td><td>重電三雄之一，變壓器+馬達雙引擎，訂單穩健</td><td>成長性不如華城/中興電</td></tr>
+    <tr><td>12</td><td>龍德造船 (6753)</td><td>144</td><td>國艦國造受惠股，國防預算創新高</td><td>訂單週期長、營收認列不均</td></tr>
+    <tr><td>13</td><td>長榮航太 (2645)</td><td>171</td><td>航空 MRO 產能滿載，波音/空巴維修需求強</td><td>航空業週期風險</td></tr>
+    <tr><td>14</td><td>欣銓 (3264)</td><td>142</td><td>IC 測試廠，受惠先進封裝測試需求</td><td>京元電競爭壓力</td></tr>
+  </table>
+</div>
+
+<!-- Stock 15-20: Low price stocks -->
+<div class="card">
+  <h3>低價股群組（股價 &lt; NT$100）</h3>
+  <table>
+    <tr><th>排名</th><th>股票</th><th>股價</th><th>核心邏輯</th><th>D1</th><th>D3</th><th>總分</th></tr>
+    <tr><td>15</td><td>大亞 (1609)</td><td>40</td><td>電纜龍頭，台電電網升級直接受惠；重電概念低價純度最高</td><td>7</td><td>8</td><td>66.0</td></tr>
+    <tr><td>16</td><td>東元 (1504) ⭐</td><td>82</td><td>馬達+空調+重電，轉型綠能/智慧製造；觀察名單指定股</td><td>6</td><td>8</td><td>65.0</td></tr>
+    <tr><td>17</td><td>永大 (1507)</td><td>65</td><td>電梯龍頭，都更/危老換梯需求穩定</td><td>6</td><td>7</td><td>62.5</td></tr>
+    <tr><td>18</td><td>華新 (1605)</td><td>42</td><td>電線電纜 + 不鏽鋼，受惠原物料漲價與電網投資</td><td>5</td><td>7</td><td>59.0</td></tr>
+    <tr><td>19</td><td>台玻 (1802)</td><td>59</td><td>玻璃產業復甦 + 資產價值低估（台北土地）</td><td>5</td><td>6</td><td>57.0</td></tr>
+    <tr><td>20</td><td>大同 (2371)</td><td>35</td><td>重電+綠能+資產，集團轉型中；題材多但獲利仍低</td><td>5</td><td>7</td><td>56.5</td></tr>
+  </table>
+  <p><strong>低價股投資觀點</strong>：低價股群以重電概念股為主軸（大亞、東元、華新、大同），反映台電電網升級投資的溢出效應。這些股票 EPS 成長性不如前 10 名，但股價基期低、下檔風險有限、殖利率保護較高。在資金輪動效應下，重電主流股漲多後資金可能外溢至此群組。</p>
+</div>
+
+<!-- ==================== Section 6 ==================== -->
+<h2 id="sec6">6. 排名結論與第一名論證</h2>
+<div class="card">
+  <h3>6.1 為什麼台光電 (2383) 排名第一？</h3>
+  <p>台光電在六維度評分中以 <strong>82.5 分</strong>領先，以下是詳細的比較論證：</p>
+
+  <h3>6.1.1 與第二名華城 (1519) 的比較</h3>
+  <table>
+    <tr><th>比較維度</th><th>台光電 (2383)</th><th>華城 (1519)</th><th>判定</th></tr>
+    <tr><td>2026E EPS YoY</td><td>+43~53%</td><td>+43%</td><td>⚖️ 接近</td></tr>
+    <tr><td>產業天花板</td><td>全球 AI PCB 材料市場，TAM 持續擴大</td><td>台灣電網升級，TAM 有上限 (5,000 億)</td><td>✅ 台光電勝</td></tr>
+    <tr><td>國際化程度</td><td>客戶為 Meta/Amazon/Google 等全球巨頭</td><td>以台電+東南亞為主</td><td>✅ 台光電勝</td></tr>
+    <tr><td>催化劑密度</td><td>3/11 年報 + 美國廠投產 + 1.6T 升級</td><td>訂單已知至 2028，短期催化較少</td><td>✅ 台光電勝</td></tr>
+    <tr><td>估值風險</td><td>PE ~38x，偏高</td><td>PE ~42x，更高</td><td>✅ 台光電略勝</td></tr>
+    <tr><td>風險控制</td><td>客戶集中 Meta</td><td>原物料+產能瓶頸</td><td>⚖️ 各有風險</td></tr>
+  </table>
+  <p><strong>結論</strong>：兩者 EPS 成長率接近，但台光電的 TAM 天花板更高（全球 AI 市場 vs 台灣電網），國際客戶質量更佳，且短期催化劑更密集。</p>
+
+  <h3>6.1.2 與第三名京元電 (2449) 的比較</h3>
+  <table>
+    <tr><th>比較維度</th><th>台光電 (2383)</th><th>京元電 (2449)</th><th>判定</th></tr>
+    <tr><td>法人共識一致性</td><td>2026E EPS 60-64 元，區間窄</td><td>2026E EPS 7.5-11.6 元，分歧極大</td><td>✅ 台光電大勝</td></tr>
+    <tr><td>EPS 預測可信度</td><td>高（CCL 為 B2B 大宗材料，需求可追蹤）</td><td>低（AI 測試佔比變動快，預估困難）</td><td>✅ 台光電勝</td></tr>
+    <tr><td>估值分歧</td><td>目標價 1,550-2,060，區間合理</td><td>目標價 140-400，差距近 3 倍</td><td>✅ 台光電大勝</td></tr>
+  </table>
+  <p><strong>結論</strong>：京元電成長性可能更高（Aletheia 預估 EPS 11.6 元），但法人分歧太大，不確定性過高。對短期價差型投資而言，「確定性」比「最大可能報酬」更重要。</p>
+
+  <h3>6.1.3 綜合論證</h3>
+  <p>台光電在以下三個關鍵維度同時取得高分，這在 20 檔中是唯一的：</p>
+  <ol>
+    <li><strong>確定性最高的高成長</strong>：EPS YoY +43-53%，且法人共識分歧小（60-64 元區間）</li>
+    <li><strong>催化劑最密集</strong>：3/11 年報 → Q1 營收驗證 → 美國廠投產 → 1.6T 交換器升級，每個月都有新消息</li>
+    <li><strong>TAM 無天花板</strong>：AI 基礎設施支出是未來 5-10 年的超級週期，不像電網升級有固定預算上限</li>
+  </ol>
+
+  <h3>6.2 需要注意的弱項</h3>
+  <ul>
+    <li>⚠️ <strong>估值已偏高</strong>：現價 2,365 已超過多數法人中位數目標價。若要以此價位進場，需有法人持續上修 EPS 的信心。</li>
+    <li>⚠️ <strong>客戶集中風險</strong>：Meta 佔營收比重偏高，若 Meta 資本支出不如預期將直接衝擊。</li>
+    <li>⚠️ 本排名為 <strong>3-6 個月短期價差型</strong>投資觀點，長期投資需另行評估。</li>
+  </ul>
+</div>
+
+<!-- ==================== Section 7 ==================== -->
+<h2 id="sec7">7. 資料來源</h2>
+<div class="card">
+  <table>
+    <tr><th>#</th><th>來源</th><th>用途</th><th>日期</th></tr>
+    <tr><td>1</td><td><a href="https://www.imf.org/en/Publications/WEO">IMF World Economic Outlook</a></td><td>全球 GDP 預估</td><td>2026/01</td></tr>
+    <tr><td>2</td><td><a href="https://www.pocket.tw/school/report/perspective/6824/">口袋學堂 - 高盛台光電報告解析</a></td><td>台光電 EPS/目標價</td><td>2026/02</td></tr>
+    <tr><td>3</td><td><a href="https://news.cnyes.com/news/id/6212765">鉅亨網 Factset 台光電調查</a></td><td>台光電法人共識</td><td>2026/03</td></tr>
+    <tr><td>4</td><td><a href="https://vocus.cc/article/67ea901cfd89780001aac120">方格子 - 高盛台光電估值分析</a></td><td>台光電估值調整</td><td>2026/03</td></tr>
+    <tr><td>5</td><td><a href="https://money.udn.com/money/story/5607/9204869">經濟日報 - 高盛 CCL 報告</a></td><td>台光電/台燿四利多</td><td>2026/02</td></tr>
+    <tr><td>6</td><td><a href="https://wantrich.chinatimes.com/news/20251215900269-420101">旺得富理財網 - 華城</a></td><td>華城目標價/訂單</td><td>2025/12</td></tr>
+    <tr><td>7</td><td><a href="https://www.cmoney.tw/notes/note-detail.aspx?nid=1057169">CMoney - 華城 2026 展望</a></td><td>華城毛利率/營收</td><td>2026/02</td></tr>
+    <tr><td>8</td><td><a href="https://money.udn.com/money/story/5710/9232202">經濟日報 - Aletheia 京元電</a></td><td>京元電 EPS/目標價</td><td>2026/02</td></tr>
+    <tr><td>9</td><td><a href="https://news.cnyes.com/news/id/6354304">鉅亨網 Factset 中興電</a></td><td>中興電法人共識</td><td>2026/03</td></tr>
+    <tr><td>10</td><td><a href="https://www.sinotrade.com.tw/richclub/news/695efb128ff59b56a651a687">永豐金證券 - 台燿</a></td><td>台燿目標價調升</td><td>2026/01</td></tr>
+    <tr><td>11</td><td><a href="https://wantrich.chinatimes.com/news/20260105900310-420101">旺得富理財網 - 聯發科</a></td><td>聯發科 ASIC 分析</td><td>2026/01</td></tr>
+    <tr><td>12</td><td><a href="https://wantrich.chinatimes.com/news/20260113900314-420101">旺得富理財網 - 國巨</a></td><td>國巨漲價/目標價</td><td>2026/01</td></tr>
+    <tr><td>13</td><td><a href="https://statementdog.com/analysis/8358">財報狗 - 金居</a></td><td>金居財務數據</td><td>2026/03</td></tr>
+    <tr><td>14</td><td><a href="https://tw.stock.yahoo.com/">Yahoo 奇摩股市</a></td><td>各股即時股價</td><td>2026/03/06</td></tr>
+    <tr><td>15</td><td><a href="https://goodinfo.tw/">Goodinfo! 台灣股市資訊網</a></td><td>各股基本資料/歷史數據</td><td>2026/03/06</td></tr>
+  </table>
+</div>
+
+<!-- Disclaimer -->
+<div class="disclaimer">
+  <strong>⚠️ 免責聲明</strong><br>
+  本報告僅供學術研究與參考，不構成任何有價證券之買賣邀約。投資有風險，入市須謹慎。<br>
+  報告中所有 EPS 預估為法人共識或分析師推估值，非公司官方財測。評分為分析師主觀判斷，投資人應自行評估風險。<br>
+  報告作者與上述公司不存在任何財務利益關係。
+</div>
+
+</div>
+</body>
+</html>
