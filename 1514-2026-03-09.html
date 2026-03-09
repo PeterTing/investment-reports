@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>亞力電機 (1514) 深度投資分析 — 2026/03/09</title>
+<style>
+:root {
+  --primary: #1a365d;
+  --accent: #2b6cb0;
+  --success: #276749;
+  --warning: #c05621;
+  --danger: #c53030;
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --text: #2d3748;
+  --muted: #718096;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+  background: var(--bg); color: var(--text);
+  line-height: 1.7; font-size: 16px;
+}
+.container { max-width: 900px; margin: 0 auto; padding: 16px; }
+header {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white; padding: 32px 16px; text-align: center;
+}
+header h1 { font-size: 1.8em; margin-bottom: 8px; }
+header .subtitle { font-size: 1em; opacity: 0.9; }
+header .meta { margin-top: 12px; font-size: 0.85em; opacity: 0.8; }
+.badge {
+  display: inline-block; padding: 4px 14px; border-radius: 20px;
+  font-weight: 700; font-size: 0.9em; margin: 8px 4px;
+}
+.badge-hold { background: #ecc94b; color: #744210; }
+.badge-buy { background: #48bb78; color: #22543d; }
+.badge-sell { background: #fc8181; color: #742a2a; }
+section {
+  background: var(--card); border-radius: 8px; margin: 16px 0;
+  padding: 24px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+h2 {
+  color: var(--primary); font-size: 1.3em; border-bottom: 2px solid var(--accent);
+  padding-bottom: 8px; margin-bottom: 16px;
+}
+h3 { color: var(--accent); font-size: 1.1em; margin: 16px 0 8px; }
+h4 { color: var(--text); font-size: 1em; margin: 12px 0 6px; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+table {
+  width: 100%; border-collapse: collapse; font-size: 0.9em; min-width: 500px;
+}
+th, td { padding: 8px 10px; border: 1px solid var(--border); text-align: right; }
+th { background: var(--primary); color: white; font-weight: 600; white-space: nowrap; }
+td:first-child, th:first-child { text-align: left; }
+tr:nth-child(even) { background: #f7fafc; }
+.highlight-row { background: #ebf8ff !important; font-weight: 600; }
+.kpi-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px; margin: 12px 0;
+}
+.kpi-card {
+  background: #f7fafc; border-radius: 8px; padding: 14px;
+  border-left: 4px solid var(--accent); text-align: center;
+}
+.kpi-card .label { font-size: 0.8em; color: var(--muted); }
+.kpi-card .value { font-size: 1.4em; font-weight: 700; color: var(--primary); margin-top: 4px; }
+.kpi-card .note { font-size: 0.75em; color: var(--muted); margin-top: 2px; }
+.alert {
+  padding: 12px 16px; border-radius: 6px; margin: 12px 0;
+  font-size: 0.9em; border-left: 4px solid;
+}
+.alert-warning { background: #fffbeb; border-color: #d69e2e; color: #744210; }
+.alert-danger { background: #fff5f5; border-color: #e53e3e; color: #742a2a; }
+.alert-info { background: #ebf8ff; border-color: #3182ce; color: #2a4365; }
+.alert-success { background: #f0fff4; border-color: #38a169; color: #276749; }
+.source { font-size: 0.8em; color: var(--muted); margin-top: 4px; }
+.source a { color: var(--accent); }
+.scenario-box {
+  border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin: 8px 0;
+}
+.scenario-box.bull { border-left: 4px solid #38a169; }
+.scenario-box.base { border-left: 4px solid #3182ce; }
+.scenario-box.bear { border-left: 4px solid #e53e3e; }
+.op-zone {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px; margin: 12px 0;
+}
+.op-zone .zone-card {
+  text-align: center; padding: 12px; border-radius: 8px; font-weight: 600;
+}
+.zone-entry { background: #c6f6d5; color: #276749; }
+.zone-stop { background: #fed7d7; color: #742a2a; }
+.zone-target { background: #bee3f8; color: #2a4365; }
+.zone-profit { background: #fefcbf; color: #744210; }
+footer {
+  background: var(--primary); color: white; padding: 24px 16px;
+  font-size: 0.8em; margin-top: 24px; border-radius: 0 0 8px 8px;
+}
+footer a { color: #90cdf4; }
+ul, ol { padding-left: 20px; }
+li { margin-bottom: 4px; }
+@media (max-width: 600px) {
+  header h1 { font-size: 1.4em; }
+  section { padding: 16px 12px; }
+  .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+  table { font-size: 0.8em; }
+  th, td { padding: 6px 8px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>亞力電機 (1514.TW)</h1>
+  <div class="subtitle">CFA Buy-Side 深度投資分析</div>
+  <div><span class="badge badge-hold">🟡 持有 HOLD</span></div>
+  <div class="meta">
+    報告日期：2026/03/09 ｜ 數據基期：2024 全年實際 / 2025 前三季實際 + Q4E / 2026E 預估<br>
+    股價：NT$111.0 ｜ 目標價：NT$115 ｜ 潛在報酬：+3.6%
+  </div>
+</header>
+
+<div class="container">
+
+<!-- ===== 1. Executive Summary ===== -->
+<section>
+<h2>一、投資摘要 Executive Summary</h2>
+
+<div class="kpi-grid">
+  <div class="kpi-card">
+    <div class="label">現價 Current Price</div>
+    <div class="value">NT$111.0</div>
+    <div class="note">2026/03/09</div>
+  </div>
+  <div class="kpi-card">
+    <div class="label">目標價 Target</div>
+    <div class="value">NT$115</div>
+    <div class="note">30x 2026E EPS</div>
+  </div>
+  <div class="kpi-card">
+    <div class="label">2026E EPS</div>
+    <div class="value">3.83</div>
+    <div class="note">法人共識</div>
+  </div>
+  <div class="kpi-card">
+    <div class="label">Forward PE</div>
+    <div class="value">29.0x</div>
+    <div class="note">基於 2026E</div>
+  </div>
+  <div class="kpi-card">
+    <div class="label">ROE</div>
+    <div class="value">13.75%</div>
+    <div class="note">2024 年度</div>
+  </div>
+  <div class="kpi-card">
+    <div class="label">在手訂單</div>
+    <div class="value">106-120億</div>
+    <div class="note">2026/01，能見度至2029</div>
+  </div>
+</div>
+
+<p><strong>核心論點：</strong>亞力電機受惠於台電十年電網強韌計畫（5,645 億元，2026-2032 進入主力執行期）、AI 資料中心用電爆發（2026 年起電力需求倍增）、以及半導體海外擴廠潮，在手訂單 106-120 億元提供 2-3 年營收能見度。然而，股價自 2024 年低點大幅上漲超過 300%，目前 Forward PE 29x 已高於歷史均值（2021-2023 平均 9x），反映大部分成長預期。建議<strong>持有現有部位</strong>，新建倉位等待回檔至 NT$95-100（26x forward PE）以下再介入。</p>
+
+<div class="alert alert-info">
+  <strong>📌 關鍵催化劑：</strong>楊梅二廠 2026 年滿載投產（+10 億變壓器營收）、STATCOM 後續 6 座設施（規模 150-160 億）、台電 2026-2027 年密集招標期。<br>
+  <strong>⚡ 主要風險：</strong>原物料（矽鋼片、銅）價格波動、台電招標進度遞延、重電產業 PE 均值回歸。
+</div>
+
+<p class="source">📎 來源：<a href="https://www.cnyes.com/twstock/1514" target="_blank">鉅亨網 亞力總覽</a>、<a href="https://winvest.tw/Stock/Symbol/Comment/1514" target="_blank">Win投資 1514</a>，2026/03/09</p>
+</section>
+
+<!-- ===== 2. Company Overview ===== -->
+<section>
+<h2>二、公司概況 Company Overview</h2>
+
+<h3>2.1 基本資料</h3>
+<div class="table-wrap">
+<table>
+<tr><th>項目 Item</th><th>數值 Value</th></tr>
+<tr><td>股票代號</td><td>1514.TW</td></tr>
+<tr><td>公司全名</td><td>亞力電機股份有限公司</td></tr>
+<tr><td>成立年份</td><td>1976 年</td></tr>
+<tr><td>已發行股數 Shares Outstanding</td><td>273,108,473 股</td></tr>
+<tr><td>市值 Market Cap</td><td>NT$303.2 億</td></tr>
+<tr><td>產業分類</td><td>電機機械 — 重電設備</td></tr>
+<tr><td>主要工廠</td><td>桃園楊梅（本廠 + 二廠）</td></tr>
+<tr><td>2024 年營收</td><td>NT$88.3 億</td></tr>
+<tr><td>2025 年營收</td><td>NT$105.55 億（首度破百億，YoY +19.6%）</td></tr>
+</table>
+</div>
+<p class="source">📎 來源：<a href="https://goodinfo.tw/tw/BasicInfo.asp?STOCK_ID=1514" target="_blank">Goodinfo 基本資料</a>，2026/03/09</p>
+
+<h3>2.2 事業群拆解 Business Segments</h3>
+<div class="table-wrap">
+<table>
+<tr><th>事業群</th><th>主要產品</th><th>2025 營收占比（推估）</th><th>成長動能</th></tr>
+<tr><td>配電設備</td><td>C-GIS 環保氣體絕緣開關、高低壓配電盤、MCC</td><td>~45%</td><td>台電 GIS 化升級、半導體廠區配電</td></tr>
+<tr><td>變壓器</td><td>亭置式變壓器、模塑型變壓器、161kV 以下 GIS</td><td>~25%</td><td>楊梅二廠 2026 滿載、AI DC 需求</td></tr>
+<tr><td>統包工程</td><td>STATCOM、變電站統包、配電工程</td><td>~18%</td><td>STATCOM 後續標案、新竹科學園區</td></tr>
+<tr><td>其他</td><td>UPS 不斷電系統、SCADA 監控、維保服務</td><td>~12%</td><td>IDC 機房 UPS、智慧電網監控</td></tr>
+</table>
+</div>
+<p class="source">⚠️ 營收占比為基於公開資訊推估，非公司官方揭露之事業群拆分</p>
+
+<h3>2.3 客戶集中度分析</h3>
+<div class="table-wrap">
+<table>
+<tr><th>客戶群</th><th>營收占比（推估）</th><th>訂單特性</th><th>風險評估</th></tr>
+<tr><td>台灣電力公司</td><td>~45%</td><td>長期合約，政策驅動，付款穩定</td><td>⚠️ 單一客戶過度集中</td></tr>
+<tr><td>半導體產業（台積電、日月光等）</td><td>~25%</td><td>擴廠週期驅動，規格嚴格</td><td>受半導體資本支出週期影響</td></tr>
+<tr><td>軌道交通（台鐵、捷運）</td><td>~15%</td><td>公共工程，標案制</td><td>預算編列與政策風險</td></tr>
+<tr><td>其他（IDC、再生能源、一般工業）</td><td>~15%</td><td>新興成長，訂單小但成長快</td><td>市場尚在開拓期</td></tr>
+</table>
+</div>
+
+<div class="alert alert-warning">
+  <strong>⚠️ 客戶集中度風險：</strong>台電佔營收約 45%，為最大單一客戶。若台電預算縮減或招標延遲，將直接衝擊營收。但考量台電十年電網強韌計畫具法源依據（電業法修正），短期內大幅縮減機率低。
+</div>
+<p class="source">⚠️ 客戶占比為基於法說會資訊與產業研究推估，實際數據未經公司官方確認</p>
+</section>
+
+<!-- ===== 3. Financial Analysis ===== -->
+<section>
+<h2>三、財務分析 Financial Analysis</h2>
+
+<h3>3.1 成長橋樑 Growth Bridge — EPS 路徑</h3>
+<div class="table-wrap">
+<table>
+<tr><th>年度</th><th>營收（億）</th><th>YoY</th><th>毛利率</th><th>營益率</th><th>EPS</th><th>EPS YoY</th></tr>
+<tr><td>2021</td><td>60.2</td><td>—</td><td>16.5%</td><td>7.8%</td><td>1.60</td><td>—</td></tr>
+<tr><td>2022</td><td>72.8</td><td>+20.9%</td><td>17.2%</td><td>8.5%</td><td>2.15</td><td>+34.4%</td></tr>
+<tr><td>2023</td><td>80.5</td><td>+10.6%</td><td>18.0%</td><td>9.0%</td><td>3.08</td><td>+43.3%</td></tr>
+<tr><td>2024</td><td>88.3</td><td>+9.7%</td><td>18.2%</td><td>9.4%</td><td>3.04</td><td>-1.3%</td></tr>
+<tr><td>2025</td><td>105.55</td><td>+19.6%</td><td>18.5%</td><td>9.5%</td><td>3.40E</td><td>+11.8%</td></tr>
+<tr class="highlight-row"><td>2026E</td><td>125.0E</td><td>+18.4%</td><td>19.5%</td><td>10.0%</td><td>3.83E</td><td>+12.6%</td></tr>
+<tr><td>2027E</td><td>143.0E</td><td>+14.4%</td><td>20.0%</td><td>10.5%</td><td>4.54E</td><td>+18.5%</td></tr>
+</table>
+</div>
+
+<div class="alert alert-info">
+  <strong>成長驅動力拆解：</strong><br>
+  • 2024 EPS 微幅下滑（-1.3%）：原因為提列較高工程準備金及業外損失，營業利益實際成長<br>
+  • 2025 營收首破百億：台電大型標案入帳 + 半導體擴廠訂單密集交貨<br>
+  • 2026E 成長引擎：楊梅二廠滿載（+10 億）、STATCOM 持續入帳、台電招標加速<br>
+  • 2027E 展望：半導體海外廠（日本、美國）配電設備出貨、IDC 資料中心用電設備
+</div>
+
+<p class="source">📎 來源：<a href="https://www.cnyes.com/twstock/1514" target="_blank">鉅亨網</a>、<a href="https://winvest.tw/Stock/Symbol/Comment/1514" target="_blank">Win投資</a>，2026/03/09；2026-2027E 為法人共識與自建模型</p>
+
+<h3>3.2 EPS 由下往上推導 Bottom-Up EPS Derivation（2026E）</h3>
+<div class="table-wrap">
+<table>
+<tr><th>項目</th><th>2025 實際</th><th>2026E 假設</th><th>備註</th></tr>
+<tr><td><strong>營收 Revenue</strong></td><td>105.55 億</td><td>125.0 億</td><td>YoY +18.4%</td></tr>
+<tr><td>　配電設備</td><td>~47.5 億</td><td>~55.0 億</td><td>台電 GIS 升級 + 半導體</td></tr>
+<tr><td>　變壓器</td><td>~26.4 億</td><td>~32.5 億</td><td>楊梅二廠滿載 +10 億</td></tr>
+<tr><td>　統包工程</td><td>~19.0 億</td><td>~23.0 億</td><td>STATCOM + 新竹科學園區</td></tr>
+<tr><td>　其他</td><td>~12.7 億</td><td>~14.5 億</td><td>UPS、SCADA、維保</td></tr>
+<tr><td><strong>毛利 Gross Profit</strong></td><td>~19.5 億</td><td>24.4 億</td><td>毛利率 19.5%（規模效益改善）</td></tr>
+<tr><td><strong>營業費用 OpEx</strong></td><td>~10.0 億</td><td>~11.9 億</td><td>費用率 9.5%（略微下降）</td></tr>
+<tr><td><strong>營業利益 EBIT</strong></td><td>~10.0 億</td><td>12.5 億</td><td>營益率 10.0%</td></tr>
+<tr><td>業外損益 Non-Op</td><td>~0.3 億</td><td>0.5 億</td><td>利息支出 vs 投資收益</td></tr>
+<tr><td><strong>稅前淨利 Pre-tax</strong></td><td>~10.3 億</td><td>13.0 億</td><td></td></tr>
+<tr><td>所得稅率 Tax Rate</td><td>~20%</td><td>20%</td><td></td></tr>
+<tr><td><strong>稅後淨利 Net Income</strong></td><td>~8.2 億</td><td>10.4 億</td><td></td></tr>
+<tr><td>股本（億股）</td><td>2.731</td><td>2.731</td><td>假設無增資</td></tr>
+<tr class="highlight-row"><td><strong>EPS</strong></td><td>3.40E</td><td><strong>3.81</strong></td><td>自建模型 vs 法人共識 3.83</td></tr>
+</table>
+</div>
+
+<div class="alert alert-success">
+  <strong>✅ EPS 交叉驗證：</strong>自建模型 EPS 3.81 與法人共識 3.83 差距僅 0.5%，模型假設合理。差異主要來自業外收益估算的微小差異。報告後續統一使用法人共識 EPS 3.83。
+</div>
+<p class="source">⚠️ 營收分事業群拆分為推估值，基於客戶結構與產品組合推導</p>
+
+<h3>3.3 財務健全度 Financial Health</h3>
+<div class="table-wrap">
+<table>
+<tr><th>指標</th><th>2023</th><th>2024</th><th>趨勢</th><th>同業平均</th></tr>
+<tr><td>總資產（億）</td><td>112.3</td><td>112.9</td><td>→ 穩定</td><td>—</td></tr>
+<tr><td>總負債（億）</td><td>65.0</td><td>54.3</td><td>↓ 改善</td><td>—</td></tr>
+<tr><td>股東權益（億）</td><td>47.4</td><td>58.7</td><td>↑ 成長</td><td>—</td></tr>
+<tr><td>負債比率 D/E</td><td>137.1%</td><td>92.5%</td><td>↓ 大幅改善</td><td>~100%</td></tr>
+<tr><td>負債佔總資產比</td><td>57.9%</td><td>48.1%</td><td>↓ 改善</td><td>~50%</td></tr>
+<tr><td>每股淨值 BPS</td><td>17.36</td><td>21.66</td><td>↑ +24.8%</td><td>—</td></tr>
+<tr><td>ROE</td><td>17.79%</td><td>13.75%</td><td>↓</td><td>~15%</td></tr>
+<tr><td>ROA</td><td>7.50%</td><td>7.35%</td><td>→ 穩定</td><td>~7%</td></tr>
+</table>
+</div>
+
+<div class="alert alert-info">
+  <strong>財務體質評論：</strong>2024 年負債比率從 137% 大幅降至 92.5%，主要因保留盈餘增加推升股東權益。流動性充裕，工程型公司應收帳款週轉天數為關鍵指標。ROE 從 17.8% 降至 13.8% 主要因分母（權益）增長快於分子（獲利），非經營惡化。
+</div>
+<p class="source">📎 來源：<a href="https://www.cnyes.com/twstock/1514" target="_blank">鉅亨網 財報</a>，2026/03/09</p>
+</section>
+
+<!-- ===== 4. 深度產業分析 ===== -->
+<section>
+<h2>四、產業與競爭分析 Industry & Competitive Analysis</h2>
+
+<h3>4.1 產業趨勢 — 三大成長引擎</h3>
+
+<h4>🔌 引擎一：台電十年電網強韌計畫</h4>
+<ul>
+  <li><strong>總規模：</strong>5,645 億元（2022-2032），其中 65% 集中於 2026-2032 年（約 3,669 億）</li>
+  <li><strong>核心項目：</strong>28 座新建變電所、24 座室內化改建、地下電纜替換</li>
+  <li><strong>亞力切入點：</strong>C-GIS 環保開關設備（室內化必備）、161kV 以下 GIS、配電盤</li>
+  <li><strong>估計亞力可搶食規模：</strong>5-8%（~180-300 億，分 6-7 年入帳）</li>
+</ul>
+
+<h4>🤖 引擎二：AI 資料中心用電爆發</h4>
+<ul>
+  <li><strong>需求規模：</strong>2026 年起台灣電力需求因 AI DC 倍增，單座大型 DC 用電量 50-100MW</li>
+  <li><strong>變壓器缺貨：</strong>全球變壓器交期已延長至 2 年以上，國內供不應求</li>
+  <li><strong>亞力受惠：</strong>楊梅二廠 2026 滿載，新增年產能約 10 億元變壓器</li>
+  <li><strong>競爭對手動態：</strong>華城已取得 AI DC 相關訂單 120 億，帶動整體產業</li>
+</ul>
+
+<h4>🏭 引擎三：半導體海外擴廠</h4>
+<ul>
+  <li><strong>趨勢：</strong>台積電日本熊本、美國亞利桑那廠帶動配電設備需求</li>
+  <li><strong>亞力優勢：</strong>已為台積電國內廠區供應 C-GIS 與配電盤，海外廠有延伸訂單機會</li>
+  <li><strong>新竹科學園區：</strong>已取得 20 億統包工程訂單</li>
+</ul>
+
+<h4>🔋 技術趨勢 Technology Trends</h4>
+<ul>
+  <li><strong>GIS 化趨勢：</strong>SF₆ 替代氣體（環保型 C-GIS）成為主流，亞力為國內主要供應商</li>
+  <li><strong>STATCOM 無效電力補償：</strong>台電首批 20 億合約由亞力取得，後續規劃 6 座（規模 150-160 億）</li>
+  <li><strong>數位變電站：</strong>SCADA + IoT 智慧監控，由傳統硬體走向軟硬整合</li>
+  <li><strong>儲能系統 ESS：</strong>目前由士電領先（表後儲能），亞力尚未大規模切入</li>
+</ul>
+<p class="source">📎 來源：台電電網強韌計畫公開資料、<a href="https://www.cnyes.com/twstock/1514" target="_blank">鉅亨網 產業新聞</a>，2026/03</p>
+
+<h3>4.2 Gordon Growth Model — ROE 估值辯證</h3>
+<div class="table-wrap">
+<table>
+<tr><th>參數</th><th>數值</th><th>說明</th></tr>
+<tr><td>ROE</td><td>13.75%</td><td>2024 年度</td></tr>
+<tr><td>配發率 Payout Ratio</td><td>62.5%</td><td>（現金 1.699 + 股票 0.2）/ EPS 3.04</td></tr>
+<tr><td>保留率 Retention</td><td>37.5%</td><td>1 - 62.5%</td></tr>
+<tr><td>可持續成長率 g</td><td>5.16%</td><td>ROE × Retention</td></tr>
+<tr><td>股東權益成本 CoE</td><td>9.0%</td><td>Rf 1.5% + β1.0 × ERP 7.5%</td></tr>
+<tr><td>理論 PB Theoretical</td><td><strong>2.24x</strong></td><td>(ROE - g) / (CoE - g)</td></tr>
+<tr><td>實際 PB Actual</td><td><strong>5.01x</strong></td><td>NT$111 / BPS NT$22.17</td></tr>
+<tr class="highlight-row"><td>市場溢價 Premium</td><td><strong>+123.7%</strong></td><td>(5.01 - 2.24) / 2.24</td></tr>
+</table>
+</div>
+
+<div class="alert alert-warning">
+  <strong>⚠️ 溢價來源辯證：</strong>市場對亞力給予超過 Gordon Model 理論值 124% 的溢價，隱含以下預期：<br>
+  (1) ROE 將從 13.75% 提升至 18%+（規模效益 + 毛利改善）<br>
+  (2) 成長率遠高於可持續率 5.16%（台電大型標案 + AI DC）<br>
+  (3) 重電產業整體 re-rating（從傳產 PE 8-12x 轉為成長股 PE 25-40x）<br>
+  <strong>若上述預期未兌現，PB 有回歸至 3.0-3.5x（股價 66-78 元）的風險。</strong>
+</div>
+<p class="source">📎 BPS 來源：<a href="https://winvest.tw/Stock/Symbol/Comment/1514" target="_blank">Win投資</a>，2025 Q3 每股淨值 22.17 元</p>
+
+<h3>4.3 同業比較 Peer Comparison</h3>
+<div class="table-wrap">
+<table>
+<tr><th>公司</th><th>股價</th><th>Trailing PE</th><th>2026E EPS</th><th>Forward PE</th><th>在手訂單</th><th>特色</th></tr>
+<tr><td>中興電 (1513)</td><td>—</td><td>21.0x</td><td>—</td><td>—</td><td>440 億</td><td>345kV GIS 壟斷（80%+ 市占）</td></tr>
+<tr><td>士電 (1503)</td><td>—</td><td>32.0x</td><td>8.38</td><td>~28x</td><td>—</td><td>表後儲能系統領先</td></tr>
+<tr class="highlight-row"><td><strong>亞力 (1514)</strong></td><td><strong>111</strong></td><td><strong>36.5x</strong></td><td><strong>3.83</strong></td><td><strong>29.0x</strong></td><td><strong>106-120 億</strong></td><td>C-GIS + STATCOM</td></tr>
+<tr><td>華城 (1519)</td><td>—</td><td>50.8x</td><td>—</td><td>—</td><td>—</td><td>AI DC 訂單 120 億，PE 最高</td></tr>
+</table>
+</div>
+
+<div class="alert alert-info">
+  <strong>同業定位分析：</strong><br>
+  • 亞力 Forward PE 29x 在四大重電中居<strong>中間偏低</strong>（中興電最低 21x，華城最高 51x）<br>
+  • 在手訂單規模：中興電 440 億 >> 亞力 106-120 億，但亞力增速較快<br>
+  • 差異化：亞力是台灣 STATCOM 首家供應商，具先行者優勢<br>
+  • 2026 年 3 月四大重電同步漲價，反映供不應求的產業結構
+</div>
+<p class="source">📎 來源：<a href="https://www.cnyes.com/twstock/1514" target="_blank">鉅亨網</a>，PE 數據為 2026/03 即時值</p>
+</section>
+
+<!-- ===== 5. Valuation ===== -->
+<section>
+<h2>五、多元估值分析 Valuation</h2>
+
+<h3>5.1 歷史 PE 軌跡表 Historical PE Band</h3>
+<div class="table-wrap">
+<table>
+<tr><th>年度</th><th>EPS</th><th>年度最低價 ⚠️</th><th>年度最高價 ⚠️</th><th>PE 低值</th><th>PE 高值</th><th>年度漲幅</th></tr>
+<tr><td>2021</td><td>1.60</td><td>~12.5</td><td>~20.0</td><td>7.8x</td><td>12.5x</td><td>+56.7%</td></tr>
+<tr><td>2022</td><td>2.15</td><td>~17.5</td><td>~22.5</td><td>8.1x</td><td>10.5x</td><td>+7.5%</td></tr>
+<tr><td>2023</td><td>3.08</td><td>~20.0</td><td>~28.0</td><td>6.5x</td><td>9.1x</td><td>+21.0%</td></tr>
+<tr><td>2024</td><td>3.04</td><td>~25.0</td><td>~82.0</td><td>8.2x</td><td>27.0x</td><td>+168.5%</td></tr>
+<tr><td>2025</td><td>3.40E</td><td>~65.0</td><td>~148.0</td><td>19.1x</td><td>43.5x</td><td>+38.3%</td></tr>
+<tr class="highlight-row"><td><strong>5 年平均</strong></td><td>—</td><td>—</td><td>—</td><td><strong>9.9x</strong></td><td><strong>20.5x</strong></td><td>—</td></tr>
+<tr class="highlight-row"><td><strong>當前（2026/03）</strong></td><td>3.83E</td><td colspan="2">NT$111</td><td colspan="2"><strong>29.0x（Forward）</strong></td><td>—</td></tr>
+</table>
+</div>
+
+<div class="alert alert-warning">
+  ⚠️ 年度最高/最低股價為基於年度漲幅與已知近期股價反推估算，非交易所官方數據。<br>
+  <strong>關鍵觀察：</strong>2024 年起 PE Band 出現結構性躍升（從 6-12x → 19-44x），反映市場從「傳產估值」轉為「成長股估值」。當前 Forward PE 29x 位於新估值中樞（20-35x）的中間位置，尚未過度泡沫化，但已無安全邊際。
+</div>
+
+<h3>5.2 Forward PE 估值法</h3>
+<div class="table-wrap">
+<table>
+<tr><th>情境</th><th>給予 PE</th><th>EPS 假設</th><th>目標價</th><th>vs 現價 111</th></tr>
+<tr><td>悲觀（PE 回歸均值）</td><td>22x</td><td>3.83</td><td>NT$84</td><td>-24.3%</td></tr>
+<tr><td>保守</td><td>25x</td><td>3.83</td><td>NT$96</td><td>-13.5%</td></tr>
+<tr class="highlight-row"><td><strong>基準（本報告採用）</strong></td><td><strong>30x</strong></td><td><strong>3.83</strong></td><td><strong>NT$115</strong></td><td><strong>+3.6%</strong></td></tr>
+<tr><td>樂觀</td><td>35x</td><td>3.83</td><td>NT$134</td><td>+20.7%</td></tr>
+<tr><td>券商共識</td><td>37x</td><td>3.83</td><td>NT$142</td><td>+27.9%</td></tr>
+</table>
+</div>
+
+<p><strong>PE 倍數選擇依據：</strong>採用 30x 為基準，理由為：(1) 低於同業華城 51x 和士電 32x；(2) 高於中興電 21x 反映較高成長性；(3) 位於新估值中樞 20-35x 的中段。</p>
+
+<h3>5.3 EV/EBITDA 估值法</h3>
+<div class="table-wrap">
+<table>
+<tr><th>項目</th><th>2024</th><th>2025E</th><th>2026E</th></tr>
+<tr><td>營業利益 EBIT（億）</td><td>8.4</td><td>10.0</td><td>12.5</td></tr>
+<tr><td>+ 折舊攤銷 D&A（億）⚠️</td><td>1.8</td><td>2.0</td><td>2.2</td></tr>
+<tr><td><strong>EBITDA（億）</strong></td><td><strong>10.2</strong></td><td><strong>12.0</strong></td><td><strong>14.7</strong></td></tr>
+<tr><td>市值（億）</td><td colspan="3">303.2（以當前股價計算）</td></tr>
+<tr><td>+ 淨負債（億）⚠️</td><td colspan="3">~12</td></tr>
+<tr><td><strong>EV（億）</strong></td><td colspan="3"><strong>~315</strong></td></tr>
+<tr class="highlight-row"><td><strong>EV/EBITDA</strong></td><td>30.9x</td><td>26.3x</td><td><strong>21.4x</strong></td></tr>
+</table>
+</div>
+<p class="source">⚠️ D&A 與淨負債為推估值，基於營收比例法（D&A ~2% 營收）與資產負債表總量推算</p>
+
+<div class="alert alert-info">
+  <strong>EV/EBITDA 評估：</strong>2026E EV/EBITDA 21.4x，在重電產業中屬合理偏高。國際同業 ABB、Siemens Energy 約 12-18x，但台灣重電因成長性溢價，20-25x 尚可接受。
+</div>
+
+<h3>5.4 DCF 現金流折現法</h3>
+<div class="table-wrap">
+<table>
+<tr><th>年度</th><th>FCF（億）</th><th>成長率</th><th>折現因子</th><th>現值（億）</th></tr>
+<tr><td>2026E</td><td>8.0</td><td>—</td><td>0.917</td><td>7.34</td></tr>
+<tr><td>2027E</td><td>9.6</td><td>+20%</td><td>0.842</td><td>8.08</td></tr>
+<tr><td>2028E</td><td>11.0</td><td>+15%</td><td>0.772</td><td>8.49</td></tr>
+<tr><td>2029E</td><td>12.1</td><td>+10%</td><td>0.708</td><td>8.57</td></tr>
+<tr><td>2030E</td><td>13.1</td><td>+8%</td><td>0.650</td><td>8.52</td></tr>
+<tr><td>終值 Terminal</td><td>—</td><td>g=3%</td><td>0.650</td><td>142.0</td></tr>
+<tr class="highlight-row"><td colspan="3"><strong>企業價值 EV</strong></td><td colspan="2"><strong>183.0 億</strong></td></tr>
+<tr><td colspan="3">- 淨負債</td><td colspan="2">-12 億</td></tr>
+<tr class="highlight-row"><td colspan="3"><strong>股權價值</strong></td><td colspan="2"><strong>171 億 → 每股 NT$62.6</strong></td></tr>
+</table>
+</div>
+
+<p><strong>DCF 假設：</strong>WACC 9.0%（Rf 1.5% + β1.0 × ERP 7.5%）、終值成長率 3%、基期 FCF = EBITDA - Capex 3.5 億 - Tax 2.5 億 ≈ 8 億</p>
+
+<h4>DCF 敏感度矩陣（每股價值，NT$）</h4>
+<div class="table-wrap">
+<table>
+<tr><th>WACC \ g</th><th>2.0%</th><th>2.5%</th><th>3.0%</th><th>3.5%</th><th>4.0%</th></tr>
+<tr><td>8.0%</td><td>72</td><td>79</td><td>88</td><td>99</td><td>115</td></tr>
+<tr><td>8.5%</td><td>63</td><td>69</td><td>76</td><td>85</td><td>96</td></tr>
+<tr class="highlight-row"><td><strong>9.0%</strong></td><td>56</td><td>60</td><td><strong>63</strong></td><td>73</td><td>81</td></tr>
+<tr><td>9.5%</td><td>50</td><td>54</td><td>58</td><td>63</td><td>70</td></tr>
+<tr><td>10.0%</td><td>45</td><td>48</td><td>52</td><td>56</td><td>61</td></tr>
+</table>
+</div>
+
+<div class="alert alert-danger">
+  <strong>⚠️ DCF 估值與 PE 目標價差距警示：</strong><br>
+  DCF 基準值 NT$63 vs PE 目標價 NT$115，差距達 82.5%（>50% 門檻）。<br>
+  <strong>差異原因分析：</strong><br>
+  (1) DCF 使用保守 FCF 假設（FCF Yield 僅 ~2.6%），重電業資本支出高、營運資金需求大<br>
+  (2) PE 估值隱含的成長預期遠高於 DCF 終值成長率 3%<br>
+  (3) 市場對重電產業的重新定價（sector re-rating）難以在傳統 DCF 中完整反映<br>
+  <strong>結論：</strong>DCF 暗示當前股價已大幅超過內含價值，需要 WACC 8% + 終值成長 4%（較極端假設）才能接近現價。投資人應認知此為<strong>動量 + 題材驅動型估值</strong>，非基本面支撐。
+</div>
+
+<h3>5.5 PEG 估值</h3>
+<div class="table-wrap">
+<table>
+<tr><th>指標</th><th>數值</th><th>說明</th></tr>
+<tr><td>Forward PE</td><td>29.0x</td><td>基於 2026E EPS 3.83</td></tr>
+<tr><td>EPS Growth Rate</td><td>12.6%</td><td>2026E vs 2025E</td></tr>
+<tr><td><strong>PEG Ratio</strong></td><td><strong>2.30</strong></td><td>PEG > 1.5 偏貴</td></tr>
+</table>
+</div>
+<p><strong>PEG 解讀：</strong>PEG 2.30 顯示以成長率調整後的估值偏貴。一般 PEG < 1.0 為便宜、1.0-1.5 合理、> 1.5 偏貴。若使用 2027E 成長率 18.5%，PEG 降至 1.57，仍在偏貴邊緣。</p>
+
+<h3>5.6 估值三角交叉 Valuation Triangle</h3>
+<div class="table-wrap">
+<table>
+<tr><th>方法</th><th>估值結果</th><th>vs 現價 111</th><th>隱含假設</th></tr>
+<tr><td>Forward PE（30x）</td><td>NT$115</td><td>+3.6%</td><td>維持成長股估值</td></tr>
+<tr><td>EV/EBITDA（21x on 2026E）</td><td>~NT$110</td><td>-0.9%</td><td>合理偏高</td></tr>
+<tr><td>DCF（WACC 9%, g 3%）</td><td>NT$63</td><td>-43.2%</td><td>保守 FCF 假設</td></tr>
+<tr class="highlight-row"><td><strong>三角交叉中位數</strong></td><td><strong>NT$110</strong></td><td><strong>-0.9%</strong></td><td>—</td></tr>
+</table>
+</div>
+
+<div class="alert alert-info">
+  <strong>估值結論：</strong>相對估值法（PE、EV/EBITDA）顯示現價接近合理，絕對估值法（DCF）顯示高估。三角交叉中位數 NT$110 與現價幾乎持平，支持「持有」評級。需要更積極的成長假設（EPS 成長 > 20% 持續 3 年）才能支持更高估值。
+</div>
+</section>
+
+<!-- ===== 6. Technical & Institutional ===== -->
+<section>
+<h2>六、籌碼面與技術面 Technical & Institutional</h2>
+
+<h3>6.1 三大法人動態</h3>
+<div class="table-wrap">
+<table>
+<tr><th>法人類別</th><th>近 5 日</th><th>近 20 日</th><th>近 60 日</th><th>持股比例</th></tr>
+<tr><td>外資 Foreign</td><td>—</td><td>+8,666 張</td><td>—</td><td>16.22%</td></tr>
+<tr><td>投信 Investment Trust</td><td>—</td><td>—</td><td>—</td><td>0.04%</td></tr>
+<tr><td>自營商 Dealers</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+</table>
+</div>
+<p class="source">⚠️ 部分法人交易數據未取得完整時間序列，僅顯示已驗證數據</p>
+
+<div class="alert alert-info">
+  <strong>籌碼面解讀：</strong><br>
+  • 外資近 20 日淨買超 8,666 張，態度偏多<br>
+  • 外資持股 16.22% 為中等水位，尚有加碼空間<br>
+  • 投信持股僅 0.04%，幾乎未布局，可能因市值規模（303 億）已進入部分基金可買範圍<br>
+  • 散戶比例高，股價波動可能較大
+</div>
+
+<h3>6.2 融資融券</h3>
+<div class="table-wrap">
+<table>
+<tr><th>指標</th><th>數值</th><th>解讀</th></tr>
+<tr><td>融資餘額</td><td>⚠️ 待驗證</td><td>—</td></tr>
+<tr><td>融券餘額</td><td>⚠️ 待驗證</td><td>—</td></tr>
+<tr><td>券資比</td><td>⚠️ 待驗證</td><td>—</td></tr>
+</table>
+</div>
+<p class="source">⚠️ 融資融券即時數據需從證交所每日公布資料取得，本報告未能即時抓取</p>
+
+<h3>6.3 技術指標</h3>
+<div class="table-wrap">
+<table>
+<tr><th>指標</th><th>數值</th><th>位置 / 解讀</th></tr>
+<tr><td>收盤價（2026/03/09）</td><td>NT$111.0</td><td>日跌 -5.53%</td></tr>
+<tr><td>52 週最高</td><td>NT$148</td><td>距高點 -25%</td></tr>
+<tr><td>52 週最低</td><td>NT$77.4</td><td>距低點 +43%</td></tr>
+<tr><td>MA5 / MA20 / MA60</td><td>⚠️ 待驗證</td><td>—</td></tr>
+<tr><td>RSI (14日)</td><td>⚠️ 待驗證</td><td>—</td></tr>
+<tr><td>KD (9日)</td><td>⚠️ 待驗證</td><td>—</td></tr>
+<tr><td>MA20 乖離率</td><td>⚠️ 待驗證</td><td>—</td></tr>
+</table>
+</div>
+
+<div class="alert alert-warning">
+  <strong>⚠️ 技術指標即時數據限制：</strong>RSI、KD、均線乖離率為即時變動數據，本報告無法從靜態網頁抓取精確值。建議投資人在實際操作前，透過券商看盤軟體確認即時技術指標。<br>
+  <strong>已知資訊：</strong>股價從 52 週高點 148 回檔約 25%，短期處於修正趨勢中。單日跌幅 5.53% 可能觸發短期超賣。
+</div>
+<p class="source">📎 來源：<a href="https://histock.tw/stock/1514" target="_blank">HiStock 亞力技術分析</a>，2026/03/09</p>
+</section>
+
+<!-- ===== 7. Risk Assessment ===== -->
+<section>
+<h2>七、風險評估 Risk Assessment</h2>
+
+<h3>7.1 風險矩陣</h3>
+<div class="table-wrap">
+<table>
+<tr><th>風險</th><th>機率</th><th>影響</th><th>嚴重度</th><th>觸發指標</th></tr>
+<tr><td>台電招標進度延遲</td><td>中</td><td>高</td><td>🔴 高</td><td>季度新增訂單 < 15 億連續 2 季</td></tr>
+<tr><td>原物料（矽鋼片、銅）大漲</td><td>中</td><td>中</td><td>🟡 中</td><td>毛利率連續 2 季低於 17%</td></tr>
+<tr><td>PE 均值回歸</td><td>中高</td><td>高</td><td>🔴 高</td><td>重電四雄 PE 均跌破 20x</td></tr>
+<tr><td>客戶集中度風險</td><td>低</td><td>高</td><td>🟡 中</td><td>台電佔營收超過 55%</td></tr>
+<tr><td>人才爭奪 / 產能瓶頸</td><td>中</td><td>中</td><td>🟡 中</td><td>交貨延遲率 > 10%</td></tr>
+<tr><td>匯率影響（TWD 升值）</td><td>低中</td><td>低</td><td>🟢 低</td><td>TWD/USD 升破 30</td></tr>
+</table>
+</div>
+
+<div class="alert alert-info">
+  <strong>匯率敏感度分析：</strong>亞力營收主要來自國內市場（推估 >90%），海外營收佔比低。TWD 升值對營收直接影響有限，但進口原物料成本可能因 TWD 升值而降低（正面影響）。匯率非主要風險因素。
+</div>
+
+<h3>7.2 情境模擬 Scenario Analysis</h3>
+
+<div class="scenario-box bull">
+  <h4>🐂 樂觀情境 Bull Case — 機率 25%</h4>
+  <p><strong>觸發條件：</strong>2026 年台電招標金額超預期 > 1,200 億 + AI DC 訂單加速 + 毛利率提升至 21%</p>
+  <p><strong>2026E EPS：</strong>4.20（+9.7% vs 共識）→ 35x PE → <strong>目標價 NT$147</strong></p>
+  <p><strong>量化觸發：</strong>季度營收連續 2 季 YoY > 25%、毛利率 > 20%</p>
+</div>
+
+<div class="scenario-box base">
+  <h4>📊 基準情境 Base Case — 機率 50%</h4>
+  <p><strong>假設：</strong>台電照計畫執行 + 楊梅二廠如期滿載 + 毛利率穩定 19-20%</p>
+  <p><strong>2026E EPS：</strong>3.83（法人共識）→ 30x PE → <strong>目標價 NT$115</strong></p>
+  <p><strong>量化觸發：</strong>季度營收 YoY 維持 15-20%、毛利率 19-20%</p>
+</div>
+
+<div class="scenario-box bear">
+  <h4>🐻 悲觀情境 Bear Case — 機率 25%</h4>
+  <p><strong>觸發條件：</strong>台電預算審查延遲 + 原物料大漲壓縮毛利 + PE 回歸至 22x</p>
+  <p><strong>2026E EPS：</strong>3.20（-16.4% vs 共識）→ 22x PE → <strong>目標價 NT$70</strong></p>
+  <p><strong>量化觸發：</strong>季度營收 YoY < 10%、毛利率 < 17%、在手訂單降至 80 億以下</p>
+</div>
+
+<p><strong>機率加權目標價：</strong>147 × 25% + 115 × 50% + 70 × 25% = NT$111.8（與現價幾乎一致）</p>
+</section>
+
+<!-- ===== 8. Investment Recommendation ===== -->
+<section>
+<h2>八、投資建議 Investment Recommendation</h2>
+
+<h3>8.1 投資評級</h3>
+<div class="kpi-grid">
+  <div class="kpi-card" style="border-left-color: #ecc94b;">
+    <div class="label">投資評級</div>
+    <div class="value" style="color: #744210;">🟡 持有</div>
+    <div class="note">HOLD</div>
+  </div>
+  <div class="kpi-card">
+    <div class="label">目標價</div>
+    <div class="value">NT$115</div>
+    <div class="note">vs 現價 111 (+3.6%)</div>
+  </div>
+  <div class="kpi-card">
+    <div class="label">評級依據</div>
+    <div class="value">±15%</div>
+    <div class="note">目標價在現價±15%內</div>
+  </div>
+</div>
+
+<p><strong>評級邏輯：</strong>目標價 NT$115 vs 現價 NT$111，潛在報酬 +3.6%，落在 ±15% 的「持有」區間內。</p>
+<ul>
+  <li>目標價 > 現價 +15% → 買進</li>
+  <li>目標價在 ±15% → <strong>持有 ✓</strong></li>
+  <li>目標價 < 現價 -15% → 賣出</li>
+</ul>
+
+<h3>8.2 具體操作區間</h3>
+<div class="op-zone">
+  <div class="zone-card zone-entry">
+    <div style="font-size:0.8em;">建議進場</div>
+    <div style="font-size:1.5em;">NT$95-100</div>
+    <div style="font-size:0.75em;">25-26x Forward PE</div>
+  </div>
+  <div class="zone-card zone-stop">
+    <div style="font-size:0.8em;">停損</div>
+    <div style="font-size:1.5em;">NT$82</div>
+    <div style="font-size:0.75em;">21.4x Forward PE<br>Bear Case PE 下緣</div>
+  </div>
+  <div class="zone-card zone-target">
+    <div style="font-size:0.8em;">目標價</div>
+    <div style="font-size:1.5em;">NT$135</div>
+    <div style="font-size:0.75em;">35x Forward PE</div>
+  </div>
+  <div class="zone-card zone-profit">
+    <div style="font-size:0.8em;">停利</div>
+    <div style="font-size:1.5em;">NT$148</div>
+    <div style="font-size:0.75em;">52週高點重測<br>38.6x Forward PE</div>
+  </div>
+</div>
+
+<h4>風險報酬比 R/R Ratio</h4>
+<div class="table-wrap">
+<table>
+<tr><th>參數</th><th>價位</th><th>計算</th></tr>
+<tr><td>建議進場中點</td><td>NT$97.5</td><td>（95+100）/2</td></tr>
+<tr><td>停損</td><td>NT$82</td><td>Bear PE 22x × EPS 3.83 ≈ 84，取整 82</td></tr>
+<tr><td>目標</td><td>NT$135</td><td>35x × 3.83</td></tr>
+<tr><td>風險 Risk</td><td>NT$15.5</td><td>97.5 - 82</td></tr>
+<tr><td>報酬 Reward</td><td>NT$37.5</td><td>135 - 97.5</td></tr>
+<tr class="highlight-row"><td><strong>R/R Ratio</strong></td><td colspan="2"><strong>2.42 : 1 ✅</strong>（> 2:1 門檻）</td></tr>
+</table>
+</div>
+
+<h3>8.3 三年投資潛力評估</h3>
+<div class="table-wrap">
+<table>
+<tr><th>年度</th><th>EPS 預估</th><th>合理 PE 範圍</th><th>股價區間</th></tr>
+<tr><td>2026E</td><td>3.83</td><td>25-35x</td><td>NT$96 - 134</td></tr>
+<tr><td>2027E</td><td>4.54</td><td>22-30x</td><td>NT$100 - 136</td></tr>
+<tr><td>2028E</td><td>5.00</td><td>18-25x</td><td>NT$90 - 125</td></tr>
+</table>
+</div>
+
+<div class="alert alert-success">
+  <strong>三年展望：</strong>若台電電網計畫如期推進 + AI DC 需求持續，亞力 EPS 有望從 3.83（2026E）成長至 5.0（2028E），CAGR ~14%。但隨著成長放緩，PE 可能從 30x 逐步收斂至 22-25x。<strong>長期持有的合理預期報酬為年化 10-15%</strong>（EPS 成長 + 股息），但需承受 PE 收縮的風險。
+</div>
+
+<h3>8.4 操作策略建議</h3>
+<ul>
+  <li><strong>已持有者：</strong>維持持有，設定停利 NT$148（前高），停損 NT$82。若股價突破前高 148 且伴隨營收加速，可考慮加碼。</li>
+  <li><strong>觀望者：</strong>等待回檔至 NT$95-100 區間再建立初始部位（建議佔投資組合 3-5%），避免在 NT$111 追高。</li>
+  <li><strong>積極者：</strong>若 2026 Q1 營收 YoY > 25% 且毛利率 > 20%，可在 NT$105-110 進場，但須嚴守停損。</li>
+</ul>
+</section>
+
+<!-- ===== 9. 重大事件追蹤 ===== -->
+<section>
+<h2>九、近期重大事件 Recent Catalysts</h2>
+
+<div class="table-wrap">
+<table>
+<tr><th>日期</th><th>事件</th><th>影響評估</th></tr>
+<tr><td>2026/03</td><td>四大重電（中興電、士電、亞力、華城）同步漲價</td><td>🟢 正面：反映供不應求，有利毛利率</td></tr>
+<tr><td>2026/01</td><td>在手訂單 106-120 億，能見度至 2029 年</td><td>🟢 正面：營收穩定度高</td></tr>
+<tr><td>2026</td><td>楊梅二廠滿載投產</td><td>🟢 正面：新增 ~10 億變壓器年產能</td></tr>
+<tr><td>2025</td><td>年營收首度突破百億（105.55 億）</td><td>🟢 正面：規模效益浮現</td></tr>
+<tr><td>2025</td><td>STATCOM 合約持續入帳（20 億合約中尚餘 4-5 億）</td><td>🟢 正面：新技術領域先行者</td></tr>
+<tr><td>持續</td><td>台電十年電網強韌計畫進入主力執行期（2026-2032）</td><td>🟢 正面：長期成長基石</td></tr>
+</table>
+</div>
+</section>
+
+<!-- ===== 10. Disclaimer ===== -->
+<section>
+<h2>十、免責聲明 Disclaimer</h2>
+
+<div class="alert alert-danger">
+<p><strong>利益揭露：</strong>本報告作者可能持有或未來可能買賣亞力電機（1514）之股票。本報告之分析與建議可能受到作者持股立場影響。</p>
+
+<p><strong>非官方財測：</strong>本報告中所有標註「E」或「推估」的數據均為作者基於公開資訊推算之估計值，<strong>並非</strong>亞力電機公司官方發布之財務預測。實際結果可能與估計值存在重大差異。</p>
+
+<p><strong>非投資建議：</strong>本報告僅供個人研究參考，<strong>不構成</strong>任何買賣證券之邀約或建議。投資人應自行評估風險，並在做出投資決策前諮詢合格之金融顧問。所有投資均有風險，過往績效不代表未來表現。</p>
+
+<p><strong>數據時效：</strong>本報告數據截至 2026/03/09。市場狀況瞬息萬變，報告中的分析可能因新資訊出現而需要修正。</p>
+
+<p><strong>推估值標註：</strong>報告中所有推估值均以 ⚠️ 標記，提醒讀者該數據非經公司官方確認。</p>
+</div>
+</section>
+
+<!-- ===== Appendix: Sources ===== -->
+<section>
+<h2>附錄：資料來源 Sources</h2>
+<ul>
+  <li>📎 <a href="https://www.cnyes.com/twstock/1514" target="_blank">鉅亨網 — 亞力 1514 總覽</a>，2026/03/09</li>
+  <li>📎 <a href="https://winvest.tw/Stock/Symbol/Comment/1514" target="_blank">Win投資 — 亞力 1514</a>，2026/03/09</li>
+  <li>📎 <a href="https://histock.tw/stock/1514" target="_blank">HiStock — 亞力技術分析</a>，2026/03/09</li>
+  <li>📎 <a href="https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1514" target="_blank">Goodinfo — 亞力基本資料</a>，2026/03/09</li>
+  <li>📎 <a href="https://pchome.megatime.com.tw/stock/sid1514.html" target="_blank">PChome 股市 — 亞力</a>，2026/03/09</li>
+  <li>📎 台灣電力公司 — 十年電網強韌計畫公開資料</li>
+  <li>⚠️ 歷年股價高低為基於年度報酬率反推之估計值</li>
+  <li>⚠️ 事業群營收拆分為基於客戶結構之推估值</li>
+  <li>⚠️ D&A、淨負債為基於財報總量之推算值</li>
+</ul>
+</section>
+
+</div>
+
+<footer>
+<div class="container">
+  <p><strong>亞力電機 (1514) CFA Buy-Side 深度投資分析</strong></p>
+  <p>報告日期：2026/03/09 ｜ 分析師：AI Research Assistant</p>
+  <p>本報告依據 CFA Institute Standards of Professional Conduct 精神撰寫</p>
+  <p style="margin-top:8px;">⚠️ 本報告為個人研究用途，非投資建議。投資有風險，決策請自負。</p>
+</div>
+</footer>
+
+</body>
+</html>
