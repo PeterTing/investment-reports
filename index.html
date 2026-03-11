@@ -267,6 +267,81 @@
     .empty-state-icon { font-size: 2.5rem; margin-bottom: 0.8rem; opacity: 0.5; }
     .empty-state-text { font-size: 0.9rem; line-height: 1.5; }
 
+    /* === MACRO DASHBOARD === */
+    .macro-header {
+      background: rgba(30, 41, 59, 0.6); border: 1px solid #334155;
+      border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .macro-overall { display: flex; align-items: center; gap: 1rem; }
+    .macro-score-circle {
+      width: 70px; height: 70px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; font-weight: 800; color: #fff;
+    }
+    .macro-score-circle.positive { background: linear-gradient(135deg, #10b981, #34d399); }
+    .macro-score-circle.neutral { background: linear-gradient(135deg, #3b82f6, #60a5fa); }
+    .macro-score-circle.negative { background: linear-gradient(135deg, #ef4444, #f87171); }
+    .macro-assessment { font-size: 1.2rem; color: #f8fafc; font-weight: 700; }
+    .macro-date { font-size: 0.78rem; color: #94a3b8; }
+    .macro-summary {
+      color: #cbd5e1; font-size: 0.85rem; line-height: 1.6;
+      background: rgba(15, 23, 42, 0.4); padding: 1rem; border-radius: 8px;
+      border-left: 3px solid #3b82f6; margin-bottom: 1.5rem;
+    }
+    .macro-categories { display: flex; flex-direction: column; gap: 1.2rem; margin-bottom: 1.5rem; }
+    .macro-cat {
+      background: rgba(30, 41, 59, 0.5); border: 1px solid #334155;
+      border-radius: 10px; overflow: hidden;
+    }
+    .macro-cat-title {
+      padding: 0.8rem 1rem; font-weight: 700; font-size: 0.92rem; color: #f8fafc;
+      display: flex; align-items: center; gap: 0.5rem;
+      background: rgba(15, 23, 42, 0.4); border-bottom: 1px solid #334155;
+    }
+    .macro-items { padding: 0.8rem; display: flex; flex-direction: column; gap: 0.6rem; }
+    .macro-item {
+      display: grid; grid-template-columns: 160px 100px 70px 1fr; gap: 0.6rem;
+      align-items: center; padding: 0.6rem; border-radius: 6px;
+      background: rgba(15, 23, 42, 0.3); font-size: 0.82rem;
+    }
+    @media (max-width: 768px) {
+      .macro-item { grid-template-columns: 1fr 1fr; gap: 0.4rem; }
+      .macro-item-detail { grid-column: 1 / -1; }
+    }
+    .macro-item-name { color: #e2e8f0; font-weight: 600; }
+    .macro-item-value { color: #f8fafc; font-weight: 700; font-size: 0.92rem; }
+    .macro-item-trend { font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px; text-align: center; font-weight: 600; }
+    .macro-item-trend.positive { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; }
+    .macro-item-trend.neutral { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+    .macro-item-trend.caution { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+    .macro-item-trend.negative { background: rgba(239, 68, 68, 0.15); color: #fca5a5; }
+    .macro-item-detail { color: #94a3b8; font-size: 0.75rem; line-height: 1.5; }
+    .macro-item-source { margin-top: 0.2rem; }
+    .macro-item-source a { color: #3b82f6; font-size: 0.68rem; text-decoration: none; }
+    .macro-item-source a:hover { text-decoration: underline; }
+    .macro-impact {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;
+    }
+    @media (max-width: 768px) { .macro-impact { grid-template-columns: 1fr; } }
+    .macro-impact-card {
+      background: rgba(30, 41, 59, 0.5); border: 1px solid #334155;
+      border-radius: 10px; padding: 1rem;
+    }
+    .macro-impact-card.positive-card { border-top: 3px solid #10b981; }
+    .macro-impact-card.negative-card { border-top: 3px solid #ef4444; }
+    .macro-impact-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.6rem; }
+    .macro-impact-title.pos { color: #6ee7b7; }
+    .macro-impact-title.neg { color: #fca5a5; }
+    .macro-impact-list { list-style: none; padding: 0; }
+    .macro-impact-list li { color: #cbd5e1; font-size: 0.78rem; line-height: 1.6; padding: 0.3rem 0; padding-left: 1rem; position: relative; }
+    .macro-impact-list li::before { content: '•'; position: absolute; left: 0; color: #64748b; }
+    .macro-net {
+      background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 10px; padding: 1rem; color: #cbd5e1; font-size: 0.85rem; line-height: 1.6;
+    }
+    .macro-net strong { color: #60a5fa; }
+
     /* === FOOTER === */
     .footer { text-align: center; padding: 2rem; color: #475569; font-size: 0.78rem; border-top: 1px solid #1e293b; margin-top: 3rem; }
     .footer p { margin: 0.3rem 0; line-height: 1.5; }
@@ -306,6 +381,7 @@
       <a class="nav-tab active" onclick="showSection('picks')">🎯 每日精選</a>
       <a class="nav-tab" onclick="showSection('watchlist')">📡 重電追蹤</a>
       <a class="nav-tab" onclick="showSection('methodology')">📊 評分標準</a>
+      <a class="nav-tab" onclick="showSection('macro')">🌍 總經儀表板</a>
       <a class="nav-tab" onclick="showSection('archive')">📚 報告存檔</a>
     </div>
   </div>
@@ -332,6 +408,10 @@
       <div class="stat-item">
         <div class="stat-value" id="watchlistCount">-</div>
         <div class="stat-label">📡 追蹤股</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="macroScore">-</div>
+        <div class="stat-label">🌍 總經評分</div>
       </div>
       <div class="stat-item">
         <div class="stat-value" id="totalReports">7</div>
@@ -395,6 +475,15 @@
       <div class="section-subtitle">所有精選與追蹤股均採用同一套評分體系，確保一致性與可比較性</div>
       <div class="methodology-box" id="methodologyBox">
         <div class="empty-state"><div class="empty-state-icon">📊</div><div class="empty-state-text">載入中...</div></div>
+      </div>
+    </div>
+
+    <!-- ===================== SECTION: MACRO ===================== -->
+    <div class="section-content" id="sec-macro">
+      <div class="section-title">🌍 總體經濟儀表板</div>
+      <div class="section-subtitle">宏觀經濟指標總覽 | 利率・景氣・風險・地緣政治 | 對持股影響評估</div>
+      <div id="macroContainer">
+        <div class="empty-state"><div class="empty-state-icon">🌍</div><div class="empty-state-text">載入中...</div></div>
       </div>
     </div>
 
@@ -528,6 +617,9 @@
 
       // Render methodology
       if (data.scoring_methodology) renderMethodology(data.scoring_methodology);
+
+      // Render macro dashboard
+      if (data.macro_overview) renderMacro(data.macro_overview);
 
       // Update stats
       updateStats(data);
@@ -765,6 +857,88 @@
       `).join('');
     }
 
+    // ===== RENDER MACRO DASHBOARD =====
+    function renderMacro(macro) {
+      const container = document.getElementById('macroContainer');
+      if (!macro) { container.innerHTML = '<div class="empty-state"><div class="empty-state-icon">🌍</div><div class="empty-state-text">暫無總經數據</div></div>'; return; }
+
+      const scoreClass = macro.overall_score >= 6 ? 'positive' : macro.overall_score >= 4 ? 'neutral' : 'negative';
+      const trendIcon = (t) => {
+        if (!t) return '';
+        const map = { positive: '📈', neutral: '➡️', caution: '⚠️', negative: '📉' };
+        return map[t] || '➡️';
+      };
+      const catIcons = { '利率與貨幣政策': '🏦', '經濟成長與景氣': '📊', '市場情緒與風險': '🎭', '股市指數': '📈', '地緣政治與政策': '🌐' };
+
+      let html = '';
+
+      // Header
+      html += `<div class="macro-header">
+        <div style="display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;">
+          <div class="macro-score-circle ${scoreClass}">
+            <div style="font-size:1.5rem;font-weight:800;line-height:1;">${macro.overall_score}</div>
+            <div style="font-size:0.6rem;opacity:0.8;">/10</div>
+          </div>
+          <div style="flex:1;min-width:200px;">
+            <div style="font-size:1.1rem;font-weight:700;color:#f8fafc;margin-bottom:0.3rem;">
+              總經評估：${macro.overall_assessment}
+            </div>
+            <div style="font-size:0.82rem;color:#94a3b8;line-height:1.6;">${macro.summary || ''}</div>
+          </div>
+        </div>
+      </div>`;
+
+      // Categories
+      if (macro.indicators && macro.indicators.length > 0) {
+        html += '<div class="macro-categories">';
+        macro.indicators.forEach(cat => {
+          const icon = catIcons[cat.category] || '📌';
+          html += `<div class="macro-cat">
+            <div class="macro-cat-title">${icon} ${cat.category}</div>
+            <div class="macro-items">`;
+          (cat.items || []).forEach(item => {
+            const sig = item.signal || 'neutral';
+            html += `<div class="macro-item">
+              <div class="macro-item-name">${item.name}</div>
+              <div class="macro-item-value">${item.value || '-'}</div>
+              <div class="macro-item-trend ${sig}">${trendIcon(sig)} ${sig === 'positive' ? '正面' : sig === 'caution' ? '留意' : sig === 'negative' ? '警示' : '中性'}</div>
+              <div class="macro-item-detail">
+                ${item.detail || ''}
+                ${item.source ? `<div class="macro-item-source"><a href="${item.source}" target="_blank" rel="noopener">📎 來源</a></div>` : ''}
+              </div>
+            </div>`;
+          });
+          html += '</div></div>';
+        });
+        html += '</div>';
+      }
+
+      // Impact on picks
+      if (macro.impact_on_picks) {
+        const imp = macro.impact_on_picks;
+        html += '<div class="macro-impact">';
+        if (imp.positive_factors && imp.positive_factors.length > 0) {
+          html += `<div class="macro-impact-card positive-card">
+            <div class="macro-impact-title pos">✅ 有利因素</div>
+            <ul class="macro-impact-list">${imp.positive_factors.map(f => `<li>${f}</li>`).join('')}</ul>
+          </div>`;
+        }
+        if (imp.negative_factors && imp.negative_factors.length > 0) {
+          html += `<div class="macro-impact-card negative-card">
+            <div class="macro-impact-title neg">⚠️ 不利因素</div>
+            <ul class="macro-impact-list">${imp.negative_factors.map(f => `<li>${f}</li>`).join('')}</ul>
+          </div>`;
+        }
+        html += '</div>';
+
+        if (imp.net_assessment) {
+          html += `<div class="macro-net"><strong>📋 綜合評估：</strong>${imp.net_assessment}</div>`;
+        }
+      }
+
+      container.innerHTML = html;
+    }
+
     // ===== UPDATE STATS =====
     function updateStats(data) {
       if (!data) return;
@@ -784,6 +958,10 @@
       }
 
       document.getElementById('totalReports').textContent = REPORT_ARCHIVE.length;
+
+      if (data.macro_overview && data.macro_overview.overall_score) {
+        document.getElementById('macroScore').textContent = data.macro_overview.overall_score + '/10';
+      }
     }
   </script>
 </body>

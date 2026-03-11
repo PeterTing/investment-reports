@@ -961,5 +961,136 @@
     "Morgan Stanley Semiconductor Research",
     "MarketBeat / TipRanks Consensus",
     "工商時報、經濟日報、今周刊"
-  ]
+  ],
+  "macro_overview": {
+    "update_date": "2026-03-11",
+    "overall_assessment": "中性偏多",
+    "overall_score": 6.5,
+    "summary": "全球經濟處於『高利率＋溫和擴張』的格局。美國 ISM 製造業 PMI 連續兩月擴張（52.4），但 Fed 維持利率不動（3.50-3.75%），市場預期最快 6 月降息。台灣景氣燈號連 2 紅（39 分），出口與消費表現亮眼。主要風險為中東地緣政治升溫推升油價與 VIX，以及川普關稅政策的不確定性。",
+    "indicators": [
+      {
+        "category": "利率與貨幣政策",
+        "icon": "🏦",
+        "items": [
+          {
+            "name": "Fed Funds Rate",
+            "value": "3.50-3.75%",
+            "trend": "持平",
+            "signal": "neutral",
+            "detail": "2026/3 FOMC（3/18）維持利率機率 96%，CME FedWatch 顯示最快 6 月降息 25bps（機率 46.8%）。年內預期僅降息 1 碼。",
+            "source": "https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html"
+          },
+          {
+            "name": "美國 10Y 公債殖利率",
+            "value": "4.15%",
+            "trend": "微升",
+            "signal": "caution",
+            "detail": "近一個月最高觸及 4.21%，中東衝突推升通膨預期，壓抑降息空間。殖利率上升對成長股估值形成壓力。",
+            "source": "https://fred.stlouisfed.org/series/DGS10"
+          }
+        ]
+      },
+      {
+        "category": "經濟成長與景氣",
+        "icon": "📈",
+        "items": [
+          {
+            "name": "ISM 製造業 PMI",
+            "value": "52.4",
+            "trend": "擴張",
+            "signal": "positive",
+            "detail": "2026 年 2 月數據，連續第 2 個月站在榮枯線 50 之上。新訂單、生產指數均為擴張，但原物料價格分項飆至 70.5（2022/6 以來最高），反映關稅與油價壓力。",
+            "source": "https://www.prnewswire.com/news-releases/manufacturing-pmi-at-52-4-february-2026-ism-manufacturing-pmi-report-302699883.html"
+          },
+          {
+            "name": "台灣景氣燈號",
+            "value": "🔴 紅燈 39 分",
+            "trend": "熱絡",
+            "signal": "positive",
+            "detail": "2026 年 1 月公布（3/9 發布），連 2 紅，9 項構成項中批發零售餐飲轉紅燈加 1 分。國發會評估：經濟穩健成長。",
+            "source": "https://index.ndc.gov.tw/n/zh_tw/data/eco"
+          }
+        ]
+      },
+      {
+        "category": "市場情緒與風險",
+        "icon": "⚡",
+        "items": [
+          {
+            "name": "VIX 恐慌指數",
+            "value": "23.6",
+            "trend": "下降",
+            "signal": "caution",
+            "detail": "3/6 一度衝高至 29.5，因中東地緣政治風險；3/10 川普釋出停火訊號後暴跌 13.5%。VIX > 20 仍屬偏高水位，顯示市場仍有不安情緒。",
+            "source": "https://fred.stlouisfed.org/series/VIXCLS"
+          },
+          {
+            "name": "USD/TWD 匯率",
+            "value": "31.79",
+            "trend": "台幣走弱",
+            "signal": "caution",
+            "detail": "台幣月跌 1.42%，外資持續賣超台股壓抑匯率。近 31.85 為 2025/5 以來最弱。台幣貶值有利出口廠，但不利進口成本。",
+            "source": "https://rate.bot.com.tw/xrt/quote/l6m/USD"
+          }
+        ]
+      },
+      {
+        "category": "股市指數",
+        "icon": "📊",
+        "items": [
+          {
+            "name": "S&P 500",
+            "value": "5,770",
+            "trend": "震盪",
+            "signal": "neutral",
+            "detail": "3/10 收在約 5,770，近一週因關稅與中東局勢震盪，距歷史高點回落約 5%。JPMorgan 警告可能出現 10% 修正。",
+            "source": "https://tradingeconomics.com/united-states/stock-market"
+          },
+          {
+            "name": "TAIEX 加權指數",
+            "value": "22,772",
+            "trend": "反彈",
+            "signal": "neutral",
+            "detail": "3/10 大漲 3.24%（+1,040 點），川普停火言論帶動反彈。但外資連續賣超態勢未變，短線反彈持續性待觀察。",
+            "source": "https://www.twse.com.tw/en/indices/taiex/mi-5min-hist.html"
+          }
+        ]
+      },
+      {
+        "category": "地緣政治與政策",
+        "icon": "🌍",
+        "items": [
+          {
+            "name": "中東地緣風險",
+            "value": "中高",
+            "trend": "降溫中",
+            "signal": "caution",
+            "detail": "以巴衝突持續，但川普 3/10 表示戰爭可能即將結束。油價仍高於 $75/桶，若停火協議達成將大幅降低通膨風險。"
+          },
+          {
+            "name": "川普關稅政策",
+            "value": "高度不確定",
+            "trend": "升溫",
+            "signal": "negative",
+            "detail": "鋼鋁關稅已生效，ISM 價格分項飆至 70.5。市場擔憂對中國、歐盟進一步加徵關稅。台灣半導體目前未被列入但風險仍存。"
+          }
+        ]
+      }
+    ],
+    "impact_on_picks": {
+      "positive_factors": [
+        "ISM PMI 擴張支撐半導體設備與工業股需求前景",
+        "台灣景氣紅燈，內需消費與出口動能強勁",
+        "Fed 降息預期（6 月）有利成長股估值重估",
+        "中東停火預期降低尾端風險"
+      ],
+      "negative_factors": [
+        "10Y 殖利率 4.15% 壓抑高 PE 成長股",
+        "VIX 仍在 20 以上，短線震盪風險高",
+        "川普關稅不確定性可能衝擊供應鏈成本",
+        "外資持續賣超台股，台幣貶值壓力"
+      ],
+      "net_assessment": "總經環境對精選標的為『中性偏多』。基本面與產業趨勢（AI、重電、半導體）仍是核心驅動力，但需警戒關稅與地緣政治的尾端風險。建議維持 70% 核心持倉 + 30% 現金水位應對波動。"
+    }
+  }
 }
