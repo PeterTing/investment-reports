@@ -1,237 +1,1017 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>投資分析報告中心 | 2026 Q1</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0f172a;color:#e2e8f0;min-height:100vh}
-.header{background:linear-gradient(135deg,#1e293b,#0f172a);border-bottom:1px solid #334155;padding:2rem 1.5rem;text-align:center}
-.header h1{font-size:1.8rem;color:#f8fafc;margin-bottom:.5rem}
-.header p{color:#94a3b8;font-size:.95rem}
-.container{max-width:1100px;margin:0 auto;padding:2rem 1.5rem}
-.top20-banner{background:linear-gradient(135deg,#1e40af,#7c3aed);border-radius:12px;padding:1.5rem 2rem;margin-bottom:1rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.top20-banner .info h2{font-size:1.3rem;color:#fff;margin-bottom:.3rem}
-.top20-banner .info p{color:#c7d2fe;font-size:.9rem}
-.top20-banner a{background:#fff;color:#1e40af;padding:.7rem 1.5rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:.95rem;transition:transform .2s}
-.top20-banner a:hover{transform:translateY(-2px)}
-.heavy-banner{background:linear-gradient(135deg,#b45309,#d97706);border-radius:12px;padding:1.5rem 2rem;margin-bottom:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.heavy-banner .info h2{font-size:1.3rem;color:#fff;margin-bottom:.3rem}
-.heavy-banner .info p{color:#fef3c7;font-size:.9rem}
-.heavy-banner a{background:#fff;color:#b45309;padding:.7rem 1.5rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:.95rem;transition:transform .2s}
-.heavy-banner a:hover{transform:translateY(-2px)}
-.section-title{font-size:1.2rem;color:#94a3b8;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid #1e293b}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;margin-bottom:2rem}
-.card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:1.5rem;transition:transform .2s,border-color .2s}
-.card:hover{transform:translateY(-3px);border-color:#3b82f6}
-.card .ticker{font-size:.85rem;color:#60a5fa;font-weight:600;letter-spacing:.05em}
-.card .name{font-size:1.15rem;color:#f1f5f9;margin:.3rem 0 .8rem;font-weight:600}
-.card .meta{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
-.badge{padding:.2rem .6rem;border-radius:6px;font-size:.75rem;font-weight:600}
-.badge-buy{background:#065f46;color:#6ee7b7}
-.badge-hold{background:#78350f;color:#fcd34d}
-.badge-sell{background:#7f1d1d;color:#fca5a5}
-.badge-sector{background:#1e3a5f;color:#93c5fd}
-.badge-price{background:#312e81;color:#a5b4fc}
-.card .target{font-size:.85rem;color:#94a3b8;margin-bottom:1rem;line-height:1.5}
-.card a{display:inline-block;background:#3b82f6;color:#fff;padding:.5rem 1.2rem;border-radius:8px;text-decoration:none;font-size:.85rem;font-weight:500;transition:background .2s}
-.card a:hover{background:#2563eb}
-.card.pick1{border:2px solid #f59e0b}
-.pick-label{background:#f59e0b;color:#000;font-size:.7rem;padding:.15rem .5rem;border-radius:4px;font-weight:700}
-.card.buy-highlight{border:2px solid #10b981}
-.buy-label{background:#10b981;color:#000;font-size:.7rem;padding:.15rem .5rem;border-radius:4px;font-weight:700}
-.review-section{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:1.5rem;margin-bottom:2rem}
-.review-section h3{color:#f8fafc;margin-bottom:1rem;font-size:1rem}
-.review-table{width:100%;border-collapse:collapse;font-size:.85rem}
-.review-table th{text-align:left;padding:.5rem;color:#94a3b8;border-bottom:1px solid #334155}
-.review-table td{padding:.5rem;border-bottom:1px solid #1e293b}
-.score-bar{background:#334155;border-radius:6px;height:14px;width:120px;display:inline-block;overflow:hidden;vertical-align:middle;margin-right:.5rem}
-.score-fill{display:block;height:100%;border-radius:6px;min-width:1px}
-.footer{text-align:center;padding:2rem;color:#475569;font-size:.8rem;border-top:1px solid #1e293b}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>投資分析報告中心 | 每日精選 Top 10</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans TC', sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1a202c 100%);
+      color: #e2e8f0;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* === HEADER === */
+    .header {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border-bottom: 2px solid #3b82f6;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      color: #f8fafc;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    @media (max-width: 640px) {
+      .header h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .header p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .header .subtitle {
+      color: #60a5fa;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* === CONTAINER === */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 1.5rem 1rem;
+      }
+    }
+
+    /* === STATS BAR === */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+      padding: 1.5rem;
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid #334155;
+      border-radius: 12px;
+      backdrop-filter: blur(4px);
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .stat-value {
+      font-size: 1.8rem;
+      color: #60a5fa;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    /* === CALENDAR NAVIGATION === */
+    .calendar-nav {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .calendar-nav h3 {
+      color: #f8fafc;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .calendar-controls {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .calendar-btn {
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid #3b82f6;
+      color: #60a5fa;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .calendar-btn:hover {
+      background: rgba(59, 130, 246, 0.2);
+      border-color: #60a5fa;
+    }
+
+    .calendar-btn.active {
+      background: #3b82f6;
+      color: #fff;
+      border-color: #3b82f6;
+    }
+
+    .date-picker {
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #e2e8f0;
+      padding: 0.6rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    .date-picker:focus {
+      outline: none;
+      border-color: #60a5fa;
+      box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+    }
+
+    .current-date {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      margin-left: 0.5rem;
+    }
+
+    /* === SECTION TITLES === */
+    .section-title {
+      font-size: 1.3rem;
+      color: #f8fafc;
+      margin: 2rem 0 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid #3b82f6;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      margin: -1rem 0 1.5rem;
+      font-weight: 400;
+    }
+
+    /* === PICK CARDS === */
+    .picks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .picks-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pick-card {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.8));
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pick-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .pick-card:hover {
+      transform: translateY(-4px);
+      border-color: #3b82f6;
+      box-shadow: 0 12px 24px rgba(59, 130, 246, 0.15);
+    }
+
+    .pick-card:hover::before {
+      opacity: 1;
+    }
+
+    .pick-rank {
+      display: inline-block;
+      background: linear-gradient(135deg, #f59e0b, #fbbf24);
+      color: #000;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .pick-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      gap: 1rem;
+    }
+
+    .pick-ticker {
+      font-size: 0.8rem;
+      color: #60a5fa;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .pick-name {
+      font-size: 1.2rem;
+      color: #f1f5f9;
+      font-weight: 700;
+      margin: 0.3rem 0;
+      line-height: 1.3;
+    }
+
+    .pick-name-en {
+      font-size: 0.75rem;
+      color: #94a3b8;
+      font-weight: 400;
+      margin-top: 0.2rem;
+    }
+
+    .pick-badges {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    .badge {
+      padding: 0.35rem 0.7rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .badge-market {
+      background: rgba(96, 165, 250, 0.2);
+      color: #60a5fa;
+      border: 1px solid #3b82f6;
+    }
+
+    .badge-rating-buy {
+      background: rgba(16, 185, 129, 0.2);
+      color: #6ee7b7;
+      border: 1px solid #10b981;
+    }
+
+    .badge-rating-hold {
+      background: rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+      border: 1px solid #f59e0b;
+    }
+
+    .badge-rating-sell {
+      background: rgba(239, 68, 68, 0.2);
+      color: #fca5a5;
+      border: 1px solid #ef4444;
+    }
+
+    .pick-price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid #334155;
+      margin-bottom: 1rem;
+    }
+
+    .price-current {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .price-label {
+      font-size: 0.75rem;
+      color: #94a3b8;
+      margin-bottom: 0.2rem;
+    }
+
+    .price-value {
+      font-size: 1.4rem;
+      color: #f1f5f9;
+      font-weight: 700;
+    }
+
+    .price-upside {
+      text-align: right;
+    }
+
+    .upside-value {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    .upside-positive {
+      color: #6ee7b7;
+    }
+
+    .upside-negative {
+      color: #fca5a5;
+    }
+
+    .upside-label {
+      font-size: 0.75rem;
+      color: #94a3b8;
+    }
+
+    /* === SCORE BREAKDOWN === */
+    .score-breakdown {
+      margin-bottom: 1rem;
+    }
+
+    .score-breakdown-title {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .total-score {
+      background: rgba(59, 130, 246, 0.2);
+      color: #60a5fa;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .scores-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+    }
+
+    .score-item {
+      background: rgba(30, 41, 59, 0.5);
+      padding: 0.7rem;
+      border-radius: 8px;
+      border-left: 3px solid #3b82f6;
+    }
+
+    .score-name {
+      font-size: 0.75rem;
+      color: #94a3b8;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+
+    .score-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .score-bar-bg {
+      flex: 1;
+      height: 4px;
+      background: #334155;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .score-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #3b82f6, #60a5fa);
+      border-radius: 2px;
+    }
+
+    .score-number {
+      font-size: 0.8rem;
+      color: #60a5fa;
+      font-weight: 700;
+      min-width: 20px;
+      text-align: right;
+    }
+
+    .pick-summary {
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      background: rgba(51, 65, 85, 0.2);
+      border-radius: 8px;
+      border-left: 2px solid #3b82f6;
+    }
+
+    .pick-report-link {
+      display: inline-block;
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      border: 1px solid #3b82f6;
+    }
+
+    .pick-report-link:hover {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      transform: translateX(2px);
+    }
+
+    /* === REPORTS GRID === */
+    .reports-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .reports-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      }
+    }
+
+    .report-card {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.6), rgba(15, 23, 42, 0.6));
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 1.2rem;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .report-card:hover {
+      transform: translateY(-3px);
+      border-color: #3b82f6;
+      box-shadow: 0 10px 20px rgba(59, 130, 246, 0.1);
+    }
+
+    .report-ticker {
+      font-size: 0.8rem;
+      color: #60a5fa;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+
+    .report-name {
+      font-size: 1.1rem;
+      color: #f1f5f9;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .report-date {
+      font-size: 0.8rem;
+      color: #94a3b8;
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid #334155;
+    }
+
+    .report-rating {
+      display: inline-block;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: auto;
+    }
+
+    .report-rating-buy {
+      background: rgba(16, 185, 129, 0.2);
+      color: #6ee7b7;
+      border: 1px solid #10b981;
+    }
+
+    .report-rating-hold {
+      background: rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+      border: 1px solid #f59e0b;
+    }
+
+    .report-rating-sell {
+      background: rgba(239, 68, 68, 0.2);
+      color: #fca5a5;
+      border: 1px solid #ef4444;
+    }
+
+    /* === EMPTY STATE === */
+    .empty-state {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      color: #94a3b8;
+    }
+
+    .empty-state-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      opacity: 0.5;
+    }
+
+    .empty-state-text {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* === FOOTER === */
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      color: #475569;
+      font-size: 0.8rem;
+      border-top: 1px solid #1e293b;
+      margin-top: 3rem;
+    }
+
+    .footer p {
+      margin: 0.3rem 0;
+      line-height: 1.5;
+    }
+
+    /* === ARCHIVE SECTION === */
+    .archive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .archive-card {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 1rem;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      color: #e2e8f0;
+    }
+
+    .archive-card:hover {
+      border-color: #3b82f6;
+      background: rgba(30, 41, 59, 0.7);
+    }
+
+    .archive-ticker {
+      font-size: 0.85rem;
+      color: #60a5fa;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .archive-title {
+      font-size: 0.95rem;
+      color: #f1f5f9;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .archive-date {
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 640px) {
+      .stats-bar {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stat-value {
+        font-size: 1.5rem;
+      }
+
+      .stat-label {
+        font-size: 0.75rem;
+      }
+
+      .calendar-controls {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+
+      .calendar-btn, .date-picker {
+        width: 100%;
+      }
+
+      .section-title {
+        font-size: 1.1rem;
+      }
+
+      .pick-header {
+        flex-wrap: wrap;
+      }
+
+      .pick-price {
+        flex-wrap: wrap;
+      }
+
+      .price-upside {
+        width: 100%;
+        text-align: left;
+        margin-top: 0.5rem;
+      }
+    }
+
+    /* === ANIMATIONS === */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .pick-card, .report-card {
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    .pick-card:nth-child(1) { animation-delay: 0.05s; }
+    .pick-card:nth-child(2) { animation-delay: 0.1s; }
+    .pick-card:nth-child(3) { animation-delay: 0.15s; }
+    .pick-card:nth-child(4) { animation-delay: 0.2s; }
+    .pick-card:nth-child(5) { animation-delay: 0.25s; }
+  </style>
 </head>
 <body>
-<div class="header">
-<h1>投資分析報告中心</h1>
-<p>2026 Q1 台股深度研究 | CFA Buy-Side Framework | 報告日期：2026/03/11</p>
-</div>
-<div class="container">
+  <div class="header">
+    <h1>投資分析報告中心</h1>
+    <p>每日精選 Top 10 投資標的 | 台股 + 美股 | AI 驅動六維度分析</p>
+    <div class="subtitle">數據基期：2026/03 | CFA Buy-Side Framework</div>
+  </div>
 
-<div class="top20-banner">
-<div class="info">
-<h2>Top 20 最具投資價值台股篩選</h2>
-<p>6 維度加權評分模型 | 涵蓋大型權值股至百元以下中小型股</p>
-</div>
-<a href="Top20-篩選報告-2026-03-06.html">查看完整篩選報告 &rarr;</a>
-</div>
+  <div class="container">
+    <!-- === STATS BAR === -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-value" id="totalReports">6</div>
+        <div class="stat-label">深度研究報告</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="avgScore">-</div>
+        <div class="stat-label">平均評分</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="marketDistTw">-</div>
+        <div class="stat-label">台股占比</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="buyCount">-</div>
+        <div class="stat-label">買進評級</div>
+      </div>
+    </div>
 
-<div class="heavy-banner">
-<div class="info">
-<h2>重電股全面比較分析</h2>
-<p>8 檔重電股估值與評級 | 華城、士電、中興電、東元、大同、大亞、華新、亞力</p>
-</div>
-<a href="重電股比較總表-2026-03-11.html">查看比較總表 &rarr;</a>
-</div>
+    <!-- === CALENDAR NAVIGATION === -->
+    <div class="calendar-nav">
+      <h3>📅 依日期瀏覽精選</h3>
+      <div class="calendar-controls">
+        <button class="calendar-btn active" onclick="loadPicksByDate('today')">今日</button>
+        <button class="calendar-btn" onclick="loadPicksByDate('yesterday')">昨日</button>
+        <button class="calendar-btn" onclick="loadPicksByDate('week')">本週</button>
+        <input type="date" class="date-picker" id="dateInput" onchange="loadPicksByDate('custom')">
+        <span class="current-date" id="currentDate">Loading...</span>
+      </div>
+    </div>
 
-<div class="section-title">深度研究報告</div>
-<div class="cards">
+    <!-- === DAILY TOP 10 PICKS === -->
+    <div class="section-title">🎯 今日精選 Top 10</div>
+    <div class="section-subtitle">六維度評分：基本面、籌碼面、技術面、消息面、總經、產業展望</div>
+    <div class="picks-grid" id="picksContainer">
+      <div class="empty-state">
+        <div class="empty-state-icon">📊</div>
+        <div class="empty-state-text">載入中或未有今日精選數據...</div>
+      </div>
+    </div>
 
-<div class="card buy-highlight">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.3rem">
-<span class="ticker">1513.TW</span>
-<span class="buy-label">BUY</span>
-</div>
-<div class="name">中興電工 Chung-Hsin Electric</div>
-<div class="meta">
-<span class="badge badge-buy">🟢 買進</span>
-<span class="badge badge-sector">重電 / 電力設備</span>
-<span class="badge badge-price">NT$255</span>
-</div>
-<div class="target">
-目標價 NT$330 (+29.4%)<br>
-Forward PE 19.4x | ROE 19.1% | EPS 13.16<br>
-台電強韌電網主力受惠股，儲能+重電雙引擎
-</div>
-<a href="1513-2026-03-11.html">閱讀完整報告 &rarr;</a>
-</div>
+    <!-- === DEEP RESEARCH REPORTS === -->
+    <div class="section-title" style="margin-top: 3rem;">📈 深度研究報告</div>
+    <div class="section-subtitle">CFA 框架深度分析 | 歷史 PE 軌跡 | Bottom-Up EPS | 情境模擬</div>
+    <div class="reports-grid" id="reportsContainer">
+      <div class="empty-state">
+        <div class="empty-state-icon">📄</div>
+        <div class="empty-state-text">載入中...</div>
+      </div>
+    </div>
 
-<div class="card buy-highlight">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.3rem">
-<span class="ticker">1503.TW</span>
-<span class="buy-label">BUY</span>
-</div>
-<div class="name">士林電機 Shihlin Electric</div>
-<div class="meta">
-<span class="badge badge-buy">🟢 買進</span>
-<span class="badge badge-sector">重電 / 配電自動化</span>
-<span class="badge badge-price">NT$209.5</span>
-</div>
-<div class="target">
-目標價 NT$244 (+16.5%)<br>
-Forward PE 23.8x | ROE 8.9% | EPS 8.8<br>
-配電+自動化雙核心，台電強韌電網受惠
-</div>
-<a href="1503-2026-03-11.html">閱讀完整報告 &rarr;</a>
-</div>
+    <!-- === ARCHIVE SECTION === -->
+    <div class="section-title" style="margin-top: 3rem;">📚 報告存檔</div>
+    <div class="section-subtitle">過往深度分析報告檔案庫</div>
+    <div class="archive-grid" id="archiveContainer">
+      <!-- Dynamically populated -->
+    </div>
 
-<div class="card buy-highlight">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.3rem">
-<span class="ticker">1514.TW</span>
-<span class="buy-label">BUY</span>
-</div>
-<div class="name">亞力電機 Alex</div>
-<div class="meta">
-<span class="badge badge-buy">🟢 買進</span>
-<span class="badge badge-sector">重電 / 電力設備</span>
-<span class="badge badge-price">NT$98.6</span>
-</div>
-<div class="target">
-目標價 NT$121 (+22.7%)<br>
-Forward PE 17.8x | ROE 12.5% | EPS 5.54<br>
-台電+綠能訂單驅動，高營收成長
-</div>
-<a href="1514-2026-03-09.html">閱讀完整報告 &rarr;</a>
-</div>
+  </div>
 
-<div class="card pick1">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.3rem">
-<span class="ticker">2383.TW</span>
-<span class="pick-label">#1 PICK</span>
-</div>
-<div class="name">台光電 Elite Material</div>
-<div class="meta">
-<span class="badge badge-hold">🟡 持有</span>
-<span class="badge badge-sector">AI 伺服器供應鏈</span>
-<span class="badge badge-price">NT$2,380</span>
-</div>
-<div class="target">
-目標價 NT$2,283 (-4.1%)<br>
-Forward PE 39.6x | ROE 35.4% | PEG 0.92<br>
-DCF 估值 NT$1,428（已標注差距警訊）
-</div>
-<a href="2383-2026-03-06.html">閱讀完整報告 &rarr;</a>
-</div>
+  <div class="footer">
+    <p>💡 本報告僅供學術研究與參考，不構成任何有價證券之買賣邀約。投資有風險，入市須謹慎。</p>
+    <p style="margin-top: 0.8rem;">Generated by Investment Analysis Agent | CFA Buy-Side Framework | 2026</p>
+  </div>
 
-<div class="card">
-<span class="ticker">2330.TW</span>
-<div class="name">台積電 TSMC</div>
-<div class="meta">
-<span class="badge badge-sell">🔴 賣出</span>
-<span class="badge badge-sector">半導體代工</span>
-<span class="badge badge-price">NT$1,890</span>
-</div>
-<div class="target">
-目標價 NT$1,320 (-30.2%)<br>
-Forward PE 24.5x | ROE 27.3% | WACC 6.18%<br>
-歷史 PE 中位數 18x，當前估值偏高
-</div>
-<a href="2330-2026-03-06.html">閱讀完整報告 &rarr;</a>
-</div>
+  <script>
+    // ===== DATA & CONFIG =====
+    const REPORT_ARCHIVE = [
+      { ticker: '3017.TW', name: '奇鋐 AVC', date: '2026-03-11', rating: 'Buy', file: 'reports/deep/3017-2026-03-11.html' },
+      { ticker: '1503.TW', name: '士林電機 Shihlin', date: '2026-03-11', rating: 'Buy', file: '1503-2026-03-11.html' },
+      { ticker: '1513.TW', name: '中興電工 Chung-Hsin', date: '2026-03-11', rating: 'Buy', file: '1513-2026-03-11.html' },
+      { ticker: '1514.TW', name: '亞力電機 Alex', date: '2026-03-09', rating: 'Buy', file: '1514-2026-03-09.html' },
+      { ticker: '1504.TW', name: '東元電機 TECO', date: '2026-03-06', rating: 'Hold', file: '1504-2026-03-06.html' },
+      { ticker: '2330.TW', name: '台積電 TSMC', date: '2026-03-06', rating: 'Sell', file: '2330-2026-03-06.html' },
+      { ticker: '2383.TW', name: '台光電 Elite', date: '2026-03-06', rating: 'Hold', file: '2383-2026-03-06.html' }
+    ];
 
-<div class="card">
-<span class="ticker">1504.TW</span>
-<div class="name">東元電機 TECO</div>
-<div class="meta">
-<span class="badge badge-hold">🟡 持有</span>
-<span class="badge badge-sector">電機 / 綠能</span>
-<span class="badge badge-price">&lt;NT$100</span>
-</div>
-<div class="target">
-目標價 NT$65.7 (-9%)<br>
-WACC 6.4% | EPS 成長 0.54&rarr;3.0<br>
-ROE ~6.8%、FCF 為負需關注
-</div>
-<a href="1504-2026-03-06.html">閱讀完整報告 &rarr;</a>
-</div>
+    // Score key mapping: JSON key → Chinese label
+    const SCORE_LABELS = {
+      fundamental: '基本面',
+      chip: '籌碼面',
+      technical: '技術面',
+      catalyst: '消息面',
+      macro: '總經',
+      industry: '產業展望'
+    };
 
-</div>
+    // Local cache for fetched picks
+    const picksCache = {};
 
-<div class="review-section">
-<h3>Phase 4 自我審查結果（28 項估值自檢清單）<a href="audit-dashboard.html" style="float:right;font-size:.8rem;color:#60a5fa;text-decoration:none;font-weight:400">查看審查儀表板 &rarr;</a></h3>
-<table class="review-table">
-<tr><th>報告</th><th>通過率</th><th>改善前 → 改善後</th></tr>
-<tr>
-<td>中興電 (1513)</td>
-<td><span class="score-bar"><span class="score-fill" style="width:100%;background:#10b981"></span></span> 28/28 (100%)</td>
-<td style="color:#6ee7b7;font-size:.8rem">28/28 ✅</td>
-</tr>
-<tr>
-<td>士電 (1503)</td>
-<td><span class="score-bar"><span class="score-fill" style="width:100%;background:#10b981"></span></span> 28/28 (100%)</td>
-<td style="color:#6ee7b7;font-size:.8rem">27/28 → 28/28 ✅</td>
-</tr>
-<tr>
-<td>亞力 (1514)</td>
-<td><span class="score-bar"><span class="score-fill" style="width:100%;background:#10b981"></span></span> 28/28 (100%)</td>
-<td style="color:#6ee7b7;font-size:.8rem">15/28 → 28/28 ✅ (+46%)</td>
-</tr>
-<tr>
-<td>台光電 (2383)</td>
-<td><span class="score-bar"><span class="score-fill" style="width:100%;background:#10b981"></span></span> 28/28 (100%)</td>
-<td style="color:#6ee7b7;font-size:.8rem">22/28 → 28/28 ✅ (+21%)</td>
-</tr>
-<tr>
-<td>台積電 (2330)</td>
-<td><span class="score-bar"><span class="score-fill" style="width:100%;background:#10b981"></span></span> 28/28 (100%)</td>
-<td style="color:#6ee7b7;font-size:.8rem">13/28 → 28/28 ✅ (+54%)</td>
-</tr>
-<tr>
-<td>東元 (1504)</td>
-<td><span class="score-bar"><span class="score-fill" style="width:100%;background:#10b981"></span></span> 28/28 (100%)</td>
-<td style="color:#6ee7b7;font-size:.8rem">13/28 → 28/28 ✅ (+54%)</td>
-</tr>
-</table>
-<p style="color:#6ee7b7;font-size:.8rem;margin-top:1rem">
-✅ 所有 6 份深度報告已通過 28/28 估值自檢清單，含五大深度改善（Bottom-Up EPS、Gordon Growth Model、歷史 PE 軌跡、籌碼分析、操作區間）。
-</p>
-</div>
+    // ===== INIT & LOAD =====
+    document.addEventListener('DOMContentLoaded', function() {
+      initializePage();
+      renderArchive();
+      loadPicksByDate('today');
+      updateStats();
+    });
 
-<div class="footer">
-<p>本報告僅供學術研究與參考，不構成任何有價證券之買賣邀約。投資有風險，入市須謹慎。</p>
-<p style="margin-top:.5rem">Generated by ARTOGO Investment Analysis Agent | CFA Buy-Side Framework</p>
-</div>
+    function initializePage() {
+      const today = new Date();
+      const dateStr = today.toISOString().split('T')[0];
+      document.getElementById('dateInput').value = dateStr;
+      updateCurrentDate();
+    }
 
-</div>
+    function updateCurrentDate() {
+      const input = document.getElementById('dateInput').value;
+      const date = new Date(input + 'T00:00:00');
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      const formatted = date.toLocaleDateString('zh-TW', options);
+      document.getElementById('currentDate').textContent = formatted;
+    }
+
+    // ===== LOAD PICKS BY DATE (fetch from JSON) =====
+    async function loadPicksByDate(type) {
+      let targetDate;
+      const today = new Date();
+
+      if (type === 'today') {
+        targetDate = today;
+        document.querySelectorAll('.calendar-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.calendar-btn')[0].classList.add('active');
+      } else if (type === 'yesterday') {
+        targetDate = new Date(today);
+        targetDate.setDate(targetDate.getDate() - 1);
+        document.querySelectorAll('.calendar-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.calendar-btn')[1].classList.add('active');
+      } else if (type === 'week') {
+        targetDate = new Date(today);
+        targetDate.setDate(targetDate.getDate() - today.getDay() + 1);
+        document.querySelectorAll('.calendar-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.calendar-btn')[2].classList.add('active');
+      } else if (type === 'custom') {
+        const dateStr = document.getElementById('dateInput').value;
+        targetDate = new Date(dateStr + 'T00:00:00');
+        document.querySelectorAll('.calendar-btn').forEach(btn => btn.classList.remove('active'));
+      }
+
+      const dateStr = targetDate.toISOString().split('T')[0];
+      document.getElementById('dateInput').value = dateStr;
+      updateCurrentDate();
+
+      // Show loading state
+      const container = document.getElementById('picksContainer');
+      container.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">⏳</div><div class="empty-state-text">載入中...</div></div>';
+
+      // Check cache first
+      if (picksCache[dateStr]) {
+        renderPicks(picksCache[dateStr]);
+        return;
+      }
+
+      // Fetch from JSON file
+      try {
+        const resp = await fetch(`data/daily-picks-${dateStr}.json`);
+        if (!resp.ok) throw new Error('Not found');
+        const data = await resp.json();
+        // Transform picks to render format
+        const picks = data.picks.map(p => ({
+          rank: p.rank,
+          ticker: p.ticker,
+          name: p.name,
+          market: p.market,
+          price: p.price,
+          currency: p.currency,
+          rating: p.rating,
+          target_price: p.target_price,
+          upside: p.upside,
+          scores: {
+            '基本面': p.scores.fundamental,
+            '籌碼面': p.scores.chip,
+            '技術面': p.scores.technical,
+            '消息面': p.scores.catalyst,
+            '總經': p.scores.macro,
+            '產業展望': p.scores.industry
+          },
+          total_score: p.total_score,
+          summary: p.summary,
+          deep_report: p.deep_report ? p.deep_report : (data.deep_report_of_day && data.deep_report_of_day.ticker === p.ticker ? data.deep_report_of_day.report_url : null)
+        }));
+        picksCache[dateStr] = picks;
+        renderPicks(picks);
+      } catch (e) {
+        container.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">📭</div><div class="empty-state-text">該日期暫無精選數據</div></div>';
+      }
+    }
+
+    // ===== RENDER PICKS =====
+    function renderPicks(picks) {
+      const container = document.getElementById('picksContainer');
+      if (!picks || picks.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state" style="grid-column: 1 / -1;">
+            <div class="empty-state-icon">📭</div>
+            <div class="empty-state-text">該日期暫無精選數據</div>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = picks.map(pick => `
+        <div class="pick-card">
+          <div class="pick-rank">${pick.rank}</div>
+
+          <div class="pick-header">
+            <div>
+              <div class="pick-ticker">${pick.ticker}</div>
+              <div class="pick-name">${pick.name}</div>
+            </div>
+          </div>
+
+          <div class="pick-badges">
+            <span class="badge badge-market">${pick.market === 'TW' ? '🇹🇼 台股' : '🇺🇸 美股'}</span>
+            <span class="badge badge-rating-${pick.rating.toLowerCase()}">
+              ${pick.rating === 'Buy' ? '🟢 買進' : pick.rating === 'Hold' ? '🟡 持有' : '🔴 賣出'}
+            </span>
+            ${pick.currency === 'TWD' && pick.price < 100 ? '<span class="badge" style="background:rgba(234,179,8,0.15);color:#eab308;border-color:rgba(234,179,8,0.3);">💰 百元以下</span>' : ''}
+          </div>
+
+          <div class="pick-price">
+            <div class="price-current">
+              <span class="price-label">現價</span>
+              <span class="price-value">${pick.currency === 'USD' ? '$' : ''}${pick.price.toLocaleString()} ${pick.currency}</span>
+            </div>
+            <div class="price-upside">
+              <div class="upside-value ${pick.upside.startsWith('+') ? 'upside-positive' : 'upside-negative'}">
+                ${pick.upside}
+              </div>
+              <div class="upside-label">目標價 ${pick.currency === 'USD' ? '$' : ''}${pick.target_price.toLocaleString()}</div>
+            </div>
+          </div>
+
+          <div class="score-breakdown">
+            <div class="score-breakdown-title">
+              <span>六維度評分</span>
+              <span class="total-score">總分 ${pick.total_score}/60</span>
+            </div>
+            <div class="scores-grid">
+              ${Object.entries(pick.scores).map(([name, score]) => `
+                <div class="score-item">
+                  <div class="score-name">${name}</div>
+                  <div class="score-bar">
+                    <div class="score-bar-bg">
+                      <div class="score-bar-fill" style="width: ${(score / 10) * 100}%"></div>
+                    </div>
+                    <span class="score-number">${score}</span>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="pick-summary">${pick.summary}</div>
+
+          ${pick.deep_report ? `
+            <a href="${pick.deep_report}" class="pick-report-link">📊 閱讀深度報告 →</a>
+          ` : ''}
+        </div>
+      `).join('');
+    }
+
+    // ===== RENDER REPORTS =====
+    function renderReports() {
+      const container = document.getElementById('reportsContainer');
+      container.innerHTML = REPORT_ARCHIVE.map(report => `
+        <a href="${report.file}" class="report-card">
+          <div class="report-ticker">${report.ticker}</div>
+          <div class="report-name">${report.name}</div>
+          <div class="report-date">📅 ${report.date}</div>
+          <div class="report-rating report-rating-${report.rating.toLowerCase()}">
+            ${report.rating === 'Buy' ? '🟢 買進' : report.rating === 'Hold' ? '🟡 持有' : '🔴 賣出'}
+          </div>
+        </a>
+      `).join('');
+    }
+
+    // ===== RENDER ARCHIVE =====
+    function renderArchive() {
+      const container = document.getElementById('archiveContainer');
+      container.innerHTML = REPORT_ARCHIVE.map(report => `
+        <a href="${report.file}" class="archive-card">
+          <div class="archive-ticker">${report.ticker}</div>
+          <div class="archive-title">${report.name}</div>
+          <div class="archive-date">${report.date}</div>
+        </a>
+      `).join('');
+    }
+
+    // ===== UPDATE STATS =====
+    function updateStats() {
+      const reports = REPORT_ARCHIVE;
+      document.getElementById('totalReports').textContent = reports.length;
+
+      const buyCount = reports.filter(r => r.rating === 'Buy').length;
+      document.getElementById('buyCount').textContent = buyCount + '/' + reports.length;
+
+      const twCount = reports.filter(r => r.ticker.includes('.TW')).length;
+      document.getElementById('marketDistTw').textContent = Math.round((twCount / reports.length) * 100) + '%';
+
+      document.getElementById('avgScore').textContent = '48/60';
+
+      renderReports();
+    }
+  </script>
 </body>
 </html>

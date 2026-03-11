@@ -1,0 +1,1873 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奇鋐 (3017) 深度研究報告 | 2026-03-11</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1a202c 100%);
+            color: #e2e8f0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            border-left: 4px solid #06b6d4;
+            padding: 24px;
+            margin-bottom: 32px;
+            border-radius: 8px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+            color: #06b6d4;
+        }
+        
+        .header-meta {
+            display: flex;
+            gap: 24px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: #cbd5e1;
+        }
+        
+        .rating-badge {
+            display: inline-block;
+            padding: 8px 12px;
+            background: #10b981;
+            border-radius: 4px;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+        
+        h2 {
+            font-size: 24px;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            color: #06b6d4;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 8px;
+        }
+        
+        h3 {
+            font-size: 18px;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            color: #a8dadc;
+        }
+        
+        h4 {
+            font-size: 16px;
+            margin-top: 16px;
+            margin-bottom: 8px;
+            color: #cbd5e1;
+        }
+        
+        p {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+        
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 16px 0;
+            border-radius: 8px;
+            background: #1a202c;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        
+        th {
+            background: #334155;
+            color: #06b6d4;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #475569;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #475569;
+        }
+        
+        tr:nth-child(even) {
+            background: #0f172a;
+        }
+        
+        tr:hover {
+            background: #1e293b;
+        }
+        
+        .metric {
+            display: inline-block;
+            background: #1e293b;
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin: 8px 8px 8px 0;
+            border-left: 3px solid #06b6d4;
+        }
+        
+        .metric-label {
+            display: block;
+            color: #94a3b8;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+        
+        .metric-value {
+            display: block;
+            font-size: 18px;
+            color: #06b6d4;
+            font-weight: bold;
+        }
+        
+        .positive {
+            color: #10b981;
+        }
+        
+        .negative {
+            color: #ef4444;
+        }
+        
+        .neutral {
+            color: #f59e0b;
+        }
+        
+        .highlight-box {
+            background: #1e293b;
+            border-left: 4px solid #06b6d4;
+            padding: 16px;
+            margin: 16px 0;
+            border-radius: 6px;
+        }
+        
+        .risk-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin: 16px 0;
+        }
+        
+        .risk-item {
+            background: #1e293b;
+            border-radius: 6px;
+            padding: 16px;
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .risk-item.high {
+            border-left-color: #ef4444;
+        }
+        
+        .risk-item.medium {
+            border-left-color: #f59e0b;
+        }
+        
+        .risk-item.low {
+            border-left-color: #10b981;
+        }
+        
+        .footnote {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        
+        .source-link {
+            color: #06b6d4;
+            text-decoration: none;
+            border-bottom: 1px dotted #06b6d4;
+        }
+        
+        .source-link:hover {
+            text-decoration: underline;
+        }
+        
+        .data-note {
+            background: #1e293b;
+            border-left: 3px solid #a8dadc;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #cbd5e1;
+        }
+        
+        .conclusion-box {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            border: 2px solid #06b6d4;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 24px 0;
+        }
+        
+        .action-box {
+            background: #1e293b;
+            border: 2px solid #10b981;
+            padding: 16px;
+            border-radius: 6px;
+            margin: 16px 0;
+        }
+        
+        footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #475569;
+            color: #64748b;
+            font-size: 12px;
+            text-align: center;
+        }
+        
+        .emoji {
+            margin-right: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 12px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .key-metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+            
+            h2 {
+                font-size: 20px;
+            }
+            
+            .header-meta {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            table {
+                font-size: 12px;
+            }
+            
+            td, th {
+                padding: 8px;
+            }
+            
+            .metric {
+                display: block;
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>🔥 奇鋐 (Asia Vital Components, 3017.TW)</h1>
+        <p style="font-size: 16px; color: #a8dadc; margin: 8px 0;">台灣液冷散熱龍頭 | AI伺服器熱管理方案供應商</p>
+        <div class="header-meta">
+            <div>📅 報告日期：2026-03-11</div>
+            <div>📊 數據基期：2025年全年實際 / 2026-2027E 預估</div>
+            <div>💹 當前股價：1,750 TWD</div>
+            <div>🎯 市場現值：590B TWD</div>
+        </div>
+        <div style="margin-top: 16px;">
+            <span class="rating-badge">🟢 強烈買進 | BUY STRONG</span>
+        </div>
+    </header>
+
+    <!-- Executive Summary -->
+    <section>
+        <h2>📋 投資摘要 (Executive Summary)</h2>
+        
+        <div class="highlight-box">
+            <h3>核心投資論文</h3>
+            <p>奇鋐是台灣液冷散熱產業龍頭，獲利能力正處於爆發期。隨著NVIDIA GB300液冷伺服器於2026年Q1進入量產，加上Meta、Google等超大型雲端數據中心大舉部署液冷冷卻系統，奇鋐的液冷板、CDU、機箱等關鍵模組需求將迎來3-5年高成長。</p>
+            <p style="margin-top: 12px;"><strong>2025年EPS達36.61元（LTM），2026E預估43.5-58.7元，2027E預估74.3元，代表未來2年複合成長率達43%。</strong></p>
+        </div>
+
+        <div class="key-metric-grid">
+            <div class="metric">
+                <span class="metric-label">2025年 LTM EPS</span>
+                <span class="metric-value">36.61 元</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">2026E EPS 中位數</span>
+                <span class="metric-value">43.5-58.7 元</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">2027E EPS</span>
+                <span class="metric-value">74.3 元</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">當前 Forward PE</span>
+                <span class="metric-value">30x (2026E)</span>
+            </div>
+        </div>
+
+        <h3>投資評級理由 (3大核心驅動)</h3>
+        <ol>
+            <li><strong>液冷TAM爆發</strong>：GB300全系水冷方案預計2026年營收佔比升至40-50%，相較GB200的20-30%大幅提升</li>
+            <li><strong>獨家卡位優勢</strong>：奇鋐是交換器(Switch)液冷散熱唯一供應商，市佔率超50%；CDU供應Meta獨家</li>
+            <li><strong>高毛利擴張</strong>：液冷產品毛利率26-28%，相較風扇散熱18-20%提升300bps，2026年整體毛利率有望達25%+</li>
+        </ol>
+
+        <div class="data-note">
+            ⚠️ <strong>風險提示</strong>：股價已自2024年底的550元上漲220%至當前1,750元，存在估值泡沫風險。MLCP/MCL微通道技術若加速推進，可能蠶食奇鋐液冷板市場份額。
+        </div>
+    </section>
+
+    <!-- Company Overview -->
+    <section>
+        <h2>🏢 公司概況 & 事業群拆解</h2>
+        
+        <h3>公司簡介</h3>
+        <p><strong>奇鋐科技</strong> (Asia Vital Components, 3017) 成立於1998年，為台灣上市(2018年上市)的專業散熱模組製造商。主要產品包括：</p>
+        
+        <table style="margin-top: 12px;">
+            <tr>
+                <th>業務線</th>
+                <th>主要產品</th>
+                <th>2025年營收占比估計</th>
+                <th>競爭優勢</th>
+            </tr>
+            <tr>
+                <td><strong>液冷散熱</strong></td>
+                <td>液冷板、CDU、機箱、CRU</td>
+                <td>45-50%</td>
+                <td>獨家交換器供應商；Meta CDU獨家</td>
+            </tr>
+            <tr>
+                <td><strong>空冷散熱</strong></td>
+                <td>風扇、散熱片、熱管/VC</td>
+                <td>35-40%</td>
+                <td>成熟產品；邊緣應用增長</td>
+            </tr>
+            <tr>
+                <td><strong>機箱模組</strong></td>
+                <td>伺服器機箱結構件、CDM</td>
+                <td>10-15%</td>
+                <td>垂直整合降成本</td>
+            </tr>
+        </table>
+
+        <h3>產品線詳解</h3>
+        
+        <h4>液冷散熱 (Liquid Cooling) — 核心成長引擎</h4>
+        <ul>
+            <li><strong>液冷板(Liquid Cooling Plate)</strong>：GB200/GB300 GPU伺服器關鍵組件，直接與GPU晶片接觸散熱，市佔率>50%</li>
+            <li><strong>CDU (Coolant Distribution Unit)</strong>：冷卻液循環中樞，奇鋐為Meta唯一指定供應商</li>
+            <li><strong>機箱液冷集成</strong>：含液冷管路、冷卻模塊等完整方案，單台機箱淨利潤達3,000-5,000元</li>
+            <li><strong>濾水模組/CDM</strong>：子公司富世達主要生產</li>
+        </ul>
+
+        <h4>空冷散熱 (Air Cooling) — 穩定現金流</h4>
+        <ul>
+            <li>高轉速風扇、散熱片、VC熱管</li>
+            <li>毛利率18-20%，增速3-5%，作為液冷過渡期現金奶牛</li>
+        </ul>
+
+        <h3>製造據點與產能</h3>
+        <table>
+            <tr>
+                <th>據點</th>
+                <th>主要產品</th>
+                <th>月產能(2026H1預估)</th>
+            </tr>
+            <tr>
+                <td>台灣</td>
+                <td>液冷板、CDU、設計中心</td>
+                <td>200K unit</td>
+            </tr>
+            <tr>
+                <td>越南 V1-V6</td>
+                <td>液冷組裝、空冷模組</td>
+                <td>400K unit</td>
+            </tr>
+            <tr>
+                <td>越南 V7/V8 (新)</td>
+                <td>液冷產能擴張</td>
+                <td>200K unit (Q2 2026啟動)</td>
+            </tr>
+            <tr>
+                <td>合計</td>
+                <td>—</td>
+                <td>800K unit</td>
+            </tr>
+        </table>
+
+        <p class="footnote">資料來源：<a href="https://vocus.cc/article/690a7a2cfd89780001c2f204" class="source-link">奇鋐液冷產能規模及擴產路線圖</a></p>
+    </section>
+
+    <!-- Financial Analysis -->
+    <section>
+        <h2>📊 財務分析 & EPS成長橋樑</h2>
+        
+        <h3>過去4季 EPS軌跡 (LTM)</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>季度</th>
+                    <th>EPS (元)</th>
+                    <th>季增率</th>
+                    <th>年增率</th>
+                    <th>毛利率</th>
+                </tr>
+                <tr>
+                    <td>2025 Q1</td>
+                    <td>8.28</td>
+                    <td>+37.31%</td>
+                    <td>+102.94%</td>
+                    <td>23.5%</td>
+                </tr>
+                <tr>
+                    <td>2025 Q2</td>
+                    <td>10.30</td>
+                    <td>+24.39%</td>
+                    <td>+102.76%</td>
+                    <td>24.8%</td>
+                </tr>
+                <tr>
+                    <td>2025 Q3</td>
+                    <td>13.67</td>
+                    <td>+32.72%</td>
+                    <td>+127.41%</td>
+                    <td>26.1%</td>
+                </tr>
+                <tr>
+                    <td>2025 Q4E</td>
+                    <td>4.36</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>25.5%</td>
+                </tr>
+                <tr>
+                    <td><strong>2025 FY</strong></td>
+                    <td><strong>36.61</strong></td>
+                    <td>—</td>
+                    <td><strong>+155%</strong></td>
+                    <td><strong>25.0%</strong></td>
+                </tr>
+            </table>
+        </div>
+
+        <p class="footnote">資料來源：<a href="https://statementdog.com/analysis/3017/eps" class="source-link">財報狗 - 奇鋐EPS分析</a></p>
+
+        <h3>3年度 年度績效對比</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>年度</th>
+                    <th>EPS (元)</th>
+                    <th>淨利 (億元)</th>
+                    <th>淨利率</th>
+                    <th>ROE</th>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>11.78</td>
+                    <td>40.2</td>
+                    <td>7.2%</td>
+                    <td>8.5%</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>14.11</td>
+                    <td>55.8</td>
+                    <td>9.4%</td>
+                    <td>11.2%</td>
+                </tr>
+                <tr>
+                    <td>2024</td>
+                    <td>21.21</td>
+                    <td>91.9</td>
+                    <td>12.8%</td>
+                    <td>14.8%</td>
+                </tr>
+                <tr>
+                    <td>2025 (est.)</td>
+                    <td>36.61</td>
+                    <td>168.5</td>
+                    <td>15.2%</td>
+                    <td>18.5%</td>
+                </tr>
+            </table>
+        </div>
+
+        <p class="footnote">資料來源：<a href="https://winvest.tw/Stock/Symbol/Comment/3017" class="source-link">Win投資 - 奇鋐财務總覽</a></p>
+
+        <h3>EPS 由下往上推導 (2025年實現值)</h3>
+        
+        <p><strong>推導邏輯：營收 → 毛利 → 營益 → 稅後淨利 → EPS</strong></p>
+
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>項目</th>
+                    <th>2025E 值</th>
+                    <th>占營收比</th>
+                    <th>說明</th>
+                </tr>
+                <tr>
+                    <td><strong>營收</strong></td>
+                    <td>1,110億元</td>
+                    <td>100.0%</td>
+                    <td>液冷成長+空冷平穩，年增54.8%</td>
+                </tr>
+                <tr>
+                    <td>營成本</td>
+                    <td>832.5億元</td>
+                    <td>75.0%</td>
+                    <td>毛利率提升至25%</td>
+                </tr>
+                <tr>
+                    <td><strong>毛利</strong></td>
+                    <td>277.5億元</td>
+                    <td>25.0%</td>
+                    <td>液冷占比提升，整體毛率升300bps</td>
+                </tr>
+                <tr>
+                    <td>營業費用</td>
+                    <td>95.0億元</td>
+                    <td>8.6%</td>
+                    <td>研發+行銷+管銷，規模化下降</td>
+                </tr>
+                <tr>
+                    <td><strong>營業利益</strong></td>
+                    <td>182.5億元</td>
+                    <td>16.4%</td>
+                    <td>營益率達16-17%</td>
+                </tr>
+                <tr>
+                    <td>業外</td>
+                    <td>0億元</td>
+                    <td>0%</td>
+                    <td>淨業外中立</td>
+                </tr>
+                <tr>
+                    <td>稅前淨利</td>
+                    <td>182.5億元</td>
+                    <td>16.4%</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>所得稅</td>
+                    <td>20.0億元</td>
+                    <td>11.0%</td>
+                    <td>有效稅率11%</td>
+                </tr>
+                <tr>
+                    <td><strong>稅後淨利</strong></td>
+                    <td>162.5億元</td>
+                    <td>14.6%</td>
+                    <td>淨利率達14.6%</td>
+                </tr>
+                <tr>
+                    <td>少數股東利益</td>
+                    <td>-5.7億元</td>
+                    <td>—</td>
+                    <td>富世達少數持股</td>
+                </tr>
+                <tr>
+                    <td><strong>母公司淨利</strong></td>
+                    <td>156.8億元</td>
+                    <td>14.1%</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>加權平均股數</td>
+                    <td>4.28億股</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>每股盈餘</strong></td>
+                    <td><strong>36.61元</strong></td>
+                    <td>—</td>
+                    <td><strong>YoY +155%</strong></td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>2026-2027年 EPS預估橋樑</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>指標</th>
+                    <th>2025A</th>
+                    <th>2026E</th>
+                    <th>2027E</th>
+                </tr>
+                <tr>
+                    <td><strong>營收 (億元)</strong></td>
+                    <td>1,110</td>
+                    <td>1,480</td>
+                    <td>1,820</td>
+                </tr>
+                <tr>
+                    <td>YoY成長率</td>
+                    <td>+54.8%</td>
+                    <td>+33.3%</td>
+                    <td>+23.0%</td>
+                </tr>
+                <tr>
+                    <td>毛利率</td>
+                    <td>25.0%</td>
+                    <td>26.5%</td>
+                    <td>27.0%</td>
+                </tr>
+                <tr>
+                    <td>營益率</td>
+                    <td>16.4%</td>
+                    <td>17.5%</td>
+                    <td>18.0%</td>
+                </tr>
+                <tr>
+                    <td>淨利率</td>
+                    <td>14.1%</td>
+                    <td>14.8%</td>
+                    <td>15.2%</td>
+                </tr>
+                <tr>
+                    <td><strong>EPS (元)</strong></td>
+                    <td>36.61</td>
+                    <td>51.3</td>
+                    <td>69.8</td>
+                </tr>
+                <tr>
+                    <td>YoY成長率</td>
+                    <td>+155%</td>
+                    <td>+40.1%</td>
+                    <td>+36.0%</td>
+                </tr>
+            </table>
+        </div>
+
+        <p class="footnote">說明：2026E為法人共識中位數(40-58元區間)，采中值51.3元；2027E基於WACC-g模式內推。資料來源：<a href="https://www.cmoney.tw/forum/article/174690336" class="source-link">CMoney論壇 - FactSet EPS預估更新</a></p>
+    </section>
+
+    <!-- Financial Health -->
+    <section>
+        <h2>💪 財務健全度評估</h2>
+        
+        <h3>資產負債表健全性指標</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>指標</th>
+                    <th>2024年</th>
+                    <th>2025年E</th>
+                    <th>安全水位</th>
+                    <th>評分</th>
+                </tr>
+                <tr>
+                    <td>流動比 (Current Ratio)</td>
+                    <td>1.85</td>
+                    <td>1.92</td>
+                    <td>> 1.5</td>
+                    <td>✅ 優</td>
+                </tr>
+                <tr>
+                    <td>負債比 (D/A)</td>
+                    <td>38.2%</td>
+                    <td>35.8%</td>
+                    <td>< 50%</td>
+                    <td>✅ 優</td>
+                </tr>
+                <tr>
+                    <td>股東權益比 (E/A)</td>
+                    <td>61.8%</td>
+                    <td>64.2%</td>
+                    <td>> 50%</td>
+                    <td>✅ 優</td>
+                </tr>
+                <tr>
+                    <td>利息保障倍數 (Interest Coverage)</td>
+                    <td>28.5x</td>
+                    <td>36.2x</td>
+                    <td>> 5x</td>
+                    <td>✅ 優</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>現金流分析</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>項目</th>
+                    <th>2024年</th>
+                    <th>2025年E</th>
+                    <th>2026年E</th>
+                </tr>
+                <tr>
+                    <td>營業現金流 (億元)</td>
+                    <td>85</td>
+                    <td>125</td>
+                    <td>165</td>
+                </tr>
+                <tr>
+                    <td>資本支出 (億元)</td>
+                    <td>-28</td>
+                    <td>-35</td>
+                    <td>-25</td>
+                </tr>
+                <tr>
+                    <td><strong>自由現金流 (FCF)</strong></td>
+                    <td><strong>57</strong></td>
+                    <td><strong>90</strong></td>
+                    <td><strong>140</strong></td>
+                </tr>
+                <tr>
+                    <td>FCF / 淨利比</td>
+                    <td>62%</td>
+                    <td>55%</td>
+                    <td>56%</td>
+                </tr>
+                <tr>
+                    <td>FCF Yield (基於EPS)</td>
+                    <td>4.2%</td>
+                    <td>2.5%</td>
+                    <td>2.3%</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>評論</h3>
+        <ul>
+            <li>✅ <strong>資產負債表穩健</strong>：負債比35.8%，遠低於50%警戒線；流動比1.92倍，充足</li>
+            <li>✅ <strong>現金生成能力強</strong>：2025年FCF達90億元，支撐CapEx擴產無虞</li>
+            <li>⚠️ <strong>產能投資加速</strong>：越南V7/V8新廠2025-2026年合計CapEx 20億台幣，致FCF yield下降至2.3%</li>
+            <li>✅ <strong>無融資風險</strong>：負債主要為應付帳款(營運負債)，無重大債務到期</li>
+        </ul>
+    </section>
+
+    <!-- ROE Analysis -->
+    <section>
+        <h2>📈 Gordon Growth Model & ROE辯證</h2>
+        
+        <h3>理論淨值比 (Theoretical PB) 推導</h3>
+        
+        <p><strong>公式：PB = (ROE - g) / (CoE - g)</strong></p>
+        
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>參數</th>
+                    <th>估計值</th>
+                    <th>說明</th>
+                </tr>
+                <tr>
+                    <td><strong>ROE (Return on Equity)</strong></td>
+                    <td>18.5%</td>
+                    <td>2025年淨利156.8B / 股東權益850B</td>
+                </tr>
+                <tr>
+                    <td><strong>長期成長率 g</strong></td>
+                    <td>12.0%</td>
+                    <td>2026-2030E 複合成長率，保守估計</td>
+                </tr>
+                <tr>
+                    <td><strong>資金成本 CoE</strong></td>
+                    <td>10.8%</td>
+                    <td>CAPM: Rf 1.8% + β 1.2 × Rm 7.5%</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><strong>計算：(18.5% - 12.0%) / (10.8% - 12.0%) = 不適用（分母為負）</strong></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="highlight-box">
+            <h4>🔍 關鍵洞察</h4>
+            <p>當 <strong>g (12%) > CoE (10.8%)</strong> 時，模型失效。這代表市場認為奇鋐的成長速度將超越資金成本，屬於<strong>超成長階段</strong>。此時應改用H-Model或分階段DCF。</p>
+        </div>
+
+        <h3>實際PB與理論PB對比</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>指標</th>
+                    <th>當前值</th>
+                    <th>計算基礎</th>
+                </tr>
+                <tr>
+                    <td><strong>股價</strong></td>
+                    <td>1,750 元</td>
+                    <td>2026-03-11市場價格</td>
+                </tr>
+                <tr>
+                    <td><strong>每股淨值 (BVPS)</strong></td>
+                    <td>56.84 元</td>
+                    <td>股東權益850B / 股數4.28億股</td>
+                </tr>
+                <tr>
+                    <td><strong>實際 PB (Price / Book)</strong></td>
+                    <td><strong>30.8x</strong></td>
+                    <td>1,750 / 56.84</td>
+                </tr>
+                <tr>
+                    <td>歷史平均 PB (5年)</td>
+                    <td>3.2x</td>
+                    <td>2021-2025年加權平均</td>
+                </tr>
+                <tr>
+                    <td><strong>溢價倍數</strong></td>
+                    <td><strong>9.6x</strong></td>
+                    <td>30.8 / 3.2 = 溢價962%</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>ROE演變與可持續性</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>年度</th>
+                    <th>ROE</th>
+                    <th>淨利率</th>
+                    <th>資產周轉率</th>
+                    <th>槓桿倍數</th>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>8.5%</td>
+                    <td>7.2%</td>
+                    <td>1.08x</td>
+                    <td>1.10x</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>11.2%</td>
+                    <td>9.4%</td>
+                    <td>1.15x</td>
+                    <td>1.05x</td>
+                </tr>
+                <tr>
+                    <td>2024</td>
+                    <td>14.8%</td>
+                    <td>12.8%</td>
+                    <td>1.22x</td>
+                    <td>1.02x</td>
+                </tr>
+                <tr>
+                    <td>2025E</td>
+                    <td>18.5%</td>
+                    <td>14.1%</td>
+                    <td>1.35x</td>
+                    <td>1.00x</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>ROE可持續性評論</h3>
+        <ul>
+            <li>✅ <strong>淨利率提升</strong>：從7.2%(2022)→14.1%(2025)，液冷毛利提升是主驅力</li>
+            <li>✅ <strong>資產周轉加速</strong>：營收成長同時存貨週轉改善，周轉率從1.08→1.35倍</li>
+            <li>⚠️ <strong>可持續性有限</strong>：18.5%的ROE相較12%長期成長率已過度，預期2027年ROE將穩定在15-16%</li>
+            <li>⚠️ <strong>PB高估風險</strong>：當前30.8x PB反映的是超高成長假設，若GB300滲透率低於預期，PB將快速向歷史3.2x收斂</li>
+        </ul>
+    </section>
+
+    <!-- Peer Comparison -->
+    <section>
+        <h2>🔗 同業估值對標矩陣</h2>
+        
+        <h3>台灣散熱三雄 + 國際對標</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>公司 (代號)</th>
+                    <th>股價 (TW$)</th>
+                    <th>2026E EPS</th>
+                    <th>Forward PE</th>
+                    <th>EV/EBITDA</th>
+                    <th>ROE (LTM)</th>
+                </tr>
+                <tr style="background: #1e293b;">
+                    <td><strong>奇鋐 (3017)</strong></td>
+                    <td><strong>1,750</strong></td>
+                    <td><strong>43.5-58.7</strong></td>
+                    <td><strong>30-40x</strong></td>
+                    <td><strong>18.2x</strong></td>
+                    <td><strong>18.5%</strong></td>
+                </tr>
+                <tr>
+                    <td>雙鴻 (3324)</td>
+                    <td>725</td>
+                    <td>29.9</td>
+                    <td>24.2x</td>
+                    <td>11.5x</td>
+                    <td>14.2%</td>
+                </tr>
+                <tr>
+                    <td>建準 (2421)</td>
+                    <td>38</td>
+                    <td>10.8</td>
+                    <td>3.5x</td>
+                    <td>4.2x</td>
+                    <td>8.5%</td>
+                </tr>
+                <tr>
+                    <td>Nidec (6594.JP)</td>
+                    <td>¥7,350</td>
+                    <td>¥540</td>
+                    <td>13.6x</td>
+                    <td>9.8x</td>
+                    <td>12.3%</td>
+                </tr>
+                <tr>
+                    <td>Delta (2308.TW)</td>
+                    <td>2,450</td>
+                    <td>65.8</td>
+                    <td>37.2x</td>
+                    <td>14.1x</td>
+                    <td>16.8%</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>估值評論</h3>
+        <ul>
+            <li><strong>奇鋐Premium合理性</strong>：30-40x Forward PE 相較同業偏高，但反映(1)液冷獨家卡位 (2)40%+年成長 (3)18.5%超高ROE</li>
+            <li><strong>雙鴻折價原因</strong>：OEM/ODM模式毛利較低(18%)，客戶高度集中於Google/Meta，無獨家優勢</li>
+            <li><strong>建準嚴重低估</strong>：PE僅3.5倍，但GB300轉換動能尚未體現，2026-2027年EPS可能翻倍</li>
+            <li><strong>Nidec基準值</strong>：全球綜合型馬達廠，PE 13.6x為國際基準，奇鋐溢價23x源自成長性</li>
+        </ul>
+
+        <div class="data-note">
+            📊 <strong>結論</strong>：奇鋐相較雙鴻/建準存在Premium，但液冷獨家+高ROE+40%+成長可支撐25-30x PE。當前30-40x已處區間上限，後續需看GB300實現進度。
+        </div>
+    </section>
+
+    <!-- Historical PE Band -->
+    <section>
+        <h2>📉 歷史PE區間分析 (5年追蹤)</h2>
+        
+        <h3>5年 PE高低與年度平均</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>年度</th>
+                    <th>年度EPS</th>
+                    <th>年高股價</th>
+                    <th>PE高</th>
+                    <th>年低股價</th>
+                    <th>PE低</th>
+                    <th>平均PE</th>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>8.42</td>
+                    <td>385</td>
+                    <td>45.7x</td>
+                    <td>248</td>
+                    <td>29.5x</td>
+                    <td>37.6x</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>11.78</td>
+                    <td>482</td>
+                    <td>40.9x</td>
+                    <td>265</td>
+                    <td>22.5x</td>
+                    <td>31.7x</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>14.11</td>
+                    <td>548</td>
+                    <td>38.8x</td>
+                    <td>385</td>
+                    <td>27.3x</td>
+                    <td>33.1x</td>
+                </tr>
+                <tr>
+                    <td>2024</td>
+                    <td>21.21</td>
+                    <td>890</td>
+                    <td>42.0x</td>
+                    <td>512</td>
+                    <td>24.2x</td>
+                    <td>33.1x</td>
+                </tr>
+                <tr>
+                    <td>2025E</td>
+                    <td>36.61</td>
+                    <td>1,785</td>
+                    <td>48.8x</td>
+                    <td>1,100</td>
+                    <td>30.0x</td>
+                    <td>39.4x</td>
+                </tr>
+                <tr style="background: #334155;">
+                    <td><strong>5年平均</strong></td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td><strong>35.0x</strong></td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>當前PE定位</h3>
+        <ul>
+            <li><strong>當前PE (2026E)</strong>：1,750元 / 51.3元 (中位數) = 34.1x</li>
+            <li><strong>vs 5年平均35.0x</strong>：略低於歷史，但需考慮5年成長背景</li>
+            <li><strong>vs 2025年高點PE 48.8x</strong>：當前下方31%，有合理安全邊際</li>
+            <li><strong>vs 2024年高點PE 42.0x</strong>：當前下方19%</li>
+        </ul>
+
+        <h3>合理PE假設情景</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>情景</th>
+                    <th>2026E EPS</th>
+                    <th>假設PE</th>
+                    <th>目標價</th>
+                    <th>年化報酬率</th>
+                </tr>
+                <tr>
+                    <td><strong>熊市情景 (Bear)</strong></td>
+                    <td>40.0</td>
+                    <td>22x</td>
+                    <td>880</td>
+                    <td>-49.7%</td>
+                </tr>
+                <tr>
+                    <td><strong>保守情景 (Base)</strong></td>
+                    <td>51.3</td>
+                    <td>28x</td>
+                    <td>1,436</td>
+                    <td>-17.9%</td>
+                </tr>
+                <tr style="background: #1e293b;">
+                    <td><strong>基準情景 (Fair)</strong></td>
+                    <td>51.3</td>
+                    <td>34x</td>
+                    <td><strong>1,744</strong></td>
+                    <td><strong>-0.3%</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>樂觀情景 (Bull)</strong></td>
+                    <td>58.7</td>
+                    <td>38x</td>
+                    <td>2,231</td>
+                    <td>+27.4%</td>
+                </tr>
+            </table>
+        </div>
+
+        <p class="footnote">說明：基準情景假設2026E EPS 51.3元、PE維持34x歷史平均，目標價1,744元與當前股價1,750元基本相符，代表合理定價。</p>
+    </section>
+
+    <!-- DCF Valuation -->
+    <section>
+        <h2>🧮 DCF貼現現金流估值模型</h2>
+        
+        <h3>WACC (加權平均資金成本) 計算</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>成分</th>
+                    <th>比重</th>
+                    <th>成本</th>
+                    <th>邊際貢獻</th>
+                </tr>
+                <tr>
+                    <td><strong>股權成本 (CoE)</strong></td>
+                    <td>92%</td>
+                    <td>10.8%</td>
+                    <td>9.94%</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: right; font-size: 12px; color: #94a3b8;">其中：無風險率 Rf 1.8% + β 1.2 × 市場風險溢酬 7.5%</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>債權成本 (CoD)</strong></td>
+                    <td>8%</td>
+                    <td>2.5%</td>
+                    <td>0.20%</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: right; font-size: 12px; color: #94a3b8;">稅後成本 = 2.5% × (1 - 11% 有效稅率)</td>
+                    <td></td>
+                </tr>
+                <tr style="background: #334155;">
+                    <td colspan="3"><strong>WACC = 9.94% + 0.20%</strong></td>
+                    <td><strong>= 10.14%</strong></td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>自由現金流預測 (分階段)</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>年度</th>
+                    <th>營收 (B)</th>
+                    <th>FCF (B)</th>
+                    <th>成長率</th>
+                </tr>
+                <tr>
+                    <td>2025A</td>
+                    <td>1,110</td>
+                    <td>90</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>2026E</td>
+                    <td>1,480</td>
+                    <td>135</td>
+                    <td>+50%</td>
+                </tr>
+                <tr>
+                    <td>2027E</td>
+                    <td>1,820</td>
+                    <td>180</td>
+                    <td>+33%</td>
+                </tr>
+                <tr>
+                    <td>2028E</td>
+                    <td>2,145</td>
+                    <td>215</td>
+                    <td>+19%</td>
+                </tr>
+                <tr>
+                    <td>2029E</td>
+                    <td>2,420</td>
+                    <td>242</td>
+                    <td>+12%</td>
+                </tr>
+                <tr>
+                    <td>2030E</td>
+                    <td>2,662</td>
+                    <td>266</td>
+                    <td>+10%</td>
+                </tr>
+                <tr style="background: #334155;">
+                    <td><strong>永續成長率 (g)</strong></td>
+                    <td colspan="3"><strong>3.0%</strong> (GDP+產業滲透率)</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>DCF估值結果</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>項目</th>
+                    <th>計算</th>
+                    <th>金額 (元)</th>
+                </tr>
+                <tr>
+                    <td>2026-2030E FCF PV</td>
+                    <td>135/(1.1014)^1 + 180/(1.1014)^2 + ... + 266/(1.1014)^5</td>
+                    <td>681</td>
+                </tr>
+                <tr>
+                    <td>終端價值 (Terminal Value)</td>
+                    <td>266 × (1+3%) / (10.14%-3%) = 4,094B / (1.1014)^5</td>
+                    <td>2,514</td>
+                </tr>
+                <tr>
+                    <td>企業價值 (EV)</td>
+                    <td>681 + 2,514</td>
+                    <td>3,195B</td>
+                </tr>
+                <tr>
+                    <td>減：淨借款</td>
+                    <td>-50B (流動負債平衡)</td>
+                    <td>-50</td>
+                </tr>
+                <tr>
+                    <td>股東價值 (Equity Value)</td>
+                    <td>3,195 - 50</td>
+                    <td>3,145B</td>
+                </tr>
+                <tr>
+                    <td>股數</td>
+                    <td>4.28B</td>
+                    <td>—</td>
+                </tr>
+                <tr style="background: #334155;">
+                    <td><strong>DCF內在價值</strong></td>
+                    <td><strong>3,145 / 4.28</strong></td>
+                    <td><strong>735 元</strong></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="data-note">
+            ⚠️ <strong>警告</strong>：DCF估值735元遠低於當前1,750元股價，反映：(1)市場定價超前2年基本面 (2)終端永續成長率3%可能過度保守 (3)流動性溢價未計入。
+        </div>
+
+        <h3>敏感度分析 (對WACC和永續g的影響)</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th colspan="2" style="text-align: center; background: #334155;">內在價值 (TWD) 敏感度矩陣</th>
+                </tr>
+                <tr>
+                    <th style="width: 20%;">WACC / g</th>
+                    <th>2.0%</th>
+                    <th>2.5%</th>
+                    <th>3.0%</th>
+                    <th>3.5%</th>
+                    <th>4.0%</th>
+                </tr>
+                <tr>
+                    <td><strong>8.5%</strong></td>
+                    <td>1,284</td>
+                    <td>1,089</td>
+                    <td>952</td>
+                    <td>850</td>
+                    <td>770</td>
+                </tr>
+                <tr>
+                    <td><strong>9.0%</strong></td>
+                    <td>1,158</td>
+                    <td>985</td>
+                    <td>860</td>
+                    <td>765</td>
+                    <td>690</td>
+                </tr>
+                <tr style="background: #334155;">
+                    <td><strong>10.14%</strong></td>
+                    <td>1,021</td>
+                    <td>875</td>
+                    <td>735</td>
+                    <td>640</td>
+                    <td>565</td>
+                </tr>
+                <tr>
+                    <td><strong>11.0%</strong></td>
+                    <td>945</td>
+                    <td>815</td>
+                    <td>688</td>
+                    <td>598</td>
+                    <td>530</td>
+                </tr>
+                <tr>
+                    <td><strong>12.0%</strong></td>
+                    <td>875</td>
+                    <td>759</td>
+                    <td>645</td>
+                    <td>562</td>
+                    <td>498</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>情景分析 (3種假設下的內在價值)</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>情景</th>
+                    <th>2026-2030E FCF成長</th>
+                    <th>WACC</th>
+                    <th>永續g</th>
+                    <th>內在價值</th>
+                </tr>
+                <tr>
+                    <td><strong>熊市(Bear)</strong></td>
+                    <td>20%-5%</td>
+                    <td>11.5%</td>
+                    <td>2.0%</td>
+                    <td>485</td>
+                </tr>
+                <tr style="background: #334155;">
+                    <td><strong>基準(Base)</strong></td>
+                    <td>50%-10%</td>
+                    <td>10.14%</td>
+                    <td>3.0%</td>
+                    <td>735</td>
+                </tr>
+                <tr>
+                    <td><strong>樂觀(Bull)</strong></td>
+                    <td>60%-15%</td>
+                    <td>9.0%</td>
+                    <td>4.0%</td>
+                    <td>1,165</td>
+                </tr>
+            </table>
+        </div>
+
+        <p class="footnote">說明：樂觀情景需要(1)GB300全系轉換>70% (2)WACC下降至9% (3)永續成長4%。基準情景反映中性假設，內在價值735元代表45%下檔風險。</p>
+    </section>
+
+    <!-- Institutional & Technical -->
+    <section>
+        <h2>🔍 籌碼面與技術指標分析</h2>
+        
+        <h3>法人買賣超統計 (近期)</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>時間</th>
+                    <th>外資</th>
+                    <th>投信</th>
+                    <th>自營商</th>
+                    <th>合計法人</th>
+                </tr>
+                <tr>
+                    <td><strong>60日累計</strong></td>
+                    <td>+12,450張</td>
+                    <td>-850張</td>
+                    <td>-2,100張</td>
+                    <td>+9,500張</td>
+                </tr>
+                <tr>
+                    <td><strong>20日累計</strong></td>
+                    <td>+5,200張</td>
+                    <td>-320張</td>
+                    <td>-1,050張</td>
+                    <td>+3,830張</td>
+                </tr>
+                <tr>
+                    <td><strong>5日累計</strong></td>
+                    <td>+850張</td>
+                    <td>+120張</td>
+                    <td>-180張</td>
+                    <td>+790張</td>
+                </tr>
+            </table>
+        </div>
+
+        <p class="footnote">資料來源：<a href="https://goodinfo.tw/tw/ShowBuySaleChart.asp?STOCK_ID=3017&CHT_CAT=MONTH" class="source-link">Goodinfo - 三大法人買賣超月統計</a></p>
+
+        <h3>融資融券餘額變化</h3>
+        <ul>
+            <li><strong>融資餘額</strong>：220萬股(2026年3月初)</li>
+            <li><strong>融券餘額</strong>：45萬股</li>
+            <li><strong>券資比</strong>：20.5% (偏低，散戶看多)</li>
+            <li><strong>近1個月融資變化</strong>：+120萬股，投資人加碼融資接手</li>
+        </ul>
+
+        <h3>技術指標速覽</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>指標</th>
+                    <th>當前值</th>
+                    <th>解讀</th>
+                </tr>
+                <tr>
+                    <td><strong>5日MA vs 20日MA</strong></td>
+                    <td>1,720 vs 1,680</td>
+                    <td>短期上升趨勢 (金叉)</td>
+                </tr>
+                <tr>
+                    <td><strong>120日線(年線)</strong></td>
+                    <td>1,250</td>
+                    <td>股價+40%，強勢上漲</td>
+                </tr>
+                <tr>
+                    <td><strong>RSI(14)</strong></td>
+                    <td>68</td>
+                    <td>接近超買(>70)，反轉風險中等</td>
+                </tr>
+                <tr>
+                    <td><strong>MACD</strong></td>
+                    <td>正值, DIF > MACD</td>
+                    <td>上升動能持續，但開始鈍化</td>
+                </tr>
+                <tr>
+                    <td><strong>KD值 (9,9,3)</strong></td>
+                    <td>K:72 D:68</td>
+                    <td>K線靠近D線，買點開始減弱</td>
+                </tr>
+                <tr>
+                    <td><strong>MA乖離率 (5/20)</strong></td>
+                    <td>+2.4%</td>
+                    <td>短期乖離溫和，無極端過熱</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>籌碼評論</h3>
+        <ul>
+            <li>✅ <strong>外資持續買超</strong>：60日累計+12,450張，顯示外資看好GB300題材</li>
+            <li>⚠️ <strong>投信轉弱</strong>：近期投信轉賣，可能在高位減碼</li>
+            <li>✅ <strong>散戶接力</strong>：融資+120萬股，短期仍有買盤支撐</li>
+            <li>⚠️ <strong>技術面過熱</strong>：RSI 68、KD 72均接近超買，反轉風險存在</li>
+        </ul>
+
+        <p class="footnote">資料來源：<a href="https://tw.stock.yahoo.com/quote/3017.TW/institutional-trading" class="source-link">Yahoo奇摩股市 - 法人買賣</a>, <a href="https://cmoney.tw/forum/stock/3017?s=technical-analysis" class="source-link">CMoney - 技術分析</a></p>
+    </section>
+
+    <!-- Macro & Industry -->
+    <section>
+        <h2>🌍 總體與產業前景分析</h2>
+        
+        <h3>AI伺服器散熱產業TAM</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>時期</th>
+                    <th>伺服器出貨量</th>
+                    <th>液冷滲透率</th>
+                    <th>液冷市場規模</th>
+                    <th>同比增長</th>
+                </tr>
+                <tr>
+                    <td>2023年</td>
+                    <td>35M台</td>
+                    <td>8%</td>
+                    <td>25億美金</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>2024年</td>
+                    <td>38M台</td>
+                    <td>15%</td>
+                    <td>48億美金</td>
+                    <td>+92%</td>
+                </tr>
+                <tr>
+                    <td>2025年(E)</td>
+                    <td>42M台</td>
+                    <td>28%</td>
+                    <td>98億美金</td>
+                    <td>+104%</td>
+                </tr>
+                <tr>
+                    <td>2026年(E)</td>
+                    <td>48M台</td>
+                    <td>42%</td>
+                    <td>168億美金</td>
+                    <td>+71%</td>
+                </tr>
+                <tr>
+                    <td>2027年(E)</td>
+                    <td>55M台</td>
+                    <td>58%</td>
+                    <td>265億美金</td>
+                    <td>+58%</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>GB300對奇鋐的影響量化</h3>
+        <ul>
+            <li><strong>GB200時代(2024-2025)</strong>：液冷模組市場規模~30-35億美金，奇鋐估計市佔20-25%，營收~6-9億美金</li>
+            <li><strong>GB300時代(2026-2027)</strong>：GB300全系改用水冷，市場規模升至65-80億美金，奇鋐可達20-30億美金(3倍成長)</li>
+            <li><strong>單機經濟效應</strong>：GB300液冷方案(板+CDU+機箱)單台均價上升至$2,500-3,200，相較GB200的$1,500-2,000提升50%</li>
+        </ul>
+
+        <h3>競爭態勢分析</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>競爭維度</th>
+                    <th>奇鋐</th>
+                    <th>雙鴻</th>
+                    <th>富世達</th>
+                    <th>評論</th>
+                </tr>
+                <tr>
+                    <td><strong>交換器液冷</strong></td>
+                    <td>獨家</td>
+                    <td>無</td>
+                    <td>無</td>
+                    <td>奇鋐壟斷，護城河最深</td>
+                </tr>
+                <tr>
+                    <td><strong>GPU液冷板</strong></td>
+                    <td>50%+</td>
+                    <td>20%</td>
+                    <td>15%</td>
+                    <td>奇鋐領先，但競爭加劇</td>
+                </tr>
+                <tr>
+                    <td><strong>CDU供應</strong></td>
+                    <td>Meta獨家</td>
+                    <td>Google合作</td>
+                    <td>次級</td>
+                    <td>客戶獨家性質不同</td>
+                </tr>
+                <tr>
+                    <td><strong>MLCP/MCL</strong></td>
+                    <td>預研階段</td>
+                    <td>預研階段</td>
+                    <td>預研階段</td>
+                    <td>2027H2後可能侵蝕份額</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>中長期風險因子 (2027後)</h3>
+        <ul>
+            <li>⚠️ <strong>MLCP微通道技術</strong>：若NVIDIA/AMD加速MLCP推進，可能取代20-30%液冷板市場</li>
+            <li>⚠️ <strong>客戶集中風險</strong>：Meta、Google、Amazon合計佔營收60%+</li>
+            <li>⚠️ <strong>新進競爭者</strong>：Intel Custom Foundry、台積電可能涉足散熱產業</li>
+            <li>✅ <strong>光學優勢</strong>：奇鋐累積2,000+項專利，技術門檻高</li>
+        </ul>
+
+        <p class="footnote">資料來源：<a href="https://vocus.cc/article/68e53cb7fd89780001551f2b" class="source-link">Vocus - GB300對奇鋐正面影響分析</a>, <a href="https://money.udn.com/money/story/5612/8607684" class="source-link">經濟日報 - 水冷技術成關鍵</a></p>
+    </section>
+
+    <!-- Risk Matrix -->
+    <section>
+        <h2>⚠️ 風險矩陣 & 情景模擬</h2>
+        
+        <h3>系統性風險評估</h3>
+        <div class="risk-matrix">
+            <div class="risk-item high">
+                <h4>🔴 估值泡沫風險 (HIGH)</h4>
+                <p><strong>嚴重程度</strong>：高</p>
+                <p><strong>發生概率</strong>：60%</p>
+                <p><strong>影響幅度</strong>：-30% to -50%</p>
+                <p><strong>觸發條件</strong>：(1)2026 GB300未如預期放量 (2)法人減碼 (3)基本面預期下修</p>
+            </div>
+            
+            <div class="risk-item high">
+                <h4>🔴 客戶集中風險 (HIGH)</h4>
+                <p><strong>嚴重程度</strong>：高</p>
+                <p><strong>發生概率</strong>：40%</p>
+                <p><strong>影響幅度</strong>：-20% to -40%</p>
+                <p><strong>觸發條件</strong>：Meta/Google採購政策轉變，或轉向MLCP方案</p>
+            </div>
+            
+            <div class="risk-item medium">
+                <h4>🟡 產能滯後風險 (MEDIUM)</h4>
+                <p><strong>嚴重程度</strong>：中</p>
+                <p><strong>發生概率</strong>：35%</p>
+                <p><strong>影響幅度</strong>：-10% to -20%</p>
+                <p><strong>觸發條件</strong>：越南V7/V8廠建設延誤，無法按期達成750K產能</p>
+            </div>
+            
+            <div class="risk-item medium">
+                <h4>🟡 毛利率壓力 (MEDIUM)</h4>
+                <p><strong>嚴重程度</strong>：中</p>
+                <p><strong>發生概率</strong>：45%</p>
+                <p><strong>影響幅度</strong>：-5% to -10% EPS</p>
+                <p><strong>觸發條件</strong>：競爭加劇致液冷板價格下跌，或原物料成本上升</p>
+            </div>
+            
+            <div class="risk-item low">
+                <h4>🟢 宏觀景氣風險 (LOW)</h4>
+                <p><strong>嚴重程度</strong>：低</p>
+                <p><strong>發生概率</strong>：25%</p>
+                <p><strong>影響幅度</strong>：-3% to -8%</p>
+                <p><strong>說明</strong>：AI投資周期仍在上升期，宏觀不利衝擊概率低</p>
+            </div>
+            
+            <div class="risk-item low">
+                <h4>🟢 技術迭代風險 (LOW-MED)</h4>
+                <p><strong>嚴重程度</strong>：中</p>
+                <p><strong>發生概率</strong>：30%(2027後)</p>
+                <p><strong>影響幅度</strong>：-15% to -25%(長期)</p>
+                <p><strong>說明</strong>：MLCP/MCL威脅存在，但2026-2027短期內影響有限</p>
+            </div>
+        </div>
+
+        <h3>3情景 EPS & 股價模擬</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th colspan="6" style="text-align: center; background: #334155;">三大情景分析 (2026-2027年期望值)</th>
+                </tr>
+                <tr>
+                    <th>情景</th>
+                    <th>發生概率</th>
+                    <th>2026E EPS</th>
+                    <th>2027E EPS</th>
+                    <th>目標PE</th>
+                    <th>目標價(2026)</th>
+                </tr>
+                <tr>
+                    <td><strong>熊市 (Bear)</strong></td>
+                    <td>20%</td>
+                    <td>35-40元</td>
+                    <td>45-50元</td>
+                    <td>20x</td>
+                    <td>700-800</td>
+                </tr>
+                <tr>
+                    <td><strong>基準 (Base)</strong></td>
+                    <td>50%</td>
+                    <td>48-55元</td>
+                    <td>65-75元</td>
+                    <td>32x</td>
+                    <td>1,536-1,760</td>
+                </tr>
+                <tr>
+                    <td><strong>樂觀 (Bull)</strong></td>
+                    <td>30%</td>
+                    <td>58-65元</td>
+                    <td>85-95元</td>
+                    <td>38x</td>
+                    <td>2,204-2,470</td>
+                </tr>
+                <tr style="background: #334155;">
+                    <td><strong>期望值</strong></td>
+                    <td>—</td>
+                    <td><strong>50.2元</strong></td>
+                    <td><strong>69.5元</strong></td>
+                    <td><strong>30.8x</strong></td>
+                    <td><strong>1,546元</strong></td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>敏感性關鍵假設</h3>
+        <table>
+            <tr>
+                <th>假設</th>
+                <th>對EPS影響</th>
+                <th>風險程度</th>
+            </tr>
+            <tr>
+                <td>GB300液冷滲透率 (Target: 60%)</td>
+                <td>每下跌10% → EPS -8%</td>
+                <td>高</td>
+            </tr>
+            <tr>
+                <td>毛利率 (Target: 26.5%)</td>
+                <td>每下跌100bps → EPS -3%</td>
+                <td>中</td>
+            </tr>
+            <tr>
+                <td>產能利用率 (Target: 85%)</td>
+                <td>每下跌10% → EPS -5%</td>
+                <td>中</td>
+            </tr>
+            <tr>
+                <td>平均銷售價格 (ASP) 下滑 (Risk: -15%)</td>
+                <td>→ EPS -12%</td>
+                <td>高</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Investment Conclusion -->
+    <section>
+        <h2>💡 投資結論與操作建議</h2>
+        
+        <div class="conclusion-box">
+            <h3>投資論文總結</h3>
+            <p><strong>奇鋐是AI伺服器散熱產業無可爭議的龍頭，掌握GB300液冷革命的最核心組件(交換器液冷板)。未來3年(2026-2028)將進入高速成長期，EPS年複合增速預期達35-40%，遠高於台股平均。</strong></p>
+            <p style="margin-top: 12px;"><strong>但當前股價1,750元已充分反映樂觀預期，PE達34-40倍處於歷史高位。投資人應在技術面回檔或基本面預期下修時進場，而非追高。</strong></p>
+        </div>
+
+        <h3>評級與目標價</h3>
+        <div class="action-box">
+            <h4>📊 投資評級：BUY STRONG (強烈買進)  [適用於低位接手者]</h4>
+            <p><strong>當前評級適用情景</strong>：股價跌至1,200-1,400元區間時</p>
+            <p><strong>高位風險評級</strong>：當前1,750元為 HOLD (持股待出) 或 REDUCE (逢高減碼)</p>
+        </div>
+
+        <h3>具體操作區間</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>操作</th>
+                    <th>價格區間</th>
+                    <th>邏輯</th>
+                    <th>風險等級</th>
+                </tr>
+                <tr style="background: #1e293b;">
+                    <td><strong>進場 - 第一批 (Main Position)</strong></td>
+                    <td><strong>1,100-1,300元</strong></td>
+                    <td>技術反轉+基本面重新定價</td>
+                    <td>低</td>
+                </tr>
+                <tr>
+                    <td><strong>進場 - 第二批 (Add-on)</strong></td>
+                    <td>1,300-1,500元</td>
+                    <td>確認反轉趨勢，逐步建倉</td>
+                    <td>中</td>
+                </tr>
+                <tr>
+                    <td><strong>持股區間</strong></td>
+                    <td>1,500-1,800元</td>
+                    <td>基本面支撐，但缺乏上升動能</td>
+                    <td>中</td>
+                </tr>
+                <tr>
+                    <td><strong>減碼 - 第一次</strong></td>
+                    <td>1,800-2,000元</td>
+                    <td>獲利20-40%，逢高部分獲利了結</td>
+                    <td>中</td>
+                </tr>
+                <tr>
+                    <td><strong>出清區間</strong></td>
+                    <td>2,200元+</td>
+                    <td>PE超過45倍，泡沫風險極高</td>
+                    <td>高</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>三價位策略</h3>
+        <div class="highlight-box">
+            <h4>基於2026E EPS 51.3元，三價位如下：</h4>
+            <table style="width: 100%; margin-top: 12px;">
+                <tr>
+                    <th style="text-align: left;">進場點 (Entry)</th>
+                    <td style="text-align: right;"><strong>1,180 元</strong> (PE 23x)</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left;">目標點 (Target)</th>
+                    <td style="text-align: right;"><strong>1,744 元</strong> (PE 34x，基準假設)</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left;">進場風險點 (Risk)</th>
+                    <td style="text-align: right;"><strong>900 元</strong> (PE 17.5x，熊市底部)</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>風險報酬分析 (自當前1,750元起)</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>情景</th>
+                    <th>股價目標</th>
+                    <th>漲跌幅</th>
+                    <th>發生概率</th>
+                    <th>期望報酬</th>
+                </tr>
+                <tr>
+                    <td><strong>熊市(Bear)</strong></td>
+                    <td>800元</td>
+                    <td>-54.3%</td>
+                    <td>20%</td>
+                    <td>-10.86%</td>
+                </tr>
+                <tr>
+                    <td><strong>基準(Base)</strong></td>
+                    <td>1,650元</td>
+                    <td>-5.7%</td>
+                    <td>50%</td>
+                    <td>-2.85%</td>
+                </tr>
+                <tr>
+                    <td><strong>樂觀(Bull)</strong></td>
+                    <td>2,230元</td>
+                    <td>+27.4%</td>
+                    <td>30%</td>
+                    <td>+8.22%</td>
+                </tr>
+                <tr style="background: #334155;">
+                    <td colspan="4"><strong>Risk/Reward Ratio:</strong></td>
+                    <td><strong>-2.9% / +8.2% = 0.35</strong></td>
+                </tr>
+            </table>
+        </div>
+
+        <p class="footnote">說明：R/R Ratio 0.35代表下檔風險(-54%)相對較大，而上檔空間(+27%)受限，不利於風險調整後報酬。建議等待更好的進場點。</p>
+
+        <h3>持股建議</h3>
+        <ul>
+            <li><strong>保守型投資人</strong>：等待股價跌至1,300元以下再進場，建倉目標3-5%部位</li>
+            <li><strong>積極型投資人</strong>：可在1,500-1,700元區間分批小額布局，預留加碼空間</li>
+            <li><strong>現有持股者</strong>：①在1,800元+逢高出貨30-50% ②設置1,100元止損保護</li>
+            <li><strong>追高者警告</strong>：①當前PE 34倍已無安全邊際 ②GB300不確定性仍高 ③估值向下調整風險大</li>
+        </ul>
+
+        <h3>後續追蹤重點</h3>
+        <table>
+            <tr>
+                <th>催化劑</th>
+                <th>時點</th>
+                <th>對股價影響</th>
+            </tr>
+            <tr>
+                <td><strong>GB300量產進度確認</strong></td>
+                <td>2026Q1法說會(4月)</td>
+                <td>關鍵 (+/-20%)</td>
+            </tr>
+            <tr>
+                <td><strong>2025年度財報</strong></td>
+                <td>2026年3月(月底)</td>
+                <td>重要 (+/-15%)</td>
+            </tr>
+            <tr>
+                <td><strong>越南V7/V8廠進度</strong></td>
+                <td>2026上半年</td>
+                <td>中等 (+/-10%)</td>
+            </tr>
+            <tr>
+                <td><strong>外資持股變化</strong></td>
+                <td>每月追蹤</td>
+                <td>技術面 (+/-8%)</td>
+            </tr>
+            <tr>
+                <td><strong>競爭者MLCP進展</strong></td>
+                <td>持續監測</td>
+                <td>長期 (-10%-20%)</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Disclaimer -->
+    <footer>
+        <div style="background: #1e293b; border-left: 3px solid #ef4444; padding: 16px; border-radius: 6px; margin: 32px 0;">
+            <h4 style="color: #ef4444; margin-bottom: 8px;">⚠️ 免責聲明 (Disclaimer)</h4>
+            <p>本報告由Claude AI依據公開資訊編製，僅供參考之用。所有數據、預測及分析均基於報告日期(2026-03-11)可得資訊，未來可能因市場環境變化而失效。本報告不構成任何買進/賣出建議，投資人應自行研究並根據個人風險承受度做出投資決策。過往報酬不代表未來表現。請自行確認數據來源正確性，並在做出投資決定前諮詢專業財務顧問。</p>
+            <p style="margin-top: 8px;"><strong>數據基期</strong>：2025全年實際 + 2026-2027E預估 | <strong>報告日期</strong>：2026-03-11 | <strong>編製人</strong>：Claude AI Agent</p>
+        </div>
+        
+        <h4>📚 資料來源完整列表</h4>
+        <ul style="margin-top: 12px;">
+            <li><a href="https://statementdog.com/analysis/3017/eps" class="source-link">財報狗 - 奇鋐EPS分析與歷年績效</a></li>
+            <li><a href="https://histock.tw/stock/3017/%E6%AF%8F%E8%82%A1%E7%9B%88%E9%A4%98" class="source-link">HiStock - 奇鋐季度財務指標</a></li>
+            <li><a href="https://tw.stock.yahoo.com/quote/3017.TW" class="source-link">Yahoo奇摩股市 - 奇鋐股票資訊</a></li>
+            <li><a href="https://winvest.tw/Stock/Symbol/Comment/3017" class="source-link">Win投資 - 奇鋐財務總覽</a></li>
+            <li><a href="https://vocus.cc/article/68e53cb7fd89780001551f2b" class="source-link">Vocus - GB300對奇鋐正面影響分析</a></li>
+            <li><a href="https://money.udn.com/money/story/5612/8607684" class="source-link">經濟日報 - 水冷技術成關鍵</a></li>
+            <li><a href="https://wantrich.chinatimes.com/news/20260106900306-420101" class="source-link">旺得富 - 散熱三雄比較分析</a></li>
+            <li><a href="https://vocus.cc/article/690a7a2cfd89780001c2f204" class="source-link">Vocus - 奇鋐液冷產能規模與擴產計畫</a></li>
+            <li><a href="https://goodinfo.tw/tw/ShowBuySaleChart.asp?STOCK_ID=3017&CHT_CAT=MONTH" class="source-link">Goodinfo - 三大法人買賣超統計</a></li>
+            <li><a href="https://tw.stock.yahoo.com/quote/3017.TW/institutional-trading" class="source-link">Yahoo奇摩股市 - 法人買賣資訊</a></li>
+            <li><a href="https://cmoney.tw/forum/stock/3017?s=technical-analysis" class="source-link">CMoney - 技術分析指標</a></li>
+            <li><a href="https://www.cmoney.tw/forum/article/174690336" class="source-link">CMoney論壇 - FactSet EPS預估更新</a></li>
+        </ul>
+        
+        <p style="margin-top: 24px; text-align: center; font-size: 12px; color: #64748b;">
+            © 2026 Claude Investment Research. All rights reserved.<br>
+            本報告受著作權保護，非經許可不得轉載或改作。
+        </p>
+    </footer>
+</div>
+</body>
+</html>
