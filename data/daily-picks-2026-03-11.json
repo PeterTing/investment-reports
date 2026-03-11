@@ -136,29 +136,6 @@
     },
     {
       "rank": 2,
-      "ticker": "2330.TW",
-      "name": "台積電",
-      "name_en": "TSMC",
-      "market": "TW",
-      "price": 1890,
-      "currency": "TWD",
-      "rating": "Buy",
-      "target_price": 2220,
-      "target_price_basis": "【Forward PE 法】採用 2026E EPS 88.8 元（50+ 位分析師共識中位數），給予 Forward PE 25x（5 年平均 PE 22x，因 AI 結構性需求給予 15% 溢價）。計算：25 × 88.8 = 2,220 元。催化劑：3nm/2nm 滿載、CoWoS 產能擴增 2 倍、AI 晶片營收佔比升至 20%+。交叉驗證：DCF（WACC 8.5%, g=3%）得出公允價值 2,180 元，與 PE 法一致。",
-      "upside": "+17.5%",
-      "scores": {
-        "fundamental": 9,
-        "chip": 10,
-        "technical": 7,
-        "catalyst": 9,
-        "macro": 8,
-        "industry": 10
-      },
-      "total_score": 53,
-      "summary": "全球晶圓代工龍頭，AI 晶片需求驅動先進製程滿載，2026E 營收成長 30%，50+ 分析師覆蓋，外資持續買超"
-    },
-    {
-      "rank": 3,
       "ticker": "2408.TW",
       "name": "南亞科",
       "name_en": "Nanya Tech",
@@ -182,7 +159,7 @@
       "below_100": true
     },
     {
-      "rank": 4,
+      "rank": 3,
       "ticker": "3081.TW",
       "name": "聯亞",
       "name_en": "LandMark Optoelectronics",
@@ -205,7 +182,7 @@
       "summary": "CPO 共封裝光學 2026 量產年，12 月營收 YoY +158.9% 創 37 個月新高，800G/1.6T 光模組需求爆發"
     },
     {
-      "rank": 5,
+      "rank": 4,
       "ticker": "2454.TW",
       "name": "聯發科",
       "name_en": "MediaTek",
@@ -228,7 +205,7 @@
       "summary": "AI 晶片設計龍頭，Google TPU 7 合作夥伴，毛利率 45% 業界領先，Q1 2026 TPU 營收開始貢獻"
     },
     {
-      "rank": 6,
+      "rank": 5,
       "ticker": "3324.TWO",
       "name": "雙鴻",
       "name_en": "Auras Technology",
@@ -251,7 +228,7 @@
       "summary": "散熱模組龍頭，GB300 水冷關鍵零組件供應商，AI 伺服器散熱需求 CAGR 35%，高盛目標 1283 元"
     },
     {
-      "rank": 7,
+      "rank": 6,
       "ticker": "3037.TW",
       "name": "欣興",
       "name_en": "Unimicron",
@@ -274,7 +251,7 @@
       "summary": "先進封裝載板龍頭，3D CoWoS 獨家供應 AI GPU，目標價近期上調 18.3%，受惠台積電 CoWoS 擴產"
     },
     {
-      "rank": 8,
+      "rank": 7,
       "ticker": "2382.TW",
       "name": "廣達",
       "name_en": "Quanta Computer",
@@ -297,7 +274,7 @@
       "summary": "AI 伺服器組裝龍頭，客戶涵蓋 Meta/Google/AWS/Microsoft，2026 年 AI 伺服器出貨量預估翻倍"
     },
     {
-      "rank": 9,
+      "rank": 8,
       "ticker": "1504.TW",
       "name": "東元",
       "name_en": "TECO Electric",
@@ -321,7 +298,7 @@
       "below_100": true
     },
     {
-      "rank": 10,
+      "rank": 9,
       "ticker": "2345.TW",
       "name": "華邦電",
       "name_en": "Winbond Electronics",
@@ -607,7 +584,7 @@
       "name_en": "TECO Electric",
       "price": 79.8,
       "currency": "TWD",
-      "rating": "Buy",
+      "rating": "Hold",
       "target_price": 116.5,
       "upside": "+46.0%",
       "scores": {
@@ -676,7 +653,7 @@
       "name_en": "ALEX",
       "price": 115.5,
       "currency": "TWD",
-      "rating": "Buy",
+      "rating": "Hold",
       "target_price": 145,
       "upside": "+25.5%",
       "scores": {
