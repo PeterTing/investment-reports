@@ -143,7 +143,16 @@
     .upside-positive { color: #6ee7b7; }
     .upside-negative { color: #fca5a5; }
     .upside-label { font-size: 0.72rem; color: #94a3b8; }
-    .target-basis { font-size: 0.72rem; color: #64748b; margin-top: 0.3rem; font-style: italic; line-height: 1.4; }
+    .target-basis {
+      font-size: 0.75rem; color: #94a3b8; margin-top: 0.5rem; line-height: 1.55;
+      background: rgba(30, 41, 59, 0.4); padding: 0.6rem 0.8rem; border-radius: 6px;
+      border-left: 2px solid #f59e0b; cursor: pointer; position: relative;
+    }
+    .target-basis .tb-preview { display: block; }
+    .target-basis.expanded .tb-preview { display: none; }
+    .target-basis .tb-full { display: none; }
+    .target-basis.expanded .tb-full { display: block; }
+    .target-basis .tb-toggle { color: #60a5fa; font-size: 0.7rem; margin-top: 0.3rem; display: inline-block; }
 
     /* === SCORES === */
     .score-breakdown { margin-bottom: 0.8rem; }
@@ -176,6 +185,35 @@
     .dim-card h4 { color: #60a5fa; font-size: 0.9rem; margin-bottom: 0.4rem; }
     .dim-card .dim-criteria { color: #94a3b8; font-size: 0.78rem; margin-bottom: 0.3rem; line-height: 1.4; }
     .dim-card .dim-scale { color: #64748b; font-size: 0.72rem; line-height: 1.4; }
+    .dim-card .dim-weight { color: #f59e0b; font-size: 0.72rem; font-weight: 600; margin-top: 0.3rem; }
+    .dim-card .dim-detail { color: #94a3b8; font-size: 0.72rem; line-height: 1.4; margin-top: 0.3rem; border-top: 1px solid #1e293b; padding-top: 0.3rem; }
+
+    /* === METHODOLOGY ENHANCED === */
+    .meth-section { margin-bottom: 1.8rem; }
+    .meth-section-title { color: #f8fafc; font-size: 1rem; font-weight: 700; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem; }
+    .meth-steps { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1rem; }
+    .meth-step {
+      background: rgba(15, 23, 42, 0.5); border: 1px solid #1e293b;
+      border-radius: 8px; padding: 0.8rem 1rem; display: flex; gap: 0.8rem; align-items: flex-start;
+    }
+    .meth-step-num {
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: #fff;
+      width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; font-weight: 700; font-size: 0.8rem; flex-shrink: 0;
+    }
+    .meth-step-content { flex: 1; }
+    .meth-step-name { color: #f1f5f9; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.2rem; }
+    .meth-step-detail { color: #94a3b8; font-size: 0.78rem; line-height: 1.5; }
+    .meth-methods-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.8rem; }
+    @media (max-width: 640px) { .meth-methods-grid { grid-template-columns: 1fr; } }
+    .meth-method-card {
+      background: rgba(15, 23, 42, 0.5); border: 1px solid #1e293b;
+      border-radius: 8px; padding: 1rem; border-top: 3px solid #f59e0b;
+    }
+    .meth-method-name { color: #f59e0b; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .meth-method-formula { color: #60a5fa; font-size: 0.78rem; font-family: monospace; background: rgba(59, 130, 246, 0.1); padding: 0.3rem 0.5rem; border-radius: 4px; margin-bottom: 0.5rem; display: inline-block; }
+    .meth-method-desc { color: #94a3b8; font-size: 0.78rem; line-height: 1.5; margin-bottom: 0.4rem; }
+    .meth-method-example { color: #64748b; font-size: 0.72rem; line-height: 1.4; border-top: 1px solid #1e293b; padding-top: 0.4rem; font-style: italic; }
 
     /* === WATCHLIST === */
     .watchlist-grid {
@@ -346,7 +384,7 @@
     <div class="section-content" id="sec-watchlist">
       <div class="section-title">📡 重電概念股追蹤區</div>
       <div class="section-subtitle">16 檔重電概念股每日追蹤 | 含客戶/供應鏈新聞動態 | 六維度評分</div>
-      <div class="watchlist-grid" id="watchlistContainer">
+      <div class="picks-grid" id="watchlistContainer">
         <div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">⏳</div><div class="empty-state-text">載入中...</div></div>
       </div>
     </div>
@@ -495,16 +533,35 @@
       updateStats(data);
     }
 
+    // ===== TARGET BASIS HELPER =====
+    function renderTargetBasis(basis, id) {
+      if (!basis) return '';
+      const maxPreview = 60;
+      if (basis.length <= maxPreview) {
+        return `<div class="target-basis">📐 ${basis}</div>`;
+      }
+      const preview = basis.substring(0, maxPreview) + '...';
+      return `<div class="target-basis" id="${id}" onclick="toggleBasis('${id}')">
+        <span class="tb-preview">📐 ${preview} <span class="tb-toggle">▶ 展開詳情</span></span>
+        <span class="tb-full">📐 ${basis} <span class="tb-toggle">▲ 收合</span></span>
+      </div>`;
+    }
+    function toggleBasis(id) {
+      document.getElementById(id).classList.toggle('expanded');
+    }
+
     // ===== RENDER PICKS =====
     function renderPicks(picks, containerId) {
       const container = document.getElementById(containerId);
       if (!picks || picks.length === 0) { showEmpty(containerId); return; }
 
-      container.innerHTML = picks.map(p => {
+      container.innerHTML = picks.map((p, idx) => {
         const currSymbol = p.currency === 'USD' ? '$' : '';
         const upsideClass = p.upside.startsWith('+') ? 'upside-positive' : 'upside-negative';
         const rankClass = p.rank <= 3 ? ` rank-${p.rank}` : '';
         const scoreColor = v => v >= 8 ? 'high' : v >= 6 ? 'mid' : 'low';
+        const tbId = containerId + '-tb-' + idx;
+        const basisHtml = renderTargetBasis(p.target_price_basis, tbId);
 
         return `
         <div class="pick-card">
@@ -531,7 +588,7 @@
               <div class="upside-label">目標價 ${currSymbol}${p.target_price.toLocaleString()}</div>
             </div>
           </div>
-          ${p.target_price_basis ? `<div class="target-basis">📐 ${p.target_price_basis}</div>` : ''}
+          ${basisHtml}
           <div class="score-breakdown">
             <div class="score-breakdown-title">
               <span>六維度評分</span>
@@ -566,32 +623,63 @@
         return b.total_score - a.total_score;
       });
 
-      container.innerHTML = sorted.map(w => {
+      container.innerHTML = sorted.map((w, idx) => {
+        const upsideClass = w.upside.startsWith('+') ? 'upside-positive' : 'upside-negative';
+        const scoreColor = v => v >= 8 ? 'high' : v >= 6 ? 'mid' : 'low';
         const ratingBadge = w.rating === 'Buy'
           ? '<span class="badge badge-rating-buy">🟢 買進</span>'
           : '<span class="badge badge-rating-hold">🟡 持有</span>';
-        const cardClass = w.rating === 'Buy' ? 'is-buy' : 'is-hold';
-        const upsideClass = w.upside.startsWith('+') ? 'upside-positive' : 'upside-negative';
+        const rankNum = idx + 1;
+        const rankClass = rankNum <= 3 ? ` rank-${rankNum}` : '';
+        const tbId = 'wl-tb-' + idx;
+        const basisHtml = w.target_price_basis ? renderTargetBasis(w.target_price_basis, tbId) : '';
 
         return `
-        <div class="watchlist-card ${cardClass}">
-          <div class="wl-header">
+        <div class="pick-card">
+          <div class="pick-rank${rankClass}">${rankNum}</div>
+          <div class="pick-header">
             <div>
-              <div class="wl-ticker">${w.ticker}</div>
-              <div class="wl-name">${w.name} ${ratingBadge}</div>
-              ${w.name_en ? `<div class="wl-name-en">${w.name_en}</div>` : ''}
+              <div class="pick-ticker">${w.ticker}</div>
+              <div class="pick-name">${w.name}</div>
+              ${w.name_en ? `<div class="pick-name-en">${w.name_en}</div>` : ''}
             </div>
-            <span class="total-score">${w.total_score}/60</span>
           </div>
-          <div class="wl-price-row">
-            <span class="wl-price">${w.price.toLocaleString()} TWD</span>
-            <span class="wl-target ${upsideClass}">→ ${w.target_price.toLocaleString()} (${w.upside})</span>
+          <div class="pick-badges">
+            <span class="badge badge-market">🇹🇼 台股</span>
+            ${ratingBadge}
+            ${w.below_100 ? '<span class="badge badge-below100">💰 百元以下</span>' : ''}
           </div>
-          <div class="wl-scores-mini">
-            ${Object.entries(w.scores).map(([k, v]) => `<span class="wl-score-tag">${SCORE_LABELS[k] || k} ${v}</span>`).join('')}
+          <div class="pick-price">
+            <div class="price-current">
+              <span class="price-label">現價</span>
+              <span class="price-value">${w.price.toLocaleString()} TWD</span>
+            </div>
+            <div class="price-upside">
+              <div class="upside-value ${upsideClass}">${w.upside}</div>
+              <div class="upside-label">目標價 ${w.target_price.toLocaleString()}</div>
+            </div>
           </div>
-          ${w.news ? `<div class="wl-news"><strong>📰 動態：</strong>${w.news}</div>` : ''}
-          ${w.client_news ? `<div class="wl-client-news">🏭 客戶面：${w.client_news}</div>` : ''}
+          ${basisHtml}
+          <div class="score-breakdown">
+            <div class="score-breakdown-title">
+              <span>六維度評分</span>
+              <span class="total-score">總分 ${w.total_score}/60</span>
+            </div>
+            <div class="scores-grid">
+              ${Object.entries(w.scores).map(([k, v]) => `
+                <div class="score-item">
+                  <div class="score-name">${SCORE_LABELS[k] || k}</div>
+                  <div class="score-bar">
+                    <div class="score-bar-bg"><div class="score-bar-fill ${scoreColor(v)}" style="width:${v*10}%"></div></div>
+                    <span class="score-number">${v}</span>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+          ${w.summary ? `<div class="pick-summary">${w.summary}</div>` : ''}
+          ${w.news ? `<div class="pick-summary" style="border-left-color:#f59e0b;margin-top:0.5rem;"><strong>📰 動態：</strong>${w.news}</div>` : ''}
+          ${w.client_news ? `<div class="pick-summary" style="border-left-color:#8b5cf6;margin-top:0.5rem;font-size:0.78rem;"><strong>🏭 客戶面：</strong>${w.client_news}</div>` : ''}
         </div>`;
       }).join('');
     }
@@ -600,18 +688,66 @@
     function renderMethodology(m) {
       const box = document.getElementById('methodologyBox');
       const dims = m.dimensions || {};
-      box.innerHTML = `
-        <p>${m.description || ''}</p>
+      const sp = m.selection_process || {};
+      const tpm = m.target_price_methods || {};
+
+      let html = `<p style="font-size:0.92rem;margin-bottom:1.5rem;">${m.description || ''}</p>`;
+
+      // Section 1: Selection Process
+      if (sp.steps && sp.steps.length > 0) {
+        html += `
+        <div class="meth-section">
+          <div class="meth-section-title">🔍 ${sp.title || '精選 Top 10 選股流程'}</div>
+          <div class="meth-steps">
+            ${sp.steps.map(s => `
+              <div class="meth-step">
+                <div class="meth-step-num">${s.step}</div>
+                <div class="meth-step-content">
+                  <div class="meth-step-name">${s.name}</div>
+                  <div class="meth-step-detail">${s.detail}</div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>`;
+      }
+
+      // Section 2: Target Price Methods
+      if (tpm.methods && tpm.methods.length > 0) {
+        html += `
+        <div class="meth-section">
+          <div class="meth-section-title">📐 ${tpm.title || '目標價計算方法說明'}</div>
+          <div class="meth-methods-grid">
+            ${tpm.methods.map(mt => `
+              <div class="meth-method-card">
+                <div class="meth-method-name">${mt.name}</div>
+                <div class="meth-method-formula">${mt.formula}</div>
+                <div class="meth-method-desc">${mt.description}</div>
+                ${mt.example ? `<div class="meth-method-example">💡 ${mt.example}</div>` : ''}
+              </div>
+            `).join('')}
+          </div>
+        </div>`;
+      }
+
+      // Section 3: Dimensions
+      html += `
+      <div class="meth-section">
+        <div class="meth-section-title">📊 六維度評分細項</div>
         <div class="dim-grid">
           ${Object.entries(dims).map(([k, d]) => `
             <div class="dim-card">
               <h4>${d.name || k}</h4>
               <div class="dim-criteria">${d.criteria || ''}</div>
               <div class="dim-scale">${d.scale || ''}</div>
+              ${d.weight ? `<div class="dim-weight">⚖️ 權重：${d.weight}</div>` : ''}
+              ${d.scoring_detail ? `<div class="dim-detail">📋 ${d.scoring_detail}</div>` : ''}
             </div>
           `).join('')}
         </div>
-      `;
+      </div>`;
+
+      box.innerHTML = html;
     }
 
     // ===== RENDER ARCHIVE =====

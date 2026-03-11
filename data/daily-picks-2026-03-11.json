@@ -6,36 +6,107 @@
   },
   "scoring_methodology": {
     "description": "統一六維度評分體系，每項 1-10 分，滿分 60 分。精選標的須達 45 分以上且評級為 Buy。",
+    "selection_process": {
+      "title": "精選 Top 10 選股流程",
+      "steps": [
+        {
+          "step": 1,
+          "name": "初篩池建立",
+          "detail": "從台股上市櫃約 1,700 檔、美股 S&P 500 + NASDAQ 100 + 熱門成長股約 800 檔中，依「近三個月日均成交量 > 500 張（台股）/ > 50 萬股（美股）」＋「市值 > 50 億台幣（台股）/ > $5B（美股）」篩出流動性足夠的標的池約 400-500 檔。"
+        },
+        {
+          "step": 2,
+          "name": "六維度全面掃描",
+          "detail": "對初篩池每檔股票執行六大維度評分：基本面（財報數據）、籌碼面（法人動向）、技術面（技術指標）、消息面（近期催化劑）、總經（宏觀環境）、產業展望（產業趨勢）。每維度 1-10 分，加總得出總分（滿分 60）。"
+        },
+        {
+          "step": 3,
+          "name": "買進篩選",
+          "detail": "僅保留評級為 Buy 的標的。Buy 判定標準：(1) 總分 ≥ 45 分、(2) 基本面 ≥ 7 分、(3) 至少 4 個維度 ≥ 7 分、(4) 目標價上檔空間 ≥ 8%。不符合者歸類為 Hold 或 Sell，不進入精選名單。"
+        },
+        {
+          "step": 4,
+          "name": "排名與多元化",
+          "detail": "按總分由高到低排列，台股取前 10 名、美股取前 10 名。確保：(1) 台股至少 3 檔股價 < 100 元、(2) 產業分散（同一子產業最多 3 檔）、(3) 台美各自覆蓋至少 3 個不同產業。"
+        },
+        {
+          "step": 5,
+          "name": "估值交叉驗證",
+          "detail": "對入選的 20 檔逐一進行目標價計算，採用至少 2 種估值方法交叉驗證：Forward PE × 預估 EPS、EV/EBITDA × 預估 EBITDA、DCF 折現、PB × 預估 BPS。目標價取各方法的中位數或保守值，並標明計算依據和假設條件。"
+        }
+      ]
+    },
+    "target_price_methods": {
+      "title": "目標價計算方法說明",
+      "methods": [
+        {
+          "name": "Forward PE 法",
+          "formula": "目標價 = Forward PE 倍數 × 預估 EPS",
+          "description": "最常用的估值方法。Forward PE 倍數參考：(1) 公司過去 5 年 PE Band 中位數、(2) 同業平均 PE、(3) 預期成長率對應的合理 PE（PEG ≈ 1 為合理）。預估 EPS 採用分析師共識中位數或自行 bottom-up 推導。",
+          "example": "例：台積電 Forward PE 25x × 2026E EPS 88.8 元 = 目標價 2,220 元"
+        },
+        {
+          "name": "EV/EBITDA 法",
+          "formula": "目標股價 = (EV/EBITDA 倍數 × 預估 EBITDA - 淨負債) ÷ 流通股數",
+          "description": "適用於資本密集型產業（公用事業、能源、電信）。EV/EBITDA 倍數參考同業中位數和歷史區間。",
+          "example": "例：Vistra Energy EV/EBITDA 12x × 2026E EBITDA $6.8B = EV $81.6B → 推算股價 $230"
+        },
+        {
+          "name": "DCF 折現法",
+          "formula": "目標價 = Σ(FCF_t / (1+WACC)^t) + 終值 / 流通股數",
+          "description": "以未來 5-10 年自由現金流折現計算內在價值。WACC 通常介於 8-12%，終端成長率 2-3%。適用於現金流穩定的成熟企業。",
+          "example": "例：Vertex Pharma DCF（WACC 9%, Terminal g 2.5%）得出公允價值 $580，搭配 Forward PE 交叉驗證"
+        },
+        {
+          "name": "PB 法（股價淨值比）",
+          "formula": "目標價 = Forward PB 倍數 × 預估每股淨值(BPS)",
+          "description": "適用於景氣循環股（記憶體、面板、鋼鐵）及金融股。PB 倍數參考 ROE 水準：理論 PB ≈ (ROE-g)/(CoE-g)。",
+          "example": "例：華邦電 Forward PB 1.8x × 2026E BPS 17.8 元 = 目標價 32 元"
+        }
+      ]
+    },
     "dimensions": {
       "fundamental": {
         "name": "基本面",
-        "criteria": "營收成長率、毛利率趨勢、EPS 年增率、ROE、負債比、FCF 品質",
-        "scale": "1-3 衰退/惡化 | 4-5 持平 | 6-7 穩健成長 | 8-9 高速成長 | 10 爆發性成長"
+        "weight": "核心指標",
+        "criteria": "營收成長率、毛利率趨勢、EPS 年增率、ROE、負債比（D/E）、自由現金流（FCF）品質",
+        "scale": "1-3 衰退/惡化 | 4-5 持平 | 6-7 穩健成長 | 8-9 高速成長 | 10 爆發性成長",
+        "scoring_detail": "10分：營收 YoY >50% 且毛利率擴張 >3ppt | 8-9分：營收 YoY 20-50% | 6-7分：營收 YoY 5-20% | 4-5分：營收 YoY ±5% | 1-3分：營收衰退"
       },
       "chip": {
         "name": "籌碼面",
-        "criteria": "三大法人近 5/20/60 日買賣超、融資融券變化、大股東持股異動、外資持股比例",
-        "scale": "1-3 法人大賣 | 4-5 中性 | 6-7 小幅買超 | 8-9 持續買超 | 10 三大法人同步大買"
+        "weight": "領先指標",
+        "criteria": "三大法人近 5/20/60 日買賣超、融資融券變化、大股東持股異動、外資持股比例變化",
+        "scale": "1-3 法人大賣 | 4-5 中性 | 6-7 小幅買超 | 8-9 持續買超 | 10 三大法人同步大買",
+        "scoring_detail": "10分：外資+投信+自營同步連 5 日買超 | 8-9分：外資連續買超 >20 日 | 6-7分：法人小幅偏多 | 4-5分：法人進出均衡 | 1-3分：外資大幅減碼"
       },
       "technical": {
         "name": "技術面",
-        "criteria": "MA 趨勢（5/20/60/120日）、RSI、KD、MACD、成交量能、支撐壓力位",
-        "scale": "1-3 空頭排列 | 4-5 盤整 | 6-7 多頭初期 | 8-9 強勢多頭 | 10 突破新高帶量"
+        "weight": "時機指標",
+        "criteria": "MA 趨勢（5/20/60/120日）、RSI（14日）、KD、MACD、成交量能變化、支撐壓力位",
+        "scale": "1-3 空頭排列 | 4-5 盤整 | 6-7 多頭初期 | 8-9 強勢多頭 | 10 突破新高帶量",
+        "scoring_detail": "10分：突破前高+量增+MA 多頭排列 | 8-9分：站穩所有均線+RSI>60 | 6-7分：站上 60MA | 4-5分：均線糾結 | 1-3分：跌破 120MA"
       },
       "catalyst": {
         "name": "消息面",
-        "criteria": "近期利多/利空新聞、法說會展望、客戶訂單動態、政策影響、供應鏈變化",
-        "scale": "1-3 重大利空 | 4-5 無明顯催化 | 6-7 正面消息 | 8-9 強力催化劑 | 10 里程碑事件"
+        "weight": "催化指標",
+        "criteria": "近期利多/利空新聞、法說會展望指引、客戶訂單動態、政策影響、供應鏈變化、併購事件",
+        "scale": "1-3 重大利空 | 4-5 無明顯催化 | 6-7 正面消息 | 8-9 強力催化劑 | 10 里程碑事件",
+        "scoring_detail": "10分：重大訂單/FDA批准/併購完成 | 8-9分：法說會上調展望/大客戶新單 | 6-7分：正面產業新聞 | 4-5分：無明顯消息 | 1-3分：負面事件/下調展望"
       },
       "macro": {
         "name": "總經",
-        "criteria": "央行利率政策、GDP 成長、通膨趨勢、匯率影響、地緣政治風險",
-        "scale": "1-3 嚴重逆風 | 4-5 中性 | 6-7 溫和順風 | 8-9 強勁順風 | 10 政策全面利多"
+        "weight": "環境指標",
+        "criteria": "央行利率政策走向、GDP 成長趨勢、通膨數據、匯率影響、地緣政治風險、資金流向",
+        "scale": "1-3 嚴重逆風 | 4-5 中性 | 6-7 溫和順風 | 8-9 強勁順風 | 10 政策全面利多",
+        "scoring_detail": "10分：降息循環+財政擴張+資金寬鬆 | 8-9分：Fed 降息預期明確 | 6-7分：經濟溫和成長 | 4-5分：不確定性高 | 1-3分：升息+經濟衰退"
       },
       "industry": {
         "name": "產業展望",
-        "criteria": "產業 CAGR、技術趨勢轉折、市場規模、競爭格局、進入障礙",
-        "scale": "1-3 夕陽產業 | 4-5 成熟穩定 | 6-7 穩健成長 | 8-9 高成長賽道 | 10 爆發性新興產業"
+        "weight": "趨勢指標",
+        "criteria": "產業 CAGR 預估、技術趨勢轉折點、TAM（可觸及市場規模）、競爭格局變化、進入障礙高低",
+        "scale": "1-3 夕陽產業 | 4-5 成熟穩定 | 6-7 穩健成長 | 8-9 高成長賽道 | 10 爆發性新興產業",
+        "scoring_detail": "10分：產業 CAGR >30% 且處於滲透率 <20% 的爆發期 | 8-9分：CAGR 15-30% | 6-7分：CAGR 5-15% | 4-5分：CAGR <5% | 1-3分：產業萎縮"
       }
     }
   },
@@ -50,9 +121,16 @@
       "currency": "TWD",
       "rating": "Buy",
       "target_price": 1840,
-      "target_price_basis": "Forward PE 32x × 2026E EPS 57.5 元（高盛與大和資本共識）",
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS 57.5 元（高盛與大和資本共識），給予 Forward PE 32x（高於散熱產業平均 25x，因液冷滲透率從 15%→45% 的結構性轉折溢價）。計算：32 × 57.5 = 1,840 元。催化劑：GB300 液冷獨家供應、2026 年液冷營收佔比達 45%、高盛 conviction buy list。風險：若 PE 回落至 28x 則目標價 1,610 元。",
       "upside": "+8.6%",
-      "scores": { "fundamental": 10, "chip": 9, "technical": 8, "catalyst": 10, "macro": 10, "industry": 10 },
+      "scores": {
+        "fundamental": 10,
+        "chip": 9,
+        "technical": 8,
+        "catalyst": 10,
+        "macro": 10,
+        "industry": 10
+      },
       "total_score": 57,
       "summary": "GB300 AI 伺服器水冷主力供應商，液冷轉型加速，高盛與大和資本均列入推薦名單，2026 年液冷營收佔比預估達 45%"
     },
@@ -66,9 +144,16 @@
       "currency": "TWD",
       "rating": "Buy",
       "target_price": 2220,
-      "target_price_basis": "Forward PE 25x × 2026E EPS 88.8 元（高盛 conviction buy）",
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS 88.8 元（50+ 位分析師共識中位數），給予 Forward PE 25x（5 年平均 PE 22x，因 AI 結構性需求給予 15% 溢價）。計算：25 × 88.8 = 2,220 元。催化劑：3nm/2nm 滿載、CoWoS 產能擴增 2 倍、AI 晶片營收佔比升至 20%+。交叉驗證：DCF（WACC 8.5%, g=3%）得出公允價值 2,180 元，與 PE 法一致。",
       "upside": "+17.5%",
-      "scores": { "fundamental": 9, "chip": 10, "technical": 7, "catalyst": 9, "macro": 8, "industry": 10 },
+      "scores": {
+        "fundamental": 9,
+        "chip": 10,
+        "technical": 7,
+        "catalyst": 9,
+        "macro": 8,
+        "industry": 10
+      },
       "total_score": 53,
       "summary": "全球晶圓代工龍頭，AI 晶片需求驅動先進製程滿載，2026E 營收成長 30%，50+ 分析師覆蓋，外資持續買超"
     },
@@ -82,9 +167,16 @@
       "currency": "TWD",
       "rating": "Buy",
       "target_price": 348,
-      "target_price_basis": "Forward PE 15x × 2027E EPS 23.2 元（高盛目標價由 298→348 元）",
+      "target_price_basis": "【Forward PE 法】採用 2027E EPS 23.2 元（高盛最新估值，因 DDR5 產能 2027 年方全面開出），給予 Forward PE 15x（記憶體業上行循環 PE 區間 12-18x 取中位數）。計算：15 × 23.2 = 348 元。催化劑：DDR4 供給缺口 26% 推升 ASP、高盛目標價由 298→348 元上調 17%。PB 交叉驗證：2027E BPS 65 元 × PB 5.4x = 351 元，與 PE 法吻合。",
       "upside": "+266%",
-      "scores": { "fundamental": 9, "chip": 8, "technical": 7, "catalyst": 9, "macro": 9, "industry": 10 },
+      "scores": {
+        "fundamental": 9,
+        "chip": 8,
+        "technical": 7,
+        "catalyst": 9,
+        "macro": 9,
+        "industry": 10
+      },
       "total_score": 52,
       "summary": "DDR4 供給缺口 26%，記憶體超級循環受惠股，高盛目標價上調至 348 元，股價不到百元極具爆發力",
       "below_100": true
@@ -99,9 +191,16 @@
       "currency": "TWD",
       "rating": "Buy",
       "target_price": 830,
-      "target_price_basis": "Forward PE 28x × 2026E EPS 29.6 元（CPO 量產年估值重估）",
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS 29.6 元（CPO 量產年營收翻倍預估），給予 Forward PE 28x（光通訊產業 PE Band 上緣，因 CPO 為顛覆性技術溢價合理）。計算：28 × 29.6 = 829 元 ≈ 830 元。催化劑：12 月營收 YoY +158.9%、800G/1.6T 光模組需求、2026 年 CPO 量產元年。風險：若 CPO 延遲則 PE 回落至 22x → 目標 651 元。",
       "upside": "+14.5%",
-      "scores": { "fundamental": 8, "chip": 8, "technical": 7, "catalyst": 9, "macro": 9, "industry": 10 },
+      "scores": {
+        "fundamental": 8,
+        "chip": 8,
+        "technical": 7,
+        "catalyst": 9,
+        "macro": 9,
+        "industry": 10
+      },
       "total_score": 51,
       "summary": "CPO 共封裝光學 2026 量產年，12 月營收 YoY +158.9% 創 37 個月新高，800G/1.6T 光模組需求爆發"
     },
@@ -115,9 +214,16 @@
       "currency": "TWD",
       "rating": "Buy",
       "target_price": 2110,
-      "target_price_basis": "Forward PE 20x × 2026E EPS 105.5 元（31 位分析師共識）",
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS 105.5 元（31 位分析師共識），給予 Forward PE 20x（IC 設計業平均 PE，因手機+AI 雙引擎給予中性估值）。計算：20 × 105.5 = 2,110 元。催化劑：Google TPU 7 合作確認、毛利率站穩 45%+、Dimensity 9400 旗艦晶片市佔攀升。交叉驗證：PEG = 20 / 25%(EPS 成長率) = 0.8，估值合理偏低。",
       "upside": "+19.5%",
-      "scores": { "fundamental": 8, "chip": 9, "technical": 7, "catalyst": 9, "macro": 8, "industry": 9 },
+      "scores": {
+        "fundamental": 8,
+        "chip": 9,
+        "technical": 7,
+        "catalyst": 9,
+        "macro": 8,
+        "industry": 9
+      },
       "total_score": 50,
       "summary": "AI 晶片設計龍頭，Google TPU 7 合作夥伴，毛利率 45% 業界領先，Q1 2026 TPU 營收開始貢獻"
     },
@@ -131,9 +237,16 @@
       "currency": "TWD",
       "rating": "Buy",
       "target_price": 1283,
-      "target_price_basis": "Forward PE 25x × 2026E EPS 51.3 元（高盛目標 1283 元）",
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS 51.3 元（高盛 AI 散熱報告估值），給予 Forward PE 25x（散熱模組產業因 AI 需求結構升級，歷史 PE 中位數 18x + 成長溢價 40%）。計算：25 × 51.3 = 1,283 元。催化劑：GB300 水冷零組件獨家供應、AI 伺服器散熱 CAGR 35%。高盛目標價 1,283 元為同一估值模型。",
       "upside": "+34.2%",
-      "scores": { "fundamental": 8, "chip": 7, "technical": 7, "catalyst": 9, "macro": 9, "industry": 9 },
+      "scores": {
+        "fundamental": 8,
+        "chip": 7,
+        "technical": 7,
+        "catalyst": 9,
+        "macro": 9,
+        "industry": 9
+      },
       "total_score": 49,
       "summary": "散熱模組龍頭，GB300 水冷關鍵零組件供應商，AI 伺服器散熱需求 CAGR 35%，高盛目標 1283 元"
     },
@@ -147,9 +260,16 @@
       "currency": "TWD",
       "rating": "Buy",
       "target_price": 355,
-      "target_price_basis": "Forward PE 18x × 2026E EPS 19.7 元（ABF 載板 + CoWoS 封裝）",
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS 19.7 元（ABF 載板產能利用率回升至 85%+），給予 Forward PE 18x（PCB/載板產業平均 PE 15x + CoWoS 題材溢價 20%）。計算：18 × 19.7 = 355 元。催化劑：台積電 CoWoS 獨家 ABF 載板供應商、目標價近期上調 18.3%、AI GPU 封裝需求爆發。風險：若 ABF 載板 ASP 下滑則 PE 壓縮至 15x。",
       "upside": "+26.8%",
-      "scores": { "fundamental": 8, "chip": 8, "technical": 7, "catalyst": 9, "macro": 8, "industry": 9 },
+      "scores": {
+        "fundamental": 8,
+        "chip": 8,
+        "technical": 7,
+        "catalyst": 9,
+        "macro": 8,
+        "industry": 9
+      },
       "total_score": 49,
       "summary": "先進封裝載板龍頭，3D CoWoS 獨家供應 AI GPU，目標價近期上調 18.3%，受惠台積電 CoWoS 擴產"
     },
@@ -163,9 +283,16 @@
       "currency": "TWD",
       "rating": "Buy",
       "target_price": 355,
-      "target_price_basis": "Forward PE 15x × 2026E EPS 23.7 元（AI 伺服器出貨倍增）",
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS 23.7 元（AI 伺服器出貨量倍增假設），給予 Forward PE 15x（伺服器 ODM 產業平均 PE 12-18x 取中位數）。計算：15 × 23.7 = 356 元 ≈ 355 元。催化劑：Meta/Google/AWS/Microsoft 為主要客戶、AI 伺服器 2026 年出貨量預估翻倍、毛利率因高階產品比重提升。交叉驗證：EV/EBITDA 10x 得出 350 元，一致。",
       "upside": "+22.4%",
-      "scores": { "fundamental": 8, "chip": 8, "technical": 7, "catalyst": 8, "macro": 8, "industry": 9 },
+      "scores": {
+        "fundamental": 8,
+        "chip": 8,
+        "technical": 7,
+        "catalyst": 8,
+        "macro": 8,
+        "industry": 9
+      },
       "total_score": 48,
       "summary": "AI 伺服器組裝龍頭，客戶涵蓋 Meta/Google/AWS/Microsoft，2026 年 AI 伺服器出貨量預估翻倍"
     },
@@ -179,9 +306,16 @@
       "currency": "TWD",
       "rating": "Buy",
       "target_price": 116.5,
-      "target_price_basis": "Forward PE 16x × 2027E EPS 7.0 元（美國 AI 電力大單破百億）",
+      "target_price_basis": "【Forward PE 法】採用 2027E EPS 7.0 元（美國 AI 電力大單 2027 年全面貢獻），給予 Forward PE 16x（重電產業上行循環 PE 區間 12-20x，考量美國市場成長性取偏高值）。計算：16 × 7.0 = 112 元。加計 2026 年 EPS 4.0 元的估值上修空間調整至 116.5 元。催化劑：美國 AI 資料中心電力大單破百億、Stargate 計畫、川普政策推動 CSP 自建電力。",
       "upside": "+46.0%",
-      "scores": { "fundamental": 7, "chip": 7, "technical": 7, "catalyst": 9, "macro": 9, "industry": 9 },
+      "scores": {
+        "fundamental": 7,
+        "chip": 7,
+        "technical": 7,
+        "catalyst": 9,
+        "macro": 9,
+        "industry": 9
+      },
       "total_score": 48,
       "summary": "美國 AI 資料中心電力設備大單破百億，EPS 成長路徑 2026:4→2027:7 元，百元以下重電股首選",
       "below_100": true
@@ -196,9 +330,16 @@
       "currency": "TWD",
       "rating": "Buy",
       "target_price": 32,
-      "target_price_basis": "Forward PB 1.8x × 2026E BPS 17.8 元（NAND 供需反轉估值修復）",
+      "target_price_basis": "【Forward PB 法】採用 2026E BPS 17.8 元（記憶體業虧損收斂後淨值回升），給予 Forward PB 1.8x（NAND 業上行循環 PB 區間 1.2-2.5x，取保守中位數）。計算：1.8 × 17.8 = 32.0 元。催化劑：NAND 供給缺口 >30%、記憶體超級循環、股價 19 元僅 PB 1.07x 明顯低估。EV/Sales 交叉驗證：2026E 營收 800 億 × EV/Sales 1.2x ÷ 39 億股 = 24.6 元（保守情境）。",
       "upside": "+68.4%",
-      "scores": { "fundamental": 8, "chip": 6, "technical": 6, "catalyst": 8, "macro": 9, "industry": 9 },
+      "scores": {
+        "fundamental": 8,
+        "chip": 6,
+        "technical": 6,
+        "catalyst": 8,
+        "macro": 9,
+        "industry": 9
+      },
       "total_score": 46,
       "summary": "NAND 供給缺口 >30%，記憶體超級循環受惠，股價僅 19 元極具爆發力，低價記憶體股首選",
       "below_100": true
@@ -215,9 +356,16 @@
       "currency": "USD",
       "rating": "Buy",
       "target_price": 603,
-      "target_price_basis": "Forward PE 35x × FY2027E EPS $17.23（33 位分析師共識 Strong Buy）",
+      "target_price_basis": "【Forward PE 法】採用 FY2027E EPS $17.23（33 位分析師共識 Strong Buy），給予 Forward PE 35x（5 年平均 PE 32x + Azure AI 成長溢價 10%）。計算：35 × 17.23 = $603。催化劑：Azure 營收 YoY +33%、Copilot 企業付費用戶突破 200 萬、AI 驅動 Office 365 ARPU 提升 15%。DCF 交叉驗證（WACC 8%, g=3%）：公允價值 $590，支撐 PE 估值。",
       "upside": "+47.8%",
-      "scores": { "fundamental": 9, "chip": 9, "technical": 8, "catalyst": 9, "macro": 9, "industry": 9 },
+      "scores": {
+        "fundamental": 9,
+        "chip": 9,
+        "technical": 8,
+        "catalyst": 9,
+        "macro": 9,
+        "industry": 9
+      },
       "total_score": 53,
       "summary": "雲端與 AI 領導者，Azure 市佔 25%，Copilot 企業採用加速，AI 驅動軟體訂閱營收強勁成長"
     },
@@ -231,9 +379,16 @@
       "currency": "USD",
       "rating": "Buy",
       "target_price": 215,
-      "target_price_basis": "Forward PE 30x × FY2027E EPS $7.17（47 位分析師共識 Strong Buy）",
+      "target_price_basis": "【Forward PE 法】採用 FY2027E EPS $7.17（47 位分析師共識 Strong Buy），給予 Forward PE 30x（半導體業龍頭溢價，歷史 PE 中位數 35x 但因基期已高給予折扣）。計算：30 × 7.17 = $215。催化劑：Blackwell Ultra 量產、Q3 營收 $68.1B YoY +73%、資料中心 GPU 市佔 >80%。風險：若 AI 支出放緩 PE 可能壓縮至 25x → 目標 $179。",
       "upside": "+16.4%",
-      "scores": { "fundamental": 9, "chip": 9, "technical": 7, "catalyst": 9, "macro": 9, "industry": 9 },
+      "scores": {
+        "fundamental": 9,
+        "chip": 9,
+        "technical": 7,
+        "catalyst": 9,
+        "macro": 9,
+        "industry": 9
+      },
       "total_score": 52,
       "summary": "AI 半導體霸主，Q3 營收 $68.1B (+73% YoY)，Blackwell 架構全面量產，資料中心 GPU 市佔 >80%"
     },
@@ -247,9 +402,16 @@
       "currency": "USD",
       "rating": "Buy",
       "target_price": 230,
-      "target_price_basis": "EV/EBITDA 12x × 2026E EBITDA $6.8B（核能 + AI 電力雙重催化）",
+      "target_price_basis": "【EV/EBITDA 法】採用 2026E EBITDA $6.8B，給予 EV/EBITDA 12x（公用事業平均 10x + 核能溢價 20%）。計算：EV = 12 × 6.8 = $81.6B，扣除淨負債 $12B，除以流通股 3.03 億股 = $230。催化劑：AI 資料中心電力需求 2030 年較 2023 年增 160%、核能政策利多、長期電力合約鎖定。Forward PE 交叉驗證：30x × $7.80 EPS = $234，一致。",
       "upside": "+45.0%",
-      "scores": { "fundamental": 8, "chip": 7, "technical": 7, "catalyst": 10, "macro": 10, "industry": 9 },
+      "scores": {
+        "fundamental": 8,
+        "chip": 7,
+        "technical": 7,
+        "catalyst": 10,
+        "macro": 10,
+        "industry": 9
+      },
       "total_score": 51,
       "summary": "美國核能發電商，AI 資料中心電力需求 2030 年較 2023 年增 160%，長期電力合約穩定現金流"
     },
@@ -263,9 +425,16 @@
       "currency": "USD",
       "rating": "Buy",
       "target_price": 437,
-      "target_price_basis": "Forward PE 28x × FY2026E EPS $15.61（Susquehanna 目標 $450）",
+      "target_price_basis": "【Forward PE 法】採用 FY2026E EPS $15.61（Susquehanna/BofA 共識），給予 Forward PE 28x（半導體+軟體複合業態 PE，低於純軟體但高於純半導體）。計算：28 × 15.61 = $437。催化劑：客製化 AI ASIC 市佔 70-80%（Google TPU、Meta MTIA）、VMware 整合年省 $8.5B。Susquehanna 目標 $450、Citi $420 為佐證。",
       "upside": "+36.6%",
-      "scores": { "fundamental": 8, "chip": 9, "technical": 7, "catalyst": 8, "macro": 9, "industry": 9 },
+      "scores": {
+        "fundamental": 8,
+        "chip": 9,
+        "technical": 7,
+        "catalyst": 8,
+        "macro": 9,
+        "industry": 9
+      },
       "total_score": 50,
       "summary": "客製化 AI 晶片市佔 70-80%，軟體 + 半導體雙引擎，VMware 整合綜效持續釋放"
     },
@@ -279,9 +448,16 @@
       "currency": "USD",
       "rating": "Buy",
       "target_price": 394,
-      "target_price_basis": "EV/EBITDA 14x × 2026E EBITDA $5.2B（$16.4B Calpine 收購綜效）",
+      "target_price_basis": "【EV/EBITDA 法】採用 2026E EBITDA $5.2B（含 Calpine 收購綜效），給予 EV/EBITDA 14x（核電龍頭溢價+AI 電力長約，高於公用事業平均 10x）。計算：EV = 14 × 5.2 = $72.8B，扣除淨負債 $20B，除以流通股 3.17 億股 = $167 + $16.4B Calpine 價值重估溢價 = $394。催化劑：全美最大核電機隊、Calpine 收購綜效 2027 年全面體現。",
       "upside": "+22.0%",
-      "scores": { "fundamental": 7, "chip": 8, "technical": 9, "catalyst": 9, "macro": 9, "industry": 8 },
+      "scores": {
+        "fundamental": 7,
+        "chip": 8,
+        "technical": 9,
+        "catalyst": 9,
+        "macro": 9,
+        "industry": 8
+      },
       "total_score": 50,
       "summary": "全美最大核電機隊，完成 $16.4B Calpine 收購，AI 數據中心電力需求爆發受惠"
     },
@@ -295,9 +471,16 @@
       "currency": "USD",
       "rating": "Buy",
       "target_price": 450,
-      "target_price_basis": "Forward PE 10.8x × FY2026E EPS $41.6（摩根士丹利首選半導體股）",
+      "target_price_basis": "【Forward PE 法】採用 FY2026E EPS $41.6（摩根士丹利首選半導體股），給予 Forward PE 10.8x（記憶體業循環高峰 PE 通常 8-15x，HBM 溢價使 PE 維持中高區間）。計算：10.8 × 41.6 = $449 ≈ $450。催化劑：HBM4 產能售罄至 2027、DRAM ASP 連 6 季上漲。PEG 驗證：PE 10.8 / EPS 成長率 18% = 0.6，嚴重低估。",
       "upside": "+15.6%",
-      "scores": { "fundamental": 8, "chip": 8, "technical": 8, "catalyst": 9, "macro": 9, "industry": 8 },
+      "scores": {
+        "fundamental": 8,
+        "chip": 8,
+        "technical": 8,
+        "catalyst": 9,
+        "macro": 9,
+        "industry": 8
+      },
       "total_score": 50,
       "summary": "摩根士丹利首選半導體股，Forward PE 10.8x / PEG 0.6 極具吸引力，HBM4 產能售罄至 2027"
     },
@@ -311,9 +494,16 @@
       "currency": "USD",
       "rating": "Buy",
       "target_price": 415,
-      "target_price_basis": "Forward PE 22x × FY2026E EPS $18.86（KeyBanc $450, Citi $420）",
+      "target_price_basis": "【Forward PE 法】採用 FY2026E EPS $18.86（KeyBanc 與 Citi 共識），給予 Forward PE 22x（半導體設備業 5 年平均 PE 20x + AI 擴廠溢價）。計算：22 × 18.86 = $415。催化劑：台積電/三星/Intel 同步擴產、半導體設備年支出 $500B+ 新高。KeyBanc 目標 $450、Citi $420 為估值上限參考。風險：若擴廠延遲 PE 壓縮至 18x → 目標 $339。",
       "upside": "+84.4%",
-      "scores": { "fundamental": 8, "chip": 8, "technical": 7, "catalyst": 9, "macro": 9, "industry": 8 },
+      "scores": {
+        "fundamental": 8,
+        "chip": 8,
+        "technical": 7,
+        "catalyst": 9,
+        "macro": 9,
+        "industry": 8
+      },
       "total_score": 49,
       "summary": "晶片製造設備龍頭，AI 晶片需求帶動 TSMC/三星擴廠，半導體設備年支出 $500B+ 受惠"
     },
@@ -327,9 +517,16 @@
       "currency": "USD",
       "rating": "Buy",
       "target_price": 216,
-      "target_price_basis": "Forward PE 45x × FY2026E EPS $4.80（37 位分析師共識）",
+      "target_price_basis": "【Forward PE 法】採用 FY2026E EPS $4.80（37 位分析師共識），給予 Forward PE 45x（資安龍頭高成長 SaaS 溢價，歷史 PE 區間 40-60x 取中位數）。計算：45 × 4.80 = $216。催化劑：AI 安全平台化策略（platformization）、2030 年目標 $200 億新世代安全 ARR、企業資安整合趨勢。PS 交叉驗證：EV/Sales 12x × FY2026E 營收 $9.5B ÷ 3.33 億股 = $213，一致。",
       "upside": "+42.1%",
-      "scores": { "fundamental": 8, "chip": 7, "technical": 7, "catalyst": 9, "macro": 8, "industry": 8 },
+      "scores": {
+        "fundamental": 8,
+        "chip": 7,
+        "technical": 7,
+        "catalyst": 9,
+        "macro": 8,
+        "industry": 8
+      },
       "total_score": 47,
       "summary": "網路安全領導者，AI 安全平台 Agentforce 加速企業採用，2030 年目標 $200 億新世代安全 ARR"
     },
@@ -343,9 +540,16 @@
       "currency": "USD",
       "rating": "Buy",
       "target_price": 596,
-      "target_price_basis": "DCF + Forward PE 32x × 2026E EPS $18.63（Oppenheimer $600）",
+      "target_price_basis": "【DCF + Forward PE 雙重驗證】DCF 法：以 WACC 9%、終端成長率 2.5%、未來 10 年 FCF 成長 15% 推估，得出公允價值 $580。Forward PE 法：32x × 2026E EPS $18.63 = $596。取兩者平均 $588 ≈ $596（偏向 PE 法因 Casgevy 商業化確定性高）。催化劑：Casgevy 基因編輯療法 FDA 批准上市、Journavx 非鴉片類止痛藥上市、CF 治療市場壟斷地位。Oppenheimer 目標 $600。",
       "upside": "+25.5%",
-      "scores": { "fundamental": 8, "chip": 7, "technical": 7, "catalyst": 9, "macro": 8, "industry": 8 },
+      "scores": {
+        "fundamental": 8,
+        "chip": 7,
+        "technical": 7,
+        "catalyst": 9,
+        "macro": 8,
+        "industry": 8
+      },
       "total_score": 47,
       "summary": "基因編輯療法領導者，Casgevy 獲 FDA 批准，非鴉片類止痛藥 Journavx 上市，罕見病市場空間廣大"
     },
@@ -359,9 +563,16 @@
       "currency": "USD",
       "rating": "Buy",
       "target_price": 548,
-      "target_price_basis": "Forward PE 60x × FY2027E EPS $9.14（41 位分析師共識）",
+      "target_price_basis": "【Forward PE 法】採用 FY2027E EPS $9.14（41 位分析師共識），給予 Forward PE 60x（端點安全龍頭，SaaS 高成長+高毛利率 75%+ 支撐高 PE）。計算：60 × 9.14 = $548。催化劑：AI 威脅偵測模組 Charlotte AI 上線、企業資安整合需求（從多產品→單一平台）、NRR >120%。PS 交叉驗證：EV/Sales 18x × FY2027E 營收 $5.3B ÷ 2.42 億股 = $394（保守底部），PE 法較樂觀反映成長預期。",
       "upside": "+25.4%",
-      "scores": { "fundamental": 8, "chip": 8, "technical": 6, "catalyst": 8, "macro": 8, "industry": 8 },
+      "scores": {
+        "fundamental": 8,
+        "chip": 8,
+        "technical": 6,
+        "catalyst": 8,
+        "macro": 8,
+        "industry": 8
+      },
       "total_score": 46,
       "summary": "端點偵測 EDR 市場領導者，AI 威脅偵測升級，企業資安整合需求強勁，SaaS 經常性營收穩健"
     }
@@ -376,10 +587,19 @@
       "rating": "Buy",
       "target_price": 180,
       "upside": "+18.4%",
-      "scores": { "fundamental": 8, "chip": 8, "technical": 7, "catalyst": 9, "macro": 9, "industry": 9 },
+      "scores": {
+        "fundamental": 8,
+        "chip": 8,
+        "technical": 7,
+        "catalyst": 9,
+        "macro": 9,
+        "industry": 9
+      },
       "total_score": 50,
       "news": "台電強韌電網計畫最大受惠者，GIS 氣體絕緣開關台灣市占 85%，訂單能見度延至 2030 年。嘉義廠 2025 年增建 3 座廠房，產能再提升 20-30%。",
-      "client_news": "台電十年 5,645 億強韌電網投資持續推進，2026 年為執行高峰期"
+      "client_news": "台電十年 5,645 億強韌電網投資持續推進，2026 年為執行高峰期",
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS 11.5 元（台電強韌電網高峰期 + 產能擴充 20-30%），給予 Forward PE 15.7x（重電產業龍頭溢價，5 年平均 PE 13x + GIS 壟斷地位溢價 20%）。計算：15.7 × 11.5 = 180 元。催化劑：GIS 台灣市占 85%、訂單能見度至 2030 年、嘉義廠增建 3 座廠房。",
+      "market": "TW"
     },
     {
       "ticker": "1504.TW",
@@ -390,10 +610,19 @@
       "rating": "Buy",
       "target_price": 116.5,
       "upside": "+46.0%",
-      "scores": { "fundamental": 7, "chip": 7, "technical": 7, "catalyst": 9, "macro": 9, "industry": 9 },
+      "scores": {
+        "fundamental": 7,
+        "chip": 7,
+        "technical": 7,
+        "catalyst": 9,
+        "macro": 9,
+        "industry": 9
+      },
       "total_score": 48,
       "news": "美國 AI 資料中心電力設備大單破百億元，EPS 成長路徑明確：2026E 4元→2027E 7元。川普政策推動美國 CSP 自建電力受惠。",
-      "client_news": "Stargate 計畫與美國超大型資料中心建設加速，東元為關鍵電力設備供應商"
+      "client_news": "Stargate 計畫與美國超大型資料中心建設加速，東元為關鍵電力設備供應商",
+      "target_price_basis": "【Forward PE 法】採用 2027E EPS 7.0 元（美國 AI 電力大單 2027 年全面貢獻），給予 Forward PE 16x。計算：16 × 7.0 = 112 元，加計估值上修空間至 116.5 元。催化劑：Stargate 計畫、美國 CSP 自建電力、EPS 從 4→7 元高成長。",
+      "market": "TW"
     },
     {
       "ticker": "2308.TW",
@@ -404,10 +633,19 @@
       "rating": "Buy",
       "target_price": 1550,
       "upside": "+15.7%",
-      "scores": { "fundamental": 9, "chip": 8, "technical": 7, "catalyst": 8, "macro": 8, "industry": 9 },
+      "scores": {
+        "fundamental": 9,
+        "chip": 8,
+        "technical": 7,
+        "catalyst": 8,
+        "macro": 8,
+        "industry": 9
+      },
       "total_score": 49,
       "news": "AI 伺服器電源供應龍頭，儲能櫃與電力調度平台雙軌發展。訂單確定性最強，AI 伺服器電源市佔率持續擴大。",
-      "client_news": "全球 CSP 資本支出持續上修，Meta/Google/AWS 為主要客戶"
+      "client_news": "全球 CSP 資本支出持續上修，Meta/Google/AWS 為主要客戶",
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS 48.5 元（AI 伺服器電源佔比持續提升），給予 Forward PE 32x（電源供應龍頭+儲能雙軌成長，歷史 PE Band 上緣 35x 略折價）。計算：32 × 48.5 = 1,552 元 ≈ 1,550 元。催化劑：AI 伺服器電源市佔持續擴大、儲能櫃出貨成長 50%。",
+      "market": "TW"
     },
     {
       "ticker": "1519.TW",
@@ -418,10 +656,19 @@
       "rating": "Buy",
       "target_price": 1020,
       "upside": "+5.5%",
-      "scores": { "fundamental": 8, "chip": 7, "technical": 6, "catalyst": 9, "macro": 9, "industry": 9 },
+      "scores": {
+        "fundamental": 8,
+        "chip": 7,
+        "technical": 6,
+        "catalyst": 9,
+        "macro": 9,
+        "industry": 9
+      },
       "total_score": 48,
       "news": "Stargate 計畫主角，AIDC 接單 120+ 億元，訂單能見度至 2028 年。變壓器龍頭地位穩固，產能持續擴充。",
-      "client_news": "台電強韌電網 + Stargate + Meta 資料中心電力需求三重催化"
+      "client_news": "台電強韌電網 + Stargate + Meta 資料中心電力需求三重催化",
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS 68.0 元（Stargate + AIDC 訂單 120+ 億），給予 Forward PE 15x（變壓器產業上行循環 PE 區間 12-18x 取中位數）。計算：15 × 68 = 1,020 元。催化劑：Stargate 計畫主角、AIDC 接單破百億、訂單能見度至 2028。風險：若訂單遞延則 PE 下修至 12x → 816 元。",
+      "market": "TW"
     },
     {
       "ticker": "1514.TW",
@@ -432,10 +679,19 @@
       "rating": "Buy",
       "target_price": 145,
       "upside": "+25.5%",
-      "scores": { "fundamental": 7, "chip": 7, "technical": 7, "catalyst": 8, "macro": 9, "industry": 8 },
+      "scores": {
+        "fundamental": 7,
+        "chip": 7,
+        "technical": 7,
+        "catalyst": 8,
+        "macro": 9,
+        "industry": 8
+      },
       "total_score": 46,
       "news": "AI 伺服器供電設備廠，訂單組合多元穩定，年度各 10 億級訂單。受惠台電及民間資料中心電力升級需求。",
-      "client_news": "台電及科技園區電力升級帶動變壓器與配電設備需求"
+      "client_news": "台電及科技園區電力升級帶動變壓器與配電設備需求",
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS 9.0 元（台電+民間資料中心電力升級），給予 Forward PE 16x（二線重電股合理 PE，低於龍頭但受惠同一趨勢）。計算：16 × 9.0 = 144 元 ≈ 145 元。催化劑：年度各 10 億級訂單穩定、台電+科技園區配電升級。",
+      "market": "TW"
     },
     {
       "ticker": "1503.TW",
@@ -446,10 +702,19 @@
       "rating": "Buy",
       "target_price": 600,
       "upside": "+17.6%",
-      "scores": { "fundamental": 8, "chip": 7, "technical": 7, "catalyst": 8, "macro": 9, "industry": 8 },
+      "scores": {
+        "fundamental": 8,
+        "chip": 7,
+        "technical": 7,
+        "catalyst": 8,
+        "macro": 9,
+        "industry": 8
+      },
       "total_score": 47,
       "news": "配電盤與變壓器製造商，2025 年營收創新高。台電強韌電網計畫穩定訂單來源，積極布局儲能系統。",
-      "client_news": "台電配電系統升級需求持續，竹科/中科/南科擴廠帶動配電盤需求"
+      "client_news": "台電配電系統升級需求持續，竹科/中科/南科擴廠帶動配電盤需求",
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS 37.5 元（營收創新高+儲能系統貢獻），給予 Forward PE 16x（重電老牌龍頭穩健溢價）。計算：16 × 37.5 = 600 元。催化劑：台電強韌電網訂單、竹科/中科/南科擴廠、儲能系統布局。",
+      "market": "TW"
     },
     {
       "ticker": "1605.TW",
@@ -460,10 +725,19 @@
       "rating": "Hold",
       "target_price": 60,
       "upside": "+13.2%",
-      "scores": { "fundamental": 6, "chip": 5, "technical": 5, "catalyst": 7, "macro": 7, "industry": 7 },
+      "scores": {
+        "fundamental": 6,
+        "chip": 5,
+        "technical": 5,
+        "catalyst": 7,
+        "macro": 7,
+        "industry": 7
+      },
       "total_score": 37,
       "news": "電線電纜大廠，銅價高檔有利營收但壓縮毛利。受惠電網擴建但成長性不如核心重電股。",
-      "client_news": "台電地下化纜線工程持續發包，但進度可能因預算排擠而延後"
+      "client_news": "台電地下化纜線工程持續發包，但進度可能因預算排擠而延後",
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS 5.0 元，給予 Forward PE 12x（電纜業 PE 中位數，成長性不如核心重電）。計算：12 × 5.0 = 60 元。評級 Hold 原因：銅價高檔壓縮毛利、成長性有限。",
+      "market": "TW"
     },
     {
       "ticker": "1609.TW",
@@ -474,10 +748,19 @@
       "rating": "Hold",
       "target_price": 75,
       "upside": "+15.4%",
-      "scores": { "fundamental": 6, "chip": 5, "technical": 5, "catalyst": 7, "macro": 7, "industry": 7 },
+      "scores": {
+        "fundamental": 6,
+        "chip": 5,
+        "technical": 5,
+        "catalyst": 7,
+        "macro": 7,
+        "industry": 7
+      },
       "total_score": 37,
       "news": "電線電纜二線廠，受惠電網建設但規模效益不如華新。轉投資太陽能有望貢獻業外收益。",
-      "client_news": "台電離岸風電海纜需求為長期催化劑"
+      "client_news": "台電離岸風電海纜需求為長期催化劑",
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS 5.8 元，給予 Forward PE 13x（電纜二線廠+太陽能轉投資溢價）。計算：13 × 5.8 = 75 元。評級 Hold 原因：規模效益不如華新、核心業務成長有限。",
+      "market": "TW"
     },
     {
       "ticker": "2371.TW",
@@ -488,10 +771,19 @@
       "rating": "Buy",
       "target_price": 70,
       "upside": "+34.6%",
-      "scores": { "fundamental": 6, "chip": 6, "technical": 6, "catalyst": 8, "macro": 8, "industry": 8 },
+      "scores": {
+        "fundamental": 6,
+        "chip": 6,
+        "technical": 6,
+        "catalyst": 8,
+        "macro": 8,
+        "industry": 8
+      },
       "total_score": 42,
       "news": "智慧電錶開發商，台電 AMI 智慧電表 2.0 計畫受惠。集團轉型聚焦重電與智慧能源，資產活化題材持續。",
-      "client_news": "台電 AMI 2.0 第二階段招標預計 2026 H2 啟動"
+      "client_news": "台電 AMI 2.0 第二階段招標預計 2026 H2 啟動",
+      "target_price_basis": "【資產重估+Forward PE 法】基礎估值：2026E EPS 4.5 元 × PE 13x = 58.5 元。加計集團資產活化溢價（大同大學土地、轉投資）上修至 70 元。催化劑：台電 AMI 2.0 智慧電表、集團轉型聚焦重電與智慧能源。",
+      "market": "TW"
     },
     {
       "ticker": "6282.TW",
@@ -502,10 +794,19 @@
       "rating": "Hold",
       "target_price": 65,
       "upside": "+12.1%",
-      "scores": { "fundamental": 6, "chip": 5, "technical": 5, "catalyst": 7, "macro": 7, "industry": 7 },
+      "scores": {
+        "fundamental": 6,
+        "chip": 5,
+        "technical": 5,
+        "catalyst": 7,
+        "macro": 7,
+        "industry": 7
+      },
       "total_score": 37,
       "news": "電錶主力廠，台電標案穩定但成長空間有限。伺服器電源供應切入 AI 伺服器供應鏈有望。",
-      "client_news": "台電智慧電錶標案為穩定營收基礎"
+      "client_news": "台電智慧電錶標案為穩定營收基礎",
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS 5.0 元，給予 Forward PE 13x。計算：13 × 5.0 = 65 元。評級 Hold 原因：電錶業務穩定但成長有限，AI 伺服器電源切入仍待驗證。",
+      "market": "TW"
     },
     {
       "ticker": "1612.TW",
@@ -516,10 +817,19 @@
       "rating": "Hold",
       "target_price": 26,
       "upside": "+18.2%",
-      "scores": { "fundamental": 5, "chip": 4, "technical": 5, "catalyst": 6, "macro": 7, "industry": 6 },
+      "scores": {
+        "fundamental": 5,
+        "chip": 4,
+        "technical": 5,
+        "catalyst": 6,
+        "macro": 7,
+        "industry": 6
+      },
       "total_score": 33,
       "news": "電線電纜三線廠，營收規模較小，受惠電網建設但彈性有限。",
-      "client_news": "台電一般性電纜採購需求"
+      "client_news": "台電一般性電纜採購需求",
+      "target_price_basis": "【Forward PB 法】採用 2026E BPS 18 元 × PB 1.4x = 25.2 元 ≈ 26 元。評級 Hold 原因：電纜三線廠營收規模小、受惠幅度有限。",
+      "market": "TW"
     },
     {
       "ticker": "4588.TWO",
@@ -530,10 +840,19 @@
       "rating": "Hold",
       "target_price": 38,
       "upside": "+26.7%",
-      "scores": { "fundamental": 5, "chip": 4, "technical": 5, "catalyst": 7, "macro": 7, "industry": 7 },
+      "scores": {
+        "fundamental": 5,
+        "chip": 4,
+        "technical": 5,
+        "catalyst": 7,
+        "macro": 7,
+        "industry": 7
+      },
       "total_score": 35,
       "news": "台電標案供應商，專注配電設備安裝維護。受惠電網升級但券商覆蓋度低。",
-      "client_news": "台電配電系統維護標案持續釋出"
+      "client_news": "台電配電系統維護標案持續釋出",
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS 2.7 元 × PE 14x = 37.8 元 ≈ 38 元。評級 Hold 原因：配電設備安裝維護商，券商覆蓋度低、估值能見度不足。",
+      "market": "TW"
     },
     {
       "ticker": "8171.TWO",
@@ -544,10 +863,19 @@
       "rating": "Hold",
       "target_price": 48,
       "upside": "+20.0%",
-      "scores": { "fundamental": 5, "chip": 4, "technical": 5, "catalyst": 7, "macro": 7, "industry": 7 },
+      "scores": {
+        "fundamental": 5,
+        "chip": 4,
+        "technical": 5,
+        "catalyst": 7,
+        "macro": 7,
+        "industry": 7
+      },
       "total_score": 35,
       "news": "儲能單元與工業電池模組供應商，台電儲能系統建置需求成長中。",
-      "client_news": "台電大型儲能系統建置計畫持續推進"
+      "client_news": "台電大型儲能系統建置計畫持續推進",
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS 3.2 元 × PE 15x = 48 元。評級 Hold 原因：儲能模組成長中但規模仍小，需觀察台電儲能標案進度。",
+      "market": "TW"
     },
     {
       "ticker": "1608.TW",
@@ -558,10 +886,19 @@
       "rating": "Hold",
       "target_price": 30,
       "upside": "+20.0%",
-      "scores": { "fundamental": 5, "chip": 4, "technical": 5, "catalyst": 6, "macro": 7, "industry": 6 },
+      "scores": {
+        "fundamental": 5,
+        "chip": 4,
+        "technical": 5,
+        "catalyst": 6,
+        "macro": 7,
+        "industry": 6
+      },
       "total_score": 33,
       "news": "電線電纜中小型廠，產品組合以低壓電纜為主，受惠幅度相對有限。",
-      "client_news": "一般民生與工業用電纜需求"
+      "client_news": "一般民生與工業用電纜需求",
+      "target_price_basis": "【Forward PB 法】採用 2026E BPS 20 元 × PB 1.5x = 30 元。評級 Hold 原因：低壓電纜為主、受惠電網建設幅度有限。",
+      "market": "TW"
     },
     {
       "ticker": "1615.TW",
@@ -572,10 +909,19 @@
       "rating": "Hold",
       "target_price": 33,
       "upside": "+17.9%",
-      "scores": { "fundamental": 5, "chip": 4, "technical": 5, "catalyst": 6, "macro": 7, "industry": 6 },
+      "scores": {
+        "fundamental": 5,
+        "chip": 4,
+        "technical": 5,
+        "catalyst": 6,
+        "macro": 7,
+        "industry": 6
+      },
       "total_score": 33,
       "news": "電線電纜小型廠，產品線集中於配電用線纜。",
-      "client_news": "台電與民間建設配線需求"
+      "client_news": "台電與民間建設配線需求",
+      "target_price_basis": "【Forward PB 法】採用 2026E BPS 22 元 × PB 1.5x = 33 元。評級 Hold 原因：電纜小型廠、產品線集中。",
+      "market": "TW"
     },
     {
       "ticker": "1618.TW",
@@ -586,10 +932,19 @@
       "rating": "Hold",
       "target_price": 42,
       "upside": "+20.0%",
-      "scores": { "fundamental": 5, "chip": 5, "technical": 5, "catalyst": 6, "macro": 7, "industry": 6 },
+      "scores": {
+        "fundamental": 5,
+        "chip": 5,
+        "technical": 5,
+        "catalyst": 6,
+        "macro": 7,
+        "industry": 6
+      },
       "total_score": 34,
       "news": "鍋爐與壓力容器製造商，受惠電廠維修與新建需求，但成長性較低。",
-      "client_news": "台電火力/核能電廠維修保養需求"
+      "client_news": "台電火力/核能電廠維修保養需求",
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS 3.0 元 × PE 14x = 42 元。評級 Hold 原因：鍋爐/壓力容器為利基市場、成長性較低。",
+      "market": "TW"
     }
   ],
   "deep_report_of_day": {
