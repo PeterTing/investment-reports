@@ -3,19 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>投資分析報告中心 | 每日精選 Top 10</title>
+  <title>投資分析報告中心 | TW Top 10 + US Top 10</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      width: 100%;
-      height: 100%;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans TC', sans-serif;
       background: linear-gradient(135deg, #0f172a 0%, #1a202c 100%);
@@ -28,181 +19,78 @@
     .header {
       background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
       border-bottom: 2px solid #3b82f6;
-      padding: 3rem 1.5rem;
+      padding: 2.5rem 1.5rem;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
-
-    .header h1 {
-      font-size: 2rem;
-      color: #f8fafc;
-      margin-bottom: 0.5rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-    }
-
-    @media (max-width: 640px) {
-      .header h1 {
-        font-size: 1.5rem;
-      }
-    }
-
-    .header p {
-      color: #94a3b8;
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
-    }
-
-    .header .subtitle {
-      color: #60a5fa;
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
+    .header h1 { font-size: 2rem; color: #f8fafc; margin-bottom: 0.5rem; font-weight: 700; }
+    @media (max-width: 640px) { .header h1 { font-size: 1.5rem; } }
+    .header p { color: #94a3b8; font-size: 0.95rem; margin-bottom: 0.8rem; }
+    .header .subtitle { color: #60a5fa; font-size: 0.9rem; font-weight: 500; }
+    .header .update-time { color: #64748b; font-size: 0.8rem; margin-top: 0.5rem; }
 
     /* === CONTAINER === */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 1.5rem 1rem;
-      }
-    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+    @media (max-width: 768px) { .container { padding: 1.5rem 1rem; } }
 
     /* === STATS BAR === */
     .stats-bar {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 1rem;
-      margin-bottom: 2.5rem;
-      padding: 1.5rem;
-      background: rgba(30, 41, 59, 0.5);
-      border: 1px solid #334155;
-      border-radius: 12px;
-      backdrop-filter: blur(4px);
-    }
-
-    .stat-item {
-      text-align: center;
-      padding: 1rem 0;
-    }
-
-    .stat-value {
-      font-size: 1.8rem;
-      color: #60a5fa;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-    }
-
-    .stat-label {
-      font-size: 0.85rem;
-      color: #94a3b8;
-      font-weight: 500;
-    }
-
-    /* === CALENDAR NAVIGATION === */
-    .calendar-nav {
-      background: rgba(30, 41, 59, 0.5);
-      border: 1px solid #334155;
-      border-radius: 12px;
-      padding: 1.5rem;
       margin-bottom: 2rem;
-      backdrop-filter: blur(4px);
+      padding: 1.2rem;
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid #334155;
+      border-radius: 12px;
     }
+    .stat-item { text-align: center; padding: 0.8rem 0; }
+    .stat-value { font-size: 1.6rem; color: #60a5fa; font-weight: 700; }
+    .stat-label { font-size: 0.8rem; color: #94a3b8; font-weight: 500; margin-top: 0.2rem; }
 
-    .calendar-nav h3 {
-      color: #f8fafc;
-      margin-bottom: 1rem;
+    /* === TAB NAV === */
+    .tab-nav {
+      display: flex;
+      gap: 0;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #334155;
+    }
+    .tab-btn {
+      flex: 1;
+      padding: 1rem;
+      background: rgba(30, 41, 59, 0.5);
+      border: none;
+      color: #94a3b8;
       font-size: 1rem;
       font-weight: 600;
-    }
-
-    .calendar-controls {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .calendar-btn {
-      background: rgba(59, 130, 246, 0.1);
-      border: 1px solid #3b82f6;
-      color: #60a5fa;
-      padding: 0.6rem 1rem;
-      border-radius: 8px;
       cursor: pointer;
-      font-size: 0.85rem;
-      font-weight: 500;
-      transition: all 0.2s ease;
+      transition: all 0.3s ease;
+      font-family: inherit;
     }
+    .tab-btn:hover { background: rgba(59, 130, 246, 0.1); color: #e2e8f0; }
+    .tab-btn.active { background: rgba(59, 130, 246, 0.2); color: #60a5fa; border-bottom: 3px solid #3b82f6; }
+    .tab-btn .tab-count { font-size: 0.75rem; background: rgba(59, 130, 246, 0.3); padding: 0.15rem 0.5rem; border-radius: 10px; margin-left: 0.5rem; }
 
-    .calendar-btn:hover {
-      background: rgba(59, 130, 246, 0.2);
-      border-color: #60a5fa;
-    }
-
-    .calendar-btn.active {
-      background: #3b82f6;
-      color: #fff;
-      border-color: #3b82f6;
-    }
-
-    .date-picker {
-      background: #1e293b;
-      border: 1px solid #334155;
-      color: #e2e8f0;
-      padding: 0.6rem;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      cursor: pointer;
-    }
-
-    .date-picker:focus {
-      outline: none;
-      border-color: #60a5fa;
-      box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
-    }
-
-    .current-date {
-      color: #94a3b8;
-      font-size: 0.9rem;
-      margin-left: 0.5rem;
-    }
-
-    /* === SECTION TITLES === */
+    /* === SECTION === */
+    .section { display: none; }
+    .section.active { display: block; }
     .section-title {
-      font-size: 1.3rem;
-      color: #f8fafc;
-      margin: 2rem 0 1.5rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 2px solid #3b82f6;
+      font-size: 1.3rem; color: #f8fafc; margin: 0 0 0.5rem;
+      padding-bottom: 0.75rem; border-bottom: 2px solid #3b82f6;
       font-weight: 700;
-      letter-spacing: -0.5px;
     }
-
-    .section-subtitle {
-      color: #94a3b8;
-      font-size: 0.9rem;
-      margin: -1rem 0 1.5rem;
-      font-weight: 400;
-    }
+    .section-subtitle { color: #94a3b8; font-size: 0.85rem; margin-bottom: 1.5rem; }
 
     /* === PICK CARDS === */
     .picks-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
       gap: 1.5rem;
       margin-bottom: 2rem;
     }
-
-    @media (max-width: 768px) {
-      .picks-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+    @media (max-width: 768px) { .picks-grid { grid-template-columns: 1fr; } }
 
     .pick-card {
       background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.8));
@@ -210,808 +98,431 @@
       border-radius: 12px;
       padding: 1.5rem;
       transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
       position: relative;
       overflow: hidden;
+      animation: fadeIn 0.4s ease forwards;
     }
-
     .pick-card::before {
       content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
       background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-      opacity: 0;
-      transition: opacity 0.3s ease;
+      opacity: 0; transition: opacity 0.3s ease;
     }
-
-    .pick-card:hover {
-      transform: translateY(-4px);
-      border-color: #3b82f6;
-      box-shadow: 0 12px 24px rgba(59, 130, 246, 0.15);
-    }
-
-    .pick-card:hover::before {
-      opacity: 1;
-    }
+    .pick-card:hover { transform: translateY(-4px); border-color: #3b82f6; box-shadow: 0 12px 24px rgba(59, 130, 246, 0.15); }
+    .pick-card:hover::before { opacity: 1; }
 
     .pick-rank {
-      display: inline-block;
+      display: inline-flex; align-items: center; justify-content: center;
       background: linear-gradient(135deg, #f59e0b, #fbbf24);
-      color: #000;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
+      color: #000; width: 30px; height: 30px; border-radius: 50%;
+      font-weight: 700; font-size: 0.85rem; margin-bottom: 0.8rem;
     }
+    .pick-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; gap: 0.5rem; }
+    .pick-ticker { font-size: 0.8rem; color: #60a5fa; font-weight: 700; letter-spacing: 0.05em; }
+    .pick-name { font-size: 1.15rem; color: #f1f5f9; font-weight: 700; margin: 0.2rem 0; line-height: 1.3; }
+    .pick-name-en { font-size: 0.7rem; color: #94a3b8; }
 
-    .pick-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 1rem;
-      gap: 1rem;
-    }
-
-    .pick-ticker {
-      font-size: 0.8rem;
-      color: #60a5fa;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    .pick-name {
-      font-size: 1.2rem;
-      color: #f1f5f9;
-      font-weight: 700;
-      margin: 0.3rem 0;
-      line-height: 1.3;
-    }
-
-    .pick-name-en {
-      font-size: 0.75rem;
-      color: #94a3b8;
-      font-weight: 400;
-      margin-top: 0.2rem;
-    }
-
-    .pick-badges {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      margin-bottom: 1rem;
-    }
-
-    .badge {
-      padding: 0.35rem 0.7rem;
-      border-radius: 6px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      white-space: nowrap;
-    }
-
-    .badge-market {
-      background: rgba(96, 165, 250, 0.2);
-      color: #60a5fa;
-      border: 1px solid #3b82f6;
-    }
-
-    .badge-rating-buy {
-      background: rgba(16, 185, 129, 0.2);
-      color: #6ee7b7;
-      border: 1px solid #10b981;
-    }
-
-    .badge-rating-hold {
-      background: rgba(245, 158, 11, 0.2);
-      color: #fbbf24;
-      border: 1px solid #f59e0b;
-    }
-
-    .badge-rating-sell {
-      background: rgba(239, 68, 68, 0.2);
-      color: #fca5a5;
-      border: 1px solid #ef4444;
-    }
+    .pick-badges { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.8rem; }
+    .badge { padding: 0.3rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 600; white-space: nowrap; }
+    .badge-sector { background: rgba(139, 92, 246, 0.15); color: #a78bfa; border: 1px solid rgba(139, 92, 246, 0.3); }
+    .badge-rating-buy { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid #10b981; }
+    .badge-rating-hold { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid #f59e0b; }
+    .badge-rating-sell { background: rgba(239, 68, 68, 0.2); color: #fca5a5; border: 1px solid #ef4444; }
 
     .pick-price {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
-      border-bottom: 1px solid #334155;
-      margin-bottom: 1rem;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0.8rem 0; border-bottom: 1px solid #334155; margin-bottom: 0.8rem;
     }
+    .price-label { font-size: 0.72rem; color: #94a3b8; margin-bottom: 0.15rem; }
+    .price-value { font-size: 1.3rem; color: #f1f5f9; font-weight: 700; }
+    .price-upside { text-align: right; }
+    .upside-value { font-size: 1.05rem; font-weight: 700; }
+    .upside-positive { color: #6ee7b7; }
+    .upside-negative { color: #fca5a5; }
+    .upside-label { font-size: 0.72rem; color: #94a3b8; }
 
-    .price-current {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .price-label {
-      font-size: 0.75rem;
-      color: #94a3b8;
-      margin-bottom: 0.2rem;
-    }
-
-    .price-value {
-      font-size: 1.4rem;
-      color: #f1f5f9;
-      font-weight: 700;
-    }
-
-    .price-upside {
-      text-align: right;
-    }
-
-    .upside-value {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 0.2rem;
-    }
-
-    .upside-positive {
-      color: #6ee7b7;
-    }
-
-    .upside-negative {
-      color: #fca5a5;
-    }
-
-    .upside-label {
-      font-size: 0.75rem;
-      color: #94a3b8;
-    }
-
-    /* === SCORE BREAKDOWN === */
-    .score-breakdown {
-      margin-bottom: 1rem;
-    }
-
-    .score-breakdown-title {
-      font-size: 0.85rem;
-      color: #94a3b8;
-      font-weight: 600;
+    /* === METRICS ROW === */
+    .metrics-row {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;
       margin-bottom: 0.8rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
     }
-
-    .total-score {
-      background: rgba(59, 130, 246, 0.2);
-      color: #60a5fa;
-      padding: 0.2rem 0.6rem;
-      border-radius: 4px;
-      font-size: 0.8rem;
-      font-weight: 700;
+    .metric-item {
+      background: rgba(30, 41, 59, 0.5); padding: 0.5rem;
+      border-radius: 6px; text-align: center;
     }
+    .metric-label { font-size: 0.65rem; color: #94a3b8; }
+    .metric-val { font-size: 0.85rem; color: #60a5fa; font-weight: 700; }
 
-    .scores-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.8rem;
-    }
-
-    .score-item {
-      background: rgba(30, 41, 59, 0.5);
-      padding: 0.7rem;
-      border-radius: 8px;
+    /* === METHODOLOGY === */
+    .pick-methodology {
+      font-size: 0.82rem; color: #cbd5e1; line-height: 1.55;
+      margin-bottom: 0.8rem; padding: 0.7rem;
+      background: rgba(51, 65, 85, 0.25); border-radius: 8px;
       border-left: 3px solid #3b82f6;
     }
+    .pick-methodology strong { color: #60a5fa; }
 
-    .score-name {
-      font-size: 0.75rem;
-      color: #94a3b8;
-      font-weight: 500;
-      margin-bottom: 0.3rem;
-    }
-
-    .score-bar {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .score-bar-bg {
-      flex: 1;
-      height: 4px;
-      background: #334155;
-      border-radius: 2px;
-      overflow: hidden;
-    }
-
-    .score-bar-fill {
-      height: 100%;
-      background: linear-gradient(90deg, #3b82f6, #60a5fa);
-      border-radius: 2px;
-    }
-
-    .score-number {
-      font-size: 0.8rem;
-      color: #60a5fa;
-      font-weight: 700;
-      min-width: 20px;
-      text-align: right;
-    }
-
-    .pick-summary {
-      font-size: 0.85rem;
-      color: #cbd5e1;
-      line-height: 1.5;
-      margin-bottom: 1rem;
-      padding: 0.8rem;
-      background: rgba(51, 65, 85, 0.2);
-      border-radius: 8px;
-      border-left: 2px solid #3b82f6;
-    }
-
+    /* === REPORT LINK === */
     .pick-report-link {
-      display: inline-block;
-      background: linear-gradient(135deg, #3b82f6, #2563eb);
-      color: #fff;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 600;
-      transition: all 0.2s ease;
-      border: 1px solid #3b82f6;
+      display: inline-block; background: linear-gradient(135deg, #3b82f6, #2563eb);
+      color: #fff; padding: 0.5rem 1rem; border-radius: 8px;
+      text-decoration: none; font-size: 0.82rem; font-weight: 600;
+      transition: all 0.2s ease; border: 1px solid #3b82f6;
     }
+    .pick-report-link:hover { background: linear-gradient(135deg, #2563eb, #1d4ed8); transform: translateX(2px); }
 
-    .pick-report-link:hover {
-      background: linear-gradient(135deg, #2563eb, #1d4ed8);
-      transform: translateX(2px);
+    /* === ARCHIVE === */
+    .archive-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem; margin-bottom: 2rem;
     }
-
-    /* === REPORTS GRID === */
-    .reports-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.2rem;
-      margin-bottom: 2rem;
+    .archive-card {
+      background: rgba(30, 41, 59, 0.5); border: 1px solid #334155;
+      border-radius: 8px; padding: 1rem; transition: all 0.2s ease;
+      text-decoration: none; color: #e2e8f0;
     }
-
-    @media (max-width: 768px) {
-      .reports-grid {
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      }
-    }
-
-    .report-card {
-      background: linear-gradient(135deg, rgba(30, 41, 59, 0.6), rgba(15, 23, 42, 0.6));
-      border: 1px solid #334155;
-      border-radius: 12px;
-      padding: 1.2rem;
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .report-card:hover {
-      transform: translateY(-3px);
-      border-color: #3b82f6;
-      box-shadow: 0 10px 20px rgba(59, 130, 246, 0.1);
-    }
-
-    .report-ticker {
-      font-size: 0.8rem;
-      color: #60a5fa;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-bottom: 0.3rem;
-    }
-
-    .report-name {
-      font-size: 1.1rem;
-      color: #f1f5f9;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      line-height: 1.3;
-    }
-
-    .report-date {
-      font-size: 0.8rem;
-      color: #94a3b8;
-      margin-bottom: 0.8rem;
-      padding-bottom: 0.8rem;
-      border-bottom: 1px solid #334155;
-    }
-
-    .report-rating {
-      display: inline-block;
-      padding: 0.4rem 0.8rem;
-      border-radius: 6px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      margin-bottom: auto;
-    }
-
-    .report-rating-buy {
-      background: rgba(16, 185, 129, 0.2);
-      color: #6ee7b7;
-      border: 1px solid #10b981;
-    }
-
-    .report-rating-hold {
-      background: rgba(245, 158, 11, 0.2);
-      color: #fbbf24;
-      border: 1px solid #f59e0b;
-    }
-
-    .report-rating-sell {
-      background: rgba(239, 68, 68, 0.2);
-      color: #fca5a5;
-      border: 1px solid #ef4444;
-    }
-
-    /* === EMPTY STATE === */
-    .empty-state {
-      background: rgba(30, 41, 59, 0.5);
-      border: 1px solid #334155;
-      border-radius: 12px;
-      padding: 2rem;
-      text-align: center;
-      color: #94a3b8;
-    }
-
-    .empty-state-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      opacity: 0.5;
-    }
-
-    .empty-state-text {
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
+    .archive-card:hover { border-color: #3b82f6; background: rgba(30, 41, 59, 0.7); }
+    .archive-ticker { font-size: 0.8rem; color: #60a5fa; font-weight: 700; margin-bottom: 0.2rem; }
+    .archive-title { font-size: 0.9rem; color: #f1f5f9; font-weight: 600; margin-bottom: 0.3rem; }
+    .archive-date { font-size: 0.75rem; color: #94a3b8; }
+    .archive-rating { display: inline-block; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; margin-top: 0.3rem; }
 
     /* === FOOTER === */
     .footer {
-      text-align: center;
-      padding: 2rem;
-      color: #475569;
-      font-size: 0.8rem;
-      border-top: 1px solid #1e293b;
-      margin-top: 3rem;
+      text-align: center; padding: 2rem; color: #475569;
+      font-size: 0.78rem; border-top: 1px solid #1e293b; margin-top: 3rem;
     }
+    .footer p { margin: 0.3rem 0; line-height: 1.5; }
 
-    .footer p {
-      margin: 0.3rem 0;
-      line-height: 1.5;
-    }
+    /* === ANIMATION === */
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-    /* === ARCHIVE SECTION === */
-    .archive-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .archive-card {
-      background: rgba(30, 41, 59, 0.5);
-      border: 1px solid #334155;
-      border-radius: 8px;
-      padding: 1rem;
-      transition: all 0.2s ease;
-      text-decoration: none;
-      color: #e2e8f0;
-    }
-
-    .archive-card:hover {
-      border-color: #3b82f6;
-      background: rgba(30, 41, 59, 0.7);
-    }
-
-    .archive-ticker {
-      font-size: 0.85rem;
-      color: #60a5fa;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-    }
-
-    .archive-title {
-      font-size: 0.95rem;
-      color: #f1f5f9;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .archive-date {
-      font-size: 0.8rem;
-      color: #94a3b8;
-    }
-
-    /* === RESPONSIVE === */
     @media (max-width: 640px) {
-      .stats-bar {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .stat-value {
-        font-size: 1.5rem;
-      }
-
-      .stat-label {
-        font-size: 0.75rem;
-      }
-
-      .calendar-controls {
-        flex-direction: column;
-        gap: 0.8rem;
-      }
-
-      .calendar-btn, .date-picker {
-        width: 100%;
-      }
-
-      .section-title {
-        font-size: 1.1rem;
-      }
-
-      .pick-header {
-        flex-wrap: wrap;
-      }
-
-      .pick-price {
-        flex-wrap: wrap;
-      }
-
-      .price-upside {
-        width: 100%;
-        text-align: left;
-        margin-top: 0.5rem;
-      }
+      .stats-bar { grid-template-columns: repeat(2, 1fr); }
+      .stat-value { font-size: 1.3rem; }
+      .tab-btn { font-size: 0.85rem; padding: 0.8rem 0.5rem; }
+      .pick-price { flex-wrap: wrap; }
+      .price-upside { width: 100%; text-align: left; margin-top: 0.4rem; }
+      .metrics-row { grid-template-columns: repeat(3, 1fr); }
     }
-
-    /* === ANIMATIONS === */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .pick-card, .report-card {
-      animation: fadeIn 0.4s ease forwards;
-    }
-
-    .pick-card:nth-child(1) { animation-delay: 0.05s; }
-    .pick-card:nth-child(2) { animation-delay: 0.1s; }
-    .pick-card:nth-child(3) { animation-delay: 0.15s; }
-    .pick-card:nth-child(4) { animation-delay: 0.2s; }
-    .pick-card:nth-child(5) { animation-delay: 0.25s; }
   </style>
 </head>
 <body>
   <div class="header">
     <h1>投資分析報告中心</h1>
-    <p>每日精選 Top 10 投資標的 | 台股 + 美股 | AI 驅動六維度分析</p>
-    <div class="subtitle">數據基期：2026/03 | CFA Buy-Side Framework</div>
+    <p>精選 Top 10 投資標的 | 台股 + 美股 | CFA Buy-Side Framework</p>
+    <div class="subtitle">數據基期：2026/03/11 | 評級規則：目標價上漲 >15% = Buy，±15% = Hold，<-15% = Sell</div>
+    <div class="update-time">最後更新：2026-03-11</div>
   </div>
 
   <div class="container">
-    <!-- === STATS BAR === -->
+    <!-- STATS -->
     <div class="stats-bar">
-      <div class="stat-item">
-        <div class="stat-value" id="totalReports">6</div>
-        <div class="stat-label">深度研究報告</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-value" id="avgScore">-</div>
-        <div class="stat-label">平均評分</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-value" id="marketDistTw">-</div>
-        <div class="stat-label">台股占比</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-value" id="buyCount">-</div>
-        <div class="stat-label">買進評級</div>
-      </div>
+      <div class="stat-item"><div class="stat-value">20</div><div class="stat-label">精選標的</div></div>
+      <div class="stat-item"><div class="stat-value">17</div><div class="stat-label">Buy 評級</div></div>
+      <div class="stat-item"><div class="stat-value">7</div><div class="stat-label">深度報告</div></div>
+      <div class="stat-item"><div class="stat-value">10+10</div><div class="stat-label">台股+美股</div></div>
     </div>
 
-    <!-- === CALENDAR NAVIGATION === -->
-    <div class="calendar-nav">
-      <h3>📅 依日期瀏覽精選</h3>
-      <div class="calendar-controls">
-        <button class="calendar-btn active" onclick="loadPicksByDate('today')">今日</button>
-        <button class="calendar-btn" onclick="loadPicksByDate('yesterday')">昨日</button>
-        <button class="calendar-btn" onclick="loadPicksByDate('week')">本週</button>
-        <input type="date" class="date-picker" id="dateInput" onchange="loadPicksByDate('custom')">
-        <span class="current-date" id="currentDate">Loading...</span>
-      </div>
+    <!-- TAB NAV -->
+    <div class="tab-nav">
+      <button class="tab-btn active" onclick="switchTab('tw')">🇹🇼 台股 Top 10 <span class="tab-count">10</span></button>
+      <button class="tab-btn" onclick="switchTab('us')">🇺🇸 美股 Top 10 <span class="tab-count">10</span></button>
+      <button class="tab-btn" onclick="switchTab('archive')">📚 報告存檔 <span class="tab-count">7</span></button>
     </div>
 
-    <!-- === DAILY TOP 10 PICKS === -->
-    <div class="section-title">🎯 今日精選 Top 10</div>
-    <div class="section-subtitle">六維度評分：基本面、籌碼面、技術面、消息面、總經、產業展望</div>
-    <div class="picks-grid" id="picksContainer">
-      <div class="empty-state">
-        <div class="empty-state-icon">📊</div>
-        <div class="empty-state-text">載入中或未有今日精選數據...</div>
-      </div>
+    <!-- ===== TW SECTION ===== -->
+    <div class="section active" id="section-tw">
+      <div class="section-title">🇹🇼 台股精選 Top 10</div>
+      <div class="section-subtitle">涵蓋 AI/半導體、重電、伺服器、UPS 等高成長板塊 | Forward PE + DCF + Gordon Growth 三角交叉估值</div>
+      <div class="picks-grid" id="tw-picks"></div>
     </div>
 
-    <!-- === DEEP RESEARCH REPORTS === -->
-    <div class="section-title" style="margin-top: 3rem;">📈 深度研究報告</div>
-    <div class="section-subtitle">CFA 框架深度分析 | 歷史 PE 軌跡 | Bottom-Up EPS | 情境模擬</div>
-    <div class="reports-grid" id="reportsContainer">
-      <div class="empty-state">
-        <div class="empty-state-icon">📄</div>
-        <div class="empty-state-text">載入中...</div>
-      </div>
+    <!-- ===== US SECTION ===== -->
+    <div class="section" id="section-us">
+      <div class="section-title">🇺🇸 美股精選 Top 10</div>
+      <div class="section-subtitle">聚焦資金流入板塊：AI/雲端、半導體、能源基建、醫療、金融科技 | 法人共識 + Forward PE 估值</div>
+      <div class="picks-grid" id="us-picks"></div>
     </div>
 
-    <!-- === ARCHIVE SECTION === -->
-    <div class="section-title" style="margin-top: 3rem;">📚 報告存檔</div>
-    <div class="section-subtitle">過往深度分析報告檔案庫</div>
-    <div class="archive-grid" id="archiveContainer">
-      <!-- Dynamically populated -->
+    <!-- ===== ARCHIVE SECTION ===== -->
+    <div class="section" id="section-archive">
+      <div class="section-title">📚 深度研究報告存檔</div>
+      <div class="section-subtitle">CFA 框架深度分析 | 28 項審計清單驗證 | 歷史 PE 軌跡 | Bottom-Up EPS</div>
+      <div class="archive-grid" id="archive-grid"></div>
     </div>
-
   </div>
 
   <div class="footer">
-    <p>💡 本報告僅供學術研究與參考，不構成任何有價證券之買賣邀約。投資有風險，入市須謹慎。</p>
-    <p style="margin-top: 0.8rem;">Generated by Investment Analysis Agent | CFA Buy-Side Framework | 2026</p>
+    <p>⚠️ 本報告僅供學術研究與參考，不構成任何有價證券之買賣邀約。投資有風險，入市須謹慎。</p>
+    <p>評級規則：目標價潛在報酬 > +15% = Buy | ±15% = Hold | < -15% = Sell</p>
+    <p style="margin-top: 0.5rem;">Generated by Investment Analysis Agent | CFA Buy-Side Framework | 2026</p>
   </div>
 
   <script>
-    // ===== DATA & CONFIG =====
+    // ===== TW TOP 10 DATA =====
+    const TW_PICKS = [
+      {
+        rank: 1, ticker: '2330.TW', name: '台積電', nameEn: 'TSMC',
+        sector: 'AI/半導體', price: 1935, currency: 'TWD', target: 2297,
+        upside: 18.7, rating: 'Buy',
+        fpe: 17.6, roe: 35.1, pb: 9.3,
+        methodology: '目標價 NT$2,297 以 Forward PE 21x 乘以 2026E EPS NT$109.7 推算。21x 略高於歷史 5 年均值 18x，反映 AI 晶片需求爆發（CoWoS 產能倍增）與 N3/N2 先進製程壟斷地位。56 位法人共識目標均價支撐。',
+        report: '2330-2026-03-06.html'
+      },
+      {
+        rank: 2, ticker: '1513.TW', name: '中興電工', nameEn: 'Chung-Hsin Electric',
+        sector: '重電/綠能', price: 157.5, currency: 'TWD', target: 197.4,
+        upside: 25.3, rating: 'Buy',
+        fpe: 16.4, roe: 19.8, pb: 4.0,
+        methodology: '目標價 NT$197 以 Forward PE 20.5x 乘以 2026E EPS NT$9.63 推算。重電產業迎來超級循環，台電強韌電網計畫 2025-2032 年投入超過 NT$5,645 億，中興電為變壓器/配電盤龍頭。',
+        report: '1513-2026-03-11.html'
+      },
+      {
+        rank: 3, ticker: '1503.TW', name: '士林電機', nameEn: 'Shihlin Electric',
+        sector: '重電/工業', price: 208.5, currency: 'TWD', target: 277.5,
+        upside: 33.1, rating: 'Buy',
+        fpe: 22.2, roe: 8.9, pb: 3.0,
+        methodology: '目標價 NT$277.5 以 Forward PE 29.6x 乘以 2026E EPS NT$9.39 推算。士電為低壓配電與馬達龍頭，受惠台電配電設備升級與 AI 資料中心 UPS 電力需求。土城廠區都更資產重估為額外催化劑。',
+        report: '1503-2026-03-11.html'
+      },
+      {
+        rank: 4, ticker: '1504.TW', name: '東元電機', nameEn: 'TECO Electric',
+        sector: '重電/智慧能源', price: 71.9, currency: 'TWD', target: 102.6,
+        upside: 42.7, rating: 'Buy',
+        fpe: 21.2, roe: 6.4, pb: 1.9,
+        methodology: '目標價 NT$102.6 以 Forward PE 30.3x 乘以 2026E EPS NT$3.39 推算。東元為重電三雄中價位最低者（NT$71.9），具備 IE5 高效馬達出口競爭力，且轉投資菱光科技切入 AI 伺服器散熱商機。',
+        report: '1504-2026-03-06.html'
+      },
+      {
+        rank: 5, ticker: '6669.TW', name: '緯穎', nameEn: 'Wiwynn',
+        sector: 'AI 伺服器', price: 4195, currency: 'TWD', target: 5997,
+        upside: 42.9, rating: 'Buy',
+        fpe: 10.3, roe: 48.0, pb: 6.3,
+        methodology: '目標價 NT$5,997 採用法人共識中位數（16 位分析師）。Forward PE 僅 10.3x，遠低於 AI 伺服器同業（廣達 19x、技嘉 15x）。ROE 高達 48%，受惠 Meta/Microsoft AI 伺服器訂單放量，2026E EPS NT$407 年增 53%。',
+        report: null
+      },
+      {
+        rank: 6, ticker: '2454.TW', name: '聯發科', nameEn: 'MediaTek',
+        sector: 'IC 設計', price: 1765, currency: 'TWD', target: 2077,
+        upside: 17.7, rating: 'Buy',
+        fpe: 18.0, roe: 26.1, pb: 7.0,
+        methodology: '目標價 NT$2,077 採用法人共識中位數（23 位分析師）。旗艦天璣 9400 晶片搶占 Android 高階市場，車用與 ASIC 業務為新成長引擎。Forward PE 18x 低於高通 20x，ROE 26% 優於同業。',
+        report: null
+      },
+      {
+        rank: 7, ticker: '6409.TW', name: '旭隼', nameEn: 'Voltronic Power',
+        sector: 'UPS/電力', price: 820, currency: 'TWD', target: 1253,
+        upside: 52.8, rating: 'Buy',
+        fpe: 16.6, roe: 36.1, pb: 7.5,
+        methodology: '目標價 NT$1,253 採用法人共識中位數（5 位分析師）。全球 UPS 龍頭，受惠 AI 資料中心電力保護需求指數級成長。ROE 36% 為台股電力設備板塊最高，品牌溢價與規模經濟構築高護城河。',
+        report: null
+      },
+      {
+        rank: 8, ticker: '3017.TW', name: '奇鋐', nameEn: 'AVC (Asia Vital Components)',
+        sector: 'AI 散熱', price: 1860, currency: 'TWD', target: 2066,
+        upside: 11.1, rating: 'Hold',
+        fpe: 24.3, roe: 45.2, pb: 19.8,
+        methodology: '目標價 NT$2,066 以 Forward PE 27x 乘以 2026E EPS NT$76.4 推算。散熱模組龍頭受惠 AI GPU 散熱需求（液冷方案出貨成長），但 PB 高達 19.8x，估值已反映大量成長預期，上漲空間 11.1% 未達 Buy 門檻。',
+        report: 'reports/deep/3017-2026-03-11.html'
+      },
+      {
+        rank: 9, ticker: '1514.TW', name: '亞力電機', nameEn: 'Alex Electric',
+        sector: '重電/配電', price: 115.5, currency: 'TWD', target: 129,
+        upside: 11.8, rating: 'Hold',
+        fpe: 29.3, roe: 14.2, pb: 5.2,
+        methodology: '目標價 NT$129 以 Forward PE 32.8x 乘以 2026E EPS NT$3.94 推算。亞力為氣體絕緣開關設備（GIS）專業廠，受惠台電變電站升級。但 Forward PE 29.3x 偏高且 ROE 僅 14.2%，成長性弱於同業，上漲空間 11.8% 未達 Buy 門檻。',
+        report: '1514-2026-03-09.html'
+      },
+      {
+        rank: 10, ticker: '2383.TW', name: '台光電', nameEn: 'Elite Material',
+        sector: 'CCL/PCB材料', price: 2450, currency: 'TWD', target: 2338,
+        upside: -4.6, rating: 'Hold',
+        fpe: 37.7, roe: 35.4, pb: 19.7,
+        methodology: '目標價 NT$2,338 以 Forward PE 36x 乘以 2026E EPS NT$65 推算。台光電為高階 CCL 龍頭，受惠 AI 伺服器高頻高速 PCB 材料需求。但目前股價已充分反映預期，Forward PE 37.7x 與 PB 19.7x 均處歷史高位，潛在報酬 -4.6%。',
+        report: '2383-2026-03-06.html'
+      }
+    ];
+
+    // ===== US TOP 10 DATA =====
+    const US_PICKS = [
+      {
+        rank: 1, ticker: 'NVDA', name: 'NVIDIA', nameEn: 'NVIDIA Corporation',
+        sector: 'AI/GPU', price: 184.77, currency: 'USD', target: 266.35,
+        upside: 44.2, rating: 'Buy',
+        fpe: 17.1, roe: 101.5, pb: null,
+        methodology: '目標價 $266 採用 56 位法人共識中位數（Strong Buy）。Forward PE 17.1x 對 AI GPU 壟斷者而言極具吸引力，Blackwell 架構全面出貨帶動 2026E 營收年增 55%+。資料中心營收占比超過 80%，AI 訓練與推論需求無替代方案。',
+        report: null
+      },
+      {
+        rank: 2, ticker: 'MSFT', name: 'Microsoft', nameEn: 'Microsoft Corporation',
+        sector: 'AI/雲端', price: 405.76, currency: 'USD', target: 594.62,
+        upside: 46.5, rating: 'Buy',
+        fpe: 21.5, roe: 34.4, pb: null,
+        methodology: '目標價 $595 採用 53 位法人共識中位數（Strong Buy）。Azure 雲端 + Copilot AI 助手雙引擎成長，Azure 市占率穩步逼近 AWS。企業 AI 落地首選平台，經常性收入占比 >70%，護城河極寬。',
+        report: null
+      },
+      {
+        rank: 3, ticker: 'META', name: 'Meta Platforms', nameEn: 'Meta Platforms Inc.',
+        sector: 'AI/社群', price: 654.07, currency: 'USD', target: 862.25,
+        upside: 31.8, rating: 'Buy',
+        fpe: 18.2, roe: 30.2, pb: null,
+        methodology: '目標價 $862 採用 59 位法人共識中位數（Strong Buy）。全球 30 億用戶基礎 + AI 廣告推薦引擎持續提升 ARPU。Llama 開源模型建立 AI 生態系，Reels 短影音與 WhatsApp 商業化為增量成長點。Forward PE 18.2x 為科技巨頭中最低。',
+        report: null
+      },
+      {
+        rank: 4, ticker: 'AMZN', name: 'Amazon', nameEn: 'Amazon.com Inc.',
+        sector: '雲端/電商', price: 214.33, currency: 'USD', target: 280.55,
+        upside: 30.9, rating: 'Buy',
+        fpe: 22.9, roe: 22.3, pb: null,
+        methodology: '目標價 $281 採用 62 位法人共識中位數（Strong Buy）。AWS 雲端利潤引擎持續擴張 + 零售業務利潤率改善。AI 基礎設施投資（自研 Trainium 晶片 + Bedrock 平台）建立長期競爭優勢，廣告業務成長超預期。',
+        report: null
+      },
+      {
+        rank: 5, ticker: 'AVGO', name: 'Broadcom', nameEn: 'Broadcom Inc.',
+        sector: 'AI/半導體', price: 342.58, currency: 'USD', target: 467.80,
+        upside: 36.6, rating: 'Buy',
+        fpe: 19.5, roe: 33.4, pb: null,
+        methodology: '目標價 $468 採用 44 位法人共識中位數（Strong Buy）。AI 客製化 ASIC 晶片（TPU/MTIA）需求爆發 + VMware 整合帶動軟體收入飆升。AI 營收佔比預計 2026 達 35%+，網路交換晶片（Memory Fabric）為 AI 資料中心必備。',
+        report: null
+      },
+      {
+        rank: 6, ticker: 'VST', name: 'Vistra', nameEn: 'Vistra Corp.',
+        sector: '能源基建', price: 164.40, currency: 'USD', target: 233.42,
+        upside: 42.0, rating: 'Buy',
+        fpe: 14.9, roe: 17.7, pb: null,
+        methodology: '目標價 $233 採用 19 位法人共識中位數（Strong Buy）。AI 資料中心電力需求爆發的最大受益者之一，擁有核電 + 天然氣 + 太陽能多元發電組合。Forward PE 僅 14.9x，PPA 長約鎖定電價上漲紅利。',
+        report: null
+      },
+      {
+        rank: 7, ticker: 'FSLR', name: 'First Solar', nameEn: 'First Solar Inc.',
+        sector: '太陽能', price: 197.80, currency: 'USD', target: 257.31,
+        upside: 30.1, rating: 'Buy',
+        fpe: 7.8, roe: 17.4, pb: null,
+        methodology: '目標價 $257 採用 30 位法人共識中位數（Buy）。全球唯一大規模碲化鎘（CdTe）薄膜太陽能廠，Forward PE 僅 7.8x 為最被低估的綠能股。IRA 法案製造稅收抵免保障獲利底線，美國本土產能免受關稅衝擊。',
+        report: null
+      },
+      {
+        rank: 8, ticker: 'LLY', name: 'Eli Lilly', nameEn: 'Eli Lilly and Company',
+        sector: '醫療/減重', price: 1001.35, currency: 'USD', target: 1214.34,
+        upside: 21.3, rating: 'Buy',
+        fpe: 23.9, roe: 101.2, pb: null,
+        methodology: '目標價 $1,214 採用 29 位法人共識中位數（Buy）。GLP-1 減重藥 Mounjaro/Zepbound 開創千億美元級市場，ROE 超過 100%（資產輕型高獲利模型）。Pipeline 涵蓋阿茲海默症（Donanemab）等多個 Blockbuster 候選。',
+        report: null
+      },
+      {
+        rank: 9, ticker: 'V', name: 'Visa', nameEn: 'Visa Inc.',
+        sector: '金融科技', price: 314.43, currency: 'USD', target: 400.47,
+        upside: 27.4, rating: 'Buy',
+        fpe: 21.6, roe: 54.0, pb: null,
+        methodology: '目標價 $400 採用 36 位法人共識中位數（Strong Buy）。全球支付網路雙寡頭，ROE 54% 反映輕資產高槓桿模型。跨境支付量回升 + 數位支付滲透率持續提升，AI 防詐系統強化競爭護城河。',
+        report: null
+      },
+      {
+        rank: 10, ticker: 'AMD', name: 'AMD', nameEn: 'Advanced Micro Devices',
+        sector: 'AI/半導體', price: 203.23, currency: 'USD', target: 289.72,
+        upside: 42.6, rating: 'Buy',
+        fpe: 18.7, roe: 7.1, pb: null,
+        methodology: '目標價 $290 採用 46 位法人共識中位數（Buy）。MI300X/MI325X AI 加速器搶占 NVIDIA 以外的第二供應商地位，資料中心 GPU 營收年增 100%+。EPYC 伺服器 CPU 市占率突破 30%，Ryzen AI PC 開拓邊緣 AI 新市場。',
+        report: null
+      }
+    ];
+
+    // ===== REPORT ARCHIVE =====
     const REPORT_ARCHIVE = [
-      { ticker: '3017.TW', name: '奇鋐 AVC', date: '2026-03-11', rating: 'Buy', file: 'reports/deep/3017-2026-03-11.html' },
-      { ticker: '1503.TW', name: '士林電機 Shihlin', date: '2026-03-11', rating: 'Buy', file: '1503-2026-03-11.html' },
+      { ticker: '2330.TW', name: '台積電 TSMC', date: '2026-03-06', rating: 'Buy', file: '2330-2026-03-06.html' },
       { ticker: '1513.TW', name: '中興電工 Chung-Hsin', date: '2026-03-11', rating: 'Buy', file: '1513-2026-03-11.html' },
-      { ticker: '1514.TW', name: '亞力電機 Alex', date: '2026-03-09', rating: 'Buy', file: '1514-2026-03-09.html' },
-      { ticker: '1504.TW', name: '東元電機 TECO', date: '2026-03-06', rating: 'Hold', file: '1504-2026-03-06.html' },
-      { ticker: '2330.TW', name: '台積電 TSMC', date: '2026-03-06', rating: 'Sell', file: '2330-2026-03-06.html' },
+      { ticker: '1503.TW', name: '士林電機 Shihlin', date: '2026-03-11', rating: 'Buy', file: '1503-2026-03-11.html' },
+      { ticker: '1504.TW', name: '東元電機 TECO', date: '2026-03-06', rating: 'Buy', file: '1504-2026-03-06.html' },
+      { ticker: '3017.TW', name: '奇鋐 AVC', date: '2026-03-11', rating: 'Hold', file: 'reports/deep/3017-2026-03-11.html' },
+      { ticker: '1514.TW', name: '亞力電機 Alex', date: '2026-03-09', rating: 'Hold', file: '1514-2026-03-09.html' },
       { ticker: '2383.TW', name: '台光電 Elite', date: '2026-03-06', rating: 'Hold', file: '2383-2026-03-06.html' }
     ];
 
-    // Score key mapping: JSON key → Chinese label
-    const SCORE_LABELS = {
-      fundamental: '基本面',
-      chip: '籌碼面',
-      technical: '技術面',
-      catalyst: '消息面',
-      macro: '總經',
-      industry: '產業展望'
-    };
-
-    // Local cache for fetched picks
-    const picksCache = {};
-
-    // ===== INIT & LOAD =====
-    document.addEventListener('DOMContentLoaded', function() {
-      initializePage();
-      renderArchive();
-      loadPicksByDate('today');
-      updateStats();
-    });
-
-    function initializePage() {
-      const today = new Date();
-      const dateStr = today.toISOString().split('T')[0];
-      document.getElementById('dateInput').value = dateStr;
-      updateCurrentDate();
+    // ===== TAB SWITCHING =====
+    function switchTab(tab) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('section-' + tab).classList.add('active');
+      event.currentTarget.classList.add('active');
     }
 
-    function updateCurrentDate() {
-      const input = document.getElementById('dateInput').value;
-      const date = new Date(input + 'T00:00:00');
-      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-      const formatted = date.toLocaleDateString('zh-TW', options);
-      document.getElementById('currentDate').textContent = formatted;
-    }
+    // ===== RENDER PICK CARD =====
+    function renderPickCard(pick) {
+      const curr = pick.currency === 'USD' ? '$' : '';
+      const currSuffix = pick.currency === 'TWD' ? ' TWD' : '';
+      const upsideClass = pick.upside >= 0 ? 'upside-positive' : 'upside-negative';
+      const upsideSign = pick.upside >= 0 ? '+' : '';
+      const ratingClass = pick.rating.toLowerCase();
+      const ratingText = pick.rating === 'Buy' ? '🟢 買進' : pick.rating === 'Hold' ? '🟡 持有' : '🔴 賣出';
 
-    // ===== LOAD PICKS BY DATE (fetch from JSON) =====
-    async function loadPicksByDate(type) {
-      let targetDate;
-      const today = new Date();
-
-      if (type === 'today') {
-        targetDate = today;
-        document.querySelectorAll('.calendar-btn').forEach(btn => btn.classList.remove('active'));
-        document.querySelectorAll('.calendar-btn')[0].classList.add('active');
-      } else if (type === 'yesterday') {
-        targetDate = new Date(today);
-        targetDate.setDate(targetDate.getDate() - 1);
-        document.querySelectorAll('.calendar-btn').forEach(btn => btn.classList.remove('active'));
-        document.querySelectorAll('.calendar-btn')[1].classList.add('active');
-      } else if (type === 'week') {
-        targetDate = new Date(today);
-        targetDate.setDate(targetDate.getDate() - today.getDay() + 1);
-        document.querySelectorAll('.calendar-btn').forEach(btn => btn.classList.remove('active'));
-        document.querySelectorAll('.calendar-btn')[2].classList.add('active');
-      } else if (type === 'custom') {
-        const dateStr = document.getElementById('dateInput').value;
-        targetDate = new Date(dateStr + 'T00:00:00');
-        document.querySelectorAll('.calendar-btn').forEach(btn => btn.classList.remove('active'));
-      }
-
-      const dateStr = targetDate.toISOString().split('T')[0];
-      document.getElementById('dateInput').value = dateStr;
-      updateCurrentDate();
-
-      // Show loading state
-      const container = document.getElementById('picksContainer');
-      container.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">⏳</div><div class="empty-state-text">載入中...</div></div>';
-
-      // Check cache first
-      if (picksCache[dateStr]) {
-        renderPicks(picksCache[dateStr]);
-        return;
-      }
-
-      // Fetch from JSON file
-      try {
-        const resp = await fetch(`data/daily-picks-${dateStr}.json`);
-        if (!resp.ok) throw new Error('Not found');
-        const data = await resp.json();
-        // Transform picks to render format
-        const picks = data.picks.map(p => ({
-          rank: p.rank,
-          ticker: p.ticker,
-          name: p.name,
-          market: p.market,
-          price: p.price,
-          currency: p.currency,
-          rating: p.rating,
-          target_price: p.target_price,
-          upside: p.upside,
-          scores: {
-            '基本面': p.scores.fundamental,
-            '籌碼面': p.scores.chip,
-            '技術面': p.scores.technical,
-            '消息面': p.scores.catalyst,
-            '總經': p.scores.macro,
-            '產業展望': p.scores.industry
-          },
-          total_score: p.total_score,
-          summary: p.summary,
-          deep_report: p.deep_report ? p.deep_report : (data.deep_report_of_day && data.deep_report_of_day.ticker === p.ticker ? data.deep_report_of_day.report_url : null)
-        }));
-        picksCache[dateStr] = picks;
-        renderPicks(picks);
-      } catch (e) {
-        container.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">📭</div><div class="empty-state-text">該日期暫無精選數據</div></div>';
-      }
-    }
-
-    // ===== RENDER PICKS =====
-    function renderPicks(picks) {
-      const container = document.getElementById('picksContainer');
-      if (!picks || picks.length === 0) {
-        container.innerHTML = `
-          <div class="empty-state" style="grid-column: 1 / -1;">
-            <div class="empty-state-icon">📭</div>
-            <div class="empty-state-text">該日期暫無精選數據</div>
-          </div>
-        `;
-        return;
-      }
-
-      container.innerHTML = picks.map(pick => `
+      return `
         <div class="pick-card">
           <div class="pick-rank">${pick.rank}</div>
-
           <div class="pick-header">
             <div>
               <div class="pick-ticker">${pick.ticker}</div>
               <div class="pick-name">${pick.name}</div>
+              <div class="pick-name-en">${pick.nameEn}</div>
             </div>
           </div>
-
           <div class="pick-badges">
-            <span class="badge badge-market">${pick.market === 'TW' ? '🇹🇼 台股' : '🇺🇸 美股'}</span>
-            <span class="badge badge-rating-${pick.rating.toLowerCase()}">
-              ${pick.rating === 'Buy' ? '🟢 買進' : pick.rating === 'Hold' ? '🟡 持有' : '🔴 賣出'}
-            </span>
-            ${pick.currency === 'TWD' && pick.price < 100 ? '<span class="badge" style="background:rgba(234,179,8,0.15);color:#eab308;border-color:rgba(234,179,8,0.3);">💰 百元以下</span>' : ''}
+            <span class="badge badge-sector">${pick.sector}</span>
+            <span class="badge badge-rating-${ratingClass}">${ratingText}</span>
           </div>
-
           <div class="pick-price">
-            <div class="price-current">
-              <span class="price-label">現價</span>
-              <span class="price-value">${pick.currency === 'USD' ? '$' : ''}${pick.price.toLocaleString()} ${pick.currency}</span>
+            <div>
+              <div class="price-label">現價</div>
+              <div class="price-value">${curr}${pick.price.toLocaleString()}${currSuffix}</div>
             </div>
             <div class="price-upside">
-              <div class="upside-value ${pick.upside.startsWith('+') ? 'upside-positive' : 'upside-negative'}">
-                ${pick.upside}
-              </div>
-              <div class="upside-label">目標價 ${pick.currency === 'USD' ? '$' : ''}${pick.target_price.toLocaleString()}</div>
+              <div class="upside-value ${upsideClass}">${upsideSign}${pick.upside.toFixed(1)}%</div>
+              <div class="upside-label">目標 ${curr}${pick.target.toLocaleString()}</div>
             </div>
           </div>
-
-          <div class="score-breakdown">
-            <div class="score-breakdown-title">
-              <span>六維度評分</span>
-              <span class="total-score">總分 ${pick.total_score}/60</span>
+          <div class="metrics-row">
+            <div class="metric-item">
+              <div class="metric-label">Forward PE</div>
+              <div class="metric-val">${pick.fpe.toFixed(1)}x</div>
             </div>
-            <div class="scores-grid">
-              ${Object.entries(pick.scores).map(([name, score]) => `
-                <div class="score-item">
-                  <div class="score-name">${name}</div>
-                  <div class="score-bar">
-                    <div class="score-bar-bg">
-                      <div class="score-bar-fill" style="width: ${(score / 10) * 100}%"></div>
-                    </div>
-                    <span class="score-number">${score}</span>
-                  </div>
-                </div>
-              `).join('')}
+            <div class="metric-item">
+              <div class="metric-label">ROE</div>
+              <div class="metric-val">${pick.roe.toFixed(1)}%</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-label">潛在報酬</div>
+              <div class="metric-val ${upsideClass}">${upsideSign}${pick.upside.toFixed(1)}%</div>
             </div>
           </div>
-
-          <div class="pick-summary">${pick.summary}</div>
-
-          ${pick.deep_report ? `
-            <a href="${pick.deep_report}" class="pick-report-link">📊 閱讀深度報告 →</a>
-          ` : ''}
+          <div class="pick-methodology">${pick.methodology}</div>
+          ${pick.report ? `<a href="${pick.report}" class="pick-report-link">📊 閱讀深度報告 →</a>` : ''}
         </div>
-      `).join('');
-    }
-
-    // ===== RENDER REPORTS =====
-    function renderReports() {
-      const container = document.getElementById('reportsContainer');
-      container.innerHTML = REPORT_ARCHIVE.map(report => `
-        <a href="${report.file}" class="report-card">
-          <div class="report-ticker">${report.ticker}</div>
-          <div class="report-name">${report.name}</div>
-          <div class="report-date">📅 ${report.date}</div>
-          <div class="report-rating report-rating-${report.rating.toLowerCase()}">
-            ${report.rating === 'Buy' ? '🟢 買進' : report.rating === 'Hold' ? '🟡 持有' : '🔴 賣出'}
-          </div>
-        </a>
-      `).join('');
+      `;
     }
 
     // ===== RENDER ARCHIVE =====
     function renderArchive() {
-      const container = document.getElementById('archiveContainer');
-      container.innerHTML = REPORT_ARCHIVE.map(report => `
-        <a href="${report.file}" class="archive-card">
-          <div class="archive-ticker">${report.ticker}</div>
-          <div class="archive-title">${report.name}</div>
-          <div class="archive-date">${report.date}</div>
-        </a>
-      `).join('');
+      const container = document.getElementById('archive-grid');
+      container.innerHTML = REPORT_ARCHIVE.map(r => {
+        const rClass = r.rating === 'Buy' ? 'badge-rating-buy' : r.rating === 'Hold' ? 'badge-rating-hold' : 'badge-rating-sell';
+        const rText = r.rating === 'Buy' ? '🟢 買進' : r.rating === 'Hold' ? '🟡 持有' : '🔴 賣出';
+        return `
+          <a href="${r.file}" class="archive-card">
+            <div class="archive-ticker">${r.ticker}</div>
+            <div class="archive-title">${r.name}</div>
+            <div class="archive-date">📅 ${r.date}</div>
+            <div class="archive-rating ${rClass}">${rText}</div>
+          </a>
+        `;
+      }).join('');
     }
 
-    // ===== UPDATE STATS =====
-    function updateStats() {
-      const reports = REPORT_ARCHIVE;
-      document.getElementById('totalReports').textContent = reports.length;
-
-      const buyCount = reports.filter(r => r.rating === 'Buy').length;
-      document.getElementById('buyCount').textContent = buyCount + '/' + reports.length;
-
-      const twCount = reports.filter(r => r.ticker.includes('.TW')).length;
-      document.getElementById('marketDistTw').textContent = Math.round((twCount / reports.length) * 100) + '%';
-
-      document.getElementById('avgScore').textContent = '48/60';
-
-      renderReports();
-    }
+    // ===== INIT =====
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('tw-picks').innerHTML = TW_PICKS.map(renderPickCard).join('');
+      document.getElementById('us-picks').innerHTML = US_PICKS.map(renderPickCard).join('');
+      renderArchive();
+    });
   </script>
 </body>
 </html>
