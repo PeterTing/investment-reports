@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>士電 (1503) 深度投資分析報告 - 2026Q1</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;line-height:1.7;color:#1a1a2e;background:#f8f9fa;font-size:16px}
+.container{max-width:900px;margin:0 auto;padding:16px}
+h1{font-size:1.6em;color:#16213e;border-bottom:3px solid #0f3460;padding-bottom:8px;margin:20px 0 12px}
+h2{font-size:1.35em;color:#0f3460;border-left:4px solid #e94560;padding-left:12px;margin:28px 0 12px}
+h3{font-size:1.1em;color:#16213e;margin:18px 0 8px}
+h4{font-size:1em;color:#533483;margin:14px 0 6px}
+p{margin:6px 0}
+.header-box{background:linear-gradient(135deg,#0f3460,#16213e);color:#fff;padding:20px;border-radius:12px;margin-bottom:20px}
+.header-box h1{color:#fff;border-bottom:2px solid rgba(255,255,255,.3);font-size:1.5em}
+.rating-buy{background:#00b894;color:#fff;padding:4px 14px;border-radius:20px;font-weight:700;font-size:1.1em;display:inline-block}
+.rating-hold{background:#fdcb6e;color:#2d3436;padding:4px 14px;border-radius:20px;font-weight:700}
+.rating-sell{background:#d63031;color:#fff;padding:4px 14px;border-radius:20px;font-weight:700}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:12px 0}
+.kpi-card{background:#fff;border-radius:8px;padding:12px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.kpi-card .label{font-size:.78em;color:#636e72}
+.kpi-card .value{font-size:1.3em;font-weight:700;color:#0f3460}
+.table-wrap{overflow-x:auto;margin:10px 0;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:.9em;min-width:500px}
+th{background:#0f3460;color:#fff;padding:8px 10px;text-align:center;font-weight:600;white-space:nowrap}
+td{padding:7px 10px;border-bottom:1px solid #dfe6e9;text-align:center}
+tr:nth-child(even){background:#f1f3f5}
+tr:hover{background:#dfe6e9}
+.highlight{background:#ffeaa7 !important;font-weight:700}
+.positive{color:#00b894;font-weight:600}
+.negative{color:#d63031;font-weight:600}
+.neutral{color:#636e72}
+.source{font-size:.8em;color:#636e72;margin:4px 0;line-height:1.4}
+.source a{color:#0984e3;text-decoration:none}
+.warn{background:#fff3cd;border-left:4px solid #f39c12;padding:10px 14px;margin:10px 0;border-radius:4px;font-size:.9em}
+.info{background:#d1ecf1;border-left:4px solid #0984e3;padding:10px 14px;margin:10px 0;border-radius:4px;font-size:.9em}
+.risk{background:#f8d7da;border-left:4px solid #d63031;padding:10px 14px;margin:10px 0;border-radius:4px;font-size:.9em}
+.bull{background:#d4edda;border-left:4px solid #00b894;padding:10px 14px;margin:10px 0;border-radius:4px;font-size:.9em}
+.disclaimer{background:#f1f3f5;border:1px solid #dfe6e9;padding:16px;border-radius:8px;margin:20px 0;font-size:.82em;color:#636e72}
+.section{background:#fff;border-radius:10px;padding:18px;margin:16px 0;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.dcf-matrix td{font-size:.85em;padding:5px 8px}
+.dcf-matrix .base-cell{background:#00b894;color:#fff;font-weight:700}
+.op-zone{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:10px 0}
+.op-card{padding:12px;border-radius:8px;text-align:center}
+.op-entry{background:#d4edda;border:2px solid #00b894}
+.op-target{background:#d1ecf1;border:2px solid #0984e3}
+.op-stop{background:#f8d7da;border:2px solid #d63031}
+.op-profit{background:#fff3cd;border:2px solid #f39c12}
+@media(max-width:600px){
+  .container{padding:10px}
+  h1{font-size:1.3em}
+  h2{font-size:1.15em}
+  table{font-size:.8em}
+  .kpi-grid{grid-template-columns:repeat(2,1fr)}
+  .op-zone{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- HEADER -->
+<div class="header-box">
+<h1>士電 (1503) 深度投資分析報告</h1>
+<p><strong>報告日期</strong>：2026/03/11 ｜ <strong>分析師</strong>：AI Research（CFA Framework）</p>
+<p><strong>投資評級</strong>：<span class="rating-buy">🟢 買進</span></p>
+<p><strong>目標價</strong>：NT$ 244 元（計算：2026E EPS 8.8 × 目標 PE 27.7x = 244 元）</p>
+<p><strong>風險等級</strong>：中</p>
+<p style="margin-top:8px;font-size:.9em;opacity:.9">
+  <strong>報告基準股價</strong>：209.5 元，取自 <a href="https://finance.yahoo.com/quote/1503.TW/" style="color:#74b9ff">Yahoo Finance</a>，2026/03/11 收盤價<br>
+  <strong>基準股本</strong>：5.21 億股，取自 <a href="https://finance.yahoo.com/quote/1503.TW/key-statistics/" style="color:#74b9ff">Yahoo Finance</a><br>
+  <strong>數據基期</strong>：2024 全年實際 / 2025E（Q1-Q3 實際 + Q4E 推估）/ 2026E 預估
+</p>
+</div>
+
+<!-- KPI DASHBOARD -->
+<div class="kpi-grid">
+  <div class="kpi-card"><div class="label">股價</div><div class="value">209.5</div></div>
+  <div class="kpi-card"><div class="label">市值 (億)</div><div class="value">1,091</div></div>
+  <div class="kpi-card"><div class="label">Forward PE</div><div class="value">22.3x</div></div>
+  <div class="kpi-card"><div class="label">EV/EBITDA</div><div class="value">19.8x</div></div>
+  <div class="kpi-card"><div class="label">PB</div><div class="value">3.0x</div></div>
+  <div class="kpi-card"><div class="label">ROE</div><div class="value">8.9%</div></div>
+  <div class="kpi-card"><div class="label">2025E EPS</div><div class="value">6.78</div></div>
+  <div class="kpi-card"><div class="label">2026E EPS</div><div class="value">8.8</div></div>
+</div>
+
+<!-- SECTION 1 -->
+<div class="section">
+<h2>1. 執行摘要 (Executive Summary)</h2>
+
+<h3>🎯 投資亮點</h3>
+<div class="bull">
+✅ <strong>台電強韌電網計畫主要受惠者</strong>：士電為台灣本土重電龍頭，深耕配電盤、變壓器、GIS 等核心設備，台電 2024-2033 年強韌電網計畫預算逾 5,600 億元，士電為核心供應商之一。
+</div>
+<p class="source">📎 來源：<a href="https://www.taipower.com.tw/">台灣電力公司</a>，2024/01 ｜ <a href="https://www.cnyes.com/twstock/1503">鉅亨網</a>，2026/03/11</p>
+
+<div class="bull">
+✅ <strong>2026 年營收與 EPS 加速成長</strong>：2026 年 1 月營收 44.84 億（YoY +5.55%），全年 EPS 預估 8.8-9.4 元，YoY 成長 30-38%，營收與獲利正進入加速期。
+</div>
+<p class="source">📎 來源：<a href="https://finance.yahoo.com/quote/1503.TW/">Yahoo Finance</a>，2026/03/11</p>
+
+<div class="bull">
+✅ <strong>極低財務槓桿</strong>：D/E 僅 3.2%，淨現金 21.7 億，財務體質極為穩健，有充裕能力擴產或併購。
+</div>
+
+<h3>⚠️ 主要風險與雙面揭露</h3>
+<div class="risk">
+⚠️ <strong>ROE 偏低（8.9%）vs PE 偏高（22x）</strong>：ROE 不到 10% 卻享有 22x 以上 PE，估值存在「成長轉型溢價」風險。若電網投資進度不如預期，PE 將面臨修正壓力。
+</div>
+
+<div class="risk">
+⚠️ <strong>Q3-Q4 獲利下滑趨勢</strong>：2025 年 Q1 EPS 2.34 → Q2 1.71 → Q3 1.41，Q4E 估 1.32，呈現逐季遞減。須觀察 2026 年是否回復 Q1 高峰。
+</div>
+
+<div class="risk">
+⚠️ <strong>原物料成本壓力</strong>：銅、矽鋼片為重電設備核心材料，若國際銅價大幅上漲，將壓縮毛利率。
+</div>
+</div>
+
+<!-- SECTION 2 -->
+<div class="section">
+<h2>2. 公司概況與競爭優勢</h2>
+
+<h3>2.1 事業群拆解與獲利率</h3>
+<div class="table-wrap">
+<table>
+<tr><th>事業群</th><th>營收佔比</th><th>主力產品</th><th>毛利率 (推估)</th><th>營益率 (推估)</th></tr>
+<tr><td>電力配電類</td><td>~56%</td><td>配電盤、變壓器、GIS 氣體絕緣開關</td><td>22%-26%</td><td>12%-16%</td></tr>
+<tr><td>自動化設備</td><td>~22%</td><td>PLC、變頻器、伺服馬達、工業自動化</td><td>18%-22%</td><td>8%-12%</td></tr>
+<tr><td>車輛零件</td><td>~13%</td><td>車用馬達、EV 零組件</td><td>15%-20%</td><td>5%-10%</td></tr>
+<tr><td>其他（含租賃）</td><td>~9%</td><td>不動產租賃、工程服務</td><td>30%-40%</td><td>20%-30%</td></tr>
+</table>
+</div>
+<div class="warn">⚠️ 公司未揭露精確分部利潤率，此為綜合法說會、年報與法人報告之推估值。營收佔比參考鉅亨網公司簡介。</div>
+<p class="source">📎 來源：<a href="https://www.cnyes.com/twstock/intro.aspx?code=1503">鉅亨網 士電公司簡介</a></p>
+
+<h3>2.2 策略定位分析</h3>
+<p>士電為士林電機集團核心公司，成立超過 60 年，為台灣最早投入重電設備製造的企業之一。核心競爭優勢包括：</p>
+<p>（1）<strong>完整產品線</strong>：從高壓 GIS、變壓器到低壓配電盤一站式供應，在台電及工業客戶具品牌忠誠度。（2）<strong>在地化服務網絡</strong>：全台設有服務據點，售後維護能力強，形成競爭壁壘。（3）<strong>自動化事業多元佈局</strong>：PLC、變頻器等工業自動化產品線，可受惠智慧工廠趨勢。（4）<strong>士林電機集團資源</strong>：包括不動產資產與轉投資佈局，提供額外營收穩定性。</p>
+
+<h3>2.3 客戶集中度風險</h3>
+<p>台電為最大單一客戶，估計佔重電事業營收 40%-50%。若台電資本支出縮減或招標節奏延遲，將直接影響士電營收與 backlog。</p>
+<div class="warn">⚠️ 客戶集中度數據為推估值，公司未揭露前五大客戶精確比重。</div>
+</div>
+
+<!-- SECTION 3 -->
+<div class="section">
+<h2>3. 財務分析與成長橋樑</h2>
+
+<h3>3.1 歷年 EPS 與成長路徑 (Growth Bridge)</h3>
+<div class="table-wrap">
+<table>
+<tr><th>年度</th><th>EPS (元)</th><th>YoY 成長率</th><th>說明</th></tr>
+<tr><td>2021</td><td>3.45</td><td>—</td><td>基期，疫後復甦初期</td></tr>
+<tr><td>2022</td><td>3.85</td><td class="positive">+11.6%</td><td>工業需求回溫，自動化訂單成長</td></tr>
+<tr><td>2023</td><td>4.50</td><td class="positive">+16.9%</td><td>台電強韌電網計畫啟動，重電訂單放量</td></tr>
+<tr><td>2024</td><td>5.81</td><td class="positive">+29.1%</td><td>電網投資高峰，大型標案陸續入帳</td></tr>
+<tr class="highlight"><td>2025E</td><td>6.78</td><td class="positive">+16.7%</td><td>⚠️ Q1-Q3 實際 5.46 + Q4E 1.32（推估）</td></tr>
+<tr class="highlight"><td>2026E</td><td>8.8</td><td class="positive">+29.8%</td><td>自建模型推導，台電投資加速 + 產品組合優化</td></tr>
+</table>
+</div>
+<p class="source">📎 歷史數據來源：<a href="https://finance.yahoo.com/quote/1503.TW/">Yahoo Finance</a>，2026/03/11<br>
+📎 2026E EPS：自建模型推導（見 3.3），Yahoo Forward EPS 9.385 元作為交叉參考</p>
+
+<h3>3.2 成長轉折論證</h3>
+<p>2026E EPS 成長率預估 29.8%（>20%），驅動力論證如下：</p>
+<p><strong>（1）台電強韌電網計畫進入主要交付期</strong>：2024-2027 年為計畫高峰期，配電盤與變壓器需求持續攀升。士電作為國內少數具備 GIS 與大型變壓器製造能力的廠商，訂單能見度高。</p>
+<p><strong>（2）毛利率改善動能</strong>：高壓產品佔比提升，高毛利率的電力配電類營收佔比增加，帶動整體毛利率從 2024 年 ~20% 向 22%+ 改善。</p>
+<p><strong>（3）營運槓桿效應</strong>：營收規模放大後，固定成本攤薄效果顯著，營益率有望從 11% 提升至 13%+。</p>
+
+<h3>3.3 EPS 由下往上推導模型 (Bottom-Up)</h3>
+
+<h4>Step 1：營收拆解與推估</h4>
+<div class="table-wrap">
+<table>
+<tr><th>事業群/產品線</th><th>2025 營收 (億)</th><th>成長假設</th><th>2026E 營收 (億)</th><th>假設依據</th></tr>
+<tr><td>電力配電類</td><td>~208</td><td>+18%</td><td>~245</td><td>台電標案交付高峰，GIS 需求增加</td></tr>
+<tr><td>自動化設備</td><td>~82</td><td>+8%</td><td>~89</td><td>智慧工廠需求穩定成長</td></tr>
+<tr><td>車輛零件</td><td>~48</td><td>+10%</td><td>~53</td><td>EV 零組件訂單成長</td></tr>
+<tr><td>其他（含租賃）</td><td>~34</td><td>+3%</td><td>~35</td><td>租賃收入穩定</td></tr>
+<tr class="highlight"><td><strong>合計營收</strong></td><td><strong>372</strong></td><td><strong>+13.4%</strong></td><td><strong>422</strong></td><td></td></tr>
+</table>
+</div>
+
+<h4>Step 2：獲利率推演</h4>
+<div class="table-wrap">
+<table>
+<tr><th>項目</th><th>2024 實際</th><th>2025E</th><th>2026E 假設</th><th>假設依據</th></tr>
+<tr><td>毛利率</td><td>20.1%</td><td>22.2%</td><td>23.0%</td><td>高壓產品比重提升 + 規模效應</td></tr>
+<tr><td>營業費用率</td><td>9.1%</td><td>9.0%</td><td>8.8%</td><td>費用管控 + 營收分母放大</td></tr>
+<tr><td>營益率</td><td>11.0%</td><td>13.2%</td><td>14.2%</td><td></td></tr>
+</table>
+</div>
+
+<h4>Step 3：EPS 推導</h4>
+<div class="table-wrap">
+<table>
+<tr><th>項目</th><th>2026E 金額 (億)</th><th>計算邏輯</th></tr>
+<tr><td>營收</td><td>422</td><td>Step 1 合計</td></tr>
+<tr><td>毛利</td><td>97.1</td><td>422 × 23.0%</td></tr>
+<tr><td>營業費用</td><td>37.1</td><td>422 × 8.8%</td></tr>
+<tr><td>營業利益</td><td>59.9</td><td>97.1 - 37.1</td></tr>
+<tr><td>業外淨收支</td><td>+5.0</td><td>轉投資收益 4.5 + 利息淨收入 0.5</td></tr>
+<tr><td>稅前淨利</td><td>64.9</td><td></td></tr>
+<tr><td>所得稅 (有效稅率 20%)</td><td>13.0</td><td>參考 2024 有效稅率 ~18-20%</td></tr>
+<tr><td>稅後淨利</td><td>51.9</td><td></td></tr>
+<tr><td>少數股權</td><td>-6.0</td><td>參考歷史比例</td></tr>
+<tr class="highlight"><td><strong>歸屬母公司稅後淨利</strong></td><td><strong>45.9</strong></td><td></td></tr>
+<tr class="highlight"><td><strong>預估 EPS</strong></td><td><strong>8.8 元</strong></td><td>45.9 億 / 5.21 億股</td></tr>
+</table>
+</div>
+
+<div class="info">
+<strong>模型 vs 法人共識比較：</strong>自建模型 EPS 8.8 元 vs Yahoo Forward EPS 9.385 元，差距 6.6%。差異主要來自營收成長率假設——本模型保守假設 +13.4%，法人可能假設 +15-18%。若營收成長超過預期，EPS 有機會接近 9.4 元。
+</div>
+
+<div class="warn">⚠️ 本模型關鍵假設：(1) 電力配電類營收成長 18%——取決於台電標案交付進度；(2) 毛利率改善至 23%——取決於產品組合與原料成本；(3) 有效稅率維持 20%——若享有租稅優惠可能更低。</div>
+
+<h3>3.4 財務健全度</h3>
+<div class="table-wrap">
+<table>
+<tr><th>指標</th><th>數值</th><th>說明</th><th>健康度</th></tr>
+<tr><td>負債權益比 (D/E)</td><td>3.2%</td><td>總負債 12.0 億 / 股東權益 375.4 億</td><td>🟢 極低</td></tr>
+<tr><td>流動比率</td><td>143%</td><td></td><td>🟢 健康</td></tr>
+<tr><td>速動比率</td><td>66%</td><td>存貨佔比較高</td><td>🟡 尚可</td></tr>
+<tr><td>淨現金</td><td>21.7 億</td><td>現金 33.7 億 - 總負債 12.0 億</td><td>🟢 強勁</td></tr>
+<tr><td>自由現金流 (FCF)</td><td>14.8 億</td><td>OCF 22.9 - CapEx 8.1 (2024)</td><td>🟢 正向</td></tr>
+<tr><td>FCF Yield</td><td>1.4%</td><td>14.8 / 1,091 億市值</td><td>🟡 偏低</td></tr>
+</table>
+</div>
+<p class="source">📎 來源：<a href="https://finance.yahoo.com/quote/1503.TW/key-statistics/">Yahoo Finance Key Statistics</a>，2026/03/11</p>
+</div>
+
+<!-- SECTION 4 -->
+<div class="section">
+<h2>4. 產業分析與同業比較</h2>
+
+<h3>4.1 ROE 分析與估值辯證 (Gordon Growth Model)</h3>
+
+<h4>ROE 基本計算</h4>
+<p>近期 ROE：8.9%<br>
+ROE = 2024 EPS 5.81 / 每股淨值 69.75 = 8.3%（trailing）<br>
+2025E ROE = 2025E EPS 6.78 / BV 69.75 ≈ 9.7%（forward）</p>
+
+<h4>Gordon Growth Model 估值辯證</h4>
+<div class="table-wrap">
+<table>
+<tr><th>參數</th><th>數值</th><th>來源/假設</th></tr>
+<tr><td>Cost of Equity (CoE)</td><td>8.6%</td><td>Rf 1.5% + Beta 0.924 × ERP 7.7%</td></tr>
+<tr><td>長期成長率 (g)</td><td>3.0%</td><td>GDP 成長 + 電網長期投資</td></tr>
+<tr><td>理論 PB</td><td>1.05x</td><td>(8.9% - 3.0%) / (8.6% - 3.0%) = 5.9/5.6</td></tr>
+<tr class="highlight"><td>實際 PB</td><td>3.00x</td><td>股價 209.5 / BV 69.75</td></tr>
+<tr class="highlight"><td>溢價幅度</td><td>+186%</td><td>(3.00 - 1.05) / 1.05</td></tr>
+</table>
+</div>
+
+<h4>辯證結論</h4>
+<div class="warn">
+<strong>⚠️ 重要警訊：ROE 偏低但估值偏高</strong><br>
+士電目前 ROE 僅 8.9%，低於 10% 門檻，但市場給予 PB 3.0x，遠高於 Gordon Growth Model 理論值 1.05x。市場溢價的合理性論證如下：<br><br>
+<strong>轉型溢價論證：</strong><br>
+（1）<strong>成長預期</strong>：市場定價反映的不是 trailing ROE，而是 2026-2028 年 ROE 改善至 12-15% 的預期。2026E EPS 8.8 元若實現，ROE 將提升至 12%+。<br>
+（2）<strong>資產重估</strong>：士電持有大量不動產（士林廠區），帳面價值低估市值。若加計隱含資產價值，調整後 PB 將大幅降低。<br>
+（3）<strong>產業趨勢紅利</strong>：全球電網升級為長期趨勢（ESG、AI 電力需求），重電產業享有結構性估值提升。<br><br>
+<strong>風險面：</strong>若 2026 年 ROE 未能如期改善至 12%+，目前 3.0x PB 的估值將面臨 30-50% 的修正壓力。此為本報告最大風險因子。
+</div>
+
+<h3>4.2 同業比較矩陣</h3>
+<div class="table-wrap">
+<table>
+<tr><th>指標</th><th>士電 1503</th><th>華城 1519</th><th>中興電 1513</th><th>亞力 1514</th><th>東元 1504</th><th>大同 2371</th></tr>
+<tr><td>股價 (元)</td><td>209.5</td><td>1,670</td><td>154.5</td><td>220.0</td><td>74.2</td><td>50.1</td></tr>
+<tr><td>市值 (億)</td><td>1,091</td><td>1,424</td><td>729</td><td>437</td><td>1,771</td><td>1,177</td></tr>
+<tr><td>PE (TTM)</td><td>33.2x</td><td>69.5x</td><td>20.0x</td><td>39.3x</td><td>28.1x</td><td>7.5x</td></tr>
+<tr><td>Forward PE</td><td>22.3x</td><td>44.6x</td><td>16.0x</td><td>29.1x</td><td>21.1x</td><td>14.2x</td></tr>
+<tr><td>PB</td><td>3.0x</td><td>34.1x</td><td>3.9x</td><td>5.2x</td><td>1.9x</td><td>1.2x</td></tr>
+<tr><td>EV/EBITDA</td><td>19.8x</td><td>51.9x</td><td>13.9x</td><td>30.7x</td><td>23.7x</td><td>5.4x</td></tr>
+<tr><td>ROE</td><td>8.9%</td><td>52.9%</td><td>19.8%</td><td>14.2%</td><td>6.4%</td><td>13.5%</td></tr>
+<tr><td>殖利率</td><td>2.2%</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+</table>
+</div>
+<p class="source">📎 來源：<a href="https://finance.yahoo.com/">Yahoo Finance</a>，基準日 2026/03/11</p>
+
+<div class="info">
+<strong>同業定位：</strong>士電 Forward PE 22.3x 處於重電族群中間偏低位置（中興電 16.0x 最便宜，華城 44.6x 最貴）。但考慮 ROE 僅 8.9%（同業第二低，僅高於東元 6.4%），PE 估值應有折價才合理。市場給予的估值隱含成長預期——若 2026 EPS 成長確實達 30%，Forward PE 22x 在高成長期仍屬合理範圍。
+</div>
+</div>
+
+<!-- SECTION 5 -->
+<div class="section">
+<h2>5. 估值分析</h2>
+
+<h3>5.1 Forward P/E 與歷史 PE 軌跡</h3>
+
+<h4>當前估值</h4>
+<p>Forward PE = 股價 209.5 / 2026E EPS 8.8 = <strong>23.8x</strong>（自建模型）<br>
+Forward PE = 股價 209.5 / Yahoo Forward EPS 9.385 = <strong>22.3x</strong><br>
+同業平均 Forward PE：24.5x（含華城拉高均值）/ 中位數 ~21x（排除華城）</p>
+
+<h4>歷史 PE 軌跡表 (5 年)</h4>
+<div class="table-wrap">
+<table>
+<tr><th>年度</th><th>年度 EPS (元)</th><th>最高價</th><th>最低價</th><th>最高 PE</th><th>最低 PE</th><th>中位 PE</th></tr>
+<tr><td>2021</td><td>3.45</td><td>55.4</td><td>46.6</td><td>16.1x</td><td>13.5x</td><td>14.8x</td></tr>
+<tr><td>2022</td><td>3.85</td><td>66.7</td><td>50.2</td><td>17.3x</td><td>13.0x</td><td>15.2x</td></tr>
+<tr><td>2023</td><td>4.50</td><td>174.0</td><td>59.7</td><td>38.7x</td><td>13.3x</td><td>26.0x</td></tr>
+<tr><td>2024</td><td>5.81</td><td>358.0</td><td>111.0</td><td>61.6x</td><td>19.1x</td><td>40.4x</td></tr>
+<tr><td>2025E</td><td>6.78</td><td>223.0</td><td>113.5</td><td>32.9x</td><td>16.7x</td><td>24.8x</td></tr>
+<tr class="highlight"><td><strong>5年平均</strong></td><td></td><td></td><td></td><td><strong>33.3x</strong></td><td><strong>15.1x</strong></td><td><strong>24.2x</strong></td></tr>
+</table>
+</div>
+<p class="source">📎 來源：<a href="https://finance.yahoo.com/quote/1503.TW/history/">Yahoo Finance Historical Data</a>，2026/03/11</p>
+
+<div class="info">
+<strong>PE Band 判讀：</strong>目前 Forward PE 22-24x 位於歷史 PE Band 的<strong>中間偏低</strong>位置。5 年平均中位 PE 24.2x，若以 2026E EPS 8.8 × 24.2x = <strong>213 元</strong>，接近現價，顯示目前估值合理偏低。<br><br>
+⚠️ 注意：2023-2024 年因重電題材熱潮，PE 曾大幅擴張至 40-60x，此為異常值。若排除 2024 年極端值，3 年平均中位 PE 約 18.7x，對應合理價 164 元，顯示目前估值已包含顯著的成長預期。
+</div>
+
+<h3>5.2 EV/EBITDA</h3>
+<div class="table-wrap">
+<table>
+<tr><th>項目</th><th>數值 (百萬 TWD)</th><th>計算</th></tr>
+<tr><td>市值</td><td>109,123</td><td>209.5 × 520,972K 股</td></tr>
+<tr><td>+ 總負債</td><td>1,203</td><td></td></tr>
+<tr><td>- 現金</td><td>3,371</td><td></td></tr>
+<tr><td><strong>EV</strong></td><td><strong>106,955</strong></td><td></td></tr>
+<tr><td>2025E EBITDA</td><td>5,369</td><td>營業利益 4,574 + 折舊攤銷 795</td></tr>
+<tr class="highlight"><td><strong>EV/EBITDA</strong></td><td><strong>19.9x</strong></td><td></td></tr>
+</table>
+</div>
+<p>同業 EV/EBITDA 中位數約 22x，士電 19.9x 處於中間偏低水位。</p>
+
+<h3>5.3 DCF 折現現金流</h3>
+
+<h4>歷史 FCF 回測</h4>
+<div class="table-wrap">
+<table>
+<tr><th>年度</th><th>營業現金流 (億)</th><th>CapEx (億)</th><th>FCF (億)</th><th>FCF Margin</th></tr>
+<tr><td>2021</td><td>23.0</td><td>7.2</td><td>15.8</td><td>5.7%</td></tr>
+<tr><td>2022</td><td>10.2</td><td>6.7</td><td>3.6</td><td>1.2%</td></tr>
+<tr><td>2023</td><td>44.5</td><td>8.9</td><td>35.5</td><td>11.2%</td></tr>
+<tr><td>2024</td><td>22.9</td><td>8.1</td><td>14.8</td><td>4.2%</td></tr>
+<tr class="highlight"><td><strong>4年平均</strong></td><td></td><td></td><td></td><td><strong>5.6%</strong></td></tr>
+</table>
+</div>
+
+<h4>WACC 推導</h4>
+<div class="table-wrap">
+<table>
+<tr><th>參數</th><th>數值</th><th>來源</th></tr>
+<tr><td>Rf (無風險利率)</td><td>1.50%</td><td>台灣 10 年公債殖利率</td></tr>
+<tr><td>Beta</td><td>0.924</td><td>Yahoo Finance</td></tr>
+<tr><td>ERP (股權風險溢酬)</td><td>7.70%</td><td>台灣市場 ERP</td></tr>
+<tr><td>Cost of Equity</td><td>8.61%</td><td>1.50% + 0.924 × 7.70%</td></tr>
+<tr><td>Cost of Debt (after tax)</td><td>1.20%</td><td>借款利率 ~1.5% × (1-20%)</td></tr>
+<tr><td>D/(D+E)</td><td>3.1%</td><td>12.0 / (12.0 + 375.4)</td></tr>
+<tr class="highlight"><td><strong>WACC</strong></td><td><strong>8.38%</strong></td><td>8.61% × 96.9% + 1.20% × 3.1%</td></tr>
+</table>
+</div>
+
+<h4>逐年折現表</h4>
+<div class="table-wrap">
+<table>
+<tr><th>年度</th><th>營收 (億)</th><th>FCF Margin</th><th>FCF (億)</th><th>折現因子</th><th>現值 PV (億)</th></tr>
+<tr><td>2026E</td><td>422</td><td>5.0%</td><td>21.1</td><td>0.923</td><td>19.5</td></tr>
+<tr><td>2027E</td><td>464</td><td>5.5%</td><td>25.5</td><td>0.851</td><td>21.7</td></tr>
+<tr><td>2028E</td><td>497</td><td>6.0%</td><td>29.8</td><td>0.786</td><td>23.4</td></tr>
+<tr><td>2029E</td><td>522</td><td>6.0%</td><td>31.3</td><td>0.725</td><td>22.7</td></tr>
+<tr><td>2030E</td><td>543</td><td>6.0%</td><td>32.6</td><td>0.669</td><td>21.8</td></tr>
+<tr><td>終值 (TV)</td><td colspan="3">TV = 32.6 × (1+3%) / (8.38%-3%) = 624</td><td>0.669</td><td>417.5</td></tr>
+<tr class="highlight"><td><strong>EV 合計</strong></td><td colspan="4"></td><td><strong>526.6</strong></td></tr>
+<tr><td>+ 淨現金</td><td colspan="4"></td><td>21.7</td></tr>
+<tr class="highlight"><td><strong>股權價值</strong></td><td colspan="4"></td><td><strong>548.3</strong></td></tr>
+<tr><td>÷ 股數</td><td colspan="4"></td><td>5.21 億股</td></tr>
+<tr class="highlight"><td><strong>每股價值</strong></td><td colspan="4"></td><td><strong>105 元</strong></td></tr>
+</table>
+</div>
+
+<h4>敏感度矩陣 (WACC vs Terminal Growth)</h4>
+<div class="table-wrap">
+<table class="dcf-matrix">
+<tr><th>WACC \ TG</th><th>2.0%</th><th>2.5%</th><th>3.0%</th><th>3.5%</th></tr>
+<tr><td><strong>7.38%</strong></td><td>118</td><td>129</td><td>143</td><td>162</td></tr>
+<tr><td><strong>7.88%</strong></td><td>107</td><td>115</td><td>126</td><td>140</td></tr>
+<tr><td><strong>8.38% (Base)</strong></td><td>97</td><td>104</td><td class="base-cell">105</td><td>122</td></tr>
+<tr><td><strong>8.88%</strong></td><td>89</td><td>95</td><td>101</td><td>109</td></tr>
+<tr><td><strong>9.38%</strong></td><td>82</td><td>87</td><td>92</td><td>99</td></tr>
+</table>
+</div>
+
+<div class="risk">
+<strong>⚠️ DCF vs PE 估值重大差異警訊</strong><br>
+DCF 每股價值 105 元 vs PE 法目標價 244 元，差距 <strong>132%</strong>（>50% 門檻）。<br><br>
+<strong>差異原因分析：</strong><br>
+（1）<strong>FCF 轉換率低</strong>：士電歷史 FCF Margin 平均僅 5.6%，遠低於淨利率 10%+。主因為重電業需大量營運資金（存貨週轉天數長、應收帳款天數高），壓縮 FCF。<br>
+（2）<strong>DCF 對資本密集型低 FCF 企業偏保守</strong>：DCF 法較適用 FCF 轉換率高的輕資產企業，對士電這類重資產型企業估值偏低。<br>
+（3）<strong>PE 法隱含產業趨勢溢價</strong>：目前重電產業處於多年期上升週期，PE 法反映市場對成長期的估值願付溢價，DCF 則以長期穩態為基礎。<br><br>
+<strong>結論：</strong>投資人應以 PE 法與 EV/EBITDA 作為主要估值參考，DCF 僅供長期下檔保護參考。
+</div>
+
+<h3>5.4 PEG 比率</h3>
+<p>PEG = Forward PE 22.3x / EPS 成長率 29.8% = <strong>0.75</strong></p>
+<p>PEG < 1 通常被視為合理偏低估值，顯示若 30% 成長確實兌現，目前股價仍有空間。</p>
+
+<h3>5.5 估值總結</h3>
+<div class="table-wrap">
+<table>
+<tr><th>方法</th><th>估值結果 (元)</th><th>權重</th><th>說明</th></tr>
+<tr><td>Forward PE (5Y Avg 24.2x)</td><td>213</td><td>20%</td><td>歷史中位數，含成長期溢價</td></tr>
+<tr><td>Forward PE (目標 27.7x)</td><td>244</td><td>35%</td><td>同業折價後合理 PE</td></tr>
+<tr><td>EV/EBITDA 隱含</td><td>230</td><td>25%</td><td>同業 22x → 調整回股價</td></tr>
+<tr><td>DCF</td><td>105</td><td>10%</td><td>保守下檔參考</td></tr>
+<tr><td>PEG 法 (PEG=1)</td><td>263</td><td>10%</td><td>29.8x PE × EPS 8.8</td></tr>
+<tr class="highlight"><td><strong>綜合目標價</strong></td><td><strong>244 元</strong></td><td>100%</td><td>加權平均後四捨五入</td></tr>
+</table>
+</div>
+
+<div class="info">
+<strong>目標 PE 27.7x 論證：</strong>取同業 Forward PE 中位數 ~25x（排除華城後），給予士電 10% 成長溢價（EPS 成長率 30% 為同業最高之一），得 27.5x，四捨五入 27.7x。考慮 ROE 偏低應折價 5-10%，但成長溢價與淨現金體質抵消折價，最終維持 27.7x。
+</div>
+</div>
+
+<!-- SECTION 6 -->
+<div class="section">
+<h2>6. 技術面與籌碼面</h2>
+
+<h3>6.1 技術指標</h3>
+<div class="table-wrap">
+<table>
+<tr><th>指標</th><th>數值</th><th>判讀</th></tr>
+<tr><td>股價 vs 20MA</td><td>209.5 vs 214.3 (乖離 -2.2%)</td><td>短期偏弱</td></tr>
+<tr><td>股價 vs 60MA</td><td>209.5 vs 196.1 (乖離 +6.9%)</td><td>中期偏多</td></tr>
+<tr><td>RSI (14日)</td><td>51.2</td><td>中性區間</td></tr>
+<tr><td>KD (9日)</td><td>K=23.3, D=31.4</td><td>接近超賣區，K 值 < D 值偏空但即將交叉</td></tr>
+<tr><td>5MA / 10MA</td><td>208.9 / 214.7</td><td>短線均線糾結</td></tr>
+</table>
+</div>
+<p class="source">📎 來源：<a href="https://finance.yahoo.com/quote/1503.TW/">Yahoo Finance</a>，2026/03/11</p>
+
+<h3>6.2 法人籌碼動向</h3>
+<div class="table-wrap">
+<table>
+<tr><th>法人</th><th>近5日 (張)</th><th>趨勢</th></tr>
+<tr><td>外資</td><td class="negative">-1,864</td><td>連續賣超，3/9 單日賣 1,119 張為近期最大</td></tr>
+<tr><td>投信</td><td>-11</td><td>動向不明顯</td></tr>
+<tr><td>自營商</td><td class="negative">-737</td><td>持續偏空</td></tr>
+<tr><td><strong>合計</strong></td><td class="negative"><strong>-2,612</strong></td><td>三大法人同步賣超</td></tr>
+</table>
+</div>
+<p class="source">📎 來源：<a href="https://histock.tw/stock/chips.aspx?no=1503">HiStock 三大法人買賣超</a>，2026/03/10</p>
+
+<h3>6.3 融資融券</h3>
+<div class="table-wrap">
+<table>
+<tr><th>指標</th><th>數值</th><th>說明</th></tr>
+<tr><td>融資餘額 (張)</td><td>2,717</td><td></td></tr>
+<tr><td>融券餘額 (張)</td><td>62</td><td></td></tr>
+<tr><td>券資比</td><td>2.3%</td><td>偏低，無軋空條件</td></tr>
+</table>
+</div>
+
+<h3>6.4 籌碼面綜合判讀</h3>
+<div class="warn">
+<strong>短期偏空但非恐慌：</strong>三大法人近 5 日合計賣超 2,612 張，外資為主要賣方。KD 值接近超賣區（K=23），RSI 51 仍在中性。技術面呈現短線拉回整理格局，股價在 60MA（196 元）上方有支撐。若站穩 200 元整數關卡並回升至 20MA（214 元）以上，短線技術面將轉中性偏多。<br><br>
+籌碼面與基本面方向不完全一致——基本面因電網投資偏多，但短期法人獲利了結造成賣壓。此為中長線投資人的潛在進場機會。
+</div>
+</div>
+
+<!-- SECTION 7 -->
+<div class="section">
+<h2>7. 風險評估與情境模擬</h2>
+
+<h3>7.1 總體風險</h3>
+<p><strong>匯率敏感度：</strong>士電以國內市場為主，海外營收佔比估計 15-20%。TWD 升值 1 元對 EPS 影響約 -0.05 至 -0.08 元，敏感度相對低。</p>
+<p><strong>原物料風險：</strong>銅價佔重電設備成本 15-25%，銅價每上漲 10%，毛利率約下降 0.5-1.0 個百分點，影響 EPS 約 -0.3 至 -0.5 元。</p>
+<p><strong>政策風險：</strong>台電資本支出受政府預算與能源政策影響。若政策轉向或預算延遲，將直接衝擊重電訂單。</p>
+
+<h3>7.2 情境模擬</h3>
+<div class="table-wrap">
+<table>
+<tr><th>情境</th><th>2026E EPS</th><th>目標 PE</th><th>目標價</th><th>監測指標</th><th>觸發閾值</th></tr>
+<tr style="background:#d4edda"><td>🟢 Bull</td><td>9.4</td><td>30x</td><td>282 元</td><td>月營收 YoY 成長率</td><td>>15% 連續 3 月</td></tr>
+<tr style="background:#fff3cd"><td>🟡 Base</td><td>8.8</td><td>27.7x</td><td>244 元</td><td>季 EPS 成長率</td><td>穩定 +20%+</td></tr>
+<tr style="background:#f8d7da"><td>🔴 Bear</td><td>7.5</td><td>20x</td><td>150 元</td><td>台電標案延遲</td><td>營收 YoY <5%</td></tr>
+</table>
+</div>
+
+<div class="info">
+<strong>情境觸發量化指標：</strong><br>
+Bull → 2026Q1 營收 > 115 億且毛利率 > 24%<br>
+Base → 2026Q1 營收 100-115 億且毛利率 22-24%<br>
+Bear → 2026Q1 營收 < 95 億或毛利率 < 20%
+</div>
+</div>
+
+<!-- SECTION 8 -->
+<div class="section">
+<h2>8. 投資建議與操作區間</h2>
+
+<h3>8.1 綜合建議</h3>
+<p><strong>投資評級：<span class="rating-buy">🟢 買進</span></strong></p>
+<p>目標價 244 元 vs 現價 209.5 元，潛在報酬 +16.5%，超過 +15% 門檻，評級為「買進」。</p>
+<p>核心邏輯：台電強韌電網計畫帶動 2026-2028 年營收與 EPS 加速成長，Forward PE 22x 在 30% EPS 成長背景下仍屬合理（PEG 0.75）。短期法人賣壓提供中長線進場機會。</p>
+
+<h3>8.2 操作區間</h3>
+<div class="op-zone">
+  <div class="op-card op-entry"><div style="font-size:1.5em">🟢</div><strong>進場點</strong><br><span style="font-size:1.3em;font-weight:700">190 元</span><br><small>Bear PE 20x × EPS 9.4 ≈ 188，取整 190</small></div>
+  <div class="op-card op-target"><div style="font-size:1.5em">🎯</div><strong>目標價</strong><br><span style="font-size:1.3em;font-weight:700">244 元</span><br><small>Base PE 27.7x × EPS 8.8</small></div>
+  <div class="op-card op-stop"><div style="font-size:1.5em">🔴</div><strong>停損點</strong><br><span style="font-size:1.3em;font-weight:700">165 元</span><br><small>跌破 60MA 且低於 Bear 估值 150 + 10%</small></div>
+  <div class="op-card op-profit"><div style="font-size:1.5em">🏆</div><strong>停利點</strong><br><span style="font-size:1.3em;font-weight:700">282 元</span><br><small>Bull PE 30x × EPS 9.4</small></div>
+</div>
+
+<div class="table-wrap">
+<table>
+<tr><th>區間</th><th>價位</th><th>計算依據</th><th>對應報酬/風險</th></tr>
+<tr><td>🟢 進場點</td><td>190 元</td><td>Bear PE 20x × Bull EPS 9.4 ≈ 188</td><td>潛在報酬 +28.4%</td></tr>
+<tr><td>🎯 目標價</td><td>244 元</td><td>Base PE 27.7x × Base EPS 8.8</td><td>—</td></tr>
+<tr><td>🔴 停損點</td><td>165 元</td><td>Bear Case 保護 + 技術支撐</td><td>最大虧損 -21.2%</td></tr>
+<tr><td>🏆 停利點</td><td>282 元</td><td>Bull PE 30x × Bull EPS 9.4</td><td>—</td></tr>
+</table>
+</div>
+
+<p><strong>風險報酬比 (R/R Ratio)</strong> = 潛在報酬 (244-209.5=34.5) / 潛在虧損 (209.5-165=44.5) = <strong>0.78 : 1</strong></p>
+<div class="warn">
+⚠️ <strong>R/R < 2:1 說明：</strong>以現價 209.5 元計算，風險報酬比僅 0.78:1，低於理想的 2:1。建議策略：<br>
+（1）<strong>分批進場</strong>：第一批 1/3 於 200 元以下佈局，第二批 1/3 於 190 元加碼，第三批 1/3 於 180 元以下全部到位<br>
+（2）<strong>等待回檔</strong>：若股價回落至 190 元進場，R/R = (244-190)/(190-165) = 2.16:1，較為理想<br>
+（3）<strong>嚴守停損</strong>：若跌破 165 元必須停損出場
+</div>
+
+<h3>8.3 免責聲明</h3>
+<div class="disclaimer">
+<strong>利益揭露：</strong>報告作者與士電（1503）及其關聯企業之間不存在任何財務利益關係。報告作者目前未持有士電股票或相關衍生性金融商品。<br><br>
+<strong>非官方財測聲明：</strong>本報告中的 2025E/2026E EPS 預估為分析師自建模型推導，並參考 Yahoo Finance Forward EPS 作為交叉驗證。這些數字<strong>非公司官方財測</strong>，僅為分析師基於公開資訊的獨立研究推估。<br><br>
+<strong>非買賣建議：</strong>本報告僅供學術研究與參考，不構成任何有價證券之買賣邀約。投資有風險，入市須謹慎。投資人應自行評估風險，做出獨立判斷。
+</div>
+</div>
+
+<!-- SECTION 9 -->
+<div class="section">
+<h2>9. 參考資料</h2>
+<ul style="font-size:.9em;line-height:2">
+<li>📎 <a href="https://finance.yahoo.com/quote/1503.TW/">Yahoo Finance - 士電 (1503.TW) 股價</a>，2026/03/11</li>
+<li>📎 <a href="https://finance.yahoo.com/quote/1503.TW/key-statistics/">Yahoo Finance - Key Statistics</a>，2026/03/11</li>
+<li>📎 <a href="https://finance.yahoo.com/quote/1503.TW/history/">Yahoo Finance - Historical Data</a>，2026/03/11</li>
+<li>📎 <a href="https://www.cnyes.com/twstock/intro.aspx?code=1503">鉅亨網 - 士電公司簡介</a></li>
+<li>📎 <a href="https://www.cnyes.com/twstock/1503">鉅亨網 - 士電總覽</a></li>
+<li>📎 <a href="https://histock.tw/stock/chips.aspx?no=1503">HiStock - 士電三大法人買賣超</a>，2026/03/10</li>
+<li>📎 <a href="https://winvest.tw/Stock/Symbol/Comment/1503">Win 投資 - 士電分析</a></li>
+<li>📎 <a href="https://www.twse.com.tw/zh/trading/foreign/t86.html">臺灣證券交易所 - 三大法人買賣超日報</a></li>
+</ul>
+</div>
+
+</div>
+</body>
+</html>

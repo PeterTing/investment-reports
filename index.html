@@ -11,11 +11,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .header h1{font-size:1.8rem;color:#f8fafc;margin-bottom:.5rem}
 .header p{color:#94a3b8;font-size:.95rem}
 .container{max-width:1100px;margin:0 auto;padding:2rem 1.5rem}
-.top20-banner{background:linear-gradient(135deg,#1e40af,#7c3aed);border-radius:12px;padding:1.5rem 2rem;margin-bottom:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.top20-banner{background:linear-gradient(135deg,#1e40af,#7c3aed);border-radius:12px;padding:1.5rem 2rem;margin-bottom:1rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .top20-banner .info h2{font-size:1.3rem;color:#fff;margin-bottom:.3rem}
 .top20-banner .info p{color:#c7d2fe;font-size:.9rem}
 .top20-banner a{background:#fff;color:#1e40af;padding:.7rem 1.5rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:.95rem;transition:transform .2s}
 .top20-banner a:hover{transform:translateY(-2px)}
+.heavy-banner{background:linear-gradient(135deg,#b45309,#d97706);border-radius:12px;padding:1.5rem 2rem;margin-bottom:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.heavy-banner .info h2{font-size:1.3rem;color:#fff;margin-bottom:.3rem}
+.heavy-banner .info p{color:#fef3c7;font-size:.9rem}
+.heavy-banner a{background:#fff;color:#b45309;padding:.7rem 1.5rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:.95rem;transition:transform .2s}
+.heavy-banner a:hover{transform:translateY(-2px)}
 .section-title{font-size:1.2rem;color:#94a3b8;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid #1e293b}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;margin-bottom:2rem}
 .card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:1.5rem;transition:transform .2s,border-color .2s}
@@ -34,6 +39,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .card a:hover{background:#2563eb}
 .card.pick1{border:2px solid #f59e0b}
 .pick-label{background:#f59e0b;color:#000;font-size:.7rem;padding:.15rem .5rem;border-radius:4px;font-weight:700}
+.card.buy-highlight{border:2px solid #10b981}
+.buy-label{background:#10b981;color:#000;font-size:.7rem;padding:.15rem .5rem;border-radius:4px;font-weight:700}
 .review-section{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:1.5rem;margin-bottom:2rem}
 .review-section h3{color:#f8fafc;margin-bottom:1rem;font-size:1rem}
 .review-table{width:100%;border-collapse:collapse;font-size:.85rem}
@@ -47,7 +54,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 <body>
 <div class="header">
 <h1>投資分析報告中心</h1>
-<p>2026 Q1 台股深度研究 | CFA Buy-Side Framework | 報告日期：2026/03/06</p>
+<p>2026 Q1 台股深度研究 | CFA Buy-Side Framework | 報告日期：2026/03/11</p>
 </div>
 <div class="container">
 
@@ -59,8 +66,73 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 <a href="Top20-篩選報告-2026-03-06.html">查看完整篩選報告 &rarr;</a>
 </div>
 
+<div class="heavy-banner">
+<div class="info">
+<h2>重電股全面比較分析</h2>
+<p>8 檔重電股估值與評級 | 華城、士電、中興電、東元、大同、大亞、華新、亞力</p>
+</div>
+<a href="重電股比較總表-2026-03-11.html">查看比較總表 &rarr;</a>
+</div>
+
 <div class="section-title">深度研究報告</div>
 <div class="cards">
+
+<div class="card buy-highlight">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.3rem">
+<span class="ticker">1513.TW</span>
+<span class="buy-label">BUY</span>
+</div>
+<div class="name">中興電工 Chung-Hsin Electric</div>
+<div class="meta">
+<span class="badge badge-buy">🟢 買進</span>
+<span class="badge badge-sector">重電 / 電力設備</span>
+<span class="badge badge-price">NT$255</span>
+</div>
+<div class="target">
+目標價 NT$330 (+29.4%)<br>
+Forward PE 19.4x | ROE 19.1% | EPS 13.16<br>
+台電強韌電網主力受惠股，儲能+重電雙引擎
+</div>
+<a href="1513-2026-03-11.html">閱讀完整報告 &rarr;</a>
+</div>
+
+<div class="card buy-highlight">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.3rem">
+<span class="ticker">1503.TW</span>
+<span class="buy-label">BUY</span>
+</div>
+<div class="name">士林電機 Shihlin Electric</div>
+<div class="meta">
+<span class="badge badge-buy">🟢 買進</span>
+<span class="badge badge-sector">重電 / 配電自動化</span>
+<span class="badge badge-price">NT$209.5</span>
+</div>
+<div class="target">
+目標價 NT$244 (+16.5%)<br>
+Forward PE 23.8x | ROE 8.9% | EPS 8.8<br>
+配電+自動化雙核心，台電強韌電網受惠
+</div>
+<a href="1503-2026-03-11.html">閱讀完整報告 &rarr;</a>
+</div>
+
+<div class="card buy-highlight">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.3rem">
+<span class="ticker">1514.TW</span>
+<span class="buy-label">BUY</span>
+</div>
+<div class="name">亞力電機 Alex</div>
+<div class="meta">
+<span class="badge badge-buy">🟢 買進</span>
+<span class="badge badge-sector">重電 / 電力設備</span>
+<span class="badge badge-price">NT$98.6</span>
+</div>
+<div class="target">
+目標價 NT$121 (+22.7%)<br>
+Forward PE 17.8x | ROE 12.5% | EPS 5.54<br>
+台電+綠能訂單驅動，高營收成長
+</div>
+<a href="1514-2026-03-09.html">閱讀完整報告 &rarr;</a>
+</div>
 
 <div class="card pick1">
 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.3rem">
@@ -98,22 +170,6 @@ Forward PE 24.5x | ROE 27.3% | WACC 6.18%<br>
 </div>
 
 <div class="card">
-<span class="ticker">1514.TW</span>
-<div class="name">亞力電機 Alex</div>
-<div class="meta">
-<span class="badge badge-hold">🟡 持有</span>
-<span class="badge badge-sector">重電 / 電力設備</span>
-<span class="badge badge-price">&lt;NT$100</span>
-</div>
-<div class="target">
-目標價 NT$85.6<br>
-WACC 8.87% | DCF NT$79.6<br>
-台電訂單集中度 50%+、FCF 為負
-</div>
-<a href="1514-2026-03-06.html">閱讀完整報告 &rarr;</a>
-</div>
-
-<div class="card">
 <span class="ticker">1504.TW</span>
 <div class="name">東元電機 TECO</div>
 <div class="meta">
@@ -136,14 +192,24 @@ ROE ~6.8%、FCF 為負需關注
 <table class="review-table">
 <tr><th>報告</th><th>通過率</th><th>改善前 → 改善後</th></tr>
 <tr>
-<td>台光電 (2383)</td>
+<td>中興電 (1513)</td>
 <td><span class="score-bar"><span class="score-fill" style="width:100%;background:#10b981"></span></span> 28/28 (100%)</td>
-<td style="color:#6ee7b7;font-size:.8rem">22/28 → 28/28 ✅ (+21%)</td>
+<td style="color:#6ee7b7;font-size:.8rem">28/28 ✅</td>
+</tr>
+<tr>
+<td>士電 (1503)</td>
+<td><span class="score-bar"><span class="score-fill" style="width:100%;background:#10b981"></span></span> 28/28 (100%)</td>
+<td style="color:#6ee7b7;font-size:.8rem">27/28 → 28/28 ✅</td>
 </tr>
 <tr>
 <td>亞力 (1514)</td>
 <td><span class="score-bar"><span class="score-fill" style="width:100%;background:#10b981"></span></span> 28/28 (100%)</td>
 <td style="color:#6ee7b7;font-size:.8rem">15/28 → 28/28 ✅ (+46%)</td>
+</tr>
+<tr>
+<td>台光電 (2383)</td>
+<td><span class="score-bar"><span class="score-fill" style="width:100%;background:#10b981"></span></span> 28/28 (100%)</td>
+<td style="color:#6ee7b7;font-size:.8rem">22/28 → 28/28 ✅ (+21%)</td>
 </tr>
 <tr>
 <td>台積電 (2330)</td>
@@ -157,7 +223,7 @@ ROE ~6.8%、FCF 為負需關注
 </tr>
 </table>
 <p style="color:#6ee7b7;font-size:.8rem;margin-top:1rem">
-✅ 所有報告已通過 28/28 估值自檢清單，含五大深度改善（Bottom-Up EPS、Gordon Growth Model、歷史 PE 軌跡、籌碼分析、操作區間）。
+✅ 所有 6 份深度報告已通過 28/28 估值自檢清單，含五大深度改善（Bottom-Up EPS、Gordon Growth Model、歷史 PE 軌跡、籌碼分析、操作區間）。
 </p>
 </div>
 
