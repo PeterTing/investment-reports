@@ -166,8 +166,8 @@
       "price": 1890,
       "currency": "TWD",
       "rating": "Buy",
-      "target_price": 1250,
-      "upside": "-33.9%",
+      "target_price": 2300,
+      "upside": "+21.7%",
       "scores": {
         "fundamental": 9,
         "chip": 8,
@@ -177,9 +177,10 @@
         "industry": 9
       },
       "total_score": 49,
-      "summary": "全球晶圓代工龍頭，2 月營收創同期新高，CoWoS/先進封裝產能持續擴充",
+      "summary": "AI 先進製程需求強勁，2026E EPS 上修至 90-95 元，外資目標價共識 2,290 元，CoWoS 產能持續擴充支撐成長。",
       "deep_report": null,
-      "name_en": "TSMC"
+      "name_en": "TSMC",
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS 92 元（法人共識上修至 90-95 元），給予 25x Forward PE（考量 AI 先進製程需求強勁）。計算：25 × 92 = 2,300 元。"
     },
     {
       "ticker": "2382.TW",
@@ -255,23 +256,24 @@
       "ticker": "2383.TW",
       "name": "台光電",
       "market": "TW",
-      "price": 2365,
+      "price": 2360,
       "currency": "TWD",
-      "rating": "Buy",
-      "target_price": 560,
-      "upside": "-76.3%",
+      "rating": "Hold",
+      "target_price": 2600,
+      "upside": "+10.2%",
       "scores": {
         "fundamental": 8,
-        "chip": 7,
-        "technical": 7,
+        "chip": 6,
+        "technical": 5,
         "catalyst": 8,
         "macro": 7,
         "industry": 8
       },
-      "total_score": 45,
-      "summary": "高階 CCL 龍頭，AI 伺服器 PCB 材料需求強勁，毛利率持續改善",
+      "total_score": 42,
+      "summary": "AI CCL 材料龍頭，2026 年 M8+ 規格升級帶動成長，但股價已超越多數券商目標價，估值偏高需等拉回。",
       "deep_report": null,
-      "name_en": "Elite Material"
+      "name_en": "Elite Material",
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS 64 元，給予 40.6x Forward PE（AI CCL 高成長但估值已偏高）。計算：40.6 × 64 ≈ 2,600 元。高盛目標價 2,060 元已被突破，短線漲幅過大，調降為 Hold。"
     },
     {
       "rank": 8,
@@ -511,11 +513,11 @@
       "ticker": "MU",
       "name": "Micron Technology",
       "market": "US",
-      "price": 416.0,
+      "price": 418,
       "currency": "USD",
       "rating": "Buy",
-      "target_price": 120,
-      "upside": "-71.2%",
+      "target_price": 480,
+      "upside": "+14.8%",
       "scores": {
         "fundamental": 8,
         "chip": 7,
@@ -525,10 +527,10 @@
         "industry": 9
       },
       "total_score": 46,
-      "summary": "HBM3E 量產領先，記憶體超級週期受惠者，AI 伺服器 DRAM 需求爆發",
+      "summary": "HBM3E 量產帶動獲利飆升，FY2026E EPS $33.38 年增逾 3 倍，AI 記憶體需求持續擴大。",
       "deep_report": null,
       "name_en": "Micron Technology",
-      "target_price_basis": "【Forward PE 法】採用 FY2026E EPS $41.6（摩根士丹利首選半導體股），給予 Forward PE 10.8x（記憶體業循環高峰 PE 通常 8-15x，HBM 溢價使 PE 維持中高區間）。計算：10.8 × 41.6 = $449 ≈ $450。催化劑：HBM4 產能售罄至 2027、DRAM ASP 連 6 季上漲。PEG 驗證：PE 10.8 / EPS 成長率 18% = 0.6，嚴重低估。"
+      "target_price_basis": "【Forward PE 法】採用 FY2026E EPS $33.38（共識預估），給予 14.4x Forward PE（HBM 需求爆發期）。計算：14.4 × 33.38 ≈ $480。分析師共識目標價 $438，最高 $500。"
     },
     {
       "rank": 9,
