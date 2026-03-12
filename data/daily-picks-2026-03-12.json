@@ -2,7 +2,7 @@
   "date": "2026-03-12",
   "market_summary": {
     "tw": "台股 3/11 暴漲逾 1,200 點重返 34,000 點，外資結束連 8 日賣超回補 371.81 億元。台積電 2 月營收 YoY +22.17% 創同期新高。AI 伺服器散熱/液冷需求持續爆發，奇鋐 3017 受惠 NVIDIA GB 系列訂單能見度高。群創獲 NVIDIA 顯示器訂單鎖漲停。面板雙虎受惠 AI 顯示需求回溫。",
-    "us": "美股 AI/半導體持續為主流敘事，Hyperscalers 2026 年規劃 $700B+ AI 資料中心支出。記憶體超級週期：DRAM/NAND 面臨 30 年來最嚴重短缺。Broadcom 受惠客製化 AI 晶片（XPU）需求，Micron 受惠 HBM3E 量產。Navitas 為 GaN 功率半導體新星，受惠 AI 資料中心電力需求。"
+    "us": "3/12 美股盤中下跌約 1%，中東衝突升級（伊朗-以色列-GCC 交火擴大、荷莫茲海峽通行受阻）推升油價飆漲，WTI 漲逾 4% 至 $87.25、Brent 近 $92，停滯性通膨（stagflation）擔憂加劇。VIX 維持 24.23 偏高水位。金融股受壓（Morgan Stanley 限制私人信貸基金贖回）。S&P 500 盤中約 5,720，跌至年內新低。AI/半導體股普跌但中長期需求敘事不變。"
   },
   "scoring_methodology": {
     "description": "統一六維度評分體系，每項 1-10 分，滿分 60 分。精選標的須達 45 分以上且評級為 Buy。",
@@ -351,12 +351,12 @@
       "name": "Microsoft",
       "name_en": "Microsoft Corp",
       "market": "US",
-      "price": 405.76,
+      "price": 403.06,
       "currency": "USD",
       "rating": "Buy",
       "target_price": 550,
       "target_price_basis": "【Forward PE 法】採用 FY2027E EPS $17.23（分析師共識），給予 Forward PE 32x（Azure AI 成長溢價）。計算：32 × 17.23 = $551 ≈ $550。催化劑：Azure 營收 YoY +33%、Copilot 企業採用加速。",
-      "upside": "+35.6%",
+      "upside": "+36.5%",
       "scores": {
         "fundamental": 9,
         "chip": 8,
@@ -374,12 +374,12 @@
       "name": "Vistra",
       "name_en": "Vistra Corp",
       "market": "US",
-      "price": 163.62,
+      "price": 160.84,
       "currency": "USD",
       "rating": "Buy",
       "target_price": 210,
       "target_price_basis": "【Forward PE 法】採用 2026E EPS $12（AI 資料中心電力需求），給予 Forward PE 17.5x。計算：17.5 × 12 = $210。催化劑：核能重啟、AI 資料中心用電需求暴增。",
-      "upside": "+28.4%",
+      "upside": "+30.6%",
       "scores": {
         "fundamental": 8,
         "chip": 7,
@@ -397,12 +397,12 @@
       "name": "Constellation Energy",
       "name_en": "Constellation Energy Corp",
       "market": "US",
-      "price": 317.09,
+      "price": 301.84,
       "currency": "USD",
       "rating": "Buy",
       "target_price": 400,
       "target_price_basis": "【Forward PE 法】採用 2026E EPS $18（核能電廠受惠 AI 電力合約），給予 Forward PE 22x。計算：22 × 18 = $396 ≈ $400。催化劑：Microsoft 核能合約、政策支持核能重啟。",
-      "upside": "+26.2%",
+      "upside": "+32.5%",
       "scores": {
         "fundamental": 8,
         "chip": 7,
@@ -420,12 +420,12 @@
       "name": "Applied Materials",
       "name_en": "Applied Materials Inc",
       "market": "US",
-      "price": 345.88,
+      "price": 340.17,
       "currency": "USD",
       "rating": "Buy",
       "target_price": 420,
       "target_price_basis": "【Forward PE 法】採用 FY2026E EPS $20（半導體設備週期上行），給予 Forward PE 21x。計算：21 × 20 = $420。催化劑：先進製程設備需求、DRAM/HBM 產能擴充。",
-      "upside": "+21.4%",
+      "upside": "+23.5%",
       "scores": {
         "fundamental": 8,
         "chip": 8,
@@ -443,11 +443,11 @@
       "ticker": "AVGO",
       "name": "Broadcom",
       "market": "US",
-      "price": 342.58,
+      "price": 334.7,
       "currency": "USD",
       "rating": "Buy",
       "target_price": 420,
-      "upside": "+22.6%",
+      "upside": "+25.5%",
       "scores": {
         "fundamental": 8,
         "chip": 8,
@@ -467,12 +467,12 @@
       "name": "Palo Alto Networks",
       "name_en": "Palo Alto Networks Inc",
       "market": "US",
-      "price": 165.58,
+      "price": 166.58,
       "currency": "USD",
       "rating": "Buy",
       "target_price": 210,
       "target_price_basis": "【Forward PE 法】採用 FY2026E EPS $7.5（資安平台化策略），給予 Forward PE 28x。計算：28 × 7.5 = $210。催化劑：AI 資安需求、平台化策略提升 ARPU。",
-      "upside": "+26.8%",
+      "upside": "+26.1%",
       "scores": {
         "fundamental": 8,
         "chip": 7,
@@ -490,12 +490,12 @@
       "name": "CrowdStrike",
       "name_en": "CrowdStrike Holdings Inc",
       "market": "US",
-      "price": 439.5,
+      "price": 445.28,
       "currency": "USD",
       "rating": "Buy",
       "target_price": 550,
       "target_price_basis": "【Forward PE 法】採用 FY2027E EPS $6.5（雲端資安高成長），給予 Forward PE 85x（高成長 SaaS 溢價）。計算：85 × 6.5 = $552 ≈ $550。催化劑：Falcon 平台模組擴展、AI SOC 需求。",
-      "upside": "+25.1%",
+      "upside": "+23.5%",
       "scores": {
         "fundamental": 8,
         "chip": 7,
@@ -513,11 +513,11 @@
       "ticker": "MU",
       "name": "Micron Technology",
       "market": "US",
-      "price": 418,
+      "price": 406.5,
       "currency": "USD",
       "rating": "Buy",
       "target_price": 480,
-      "upside": "+14.8%",
+      "upside": "+18.1%",
       "scores": {
         "fundamental": 8,
         "chip": 7,
@@ -537,11 +537,11 @@
       "ticker": "NVDA",
       "name": "NVIDIA",
       "market": "US",
-      "price": 186.03,
+      "price": 183.03,
       "currency": "USD",
       "rating": "Hold",
       "target_price": 200,
-      "upside": "+7.5%",
+      "upside": "+9.3%",
       "scores": {
         "fundamental": 9,
         "chip": 7,
@@ -561,11 +561,11 @@
       "ticker": "NVTS",
       "name": "Navitas Semiconductor",
       "market": "US",
-      "price": 10.46,
+      "price": 10.55,
       "currency": "USD",
       "rating": "Buy",
       "target_price": 14,
-      "upside": "+33.8%",
+      "upside": "+32.7%",
       "scores": {
         "fundamental": 5,
         "chip": 6,
@@ -1022,10 +1022,10 @@
         "items": [
           {
             "name": "VIX 恐慌指數",
-            "value": "23.6",
-            "trend": "下降",
+            "value": "24.23",
+            "trend": "微降",
             "signal": "caution",
-            "detail": "3/6 一度衝高至 29.5，因中東地緣政治風險；3/10 川普釋出停火訊號後暴跌 13.5%。VIX > 20 仍屬偏高水位，顯示市場仍有不安情緒。",
+            "detail": "3/12 VIX 24.23，雖較 3/6 高點 29.5 回落，但仍高於 20 門檻。中東局勢升溫（伊朗-以色列-GCC 交火）維持市場高度不安。",
             "source": "https://fred.stlouisfed.org/series/VIXCLS"
           },
           {
@@ -1044,10 +1044,10 @@
         "items": [
           {
             "name": "S&P 500",
-            "value": "5,770",
-            "trend": "震盪",
-            "signal": "neutral",
-            "detail": "3/10 收在約 5,770，近一週因關稅與中東局勢震盪，距歷史高點回落約 5%。JPMorgan 警告可能出現 10% 修正。",
+            "value": "~5,720",
+            "trend": "下跌",
+            "signal": "negative",
+            "detail": "3/12 盤中跌約 1%，中東衝突升級+油價飆漲推動停滯性通膨擔憂。跌至年內新低，距歷史高點回落約 6-7%。",
             "source": "https://tradingeconomics.com/united-states/stock-market"
           },
           {
@@ -1066,10 +1066,10 @@
         "items": [
           {
             "name": "中東地緣風險",
-            "value": "中高",
-            "trend": "降溫中",
-            "signal": "caution",
-            "detail": "以巴衝突持續，但川普 3/10 表示戰爭可能即將結束。油價仍高於 $75/桶，若停火協議達成將大幅降低通膨風險。"
+            "value": "高",
+            "trend": "升溫",
+            "signal": "negative",
+            "detail": "3/12 伊朗-以色列-GCC 衝突擴大，荷莫茲海峽油輪通行受阻，IEA 釋放 4 億桶戰略儲油仍無法壓抑油價。WTI $87.25、Brent $91.98。"
           },
           {
             "name": "川普關稅政策",
