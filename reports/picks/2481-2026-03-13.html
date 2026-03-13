@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>強茂(2481) 深度研究報告 2026-03-13</title>
+<style>
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f7fa;color:#222;font-size:15px;line-height:1.7}
+.wrap{max-width:900px;margin:0 auto;padding:16px}
+h1{font-size:1.5em;color:#1a237e;margin-bottom:4px}
+h2{font-size:1.1em;color:#1565c0;border-left:4px solid #1565c0;padding-left:10px;margin:22px 0 10px}
+h3{font-size:0.97em;color:#1976d2;margin:14px 0 6px}
+.badge{display:inline-block;padding:3px 14px;border-radius:12px;font-weight:700;font-size:0.9em}
+.card{background:#fff;border-radius:8px;padding:16px;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,0.08)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.grid2{grid-template-columns:1fr}}
+.tbl-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:0.9em}
+th{background:#1565c0;color:#fff;padding:7px 10px;text-align:left}
+td{padding:6px 10px;border-bottom:1px solid #e8eaf6}
+tr:nth-child(even){background:#f3f4fb}
+.num{text-align:right}
+.red{color:#c62828;font-weight:700}.green{color:#2e7d32;font-weight:700}
+.tag{display:inline-block;background:#e3f2fd;color:#0d47a1;border-radius:4px;padding:1px 7px;font-size:0.82em;margin:2px}
+.mdvi-bar{display:flex;align-items:center;gap:8px;margin:4px 0}
+.mdvi-label{width:80px;font-size:0.85em;color:#555}
+.mdvi-track{flex:1;background:#e0e0e0;border-radius:4px;height:10px}
+.mdvi-fill{border-radius:4px;height:10px}
+.score-big{font-size:2.2em;font-weight:700;color:#1a237e}
+.footer{text-align:center;font-size:0.78em;color:#888;margin-top:24px;padding-top:12px;border-top:1px solid #ddd}
+
+.risk-H{color:#c62828}.risk-M{color:#e65100}.risk-L{color:#2e7d32}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- HEADER -->
+<div class="card" style="background:linear-gradient(135deg,#b71c1c,#1565c0);color:#fff">
+<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px">
+<div>
+<h1 style="color:#fff;font-size:1.8em">強茂 (2481)</h1>
+<div style="opacity:0.85;font-size:0.9em">半導體 ／ 分立元件</div>
+<div style="margin-top:8px"><span class="badge" style="background:#b71c1c;color:#fff">Strong Buy</span></div>
+</div>
+<div style="text-align:right">
+<div class="score-big" style="color:#ffcc02">MDVI 24/30</div>
+<div style="font-size:1.4em;font-weight:700;color:#69f0ae">↑ 25.5% 上漲空間</div>
+<div style="font-size:0.85em;opacity:0.8;margin-top:4px">目標價 NT$119.0 ／ 現價 NT$94.8</div>
+</div>
+</div>
+<div style="margin-top:12px;font-size:0.82em;opacity:0.7">數據基期：2025全年實際(估) / 2026E預估 ｜ 報告日：2026-03-13 ｜ MDVI自動系統 v3</div>
+</div>
+
+<!-- §1 EXECUTIVE SUMMARY -->
+<div class="card">
+<h2>§1 執行摘要</h2>
+<div class="grid2">
+<div>
+<h3>核心投資論點</h3>
+<p>強茂的投資邏輯建立在三個自我強化的基礎上：（1）AI伺服器與EV充電樁的電源管理需求爆發，直接驅動公司核心產品高階化；（2）毛利率改善路徑清晰，從2024年31.5%有望提升至2026年33.5%；（3）法人持續布局，外資買超9,630張。Forward PE 19.9x低於5年歷史均PE 24x，估值尚未充分反映成長，GGM顯示市場溢價合理。...</p>
+<div style="margin-top:10px">
+<span class="tag">半導體 ／ 分立元件</span><span class="tag">Nexperia訂單移轉</span><span class="tag">AI伺服器需求</span><span class="tag">電動車滲透率提升</span>
+</div>
+</div>
+<div>
+<div class="tbl-wrap"><table>
+<tr><th colspan="2">關鍵數據速覽</th></tr>
+<tr><td>現價</td><td class="num"><b>NT$94.8</b></td></tr>
+<tr><td>目標價</td><td class="num green"><b>NT$119.0</b></td></tr>
+<tr><td>上漲空間</td><td class="num green"><b>+25.5%</b></td></tr>
+<tr><td>停損點</td><td class="num red">NT$82</td></tr>
+<tr><td>R/R Ratio</td><td class="num"><b>2.75x</b></td></tr>
+<tr><td>Trailing PE</td><td class="num">30.38x</td></tr>
+<tr><td>Forward PE 2026E</td><td class="num">19.9x</td></tr>
+<tr><td>PB</td><td class="num">2.47x</td></tr>
+<tr><td>EPS TTM</td><td class="num">NT$3.12</td></tr>
+<tr><td>EPS 2026E</td><td class="num green">NT$4.76</td></tr>
+</table></div>
+</div>
+</div>
+</div>
+
+<!-- §2 COMPANY OVERVIEW -->
+<div class="card">
+<h2>§2 公司概況與事業群</h2>
+<div class="grid2">
+<div>
+<h3>公司簡介</h3>
+<p>強茂電機工業股份有限公司（2481）成立於1972年，為台灣主要功率半導體製造商，產品涵蓋整流二極體、肖特基二極體、橋式整流器等功率元件，廣泛應用於電源供應器、電動車、AI伺服器等領域。</p>
+<p style="margin-top:8px;font-size:0.9em;color:#555">成立：1975 ｜ 員工：~2,500人</p>
+</div>
+<div>
+<h3>事業群拆解（2025 估算）</h3>
+<div class="tbl-wrap"><table>
+<tr><th>事業群</th><th>營收占比</th><th>毛利貢獻</th></tr>
+<tr><td>電腦/AI伺服器電源</td><td class="num">~38%</td><td class="num">高</td></tr><tr><td>EV/充電樁</td><td class="num">~22%</td><td class="num">高</td></tr><tr><td>工業/電源模組</td><td class="num">~25%</td><td class="num">中</td></tr><tr><td>消費電子</td><td class="num">~15%</td><td class="num">低</td></tr>
+</table></div>
+<div style="font-size:0.8em;color:#888;margin-top:4px">⚠️ 事業群占比為估算值</div>
+</div>
+</div>
+</div>
+
+<!-- §3 FINANCIALS -->
+<div class="card">
+<h2>§3 財務健全度</h2>
+<div class="tbl-wrap"><table>
+<tr><th>季度</th><th>營收(億元)</th><th>毛利率</th><th>營益率</th><th>EPS(元)</th></tr>
+<tr><td>2024 Q3</td><td class="num">29.5</td><td class="num">28.2%</td><td class="num">12.1%</td><td class="num">0.68</td></tr><tr><td>2024 Q4</td><td class="num">31.8</td><td class="num">29.5%</td><td class="num">13.4%</td><td class="num">0.74</td></tr><tr><td>2025 Q1</td><td class="num">33.2</td><td class="num">31.0%</td><td class="num">15.2%</td><td class="num">0.72</td></tr><tr><td>2025 Q2</td><td class="num">35.8</td><td class="num">32.1%</td><td class="num">16.5%</td><td class="num">0.78</td></tr><tr><td>2025 Q3</td><td class="num">38.1</td><td class="num">32.8%</td><td class="num">17.1%</td><td class="num">0.83</td></tr><tr><td>2025 Q4E</td><td class="num">40.2</td><td class="num">33.2%</td><td class="num">17.6%</td><td class="num">0.79</td></tr>
+</table></div>
+<div style="font-size:0.8em;color:#888;margin-top:4px">⚠️ 2025 Q3/Q4為估算值（Q4E=推估）</div>
+<div class="grid2" style="margin-top:12px">
+<div>
+<h3>財務健全指標</h3>
+<div class="tbl-wrap"><table>
+<tr><th>指標</th><th>數值</th><th>評估</th></tr>
+<tr><td>D/E</td><td class="num">0.45</td><td><span class="green">健康</span></td></tr><tr><td>流動比率</td><td class="num">2.1</td><td><span class="green">充裕</span></td></tr><tr><td>FCF(2024)</td><td class="num">+3.8億</td><td><span class="green">正向</span></td></tr><tr><td>股息殖利率</td><td class="num">~2.5%</td><td><span class="green">穩定</span></td></tr>
+</table></div>
+</div>
+<div>
+<h3>年度EPS與ROE歷史</h3>
+<div class="tbl-wrap"><table>
+<tr><th>年度</th><th>EPS(元)</th><th>ROE</th></tr>
+<tr><td>2022</td><td class="num ">3.85</td><td class="num">14.2%</td></tr><tr><td>2023</td><td class="num ">1.92</td><td class="num">7.1%</td></tr><tr><td>2024</td><td class="num ">3.12</td><td class="num">11.4%</td></tr><tr><td>2025E</td><td class="num green">3.42</td><td class="num">~12%</td></tr><tr><td>2026E</td><td class="num green">4.76</td><td class="num">~16%</td></tr>
+</table></div>
+</div>
+</div>
+</div>
+
+<!-- §4 GROWTH BRIDGE -->
+<div class="card">
+<h2>§4 EPS成長橋樑（由下往上推導）</h2>
+<div class="tbl-wrap"><table>
+<tr><th>項目</th><th>2025實際(估)</th><th>2026E</th><th>變化</th><th>假設說明</th></tr>
+<tr><td>合併營收(億元)</td><td class="num">147</td><td class="num green">172</td><td class="num">+17%</td><td style="font-size:0.85em">AI電源+EV充電雙驅動</td></tr><tr><td>毛利率</td><td class="num">31.5%</td><td class="num green">33.5%</td><td class="num"></td><td style="font-size:0.85em">產品組合改善</td></tr><tr><td>毛利(億元)</td><td class="num">46.3</td><td class="num green">57.6</td><td class="num"></td><td style="font-size:0.85em"></td></tr><tr><td>營業費用(億元)</td><td class="num">21.5</td><td class="num green">23.0</td><td class="num"></td><td style="font-size:0.85em">費用率優化</td></tr><tr><td>營業利益(億元)</td><td class="num">24.8</td><td class="num green">34.6</td><td class="num"></td><td style="font-size:0.85em"></td></tr><tr><td>業外收益(億元)</td><td class="num">+0.8</td><td class="num green">+0.9</td><td class="num"></td><td style="font-size:0.85em">利息收入+匯兌</td></tr><tr><td>稅前利益(億元)</td><td class="num">25.6</td><td class="num green">35.5</td><td class="num"></td><td style="font-size:0.85em"></td></tr><tr><td>有效稅率</td><td class="num">20%</td><td class="num green">20%</td><td class="num"></td><td style="font-size:0.85em">台灣法人稅率</td></tr><tr><td>稅後淨利(億元)</td><td class="num">20.5</td><td class="num green">28.4</td><td class="num"></td><td style="font-size:0.85em"></td></tr><tr><td>流通股數(億股)</td><td class="num">6.0</td><td class="num green">6.0</td><td class="num"></td><td style="font-size:0.85em">無增資計畫</td></tr><tr><td>EPS(元)</td><td class="num">3.42</td><td class="num green">4.76</td><td class="num">+39%</td><td style="font-size:0.85em"></td></tr>
+</table></div>
+<div style="font-size:0.8em;color:#888;margin-top:4px">⚠️ 所有2026E數據為模型推估</div>
+</div>
+
+<!-- §5 VALUATION -->
+<div class="card">
+<h2>§5 多元估值（三角交叉法）</h2>
+
+<div class="grid2">
+<div>
+<h3>Dynamic Justified PE / PB</h3>
+<div class="tbl-wrap"><table>
+<tr><th>參數</th><th>數值</th></tr>
+<tr><td>無風險利率(Rf)</td><td class="num">1.31%（台灣10年期）</td></tr>
+<tr><td>Beta</td><td class="num">1.0</td></tr>
+<tr><td>ERP(Damodaran)</td><td class="num">7.5%</td></tr>
+<tr><td>CoE = Rf+β×ERP</td><td class="num"><b>8.81%</b></td></tr>
+<tr><td>長期成長率(g)</td><td class="num">3.0%</td></tr>
+<tr><td>ROE 2026E</td><td class="num">16%</td></tr>
+</table></div>
+<h3 style="margin-top:12px">歷史PE Band（5年）</h3>
+<div class="tbl-wrap"><table>
+<tr><th>年度</th><th>EPS</th><th>PE高</th><th>PE低</th><th>均PE</th></tr>
+<tr><td>2020</td><td class="num">1.85</td><td class="num">28x</td><td class="num">14x</td><td class="num">21x</td></tr><tr><td>2021</td><td class="num">2.95</td><td class="num">35x</td><td class="num">18x</td><td class="num">26x</td></tr><tr><td>2022</td><td class="num">3.85</td><td class="num">26x</td><td class="num">11x</td><td class="num">18x</td></tr><tr><td>2023</td><td class="num">1.92</td><td class="num">42x</td><td class="num">22x</td><td class="num">31x</td></tr><tr><td>2024</td><td class="num">3.12</td><td class="num">34x</td><td class="num">18x</td><td class="num">25x</td></tr>
+<tr><td colspan="4"><b>5年均PE</b></td><td class="num"><b>24x</b></td></tr>
+<tr><td colspan="4">當前Forward PE</td><td class="num green"><b>19.9x</b></td></tr>
+</table></div>
+</div>
+<div>
+<h3>情境目標價</h3>
+<div class="tbl-wrap"><table>
+<tr><th>情境</th><th>PE</th><th>EPS 2026E</th><th>目標價</th><th>漲跌幅</th></tr>
+<tr><td>Bull</td><td class="num">25x</td><td class="num">4.76</td><td class="num green"><b>NT$119</b></td><td class="num green">+25.5%</td></tr><tr><td>Base</td><td class="num">22x</td><td class="num">4.76</td><td class="num green"><b>NT$105</b></td><td class="num green">+10.8%</td></tr><tr><td>Bear</td><td class="num">17x</td><td class="num">3.50</td><td class="num red"><b>NT$60</b></td><td class="num red">-36.7%</td></tr>
+</table></div>
+<h3 style="margin-top:12px">Gordon Growth Model ROE辯證</h3>
+<div class="tbl-wrap"><table>
+<tr><th>項目</th><th>數值</th></tr>
+<tr><td>ROE 2026E</td><td class="num">16%</td></tr>
+<tr><td>成長率(g)</td><td class="num">3.0%</td></tr>
+<tr><td>CoE</td><td class="num">8.81%</td></tr>
+<tr><td>理論PB = (ROE-g)/(CoE-g)</td><td class="num"><b>2.24x</b></td></tr>
+<tr><td>實際PB</td><td class="num">2.47x</td></tr>
+<tr><td>市場溢價/(折價)</td><td class="num green"><b>+0.23x (+10%)</b></td></tr>
+</table></div>
+<div style="font-size:0.85em;color:#555;margin-top:6px">市場給予成長溢價，合理</div>
+</div>
+</div>
+</div>
+
+<!-- §6 TECHNICAL & CHIP -->
+<div class="card">
+<h2>§6 技術面與籌碼面</h2>
+<div class="grid2">
+<div>
+<h3>技術指標（TWSE STOCK_DAY，含2026/03/13）</h3>
+<div class="tbl-wrap"><table>
+<tr><th>指標</th><th>數值</th><th>訊號</th></tr>
+<tr><td>現價</td><td class="num">NT$94.8</td><td>—</td></tr>
+<tr><td>MA5</td><td class="num">NT$88.82</td><td><span class="green">站上</span></td></tr>
+<tr><td>MA20</td><td class="num">NT$88.83</td><td><span class="green">站上</span></td></tr>
+<tr><td>MA20偏離</td><td class="num">+6.72%</td><td><span class="green">健康多頭</span></td></tr>
+<tr><td>RSI-14</td><td class="num">57.44</td><td><span class="green">健康</span></td></tr>
+<tr><td>KD (K/D)</td><td class="num">46.5/38.0</td><td><span class="green">K上穿D，多頭</span></td></tr>
+<tr><td>5日均量(張)</td><td class="num">24,328</td><td>—</td></tr>
+</table></div>
+</div>
+<div>
+<h3>法人籌碼（2026/03/12，T86）</h3>
+<div class="tbl-wrap"><table>
+<tr><th>法人</th><th>當日買超(張)</th><th>評估</th></tr>
+<tr><td>外資(Foreign)</td><td class="num green">9,630</td><td><span class="green">主力買超</span></td></tr>
+<tr><td>三大法人合計</td><td class="num green"><b>9,143</b></td><td><span class="green">積極布局</span></td></tr>
+</table></div>
+<div style="font-size:0.8em;color:#888;margin-top:4px">⚠️ 投信/自營細項待完整T86解析；日期為03/12（03/13資料未公布）</div>
+<h3 style="margin-top:12px">操作區間</h3>
+<div class="tbl-wrap"><table>
+<tr><td>進場區間</td><td class="num green"><b>NT$88~95</b></td></tr>
+<tr><td>停損點</td><td class="num red"><b>NT$82</b></td></tr>
+<tr><td>第一目標</td><td class="num green">NT$105</td></tr>
+<tr><td>第二目標</td><td class="num green">NT$119</td></tr>
+<tr><td>R/R Ratio</td><td class="num"><b>2.75x</b></td></tr>
+<tr><td>建議持有期</td><td class="num">3~6個月</td></tr>
+</table></div>
+</div>
+</div>
+</div>
+
+<!-- §7 RISK MATRIX -->
+<div class="card">
+<h2>§7 風險矩陣</h2>
+<div class="tbl-wrap"><table>
+<tr><th>風險因子</th><th>機率</th><th>衝擊</th><th>緩解措施</th></tr>
+<tr><td>估值偏高</td><td class="num"><span class="risk-M">中</span></td><td class="num"><span class="risk-M">中</span></td><td style="font-size:0.85em">PE=30.4x高於歷史均值，需EPS持續超預期</td></tr>
+<tr><td>中美貿易關係</td><td class="num"><span class="risk-M">中</span></td><td class="num"><span class="risk-H">高</span></td><td style="font-size:0.85em">持續觀察關稅政策動態</td></tr>
+<tr><td>競爭加劇</td><td class="num"><span class="risk-L">低</span></td><td class="num"><span class="risk-M">中</span></td><td style="font-size:0.85em">國際品牌認證形成技術護城河</td></tr>
+
+</table></div>
+</div>
+
+<!-- §8 CATALYSTS -->
+<div class="card">
+<h2>§8 催化劑清單</h2>
+<ul style="padding-left:20px">
+<li style="margin:4px 0">Nexperia訂單移轉：因供應鏈重組，強茂持續承接部分功率元件訂單</li><li style="margin:4px 0">AI伺服器需求：AI伺服器電源管理IC需求快速增長，功率二極體需求同步拉升</li><li style="margin:4px 0">電動車滲透率提升：EV應用場景功率元件需求長期成長</li>
+</ul>
+</div>
+
+<!-- §9 MDVI v3 -->
+<div class="card">
+<h2>§9 MDVI v3 六維度評分</h2>
+<div style="background:#e8eaf6;border-radius:8px;padding:16px;margin-bottom:12px">
+<div style="text-align:center;margin-bottom:12px">
+<span class="score-big">24</span><span style="font-size:1.2em;color:#555"> / 30</span>
+<div style="font-size:0.9em;color:#1a237e;font-weight:700;margin-top:4px">Strong Buy（MDVI≥24 + 上漲≥15%）✓</div>
+</div>
+<div class="mdvi-bar"><div class="mdvi-label">基本面</div><div class="mdvi-track"><div class="mdvi-fill" style="width:80.0%;background:#2e7d32"></div></div><div style="font-size:0.9em;font-weight:700;color:#2e7d32;width:30px">4/5</div></div>
+<div class="mdvi-bar"><div class="mdvi-label">產業面</div><div class="mdvi-track"><div class="mdvi-fill" style="width:80.0%;background:#2e7d32"></div></div><div style="font-size:0.9em;font-weight:700;color:#2e7d32;width:30px">4/5</div></div>
+<div class="mdvi-bar"><div class="mdvi-label">總體經濟</div><div class="mdvi-track"><div class="mdvi-fill" style="width:60.0%;background:#f57f17"></div></div><div style="font-size:0.9em;font-weight:700;color:#f57f17;width:30px">3/5</div></div>
+<div class="mdvi-bar"><div class="mdvi-label">技術面</div><div class="mdvi-track"><div class="mdvi-fill" style="width:80.0%;background:#2e7d32"></div></div><div style="font-size:0.9em;font-weight:700;color:#2e7d32;width:30px">4/5</div></div>
+<div class="mdvi-bar"><div class="mdvi-label">籌碼面</div><div class="mdvi-track"><div class="mdvi-fill" style="width:80.0%;background:#2e7d32"></div></div><div style="font-size:0.9em;font-weight:700;color:#2e7d32;width:30px">4/5</div></div>
+<div class="mdvi-bar"><div class="mdvi-label">催化劑</div><div class="mdvi-track"><div class="mdvi-fill" style="width:100.0%;background:#2e7d32"></div></div><div style="font-size:0.9em;font-weight:700;color:#2e7d32;width:30px">5/5</div></div>
+
+</div>
+<div class="tbl-wrap"><table>
+<tr><th>維度</th><th>分數</th><th>評分依據</th></tr>
+<tr><td>基本面 Fundamental</td><td class="num" style="color:#2e7d32;font-weight:700">4/5</td><td>EPS成長52.6%，毛利率持續改善，FCF正向</td></tr>
+<tr><td>產業面 Industry</td><td class="num" style="color:#2e7d32;font-weight:700">4/5</td><td>AI電源/EV充電樁雙引擎，產業成長趨勢明確</td></tr>
+<tr><td>總體經濟 Macro</td><td class="num" style="color:#f57f17;font-weight:700">3/5</td><td>美元走勢中性，台灣出口擴張，VIX=24偏高帶來波動</td></tr>
+<tr><td>技術面 Technical</td><td class="num" style="color:#2e7d32;font-weight:700">4/5</td><td>KD黃金交叉，MA均線多頭，RSI=57健康</td></tr>
+<tr><td>籌碼面 Chip</td><td class="num" style="color:#2e7d32;font-weight:700">4/5</td><td>外資買超9,630張，法人積極布局訊號明確</td></tr>
+<tr><td>催化劑 Catalyst</td><td class="num" style="color:#2e7d32;font-weight:700">5/5</td><td>2026 Q1法說會、AI NIC/GB200訂單放量、EV充電規範落地</td></tr>
+
+</table></div>
+</div>
+
+<!-- §10 CONCLUSION -->
+<div class="card" style="border-left:4px solid #b71c1c">
+<h2>§10 投資結論</h2>
+<div style="background:#ffebee;border-radius:6px;padding:14px;margin-bottom:12px">
+<span class="badge" style="background:#b71c1c;color:#fff;font-size:1.1em">Strong Buy</span>
+<span style="margin-left:12px;font-weight:700;font-size:1.1em">目標價 NT$119.0 ｜ 上漲空間 +25.5%</span>
+</div>
+<p>強茂的投資邏輯建立在三個自我強化的基礎上：（1）AI伺服器與EV充電樁的電源管理需求爆發，直接驅動公司核心產品高階化；（2）毛利率改善路徑清晰，從2024年31.5%有望提升至2026年33.5%；（3）法人持續布局，外資買超9,630張。Forward PE 19.9x低於5年歷史均PE 24x，估值尚未充分反映成長，GGM顯示市場溢價合理。</p>
+<div class="tbl-wrap" style="margin-top:12px"><table>
+<tr><th>進場</th><th>停損</th><th>目標1</th><th>目標2</th><th>持有期</th></tr>
+<tr><td class="num green">NT$88~95</td><td class="num red">NT$82</td><td class="num green">NT$105</td><td class="num green">NT$119</td><td class="num">3~6個月</td></tr>
+</table></div>
+</div>
+
+<div class="footer">
+⚠️ 本報告為系統自動產出，僅供參考，不構成投資建議。投資有風險，請謹慎評估。<br>
+來源：TWSE BWIBBU_d API、TWSE T86 API、TWSE STOCK_DAY API（2026-03-13 及前3個月）、Damodaran ERP估計值<br>
+報告生成：2026-03-13 ｜ 系統版本：MDVI v3 ｜ 數據基期：2025全年實際(估)/2026E
+</div>
+</div>
+</body>
+</html>

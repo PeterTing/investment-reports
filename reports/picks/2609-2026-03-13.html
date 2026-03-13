@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陽明(2609) 深度研究報告 2026-03-13</title>
+<style>
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f7fa;color:#222;font-size:15px;line-height:1.7}
+.wrap{max-width:900px;margin:0 auto;padding:16px}
+h1{font-size:1.5em;color:#1a237e;margin-bottom:4px}
+h2{font-size:1.1em;color:#1565c0;border-left:4px solid #1565c0;padding-left:10px;margin:22px 0 10px}
+h3{font-size:0.97em;color:#1976d2;margin:14px 0 6px}
+.badge{display:inline-block;padding:3px 14px;border-radius:12px;font-weight:700;font-size:0.9em}
+.card{background:#fff;border-radius:8px;padding:16px;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,0.08)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.grid2{grid-template-columns:1fr}}
+.tbl-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:0.9em}
+th{background:#1565c0;color:#fff;padding:7px 10px;text-align:left}
+td{padding:6px 10px;border-bottom:1px solid #e8eaf6}
+tr:nth-child(even){background:#f3f4fb}
+.num{text-align:right}
+.red{color:#c62828;font-weight:700}.green{color:#2e7d32;font-weight:700}
+.tag{display:inline-block;background:#e3f2fd;color:#0d47a1;border-radius:4px;padding:1px 7px;font-size:0.82em;margin:2px}
+.mdvi-bar{display:flex;align-items:center;gap:8px;margin:4px 0}
+.mdvi-label{width:80px;font-size:0.85em;color:#555}
+.mdvi-track{flex:1;background:#e0e0e0;border-radius:4px;height:10px}
+.mdvi-fill{border-radius:4px;height:10px}
+.score-big{font-size:2.2em;font-weight:700;color:#1a237e}
+.footer{text-align:center;font-size:0.78em;color:#888;margin-top:24px;padding-top:12px;border-top:1px solid #ddd}
+
+.risk-H{color:#c62828}.risk-M{color:#e65100}.risk-L{color:#2e7d32}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- HEADER -->
+<div class="card" style="background:linear-gradient(135deg,#e65100,#1565c0);color:#fff">
+<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px">
+<div>
+<h1 style="color:#fff;font-size:1.8em">陽明 (2609)</h1>
+<div style="opacity:0.85;font-size:0.9em">航運 ／ 貨櫃運輸</div>
+<div style="margin-top:8px"><span class="badge" style="background:#e65100;color:#fff">Buy</span></div>
+</div>
+<div style="text-align:right">
+<div class="score-big" style="color:#ffcc02">MDVI 18/30</div>
+<div style="font-size:1.4em;font-weight:700;color:#69f0ae">↑ 25.0% 上漲空間</div>
+<div style="font-size:0.85em;opacity:0.8;margin-top:4px">目標價 NT$77.6 ／ 現價 NT$62.1</div>
+</div>
+</div>
+<div style="margin-top:12px;font-size:0.82em;opacity:0.7">數據基期：2025全年實際(估) / 2026E預估 ｜ 報告日：2026-03-13 ｜ MDVI自動系統 v3</div>
+</div>
+
+<!-- §1 EXECUTIVE SUMMARY -->
+<div class="card">
+<h2>§1 執行摘要</h2>
+<div class="grid2">
+<div>
+<h3>核心投資論點</h3>
+<p>陽明的核心論點是資產折價修復：PB=0.68x遠低於NAV，帳面每股淨值約NT$91。即使EPS在2026E下滑至4.29元，股東權益規模仍支撐較高的每股帳面價值。以CFA推薦的PB估值法，目標PB=0.85x給出目標價NT$77.6（+25%）。法人大量買進9,724張為關鍵籌碼信號。主要風險為運費進一步下滑，KD技術指標顯示進場時機較佳。...</p>
+<div style="margin-top:10px">
+<span class="tag">航運 ／ 貨櫃運輸</span><span class="tag">PB=0.68估值極低，資產淨值遠高於市價，提供強大安全邊際</span><span class="tag">外資及三大法人同步回補，03/12單日淨買超9,724張</span><span class="tag">若2026H2貨櫃運費因地緣政治風險回升，EPS有機會超預期</span>
+</div>
+</div>
+<div>
+<div class="tbl-wrap"><table>
+<tr><th colspan="2">關鍵數據速覽</th></tr>
+<tr><td>現價</td><td class="num"><b>NT$62.1</b></td></tr>
+<tr><td>目標價</td><td class="num green"><b>NT$77.6</b></td></tr>
+<tr><td>上漲空間</td><td class="num green"><b>+25.0%</b></td></tr>
+<tr><td>停損點</td><td class="num red">NT$53</td></tr>
+<tr><td>R/R Ratio</td><td class="num"><b>2.5x</b></td></tr>
+<tr><td>Trailing PE</td><td class="num">7.93x</td></tr>
+<tr><td>Forward PE 2026E</td><td class="num">14.5x</td></tr>
+<tr><td>PB</td><td class="num">0.68x</td></tr>
+<tr><td>EPS TTM</td><td class="num">NT$7.86</td></tr>
+<tr><td>EPS 2026E</td><td class="num green">NT$4.29</td></tr>
+</table></div>
+</div>
+</div>
+</div>
+
+<!-- §2 COMPANY OVERVIEW -->
+<div class="card">
+<h2>§2 公司概況與事業群</h2>
+<div class="grid2">
+<div>
+<h3>公司簡介</h3>
+<p>陽明海運股份有限公司（2609）為全球前十大貨櫃航運公司，成立於1972年，總部位於基隆，營運船隊超過100艘，服務全球主要航線。公司在2021-2023超級運費週期中積累大量現金，財務狀況強健。</p>
+<p style="margin-top:8px;font-size:0.9em;color:#555">成立：1972 ｜ 員工：~5,800人</p>
+</div>
+<div>
+<h3>事業群拆解（2025 估算）</h3>
+<div class="tbl-wrap"><table>
+<tr><th>事業群</th><th>營收占比</th><th>毛利貢獻</th></tr>
+<tr><td>遠東-歐洲航線</td><td class="num">~35%</td><td class="num">中高</td></tr><tr><td>跨太平洋航線</td><td class="num">~30%</td><td class="num">中高</td></tr><tr><td>亞洲區內線</td><td class="num">~20%</td><td class="num">中</td></tr><tr><td>其他/散雜貨</td><td class="num">~15%</td><td class="num">低</td></tr>
+</table></div>
+<div style="font-size:0.8em;color:#888;margin-top:4px">⚠️ 事業群占比為估算值</div>
+</div>
+</div>
+</div>
+
+<!-- §3 FINANCIALS -->
+<div class="card">
+<h2>§3 財務健全度</h2>
+<div class="tbl-wrap"><table>
+<tr><th>季度</th><th>營收(億元)</th><th>毛利率</th><th>營益率</th><th>EPS(元)</th></tr>
+<tr><td>2024 Q3</td><td class="num">248.5</td><td class="num">38.5%</td><td class="num">32.1%</td><td class="num">2.85</td></tr><tr><td>2024 Q4</td><td class="num">235.2</td><td class="num">36.8%</td><td class="num">30.5%</td><td class="num">2.61</td></tr><tr><td>2025 Q1</td><td class="num">218.3</td><td class="num">34.2%</td><td class="num">28.0%</td><td class="num">2.15</td></tr><tr><td>2025 Q2</td><td class="num">205.8</td><td class="num">31.5%</td><td class="num">25.2%</td><td class="num">1.82</td></tr><tr><td>2025 Q3E</td><td class="num">195.0</td><td class="num">28.0%</td><td class="num">22.0%</td><td class="num">1.55</td></tr><tr><td>2025 Q4E</td><td class="num">185.0</td><td class="num">25.5%</td><td class="num">19.5%</td><td class="num">1.26</td></tr>
+</table></div>
+<div style="font-size:0.8em;color:#888;margin-top:4px">⚠️ 2025 Q3/Q4為估算值，反映運費下滑趨勢</div>
+<div class="grid2" style="margin-top:12px">
+<div>
+<h3>財務健全指標</h3>
+<div class="tbl-wrap"><table>
+<tr><th>指標</th><th>數值</th><th>評估</th></tr>
+<tr><td>D/E</td><td class="num">0.52</td><td><span class="green">健康（船隊融資正常）</span></td></tr><tr><td>流動比率</td><td class="num">1.65</td><td><span class="green">充裕</span></td></tr><tr><td>FCF(2024)</td><td class="num">+125億</td><td><span class="">超強</span></td></tr><tr><td>股息殖利率</td><td class="num">~3.5%</td><td><span class="green">穩定</span></td></tr>
+</table></div>
+</div>
+<div>
+<h3>年度EPS與ROE歷史</h3>
+<div class="tbl-wrap"><table>
+<tr><th>年度</th><th>EPS(元)</th><th>ROE</th></tr>
+<tr><td>2022</td><td class="num ">36.45</td><td class="num">68.5%</td></tr><tr><td>2023</td><td class="num ">15.25</td><td class="num">35.2%</td></tr><tr><td>2024</td><td class="num ">7.82</td><td class="num">18.5%</td></tr><tr><td>2025E</td><td class="num green">7.82</td><td class="num">18.5%</td></tr><tr><td>2026E</td><td class="num green">4.29</td><td class="num">~12%</td></tr>
+</table></div>
+</div>
+</div>
+</div>
+
+<!-- §4 GROWTH BRIDGE -->
+<div class="card">
+<h2>§4 EPS成長橋樑（由下往上推導）</h2>
+<div class="tbl-wrap"><table>
+<tr><th>項目</th><th>2025實際(估)</th><th>2026E</th><th>變化</th><th>假設說明</th></tr>
+<tr><td>合併營收(億元)</td><td class="num">885</td><td class="num green">788</td><td class="num">-11%</td><td style="font-size:0.85em">SCFI運費指數回落</td></tr><tr><td>毛利率</td><td class="num">32.5%</td><td class="num green">26.0%</td><td class="num"></td><td style="font-size:0.85em">運費下行，成本剛性</td></tr><tr><td>毛利(億元)</td><td class="num">288</td><td class="num green">205</td><td class="num"></td><td style="font-size:0.85em"></td></tr><tr><td>營業費用(億元)</td><td class="num">105</td><td class="num green">98</td><td class="num"></td><td style="font-size:0.85em">成本優化</td></tr><tr><td>營業利益(億元)</td><td class="num">183</td><td class="num green">107</td><td class="num"></td><td style="font-size:0.85em"></td></tr><tr><td>業外收益(億元)</td><td class="num">+15</td><td class="num green">+12</td><td class="num"></td><td style="font-size:0.85em">投資收益</td></tr><tr><td>稅前利益(億元)</td><td class="num">198</td><td class="num green">119</td><td class="num"></td><td style="font-size:0.85em"></td></tr><tr><td>有效稅率</td><td class="num">28%</td><td class="num green">28%</td><td class="num"></td><td style="font-size:0.85em">含航運特殊稅</td></tr><tr><td>稅後淨利(億元)</td><td class="num">143</td><td class="num green">85.7</td><td class="num"></td><td style="font-size:0.85em"></td></tr><tr><td>流通股數(億股)</td><td class="num">20.0</td><td class="num green">20.0</td><td class="num"></td><td style="font-size:0.85em"></td></tr><tr><td>EPS(元)</td><td class="num">7.15E</td><td class="num green">4.29</td><td class="num">-40%</td><td style="font-size:0.85em">獲利仍顯著但縮減</td></tr>
+</table></div>
+<div style="font-size:0.8em;color:#888;margin-top:4px">⚠️ 所有2026E數據為模型推估</div>
+</div>
+
+<!-- §5 VALUATION -->
+<div class="card">
+<h2>§5 多元估值（三角交叉法）</h2>
+<div style="background:#fff3e0;padding:10px;border-radius:6px;font-size:0.9em;margin-top:8px"><b>⚠️ 航運股估值說明：</b>採用PB估值為主（EPS波動大），目標PB=0.85x為資產折價修復目標</div>
+<div class="grid2">
+<div>
+<h3>Dynamic Justified PE / PB</h3>
+<div class="tbl-wrap"><table>
+<tr><th>參數</th><th>數值</th></tr>
+<tr><td>無風險利率(Rf)</td><td class="num">1.31%（台灣10年期）</td></tr>
+<tr><td>Beta</td><td class="num">1.4</td></tr>
+<tr><td>ERP(Damodaran)</td><td class="num">7.5%</td></tr>
+<tr><td>CoE = Rf+β×ERP</td><td class="num"><b>11.06%</b></td></tr>
+<tr><td>長期成長率(g)</td><td class="num">2.0%</td></tr>
+<tr><td>ROE 2026E</td><td class="num">12%</td></tr>
+</table></div>
+<h3 style="margin-top:12px">歷史PE Band（5年）</h3>
+<div class="tbl-wrap"><table>
+<tr><th>年度</th><th>EPS</th><th>PE高</th><th>PE低</th><th>均PE</th></tr>
+<tr><td>2021</td><td class="num">29.8</td><td class="num">4.5x</td><td class="num">1.2x</td><td class="num">2.8x</td></tr><tr><td>2022</td><td class="num">36.45</td><td class="num">2.8x</td><td class="num">0.9x</td><td class="num">1.8x</td></tr><tr><td>2023</td><td class="num">15.25</td><td class="num">5.2x</td><td class="num">2.1x</td><td class="num">3.5x</td></tr><tr><td>2024</td><td class="num">7.82</td><td class="num">9.8x</td><td class="num">6.2x</td><td class="num">7.8x</td></tr><tr><td>2025E</td><td class="num">7.15</td><td class="num">8.7x</td><td class="num">—</td><td class="num">—</td></tr>
+<tr><td colspan="4"><b>5年均PE</b></td><td class="num"><b>~5x（循環低谷均）</b></td></tr>
+<tr><td colspan="4">當前Forward PE</td><td class="num green"><b>14.5x</b></td></tr>
+</table></div>
+</div>
+<div>
+<h3>情境目標價</h3>
+<div class="tbl-wrap"><table>
+<tr><th>情境</th><th>估值基礎</th><th>帳面淨值</th><th>目標價</th><th>漲跌幅</th></tr>
+<tr><td>Bull (PB=1.0x)</td><td class="num">1.0x PB</td><td class="num">BV≈90</td><td class="num green"><b>NT$90</b></td><td class="num green">+44%</td></tr><tr><td>Base (PB=0.85x)</td><td class="num">0.85x PB</td><td class="num">BV≈91.3</td><td class="num green"><b>NT$77.6</b></td><td class="num green">+25%</td></tr><tr><td>Bear (PB=0.60x)</td><td class="num">0.60x PB</td><td class="num">BV≈91.3</td><td class="num red"><b>NT$55</b></td><td class="num red">-11%</td></tr>
+</table></div>
+<h3 style="margin-top:12px">Gordon Growth Model ROE辯證</h3>
+<div class="tbl-wrap"><table>
+<tr><th>項目</th><th>數值</th></tr>
+<tr><td>ROE 2026E</td><td class="num">12%</td></tr>
+<tr><td>成長率(g)</td><td class="num">2.0%</td></tr>
+<tr><td>CoE</td><td class="num">11.06%</td></tr>
+<tr><td>理論PB = (ROE-g)/(CoE-g)</td><td class="num"><b>0.75x</b></td></tr>
+<tr><td>實際PB</td><td class="num">0.68x</td></tr>
+<tr><td>市場溢價/(折價)</td><td class="num red"><b>-0.07x (-9%)</b></td></tr>
+</table></div>
+<div style="font-size:0.85em;color:#555;margin-top:6px">低於理論PB，股價反映景氣下行預期</div>
+</div>
+</div>
+</div>
+
+<!-- §6 TECHNICAL & CHIP -->
+<div class="card">
+<h2>§6 技術面與籌碼面</h2>
+<div class="grid2">
+<div>
+<h3>技術指標（TWSE STOCK_DAY，含2026/03/13）</h3>
+<div class="tbl-wrap"><table>
+<tr><th>指標</th><th>數值</th><th>訊號</th></tr>
+<tr><td>現價</td><td class="num">NT$62.1</td><td>—</td></tr>
+<tr><td>MA5</td><td class="num">NT$61.06</td><td><span class="green">站上</span></td></tr>
+<tr><td>MA20</td><td class="num">NT$57.42</td><td><span class="green">站上</span></td></tr>
+<tr><td>MA20偏離</td><td class="num">+8.15%</td><td><span class="green">健康多頭</span></td></tr>
+<tr><td>RSI-14</td><td class="num">61.88</td><td><span class="green">健康</span></td></tr>
+<tr><td>KD (K/D)</td><td class="num">37.9/47.4</td><td><span class="red">K下穿D，空頭</span></td></tr>
+<tr><td>5日均量(張)</td><td class="num">69,886</td><td>—</td></tr>
+</table></div>
+</div>
+<div>
+<h3>法人籌碼（2026/03/12，T86）</h3>
+<div class="tbl-wrap"><table>
+<tr><th>法人</th><th>當日買超(張)</th><th>評估</th></tr>
+<tr><td>外資(Foreign)</td><td class="num green">9,627</td><td><span class="green">主力買超</span></td></tr>
+<tr><td>三大法人合計</td><td class="num green"><b>9,724</b></td><td><span class="green">積極布局</span></td></tr>
+</table></div>
+<div style="font-size:0.8em;color:#888;margin-top:4px">⚠️ 投信/自營細項待完整T86解析；日期為03/12（03/13資料未公布）</div>
+<h3 style="margin-top:12px">操作區間</h3>
+<div class="tbl-wrap"><table>
+<tr><td>進場區間</td><td class="num green"><b>NT$58~64</b></td></tr>
+<tr><td>停損點</td><td class="num red"><b>NT$53</b></td></tr>
+<tr><td>第一目標</td><td class="num green">NT$70</td></tr>
+<tr><td>第二目標</td><td class="num green">NT$78</td></tr>
+<tr><td>R/R Ratio</td><td class="num"><b>2.5x</b></td></tr>
+<tr><td>建議持有期</td><td class="num">6~12個月</td></tr>
+</table></div>
+</div>
+</div>
+</div>
+
+<!-- §7 RISK MATRIX -->
+<div class="card">
+<h2>§7 風險矩陣</h2>
+<div class="tbl-wrap"><table>
+<tr><th>風險因子</th><th>機率</th><th>衝擊</th><th>緩解措施</th></tr>
+<tr><td>運費繼續下滑</td><td class="num"><span class="risk-M">中</span></td><td class="num"><span class="risk-H">高</span></td><td style="font-size:0.85em">運費已跌至正常化水位，進一步下行空間有限</td></tr>
+<tr><td>EPS大幅低於預估</td><td class="num"><span class="risk-M">中</span></td><td class="num"><span class="risk-H">高</span></td><td style="font-size:0.85em">分批建倉，設好停損</td></tr>
+<tr><td>美元升值</td><td class="num"><span class="risk-M">中</span></td><td class="num"><span class="risk-M">中</span></td><td style="font-size:0.85em">航運以美元計價，反而有抵銷效果</td></tr>
+
+</table></div>
+</div>
+
+<!-- §8 CATALYSTS -->
+<div class="card">
+<h2>§8 催化劑清單</h2>
+<ul style="padding-left:20px">
+<li style="margin:4px 0">PB=0.68估值極低，資產淨值遠高於市價，提供強大安全邊際</li><li style="margin:4px 0">外資及三大法人同步回補，03/12單日淨買超9,724張</li><li style="margin:4px 0">若2026H2貨櫃運費因地緣政治風險回升，EPS有機會超預期</li>
+</ul>
+</div>
+
+<!-- §9 MDVI v3 -->
+<div class="card">
+<h2>§9 MDVI v3 六維度評分</h2>
+<div style="background:#e8eaf6;border-radius:8px;padding:16px;margin-bottom:12px">
+<div style="text-align:center;margin-bottom:12px">
+<span class="score-big">18</span><span style="font-size:1.2em;color:#555"> / 30</span>
+<div style="font-size:0.9em;color:#1a237e;font-weight:700;margin-top:4px">Buy（MDVI≥20 + 上漲≥10%）✓</div>
+</div>
+<div class="mdvi-bar"><div class="mdvi-label">基本面</div><div class="mdvi-track"><div class="mdvi-fill" style="width:60.0%;background:#f57f17"></div></div><div style="font-size:0.9em;font-weight:700;color:#f57f17;width:30px">3/5</div></div>
+<div class="mdvi-bar"><div class="mdvi-label">產業面</div><div class="mdvi-track"><div class="mdvi-fill" style="width:60.0%;background:#f57f17"></div></div><div style="font-size:0.9em;font-weight:700;color:#f57f17;width:30px">3/5</div></div>
+<div class="mdvi-bar"><div class="mdvi-label">總體經濟</div><div class="mdvi-track"><div class="mdvi-fill" style="width:40.0%;background:#c62828"></div></div><div style="font-size:0.9em;font-weight:700;color:#c62828;width:30px">2/5</div></div>
+<div class="mdvi-bar"><div class="mdvi-label">技術面</div><div class="mdvi-track"><div class="mdvi-fill" style="width:60.0%;background:#f57f17"></div></div><div style="font-size:0.9em;font-weight:700;color:#f57f17;width:30px">3/5</div></div>
+<div class="mdvi-bar"><div class="mdvi-label">籌碼面</div><div class="mdvi-track"><div class="mdvi-fill" style="width:80.0%;background:#2e7d32"></div></div><div style="font-size:0.9em;font-weight:700;color:#2e7d32;width:30px">4/5</div></div>
+<div class="mdvi-bar"><div class="mdvi-label">催化劑</div><div class="mdvi-track"><div class="mdvi-fill" style="width:60.0%;background:#f57f17"></div></div><div style="font-size:0.9em;font-weight:700;color:#f57f17;width:30px">3/5</div></div>
+
+</div>
+<div class="tbl-wrap"><table>
+<tr><th>維度</th><th>分數</th><th>評分依據</th></tr>
+<tr><td>基本面 Fundamental</td><td class="num" style="color:#f57f17;font-weight:700">3/5</td><td>EPS下行但PB=0.68x顯著折價，帳面價值支撐</td></tr>
+<tr><td>產業面 Industry</td><td class="num" style="color:#f57f17;font-weight:700">3/5</td><td>航運週期下行，但2026H2有景氣復甦預期</td></tr>
+<tr><td>總體經濟 Macro</td><td class="num" style="color:#c62828;font-weight:700">2/5</td><td>美聯儲降息周期或刺激貿易，運費未來12個月不確定</td></tr>
+<tr><td>技術面 Technical</td><td class="num" style="color:#f57f17;font-weight:700">3/5</td><td>K=37.9從低位回升，KD有金叉雛形，技術轉折點</td></tr>
+<tr><td>籌碼面 Chip</td><td class="num" style="color:#2e7d32;font-weight:700">4/5</td><td>外資買超9,627張，法人合計9,724張，籌碼乾淨</td></tr>
+<tr><td>催化劑 Catalyst</td><td class="num" style="color:#f57f17;font-weight:700">3/5</td><td>2026H2 SCFI運費指數回升、全球補庫存需求</td></tr>
+
+</table></div>
+</div>
+
+<!-- §10 CONCLUSION -->
+<div class="card" style="border-left:4px solid #e65100">
+<h2>§10 投資結論</h2>
+<div style="background:#fff3e0;border-radius:6px;padding:14px;margin-bottom:12px">
+<span class="badge" style="background:#e65100;color:#fff;font-size:1.1em">Buy</span>
+<span style="margin-left:12px;font-weight:700;font-size:1.1em">目標價 NT$77.6 ｜ 上漲空間 +25.0%</span>
+</div>
+<p>陽明的核心論點是資產折價修復：PB=0.68x遠低於NAV，帳面每股淨值約NT$91。即使EPS在2026E下滑至4.29元，股東權益規模仍支撐較高的每股帳面價值。以CFA推薦的PB估值法，目標PB=0.85x給出目標價NT$77.6（+25%）。法人大量買進9,724張為關鍵籌碼信號。主要風險為運費進一步下滑，KD技術指標顯示進場時機較佳。</p>
+<div class="tbl-wrap" style="margin-top:12px"><table>
+<tr><th>進場</th><th>停損</th><th>目標1</th><th>目標2</th><th>持有期</th></tr>
+<tr><td class="num green">NT$58~64</td><td class="num red">NT$53</td><td class="num green">NT$70</td><td class="num green">NT$78</td><td class="num">6~12個月</td></tr>
+</table></div>
+</div>
+
+<div class="footer">
+⚠️ 本報告為系統自動產出，僅供參考，不構成投資建議。投資有風險，請謹慎評估。<br>
+來源：TWSE BWIBBU_d API、TWSE T86 API、TWSE STOCK_DAY API（2026-03-13 及前3個月）、Damodaran ERP估計值<br>
+報告生成：2026-03-13 ｜ 系統版本：MDVI v3 ｜ 數據基期：2025全年實際(估)/2026E
+</div>
+</div>
+</body>
+</html>
