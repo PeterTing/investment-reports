@@ -314,5 +314,116 @@
       "KD": "9日 RSV→K(2/3前值+1/3 RSV)→D(2/3前值+1/3 K)",
       "MA": "5/10/20/60日簡單移動平均"
     }
-  }
+  },
+  "generated_at_us_update": "2026-03-13T22:00:00+08:00",
+  "market_summary": {
+    "tw": "台股 3/13 市場謹慎觀望，VIX 24.23 偏高，貿易政策不確定性持續。AI/HPC 電源元件需求強勁，強茂(2481)外資持續買超；中鼎(9933)受惠台積電供應鏈EPC訂單；陽明(2609) PB=0.68x 底部布局；至上(8112) AI電容通路2月營收+136.81% 技術面過熱待回調；和碩(4938) EMS轉型AI伺服器殖利率4.5%防禦。",
+    "us": "3/13 美股全面反彈，S&P 500 收漲 +0.64% 至約 6,715（前收盤 6,672.62），Nasdaq 漲幅略強，AI/半導體板塊領漲。中東地緣緊張情勢仍是壓制因素，但市場評估短期油價衝擊可控。NVDA +0.86% 收 $184.72，MSFT +0.69% 收 $404.64，AMAT +2.35% 收 $345.19（半導體設備受惠AI資本支出訂單回升），CEG +0.29% 收 $301.55，VST -0.78% 收 $159.58（核電股獲利了結小幅回落）。VIX 維持約 24（前日收 24.23），市場情緒中性偏謹慎。數據來源：stockanalysis.com、Yahoo Finance。"
+  },
+  "us_picks": [
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "name_en": "Microsoft Corp",
+      "market": "US",
+      "price": 404.64,
+      "price_prev": 401.86,
+      "price_change_pct": 0.69,
+      "currency": "USD",
+      "rating": "Buy",
+      "target_price": 550,
+      "target_price_basis": "【Forward PE 法】採用 FY2027E EPS $17.23（分析師共識），給予 Forward PE 32x（Azure AI 成長溢價）。計算：32 × 17.23 = $551 ≈ $550。催化劑：Azure 營收 YoY +33%、Copilot 企業採用加速。",
+      "upside": "+35.9%",
+      "scores": {
+        "fundamental": 9,
+        "chip": 8,
+        "technical": 8,
+        "catalyst": 9,
+        "macro": 9,
+        "industry": 9
+      },
+      "total_score": 52,
+      "summary": "雲端 AI 領導者，Azure 市佔持續擴大，Copilot 企業付費用戶突破 200 萬",
+      "rank": 1,
+      "data_source": "stockanalysis.com/stocks/msft/history/"
+    },
+    {
+      "ticker": "VST",
+      "name": "Vistra",
+      "name_en": "Vistra Corp",
+      "market": "US",
+      "price": 159.58,
+      "price_prev": 160.84,
+      "price_change_pct": -0.78,
+      "currency": "USD",
+      "rating": "Buy",
+      "target_price": 210,
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS $12（AI 資料中心電力需求），給予 Forward PE 17.5x。計算：17.5 × 12 = $210。催化劑：核能重啟、AI 資料中心用電需求暴增。",
+      "upside": "+31.6%",
+      "scores": {
+        "fundamental": 8,
+        "chip": 7,
+        "technical": 8,
+        "catalyst": 9,
+        "macro": 8,
+        "industry": 9
+      },
+      "total_score": 49,
+      "summary": "AI 電力基礎設施核心受惠者，核能 + 天然氣發電組合，資料中心用電需求驅動成長",
+      "rank": 2,
+      "data_source": "Yahoo Finance / searchresults"
+    },
+    {
+      "ticker": "CEG",
+      "name": "Constellation Energy",
+      "name_en": "Constellation Energy Corp",
+      "market": "US",
+      "price": 301.55,
+      "price_prev": 300.69,
+      "price_change_pct": 0.29,
+      "currency": "USD",
+      "rating": "Buy",
+      "target_price": 400,
+      "target_price_basis": "【Forward PE 法】採用 2026E EPS $18（核能電廠受惠 AI 電力合約），給予 Forward PE 22x。計算：22 × 18 = $396 ≈ $400。催化劑：Microsoft 核能合約、政策支持核能重啟。",
+      "upside": "+32.6%",
+      "scores": {
+        "fundamental": 8,
+        "chip": 7,
+        "technical": 8,
+        "catalyst": 9,
+        "macro": 8,
+        "industry": 9
+      },
+      "total_score": 49,
+      "summary": "全美最大核能發電商，與 Microsoft 簽訂長期電力供應合約，受惠 AI 資料中心電力需求",
+      "rank": 3,
+      "data_source": "Yahoo Finance / Investing.com"
+    },
+    {
+      "ticker": "AMAT",
+      "name": "Applied Materials",
+      "name_en": "Applied Materials Inc",
+      "market": "US",
+      "price": 345.19,
+      "price_prev": 337.27,
+      "price_change_pct": 2.35,
+      "currency": "USD",
+      "rating": "Buy",
+      "target_price": 420,
+      "target_price_basis": "【Forward PE 法】採用 FY2026E EPS $20（半導體設備週期上行），給予 Forward PE 21x。計算：21 × 20 = $420。催化劑：先進製程設備需求、DRAM/HBM 產能擴充。",
+      "upside": "+21.7%",
+      "scores": {
+        "fundamental": 8,
+        "chip": 8,
+        "technical": 7,
+        "catalyst": 8,
+        "macro": 8,
+        "industry": 9
+      },
+      "total_score": 48,
+      "summary": "全球最大半導體設備商，受惠先進製程與 HBM 記憶體產能擴充需求",
+      "rank": 4,
+      "data_source": "stockanalysis.com/stocks/amat/history/"
+    }
+  ]
 }
