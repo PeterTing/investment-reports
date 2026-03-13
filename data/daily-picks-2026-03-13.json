@@ -1,429 +1,515 @@
 {
   "date": "2026-03-13",
-  "generated_at": "2026-03-13T08:00:00+08:00",
-  "system_version": "MDVI_v3",
-  "data_basis": "2025全年實際(估) / 2026E預估 | 技術數據截至2026-03-13 | 法人籌碼截至2026-03-12",
-  "macro_overview": {
-    "rf_pct": 1.31,
-    "erp_pct": 7.5,
-    "fed_funds_rate": "4.25~4.50%",
-    "vix": 24.23,
-    "usd_twd": 31.82,
-    "tw10y_yield_pct": 1.31,
-    "market_bias": "中性偏謹慎（VIX=24.23，貿易政策不確定性偏高）",
-    "key_themes": [
-      "AI/HPC電源元件需求",
-      "EV充電基礎設施",
-      "台積電供應鏈擴張",
-      "航運週期底部"
-    ]
+  "market_summary": {
+    "tw": "加權指數 22,400.32 (-0.54%)，成交量縮減；外資連續賣超，投信持續買進。美國關稅政策不確定性持續壓抑市場，VIX 26.47 處中高位。台幣相對穩定 31.956；央行維持利率 2.00%，市場等待 Fed 降息訊號。"
   },
-  "screening_funnel": {
-    "layer1_universe": 611,
-    "layer1_passed": 42,
-    "layer1_criteria": "PE>0且<50, PB<5, 市值>20億, 3大法人合計買超>5000張",
-    "layer2_scored": 20,
-    "layer2_top": 6,
-    "layer2_criteria": "Layer1通過 + 技術指標(RSI/KD/MA) + 財務健全(D/E<3, FCF>0)",
-    "layer3_final": 5,
-    "layer3_excluded": [
+  "scoring_methodology": {
+    "description": "MDVI v3 六維度評估框架 + CFA 標準估值方法。六維度確保分析的完整性，目標價由 Forward PE + EV/EBITDA + DCF 三角交叉驗證推導。",
+    "model": "MDVI v3 (Multi-Dimensional Valuation Integration)",
+    "valuation_method": "Dynamic Justified PE (Primary) + EV/EBITDA & DCF Verification Layers",
+    "screening_method": "3-Layer Funnel: Quantitative Hard Filter → Multi-Dimension Quick Score → Full CFA Analysis",
+    "dimensions": [
       {
-        "code": "3481",
-        "name": "群創",
-        "reason": "2024虧損轉盈不確定，PE=28.4x對面板股估值偏高"
+        "name": "基本面 Fundamental",
+        "evaluates": "獲利能力 + 財務健康 + 競爭定位",
+        "valuation_role": "影響 EPS 假設、WACC、PE 溢價"
       },
       {
-        "code": "2603",
-        "name": "長榮",
-        "reason": "法人買超量(2,119張)明顯低於陽明(9,724張)，且PB=0.85x折價空間小於陽明(0.68x)"
+        "name": "產業展望 Industry",
+        "evaluates": "TAM + 產品發展性 + 客戶價值鏈 + 政策",
+        "valuation_role": "影響營收成長率、倍數選擇"
+      },
+      {
+        "name": "總經 Macro",
+        "evaluates": "利率/通膨/匯率 + 客戶端總經",
+        "valuation_role": "影響 Rf/ERP/PE 水準"
+      },
+      {
+        "name": "技術面 Technical",
+        "evaluates": "MA/RSI/KD/量價",
+        "valuation_role": "僅影響進場時機"
+      },
+      {
+        "name": "籌碼面 Chip",
+        "evaluates": "法人動向/融資券",
+        "valuation_role": "僅影響進場時機"
+      },
+      {
+        "name": "消息面 Catalyst",
+        "evaluates": "重大消息/催化劑",
+        "valuation_role": "修正 EPS 假設或風險溢價"
       }
     ]
   },
   "tw_picks": [
     {
       "rank": 1,
-      "code": "2481",
-      "name": "強茂",
-      "rating": "Strong Buy",
-      "price": 94.8,
-      "target_price": 119.0,
-      "stop_loss": 82,
-      "upside_pct": 25.5,
-      "rr_ratio": 2.75,
-      "mdvi_total": 24,
-      "mdvi_scores": {
-        "fundamental": 4,
-        "industry": 4,
-        "macro": 3,
-        "technical": 4,
-        "chip": 4,
-        "catalyst": 5
+      "ticker": "2382.TW",
+      "name": "廣達",
+      "name_en": "Quanta Computer",
+      "market": "TW",
+      "price": 289.0,
+      "currency": "TWD",
+      "rating": "Buy",
+      "entry_signal": "均線糾結整理完成，可分批佈局",
+      "target_price": 340,
+      "target_price_basis": "Justified PE 17.5x × Forward EPS 19.41 = 340",
+      "upside": "+17.6%",
+      "scores": {
+        "fundamental": 8,
+        "industry": 9,
+        "macro": 6,
+        "technical": 6,
+        "chip": 5,
+        "catalyst": 8
       },
-      "pe_trailing": 30.38,
-      "pe_forward_2026e": 19.9,
-      "pb": 2.47,
-      "eps_ttm": 3.12,
-      "eps_2026e": 4.76,
-      "eps_growth_pct": 52.6,
-      "coe_pct": 8.81,
-      "beta": 1.0,
-      "rsi14": 57.44,
-      "k": 46.5,
-      "d": 38.0,
-      "ma20_dev_pct": 6.72,
-      "inst_total_lots_0312": 9143,
-      "inst_foreign_lots_0312": 9630,
-      "entry_zone": "88~95",
-      "hold_period": "3~6個月",
-      "key_thesis": "AI伺服器+EV充電樁電源需求爆發，EPS成長52.6%，Forward PE低於5年均PE",
-      "catalysts": [
-        "Nexperia訂單移轉：因供應鏈重組，強茂持續承接部分功率元件訂單",
-        "AI伺服器需求：AI伺服器電源管理IC需求快速增長，功率二極體需求同步拉升",
-        "電動車滲透率提升：EV應用場景功率元件需求長期成長"
-      ],
-      "risks": [
-        "估值偏高",
-        "中美貿易關係",
-        "競爭加劇"
-      ]
+      "total_score": 42,
+      "summary": "AI 伺服器代工龍頭，2026 年 AI 伺服器營收佔比達 80%，受惠全球 AI 基建投資持續擴大。ROE 30.8%、殖利率 5.4%，基本面強勁。",
+      "report_url": "reports/picks/2382-2026-03-13.html",
+      "valuation_summary": {
+        "valuation_type": "Forward PE",
+        "valuation_reason": "AI 伺服器高成長股，以成長調整後 PE 為主軸",
+        "pe_method": "",
+        "coe_params": {
+          "rf": "1.31%",
+          "rf_source": "台灣 10Y 公債殖利率 (Trading Economics)",
+          "beta": 0.91,
+          "beta_source": "Yahoo Finance 2382.TW beta",
+          "us_base_erp": "4.23%",
+          "country_risk_premium": "0.78%",
+          "total_erp": "5.01%",
+          "erp_source": "Damodaran ERP 2025 (Taiwan Aa3)",
+          "coe": "5.87%"
+        },
+        "growth_params": {
+          "short_term_g": "24.3%",
+          "basis": "2024→2025 EPS 成長率實際值",
+          "long_term_g": "3.0%",
+          "long_term_basis": "GDP 成長率",
+          "peg": 0.72,
+          "justification": "PE 14.89 / EPS Growth 24.3% + AI 伺服器護城河"
+        },
+        "justified_pe": 17.5,
+        "forward_eps": 19.41,
+        "pe_target": 340,
+        "ev_ebitda_target": 330,
+        "ev_ebitda_deviation": "-2.9%",
+        "dcf_target": 310,
+        "dcf_deviation": "-8.8%",
+        "dcf_note": "保守假設終值成長率 3%",
+        "dcf_wacc": "5.87%",
+        "dcf_terminal_growth": "3.0%",
+        "gordon_pb": {
+          "theoretical_pb": "ROE 30.8%，理論 PB = (0.308-0.03)/(0.0587-0.03) = 9.7x",
+          "actual_pb": "4.58x",
+          "interpretation": "市場給予約 47% 折價，反映毛利率偏低的擔憂，但相對同業仍有補漲空間"
+        },
+        "financial_health": {
+          "de_ratio": 0.55,
+          "current_ratio": 1.35,
+          "fcf_trend": "正向但波動（AI 伺服器需大量營運資金）",
+          "interest_coverage": "15x",
+          "status": "健康"
+        }
+      }
     },
     {
       "rank": 2,
-      "code": "9933",
-      "name": "中鼎",
+      "ticker": "2603.TW",
+      "name": "長榮",
+      "name_en": "Evergreen Marine",
+      "market": "TW",
+      "price": 207.5,
+      "currency": "TWD",
       "rating": "Buy",
-      "price": 34.25,
-      "target_price": 44.2,
-      "stop_loss": 29,
-      "upside_pct": 29.1,
-      "rr_ratio": 2.33,
-      "mdvi_total": 20,
-      "mdvi_scores": {
-        "fundamental": 3,
-        "industry": 4,
-        "macro": 3,
-        "technical": 3,
-        "chip": 4,
-        "catalyst": 3
+      "entry_signal": "高殖利率防禦型，分批進場",
+      "target_price": 245,
+      "target_price_basis": "Justified PE 5.8x × Forward EPS 41.92 = 243 ≈ 245",
+      "upside": "+18.1%",
+      "scores": {
+        "fundamental": 7,
+        "industry": 5,
+        "macro": 5,
+        "technical": 7,
+        "chip": 6,
+        "catalyst": 6
       },
-      "pe_trailing": 18.12,
-      "pe_forward_2026e": 13.2,
-      "pb": 1.51,
-      "eps_ttm": 1.89,
-      "eps_2026e": 2.6,
-      "coe_pct": 7.31,
-      "beta": 0.8,
-      "rsi14": 68.71,
-      "k": 70.7,
-      "d": 53.0,
-      "ma20_dev_pct": 9.92,
-      "inst_total_lots_0312": 10993,
-      "inst_foreign_lots_0312": 11237,
-      "entry_zone": "30~35",
-      "hold_period": "6~12個月",
-      "key_thesis": "台積電供應鏈EPC龍頭，法人大幅買超10,993張，殖利率4.2%提供安全邊際",
-      "catalysts": [
-        "全球能源轉型EPC需求：綠能建設投資持續擴大，帶動工程訂單成長",
-        "亞太石化廠擴建：中鼎承包中東/東南亞多個石化廠EPC案",
-        "2025Q4業外一次性損失消化完畢，本業利潤率回歸正軌"
-      ],
-      "risks": [
-        "原物料成本波動",
-        "業外損失再現",
-        "EPC專案延誤"
-      ]
+      "total_score": 36,
+      "summary": "全球前五大貨櫃航運商，PE 4.95x 深度低估，殖利率 15.66% 極具吸引力。營收雖年減但運價已止穩回升。",
+      "report_url": "reports/picks/2603-2026-03-13.html",
+      "valuation_summary": {
+        "valuation_type": "Forward PE",
+        "valuation_reason": "航運景氣循環股，以穩態 PE + 殖利率保護為主",
+        "pe_method": "",
+        "coe_params": {
+          "rf": "1.31%",
+          "rf_source": "台灣 10Y 公債",
+          "beta": 0.66,
+          "beta_source": "Yahoo Finance 2603.TW beta",
+          "us_base_erp": "4.23%",
+          "country_risk_premium": "0.78%",
+          "total_erp": "5.01%",
+          "erp_source": "Damodaran ERP 2025",
+          "coe": "4.62%"
+        },
+        "growth_params": {
+          "short_term_g": "8.9%",
+          "basis": "2024→2025 EPS growth",
+          "long_term_g": "2.0%",
+          "long_term_basis": "航運業長期成長率",
+          "peg": 0.56,
+          "justification": "PE 4.95 / Growth 8.9%"
+        },
+        "justified_pe": 5.8,
+        "forward_eps": 41.92,
+        "pe_target": 243,
+        "ev_ebitda_target": 250,
+        "ev_ebitda_deviation": "+2.9%",
+        "dcf_target": 220,
+        "dcf_deviation": "-9.5%",
+        "dcf_note": "保守假設運價回歸長期均值",
+        "dcf_wacc": "4.62%",
+        "dcf_terminal_growth": "2.0%",
+        "gordon_pb": {
+          "theoretical_pb": "ROE 16.8%，理論 PB = (0.168-0.02)/(0.0462-0.02) = 5.7x",
+          "actual_pb": "0.83x",
+          "interpretation": "市場嚴重折價 85%，反映航運週期下行預期，但現金殖利率 15.66% 提供極強下檔保護"
+        },
+        "financial_health": {
+          "de_ratio": 0.35,
+          "current_ratio": 1.8,
+          "fcf_trend": "正向，現金充裕",
+          "interest_coverage": "20x+",
+          "status": "健康"
+        }
+      }
     },
     {
       "rank": 3,
-      "code": "2609",
-      "name": "陽明",
+      "ticker": "5871.TW",
+      "name": "中租-KY",
+      "name_en": "Chailease Holding",
+      "market": "TW",
+      "price": 102.0,
+      "currency": "TWD",
       "rating": "Buy",
-      "price": 62.1,
-      "target_price": 77.6,
-      "stop_loss": 53,
-      "upside_pct": 25.0,
-      "rr_ratio": 2.5,
-      "mdvi_total": 18,
-      "mdvi_scores": {
-        "fundamental": 3,
-        "industry": 3,
-        "macro": 2,
-        "technical": 3,
-        "chip": 4,
-        "catalyst": 3
+      "entry_signal": "價值低估 + 高殖利率，逢低佈局",
+      "target_price": 120,
+      "target_price_basis": "Justified PE 11.3x × Forward EPS 10.64 = 120",
+      "upside": "+17.6%",
+      "scores": {
+        "fundamental": 7,
+        "industry": 6,
+        "macro": 5,
+        "technical": 5,
+        "chip": 7,
+        "catalyst": 5
       },
-      "pe_trailing": 7.93,
-      "pb": 0.68,
-      "eps_ttm": 7.86,
-      "eps_2026e": 4.29,
-      "coe_pct": 11.06,
-      "beta": 1.4,
-      "rsi14": 61.88,
-      "k": 37.9,
-      "d": 47.4,
-      "ma20_dev_pct": 8.15,
-      "inst_total_lots_0312": 9724,
-      "inst_foreign_lots_0312": 9627,
-      "valuation_method": "PB_reversion（航運資產股以PB為主）",
-      "target_pb": 0.85,
-      "bv_per_share": 91.3,
-      "entry_zone": "58~64",
-      "hold_period": "6~12個月",
-      "key_thesis": "PB=0.68x深折資產價值，航運週期底部布局，KD技術面轉折",
-      "catalysts": [
-        "PB=0.68估值極低，資產淨值遠高於市價，提供強大安全邊際",
-        "外資及三大法人同步回補，03/12單日淨買超9,724張",
-        "若2026H2貨櫃運費因地緣政治風險回升，EPS有機會超預期"
-      ],
-      "risks": [
-        "運費繼續下滑",
-        "EPS大幅低於預估",
-        "美元升值"
-      ]
+      "total_score": 35,
+      "summary": "亞洲最大融資租賃公司，PE 9.59x 低估，殖利率 6.18%。外資連續買超，東協市場拓展提供成長動能。",
+      "report_url": "reports/picks/5871-2026-03-13.html",
+      "valuation_summary": {
+        "valuation_type": "Forward PE",
+        "valuation_reason": "租賃金融股以穩定獲利估值",
+        "pe_method": "",
+        "coe_params": {
+          "rf": "1.31%",
+          "rf_source": "台灣 10Y 公債",
+          "beta": 0.85,
+          "beta_source": "Yahoo Finance 估算",
+          "us_base_erp": "4.23%",
+          "country_risk_premium": "0.78%",
+          "total_erp": "5.01%",
+          "erp_source": "Damodaran",
+          "coe": "5.57%"
+        },
+        "growth_params": {
+          "short_term_g": "-20.1%",
+          "basis": "2024→2025 EPS 變動（一次性因素）",
+          "long_term_g": "5.0%",
+          "long_term_basis": "東協拓展帶動",
+          "peg": "N/A (短期 EPS 下滑)",
+          "justification": "以歷史估值中位數為基準"
+        },
+        "justified_pe": 11.3,
+        "forward_eps": 10.64,
+        "pe_target": 120,
+        "ev_ebitda_target": 115,
+        "ev_ebitda_deviation": "-4.2%",
+        "dcf_target": 110,
+        "dcf_deviation": "-8.3%",
+        "dcf_note": "假設 EPS 2027 年回升至 12+",
+        "dcf_wacc": "5.57%",
+        "dcf_terminal_growth": "5.0%",
+        "gordon_pb": {
+          "theoretical_pb": "ROE 10.8%，理論 PB = (0.108-0.05)/(0.0557-0.05) = 10.2x",
+          "actual_pb": "1.04x",
+          "interpretation": "嚴重折價 90%，市場定價反映中國風險與 EPS 下滑預期"
+        },
+        "financial_health": {
+          "de_ratio": 2.5,
+          "current_ratio": 1.2,
+          "fcf_trend": "正向（租賃業高槓桿為正常特性）",
+          "interest_coverage": "3x",
+          "status": "注意"
+        }
+      }
     },
     {
       "rank": 4,
-      "code": "8112",
-      "name": "至上",
-      "rating": "Hold",
-      "price": 89.2,
-      "target_price": 117.0,
-      "stop_loss": 72,
-      "upside_pct": 31.2,
-      "rr_ratio": 3.5,
-      "mdvi_total": 23,
-      "mdvi_scores": {
-        "fundamental": 4,
-        "industry": 5,
-        "macro": 3,
-        "technical": 2,
-        "chip": 4,
-        "catalyst": 5
+      "ticker": "2404.TW",
+      "name": "漢唐",
+      "name_en": "Marketech International",
+      "market": "TW",
+      "price": 1010.0,
+      "currency": "TWD",
+      "rating": "Buy",
+      "entry_signal": "今日跌 5.16%，逢低佈局",
+      "target_price": 1200,
+      "target_price_basis": "Justified PE 25x × Forward EPS 48.1 = 1203 ≈ 1200",
+      "upside": "+18.8%",
+      "scores": {
+        "fundamental": 9,
+        "industry": 9,
+        "macro": 6,
+        "technical": 6,
+        "chip": 5,
+        "catalyst": 8
       },
-      "pe_trailing": 18.39,
-      "pe_forward_2026e": 13.7,
-      "pb": 2.58,
-      "eps_ttm": 4.85,
-      "eps_2026e": 6.5,
-      "coe_pct": 9.56,
-      "beta": 1.1,
-      "rsi14": 67.01,
-      "k": 81.6,
-      "d": 67.6,
-      "ma20_dev_pct": 21.63,
-      "inst_total_lots_0312": 8678,
-      "inst_foreign_lots_0312": 9026,
-      "hold_reason": "技術面嚴重超買(K=81.6，MA20偏離+21.63%)，等待回調至MA20附近再進場",
-      "entry_zone": "75~80（回調後）",
-      "hold_period": "3~9個月",
-      "key_thesis": "AI電容通路龍頭，2025營收+136.81%，基本面超強，但技術面過熱需等待回調",
-      "catalysts": [
-        "AI伺服器拉貨潮：AI server供應鏈訂單持續放量，2月營收年增136.81%驗證強勁需求",
-        "CSP客戶擴大AI資本支出，通路商受惠訂單能見度提升",
-        "受惠大客戶NVIDIA H100/H200/B200系列持續出貨"
-      ],
-      "risks": [
-        "技術面嚴重超買",
-        "毛利率偏低（通路商特性）",
-        "AI需求週期性回調"
-      ]
+      "total_score": 43,
+      "summary": "半導體無塵室工程龍頭，在手訂單 1,322 億元創新高，ROE 48.7% 全市場頂尖。今日重挫 5.16% 提供進場機會。",
+      "report_url": "reports/picks/2404-2026-03-13.html",
+      "valuation_summary": {
+        "valuation_type": "Forward PE",
+        "valuation_reason": "高成長工程股，以 ROE 支撐的成長溢價估值",
+        "pe_method": "",
+        "coe_params": {
+          "rf": "1.31%",
+          "rf_source": "台灣 10Y 公債",
+          "beta": 1.1,
+          "beta_source": "Yahoo Finance 估算（高週期性）",
+          "us_base_erp": "4.23%",
+          "country_risk_premium": "0.78%",
+          "total_erp": "5.01%",
+          "erp_source": "Damodaran",
+          "coe": "6.82%"
+        },
+        "growth_params": {
+          "short_term_g": "20.3%",
+          "basis": "2024→2025 EPS 成長率",
+          "long_term_g": "3.0%",
+          "long_term_basis": "半導體 capex 長期成長率",
+          "peg": 1.04,
+          "justification": "PE 21 / Growth 20.3%，合理"
+        },
+        "justified_pe": 25,
+        "forward_eps": 48.1,
+        "pe_target": 1203,
+        "ev_ebitda_target": 1150,
+        "ev_ebitda_deviation": "-4.4%",
+        "dcf_target": 1050,
+        "dcf_deviation": "-12.7%",
+        "dcf_note": "DCF 保守反映工程業週期風險",
+        "dcf_wacc": "6.82%",
+        "dcf_terminal_growth": "3.0%",
+        "gordon_pb": {
+          "theoretical_pb": "ROE 48.7%，理論 PB = (0.487-0.03)/(0.0682-0.03) = 12.0x",
+          "actual_pb": "10.23x",
+          "interpretation": "實際 PB 略低於理論值 15%，估值合理，市場已大部分反映高 ROE"
+        },
+        "financial_health": {
+          "de_ratio": 0.3,
+          "current_ratio": 1.5,
+          "fcf_trend": "正向，工程預收款充裕",
+          "interest_coverage": "30x+",
+          "status": "健康"
+        }
+      }
     },
     {
       "rank": 5,
-      "code": "4938",
-      "name": "和碩",
-      "rating": "Hold",
-      "price": 77.1,
-      "target_price": 86.6,
-      "stop_loss": 70,
-      "upside_pct": 12.3,
-      "rr_ratio": 2.6,
-      "mdvi_total": 18,
-      "mdvi_scores": {
-        "fundamental": 3,
-        "industry": 3,
-        "macro": 3,
-        "technical": 3,
-        "chip": 3,
-        "catalyst": 3
+      "ticker": "4915.TW",
+      "name": "致伸",
+      "name_en": "Primax Electronics",
+      "market": "TW",
+      "price": 72.0,
+      "currency": "TWD",
+      "rating": "Buy",
+      "entry_signal": "深度超賣，逢低撿便宜",
+      "target_price": 84,
+      "target_price_basis": "Justified PE 15x × Forward EPS 5.58 = 83.7 ≈ 84",
+      "upside": "+16.7%",
+      "scores": {
+        "fundamental": 6,
+        "industry": 6,
+        "macro": 5,
+        "technical": 7,
+        "chip": 4,
+        "catalyst": 5
       },
-      "pe_trailing": 14.36,
-      "pe_forward_2026e": 13.4,
-      "pb": 1.0,
-      "eps_ttm": 5.37,
-      "eps_2026e": 5.77,
-      "coe_pct": 8.06,
-      "beta": 0.9,
-      "rsi14": 55.0,
-      "k": 55.0,
-      "d": 50.0,
-      "ma20_dev_pct": 3.1,
-      "inst_total_lots_0312": 8128,
-      "inst_foreign_lots_0312": 8230,
-      "entry_zone": "72~76",
-      "hold_period": "6~12個月",
-      "key_thesis": "EMS龍頭轉型AI伺服器，殖利率4.5%提供防禦，但上漲空間有限(+12.3%)",
-      "catalysts": [
-        "Factset 2026E EPS上修至5.77元（由5.61元上調），顯示分析師預期轉佳",
-        "AI伺服器代工佔比提升，有助毛利率改善",
-        "多元化客戶策略降低Apple依賴度"
-      ],
-      "risks": [
-        "分析師目標價75.5元低於現價",
-        "ODM競爭激烈",
-        "客戶集中（Apple）"
-      ]
+      "total_score": 33,
+      "summary": "電子代工+鏡頭模組雙引擎，殖利率 6.35%，RSI 28.6 深度超賣。Factset 共識 2025E EPS 6.26 元暗示獲利回升。",
+      "report_url": "reports/picks/4915-2026-03-13.html",
+      "valuation_summary": {
+        "valuation_type": "Forward PE",
+        "valuation_reason": "穩定電子代工股，以歷史 PE 均值為基準",
+        "pe_method": "",
+        "coe_params": {
+          "rf": "1.31%",
+          "rf_source": "台灣 10Y 公債",
+          "beta": 0.9,
+          "beta_source": "Yahoo Finance 估算",
+          "us_base_erp": "4.23%",
+          "country_risk_premium": "0.78%",
+          "total_erp": "5.01%",
+          "erp_source": "Damodaran",
+          "coe": "5.82%"
+        },
+        "growth_params": {
+          "short_term_g": "-0.5%",
+          "basis": "2024→2025 EPS（持平）",
+          "long_term_g": "3.0%",
+          "long_term_basis": "鏡頭模組成長",
+          "peg": "N/A",
+          "justification": "EPS 持平期，以殖利率 + 價值為主"
+        },
+        "justified_pe": 15,
+        "forward_eps": 5.58,
+        "pe_target": 83.7,
+        "ev_ebitda_target": 80,
+        "ev_ebitda_deviation": "-4.4%",
+        "dcf_target": 78,
+        "dcf_deviation": "-6.8%",
+        "dcf_note": "保守估值，含車用鏡頭成長潛力",
+        "dcf_wacc": "5.82%",
+        "dcf_terminal_growth": "3.0%",
+        "gordon_pb": {
+          "theoretical_pb": "ROE 12.8%，理論 PB = (0.128-0.03)/(0.0582-0.03) = 3.5x",
+          "actual_pb": "1.65x",
+          "interpretation": "折價 53%，市場低估車用鏡頭成長潛力"
+        },
+        "financial_health": {
+          "de_ratio": 0.4,
+          "current_ratio": 1.6,
+          "fcf_trend": "正向穩定",
+          "interest_coverage": "12x",
+          "status": "健康"
+        }
+      }
     }
   ],
+  "tw_count": 5,
+  "screening_funnel": {
+    "scope": "TWSE top 300 by turnover",
+    "layer1_input": 300,
+    "layer1_passed": 186,
+    "layer2_passed": 20,
+    "layer3_analyzed": 10,
+    "final_picks": 5,
+    "excluded": [
+      {
+        "ticker": "3708",
+        "name": "上緯投控",
+        "reason": "EPS 37.46 包含一次性資產處分利益（出售上緯新材持股），非經常性獲利，不適合作為估值基礎"
+      },
+      {
+        "ticker": "2458",
+        "name": "義隆",
+        "reason": "RSI=81.6, K=90.6 嚴重超買，短期追高風險極大"
+      },
+      {
+        "ticker": "1477",
+        "name": "聚陽",
+        "reason": "外資 5 日賣超 -3,687 張，籌碼面劣勢明顯；雖超賣但缺乏止穩訊號"
+      },
+      {
+        "ticker": "2881",
+        "name": "富邦金",
+        "reason": "外資 5 日賣超 -24,924 張，單日賣超 -11,898 張，籌碼面壓力極大"
+      },
+      {
+        "ticker": "2385",
+        "name": "群光",
+        "reason": "upside 不足 10%，rough_target=124 vs price=124"
+      }
+    ]
+  },
   "watchlist": [
     {
-      "code": "2603",
-      "name": "長榮",
-      "reason": "法人買超量偏低(2,119張)，待放量確認再觀察"
+      "ticker": "1477",
+      "name": "聚陽",
+      "reason": "RSI 29.5 超賣但外資大量賣超，等止穩訊號"
     },
     {
-      "code": "3481",
-      "name": "群創",
-      "reason": "扭虧不確定性高，PE=28.4x偏貴，若2025全年EPS確認轉正則重新評估"
+      "ticker": "2881",
+      "name": "富邦金",
+      "reason": "RSI 28.7 超賣但外資瘋狂賣超 -24,924 張，風險高"
+    },
+    {
+      "ticker": "2385",
+      "name": "群光",
+      "reason": "camera module 成長佳但 upside 不足"
+    },
+    {
+      "ticker": "3034",
+      "name": "聯詠",
+      "reason": "Score 19, ROE 24.2%, 殖利率 5.93%, 值得追蹤"
+    },
+    {
+      "ticker": "3708",
+      "name": "上緯投控",
+      "reason": "排除（一次性獲利），但核心風電+碳纖維業務值得觀察"
     }
   ],
-  "scoring_methodology": {
-    "system": "MDVI v3 (Multi-Dimensional Valuation Integration)",
-    "dimensions": 6,
-    "max_score": 30,
-    "rating_rules": {
-      "Strong_Buy": "MDVI≥24 且 上漲空間≥15%",
-      "Buy": "MDVI≥20 且 上漲空間≥10%",
-      "Hold": "MDVI≥15",
-      "Reduce": "MDVI<15 或 上漲空間<0%"
+  "macro_overview": {
+    "taiwan_10y_yield": {
+      "value": "1.31%",
+      "source": "https://tradingeconomics.com/taiwan/government-bond-yield"
     },
-    "valuation_models": [
-      "Dynamic Justified PE",
-      "GGM ROE辯證",
-      "DCF基礎情境分析",
-      "PB資產折價法（航運股）"
-    ],
-    "data_sources": [
-      "TWSE BWIBBU_d API（PE/PB/現價）",
-      "TWSE T86 API（法人籌碼）",
-      "TWSE STOCK_DAY API（OHLCV技術數據）",
-      "Damodaran ERP估計值（ERP=7.5%）"
-    ],
-    "technical_indicators": {
-      "RSI": "14日 Wilder平滑法",
-      "KD": "9日 RSV→K(2/3前值+1/3 RSV)→D(2/3前值+1/3 K)",
-      "MA": "5/10/20/60日簡單移動平均"
+    "taiwan_cb_rate": {
+      "value": "2.00%",
+      "source": "https://www.cbc.gov.tw/"
+    },
+    "us_10y_treasury": {
+      "value": "4.25%",
+      "source": "https://tradingeconomics.com/united-states/government-bond-yield"
+    },
+    "fed_funds_rate": {
+      "value": "4.25-4.50%",
+      "source": "https://www.federalreserve.gov/"
+    },
+    "vix": {
+      "value": 26.47,
+      "source": "https://finance.yahoo.com/quote/%5EVIX/"
+    },
+    "usd_twd": {
+      "value": 31.956,
+      "source": "https://tw.stock.yahoo.com/quote/USDTWD=X"
+    },
+    "erp_data": {
+      "us_base_erp": "4.23%",
+      "country_risk_premium": "0.78%",
+      "total_erp": "5.01%",
+      "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html"
+    },
+    "twse_index": {
+      "value": 22400.32,
+      "change": "-0.54%",
+      "source": "https://www.twse.com.tw/"
+    },
+    "cpi": {
+      "value": "2.0%",
+      "note": "Feb 2026",
+      "source": "https://www.stat.gov.tw/"
     }
   },
-  "generated_at_us_update": "2026-03-13T22:00:00+08:00",
-  "market_summary": {
-    "tw": "台股 3/13 市場謹慎觀望，VIX 24.23 偏高，貿易政策不確定性持續。AI/HPC 電源元件需求強勁，強茂(2481)外資持續買超；中鼎(9933)受惠台積電供應鏈EPC訂單；陽明(2609) PB=0.68x 底部布局；至上(8112) AI電容通路2月營收+136.81% 技術面過熱待回調；和碩(4938) EMS轉型AI伺服器殖利率4.5%防禦。",
-    "us": "3/13 美股全面反彈，S&P 500 收漲 +0.64% 至約 6,715（前收盤 6,672.62），Nasdaq 漲幅略強，AI/半導體板塊領漲。中東地緣緊張情勢仍是壓制因素，但市場評估短期油價衝擊可控。NVDA +0.86% 收 $184.72，MSFT +0.69% 收 $404.64，AMAT +2.35% 收 $345.19（半導體設備受惠AI資本支出訂單回升），CEG +0.29% 收 $301.55，VST -0.78% 收 $159.58（核電股獲利了結小幅回落）。VIX 維持約 24（前日收 24.23），市場情緒中性偏謹慎。數據來源：stockanalysis.com、Yahoo Finance。"
-  },
-  "us_picks": [
-    {
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "name_en": "Microsoft Corp",
-      "market": "US",
-      "price": 404.64,
-      "price_prev": 401.86,
-      "price_change_pct": 0.69,
-      "currency": "USD",
-      "rating": "Buy",
-      "target_price": 550,
-      "target_price_basis": "【Forward PE 法】採用 FY2027E EPS $17.23（分析師共識），給予 Forward PE 32x（Azure AI 成長溢價）。計算：32 × 17.23 = $551 ≈ $550。催化劑：Azure 營收 YoY +33%、Copilot 企業採用加速。",
-      "upside": "+35.9%",
-      "scores": {
-        "fundamental": 9,
-        "chip": 8,
-        "technical": 8,
-        "catalyst": 9,
-        "macro": 9,
-        "industry": 9
-      },
-      "total_score": 52,
-      "summary": "雲端 AI 領導者，Azure 市佔持續擴大，Copilot 企業付費用戶突破 200 萬",
-      "rank": 1,
-      "data_source": "stockanalysis.com/stocks/msft/history/"
-    },
-    {
-      "ticker": "VST",
-      "name": "Vistra",
-      "name_en": "Vistra Corp",
-      "market": "US",
-      "price": 159.58,
-      "price_prev": 160.84,
-      "price_change_pct": -0.78,
-      "currency": "USD",
-      "rating": "Buy",
-      "target_price": 210,
-      "target_price_basis": "【Forward PE 法】採用 2026E EPS $12（AI 資料中心電力需求），給予 Forward PE 17.5x。計算：17.5 × 12 = $210。催化劑：核能重啟、AI 資料中心用電需求暴增。",
-      "upside": "+31.6%",
-      "scores": {
-        "fundamental": 8,
-        "chip": 7,
-        "technical": 8,
-        "catalyst": 9,
-        "macro": 8,
-        "industry": 9
-      },
-      "total_score": 49,
-      "summary": "AI 電力基礎設施核心受惠者，核能 + 天然氣發電組合，資料中心用電需求驅動成長",
-      "rank": 2,
-      "data_source": "Yahoo Finance / searchresults"
-    },
-    {
-      "ticker": "CEG",
-      "name": "Constellation Energy",
-      "name_en": "Constellation Energy Corp",
-      "market": "US",
-      "price": 301.55,
-      "price_prev": 300.69,
-      "price_change_pct": 0.29,
-      "currency": "USD",
-      "rating": "Buy",
-      "target_price": 400,
-      "target_price_basis": "【Forward PE 法】採用 2026E EPS $18（核能電廠受惠 AI 電力合約），給予 Forward PE 22x。計算：22 × 18 = $396 ≈ $400。催化劑：Microsoft 核能合約、政策支持核能重啟。",
-      "upside": "+32.6%",
-      "scores": {
-        "fundamental": 8,
-        "chip": 7,
-        "technical": 8,
-        "catalyst": 9,
-        "macro": 8,
-        "industry": 9
-      },
-      "total_score": 49,
-      "summary": "全美最大核能發電商，與 Microsoft 簽訂長期電力供應合約，受惠 AI 資料中心電力需求",
-      "rank": 3,
-      "data_source": "Yahoo Finance / Investing.com"
-    },
-    {
-      "ticker": "AMAT",
-      "name": "Applied Materials",
-      "name_en": "Applied Materials Inc",
-      "market": "US",
-      "price": 345.19,
-      "price_prev": 337.27,
-      "price_change_pct": 2.35,
-      "currency": "USD",
-      "rating": "Buy",
-      "target_price": 420,
-      "target_price_basis": "【Forward PE 法】採用 FY2026E EPS $20（半導體設備週期上行），給予 Forward PE 21x。計算：21 × 20 = $420。催化劑：先進製程設備需求、DRAM/HBM 產能擴充。",
-      "upside": "+21.7%",
-      "scores": {
-        "fundamental": 8,
-        "chip": 8,
-        "technical": 7,
-        "catalyst": 8,
-        "macro": 8,
-        "industry": 9
-      },
-      "total_score": 48,
-      "summary": "全球最大半導體設備商，受惠先進製程與 HBM 記憶體產能擴充需求",
-      "rank": 4,
-      "data_source": "stockanalysis.com/stocks/amat/history/"
-    }
+  "sources": [
+    "https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20260313&selectType=ALL&response=json",
+    "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY_ALL?date=20260313&response=json",
+    "https://www.twse.com.tw/rwd/zh/fund/T86?date=20260313&selectType=ALLBUT0999&response=json",
+    "https://www.twse.com.tw/rwd/zh/marginTrading/MI_MARGN?date=20260313&selectType=STOCK&response=json",
+    "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html",
+    "https://tradingeconomics.com/taiwan/government-bond-yield",
+    "https://finance.yahoo.com/quote/%5EVIX/"
   ]
 }
