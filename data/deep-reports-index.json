@@ -1,0 +1,24 @@
+[
+  {
+    "ticker": "3017.TW",
+    "name": "奇鋐 AVC",
+    "name_en": "AVC",
+    "market": "TW",
+    "date": "2026-03-12",
+    "rating": "Buy",
+    "total_score": 0,
+    "summary": "",
+    "file": "reports/deep/3017-2026-03-12.html"
+  },
+  {
+    "ticker": "3017.TW",
+    "name": "奇鋐 AVC",
+    "name_en": "AVC",
+    "market": "TW",
+    "date": "2026-03-11",
+    "rating": "Buy",
+    "total_score": 0,
+    "summary": "",
+    "file": "reports/deep/3017-2026-03-11.html"
+  }
+]

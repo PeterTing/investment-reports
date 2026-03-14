@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>投資分析報告中心 | 每日精選 Top 20</title>
+  <title>投資分析報告中心 | 每日精選 TW/US/JP</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body { width: 100%; height: 100%; }
@@ -41,13 +41,28 @@
     .nav-tab:hover { background: rgba(59, 130, 246, 0.2); color: #60a5fa; border-color: #3b82f6; }
     .nav-tab.active { background: #3b82f6; color: #fff; border-color: #3b82f6; }
 
+    /* === MARKET TABS === */
+    .market-tabs {
+      display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap;
+      margin: 1.5rem 0 0.5rem;
+    }
+    .market-tab {
+      background: rgba(59, 130, 246, 0.08); border: 1px solid #334155; color: #94a3b8;
+      padding: 0.6rem 1.5rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem;
+      font-weight: 600; transition: all 0.2s ease;
+    }
+    .market-tab:hover { background: rgba(59, 130, 246, 0.2); color: #60a5fa; border-color: #3b82f6; }
+    .market-tab.active { background: #3b82f6; color: #fff; border-color: #3b82f6; }
+    .market-panel { display: none; }
+    .market-panel.active { display: block; }
+
     /* === CONTAINER === */
     .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
     @media (max-width: 768px) { .container { padding: 1.5rem 1rem; } }
 
     /* === STATS BAR === */
     .stats-bar {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 0.8rem; margin-bottom: 2rem; padding: 1.2rem;
       background: rgba(30, 41, 59, 0.5); border: 1px solid #334155;
       border-radius: 12px; backdrop-filter: blur(4px);
@@ -84,10 +99,12 @@
       font-weight: 700; display: flex; align-items: center; gap: 0.5rem;
     }
     .section-subtitle { color: #94a3b8; font-size: 0.85rem; margin: -0.5rem 0 1.5rem; }
+    .section-content { display: none; }
+    .section-content.active { display: block; }
 
     /* === MARKET SUMMARY === */
     .market-summary {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-bottom: 2rem;
     }
     @media (max-width: 768px) { .market-summary { grid-template-columns: 1fr; } }
     .market-summary-card {
@@ -130,7 +147,9 @@
     .pick-name-en { font-size: 0.75rem; color: #64748b; font-weight: 400; }
     .pick-badges { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.8rem; }
     .badge { padding: 0.3rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 600; white-space: nowrap; }
-    .badge-market { background: rgba(96, 165, 250, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+    .badge-market-tw { background: rgba(96, 165, 250, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+    .badge-market-us { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .badge-market-jp { background: rgba(239, 68, 68, 0.15); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.3); }
     .badge-rating-buy { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.3); }
     .badge-rating-hold { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
     .badge-below100 { background: rgba(234, 179, 8, 0.12); color: #eab308; border: 1px solid rgba(234, 179, 8, 0.25); }
@@ -170,6 +189,26 @@
     .score-number { font-size: 0.78rem; color: #60a5fa; font-weight: 700; min-width: 18px; text-align: right; }
     .pick-summary { font-size: 0.82rem; color: #cbd5e1; line-height: 1.5; padding: 0.6rem; background: rgba(51, 65, 85, 0.2); border-radius: 6px; border-left: 2px solid #3b82f6; }
 
+    /* === DEEP REPORTS === */
+    .deep-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem; margin-bottom: 2rem;
+    }
+    @media (max-width: 768px) { .deep-grid { grid-template-columns: 1fr; } }
+    .deep-card {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.8));
+      border: 1px solid #334155; border-radius: 10px; padding: 1.2rem;
+      transition: all 0.2s ease; text-decoration: none; display: block;
+    }
+    .deep-card:hover { border-color: #8b5cf6; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(139, 92, 246, 0.15); }
+    .deep-card .deep-market { font-size: 0.72rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .deep-card .deep-ticker { font-size: 0.82rem; color: #60a5fa; font-weight: 700; }
+    .deep-card .deep-name { font-size: 1.1rem; color: #f1f5f9; font-weight: 700; margin: 0.3rem 0; }
+    .deep-card .deep-date { font-size: 0.78rem; color: #94a3b8; }
+    .deep-card .deep-badge { display: inline-block; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.72rem; font-weight: 600; margin-top: 0.5rem; }
+    .deep-badge-buy { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; }
+    .deep-badge-hold { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+
     /* === METHODOLOGY === */
     .methodology-box {
       background: rgba(30, 41, 59, 0.5); border: 1px solid #334155;
@@ -187,285 +226,205 @@
     .dim-card .dim-scale { color: #64748b; font-size: 0.72rem; line-height: 1.4; }
     .dim-card .dim-weight { color: #f59e0b; font-size: 0.72rem; font-weight: 600; margin-top: 0.3rem; }
     .dim-card .dim-detail { color: #94a3b8; font-size: 0.72rem; line-height: 1.4; margin-top: 0.3rem; border-top: 1px solid #1e293b; padding-top: 0.3rem; }
-
-    /* === METHODOLOGY ENHANCED === */
     .meth-section { margin-bottom: 1.8rem; }
     .meth-section-title { color: #f8fafc; font-size: 1rem; font-weight: 700; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem; }
     .meth-steps { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1rem; }
-    .meth-step {
-      background: rgba(15, 23, 42, 0.5); border: 1px solid #1e293b;
-      border-radius: 8px; padding: 0.8rem 1rem; display: flex; gap: 0.8rem; align-items: flex-start;
-    }
-    .meth-step-num {
-      background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: #fff;
-      width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center;
-      justify-content: center; font-weight: 700; font-size: 0.8rem; flex-shrink: 0;
-    }
+    .meth-step { background: rgba(15, 23, 42, 0.5); border: 1px solid #1e293b; border-radius: 8px; padding: 0.8rem 1rem; display: flex; gap: 0.8rem; align-items: flex-start; }
+    .meth-step-num { background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: #fff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; flex-shrink: 0; }
     .meth-step-content { flex: 1; }
     .meth-step-name { color: #f1f5f9; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.2rem; }
     .meth-step-detail { color: #94a3b8; font-size: 0.78rem; line-height: 1.5; }
     .meth-methods-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.8rem; }
     @media (max-width: 640px) { .meth-methods-grid { grid-template-columns: 1fr; } }
-    .meth-method-card {
-      background: rgba(15, 23, 42, 0.5); border: 1px solid #1e293b;
-      border-radius: 8px; padding: 1rem; border-top: 3px solid #f59e0b;
-    }
+    .meth-method-card { background: rgba(15, 23, 42, 0.5); border: 1px solid #1e293b; border-radius: 8px; padding: 1rem; border-top: 3px solid #f59e0b; }
     .meth-method-name { color: #f59e0b; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.4rem; }
     .meth-method-formula { color: #60a5fa; font-size: 0.78rem; font-family: monospace; background: rgba(59, 130, 246, 0.1); padding: 0.3rem 0.5rem; border-radius: 4px; margin-bottom: 0.5rem; display: inline-block; }
     .meth-method-desc { color: #94a3b8; font-size: 0.78rem; line-height: 1.5; margin-bottom: 0.4rem; }
     .meth-method-example { color: #64748b; font-size: 0.72rem; line-height: 1.4; border-top: 1px solid #1e293b; padding-top: 0.4rem; font-style: italic; }
 
-    /* === WATCHLIST === */
-    .watchlist-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 1rem; margin-bottom: 2rem;
-    }
-    @media (max-width: 768px) { .watchlist-grid { grid-template-columns: 1fr; } }
-    .watchlist-card {
-      background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.7));
-      border: 1px solid #334155; border-radius: 10px; padding: 1.2rem;
-      transition: all 0.2s ease;
-    }
-    .watchlist-card:hover { border-color: #475569; }
-    .watchlist-card.is-buy { border-left: 3px solid #10b981; }
-    .watchlist-card.is-hold { border-left: 3px solid #f59e0b; }
-    .wl-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem; }
-    .wl-ticker { font-size: 0.78rem; color: #60a5fa; font-weight: 700; }
-    .wl-name { font-size: 1rem; color: #f1f5f9; font-weight: 700; }
-    .wl-name-en { font-size: 0.72rem; color: #64748b; }
-    .wl-price-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; }
-    .wl-price { font-size: 1.1rem; color: #f1f5f9; font-weight: 600; }
-    .wl-target { font-size: 0.82rem; }
-    .wl-scores-mini { display: flex; gap: 0.3rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
-    .wl-score-tag { font-size: 0.68rem; padding: 0.2rem 0.4rem; border-radius: 4px; background: rgba(59, 130, 246, 0.1); color: #60a5fa; }
-    .wl-news { font-size: 0.78rem; color: #94a3b8; line-height: 1.4; margin-bottom: 0.4rem; }
-    .wl-news strong { color: #cbd5e1; }
-    .wl-client-news { font-size: 0.75rem; color: #64748b; line-height: 1.4; border-top: 1px solid #1e293b; padding-top: 0.4rem; }
+    /* === MACRO DASHBOARD === */
+    .macro-header { background: rgba(30, 41, 59, 0.5); border: 1px solid #334155; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; }
+    .macro-score-circle { width: 64px; height: 64px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; }
+    .macro-score-circle.positive { background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.1)); border: 2px solid #10b981; color: #6ee7b7; }
+    .macro-score-circle.neutral { background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.1)); border: 2px solid #f59e0b; color: #fbbf24; }
+    .macro-score-circle.negative { background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(239, 68, 68, 0.1)); border: 2px solid #ef4444; color: #fca5a5; }
+    .macro-categories { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+    @media (max-width: 768px) { .macro-categories { grid-template-columns: 1fr; } }
+    .macro-cat { background: rgba(30, 41, 59, 0.5); border: 1px solid #334155; border-radius: 10px; padding: 1.2rem; }
+    .macro-cat-title { color: #f8fafc; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 1px solid #334155; }
+    .macro-items { display: flex; flex-direction: column; gap: 0.6rem; }
+    .macro-item { background: rgba(15, 23, 42, 0.4); padding: 0.6rem 0.8rem; border-radius: 6px; }
+    .macro-item-name { color: #94a3b8; font-size: 0.78rem; font-weight: 500; }
+    .macro-item-value { color: #f1f5f9; font-size: 1rem; font-weight: 700; margin: 0.2rem 0; }
+    .macro-item-trend { font-size: 0.75rem; font-weight: 600; }
+    .macro-item-trend.positive { color: #6ee7b7; }
+    .macro-item-trend.neutral { color: #94a3b8; }
+    .macro-item-trend.caution { color: #fbbf24; }
+    .macro-item-trend.negative { color: #fca5a5; }
+    .macro-item-detail { font-size: 0.72rem; color: #64748b; margin-top: 0.3rem; line-height: 1.4; }
+    .macro-item-source a { color: #60a5fa; text-decoration: none; font-size: 0.7rem; }
+    .macro-impact { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+    @media (max-width: 640px) { .macro-impact { grid-template-columns: 1fr; } }
+    .macro-impact-card { background: rgba(30, 41, 59, 0.5); border: 1px solid #334155; border-radius: 10px; padding: 1rem; }
+    .positive-card { border-left: 3px solid #10b981; }
+    .negative-card { border-left: 3px solid #ef4444; }
+    .macro-impact-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.6rem; }
+    .macro-impact-title.pos { color: #6ee7b7; }
+    .macro-impact-title.neg { color: #fca5a5; }
+    .macro-impact-list { list-style: none; }
+    .macro-impact-list li { color: #cbd5e1; font-size: 0.82rem; line-height: 1.6; padding: 0.2rem 0; }
+    .macro-impact-list li::before { content: '•'; margin-right: 0.5rem; color: #94a3b8; }
+    .macro-net { background: rgba(59, 130, 246, 0.08); border: 1px solid #334155; border-radius: 8px; padding: 1rem; color: #cbd5e1; font-size: 0.85rem; line-height: 1.6; }
 
     /* === ARCHIVE === */
     .archive-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
     .archive-card {
       background: rgba(30, 41, 59, 0.5); border: 1px solid #334155;
       border-radius: 8px; padding: 1rem; transition: all 0.2s ease;
-      text-decoration: none; color: #e2e8f0;
+      text-decoration: none; display: block;
     }
-    .archive-card:hover { border-color: #3b82f6; background: rgba(30, 41, 59, 0.7); }
-    .archive-ticker { font-size: 0.82rem; color: #60a5fa; font-weight: 700; margin-bottom: 0.2rem; }
-    .archive-title { font-size: 0.92rem; color: #f1f5f9; font-weight: 600; margin-bottom: 0.4rem; }
+    .archive-card:hover { border-color: #3b82f6; transform: translateY(-2px); }
+    .archive-ticker { font-size: 0.78rem; color: #60a5fa; font-weight: 700; }
+    .archive-title { font-size: 0.95rem; color: #f1f5f9; font-weight: 600; margin: 0.3rem 0; }
     .archive-date { font-size: 0.78rem; color: #94a3b8; }
-    .archive-rating { display: inline-block; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.72rem; font-weight: 600; margin-top: 0.4rem; }
+    .archive-rating { display: inline-block; font-size: 0.72rem; font-weight: 600; margin-top: 0.4rem; padding: 0.2rem 0.5rem; border-radius: 4px; }
     .archive-rating-buy { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; }
     .archive-rating-hold { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
-    .archive-rating-sell { background: rgba(239, 68, 68, 0.15); color: #fca5a5; }
-
-    /* === SECTION DIVIDER === */
-    .section-content { display: none; }
-    .section-content.active { display: block; }
 
     /* === EMPTY STATE === */
-    .empty-state { background: rgba(30, 41, 59, 0.5); border: 1px solid #334155; border-radius: 12px; padding: 2rem; text-align: center; color: #94a3b8; }
-    .empty-state-icon { font-size: 2.5rem; margin-bottom: 0.8rem; opacity: 0.5; }
-    .empty-state-text { font-size: 0.9rem; line-height: 1.5; }
-
-    /* === MACRO DASHBOARD === */
-    .macro-header {
-      background: rgba(30, 41, 59, 0.6); border: 1px solid #334155;
-      border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;
-      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
-    }
-    .macro-overall { display: flex; align-items: center; gap: 1rem; }
-    .macro-score-circle {
-      width: 70px; height: 70px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem; font-weight: 800; color: #fff;
-    }
-    .macro-score-circle.positive { background: linear-gradient(135deg, #10b981, #34d399); }
-    .macro-score-circle.neutral { background: linear-gradient(135deg, #3b82f6, #60a5fa); }
-    .macro-score-circle.negative { background: linear-gradient(135deg, #ef4444, #f87171); }
-    .macro-assessment { font-size: 1.2rem; color: #f8fafc; font-weight: 700; }
-    .macro-date { font-size: 0.78rem; color: #94a3b8; }
-    .macro-summary {
-      color: #cbd5e1; font-size: 0.85rem; line-height: 1.6;
-      background: rgba(15, 23, 42, 0.4); padding: 1rem; border-radius: 8px;
-      border-left: 3px solid #3b82f6; margin-bottom: 1.5rem;
-    }
-    .macro-categories { display: flex; flex-direction: column; gap: 1.2rem; margin-bottom: 1.5rem; }
-    .macro-cat {
-      background: rgba(30, 41, 59, 0.5); border: 1px solid #334155;
-      border-radius: 10px; overflow: hidden;
-    }
-    .macro-cat-title {
-      padding: 0.8rem 1rem; font-weight: 700; font-size: 0.92rem; color: #f8fafc;
-      display: flex; align-items: center; gap: 0.5rem;
-      background: rgba(15, 23, 42, 0.4); border-bottom: 1px solid #334155;
-    }
-    .macro-items { padding: 0.8rem; display: flex; flex-direction: column; gap: 0.6rem; }
-    .macro-item {
-      display: grid; grid-template-columns: 160px 100px 70px 1fr; gap: 0.6rem;
-      align-items: center; padding: 0.6rem; border-radius: 6px;
-      background: rgba(15, 23, 42, 0.3); font-size: 0.82rem;
-    }
-    @media (max-width: 768px) {
-      .macro-item { grid-template-columns: 1fr 1fr; gap: 0.4rem; }
-      .macro-item-detail { grid-column: 1 / -1; }
-    }
-    .macro-item-name { color: #e2e8f0; font-weight: 600; }
-    .macro-item-value { color: #f8fafc; font-weight: 700; font-size: 0.92rem; }
-    .macro-item-trend { font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px; text-align: center; font-weight: 600; }
-    .macro-item-trend.positive { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; }
-    .macro-item-trend.neutral { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
-    .macro-item-trend.caution { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
-    .macro-item-trend.negative { background: rgba(239, 68, 68, 0.15); color: #fca5a5; }
-    .macro-item-detail { color: #94a3b8; font-size: 0.75rem; line-height: 1.5; }
-    .macro-item-source { margin-top: 0.2rem; }
-    .macro-item-source a { color: #3b82f6; font-size: 0.68rem; text-decoration: none; }
-    .macro-item-source a:hover { text-decoration: underline; }
-    .macro-impact {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;
-    }
-    @media (max-width: 768px) { .macro-impact { grid-template-columns: 1fr; } }
-    .macro-impact-card {
-      background: rgba(30, 41, 59, 0.5); border: 1px solid #334155;
-      border-radius: 10px; padding: 1rem;
-    }
-    .macro-impact-card.positive-card { border-top: 3px solid #10b981; }
-    .macro-impact-card.negative-card { border-top: 3px solid #ef4444; }
-    .macro-impact-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.6rem; }
-    .macro-impact-title.pos { color: #6ee7b7; }
-    .macro-impact-title.neg { color: #fca5a5; }
-    .macro-impact-list { list-style: none; padding: 0; }
-    .macro-impact-list li { color: #cbd5e1; font-size: 0.78rem; line-height: 1.6; padding: 0.3rem 0; padding-left: 1rem; position: relative; }
-    .macro-impact-list li::before { content: '•'; position: absolute; left: 0; color: #64748b; }
-    .macro-net {
-      background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.3);
-      border-radius: 10px; padding: 1rem; color: #cbd5e1; font-size: 0.85rem; line-height: 1.6;
-    }
-    .macro-net strong { color: #60a5fa; }
+    .empty-state { text-align: center; padding: 3rem; }
+    .empty-state-icon { font-size: 2.5rem; margin-bottom: 0.8rem; }
+    .empty-state-text { color: #94a3b8; font-size: 0.95rem; }
 
     /* === FOOTER === */
-    .footer { text-align: center; padding: 2rem; color: #475569; font-size: 0.78rem; border-top: 1px solid #1e293b; margin-top: 3rem; }
-    .footer p { margin: 0.3rem 0; line-height: 1.5; }
-
-    /* === RESPONSIVE === */
-    @media (max-width: 640px) {
-      .stats-bar { grid-template-columns: repeat(3, 1fr); }
-      .stat-value { font-size: 1.3rem; }
-      .calendar-controls { flex-direction: column; gap: 0.6rem; }
-      .calendar-btn, .date-picker { width: 100%; }
-      .section-title { font-size: 1.1rem; }
-      .pick-price { flex-wrap: wrap; }
-      .price-upside { width: 100%; text-align: left; margin-top: 0.4rem; }
+    .footer {
+      background: rgba(15, 23, 42, 0.8); border-top: 1px solid #1e293b;
+      padding: 2rem 1.5rem; text-align: center;
     }
-
-    /* === ANIMATIONS === */
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-    .pick-card, .watchlist-card, .archive-card { animation: fadeIn 0.35s ease forwards; }
-    .pick-card:nth-child(1) { animation-delay: 0.03s; }
-    .pick-card:nth-child(2) { animation-delay: 0.06s; }
-    .pick-card:nth-child(3) { animation-delay: 0.09s; }
-    .pick-card:nth-child(4) { animation-delay: 0.12s; }
-    .pick-card:nth-child(5) { animation-delay: 0.15s; }
-
-    /* === COLLAPSIBLE === */
-    .collapsible-header { cursor: pointer; display: flex; align-items: center; gap: 0.5rem; }
-    .collapsible-header .arrow { transition: transform 0.2s; font-size: 0.8rem; }
-    .collapsible-header.open .arrow { transform: rotate(90deg); }
+    .footer p { color: #64748b; font-size: 0.82rem; }
   </style>
 </head>
 <body>
   <div class="header">
     <h1>投資分析報告中心</h1>
-    <p>每日精選 Buy-Rated 投資標的 | 台股 + 美股 | AI 驅動六維度分析</p>
-    <div class="subtitle">數據基期：2026/03 | CFA Buy-Side Framework | All Buy-Rated</div>
+    <p>MDVI v3 三層漏斗篩選 + CFA 標準估值</p>
+    <div class="subtitle">每日精選：台股 5 檔 ・ 美股 5 檔 ・ 日股 5 檔 ｜ 深度研究報告</div>
     <div class="nav-tabs">
-      <a class="nav-tab active" onclick="showSection('picks')">🎯 每日精選</a>
-      <a class="nav-tab" onclick="showSection('watchlist')">📡 重電追蹤</a>
-      <a class="nav-tab" onclick="showSection('methodology')">📊 評分標準</a>
-      <a class="nav-tab" onclick="showSection('macro')">🌍 總經儀表板</a>
-      <a class="nav-tab" onclick="showSection('archive')">📚 報告存檔</a>
+      <button class="nav-tab active" onclick="showSection('picks', this)">📊 每日精選</button>
+      <button class="nav-tab" onclick="showSection('deep', this)">📚 深度研究</button>
+      <button class="nav-tab" onclick="showSection('methodology', this)">🔬 評估方法</button>
+      <button class="nav-tab" onclick="showSection('macro', this)">🌍 總經儀表板</button>
     </div>
   </div>
 
   <div class="container">
-    <!-- === STATS BAR === -->
+    <!-- Stats Bar -->
     <div class="stats-bar">
       <div class="stat-item">
-        <div class="stat-value" id="twCount">10</div>
-        <div class="stat-label">🇹🇼 台股精選</div>
+        <div class="stat-value" id="twCount">-</div>
+        <div class="stat-label">🇹🇼 台股</div>
       </div>
       <div class="stat-item">
-        <div class="stat-value" id="usCount">10</div>
-        <div class="stat-label">🇺🇸 美股精選</div>
+        <div class="stat-value" id="usCount">-</div>
+        <div class="stat-label">🇺🇸 美股</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="jpCount">-</div>
+        <div class="stat-label">🇯🇵 日股</div>
       </div>
       <div class="stat-item">
         <div class="stat-value" id="avgScore">-</div>
         <div class="stat-label">平均評分</div>
       </div>
       <div class="stat-item">
-        <div class="stat-value" id="below100Count">-</div>
-        <div class="stat-label">💰 百元以下</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-value" id="watchlistCount">-</div>
-        <div class="stat-label">📡 追蹤股</div>
-      </div>
-      <div class="stat-item">
         <div class="stat-value" id="macroScore">-</div>
-        <div class="stat-label">🌍 總經評分</div>
+        <div class="stat-label">🌍 總經</div>
       </div>
       <div class="stat-item">
-        <div class="stat-value" id="totalReports">7</div>
-        <div class="stat-label">📄 深度報告</div>
+        <div class="stat-value" id="totalDeep">-</div>
+        <div class="stat-label">📚 深度報告</div>
       </div>
     </div>
 
     <!-- ===================== SECTION: PICKS ===================== -->
     <div class="section-content active" id="sec-picks">
-      <!-- Calendar Nav -->
       <div class="calendar-nav">
         <h3>📅 依日期瀏覽精選</h3>
         <div class="calendar-controls">
           <button class="calendar-btn active" onclick="loadPicksByDate('today')">今日</button>
           <button class="calendar-btn" onclick="loadPicksByDate('yesterday')">昨日</button>
-          <button class="calendar-btn" onclick="loadPicksByDate('week')">本週</button>
+          <button class="calendar-btn" onclick="loadPicksByDate('week')">本週一</button>
           <input type="date" class="date-picker" id="dateInput" onchange="loadPicksByDate('custom')">
           <span class="current-date" id="currentDate">Loading...</span>
         </div>
       </div>
 
+      <!-- Market Tabs -->
+      <div class="market-tabs">
+        <button class="market-tab active" onclick="switchMarket('all', this)">🌐 全部</button>
+        <button class="market-tab" onclick="switchMarket('tw', this)">🇹🇼 台股</button>
+        <button class="market-tab" onclick="switchMarket('us', this)">🇺🇸 美股</button>
+        <button class="market-tab" onclick="switchMarket('jp', this)">🇯🇵 日股</button>
+      </div>
+
       <!-- Market Summary -->
       <div class="market-summary" id="marketSummary" style="display:none;">
-        <div class="market-summary-card">
+        <div class="market-summary-card" id="twSummaryCard" style="display:none;">
           <h4>🇹🇼 台股市場</h4>
           <p id="twSummary"></p>
         </div>
-        <div class="market-summary-card">
+        <div class="market-summary-card" id="usSummaryCard" style="display:none;">
           <h4>🇺🇸 美股市場</h4>
           <p id="usSummary"></p>
+        </div>
+        <div class="market-summary-card" id="jpSummaryCard" style="display:none;">
+          <h4>🇯🇵 日股市場</h4>
+          <p id="jpSummary"></p>
         </div>
       </div>
 
       <!-- TW Picks -->
-      <div class="section-title">🇹🇼 台股精選 Top 10</div>
-      <div class="section-subtitle">評級皆為 Buy | 至少 3 檔百元以下標的 | 六維度評分 ≥ 45/60</div>
-      <div class="picks-grid" id="twPicksContainer">
-        <div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">⏳</div><div class="empty-state-text">載入中...</div></div>
+      <div class="market-panel active" id="panel-tw">
+        <div class="section-title">🇹🇼 台股精選 Top 5</div>
+        <div class="section-subtitle">TWSE Top 300 三層漏斗篩選 | MDVI v3 六維度評分</div>
+        <div class="picks-grid" id="twPicksContainer">
+          <div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">⏳</div><div class="empty-state-text">載入中...</div></div>
+        </div>
       </div>
 
       <!-- US Picks -->
-      <div class="section-title">🇺🇸 美股精選 Top 10</div>
-      <div class="section-subtitle">評級皆為 Buy | 涵蓋 AI、半導體、核能、資安、生技 | 六維度評分 ≥ 45/60</div>
-      <div class="picks-grid" id="usPicksContainer">
-        <div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">⏳</div><div class="empty-state-text">載入中...</div></div>
+      <div class="market-panel active" id="panel-us">
+        <div class="section-title">🇺🇸 美股精選 Top 5</div>
+        <div class="section-subtitle">S&P 500 三層漏斗篩選 | MDVI v3 六維度評分</div>
+        <div class="picks-grid" id="usPicksContainer">
+          <div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">⏳</div><div class="empty-state-text">載入中...</div></div>
+        </div>
+      </div>
+
+      <!-- JP Picks -->
+      <div class="market-panel active" id="panel-jp">
+        <div class="section-title">🇯🇵 日股精選 Top 5</div>
+        <div class="section-subtitle">TOPIX Major 三層漏斗篩選 | MDVI v3 六維度評分</div>
+        <div class="picks-grid" id="jpPicksContainer">
+          <div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">⏳</div><div class="empty-state-text">載入中...</div></div>
+        </div>
       </div>
     </div>
 
-    <!-- ===================== SECTION: WATCHLIST ===================== -->
-    <div class="section-content" id="sec-watchlist">
-      <div class="section-title">📡 重電概念股追蹤區</div>
-      <div class="section-subtitle">16 檔重電概念股每日追蹤 | 含客戶/供應鏈新聞動態 | 六維度評分</div>
-      <div class="picks-grid" id="watchlistContainer">
-        <div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">⏳</div><div class="empty-state-text">載入中...</div></div>
+    <!-- ===================== SECTION: DEEP REPORTS ===================== -->
+    <div class="section-content" id="sec-deep">
+      <div class="section-title">📚 深度研究報告</div>
+      <div class="section-subtitle">每日各市場 Top 2 精選深度分析 | CFA 框架 | 歷史 PE・Bottom-Up EPS・情境模擬</div>
+
+      <div class="market-tabs" style="margin-bottom:1.5rem;">
+        <button class="market-tab active" onclick="filterDeep('all', this)">🌐 全部</button>
+        <button class="market-tab" onclick="filterDeep('tw', this)">🇹🇼 台股</button>
+        <button class="market-tab" onclick="filterDeep('us', this)">🇺🇸 美股</button>
+        <button class="market-tab" onclick="filterDeep('jp', this)">🇯🇵 日股</button>
+      </div>
+
+      <div class="deep-grid" id="deepContainer">
+        <div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">📚</div><div class="empty-state-text">載入中...</div></div>
       </div>
     </div>
 
@@ -481,57 +440,84 @@
     <!-- ===================== SECTION: MACRO ===================== -->
     <div class="section-content" id="sec-macro">
       <div class="section-title">🌍 總體經濟儀表板</div>
-      <div class="section-subtitle">宏觀經濟指標總覽 | 利率・景氣・風險・地緣政治 | 對持股影響評估</div>
+      <div class="section-subtitle">宏觀經濟指標總覽 | 利率・景氣・風險・地緣政治</div>
       <div id="macroContainer">
         <div class="empty-state"><div class="empty-state-icon">🌍</div><div class="empty-state-text">載入中...</div></div>
       </div>
     </div>
-
-    <!-- ===================== SECTION: ARCHIVE ===================== -->
-    <div class="section-content" id="sec-archive">
-      <div class="section-title">📚 深度研究報告存檔</div>
-      <div class="section-subtitle">CFA 框架深度分析 | 歷史 PE 軌跡 | Bottom-Up EPS | 情境模擬</div>
-      <div class="archive-grid" id="archiveContainer"></div>
-    </div>
   </div>
 
   <div class="footer">
-    <p>💡 本報告僅供學術研究與參考，不構成任何有價證券之買賣邀約。投資有風險，入市須謹慎。</p>
-    <p style="margin-top: 0.6rem;">Generated by Investment Analysis Agent | CFA Buy-Side Framework | 2026</p>
+    <p>本報告僅供學術研究與參考，不構成任何有價證券之買賣邀約。投資有風險，入市須謹慎。</p>
+    <p style="margin-top: 0.6rem;">Generated by Investment Analysis Agent | CFA Buy-Side Framework | MDVI v3 | 2026</p>
   </div>
 
   <script>
     // ===== CONFIG =====
-    const REPORT_ARCHIVE = [
-      { ticker: '3017.TW', name: '奇鋐 AVC', date: '2026-03-11', rating: 'Buy', file: 'reports/deep/3017-2026-03-11.html' },
-      { ticker: '1503.TW', name: '士林電機 Shihlin', date: '2026-03-11', rating: 'Buy', file: '1503-2026-03-11.html' },
-      { ticker: '1513.TW', name: '中興電工 Chung-Hsin', date: '2026-03-11', rating: 'Buy', file: '1513-2026-03-11.html' },
-      { ticker: '1514.TW', name: '亞力電機 Alex', date: '2026-03-09', rating: 'Hold', file: '1514-2026-03-09.html' },
-      { ticker: '1504.TW', name: '東元電機 TECO', date: '2026-03-06', rating: 'Hold', file: '1504-2026-03-06.html' },
-      { ticker: '2330.TW', name: '台積電 TSMC', date: '2026-03-06', rating: 'Hold', file: '2330-2026-03-06.html' },
-      { ticker: '2383.TW', name: '台光電 Elite', date: '2026-03-06', rating: 'Hold', file: '2383-2026-03-06.html' }
-    ];
+    let DEEP_REPORTS = [];
+    // Load deep reports index from JSON file
+    async function loadDeepReportsIndex() {
+      try {
+        const res = await fetch('data/deep-reports-index.json');
+        if (res.ok) {
+          DEEP_REPORTS = await res.json();
+        }
+      } catch (e) {
+        console.warn('Could not load deep-reports-index.json:', e);
+      }
+      renderDeepReports();
+      document.getElementById('totalDeep').textContent = DEEP_REPORTS.length;
+    }
 
     const SCORE_LABELS = {
       fundamental: '基本面', chip: '籌碼面', technical: '技術面',
       catalyst: '消息面', macro: '總經', industry: '產業展望'
     };
 
+    const MARKET_LABELS = { TW: '🇹🇼 台股', US: '🇺🇸 美股', JP: '🇯🇵 日股' };
+    const MARKET_BADGE_CLASS = { TW: 'badge-market-tw', US: 'badge-market-us', JP: 'badge-market-jp' };
+    const CURRENCY_SYMBOLS = { TWD: '', USD: '$', JPY: '¥' };
+
     const picksCache = {};
-    let currentData = null;
+    let currentData = {};
+    let currentDeepFilter = 'all';
 
     // ===== NAV =====
-    function showSection(name) {
+    function showSection(name, btn) {
       document.querySelectorAll('.section-content').forEach(s => s.classList.remove('active'));
       document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
       document.getElementById('sec-' + name).classList.add('active');
-      event.target.classList.add('active');
+      if (btn) btn.classList.add('active');
+    }
+
+    // ===== MARKET TABS =====
+    function switchMarket(market, btn) {
+      document.querySelectorAll('#sec-picks .market-tab').forEach(t => t.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      const panels = ['tw', 'us', 'jp'];
+      panels.forEach(m => {
+        const panel = document.getElementById('panel-' + m);
+        if (market === 'all' || market === m) {
+          panel.classList.add('active');
+        } else {
+          panel.classList.remove('active');
+        }
+      });
+    }
+
+    // ===== DEEP REPORTS FILTER =====
+    function filterDeep(market, btn) {
+      currentDeepFilter = market;
+      document.querySelectorAll('#sec-deep .market-tab').forEach(t => t.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      renderDeepReports();
     }
 
     // ===== INIT =====
     document.addEventListener('DOMContentLoaded', function() {
       initializePage();
-      renderArchive();
+      loadDeepReportsIndex();
       loadPicksByDate('today');
     });
 
@@ -547,7 +533,7 @@
       document.getElementById('currentDate').textContent = date.toLocaleDateString('zh-TW', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
     }
 
-    // ===== LOAD PICKS =====
+    // ===== LOAD PICKS (multi-market) =====
     async function loadPicksByDate(type) {
       let targetDate;
       const today = new Date();
@@ -556,7 +542,6 @@
       else if (type === 'week') { targetDate = new Date(today); targetDate.setDate(targetDate.getDate() - today.getDay() + 1); }
       else if (type === 'custom') targetDate = new Date(document.getElementById('dateInput').value + 'T00:00:00');
 
-      // Update active button
       document.querySelectorAll('.calendar-btn').forEach(btn => btn.classList.remove('active'));
       if (type === 'today') document.querySelectorAll('.calendar-btn')[0].classList.add('active');
       else if (type === 'yesterday') document.querySelectorAll('.calendar-btn')[1].classList.add('active');
@@ -566,62 +551,96 @@
       document.getElementById('dateInput').value = dateStr;
       updateCurrentDate();
 
-      // Show loading
       showLoading('twPicksContainer');
       showLoading('usPicksContainer');
-      showLoading('watchlistContainer');
+      showLoading('jpPicksContainer');
 
       if (picksCache[dateStr]) {
-        applyData(picksCache[dateStr]);
+        applyAllData(picksCache[dateStr]);
         return;
       }
 
-      try {
-        const resp = await fetch(`data/daily-picks-${dateStr}.json`);
-        if (!resp.ok) throw new Error('Not found');
-        const data = await resp.json();
-        picksCache[dateStr] = data;
-        applyData(data);
-      } catch (e) {
-        showEmpty('twPicksContainer');
-        showEmpty('usPicksContainer');
-        showEmpty('watchlistContainer');
-        document.getElementById('marketSummary').style.display = 'none';
-      }
+      // Fetch all three market JSONs in parallel
+      const merged = {};
+      const fetches = [
+        { key: 'tw', url: `data/daily-picks-${dateStr}.json`, picksKey: 'tw_picks' },
+        { key: 'us', url: `data/daily-picks-us-${dateStr}.json`, picksKey: 'us_picks' },
+        { key: 'jp', url: `data/daily-picks-jp-${dateStr}.json`, picksKey: 'jp_picks' }
+      ];
+
+      await Promise.all(fetches.map(async (f) => {
+        try {
+          const resp = await fetch(f.url);
+          if (!resp.ok) return;
+          const data = await resp.json();
+          merged[f.picksKey] = data[f.picksKey] || [];
+          // Merge shared data (macro, methodology, etc.)
+          if (data.market_summary) {
+            merged.market_summary = merged.market_summary || {};
+            Object.assign(merged.market_summary, data.market_summary);
+          }
+          if (data.scoring_methodology && !merged.scoring_methodology) {
+            merged.scoring_methodology = data.scoring_methodology;
+          }
+          if (data.macro_overview && !merged.macro_overview) {
+            merged.macro_overview = data.macro_overview;
+          }
+          if (data.screening_funnel) {
+            merged.screening_funnels = merged.screening_funnels || {};
+            merged.screening_funnels[f.key] = data.screening_funnel;
+          }
+          if (data.watchlist) {
+            merged.watchlist = merged.watchlist || [];
+            merged.watchlist.push(...data.watchlist);
+          }
+        } catch(e) { /* ignore missing market data */ }
+      }));
+
+      picksCache[dateStr] = merged;
+      applyAllData(merged);
     }
 
     function showLoading(id) {
-      document.getElementById(id).innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">⏳</div><div class="empty-state-text">載入中...</div></div>';
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">⏳</div><div class="empty-state-text">載入中...</div></div>';
     }
     function showEmpty(id) {
-      document.getElementById(id).innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">📭</div><div class="empty-state-text">該日期暫無數據</div></div>';
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">📭</div><div class="empty-state-text">該日期暫無數據</div></div>';
     }
 
     // ===== APPLY DATA =====
-    function applyData(data) {
+    function applyAllData(data) {
       currentData = data;
 
       // Market summary
-      if (data.market_summary) {
-        document.getElementById('marketSummary').style.display = 'grid';
-        document.getElementById('twSummary').textContent = data.market_summary.tw || '';
-        document.getElementById('usSummary').textContent = data.market_summary.us || '';
-      }
+      const ms = data.market_summary || {};
+      const hasSummary = ms.tw || ms.us || ms.jp;
+      document.getElementById('marketSummary').style.display = hasSummary ? 'grid' : 'none';
+
+      ['tw', 'us', 'jp'].forEach(m => {
+        const card = document.getElementById(m + 'SummaryCard');
+        const text = document.getElementById(m + 'Summary');
+        if (ms[m]) {
+          card.style.display = 'block';
+          text.textContent = ms[m];
+        } else {
+          card.style.display = 'none';
+        }
+      });
 
       // Render picks
       renderPicks(data.tw_picks || [], 'twPicksContainer');
       renderPicks(data.us_picks || [], 'usPicksContainer');
+      renderPicks(data.jp_picks || [], 'jpPicksContainer');
 
-      // Render watchlist
-      renderWatchlist(data.watchlist || []);
-
-      // Render methodology
+      // Methodology
       if (data.scoring_methodology) renderMethodology(data.scoring_methodology);
 
-      // Render macro dashboard
+      // Macro
       if (data.macro_overview) renderMacro(data.macro_overview);
 
-      // Update stats
+      // Stats
       updateStats(data);
     }
 
@@ -630,12 +649,12 @@
       if (!basis) return '';
       const maxPreview = 60;
       if (basis.length <= maxPreview) {
-        return `<div class="target-basis">📐 ${basis}</div>`;
+        return `<div class="target-basis">${basis}</div>`;
       }
       const preview = basis.substring(0, maxPreview) + '...';
       return `<div class="target-basis" id="${id}" onclick="toggleBasis('${id}')">
-        <span class="tb-preview">📐 ${preview} <span class="tb-toggle">▶ 展開詳情</span></span>
-        <span class="tb-full">📐 ${basis} <span class="tb-toggle">▲ 收合</span></span>
+        <span class="tb-preview">${preview} <span class="tb-toggle">展開</span></span>
+        <span class="tb-full">${basis} <span class="tb-toggle">收合</span></span>
       </div>`;
     }
     function toggleBasis(id) {
@@ -648,12 +667,21 @@
       if (!picks || picks.length === 0) { showEmpty(containerId); return; }
 
       container.innerHTML = picks.map((p, idx) => {
-        const currSymbol = p.currency === 'USD' ? '$' : '';
-        const upsideClass = p.upside.startsWith('+') ? 'upside-positive' : 'upside-negative';
+        const curr = p.currency || 'TWD';
+        const cs = CURRENCY_SYMBOLS[curr] || '';
+        const upsideStr = p.upside || '';
+        const upsideClass = upsideStr.startsWith('+') ? 'upside-positive' : 'upside-negative';
         const rankClass = p.rank <= 3 ? ` rank-${p.rank}` : '';
         const scoreColor = v => v >= 8 ? 'high' : v >= 6 ? 'mid' : 'low';
         const tbId = containerId + '-tb-' + idx;
         const basisHtml = renderTargetBasis(p.target_price_basis, tbId);
+        const market = p.market || 'TW';
+        const marketBadge = MARKET_BADGE_CLASS[market] || 'badge-market-tw';
+        const marketLabel = MARKET_LABELS[market] || market;
+        const ratingBadge = p.rating === 'Buy' || p.rating === 'Strong Buy'
+          ? '<span class="badge badge-rating-buy">Buy</span>'
+          : '<span class="badge badge-rating-hold">Hold</span>';
+        const reportLink = p.report_url ? `<a href="${p.report_url}" style="color:#60a5fa;font-size:0.75rem;text-decoration:none;margin-top:0.5rem;display:inline-block;">📄 查看報告</a>` : '';
 
         return `
         <div class="pick-card">
@@ -666,18 +694,17 @@
             </div>
           </div>
           <div class="pick-badges">
-            <span class="badge badge-market">${p.market === 'TW' ? '🇹🇼 台股' : '🇺🇸 美股'}</span>
-            <span class="badge badge-rating-buy">🟢 買進</span>
-            ${p.below_100 ? '<span class="badge badge-below100">💰 百元以下</span>' : ''}
+            <span class="badge ${marketBadge}">${marketLabel}</span>
+            ${ratingBadge}
           </div>
           <div class="pick-price">
             <div class="price-current">
               <span class="price-label">現價</span>
-              <span class="price-value">${currSymbol}${p.price.toLocaleString()} ${p.currency}</span>
+              <span class="price-value">${cs}${typeof p.price === 'number' ? p.price.toLocaleString() : p.price} ${curr}</span>
             </div>
             <div class="price-upside">
-              <div class="upside-value ${upsideClass}">${p.upside}</div>
-              <div class="upside-label">目標價 ${currSymbol}${p.target_price.toLocaleString()}</div>
+              <div class="upside-value ${upsideClass}">${upsideStr}</div>
+              <div class="upside-label">目標 ${cs}${typeof p.target_price === 'number' ? p.target_price.toLocaleString() : p.target_price}</div>
             </div>
           </div>
           ${basisHtml}
@@ -687,7 +714,7 @@
               <span class="total-score">總分 ${p.total_score}/60</span>
             </div>
             <div class="scores-grid">
-              ${Object.entries(p.scores).map(([k, v]) => `
+              ${p.scores ? Object.entries(p.scores).map(([k, v]) => `
                 <div class="score-item">
                   <div class="score-name">${SCORE_LABELS[k] || k}</div>
                   <div class="score-bar">
@@ -695,84 +722,42 @@
                     <span class="score-number">${v}</span>
                   </div>
                 </div>
-              `).join('')}
+              `).join('') : ''}
             </div>
           </div>
-          <div class="pick-summary">${p.summary}</div>
+          ${p.summary ? `<div class="pick-summary">${p.summary}</div>` : ''}
+          ${reportLink}
         </div>`;
       }).join('');
     }
 
-    // ===== RENDER WATCHLIST =====
-    function renderWatchlist(items) {
-      const container = document.getElementById('watchlistContainer');
-      if (!items || items.length === 0) { showEmpty('watchlistContainer'); return; }
+    // ===== RENDER DEEP REPORTS =====
+    function renderDeepReports() {
+      const container = document.getElementById('deepContainer');
+      let reports = DEEP_REPORTS;
+      if (currentDeepFilter !== 'all') {
+        reports = reports.filter(r => r.market.toLowerCase() === currentDeepFilter);
+      }
 
-      // Sort: Buy first, then by total_score desc
-      const sorted = [...items].sort((a, b) => {
-        if (a.rating === 'Buy' && b.rating !== 'Buy') return -1;
-        if (a.rating !== 'Buy' && b.rating === 'Buy') return 1;
-        return b.total_score - a.total_score;
-      });
+      if (reports.length === 0) {
+        container.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">📚</div><div class="empty-state-text">暫無深度報告</div></div>';
+        return;
+      }
 
-      container.innerHTML = sorted.map((w, idx) => {
-        const upsideClass = w.upside.startsWith('+') ? 'upside-positive' : 'upside-negative';
-        const scoreColor = v => v >= 8 ? 'high' : v >= 6 ? 'mid' : 'low';
-        const ratingBadge = w.rating === 'Buy'
-          ? '<span class="badge badge-rating-buy">🟢 買進</span>'
-          : '<span class="badge badge-rating-hold">🟡 持有</span>';
-        const rankNum = idx + 1;
-        const rankClass = rankNum <= 3 ? ` rank-${rankNum}` : '';
-        const tbId = 'wl-tb-' + idx;
-        const basisHtml = w.target_price_basis ? renderTargetBasis(w.target_price_basis, tbId) : '';
+      container.innerHTML = reports.map(r => {
+        const marketLabel = MARKET_LABELS[r.market] || r.market;
+        const marketBadge = MARKET_BADGE_CLASS[r.market] || 'badge-market-tw';
+        const ratingClass = r.rating === 'Buy' || r.rating === 'Strong Buy' ? 'deep-badge-buy' : 'deep-badge-hold';
+        const ratingText = r.rating === 'Buy' || r.rating === 'Strong Buy' ? 'Buy' : 'Hold';
 
         return `
-        <div class="pick-card">
-          <div class="pick-rank${rankClass}">${rankNum}</div>
-          <div class="pick-header">
-            <div>
-              <div class="pick-ticker">${w.ticker}</div>
-              <div class="pick-name">${w.name}</div>
-              ${w.name_en ? `<div class="pick-name-en">${w.name_en}</div>` : ''}
-            </div>
-          </div>
-          <div class="pick-badges">
-            <span class="badge badge-market">🇹🇼 台股</span>
-            ${ratingBadge}
-            ${w.below_100 ? '<span class="badge badge-below100">💰 百元以下</span>' : ''}
-          </div>
-          <div class="pick-price">
-            <div class="price-current">
-              <span class="price-label">現價</span>
-              <span class="price-value">${w.price.toLocaleString()} TWD</span>
-            </div>
-            <div class="price-upside">
-              <div class="upside-value ${upsideClass}">${w.upside}</div>
-              <div class="upside-label">目標價 ${w.target_price.toLocaleString()}</div>
-            </div>
-          </div>
-          ${basisHtml}
-          <div class="score-breakdown">
-            <div class="score-breakdown-title">
-              <span>六維度評分</span>
-              <span class="total-score">總分 ${w.total_score}/60</span>
-            </div>
-            <div class="scores-grid">
-              ${Object.entries(w.scores).map(([k, v]) => `
-                <div class="score-item">
-                  <div class="score-name">${SCORE_LABELS[k] || k}</div>
-                  <div class="score-bar">
-                    <div class="score-bar-bg"><div class="score-bar-fill ${scoreColor(v)}" style="width:${v*10}%"></div></div>
-                    <span class="score-number">${v}</span>
-                  </div>
-                </div>
-              `).join('')}
-            </div>
-          </div>
-          ${w.summary ? `<div class="pick-summary">${w.summary}</div>` : ''}
-          ${w.news ? `<div class="pick-summary" style="border-left-color:#f59e0b;margin-top:0.5rem;"><strong>📰 動態：</strong>${w.news}</div>` : ''}
-          ${w.client_news ? `<div class="pick-summary" style="border-left-color:#8b5cf6;margin-top:0.5rem;font-size:0.78rem;"><strong>🏭 客戶面：</strong>${w.client_news}</div>` : ''}
-        </div>`;
+        <a href="${r.file}" class="deep-card">
+          <div class="deep-market"><span class="badge ${marketBadge}" style="font-size:0.68rem;">${marketLabel}</span></div>
+          <div class="deep-ticker">${r.ticker}</div>
+          <div class="deep-name">${r.name}</div>
+          <div class="deep-date">📅 ${r.date}</div>
+          <span class="deep-badge ${ratingClass}">${ratingText}</span>
+        </a>`;
       }).join('');
     }
 
@@ -785,11 +770,10 @@
 
       let html = `<p style="font-size:0.92rem;margin-bottom:1.5rem;">${m.description || ''}</p>`;
 
-      // Section 1: Selection Process
       if (sp.steps && sp.steps.length > 0) {
         html += `
         <div class="meth-section">
-          <div class="meth-section-title">🔍 ${sp.title || '精選 Top 10 選股流程'}</div>
+          <div class="meth-section-title">${sp.title || '精選選股流程'}</div>
           <div class="meth-steps">
             ${sp.steps.map(s => `
               <div class="meth-step">
@@ -804,60 +788,58 @@
         </div>`;
       }
 
-      // Section 2: Target Price Methods
       if (tpm.methods && tpm.methods.length > 0) {
         html += `
         <div class="meth-section">
-          <div class="meth-section-title">📐 ${tpm.title || '目標價計算方法說明'}</div>
+          <div class="meth-section-title">${tpm.title || '目標價計算方法說明'}</div>
           <div class="meth-methods-grid">
             ${tpm.methods.map(mt => `
               <div class="meth-method-card">
                 <div class="meth-method-name">${mt.name}</div>
                 <div class="meth-method-formula">${mt.formula}</div>
                 <div class="meth-method-desc">${mt.description}</div>
-                ${mt.example ? `<div class="meth-method-example">💡 ${mt.example}</div>` : ''}
+                ${mt.example ? `<div class="meth-method-example">${mt.example}</div>` : ''}
               </div>
             `).join('')}
           </div>
         </div>`;
       }
 
-      // Section 3: Dimensions
-      html += `
-      <div class="meth-section">
-        <div class="meth-section-title">📊 六維度評分細項</div>
-        <div class="dim-grid">
-          ${Object.entries(dims).map(([k, d]) => `
-            <div class="dim-card">
-              <h4>${d.name || k}</h4>
-              <div class="dim-criteria">${d.criteria || ''}</div>
-              <div class="dim-scale">${d.scale || ''}</div>
-              ${d.weight ? `<div class="dim-weight">⚖️ 權重：${d.weight}</div>` : ''}
-              ${d.scoring_detail ? `<div class="dim-detail">📋 ${d.scoring_detail}</div>` : ''}
-            </div>
-          `).join('')}
-        </div>
-      </div>`;
+      if (Array.isArray(dims)) {
+        html += `
+        <div class="meth-section">
+          <div class="meth-section-title">六維度評分細項</div>
+          <div class="dim-grid">
+            ${dims.map(d => `
+              <div class="dim-card">
+                <h4>${d.name || ''}</h4>
+                <div class="dim-criteria">評估: ${d.evaluates || ''}</div>
+                <div class="dim-scale">估值角色: ${d.valuation_role || ''}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>`;
+      } else if (typeof dims === 'object') {
+        html += `
+        <div class="meth-section">
+          <div class="meth-section-title">六維度評分細項</div>
+          <div class="dim-grid">
+            ${Object.entries(dims).map(([k, d]) => `
+              <div class="dim-card">
+                <h4>${d.name || k}</h4>
+                <div class="dim-criteria">${d.criteria || d.evaluates || ''}</div>
+                <div class="dim-scale">${d.scale || d.valuation_role || ''}</div>
+                ${d.weight ? `<div class="dim-weight">權重：${d.weight}</div>` : ''}
+              </div>
+            `).join('')}
+          </div>
+        </div>`;
+      }
 
       box.innerHTML = html;
     }
 
-    // ===== RENDER ARCHIVE =====
-    function renderArchive() {
-      const container = document.getElementById('archiveContainer');
-      container.innerHTML = REPORT_ARCHIVE.map(r => `
-        <a href="${r.file}" class="archive-card">
-          <div class="archive-ticker">${r.ticker}</div>
-          <div class="archive-title">${r.name}</div>
-          <div class="archive-date">📅 ${r.date}</div>
-          <span class="archive-rating archive-rating-${r.rating.toLowerCase()}">
-            ${r.rating === 'Buy' ? '🟢 買進' : r.rating === 'Hold' ? '🟡 持有' : '🔴 賣出'}
-          </span>
-        </a>
-      `).join('');
-    }
-
-    // ===== RENDER MACRO DASHBOARD =====
+    // ===== RENDER MACRO =====
     function renderMacro(macro) {
       const container = document.getElementById('macroContainer');
       if (!macro) { container.innerHTML = '<div class="empty-state"><div class="empty-state-icon">🌍</div><div class="empty-state-text">暫無總經數據</div></div>'; return; }
@@ -870,10 +852,7 @@
       };
       const catIcons = { '利率與貨幣政策': '🏦', '經濟成長與景氣': '📊', '市場情緒與風險': '🎭', '股市指數': '📈', '地緣政治與政策': '🌐' };
 
-      let html = '';
-
-      // Header
-      html += `<div class="macro-header">
+      let html = `<div class="macro-header">
         <div style="display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;">
           <div class="macro-score-circle ${scoreClass}">
             <div style="font-size:1.5rem;font-weight:800;line-height:1;">${macro.overall_score}</div>
@@ -881,14 +860,13 @@
           </div>
           <div style="flex:1;min-width:200px;">
             <div style="font-size:1.1rem;font-weight:700;color:#f8fafc;margin-bottom:0.3rem;">
-              總經評估：${macro.overall_assessment}
+              總經評估：${macro.overall_assessment || ''}
             </div>
             <div style="font-size:0.82rem;color:#94a3b8;line-height:1.6;">${macro.summary || ''}</div>
           </div>
         </div>
       </div>`;
 
-      // Categories
       if (macro.indicators && macro.indicators.length > 0) {
         html += '<div class="macro-categories">';
         macro.indicators.forEach(cat => {
@@ -913,26 +891,24 @@
         html += '</div>';
       }
 
-      // Impact on picks
       if (macro.impact_on_picks) {
         const imp = macro.impact_on_picks;
         html += '<div class="macro-impact">';
         if (imp.positive_factors && imp.positive_factors.length > 0) {
           html += `<div class="macro-impact-card positive-card">
-            <div class="macro-impact-title pos">✅ 有利因素</div>
+            <div class="macro-impact-title pos">有利因素</div>
             <ul class="macro-impact-list">${imp.positive_factors.map(f => `<li>${f}</li>`).join('')}</ul>
           </div>`;
         }
         if (imp.negative_factors && imp.negative_factors.length > 0) {
           html += `<div class="macro-impact-card negative-card">
-            <div class="macro-impact-title neg">⚠️ 不利因素</div>
+            <div class="macro-impact-title neg">不利因素</div>
             <ul class="macro-impact-list">${imp.negative_factors.map(f => `<li>${f}</li>`).join('')}</ul>
           </div>`;
         }
         html += '</div>';
-
         if (imp.net_assessment) {
-          html += `<div class="macro-net"><strong>📋 綜合評估：</strong>${imp.net_assessment}</div>`;
+          html += `<div class="macro-net"><strong>綜合評估：</strong>${imp.net_assessment}</div>`;
         }
       }
 
@@ -944,20 +920,19 @@
       if (!data) return;
       const tw = data.tw_picks || [];
       const us = data.us_picks || [];
-      const wl = data.watchlist || [];
-      const all = [...tw, ...us];
+      const jp = data.jp_picks || [];
+      const all = [...tw, ...us, ...jp];
 
       document.getElementById('twCount').textContent = tw.length;
       document.getElementById('usCount').textContent = us.length;
-      document.getElementById('watchlistCount').textContent = wl.length;
-      document.getElementById('below100Count').textContent = tw.filter(p => p.below_100).length;
+      document.getElementById('jpCount').textContent = jp.length;
 
       if (all.length > 0) {
-        const avg = (all.reduce((s, p) => s + p.total_score, 0) / all.length).toFixed(1);
+        const avg = (all.reduce((s, p) => s + (p.total_score || 0), 0) / all.length).toFixed(1);
         document.getElementById('avgScore').textContent = avg + '/60';
       }
 
-      document.getElementById('totalReports').textContent = REPORT_ARCHIVE.length;
+      document.getElementById('totalDeep').textContent = DEEP_REPORTS.length;
 
       if (data.macro_overview && data.macro_overview.overall_score) {
         document.getElementById('macroScore').textContent = data.macro_overview.overall_score + '/10';
