@@ -314,6 +314,7 @@
       <button class="nav-tab" onclick="showSection('deep', this)">📚 深度研究</button>
       <button class="nav-tab" onclick="showSection('methodology', this)">🔬 評估方法</button>
       <button class="nav-tab" onclick="showSection('macro', this)">🌍 總經儀表板</button>
+      <button class="nav-tab" onclick="showSection('backtest', this)">📈 回測績效</button>
     </div>
   </div>
 
@@ -445,6 +446,14 @@
         <div class="empty-state"><div class="empty-state-icon">🌍</div><div class="empty-state-text">載入中...</div></div>
       </div>
     </div>
+
+    <div class="section-content" id="sec-backtest">
+      <div class="section-title">📈 回測績效追蹤</div>
+      <div class="section-subtitle">歷史推薦表現追蹤 | 勝率・報酬率・模型洞察</div>
+      <div id="backtestContainer">
+        <div class="empty-state"><div class="empty-state-icon">📈</div><div class="empty-state-text">載入中...</div></div>
+      </div>
+    </div>
   </div>
 
   <div class="footer">
@@ -515,10 +524,142 @@
     }
 
     // ===== INIT =====
+    // ===== BACKTEST =====
+    async function loadBacktestData() {
+      try {
+        const res = await fetch('data/backtest-data.json');
+        if (!res.ok) return;
+        const data = await res.json();
+        renderBacktest(data);
+      } catch (e) {
+        console.warn('No backtest data yet:', e);
+      }
+    }
+
+    function renderBacktest(data) {
+      const container = document.getElementById('backtestContainer');
+      const stats = data.stats || {};
+      const insights = data.insights || {};
+      const overall = stats.overall || {};
+      const picks = data.picks || [];
+      const updated = data.updated || 'N/A';
+
+      let html = `<div style="margin-bottom:1rem;color:#94a3b8;font-size:0.85rem;">最後更新：${updated}</div>`;
+
+      // KPI cards
+      html += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin-bottom:2rem;">';
+      const kpis = [
+        { label: '總推薦數', value: stats.total_picks || 0, color: '#60a5fa' },
+        { label: '20日勝率', value: overall.win_rate_20d != null ? overall.win_rate_20d + '%' : 'N/A', color: overall.win_rate_20d >= 50 ? '#34d399' : '#f87171' },
+        { label: '20日平均報酬', value: overall.avg_return_20d != null ? overall.avg_return_20d + '%' : 'N/A', color: overall.avg_return_20d >= 0 ? '#34d399' : '#f87171' },
+        { label: '目標達成率', value: overall.target_hit_rate != null ? overall.target_hit_rate + '%' : 'N/A', color: '#fbbf24' },
+        { label: '停損觸發率', value: overall.stop_hit_rate != null ? overall.stop_hit_rate + '%' : 'N/A', color: '#f87171' },
+      ];
+      kpis.forEach(k => {
+        html += '<div style="background:#1e293b;border:1px solid #334155;border-radius:12px;padding:1.2rem;text-align:center;">';
+        html += '<div style="font-size:1.5rem;font-weight:700;color:' + k.color + ';">' + k.value + '</div>';
+        html += '<div style="font-size:0.8rem;color:#94a3b8;margin-top:0.3rem;">' + k.label + '</div>';
+        html += '</div>';
+      });
+      html += '</div>';
+
+      // Market breakdown
+      const byMarket = stats.by_market || {};
+      if (Object.keys(byMarket).length > 0) {
+        html += '<div class="section-title" style="font-size:1.1rem;margin-bottom:1rem;">📊 各市場表現</div>';
+        html += '<div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;font-size:0.9rem;">';
+        html += '<tr style="border-bottom:1px solid #334155;"><th style="text-align:left;padding:0.5rem;color:#94a3b8;">市場</th><th style="padding:0.5rem;color:#94a3b8;">推薦數</th><th style="padding:0.5rem;color:#94a3b8;">20日平均報酬</th><th style="padding:0.5rem;color:#94a3b8;">勝率</th></tr>';
+        for (const [market, mdata] of Object.entries(byMarket)) {
+          const flag = market === 'tw' ? '🇹🇼' : market === 'us' ? '🇺🇸' : '🇯🇵';
+          const retColor = mdata.avg_return_20d >= 0 ? '#34d399' : '#f87171';
+          html += '<tr style="border-bottom:1px solid #1e293b;">';
+          html += '<td style="padding:0.5rem;">' + flag + ' ' + market.toUpperCase() + '</td>';
+          html += '<td style="padding:0.5rem;text-align:center;">' + mdata.count + '</td>';
+          html += '<td style="padding:0.5rem;text-align:center;color:' + retColor + ';">' + mdata.avg_return_20d + '%</td>';
+          html += '<td style="padding:0.5rem;text-align:center;">' + mdata.win_rate_20d + '%</td>';
+          html += '</tr>';
+        }
+        html += '</table></div>';
+      }
+
+      // Dimension analysis
+      const byDim = stats.by_dimension || {};
+      if (Object.keys(byDim).length > 0) {
+        html += '<div class="section-title" style="font-size:1.1rem;margin:1.5rem 0 1rem;">🎯 評分維度預測力</div>';
+        html += '<div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;font-size:0.9rem;">';
+        html += '<tr style="border-bottom:1px solid #334155;"><th style="text-align:left;padding:0.5rem;color:#94a3b8;">維度</th><th style="padding:0.5rem;color:#94a3b8;">高分(≥7)報酬</th><th style="padding:0.5rem;color:#94a3b8;">低分(≤4)報酬</th><th style="padding:0.5rem;color:#94a3b8;">預測力</th></tr>';
+        for (const [dim, ddata] of Object.entries(byDim)) {
+          const h = ddata.high_score_avg_return;
+          const l = ddata.low_score_avg_return;
+          const spread = h != null && l != null ? (h - l).toFixed(1) : 'N/A';
+          const spreadColor = spread !== 'N/A' && parseFloat(spread) > 0 ? '#34d399' : '#f87171';
+          html += '<tr style="border-bottom:1px solid #1e293b;">';
+          html += '<td style="padding:0.5rem;text-transform:capitalize;">' + dim + '</td>';
+          html += '<td style="padding:0.5rem;text-align:center;color:' + (h >= 0 ? '#34d399' : '#f87171') + ';">' + (h != null ? h + '%' : 'N/A') + '</td>';
+          html += '<td style="padding:0.5rem;text-align:center;color:' + (l >= 0 ? '#34d399' : '#f87171') + ';">' + (l != null ? l + '%' : 'N/A') + '</td>';
+          html += '<td style="padding:0.5rem;text-align:center;color:' + spreadColor + ';">' + (spread !== 'N/A' ? '+' + spread + '%' : 'N/A') + '</td>';
+          html += '</tr>';
+        }
+        html += '</table></div>';
+      }
+
+      // Insights
+      const findings = insights.findings || [];
+      const recs = insights.recommendations || [];
+      const failures = insights.common_failures || [];
+      if (findings.length > 0 || recs.length > 0) {
+        html += '<div class="section-title" style="font-size:1.1rem;margin:1.5rem 0 1rem;">🧠 模型洞察</div>';
+        html += '<div style="background:#1e293b;border:1px solid #334155;border-radius:12px;padding:1.2rem;">';
+        findings.forEach(f => { html += '<div style="margin-bottom:0.5rem;">' + f + '</div>'; });
+        if (failures.length > 0) {
+          html += '<div style="margin-top:0.8rem;color:#f87171;font-weight:600;">常見失敗模式：</div>';
+          failures.forEach(f => { html += '<div style="margin-bottom:0.3rem;color:#fca5a5;">• ' + f + '</div>'; });
+        }
+        if (recs.length > 0) {
+          html += '<div style="margin-top:0.8rem;color:#fbbf24;font-weight:600;">改善建議：</div>';
+          recs.forEach(r => { html += '<div style="margin-bottom:0.3rem;color:#fde68a;">💡 ' + r + '</div>'; });
+        }
+        html += '</div>';
+      }
+
+      // Recent picks performance table
+      const recentPicks = picks.filter(p => p.price_data_available).slice(0, 30);
+      if (recentPicks.length > 0) {
+        html += '<div class="section-title" style="font-size:1.1rem;margin:1.5rem 0 1rem;">📋 近期推薦追蹤</div>';
+        html += '<div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;font-size:0.85rem;">';
+        html += '<tr style="border-bottom:1px solid #334155;"><th style="text-align:left;padding:0.5rem;color:#94a3b8;">日期</th><th style="text-align:left;padding:0.5rem;color:#94a3b8;">股票</th><th style="padding:0.5rem;color:#94a3b8;">推薦價</th><th style="padding:0.5rem;color:#94a3b8;">現價</th><th style="padding:0.5rem;color:#94a3b8;">報酬</th><th style="padding:0.5rem;color:#94a3b8;">狀態</th></tr>';
+        recentPicks.forEach(p => {
+          const ret = p.current_return;
+          const retColor = ret >= 0 ? '#34d399' : '#f87171';
+          let status = '持有中';
+          let statusColor = '#60a5fa';
+          if (p.target_hit) { status = '✅ 達標'; statusColor = '#34d399'; }
+          else if (p.stop_hit) { status = '❌ 停損'; statusColor = '#f87171'; }
+          const flag = p.market === 'tw' ? '🇹🇼' : p.market === 'us' ? '🇺🇸' : '🇯🇵';
+          html += '<tr style="border-bottom:1px solid #1e293b;">';
+          html += '<td style="padding:0.4rem 0.5rem;">' + p.date + '</td>';
+          html += '<td style="padding:0.4rem 0.5rem;">' + flag + ' ' + p.ticker + '</td>';
+          html += '<td style="padding:0.4rem 0.5rem;text-align:center;">' + (p.rec_price || 'N/A') + '</td>';
+          html += '<td style="padding:0.4rem 0.5rem;text-align:center;">' + (p.current_price || 'N/A') + '</td>';
+          html += '<td style="padding:0.4rem 0.5rem;text-align:center;color:' + retColor + ';">' + (ret != null ? (ret >= 0 ? '+' : '') + ret + '%' : 'N/A') + '</td>';
+          html += '<td style="padding:0.4rem 0.5rem;text-align:center;color:' + statusColor + ';">' + status + '</td>';
+          html += '</tr>';
+        });
+        html += '</table></div>';
+      }
+
+      if (!stats.total_picks) {
+        html = '<div class="empty-state"><div class="empty-state-icon">📈</div><div class="empty-state-text">尚無回測數據<br>系統將在每日 22:00 自動執行回測分析</div></div>';
+      }
+
+      container.innerHTML = html;
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
       initializePage();
       loadDeepReportsIndex();
       loadPicksByDate('today');
+      loadBacktestData();
     });
 
     function initializePage() {
