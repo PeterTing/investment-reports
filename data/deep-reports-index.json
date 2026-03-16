@@ -1,5 +1,27 @@
 [
   {
+    "ticker": "2357.TW",
+    "name": "華碩",
+    "name_en": "ASUSTeK Computer",
+    "market": "TW",
+    "date": "2026-03-16",
+    "rating": "Buy",
+    "total_score": 43,
+    "summary": "PE 9.82x歷史低位，殖利率7.13%，2025 EPS 60元確認，伺服器Q1訂單+4倍",
+    "file": "reports/deep/2357-2026-03-16.html"
+  },
+  {
+    "ticker": "2382.TW",
+    "name": "廣達",
+    "name_en": "Quanta Computer",
+    "market": "TW",
+    "date": "2026-03-16",
+    "rating": "Buy",
+    "total_score": 43,
+    "summary": "AI伺服器龍頭，ROE 29.63%，2025 EPS 19.45確認，FCF 2025E=2,000億",
+    "file": "reports/deep/2382-2026-03-16.html"
+  },
+  {
     "ticker": "3017.TW",
     "name": "奇鋐 AVC",
     "name_en": "AVC",
