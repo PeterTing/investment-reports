@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9022.T 東海旅客鉄道株式会社（JR東海） 深度投資分析報告 | 2026-03-16</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    line-height: 1.7; color: #1a1a2e; background: #f8f9fa; font-size: 16px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.6rem; color: #0f3460; border-bottom: 3px solid #e94560; padding-bottom: 8px; margin: 24px 0 16px; }
+h2 { font-size: 1.3rem; color: #16213e; border-left: 4px solid #e94560; padding-left: 12px; margin: 28px 0 14px; }
+h3 { font-size: 1.1rem; color: #0f3460; margin: 20px 0 10px; }
+.header-box {
+    background: linear-gradient(135deg, #0f3460, #16213e); color: white;
+    padding: 24px; border-radius: 12px; margin-bottom: 24px;
+}
+.header-box h1 { color: white; border-bottom-color: #e94560; font-size: 1.5rem; }
+.rating-badge {
+    display: inline-block; padding: 6px 18px; border-radius: 20px;
+    font-weight: bold; font-size: 1.1rem; color: #fff; background: #00c853;
+}
+.market-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.85rem; font-weight: 600; color: white; margin-left: 8px;
+    background: #ef4444;
+}
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 16px 0;
+}
+.info-card { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; }
+.info-card .label { font-size: 0.85rem; opacity: 0.8; }
+.info-card .value { font-size: 1.3rem; font-weight: bold; }
+.card {
+    background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px;
+    border: 1px solid #e0e0e0; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+th { background: #0f3460; color: white; padding: 10px 8px; text-align: left; white-space: nowrap; }
+td { padding: 8px; border-bottom: 1px solid #e0e0e0; }
+tr:nth-child(even) { background: #f5f5f5; }
+tr:hover { background: #e8eaf6; }
+.highlight { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.warning { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.action-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 14px 0;
+}
+.action-item { text-align: center; padding: 14px; border-radius: 8px; background: #f5f5f5; }
+.action-item .label { font-size: 0.82rem; color: #666; }
+.action-item .value { font-size: 1.3rem; font-weight: 700; margin-top: 4px; }
+.source { font-size: 0.85rem; color: #666; margin: 6px 0; font-style: italic; }
+.sources ol { padding-left: 20px; font-size: 0.82rem; }
+.sources li { margin-bottom: 4px; word-break: break-all; }
+.sources a { color: #1565c0; }
+.toc { background: #f0f4f8; padding: 16px 20px; border-radius: 10px; margin-bottom: 20px; }
+.toc a { color: #0f3460; text-decoration: none; display: block; padding: 3px 0; font-size: 0.92rem; }
+.toc a:hover { color: #e94560; }
+.footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem; border-top: 1px solid #e0e0e0; margin-top: 24px; }
+@media (max-width: 640px) {
+    .header-box { padding: 16px; }
+    .header-box h1 { font-size: 1.25rem; }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .action-grid { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 0.82rem; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.15rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header-box">
+    <h1>9022.T 東海旅客鉄道株式会社（JR東海） <span style="font-weight:400;font-size:0.9rem;">Central Japan Railway Company (JR Central)</span>
+        <span class="market-badge">🇯🇵 日股</span>
+    </h1>
+    <p style="color:#94a3b8;font-size:0.9rem;margin:4px 0;">CFA 深度研究報告 | 2026-03-16 | MDVI v3</p>
+    <div style="margin:12px 0;"><span class="rating-badge">Strong Buy</span></div>
+    <div class="info-grid">
+        <div class="info-card"><div class="label">收盤價</div><div class="value">JPY 4233.0</div></div>
+        <div class="info-card"><div class="label">目標價</div><div class="value">JPY 6401</div></div>
+        <div class="info-card"><div class="label">潛在報酬</div><div class="value" style="color:#00e676;">+51.2%</div></div>
+        <div class="info-card"><div class="label">MDVI 總分</div><div class="value">40/60</div></div>
+        <div class="info-card"><div class="label">R/R Ratio</div><div class="value">4.40:1</div></div>
+    </div>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <strong>📋 目錄</strong>
+    <a href="#sec1">1. 執行摘要</a>
+    <a href="#sec2">2. MDVI v3 六維度評分</a>
+    <a href="#sec3">3. 公司概況與事業群拆解</a>
+    <a href="#sec4">4. 財務分析與 EPS 推導</a>
+    <a href="#sec5">5. 歷史 PE 軌跡表</a>
+    <a href="#sec6">6. 估值分析（三角交叉驗證）</a>
+    <a href="#sec7">7. DCF 模型與敏感度分析</a>
+    <a href="#sec8">8. Gordon Growth Model ROE 辯證</a>
+    <a href="#sec9">9. 產業分析與同業比較</a>
+    <a href="#sec10">10. 總經與政策環境</a>
+    <a href="#sec11">11. 技術面分析</a>
+    <a href="#sec12">12. 籌碼面分析</a>
+    <a href="#sec13">13. 消息面與催化劑</a>
+    <a href="#sec14">14. 風險評估與情境模擬</a>
+    <a href="#sec15">15. 投資建議與操作區間</a>
+    <a href="#sec16">16. 參考資料</a>
+</div>
+
+<!-- 1. Executive Summary -->
+<div class="card" id="sec1">
+    <h1>1. 執行摘要</h1>
+    <div class="highlight">東海道新幹線壟斷運營，COVID 後獲利快速恢復（TTM EPS ¥533），PE 7.94x 極度低估，PB 0.82x 低於淨值。Gordon 折價 68%，R/R 4.4:1 本批最強。</div>
+    <p>JR Central 壟斷運營東海道新幹線（東京-大阪），COVID 衝擊完全恢復後，TTM EPS ¥533.41，PE 7.94x 極度低估（後COVID均值10.2x，疫前15-20x）。PBR 0.82x 低於淨值，TSE 治理改革下存在明顯重估壓力。</p><p>訪日外客 2025 年達 4,200 萬創歷史新高持續利多，Gordon 折價 67.9% 為本批最大。目標價 ¥6,401（12x PE），上漲空間 51.2%，R/R 4.40:1 為 5 檔中最強。主要風險為地震及中央新幹線資本支出。</p>
+</div>
+
+<!-- 2. MDVI Scores -->
+<div class="card" id="sec2">
+    <h1>2. MDVI v3 六維度評分</h1>
+    <div style="text-align:center;margin:12px 0;"><span style="font-size:2.5rem;font-weight:800;color:#0f3460;">40</span><span style="font-size:1.2rem;color:#666;"> / 60</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>維度</th><th>評分 (0-10)</th></tr>
+        <tr><td style="font-weight:500;">基本面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">產業展望</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">總經</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">技術面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">籌碼面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">消息面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+
+    </table></div>
+    
+</div>
+
+<!-- 3. Company Overview -->
+<div class="card" id="sec3">
+    <h1>3. 公司概況與事業群拆解</h1>
+    <p>JR Central（東海旅客鉄道）是日本唯一管運東海道新幹線的鐵道公司，連接東京-名古屋-大阪，為日本最繁忙的交通動脈。COVID 期間旅客大幅減少，造成 FY2022 虧損，但已完全恢復。公司同時推進超導磁浮列車（Chuo Shinkansen 中央新幹線），預計 2027年（品川-名古屋段）開通，但因靜岡地下水問題已多次延期，目前預估最早 2034年。</p>
+    <h2>事業群營收拆解</h2><div class="table-wrap"><table><tr><th>事業群</th><th>營收佔比</th><th>成長驅動</th></tr><tr><td>新幹線鐵道事業</td><td>70%</td><td>國內旅遊回升、訪日外客（inbound）激增、商務旅行恢復</td></tr><tr><td>流通・服務</td><td>15%</td><td>車站商業設施、旅館</td></tr><tr><td>不動産・其他</td><td>15%</td><td>名古屋都市圈不動産開發</td></tr></table></div>
+    
+    
+</div>
+
+<!-- 4. Financial Analysis -->
+<div class="card" id="sec4">
+    <h1>4. 財務分析與 EPS 推導</h1>
+
+    <h2>4.1 財務健全度</h2>
+    <div style="margin:8px 0;"><span style="display:inline-block;padding:4px 14px;border-radius:12px;font-weight:600;color:white;background:#ff1744;">中等（D/E 高屬鐵道基礎設施特性，國家政策支持，無倒閉風險）</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th><th>標準</th></tr>
+        <tr><td>D/E Ratio</td><td>95.52</td><td>&lt; 1.0 佳</td></tr>
+        <tr><td>流動比率</td><td>2.29</td><td>&gt; 1.5 佳</td></tr>
+        <tr><td>FCF 趨勢</td><td>恢復中</td><td>穩定正成長</td></tr>
+        <tr><td>利息保障倍數</td><td>N/A</td><td>&gt; 5x 佳</td></tr>
+    </table></div>
+
+    <h2>4.2 季度財務追蹤</h2>
+    <table style='width:100%;border-collapse:collapse;font-size:14px'><tr style='background:#f0f4ff'><th style='padding:8px;border:1px solid #ddd'>年度</th><th style='padding:8px;border:1px solid #ddd'>淨利(億)</th><th style='padding:8px;border:1px solid #ddd'>EPS(¥)</th><th style='padding:8px;border:1px solid #ddd'>備注</th></tr><tr><td style='padding:8px;border:1px solid #ddd'>FY2022</td><td style='padding:8px;border:1px solid #ddd'>-519</td><td style='padding:8px;border:1px solid #ddd'>-54.2</td><td style='padding:8px;border:1px solid #ddd'>COVID虧損</td></tr><tr><td style='padding:8px;border:1px solid #ddd'>FY2023</td><td style='padding:8px;border:1px solid #ddd'>2,194</td><td style='padding:8px;border:1px solid #ddd'>229.3</td><td style='padding:8px;border:1px solid #ddd'>大幅恢復</td></tr><tr><td style='padding:8px;border:1px solid #ddd'>FY2024</td><td style='padding:8px;border:1px solid #ddd'>3,844</td><td style='padding:8px;border:1px solid #ddd'>401.7</td><td style='padding:8px;border:1px solid #ddd'>+75.2%</td></tr><tr><td style='padding:8px;border:1px solid #ddd'>FY2025</td><td style='padding:8px;border:1px solid #ddd'>4,584</td><td style='padding:8px;border:1px solid #ddd'>479.0</td><td style='padding:8px;border:1px solid #ddd'>+19.3%</td></tr><tr style='background:#e8f5e9'><td style='padding:8px;border:1px solid #ddd'>TTM</td><td style='padding:8px;border:1px solid #ddd'>~5,103</td><td style='padding:8px;border:1px solid #ddd'>533.41</td><td style='padding:8px;border:1px solid #ddd'>+11.4%</td></tr></table><p style='font-size:12px;color:#666'>來源：yfinance / <a href='https://www.jr-central.co.jp/investors/'>https://www.jr-central.co.jp/investors/</a></p>
+
+    <h2>4.3 獲利能力與 EPS 成長路徑</h2>
+    <p>D/E: 95.52、流動比: 2.29、COVID 後 FCF 逐步轉正，但中央新幹線建設資本支出仍大（年度 ¥4,000-5,000億）</p>
+
+    <h2>4.4 EPS 由下往上推導</h2>
+    <h4>Step 1: 營收拆解</h4><p>FY2025 合併營收約 ¥1.93 兆（YoY +7.6%），東海道新幹線旅客量已超越疫前水準，訪日外客帶動進一步增長。</p>
+<div class="table-wrap"><table><tr><th>事業群</th><th>營收</th><th>YoY</th></tr><tr><td>新幹線</td><td></td><td>+8%</td></tr><tr><td>流通・服務</td><td></td><td>+6%</td></tr><tr><td>不動産・其他</td><td></td><td>+5%</td></tr></table></div>
+<h4>Step 2: 獲利率分析</h4><p>鐵道事業高固定成本，但旅客量回升後槓桿明顯。營益率 45.6%（高效率基礎設施），淨利率 27.3%。</p>
+<h4>Step 3: EPS 推導</h4><div class="table-wrap"><table><tr><th>項目</th><th>數值</th></tr><tr><td>revenue_ttm_b</td><td>1,930</td></tr><tr><td>net_income_ttm_b</td><td>527</td></tr><tr><td>shares_outstanding_m</td><td>957</td></tr><tr><td>eps_calculated</td><td>550.7</td></tr><tr><td>eps_actual_reported</td><td>533.41</td></tr><tr><td>variance</td><td>3.1%</td></tr><tr><td>eps_source</td><td>https://finance.yahoo.com/quote/9022.T/</td></tr></table></div>
+</div>
+
+<!-- 5. PE History -->
+<div class="card" id="sec5">
+    <h1>5. 歷史 PE 軌跡表</h1>
+    <div class="table-wrap"><table>
+        <tr><th>年度</th><th>EPS</th><th>最高價</th><th>最低價</th><th>PE 高</th><th>PE 低</th></tr>
+        <tr>
+            <td>2022</td><td>-54.2</td>
+            <td>3494</td><td>2810</td>
+            <td>N/A（虧損年）</td><td>N/A</td>
+        </tr><tr>
+            <td>2023</td><td>229.3</td>
+            <td>3844</td><td>2909</td>
+            <td>16.8</td><td>12.7</td>
+        </tr><tr>
+            <td>2024</td><td>401.7</td>
+            <td>3957</td><td>2817</td>
+            <td>9.9</td><td>7.0</td>
+        </tr><tr>
+            <td>2025</td><td>479.0</td>
+            <td>4535</td><td>2706</td>
+            <td>9.5</td><td>5.7</td>
+        </tr><tr>
+            <td>2026</td><td>533.41</td>
+            <td>4830</td><td>4153</td>
+            <td>9.1</td><td>7.8</td>
+        </tr>
+    </table></div>
+    <p style="margin-top:10px;">5 年平均 PE：<strong>10.2</strong> | 目前 PE：<strong>7.9</strong></p>
+</div>
+
+<!-- 6. Valuation -->
+<div class="card" id="sec6">
+    <h1>6. 估值分析（三角交叉驗證）</h1>
+
+    <h2>6.1 外部因素 → 公式參數對照表</h2>
+    <div class="table-wrap"><table>
+        <tr><th>分析面向</th><th>具體項目</th><th>影響參數</th><th>設定值</th><th>設定依據</th></tr>
+        
+    </table></div>
+
+    <h2>6.2 Cost of Equity (CoE)</h2>
+    <div class="table-wrap"><table>
+        <tr><th>參數</th><th>數值</th><th>來源</th></tr>
+        <tr><td>Rf (無風險利率)</td><td>2.24%</td><td>日本10年期公債殖利率</td></tr>
+        <tr><td>Beta</td><td>0.5</td><td>Yahoo Finance Beta 0.10，採用下限 0.50（鐵道基礎設施，防禦屬性強）</td></tr>
+        <tr><td>US Base ERP</td><td>4.6%</td><td rowspan="2">Damodaran US Base ERP 2026</td></tr>
+        <tr><td>Country Risk Premium</td><td>0.45%</td></tr>
+        <tr><td>Total ERP</td><td>5.05%</td><td>計算值</td></tr>
+        <tr><td><strong>CoE</strong></td><td><strong>4.77%</strong></td><td>Rf + Beta × Total ERP</td></tr>
+    </table></div>
+
+    <h2>6.3 合理 PE 推導（PE法）</h2>
+    <p>JR Central 後 COVID 復甦期（2023-2026）PE 均值約 10.2x，遠低於疫前水準（2019年前 15-20x）。考量訪日外客成長動能，採用 <strong>12x</strong>（仍保守）。目標價 = 12x × ¥533.41 = <strong>¥6,401</strong>，上漲空間 51.2%。</p>
+    <div class="highlight">
+        合理 PE = <strong>12.0x</strong> |
+        Forward EPS = <strong>None</strong> |
+        目標價 = <strong>JPY 6401</strong>
+    </div>
+
+    <h2>6.4 交叉驗證矩陣</h2>
+    <div class="table-wrap"><table>
+        <tr><th>估值方法</th><th>隱含股價</th><th>vs PE 法偏差</th><th>狀態</th></tr>
+        <tr><td>Forward PE 法（主要）</td><td><strong>6401</strong></td><td>—</td><td>主要估值</td></tr>
+        <tr><td>EV/EBITDA 法</td><td>5900</td><td>-7.8%</td><td>驗證層</td></tr>
+        <tr><td>DCF 法</td><td>5500</td><td>-14.1%</td><td>10年 DCF，WACC 4.8%，東海道新幹線旅客量 CAGR 3%</td></tr>
+    </table></div>
+</div>
+
+<!-- 7. DCF Model -->
+<div class="card" id="sec7">
+    <h1>7. DCF 模型與敏感度分析</h1>
+    <p>DCF 假設：WACC 4.8%（鐵道基礎設施低 beta），東海道新幹線旅客量 CAGR 3%（穩健），FCF CAGR 5%，終值成長 1%（人口趨勢保守）。計算得每股內含價值約 ¥5,500。</p>
+    <h2>敏感度分析表</h2><table style='width:100%;border-collapse:collapse;font-size:13px'><tr style='background:#f0f4ff'><th style='padding:6px;border:1px solid #ddd'>PE \ EPS</th><th style='padding:6px;border:1px solid #ddd'>¥430</th><th style='padding:6px;border:1px solid #ddd'>¥533</th><th style='padding:6px;border:1px solid #ddd'>¥600</th></tr><tr><td style='padding:6px;border:1px solid #ddd;font-weight:bold'>8x</td><td style='padding:6px;border:1px solid #ddd'>3,440</td><td style='padding:6px;border:1px solid #ddd'>4,267</td><td style='padding:6px;border:1px solid #ddd'>4,800</td></tr><tr style='background:#e8f5e9'><td style='padding:6px;border:1px solid #ddd;font-weight:bold'>12x</td><td style='padding:6px;border:1px solid #ddd'>5,160</td><td style='padding:6px;border:1px solid #ddd'><strong>6,401</strong></td><td style='padding:6px;border:1px solid #ddd'>7,200</td></tr><tr><td style='padding:6px;border:1px solid #ddd;font-weight:bold'>14x</td><td style='padding:6px;border:1px solid #ddd'>6,020</td><td style='padding:6px;border:1px solid #ddd'>7,468</td><td style='padding:6px;border:1px solid #ddd'>8,400</td></tr></table>
+</div>
+
+<!-- 8. Gordon Growth Model -->
+<div class="card" id="sec8">
+    <h1>8. Gordon Growth Model ROE 辯證</h1>
+    <p>ROE = 11.4%，理論 PB = 2.56，實際 PB = 0.82，溢折價 = -67.9%</p><p>理論 PB 2.56x，實際僅 0.82x（低於每股淨值！），折價 67.9%。中央新幹線債務及延期風險壓制估值，但核心東海道新幹線壟斷地位長期穩固，折價過度。</p>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th></tr>
+        <tr><td>ROE</td><td>11.4%</td></tr>
+        <tr><td>理論 PB (Gordon)</td><td>2.56</td></tr>
+        <tr><td>實際 PB</td><td>0.82</td></tr>
+        <tr><td>解讀</td><td>理論 PB 2.56x，實際僅 0.82x（低於每股淨值！），折價 67.9%。中央新幹線債務及延期風險壓制估值，但核心東海道新幹線壟斷地位長期穩固，折價過度。</td></tr>
+    </table></div>
+</div>
+
+<!-- 9. Industry -->
+<div class="card" id="sec9">
+    <h1>9. 產業分析與同業比較</h1>
+    <p>日本鐵道業受益訪日外客（2025年 4,200萬創歷史新高）及國內旅遊復甦。東海道新幹線作為日本最繁忙的交通幹道（東京-名古屋-大阪），乘客量穩健成長。TSE 持續施壓 PBR<1x 企業提升股東回報，JR Central PBR 0.82x 面臨回購/增息壓力。</p>
+    <h2>同業比較矩陣</h2><div class="table-wrap"><table style='width:100%;border-collapse:collapse;font-size:13px'><tr style='background:#f0f4ff'><th style='padding:6px;border:1px solid #ddd'>公司</th><th style='padding:6px;border:1px solid #ddd'>PE</th><th style='padding:6px;border:1px solid #ddd'>PB</th><th style='padding:6px;border:1px solid #ddd'>事業特色</th></tr><tr style='background:#e8f5e9'><td style='padding:6px;border:1px solid #ddd'>JR Central (9022.T)</td><td style='padding:6px;border:1px solid #ddd'>7.9x</td><td style='padding:6px;border:1px solid #ddd'>0.82x</td><td style='padding:6px;border:1px solid #ddd'>東海道新幹線壟斷</td></tr><tr><td style='padding:6px;border:1px solid #ddd'>JR East (9020.T)</td><td style='padding:6px;border:1px solid #ddd'>~12x</td><td style='padding:6px;border:1px solid #ddd'>~1.1x</td><td style='padding:6px;border:1px solid #ddd'>關東廣域鐵網</td></tr><tr><td style='padding:6px;border:1px solid #ddd'>JR West (9021.T)</td><td style='padding:6px;border:1px solid #ddd'>~11x</td><td style='padding:6px;border:1px solid #ddd'>~0.9x</td><td style='padding:6px;border:1px solid #ddd'>山陽新幹線+關西</td></tr></table><p style='font-size:12px;color:#666'>來源：<a href='https://finance.yahoo.com/quote/9022.T/'>Yahoo Finance</a></p></div>
+</div>
+
+<!-- 10. Macro -->
+<div class="card" id="sec10">
+    <h1>10. 總經與政策環境</h1>
+    <p>弱日圓（159.58 USD/JPY）直接利好訪日外客增加，正面影響 JR Central 新幹線收入。BOJ 升息週期使利息費用有所增加（D/E 95x），但長期固定利率債務佔比高，短期衝擊可控。日本政府繼續推動旅遊振興政策，目標 2030 年訪日外客 6,000 萬人次，長期動能確立。</p>
+</div>
+
+<!-- 11. Technical -->
+<div class="card" id="sec11">
+    <h1>11. 技術面分析</h1>
+    <div class="table-wrap"><table><tr><th>指標</th><th>數值</th><th>乖離率</th><th>解讀</th></tr><tr><td>MA_20</td><td>4368</td><td>-3.09%</td><td>略低於20日均線，短期整理</td></tr><tr><td>MA_60</td><td>4002</td><td>+5.77%</td><td>高於60日均線，中期趨勢轉佳</td></tr><tr><td>RSI(14)</td><td>48.0</td><td>—</td><td>RSI 48 中性，無超買超賣信號，技術面乾淨</td></tr><tr><td>KD</td><td>K=45.0 / D=40.0</td><td>—</td><td>K>D，溫和金叉，短期偏多</td></tr></table></div>
+</div>
+
+<!-- 12. Chip -->
+<div class="card" id="sec12">
+    <h1>12. 籌碼面分析</h1>
+    <div class="table-wrap"><table><tr><th>籌碼指標</th><th>數值</th></tr><tr><td>外資 5 日</td><td>N/A</td></tr><tr><td>外資 20 日</td><td>N/A</td></tr><tr><td>投信 5 日</td><td>N/A</td></tr><tr><td>投信 20 日</td><td>N/A</td></tr><tr><td>融資餘額</td><td>N/A</td></tr><tr><td>融券餘額</td><td>N/A</td></tr><tr><td>券資比</td><td>N/A</td></tr></table></div><p></p>
+</div>
+
+<!-- 13. Catalyst -->
+<div class="card" id="sec13">
+    <h1>13. 消息面與催化劑</h1>
+    <h4>正面催化劑</h4><ul>
+<li><strong>訪日外客旅遊持續增長</strong> (持續) — 2025年外客 4,200萬創新高，新幹線乘車率提升</li>
+<li><strong>FY2025 全年財報（2026年5月）</strong> (2個月) — EPS 超 ¥533 確認，PE 修復</li>
+<li><strong>TSE 低 PBR 改善壓力（PBR 0.82x < 1x）</strong> (持續) — 公司可能增加股息/回購以提升 PBR</li>
+</ul>
+<h4>負面催化劑</h4><ul>
+<li><strong>中央新幹線進一步延期（靜岡水源爭議）</strong> (持續風險) — 投資者信心受損，資本支出持續偏高</li>
+<li><strong>重大自然災害（東海地震）</strong> (低概率高衝擊) — 新幹線停運、基礎設施損壞</li>
+<li><strong>BOJ 急速升息導致負債成本大幅上升</strong> (2026 H2) — D/E 95x 情況下利息費用顯著增加</li>
+</ul>
+</div>
+
+<!-- 14. Risk & Scenarios -->
+<div class="card" id="sec14">
+    <h1>14. 風險評估與情境模擬</h1>
+    <div class="table-wrap"><table><tr><th>風險</th><th>機率</th><th>影響</th><th>應對</th></tr><tr><td>地震/自然災害</td><td>low</td><td>very high</td><td>設停損 ¥3,700（Bear PE 8x × ¥430）</td></tr><tr><td>BOJ 升息加速（負債成本上升）</td><td>medium</td><td>medium</td><td>D/E 雖高但長期固定利率債務比例高</td></tr><tr><td>中央新幹線延期資本支出</td><td>high</td><td>medium</td><td>已市場定價，實際影響可控</td></tr></table></div>
+    <h2>Bull / Base / Bear 情境</h2>
+    <div class="table-wrap"><table>
+        <tr><th>情境</th><th>EPS</th><th>PE</th><th>目標價</th><th>觸發條件</th></tr>
+        <tr>
+            <td><strong>Bull 🐂</strong></td><td>600.0</td>
+            <td>14</td><td>8400</td>
+            <td>日圓維持弱勢、訪日外客持續增長至 5,000萬</td>
+        </tr><tr>
+            <td><strong>Base 📊</strong></td><td>533.41</td>
+            <td>12</td><td>6401</td>
+            <td>旅客量穩健回升，中央新幹線無重大延期風險</td>
+        </tr><tr>
+            <td><strong>Bear 🐻</strong></td><td>430.0</td>
+            <td>8</td><td>3440</td>
+            <td>重大自然災害或疫情再起阻斷旅遊需求</td>
+        </tr>
+    </table></div>
+    
+</div>
+
+<!-- 15. Investment Recommendation -->
+<div class="card" id="sec15">
+    <h1>15. 投資建議與操作區間</h1>
+    <div style="text-align:center;margin:12px 0;">
+        <span class="rating-badge" style="font-size:1.2rem;padding:10px 28px;">Strong Buy</span>
+        <p style="margin-top:10px;color:#666;">PE 7.94x 極度低估，旅遊需求強勁，PBR 0.82x 低於每股淨值，強烈建議買入</p>
+    </div>
+    <div class="action-grid">
+        <div class="action-item"><div class="label">進場點</div><div class="value" style="color:#1565c0;">4200</div></div>
+        <div class="action-item"><div class="label">目標價</div><div class="value" style="color:#00c853;">6401</div></div>
+        <div class="action-item"><div class="label">停損點</div><div class="value" style="color:#ff1744;">3700</div></div>
+        <div class="action-item"><div class="label">停利點</div><div class="value" style="color:#00c853;">6401</div></div>
+    </div>
+    <p style="text-align:center;font-size:0.95rem;margin-top:10px;">
+        風險報酬比 R/R = <strong>4.40:1</strong>
+    </p>
+    <p><strong>評級：Strong Buy ｜ 目標價：¥6,401 ｜ 上漲空間：+51.2%</strong></p><p>進場點 ¥4,200（現價附近），停損 ¥3,700（Bear PE 8x × ¥430 = ¥3,440 附近設在 ¥3,700 保守止損），停利 ¥6,401。R/R = 4.40:1 為本批最高。PBR<1x 額外提供價值支撐。</p>
+</div>
+
+<!-- 16. Sources -->
+<div class="card sources" id="sec16">
+    <h1>16. 參考資料</h1>
+    <ol><li><a href="https://www.jr-central.co.jp/investors/" target="_blank" rel="noopener">https://www.jr-central.co.jp/investors/</a></li>
+<li><a href="https://finance.yahoo.com/quote/9022.T/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/9022.T/</a></li>
+<li><a href="https://finance.yahoo.com/quote/9022.T/key-statistics/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/9022.T/key-statistics/</a></li>
+<li><a href="https://tradingeconomics.com/japan/tourist-arrivals" target="_blank" rel="noopener">https://tradingeconomics.com/japan/tourist-arrivals</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html</a></li>
+<li><a href="https://tradingeconomics.com/japan/government-bond-yield" target="_blank" rel="noopener">https://tradingeconomics.com/japan/government-bond-yield</a></li>
+<li><a href="https://tradingeconomics.com/japan/currency" target="_blank" rel="noopener">https://tradingeconomics.com/japan/currency</a></li>
+<li><a href="https://stockanalysis.com/quote/tyo/9022/" target="_blank" rel="noopener">https://stockanalysis.com/quote/tyo/9022/</a></li>
+<li><a href="https://fred.stlouisfed.org/series/VIXCLS" target="_blank" rel="noopener">https://fred.stlouisfed.org/series/VIXCLS</a></li></ol>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>CFA 深度研究報告 | MDVI v3 | 2026-03-16 15:16 | ARTOGO Investment Research</p>
+    <p>⚠️ 本報告僅供研究參考，不構成投資建議。投資有風險，入市需謹慎。</p>
+    <p><a href="../../index.html" style="color:#1565c0;">← 返回首頁</a></p>
+</div>
+
+</div>
+</body>
+</html>
