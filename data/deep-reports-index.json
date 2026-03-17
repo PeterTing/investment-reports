@@ -1,23 +1,5 @@
 [
   {
-    "ticker": "2382",
-    "name": "廣達",
-    "market": "TW",
-    "date": "2026-03-16",
-    "rating": "Buy",
-    "file": "reports/deep/2382-2026-03-16.html",
-    "total_score": 42
-  },
-  {
-    "ticker": "2357",
-    "name": "華碩",
-    "market": "TW",
-    "date": "2026-03-16",
-    "rating": "Buy",
-    "file": "reports/deep/2357-2026-03-16.html",
-    "total_score": 43
-  },
-  {
     "ticker": "3017",
     "name": "奇鋐科技",
     "market": "TW",
