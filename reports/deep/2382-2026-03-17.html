@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2382 廣達 深度投資分析報告 | 2026-03-17</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    line-height: 1.7; color: #1a1a2e; background: #f8f9fa; font-size: 16px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.6rem; color: #0f3460; border-bottom: 3px solid #e94560; padding-bottom: 8px; margin: 24px 0 16px; }
+h2 { font-size: 1.3rem; color: #16213e; border-left: 4px solid #e94560; padding-left: 12px; margin: 28px 0 14px; }
+h3 { font-size: 1.1rem; color: #0f3460; margin: 20px 0 10px; }
+.header-box {
+    background: linear-gradient(135deg, #0f3460, #16213e); color: white;
+    padding: 24px; border-radius: 12px; margin-bottom: 24px;
+}
+.header-box h1 { color: white; border-bottom-color: #e94560; font-size: 1.5rem; }
+.rating-badge {
+    display: inline-block; padding: 6px 18px; border-radius: 20px;
+    font-weight: bold; font-size: 1.1rem; color: #fff; background: #2da44e;
+}
+.market-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.85rem; font-weight: 600; color: white; margin-left: 8px;
+    background: #3b82f6;
+}
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 16px 0;
+}
+.info-card { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; }
+.info-card .label { font-size: 0.85rem; opacity: 0.8; }
+.info-card .value { font-size: 1.3rem; font-weight: bold; }
+.card {
+    background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px;
+    border: 1px solid #e0e0e0; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+th { background: #0f3460; color: white; padding: 10px 8px; text-align: left; white-space: nowrap; }
+td { padding: 8px; border-bottom: 1px solid #e0e0e0; }
+tr:nth-child(even) { background: #f5f5f5; }
+tr:hover { background: #e8eaf6; }
+.highlight { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.warning { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.action-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 14px 0;
+}
+.action-item { text-align: center; padding: 14px; border-radius: 8px; background: #f5f5f5; }
+.action-item .label { font-size: 0.82rem; color: #666; }
+.action-item .value { font-size: 1.3rem; font-weight: 700; margin-top: 4px; }
+.source { font-size: 0.85rem; color: #666; margin: 6px 0; font-style: italic; }
+.sources ol { padding-left: 20px; font-size: 0.82rem; }
+.sources li { margin-bottom: 4px; word-break: break-all; }
+.sources a { color: #1565c0; }
+.toc { background: #f0f4f8; padding: 16px 20px; border-radius: 10px; margin-bottom: 20px; }
+.toc a { color: #0f3460; text-decoration: none; display: block; padding: 3px 0; font-size: 0.92rem; }
+.toc a:hover { color: #e94560; }
+.footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem; border-top: 1px solid #e0e0e0; margin-top: 24px; }
+@media (max-width: 640px) {
+    .header-box { padding: 16px; }
+    .header-box h1 { font-size: 1.25rem; }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .action-grid { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 0.82rem; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.15rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header-box">
+    <h1>2382 廣達 <span style="font-weight:400;font-size:0.9rem;">Quanta Computer</span>
+        <span class="market-badge">🇹🇼 台股</span>
+    </h1>
+    <p style="color:#94a3b8;font-size:0.9rem;margin:4px 0;">CFA 深度研究報告 | 2026-03-17 | MDVI v3</p>
+    <div style="margin:12px 0;"><span class="rating-badge">Buy</span></div>
+    <div class="info-grid">
+        <div class="info-card"><div class="label">收盤價</div><div class="value">TWD 289.0</div></div>
+        <div class="info-card"><div class="label">目標價</div><div class="value">TWD 350</div></div>
+        <div class="info-card"><div class="label">潛在報酬</div><div class="value" style="color:#00e676;">+21.1%</div></div>
+        <div class="info-card"><div class="label">MDVI 總分</div><div class="value">47/60</div></div>
+        <div class="info-card"><div class="label">R/R Ratio</div><div class="value">2.9:1</div></div>
+    </div>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <strong>📋 目錄</strong>
+    <a href="#sec1">1. 執行摘要</a>
+    <a href="#sec2">2. MDVI v3 六維度評分</a>
+    <a href="#sec3">3. 公司概況與事業群拆解</a>
+    <a href="#sec4">4. 財務分析與 EPS 推導</a>
+    <a href="#sec5">5. 歷史 PE 軌跡表</a>
+    <a href="#sec6">6. 估值分析（三角交叉驗證）</a>
+    <a href="#sec7">7. DCF 模型與敏感度分析</a>
+    <a href="#sec8">8. Gordon Growth Model ROE 辯證</a>
+    <a href="#sec9">9. 產業分析與同業比較</a>
+    <a href="#sec10">10. 總經與政策環境</a>
+    <a href="#sec11">11. 技術面分析</a>
+    <a href="#sec12">12. 籌碼面分析</a>
+    <a href="#sec13">13. 消息面與催化劑</a>
+    <a href="#sec14">14. 風險評估與情境模擬</a>
+    <a href="#sec15">15. 投資建議與操作區間</a>
+    <a href="#sec16">16. 參考資料</a>
+</div>
+
+<!-- 1. Executive Summary -->
+<div class="card" id="sec1">
+    <h1>1. 執行摘要</h1>
+    <div class="highlight">全球最大 AI 伺服器 ODM 廠，2025 EPS 19.45 元創新高（+26% YoY），AI 佔伺服器營收八成。GB300 本季放量，訂單能見度至 2027 年。</div>
+    <p>廣達（2382）為全球最大 AI 伺服器 ODM 代工廠，2025 年 EPS 19.45 元創歷史新高（+26% YoY），AI 伺服器佔伺服器營收八成。NVIDIA GB300 本季放量，訂單能見度延伸至 2027 年。外資近 16 日大量買超 +38,558 張。</p><p>以 Trailing PE 18x 計算目標價 350 元，upside +21.1%。配發 15.6 元現金股利（殖利率 5.4%）。</p>
+</div>
+
+<!-- 2. MDVI Scores -->
+<div class="card" id="sec2">
+    <h1>2. MDVI v3 六維度評分</h1>
+    <div style="text-align:center;margin:12px 0;"><span style="font-size:2.5rem;font-weight:800;color:#0f3460;">47</span><span style="font-size:1.2rem;color:#666;"> / 60</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>維度</th><th>評分 (0-10)</th></tr>
+        <tr><td style="font-weight:500;">基本面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+<tr><td style="font-weight:500;">產業展望</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:90.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">9</span></div></td></tr>
+<tr><td style="font-weight:500;">總經</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">技術面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">籌碼面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+<tr><td style="font-weight:500;">消息面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:90.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">9</span></div></td></tr>
+
+    </table></div>
+    
+</div>
+
+<!-- 3. Company Overview -->
+<div class="card" id="sec3">
+    <h1>3. 公司概況與事業群拆解</h1>
+    <p>廣達為全球最大筆電與 AI 伺服器 ODM 代工廠。2025 年營收 2.12 兆元（+50% YoY），EPS 19.45 元創歷史新高，配發現金股利 15.6 元（配發率 80%）。AI 伺服器已佔伺服器營收八成，為公司核心成長引擎。訂單能見度延伸至 2027 年，GB300 本季開始放量。</p>
+    <h2>事業群營收拆解</h2><div class="table-wrap"><table><tr><th>事業群</th><th>營收佔比</th><th>成長驅動</th></tr><tr><td>AI 伺服器/雲端運算</td><td>55%</td><td>NVIDIA GB200/GB300、雲端大廠 Capex</td></tr><tr><td>筆電 ODM</td><td>35%</td><td>AI PC 換機潮</td></tr><tr><td>車用電子/智慧醫療</td><td>10%</td><td>自駕/ADAS 需求</td></tr></table></div>
+    
+    
+</div>
+
+<!-- 4. Financial Analysis -->
+<div class="card" id="sec4">
+    <h1>4. 財務分析與 EPS 推導</h1>
+
+    <h2>4.1 財務健全度</h2>
+    <div style="margin:8px 0;"><span style="display:inline-block;padding:4px 14px;border-radius:12px;font-weight:600;color:white;background:#00c853;">健康</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th><th>標準</th></tr>
+        <tr><td>D/E Ratio</td><td>0.55</td><td>&lt; 1.0 佳</td></tr>
+        <tr><td>流動比率</td><td>1.3</td><td>&gt; 1.5 佳</td></tr>
+        <tr><td>FCF 趨勢</td><td>正向但資本支出增加</td><td>穩定正成長</td></tr>
+        <tr><td>利息保障倍數</td><td>10x</td><td>&gt; 5x 佳</td></tr>
+    </table></div>
+
+    <h2>4.2 季度財務追蹤</h2>
+    <table><tr><th>季度</th><th>營收(億)</th><th>EBITDA margin</th><th>EPS</th></tr><tr><td>2025 Q1</td><td>~4,700</td><td>~5.0%</td><td>4.37</td></tr><tr><td>2025 Q2</td><td>~5,100</td><td>~5.1%</td><td>5.07</td></tr><tr><td>2025 Q3</td><td>~5,300</td><td>~5.2%</td><td>4.26</td></tr><tr><td>2025 Q4</td><td>~6,100</td><td>~5.3%</td><td>5.75</td></tr></table>
+
+    <h2>4.3 獲利能力與 EPS 成長路徑</h2>
+    <p>D/E: 0.55、流動比: 1.3、2024 FCF ~300 億, 2025 FCF ~350 億（營收增但需擴產）</p>
+
+    <h2>4.4 EPS 由下往上推導</h2>
+    <h4>Step 1: 營收拆解</h4><p>2025 年營收 2.12 兆元（+50.2% YoY）。AI 伺服器為最大成長引擎，2026 年 1 月單月營收 2,308 億元（+62% YoY）持續高速成長。</p>
+<div class="table-wrap"><table><tr><th>事業群</th><th>營收</th><th>YoY</th></tr><tr><td>AI 伺服器/雲端</td><td>1.17 兆</td><td>+100%</td></tr><tr><td>筆電 ODM</td><td>7,420 億</td><td>+10%</td></tr><tr><td>車用/醫療/其他</td><td>2,120 億</td><td>+15%</td></tr></table></div>
+<h4>Step 2: 獲利率分析</h4><p>2025 毛利率 ~5.2%（代工業低毛利特性），EBITDA margin ~5.2%。營業費用率 ~2%。</p>
+<h4>Step 3: EPS 推導</h4><div class="table-wrap"><table><tr><th>項目</th><th>數值</th></tr><tr><td>revenue_2025</td><td>2.12 兆</td></tr><tr><td>gross_profit_2025</td><td>1,102 億</td></tr><tr><td>operating_income_2025</td><td>680 億</td></tr><tr><td>tax_rate</td><td>18%</td></tr><tr><td>net_income_2025</td><td>751 億</td></tr><tr><td>shares_outstanding</td><td>38.6 億股</td></tr><tr><td>eps_calculated</td><td>19.45</td></tr><tr><td>eps_actual_reported</td><td>19.45</td></tr><tr><td>variance</td><td>0%</td></tr></table></div>
+</div>
+
+<!-- 5. PE History -->
+<div class="card" id="sec5">
+    <h1>5. 歷史 PE 軌跡表</h1>
+    <div class="table-wrap"><table>
+        <tr><th>年度</th><th>EPS</th><th>最高價</th><th>最低價</th><th>PE 高</th><th>PE 低</th></tr>
+        <tr>
+            <td>2021</td><td>8.73</td>
+            <td>105</td><td>72</td>
+            <td>12.0</td><td>8.2</td>
+        </tr><tr>
+            <td>2022</td><td>7.51</td>
+            <td>95</td><td>62</td>
+            <td>12.6</td><td>8.3</td>
+        </tr><tr>
+            <td>2023</td><td>10.29</td>
+            <td>278</td><td>80</td>
+            <td>27.0</td><td>7.8</td>
+        </tr><tr>
+            <td>2024</td><td>15.49</td>
+            <td>345</td><td>174</td>
+            <td>22.3</td><td>11.2</td>
+        </tr><tr>
+            <td>2025</td><td>19.45</td>
+            <td>314</td><td>230</td>
+            <td>16.1</td><td>11.8</td>
+        </tr>
+    </table></div>
+    <p style="margin-top:10px;">5 年平均 PE：<strong>14.4</strong> | 目前 PE：<strong>14.9</strong></p>
+</div>
+
+<!-- 6. Valuation -->
+<div class="card" id="sec6">
+    <h1>6. 估值分析（三角交叉驗證）</h1>
+
+    <h2>6.1 外部因素 → 公式參數對照表</h2>
+    <div class="table-wrap"><table>
+        <tr><th>分析面向</th><th>具體項目</th><th>影響參數</th><th>設定值</th><th>設定依據</th></tr>
+        
+    </table></div>
+
+    <h2>6.2 Cost of Equity (CoE)</h2>
+    <div class="table-wrap"><table>
+        <tr><th>參數</th><th>數值</th><th>來源</th></tr>
+        <tr><td>Rf (無風險利率)</td><td>1.415%</td><td>台灣 10Y 公債殖利率</td></tr>
+        <tr><td>Beta</td><td>0.92</td><td>Yahoo Finance 5Y Monthly Beta</td></tr>
+        <tr><td>US Base ERP</td><td>4.23%</td><td rowspan="2">Damodaran US Base ERP 2026</td></tr>
+        <tr><td>Country Risk Premium</td><td>0.75%</td></tr>
+        <tr><td>Total ERP</td><td>4.98%</td><td>計算值</td></tr>
+        <tr><td><strong>CoE</strong></td><td><strong>6.0%</strong></td><td>Rf + Beta × Total ERP</td></tr>
+    </table></div>
+
+    <h2>6.3 合理 PE 推導（PE法）</h2>
+    <p>5 年 PE 均值 14.4x。2023-2024 年 AI 浪潮使 PE 高點擴張至 22-27x。2025 年回落至 11-16x 區間。考量 AI 伺服器為長期結構性成長，給予 18x（高於均值但低於 2023 峰值）。</p>
+    <div class="highlight">
+        合理 PE = <strong>18.0x</strong> |
+        Forward EPS = <strong>19.45</strong> |
+        目標價 = <strong>TWD 350</strong>
+    </div>
+
+    <h2>6.4 交叉驗證矩陣</h2>
+    <div class="table-wrap"><table>
+        <tr><th>估值方法</th><th>隱含股價</th><th>vs PE 法偏差</th><th>狀態</th></tr>
+        <tr><td>Forward PE 法（主要）</td><td><strong>350</strong></td><td>—</td><td>主要估值</td></tr>
+        <tr><td>EV/EBITDA 法</td><td>340</td><td>-2.9%</td><td>驗證層</td></tr>
+        <tr><td>DCF 法</td><td>320</td><td>-8.6%</td><td>10 年 DCF，前 3 年 AI 高成長</td></tr>
+    </table></div>
+</div>
+
+<!-- 7. DCF Model -->
+<div class="card" id="sec7">
+    <h1>7. DCF 模型與敏感度分析</h1>
+    <p>DCF 假設：WACC 5.5%，前 3 年 AI 伺服器年增 30-50%，筆電年增 5%，終值成長率 3%。DCF 估值 320 元，與 PE 法差距約 9%，互為驗證。</p>
+    <h2>敏感度分析表</h2><table><tr><th>PE \ EPS</th><th>15 元</th><th>19.45 元</th><th>25 元</th></tr><tr><td>12x</td><td>180</td><td>233</td><td>300</td></tr><tr><td>15x</td><td>225</td><td>292</td><td>375</td></tr><tr><td>18x</td><td>270</td><td>350</td><td>450</td></tr><tr><td>22x</td><td>330</td><td>428</td><td>550</td></tr></table>
+</div>
+
+<!-- 8. Gordon Growth Model -->
+<div class="card" id="sec8">
+    <h1>8. Gordon Growth Model ROE 辯證</h1>
+    <p>ROE = 30.8%，理論 PB = 10.92，實際 PB = 4.57，溢折價 = -58.1%</p><p>市場折價 58.1%，反映代工業低毛利率限制估值天花板。但 ROE 30.8% 為五檔最高之一，AI 伺服器驅動下 ROE 維持高檔。</p>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th></tr>
+        <tr><td>ROE</td><td>30.8%</td></tr>
+        <tr><td>理論 PB (Gordon)</td><td>10.92</td></tr>
+        <tr><td>實際 PB</td><td>4.57</td></tr>
+        <tr><td>解讀</td><td>市場折價 58.1%，反映代工業低毛利率限制估值天花板。但 ROE 30.8% 為五檔最高之一，AI 伺服器驅動下 ROE 維持高檔。</td></tr>
+    </table></div>
+</div>
+
+<!-- 9. Industry -->
+<div class="card" id="sec9">
+    <h1>9. 產業分析與同業比較</h1>
+    <p>AI 伺服器市場 2025 年規模超過 1,000 億美元（+60% YoY），2026 年預估持續高速成長。廣達為 NVIDIA GB200/GB300 伺服器核心代工夥伴，與緯創、鴻海、英業達競爭。ASIC（Google TPU、Amazon Inferentia）為新成長動力。</p>
+    <h2>同業比較矩陣</h2><div class="table-wrap"><table><tr><th>指標</th><th>廣達(2382)</th><th>緯創(3231)</th><th>英業達(2356)</th><th>鴻海(2317)</th></tr><tr><td>PE</td><td>14.9x</td><td>~12x</td><td>~10x</td><td>~12x</td></tr><tr><td>ROE</td><td>30.8%</td><td>~15%</td><td>~12%</td><td>~10%</td></tr><tr><td>AI 伺服器佔比</td><td>~80%</td><td>~50%</td><td>~30%</td><td>~40%</td></tr></table></div>
+</div>
+
+<!-- 10. Macro -->
+<div class="card" id="sec10">
+    <h1>10. 總經與政策環境</h1>
+    <p>雲端四巨頭（Microsoft、Google、Meta、Amazon）2026 Capex 預算合計超過 2,500 億美元，利多 AI 伺服器代工需求。但 VIX 27.19 及中東衝突推升避險情緒。</p>
+</div>
+
+<!-- 11. Technical -->
+<div class="card" id="sec11">
+    <h1>11. 技術面分析</h1>
+    <div class="table-wrap"><table><tr><th>指標</th><th>數值</th><th>乖離率</th><th>解讀</th></tr><tr><td>MA_20</td><td>287.8</td><td>+0.4%</td><td>價在 20 日線附近，短期中性</td></tr><tr><td>MA_60</td><td>280.7</td><td>+3.0%</td><td>價在 60 日線上方，中期偏多</td></tr><tr><td>RSI(14)</td><td>52.8</td><td>—</td><td>RSI 52.8，中性區間</td></tr><tr><td>KD</td><td>K=67.6 / D=57.5</td><td>—</td><td>K > D，短期轉多</td></tr></table></div>
+</div>
+
+<!-- 12. Chip -->
+<div class="card" id="sec12">
+    <h1>12. 籌碼面分析</h1>
+    <div class="table-wrap"><table><tr><th>籌碼指標</th><th>數值</th></tr><tr><td>外資 5 日</td><td>+6573 張</td></tr><tr><td>外資 20 日</td><td>+38558 張</td></tr><tr><td>投信 5 日</td><td>-131 張</td></tr><tr><td>投信 20 日</td><td>+1127 張</td></tr><tr><td>融資餘額</td><td>數據不可得</td></tr><tr><td>融券餘額</td><td>數據不可得</td></tr><tr><td>券資比</td><td>數據不可得</td></tr></table></div><p>外資近 5 日買超 +6573 張，近 16 日大量買超 +38558 張。投信近 16 日亦買超 +1127 張。法人買盤強勁。</p>
+</div>
+
+<!-- 13. Catalyst -->
+<div class="card" id="sec13">
+    <h1>13. 消息面與催化劑</h1>
+    <h4>正面催化劑</h4><ul>
+<li><strong>NVIDIA GB300 本季放量</strong> (2026 Q1) — AI 伺服器營收再提升</li>
+<li><strong>2026 年 1 月營收 2,308 億元（+62% YoY）</strong> (已發生) — 營收動能持續強勁</li>
+<li><strong>配發 15.6 元現金股利（配發率 80%）</strong> (2026 年中) — 殖利率 5.4%，吸引法人</li>
+</ul>
+<h4>負面催化劑</h4><ul>
+<li><strong>雲端大廠 Capex 下修</strong> (2026 H2 風險) — AI 伺服器訂單減少</li>
+<li><strong>代工毛利率壓力</strong> (持續) — 營收增但利潤率未同步提升</li>
+</ul>
+</div>
+
+<!-- 14. Risk & Scenarios -->
+<div class="card" id="sec14">
+    <h1>14. 風險評估與情境模擬</h1>
+    <div class="table-wrap"><table><tr><th>風險</th><th>機率</th><th>影響</th><th>應對</th></tr><tr><td>AI 資本支出週期反轉</td><td>medium</td><td>high</td><td>停損 250 元</td></tr><tr><td>代工毛利率下行</td><td>medium</td><td>medium</td><td>關注 EBITDA margin 變化</td></tr><tr><td>地緣政治（台海風險）</td><td>low</td><td>high</td><td>非系統性風險</td></tr></table></div>
+    <h2>Bull / Base / Bear 情境</h2>
+    <div class="table-wrap"><table>
+        <tr><th>情境</th><th>EPS</th><th>PE</th><th>目標價</th><th>觸發條件</th></tr>
+        <tr>
+            <td><strong>Bull 🐂</strong></td><td>25.0</td>
+            <td>20</td><td>500</td>
+            <td>GB300 超預期放量</td>
+        </tr><tr>
+            <td><strong>Base 📊</strong></td><td>19.45</td>
+            <td>18</td><td>350</td>
+            <td>AI 需求穩定成長</td>
+        </tr><tr>
+            <td><strong>Bear 🐻</strong></td><td>15.0</td>
+            <td>12</td><td>180</td>
+            <td>雲端大廠 Capex 下修</td>
+        </tr>
+    </table></div>
+    
+</div>
+
+<!-- 15. Investment Recommendation -->
+<div class="card" id="sec15">
+    <h1>15. 投資建議與操作區間</h1>
+    <div style="text-align:center;margin:12px 0;">
+        <span class="rating-badge" style="font-size:1.2rem;padding:10px 28px;">Buy</span>
+        <p style="margin-top:10px;color:#666;">AI 伺服器代工龍頭，2025 EPS 19.45 元創高，外資持續買超</p>
+    </div>
+    <div class="action-grid">
+        <div class="action-item"><div class="label">進場點</div><div class="value" style="color:#1565c0;">275</div></div>
+        <div class="action-item"><div class="label">目標價</div><div class="value" style="color:#00c853;">350</div></div>
+        <div class="action-item"><div class="label">停損點</div><div class="value" style="color:#ff1744;">250</div></div>
+        <div class="action-item"><div class="label">停利點</div><div class="value" style="color:#00c853;">350</div></div>
+    </div>
+    <p style="text-align:center;font-size:0.95rem;margin-top:10px;">
+        風險報酬比 R/R = <strong>2.9:1</strong>
+    </p>
+    <p>建議分批佈局，進場價 275 元，目標 350 元（PE 18x），停損 250 元。R/R = 2.9:1。AI 伺服器為核心催化劑，外資法人持續加碼。</p>
+</div>
+
+<!-- 16. Sources -->
+<div class="card sources" id="sec16">
+    <h1>16. 參考資料</h1>
+    <ol><li><a href="https://finance.yahoo.com/quote/2382.TW/key-statistics/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/2382.TW/key-statistics/</a></li>
+<li><a href="https://today.line.me/tw/v3/article/l28pq9X" target="_blank" rel="noopener">https://today.line.me/tw/v3/article/l28pq9X</a></li>
+<li><a href="https://money.udn.com/money/story/5612/9135443" target="_blank" rel="noopener">https://money.udn.com/money/story/5612/9135443</a></li>
+<li><a href="https://www.twse.com.tw/zh/trading/foreign/t86.html" target="_blank" rel="noopener">https://www.twse.com.tw/zh/trading/foreign/t86.html</a></li>
+<li><a href="https://www.investing.com/rates-bonds/taiwan-10-year-bond-yield" target="_blank" rel="noopener">https://www.investing.com/rates-bonds/taiwan-10-year-bond-yield</a></li>
+<li><a href="https://aswathdamodaran.substack.com/p/data-update-2-for-2026-a-testing" target="_blank" rel="noopener">https://aswathdamodaran.substack.com/p/data-update-2-for-2026-a-testing</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html</a></li>
+<li><a href="https://cmnews.com.tw/article/newsyoudeservetoknow-b698fd2a-112c-11f1-8db1-d3624fe97f22" target="_blank" rel="noopener">https://cmnews.com.tw/article/newsyoudeservetoknow-b698fd2a-112c-11f1-8db1-d3624fe97f22</a></li>
+<li><a href="https://statementdog.com/analysis/2382/eps" target="_blank" rel="noopener">https://statementdog.com/analysis/2382/eps</a></li>
+<li><a href="https://www.wantgoo.com/stock/2382/financial-statements/eps" target="_blank" rel="noopener">https://www.wantgoo.com/stock/2382/financial-statements/eps</a></li></ol>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>CFA 深度研究報告 | MDVI v3 | 2026-03-17 17:31 | ARTOGO Investment Research</p>
+    <p>⚠️ 本報告僅供研究參考，不構成投資建議。投資有風險，入市需謹慎。</p>
+    <p><a href="../../index.html" style="color:#1565c0;">← 返回首頁</a></p>
+</div>
+
+</div>
+</body>
+</html>

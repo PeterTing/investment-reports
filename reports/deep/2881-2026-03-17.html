@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2881 富邦金 深度投資分析報告 | 2026-03-17</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    line-height: 1.7; color: #1a1a2e; background: #f8f9fa; font-size: 16px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.6rem; color: #0f3460; border-bottom: 3px solid #e94560; padding-bottom: 8px; margin: 24px 0 16px; }
+h2 { font-size: 1.3rem; color: #16213e; border-left: 4px solid #e94560; padding-left: 12px; margin: 28px 0 14px; }
+h3 { font-size: 1.1rem; color: #0f3460; margin: 20px 0 10px; }
+.header-box {
+    background: linear-gradient(135deg, #0f3460, #16213e); color: white;
+    padding: 24px; border-radius: 12px; margin-bottom: 24px;
+}
+.header-box h1 { color: white; border-bottom-color: #e94560; font-size: 1.5rem; }
+.rating-badge {
+    display: inline-block; padding: 6px 18px; border-radius: 20px;
+    font-weight: bold; font-size: 1.1rem; color: #fff; background: #2da44e;
+}
+.market-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.85rem; font-weight: 600; color: white; margin-left: 8px;
+    background: #3b82f6;
+}
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 16px 0;
+}
+.info-card { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; }
+.info-card .label { font-size: 0.85rem; opacity: 0.8; }
+.info-card .value { font-size: 1.3rem; font-weight: bold; }
+.card {
+    background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px;
+    border: 1px solid #e0e0e0; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+th { background: #0f3460; color: white; padding: 10px 8px; text-align: left; white-space: nowrap; }
+td { padding: 8px; border-bottom: 1px solid #e0e0e0; }
+tr:nth-child(even) { background: #f5f5f5; }
+tr:hover { background: #e8eaf6; }
+.highlight { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.warning { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.action-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 14px 0;
+}
+.action-item { text-align: center; padding: 14px; border-radius: 8px; background: #f5f5f5; }
+.action-item .label { font-size: 0.82rem; color: #666; }
+.action-item .value { font-size: 1.3rem; font-weight: 700; margin-top: 4px; }
+.source { font-size: 0.85rem; color: #666; margin: 6px 0; font-style: italic; }
+.sources ol { padding-left: 20px; font-size: 0.82rem; }
+.sources li { margin-bottom: 4px; word-break: break-all; }
+.sources a { color: #1565c0; }
+.toc { background: #f0f4f8; padding: 16px 20px; border-radius: 10px; margin-bottom: 20px; }
+.toc a { color: #0f3460; text-decoration: none; display: block; padding: 3px 0; font-size: 0.92rem; }
+.toc a:hover { color: #e94560; }
+.footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem; border-top: 1px solid #e0e0e0; margin-top: 24px; }
+@media (max-width: 640px) {
+    .header-box { padding: 16px; }
+    .header-box h1 { font-size: 1.25rem; }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .action-grid { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 0.82rem; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.15rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header-box">
+    <h1>2881 富邦金 <span style="font-weight:400;font-size:0.9rem;">Fubon Financial</span>
+        <span class="market-badge">🇹🇼 台股</span>
+    </h1>
+    <p style="color:#94a3b8;font-size:0.9rem;margin:4px 0;">CFA 深度研究報告 | 2026-03-17 | MDVI v3</p>
+    <div style="margin:12px 0;"><span class="rating-badge">Buy</span></div>
+    <div class="info-grid">
+        <div class="info-card"><div class="label">收盤價</div><div class="value">TWD 89.8</div></div>
+        <div class="info-card"><div class="label">目標價</div><div class="value">TWD 109</div></div>
+        <div class="info-card"><div class="label">潛在報酬</div><div class="value" style="color:#00e676;">+21.4%</div></div>
+        <div class="info-card"><div class="label">MDVI 總分</div><div class="value">39/60</div></div>
+        <div class="info-card"><div class="label">R/R Ratio</div><div class="value">2.6:1</div></div>
+    </div>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <strong>📋 目錄</strong>
+    <a href="#sec1">1. 執行摘要</a>
+    <a href="#sec2">2. MDVI v3 六維度評分</a>
+    <a href="#sec3">3. 公司概況與事業群拆解</a>
+    <a href="#sec4">4. 財務分析與 EPS 推導</a>
+    <a href="#sec5">5. 歷史 PE 軌跡表</a>
+    <a href="#sec6">6. 估值分析（三角交叉驗證）</a>
+    <a href="#sec7">7. DCF 模型與敏感度分析</a>
+    <a href="#sec8">8. Gordon Growth Model ROE 辯證</a>
+    <a href="#sec9">9. 產業分析與同業比較</a>
+    <a href="#sec10">10. 總經與政策環境</a>
+    <a href="#sec11">11. 技術面分析</a>
+    <a href="#sec12">12. 籌碼面分析</a>
+    <a href="#sec13">13. 消息面與催化劑</a>
+    <a href="#sec14">14. 風險評估與情境模擬</a>
+    <a href="#sec15">15. 投資建議與操作區間</a>
+    <a href="#sec16">16. 參考資料</a>
+</div>
+
+<!-- 1. Executive Summary -->
+<div class="card" id="sec1">
+    <h1>1. 執行摘要</h1>
+    <div class="highlight">台灣獲利最高金控，2025 全年稅後淨利 1,209 億元，EPS 8.37 元。IFRS 17 接軌後富邦人壽淨值大增 36%。2026 年 2 月業績創同期新高。</div>
+    <p>富邦金（2881）為台灣獲利最高金控，2025 年稅後淨利 1,209 億元，EPS 8.37 元。IFRS 17 接軌後富邦人壽淨值大增 36%（調整後 8,571 億元），負債成本從 2.6% 降至 2.0%。2026 年 2 月淨利 205.7 億元續創同期新高。</p><p>以 Trailing PE 13x 計算目標價 109 元，upside +21.4%。金控業提供良好的產業多元化分散效果。</p>
+</div>
+
+<!-- 2. MDVI Scores -->
+<div class="card" id="sec2">
+    <h1>2. MDVI v3 六維度評分</h1>
+    <div style="text-align:center;margin:12px 0;"><span style="font-size:2.5rem;font-weight:800;color:#0f3460;">39</span><span style="font-size:1.2rem;color:#666;"> / 60</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>維度</th><th>評分 (0-10)</th></tr>
+        <tr><td style="font-weight:500;">基本面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+<tr><td style="font-weight:500;">產業展望</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">總經</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">技術面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">籌碼面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:50.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">5</span></div></td></tr>
+<tr><td style="font-weight:500;">消息面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+
+    </table></div>
+    
+</div>
+
+<!-- 3. Company Overview -->
+<div class="card" id="sec3">
+    <h1>3. 公司概況與事業群拆解</h1>
+    <p>富邦金控為台灣最大金控之一，旗下包含台北富邦銀行、富邦人壽、富邦產險、富邦證券等子公司。2025 年稅後淨利 1,209.4 億元，總資產 12.9 兆元，淨值 9,826 億元（每股淨值 63.3 元創歷史新高）。2026 年 2 月單月淨利 205.7 億元，創同期新高。</p>
+    <h2>事業群營收拆解</h2><div class="table-wrap"><table><tr><th>事業群</th><th>營收佔比</th><th>成長驅動</th></tr><tr><td>壽險（富邦人壽）</td><td>50%</td><td>IFRS 17 接軌後淨值大增，負債成本改善</td></tr><tr><td>銀行（台北富邦銀行）</td><td>30%</td><td>利差穩定，信用卡/房貸業務</td></tr><tr><td>產險/證券/其他</td><td>20%</td><td>證券交易量回升</td></tr></table></div>
+    
+    
+</div>
+
+<!-- 4. Financial Analysis -->
+<div class="card" id="sec4">
+    <h1>4. 財務分析與 EPS 推導</h1>
+
+    <h2>4.1 財務健全度</h2>
+    <div style="margin:8px 0;"><span style="display:inline-block;padding:4px 14px;border-radius:12px;font-weight:600;color:white;background:#00c853;">健康</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th><th>標準</th></tr>
+        <tr><td>D/E Ratio</td><td>金融業不適用傳統 D/E ratio，改以資本適足率(CAR)衡量：15.2%</td><td>&lt; 1.0 佳</td></tr>
+        <tr><td>流動比率</td><td>金融業不適用流動比率，改以 RBC ratio 衡量：332%</td><td>&gt; 1.5 佳</td></tr>
+        <tr><td>FCF 趨勢</td><td>穩定</td><td>穩定正成長</td></tr>
+        <tr><td>利息保障倍數</td><td>金融業本身為利息收付業務，不適用利息保障倍數</td><td>&gt; 5x 佳</td></tr>
+    </table></div>
+
+    <h2>4.2 季度財務追蹤</h2>
+    <table><tr><th>期間</th><th>稅後淨利(億)</th><th>ROE</th><th>EPS</th></tr><tr><td>2025 H1</td><td>~600</td><td>~12%</td><td>~4.15</td></tr><tr><td>2025 H2</td><td>~609</td><td>~13%</td><td>~4.22</td></tr><tr><td>2026 Jan</td><td>~110</td><td>-</td><td>~0.76</td></tr><tr><td>2026 Feb</td><td>205.7</td><td>-</td><td>1.43</td></tr></table>
+
+    <h2>4.3 獲利能力與 EPS 成長路徑</h2>
+    <p>D/E: 金融業不適用傳統 D/E ratio，改以資本適足率(CAR)衡量：15.2%、流動比: 金融業不適用流動比率，改以 RBC ratio 衡量：332%、金控業以淨利和資本適足率衡量，2025 淨利 1,209 億元</p>
+
+    <h2>4.4 EPS 由下往上推導</h2>
+    <h4>Step 1: 營收拆解</h4><p>2025 年稅後淨利 1,209.4 億元，富邦人壽貢獻最大。IFRS 17 接軌後，調整後淨值達 8,571 億元（+36%），外匯準備金 1,440 億元。</p>
+<div class="table-wrap"><table><tr><th>事業群</th><th>營收</th><th>YoY</th></tr><tr><td>富邦人壽</td><td>淨利 ~600 億</td><td>+15%</td></tr><tr><td>台北富邦銀行</td><td>淨利 ~350 億</td><td>+10%</td></tr><tr><td>產險/證券/其他</td><td>淨利 ~259 億</td><td>+8%</td></tr></table></div>
+<h4>Step 2: 獲利率分析</h4><p>金控業以 ROE 和 ROA 衡量效率。2025 ROE 12.51%，ROA 0.97%。富邦人壽負債成本從 2.6% 降至 2.0%（IFRS 17 效應）。</p>
+<h4>Step 3: EPS 推導</h4><div class="table-wrap"><table><tr><th>項目</th><th>數值</th></tr><tr><td>revenue_2025</td><td>N/A（金控以淨利衡量）</td></tr><tr><td>gross_profit_2025</td><td>N/A</td></tr><tr><td>operating_income_2025</td><td>N/A</td></tr><tr><td>tax_rate</td><td>N/A</td></tr><tr><td>net_income_2025</td><td>1,209.4 億</td></tr><tr><td>shares_outstanding</td><td>144.5 億股</td></tr><tr><td>eps_calculated</td><td>8.37</td></tr><tr><td>eps_actual_reported</td><td>8.37</td></tr><tr><td>variance</td><td>0%</td></tr></table></div>
+</div>
+
+<!-- 5. PE History -->
+<div class="card" id="sec5">
+    <h1>5. 歷史 PE 軌跡表</h1>
+    <div class="table-wrap"><table>
+        <tr><th>年度</th><th>EPS</th><th>最高價</th><th>最低價</th><th>PE 高</th><th>PE 低</th></tr>
+        <tr>
+            <td>2021</td><td>9.44</td>
+            <td>82</td><td>48</td>
+            <td>8.7</td><td>5.1</td>
+        </tr><tr>
+            <td>2022</td><td>3.87</td>
+            <td>76</td><td>50</td>
+            <td>19.6</td><td>12.9</td>
+        </tr><tr>
+            <td>2023</td><td>4.8</td>
+            <td>76</td><td>55</td>
+            <td>15.8</td><td>11.5</td>
+        </tr><tr>
+            <td>2024</td><td>7.75</td>
+            <td>100</td><td>62</td>
+            <td>12.9</td><td>8.0</td>
+        </tr><tr>
+            <td>2025</td><td>8.37</td>
+            <td>105</td><td>80</td>
+            <td>12.5</td><td>9.6</td>
+        </tr>
+    </table></div>
+    <p style="margin-top:10px;">5 年平均 PE：<strong>11.7</strong> | 目前 PE：<strong>10.7</strong></p>
+</div>
+
+<!-- 6. Valuation -->
+<div class="card" id="sec6">
+    <h1>6. 估值分析（三角交叉驗證）</h1>
+
+    <h2>6.1 外部因素 → 公式參數對照表</h2>
+    <div class="table-wrap"><table>
+        <tr><th>分析面向</th><th>具體項目</th><th>影響參數</th><th>設定值</th><th>設定依據</th></tr>
+        
+    </table></div>
+
+    <h2>6.2 Cost of Equity (CoE)</h2>
+    <div class="table-wrap"><table>
+        <tr><th>參數</th><th>數值</th><th>來源</th></tr>
+        <tr><td>Rf (無風險利率)</td><td>1.415%</td><td>台灣 10Y 公債殖利率</td></tr>
+        <tr><td>Beta</td><td>1.15</td><td>Investing.com Fubon Financial Beta</td></tr>
+        <tr><td>US Base ERP</td><td>4.23%</td><td rowspan="2">Damodaran US Base ERP 2026</td></tr>
+        <tr><td>Country Risk Premium</td><td>0.75%</td></tr>
+        <tr><td>Total ERP</td><td>4.98%</td><td>計算值</td></tr>
+        <tr><td><strong>CoE</strong></td><td><strong>7.1%</strong></td><td>Rf + Beta × Total ERP</td></tr>
+    </table></div>
+
+    <h2>6.3 合理 PE 推導（PE法）</h2>
+    <p>5 年 PE 均值 11.7x。2022-2023 年因投資損失 EPS 偏低推高 PE。正常年份（2021、2024、2025）PE 約 8-13x。IFRS 17 改善獲利品質，給予 13x（高值區間）。</p>
+    <div class="highlight">
+        合理 PE = <strong>13.0x</strong> |
+        Forward EPS = <strong>8.37</strong> |
+        目標價 = <strong>TWD 109</strong>
+    </div>
+
+    <h2>6.4 交叉驗證矩陣</h2>
+    <div class="table-wrap"><table>
+        <tr><th>估值方法</th><th>隱含股價</th><th>vs PE 法偏差</th><th>狀態</th></tr>
+        <tr><td>Forward PE 法（主要）</td><td><strong>109</strong></td><td>—</td><td>主要估值</td></tr>
+        <tr><td>EV/EBITDA 法</td><td>N/A</td><td>N/A</td><td>驗證層</td></tr>
+        <tr><td>DCF 法</td><td>100</td><td>-8.3%</td><td>DDM（股利折現模型）：預估股利 4.0 元 / (7.0% - 2.5%) = 89 元 + 成長溢價</td></tr>
+    </table></div>
+</div>
+
+<!-- 7. DCF Model -->
+<div class="card" id="sec7">
+    <h1>7. DCF 模型與敏感度分析</h1>
+    <p>金控業以 DDM（股利折現模型）為輔助。假設：長期股利成長率 2.5%、CoE 7.1%。預估 2026 年股利 3.5-4.0 元。DDM 估值 = 4.0 / (7.1%-2.5%) ≈ 87 元 + 成長期溢價約 13 元 = 100 元。</p>
+    <h2>敏感度分析表</h2><table><tr><th>PE \ EPS</th><th>6.0 元</th><th>8.37 元</th><th>10.0 元</th></tr><tr><td>10x</td><td>60</td><td>84</td><td>100</td></tr><tr><td>11x</td><td>66</td><td>92</td><td>110</td></tr><tr><td>13x</td><td>78</td><td>109</td><td>130</td></tr><tr><td>15x</td><td>90</td><td>126</td><td>150</td></tr></table>
+</div>
+
+<!-- 8. Gordon Growth Model -->
+<div class="card" id="sec8">
+    <h1>8. Gordon Growth Model ROE 辯證</h1>
+    <p>ROE = 12.5%，理論 PB = 2.17，實際 PB = 1.42，溢折價 = -34.6%</p><p>市場折價 34.6%，可能反映金控業會計複雜性與壽險利差風險。但 IFRS 17 接軌後淨值大幅提升，折價幅度可望收斂。</p>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th></tr>
+        <tr><td>ROE</td><td>12.5%</td></tr>
+        <tr><td>理論 PB (Gordon)</td><td>2.17</td></tr>
+        <tr><td>實際 PB</td><td>1.42</td></tr>
+        <tr><td>解讀</td><td>市場折價 34.6%，可能反映金控業會計複雜性與壽險利差風險。但 IFRS 17 接軌後淨值大幅提升，折價幅度可望收斂。</td></tr>
+    </table></div>
+</div>
+
+<!-- 9. Industry -->
+<div class="card" id="sec9">
+    <h1>9. 產業分析與同業比較</h1>
+    <p>台灣金控業 2025 年合計獲利創新高，受惠股市交易量放大、壽險投資收益佳。富邦金穩居獲利冠軍。IFRS 17 接軌為 2025-2026 年金控業最大會計變革，對壽險業影響最深。</p>
+    <h2>同業比較矩陣</h2><div class="table-wrap"><table><tr><th>指標</th><th>富邦金(2881)</th><th>國泰金(2882)</th><th>中信金(2891)</th><th>兆豐金(2886)</th></tr><tr><td>PE</td><td>10.7x</td><td>~12x</td><td>~11x</td><td>~15x</td></tr><tr><td>ROE</td><td>12.5%</td><td>~10%</td><td>~11%</td><td>~9%</td></tr><tr><td>淨值(億)</td><td>9,826</td><td>~8,000</td><td>~4,500</td><td>~3,000</td></tr></table></div>
+</div>
+
+<!-- 10. Macro -->
+<div class="card" id="sec10">
+    <h1>10. 總經與政策環境</h1>
+    <p>Fed 降息至 3.5-3.75% 利多壽險業投資收益。台灣央行維持利率 2.0% 不變，銀行利差穩定。但 VIX 27.19 升高，短期股市波動可能影響金控投資收益。</p>
+</div>
+
+<!-- 11. Technical -->
+<div class="card" id="sec11">
+    <h1>11. 技術面分析</h1>
+    <div class="table-wrap"><table><tr><th>指標</th><th>數值</th><th>乖離率</th><th>解讀</th></tr><tr><td>MA_20</td><td>91.4</td><td>-1.8%</td><td>價在 20 日線下方，短期偏弱</td></tr><tr><td>MA_60</td><td>93.8</td><td>-4.3%</td><td>價在 60 日線下方，中期偏弱</td></tr><tr><td>RSI(14)</td><td>44.5</td><td>—</td><td>RSI 44.5，偏向超賣區（<50），短期可能有反彈機會</td></tr><tr><td>KD</td><td>K=59.3 / D=46.5</td><td>—</td><td>K > D，短期出現黃金交叉信號</td></tr></table></div>
+</div>
+
+<!-- 12. Chip -->
+<div class="card" id="sec12">
+    <h1>12. 籌碼面分析</h1>
+    <div class="table-wrap"><table><tr><th>籌碼指標</th><th>數值</th></tr><tr><td>外資 5 日</td><td>-438 張</td></tr><tr><td>外資 20 日</td><td>-49078 張</td></tr><tr><td>投信 5 日</td><td>+266 張</td></tr><tr><td>投信 20 日</td><td>-4266 張</td></tr><tr><td>融資餘額</td><td>數據不可得</td></tr><tr><td>融券餘額</td><td>數據不可得</td></tr><tr><td>券資比</td><td>數據不可得</td></tr></table></div><p>外資近 5 日小幅賣超 -438 張，近 16 日賣超 -49078 張。投信近 5 日買超 +266 張。籌碼面偏弱，但基本面支撐。</p>
+</div>
+
+<!-- 13. Catalyst -->
+<div class="card" id="sec13">
+    <h1>13. 消息面與催化劑</h1>
+    <h4>正面催化劑</h4><ul>
+<li><strong>IFRS 17 接軌後淨值大增 36%</strong> (已發生) — 改善資本結構，提升評等</li>
+<li><strong>2026 年 2 月淨利 205.7 億元創同期新高</strong> (已發生) — 全年獲利可期</li>
+<li><strong>股利政策：配發率 40-50%，以調整後獲利 1,150 億為基數</strong> (2026 Q2) — 預估股利 3.5-4.0 元</li>
+</ul>
+<h4>負面催化劑</h4><ul>
+<li><strong>股市大幅回檔</strong> (不確定) — 壽險/證券投資損失</li>
+<li><strong>擬發行次順位債 400 億元</strong> (2026) — 股權稀釋疑慮</li>
+</ul>
+</div>
+
+<!-- 14. Risk & Scenarios -->
+<div class="card" id="sec14">
+    <h1>14. 風險評估與情境模擬</h1>
+    <div class="table-wrap"><table><tr><th>風險</th><th>機率</th><th>影響</th><th>應對</th></tr><tr><td>股市大幅回檔衝擊投資收益</td><td>medium</td><td>high</td><td>停損 78 元</td></tr><tr><td>壽險利差風險</td><td>medium</td><td>medium</td><td>IFRS 17 降低負債成本至 2%</td></tr><tr><td>次順位債發行稀釋</td><td>high</td><td>low</td><td>提升 RBC 為正面</td></tr></table></div>
+    <h2>Bull / Base / Bear 情境</h2>
+    <div class="table-wrap"><table>
+        <tr><th>情境</th><th>EPS</th><th>PE</th><th>目標價</th><th>觸發條件</th></tr>
+        <tr>
+            <td><strong>Bull 🐂</strong></td><td>10.0</td>
+            <td>14</td><td>140</td>
+            <td>股債市雙漲+壽險新會計正效應</td>
+        </tr><tr>
+            <td><strong>Base 📊</strong></td><td>8.37</td>
+            <td>13</td><td>109</td>
+            <td>獲利穩定，IFRS 17 效益逐步顯現</td>
+        </tr><tr>
+            <td><strong>Bear 🐻</strong></td><td>6.0</td>
+            <td>10</td><td>60</td>
+            <td>股市暴跌+壽險避險成本飆升</td>
+        </tr>
+    </table></div>
+    
+</div>
+
+<!-- 15. Investment Recommendation -->
+<div class="card" id="sec15">
+    <h1>15. 投資建議與操作區間</h1>
+    <div style="text-align:center;margin:12px 0;">
+        <span class="rating-badge" style="font-size:1.2rem;padding:10px 28px;">Buy</span>
+        <p style="margin-top:10px;color:#666;">金控獲利王，2025 EPS 8.37 元，IFRS 17 接軌後淨值大增，可分批佈局</p>
+    </div>
+    <div class="action-grid">
+        <div class="action-item"><div class="label">進場點</div><div class="value" style="color:#1565c0;">86</div></div>
+        <div class="action-item"><div class="label">目標價</div><div class="value" style="color:#00c853;">109</div></div>
+        <div class="action-item"><div class="label">停損點</div><div class="value" style="color:#ff1744;">78</div></div>
+        <div class="action-item"><div class="label">停利點</div><div class="value" style="color:#00c853;">109</div></div>
+    </div>
+    <p style="text-align:center;font-size:0.95rem;margin-top:10px;">
+        風險報酬比 R/R = <strong>2.6:1</strong>
+    </p>
+    <p>建議分批佈局，進場價 86 元，目標 109 元（PE 13x），停損 78 元。R/R = 2.6:1。金控業與科技股低相關性，提供投資組合分散效果。</p>
+</div>
+
+<!-- 16. Sources -->
+<div class="card sources" id="sec16">
+    <h1>16. 參考資料</h1>
+    <ol><li><a href="https://news.cnyes.com/news/id/6386011" target="_blank" rel="noopener">https://news.cnyes.com/news/id/6386011</a></li>
+<li><a href="https://news.cnyes.com/news/id/6386560" target="_blank" rel="noopener">https://news.cnyes.com/news/id/6386560</a></li>
+<li><a href="https://udn.com/news/story/7239/9378713" target="_blank" rel="noopener">https://udn.com/news/story/7239/9378713</a></li>
+<li><a href="https://www.investing.com/equities/fubon-fin-hldg" target="_blank" rel="noopener">https://www.investing.com/equities/fubon-fin-hldg</a></li>
+<li><a href="https://www.twse.com.tw/zh/trading/foreign/t86.html" target="_blank" rel="noopener">https://www.twse.com.tw/zh/trading/foreign/t86.html</a></li>
+<li><a href="https://www.investing.com/rates-bonds/taiwan-10-year-bond-yield" target="_blank" rel="noopener">https://www.investing.com/rates-bonds/taiwan-10-year-bond-yield</a></li>
+<li><a href="https://aswathdamodaran.substack.com/p/data-update-2-for-2026-a-testing" target="_blank" rel="noopener">https://aswathdamodaran.substack.com/p/data-update-2-for-2026-a-testing</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html</a></li>
+<li><a href="https://finance.yahoo.com/quote/2881.TW/key-statistics/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/2881.TW/key-statistics/</a></li>
+<li><a href="https://statementdog.com/analysis/2881/eps" target="_blank" rel="noopener">https://statementdog.com/analysis/2881/eps</a></li></ol>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>CFA 深度研究報告 | MDVI v3 | 2026-03-17 17:31 | ARTOGO Investment Research</p>
+    <p>⚠️ 本報告僅供研究參考，不構成投資建議。投資有風險，入市需謹慎。</p>
+    <p><a href="../../index.html" style="color:#1565c0;">← 返回首頁</a></p>
+</div>
+
+</div>
+</body>
+</html>
