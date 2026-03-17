@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2603 長榮海運 - 投資研究報告</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft JhengHei', sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; padding: 16px; }
+        header { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 32px 20px; border-radius: 8px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .header-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; }
+        .header-title h1 { font-size: 28px; margin-bottom: 4px; }
+        .header-title p { font-size: 14px; opacity: 0.9; }
+        .header-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; margin-top: 16px; }
+        .metric-box { background: rgba(255,255,255,0.1); padding: 12px; border-radius: 6px; backdrop-filter: blur(10px); }
+        .metric-label { font-size: 12px; opacity: 0.8; text-transform: uppercase; letter-spacing: 0.5px; }
+        .metric-value { font-size: 18px; font-weight: bold; margin-top: 4px; }
+        .rating-buy { color: #10b981; font-weight: bold; }
+        .rating-hold { color: #f59e0b; font-weight: bold; }
+        section { background: white; padding: 24px; margin-bottom: 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        h2 { font-size: 20px; color: #1e3c72; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid #e5e7eb; }
+        h3 { font-size: 16px; color: #2a5298; margin: 16px 0 8px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+        .table-wrapper { overflow-x: auto; margin: 16px 0; }
+        thead { background: #f3f4f6; border-bottom: 2px solid #d1d5db; }
+        th { padding: 12px; text-align: left; font-weight: 600; color: #374151; }
+        td { padding: 12px; border-bottom: 1px solid #e5e7eb; }
+        tr:hover { background: #f9fafb; }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 16px 0; }
+        .card { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 16px; border-radius: 6px; border-left: 4px solid #2a5298; }
+        .card-title { font-weight: 600; color: #1e3c72; margin-bottom: 4px; font-size: 13px; text-transform: uppercase; }
+        .card-value { font-size: 18px; font-weight: bold; color: #333; }
+        .highlight { background: #fef3c7; padding: 16px; border-left: 4px solid #f59e0b; border-radius: 4px; margin: 16px 0; }
+        .positive { color: #059669; font-weight: 600; }
+        .negative { color: #dc2626; font-weight: 600; }
+        .score-bar { width: 100%; height: 8px; background: #e5e7eb; border-radius: 4px; overflow: hidden; margin-top: 4px; }
+        .score-fill { height: 100%; background: linear-gradient(90deg, #059669, #10b981); transition: width 0.3s ease; }
+        ul, ol { margin-left: 20px; margin-top: 8px; }
+        li { margin-bottom: 8px; }
+        a { color: #2a5298; text-decoration: none; word-break: break-all; }
+        a:hover { text-decoration: underline; }
+        .reference-list { display: grid; gap: 8px; margin-top: 12px; }
+        .reference-item { background: #f9fafb; padding: 8px 12px; border-radius: 4px; font-size: 13px; border-left: 3px solid #2a5298; }
+        .report-date { color: #6b7280; font-size: 13px; margin-top: 8px; }
+        @media (max-width: 640px) {
+            header { padding: 20px 16px; }
+            .header-title h1 { font-size: 22px; }
+            .header-metrics { grid-template-columns: repeat(2, 1fr); }
+            section { padding: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <div class="header-title">
+                    <h1>2603 長榮海運</h1>
+                    <p>Evergreen Marine Corp.</p>
+                </div>
+                <div style="text-align: right;">
+                    <div class="metric-label">評級</div>
+                    <div class="metric-value rating-hold">HOLD</div>
+                </div>
+            </div>
+            <div class="header-metrics">
+                <div class="metric-box">
+                    <div class="metric-label">股價</div>
+                    <div class="metric-value">TWD 211.5</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-label">目標價</div>
+                    <div class="metric-value">TWD 250</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-label">上檔幅度</div>
+                    <div class="metric-value positive">+18.1%</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-label">Trailing PE</div>
+                    <div class="metric-value">7.62x</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-label">ROE</div>
+                    <div class="metric-value">16.3%</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-label">市值</div>
+                    <div class="metric-value">2.20T</div>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <h2>執行摘要</h2>
+            <h3>投資亮點</h3>
+            <ul>
+                <li><strong>超低估值循環股</strong>：PE 7.62x 全市場最低之一，高殖利率 10-15% 吸引配置資金。</li>
+                <li><strong>穩定現金回報</strong>：2025 年 EPS 27.74 元，配息能力超強，年殖利率超過 3%（現價基準）。</li>
+                <li><strong>ROE 16.3% 高於平均</strong>：海運景氣好時 ROE 驚人，資本效率優異。</li>
+                <li><strong>高籌碼風險機會</strong>：券資比 73.5% 偏高，若股價上攻潛藏軋空機會，短期催化劑。</li>
+            </ul>
+            <h3>主要風險</h3>
+            <ul>
+                <li><strong>運費極端週期性</strong>：紅海、蘇伊士運河局勢不穩，運費易大幅波動，EPS 波動性極大。</li>
+                <li><strong>外資持續淨賣超</strong>：-3,582 千股淨賣超，國際機構看空循環股。</li>
+                <li><strong>運費下行風險</strong>：若全球貿易放緩或運力供給過剩，運費暴跌，EPS 衰退 50%+。</li>
+                <li><strong>券資比高風險</strong>：73.5% 券資比反映市場對股價風險的預期，空方壓力不可小覷。</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>MDVI 六維度評分</h2>
+            <div style="margin-top: 16px;">
+                <h3>動能面 (Momentum)</h3>
+                <div class="score-bar"><div class="score-fill" style="width: 55%;"></div></div>
+                <p style="font-size: 13px; margin-top: 4px;">5.5/10 - 外資賣超，且短期偏弱。</p>
+            </div>
+            <div style="margin-top: 16px;">
+                <h3>披露質量 (Disclosure)</h3>
+                <div class="score-bar"><div class="score-fill" style="width: 70%;"></div></div>
+                <p style="font-size: 13px; margin-top: 4px;">7.0/10 - 上市公司，財報透明。</p>
+            </div>
+            <div style="margin-top: 16px;">
+                <h3>估值面 (Valuation)</h3>
+                <div class="score-bar"><div class="score-fill" style="width: 80%;"></div></div>
+                <p style="font-size: 13px; margin-top: 4px;">8.0/10 - PE 7.6x 極度低估，安全邊際大。</p>
+            </div>
+            <div style="margin-top: 16px;">
+                <h3>產業面 (Industry)</h3>
+                <div class="score-bar"><div class="score-fill" style="width: 50%;"></div></div>
+                <p style="font-size: 13px; margin-top: 4px;">5.0/10 - 紅海風險、運費不穩定。</p>
+            </div>
+            <div style="margin-top: 16px;">
+                <h3>綜合評分</h3>
+                <div class="score-bar"><div class="score-fill" style="width: 63%;"></div></div>
+                <p style="font-size: 13px; margin-top: 4px;"><strong>6.3/10</strong> - Hold，高風險/高報酬配置。</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>公司概況與事業群拆解</h2>
+            <h3>航線與運力結構（2025 年）</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>航線區域</th>
+                            <th>營收比重</th>
+                            <th>主要航線</th>
+                            <th>特性</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>遠東-歐洲</td>
+                            <td>35-40%</td>
+                            <td>亞洲-蘇伊士-歐洲</td>
+                            <td>運費波動大，紅海影響</td>
+                        </tr>
+                        <tr>
+                            <td>遠東-北美</td>
+                            <td>25-30%</td>
+                            <td>亞洲-美國西岸/東岸</td>
+                            <td>固定航班，現況穩定</td>
+                        </tr>
+                        <tr>
+                            <td>區域與其他</td>
+                            <td>30-35%</td>
+                            <td>東南亞、南亞、中東</td>
+                            <td>支線業務，運費反應快</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>財務分析</h2>
+            <h3>EPS 歷史與成長軌跡（週期性明顯）</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>年度</th>
+                            <th>EPS (元)</th>
+                            <th>YoY 成長</th>
+                            <th>運費環境</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2021</td>
+                            <td>25.30</td>
+                            <td>—</td>
+                            <td>疫情超級週期高位</td>
+                        </tr>
+                        <tr>
+                            <td>2022</td>
+                            <td>82.70</td>
+                            <td class="positive">+227%</td>
+                            <td>最高峰</td>
+                        </tr>
+                        <tr>
+                            <td>2023</td>
+                            <td>9.50</td>
+                            <td class="negative">-88.5%</td>
+                            <td>急遽衰退</td>
+                        </tr>
+                        <tr>
+                            <td>2024</td>
+                            <td>25.20</td>
+                            <td class="positive">+165%</td>
+                            <td>回升</td>
+                        </tr>
+                        <tr>
+                            <td>2025 (E)</td>
+                            <td>27.74</td>
+                            <td class="positive">+10.1%</td>
+                            <td>穩定</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>EPS 由下往上推導（2025 年）</h3>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-title">第一步：運費收入</div>
+                    <div class="card-value">800-900 億</div>
+                    <p style="font-size: 12px; margin-top: 8px;">集運航線運費收入。</p>
+                </div>
+                <div class="card">
+                    <div class="card-title">第二步：營益率</div>
+                    <div class="card-value">25-30%</div>
+                    <p style="font-size: 12px; margin-top: 8px;">運營利潤率。</p>
+                </div>
+                <div class="card">
+                    <div class="card-title">第三步：淨利率</div>
+                    <div class="card-value">20-25%</div>
+                    <p style="font-size: 12px; margin-top: 8px;">歸屬淨利率。</p>
+                </div>
+            </div>
+            <h3>財務健全度指標</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>指標</th>
+                            <th>2024 年報</th>
+                            <th>評估</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>負債對權益比 (D/E)</td>
+                            <td>~40%</td>
+                            <td>保守，船舶資產多為融資</td>
+                        </tr>
+                        <tr>
+                            <td>流動比率</td>
+                            <td>1.3-1.5x</td>
+                            <td>健全</td>
+                        </tr>
+                        <tr>
+                            <td>現金流</td>
+                            <td>~250-350 億元</td>
+                            <td>充沛，配息能力強</td>
+                        </tr>
+                        <tr>
+                            <td>每股淨值</td>
+                            <td>約 170.6 元</td>
+                            <td>PB 1.24x，資產價值穩定</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>歷史 PE 軌跡表（極端波動）</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>年度</th>
+                            <th>EPS (元)</th>
+                            <th>最高股價</th>
+                            <th>最低股價</th>
+                            <th>PE High</th>
+                            <th>PE Low</th>
+                            <th>PE Avg</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2021</td>
+                            <td>25.30</td>
+                            <td>240</td>
+                            <td>95</td>
+                            <td>9.49x</td>
+                            <td>3.75x</td>
+                            <td>6.62x</td>
+                        </tr>
+                        <tr>
+                            <td>2022</td>
+                            <td>82.70</td>
+                            <td>520</td>
+                            <td>140</td>
+                            <td>6.29x</td>
+                            <td>1.69x</td>
+                            <td>3.99x</td>
+                        </tr>
+                        <tr>
+                            <td>2023</td>
+                            <td>9.50</td>
+                            <td>195</td>
+                            <td>55</td>
+                            <td>20.53x</td>
+                            <td>5.79x</td>
+                            <td>13.16x</td>
+                        </tr>
+                        <tr>
+                            <td>2024</td>
+                            <td>25.20</td>
+                            <td>280</td>
+                            <td>170</td>
+                            <td>11.11x</td>
+                            <td>6.75x</td>
+                            <td>8.93x</td>
+                        </tr>
+                        <tr>
+                            <td>2025</td>
+                            <td>27.74</td>
+                            <td>250</td>
+                            <td>190</td>
+                            <td>9.01x</td>
+                            <td>6.85x</td>
+                            <td>7.93x</td>
+                        </tr>
+                        <tr style="background: #f3f4f6;">
+                            <td colspan="7" style="text-align: center; font-weight: 600; padding: 12px;">
+                                5 年平均 PE：8.13x | 當前 Trailing PE：7.62x | 位置：歷史低位
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="highlight">
+                <strong>結論：</strong>PE 7.62x 低於歷史均值 8.13x，處於極度低估區間。但循環股 PE 低估反映高風險。
+            </div>
+        </section>
+
+        <section>
+            <h2>估值分析</h2>
+            <h3>成本資本 (CoE) 計算（高週期性）</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>參數</th>
+                            <th>數值</th>
+                            <th>說明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>無風險利率 (Rf)</td>
+                            <td>1.28%</td>
+                            <td>台灣 10Y 公債殖利率</td>
+                        </tr>
+                        <tr>
+                            <td>Beta</td>
+                            <td>1.15</td>
+                            <td>海運股高波動性</td>
+                        </tr>
+                        <tr>
+                            <td>市場風險溢價 (ERP)</td>
+                            <td>5.01%</td>
+                            <td>US Base 4.23% + 台灣 0.78%</td>
+                        </tr>
+                        <tr style="background: #f3f4f6; font-weight: 600;">
+                            <td>成本資本 (CoE)</td>
+                            <td>7.04%</td>
+                            <td>1.28% + 1.15 × 5.01% (高週期 CoE)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>多元估值法</h3>
+            <h4>方法一：Trailing PE 法（循環股）</h4>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-title">目標 PE</div>
+                    <div class="card-value">9.0x</div>
+                    <p style="font-size: 12px; margin-top: 8px;">循環股正常估值。</p>
+                </div>
+                <div class="card">
+                    <div class="card-title">2025 EPS</div>
+                    <div class="card-value">27.74 元</div>
+                    <p style="font-size: 12px; margin-top: 8px;">全年估算。</p>
+                </div>
+                <div class="card">
+                    <div class="card-title">目標價</div>
+                    <div class="card-value positive">250 元</div>
+                    <p style="font-size: 12px; margin-top: 8px;">9.0 × 27.74</p>
+                </div>
+            </div>
+            <h4>方法二：Gordon Growth Model（限制）</h4>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>參數</th>
+                            <th>數值</th>
+                            <th>說明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ROE</td>
+                            <td>16.3%</td>
+                            <td>EPS 27.74 / BV 170.6</td>
+                        </tr>
+                        <tr>
+                            <td>長期成長率 (g)</td>
+                            <td>5.0%</td>
+                            <td>全球貿易成長</td>
+                        </tr>
+                        <tr>
+                            <td>成本資本 (CoE)</td>
+                            <td>7.04%</td>
+                            <td>上表計算</td>
+                        </tr>
+                        <tr style="background: #f3f4f6; font-weight: 600;">
+                            <td>理論 PB</td>
+                            <td>5.54x</td>
+                            <td>(16.3%-5%) / (7.04%-5%) = 5.54x</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="margin: 12px 0;">實際 PB = 1.24x → <span class="negative">市場折價 78%</span>（航運週期極端折價，正常狀態）</p>
+        </section>
+
+        <section>
+            <h2>情境分析與風險模擬</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>情境</th>
+                            <th>EPS</th>
+                            <th>目標 PE</th>
+                            <th>目標價</th>
+                            <th>機率</th>
+                            <th>關鍵驅動</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #dcfce7;">
+                            <td><strong>Bull</strong></td>
+                            <td>35 元</td>
+                            <td>9.5x</td>
+                            <td class="positive">333 元</td>
+                            <td>25%</td>
+                            <td>紅海恢復，運費高位</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Base</strong></td>
+                            <td>27.74 元</td>
+                            <td>9.0x</td>
+                            <td class="positive">250 元</td>
+                            <td>50%</td>
+                            <td>運費維持穩定</td>
+                        </tr>
+                        <tr style="background: #fee2e2;">
+                            <td><strong>Bear</strong></td>
+                            <td>18 元</td>
+                            <td>7.5x</td>
+                            <td class="negative">135 元</td>
+                            <td>25%</td>
+                            <td>運費大幅回落</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>同業比較矩陣</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>公司</th>
+                            <th>代號</th>
+                            <th>股價</th>
+                            <th>Trailing PE</th>
+                            <th>殖利率</th>
+                            <th>評級</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #eff6ff;">
+                            <td><strong>長榮</strong></td>
+                            <td>2603</td>
+                            <td>211.5</td>
+                            <td>7.62x</td>
+                            <td>10-15%</td>
+                            <td class="rating-hold">HOLD</td>
+                        </tr>
+                        <tr>
+                            <td>陽明</td>
+                            <td>2609</td>
+                            <td>105</td>
+                            <td>~7.0x</td>
+                            <td>6-8%</td>
+                            <td>Hold</td>
+                        </tr>
+                        <tr>
+                            <td>Maersk</td>
+                            <td>—</td>
+                            <td>540</td>
+                            <td>~8.5x</td>
+                            <td>3-5%</td>
+                            <td>Hold</td>
+                        </tr>
+                        <tr>
+                            <td>COSCO</td>
+                            <td>—</td>
+                            <td>0.5</td>
+                            <td>~6.0x</td>
+                            <td>5-8%</td>
+                            <td>Buy</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>技術面與籌碼面分析（軋空風險機會）</h2>
+            <h3>三大法人買賣超統計</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>法人類別</th>
+                            <th>2026-03-13 單日</th>
+                            <th>5 日累計</th>
+                            <th>評論</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>外資 + 自營商</td>
+                            <td class="negative">-3,623 千股</td>
+                            <td class="negative">-3,500 千股</td>
+                            <td>淨賣超，看空循環股</td>
+                        </tr>
+                        <tr>
+                            <td>投信</td>
+                            <td class="positive">+55 千股</td>
+                            <td class="positive">+164 千股</td>
+                            <td>微幅買超，規模小</td>
+                        </tr>
+                        <tr style="background: #f3f4f6; font-weight: 600;">
+                            <td>三大法人合計</td>
+                            <td class="negative">-3,583 千股</td>
+                            <td class="positive">+5,164 千股</td>
+                            <td>5 日實為淨買超！反轉訊號</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>融資融券走勢 (2026-03-13)（高軋空風險）</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>指標</th>
+                            <th>數值</th>
+                            <th>評估</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>融資餘額</td>
+                            <td>132,000 張</td>
+                            <td>中等水準</td>
+                        </tr>
+                        <tr>
+                            <td>融券餘額</td>
+                            <td>96,956 張</td>
+                            <td>異常高，空方聚集</td>
+                        </tr>
+                        <tr style="background: #f3f4f6; font-weight: 600;">
+                            <td>券資比</td>
+                            <td>73.5%</td>
+                            <td class="negative">超高！(&gt;50%)，軋空機會隱伏</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="highlight">
+                <strong>軋空機會分析：</strong>券資比 73.5% 為 5 檔中最高，若股價上攻 240-250 元，融券單位易面臨回補壓力，形成軋空行情。短期若上衝，可能引發 250-280 元的快速拉升。此為潛在催化劑。
+            </div>
+        </section>
+
+        <section>
+            <h2>操作區間與風險報酬比</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>操作點位</th>
+                            <th>價格</th>
+                            <th>計算依據</th>
+                            <th>定位</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #dcfce7;">
+                            <td><strong>進場區間</strong></td>
+                            <td><strong>190-200 元</strong></td>
+                            <td>Bear PE 7.5x × EPS 18 = 135，加上安全邊際</td>
+                            <td>支撐區，高報酬區</td>
+                        </tr>
+                        <tr>
+                            <td><strong>目標價</strong></td>
+                            <td><strong>250 元</strong></td>
+                            <td>Base Case PE 9.0x × EPS 27.74</td>
+                            <td>核心持倉目標</td>
+                        </tr>
+                        <tr>
+                            <td><strong>停損位</strong></td>
+                            <td><strong>175 元</strong></td>
+                            <td>接近 52 週低 170 下方</td>
+                            <td>風險控制</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>風險報酬比分析</h3>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-title">預期報酬</div>
+                    <div class="card-value">38.5 元</div>
+                    <p style="font-size: 12px; margin-top: 8px;"><strong>+18.1%</strong></p>
+                </div>
+                <div class="card">
+                    <div class="card-title">最大虧損</div>
+                    <div class="card-value">36.5 元</div>
+                    <p style="font-size: 12px; margin-top: 8px;"><strong>-17.3%</strong></p>
+                </div>
+                <div class="card">
+                    <div class="card-title">R/R Ratio</div>
+                    <div class="card-value positive">1.05:1</div>
+                    <p style="font-size: 12px; margin-top: 8px;">報酬略勝風險。</p>
+                </div>
+            </div>
+            <div class="highlight">
+                <strong>結論：</strong>R/R Ratio 1.05:1 略大於 1:1，加上軋空風險，風險/報酬比尚可。短期炒作空間存在，但需控制倉位。
+            </div>
+        </section>
+
+        <section>
+            <h2>投資結論與建議</h2>
+            <h3>評級：<span class="rating-hold">HOLD</span></h3>
+            <h3>核心論點</h3>
+            <ol>
+                <li><strong>極度低估循環股</strong>：PE 7.62x 全市場最低，安全邊際大，但風險在於運費週期。</li>
+                <li><strong>高殖利率吸引力</strong>：10-15% 年殖利率吸引配置資金，穩定現金回報。</li>
+                <li><strong>軋空風險隱伏</strong>：券資比 73.5% 異常高，若股價上攻存在軋空機會，短期催化劑明確。</li>
+                <li><strong>運費風險不可忽視</strong>：紅海局勢、蘇伊士運河風險、全球貿易走弱，EPS 易大幅波動。</li>
+            </ol>
+            <h3>建議操作</h3>
+            <ul>
+                <li><strong>短期炒手</strong>：190-200 元進場，目標 240-260 元軋空行情，停損 175 元。</li>
+                <li><strong>配置型</strong>：分批在 190-210 元買進，領取 10-12% 殖利率，長期持倉。</li>
+                <li><strong>風險型</strong>：不建議介入，運費風險過高，波動性難以預測。</li>
+            </ul>
+            <div class="highlight">
+                <strong>風險提示：</strong>外資賣超、運費波動性極大、紅海局勢不穩。短期軋空機會存在，但中期運費下行風險不可忽視。建議控制倉位 2-3%。
+            </div>
+        </section>
+
+        <section>
+            <h2>參考資料與數據來源</h2>
+            <p style="font-size: 13px; color: #6b7280; margin-bottom: 12px;">數據基期：2026-03-13 | 報告日期：2026-03-17</p>
+            <div class="reference-list">
+                <div class="reference-item">
+                    1. <a href="https://finance.yahoo.com/quote/2603.TW/key-statistics/" target="_blank">Yahoo Finance - 2603 長榮 Key Statistics</a>
+                </div>
+                <div class="reference-item">
+                    2. <a href="https://statementdog.com/analysis/2603/eps" target="_blank">StatementDog - 2603 EPS 歷史</a>
+                </div>
+                <div class="reference-item">
+                    3. <a href="https://www.twse.com.tw/rwd/zh/fund/T86?date=20260313&selectType=ALLBUT0999&response=json" target="_blank">台灣證交所 - 三大法人買賣超</a>
+                </div>
+                <div class="reference-item">
+                    4. <a href="https://www.twse.com.tw/rwd/zh/marginTrading/TWT93U?date=20260313&selectType=ALL&response=json" target="_blank">台灣證交所 - 融資融券餘額</a>
+                </div>
+                <div class="reference-item">
+                    5. <a href="https://en.macromicro.me/charts/14588/taiwan-10-year-government-bond-yield" target="_blank">MacroMicro - 台灣 10Y 公債殖利率</a>
+                </div>
+                <div class="reference-item">
+                    6. <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html" target="_blank">Damodaran - 國家風險溢酬與權益風險溢酬</a>
+                </div>
+                <div class="reference-item">
+                    7. <a href="https://finance.yahoo.com/quote/2609.TW/key-statistics/" target="_blank">Yahoo Finance - 2609 陽明 Key Statistics (同業比較)</a>
+                </div>
+                <div class="reference-item">
+                    8. <a href="https://statementdog.com/analysis/2603/dividend" target="_blank">StatementDog - 2603 配息歷史</a>
+                </div>
+            </div>
+            <p class="report-date">本報告為研究性質，非投資建議。投資涉及風險，過去表現不代表未來成果。</p>
+        </section>
+    </div>
+</body>
+</html>
