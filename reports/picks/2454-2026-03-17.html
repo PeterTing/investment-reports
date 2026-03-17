@@ -3,1358 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>聯發科技 (2454) 投資分析報告 | 2026-03-17</title>
+    <title>2454 聯發科技 - 投資研究報告 2026-03-17</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-            padding: 16px;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 32px 16px;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        
-        header .subtitle {
-            font-size: 14px;
-            opacity: 0.95;
-            margin-bottom: 4px;
-        }
-        
-        header .date-info {
-            font-size: 13px;
-            opacity: 0.85;
-        }
-        
-        .content {
-            padding: 24px 16px;
-        }
-        
-        .metric-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 12px;
-            margin-bottom: 32px;
-        }
-        
-        .metric-box {
-            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
-            border-left: 4px solid #667eea;
-            padding: 16px;
-            border-radius: 6px;
-        }
-        
-        .metric-box.positive {
-            border-left-color: #28a745;
-        }
-        
-        .metric-box.negative {
-            border-left-color: #dc3545;
-        }
-        
-        .metric-label {
-            font-size: 12px;
-            color: #666;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 6px;
-            letter-spacing: 0.5px;
-        }
-        
-        .metric-value {
-            font-size: 22px;
-            font-weight: 700;
-            color: #333;
-        }
-        
-        .metric-change {
-            font-size: 12px;
-            color: #28a745;
-            margin-top: 4px;
-        }
-        
-        .metric-change.down {
-            color: #dc3545;
-        }
-        
-        section {
-            margin-bottom: 32px;
-        }
-        
-        section h2 {
-            font-size: 20px;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #667eea;
-        }
-        
-        section h3 {
-            font-size: 16px;
-            font-weight: 600;
-            color: #555;
-            margin-top: 16px;
-            margin-bottom: 8px;
-        }
-        
-        p {
-            margin-bottom: 12px;
-            font-size: 14px;
-            line-height: 1.7;
-        }
-        
-        .table-wrapper {
-            overflow-x: auto;
-            margin: 16px 0;
-            border-radius: 6px;
-            border: 1px solid #ddd;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 13px;
-        }
-        
-        table thead {
-            background: #f8f9fa;
-            font-weight: 600;
-            color: #333;
-        }
-        
-        table th {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 2px solid #ddd;
-        }
-        
-        table td {
-            padding: 10px 12px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        table tbody tr:hover {
-            background: #f9f9f9;
-        }
-        
-        .score-bar {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 12px;
-        }
-        
-        .score-label {
-            min-width: 120px;
-            font-size: 13px;
-            font-weight: 600;
-            color: #333;
-        }
-        
-        .score-container {
-            flex: 1;
-            height: 24px;
-            background: #e9ecef;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        
-        .score-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 6px;
-            color: white;
-            font-size: 11px;
-            font-weight: 700;
-        }
-        
-        .rating-badge {
-            display: inline-block;
-            padding: 6px 12px;
-            border-radius: 4px;
-            font-weight: 700;
-            font-size: 13px;
-            margin-bottom: 12px;
-        }
-        
-        .rating-buy {
-            background: #d4edda;
-            color: #155724;
-        }
-        
-        .rating-hold {
-            background: #fff3cd;
-            color: #856404;
-        }
-        
-        .rating-sell {
-            background: #f8d7da;
-            color: #721c24;
-        }
-        
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 16px;
-            margin: 16px 0;
-        }
-        
-        .card {
-            background: #f8f9fa;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            padding: 16px;
-        }
-        
-        .card h4 {
-            font-size: 14px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 8px;
-        }
-        
-        .card p {
-            font-size: 13px;
-            color: #666;
-        }
-        
-        .highlight {
-            background: #fffacd;
-            padding: 2px 4px;
-            border-radius: 2px;
-        }
-        
-        .warning {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 12px;
-            border-radius: 4px;
-            margin: 16px 0;
-            font-size: 13px;
-        }
-        
-        .tabs {
-            display: flex;
-            border-bottom: 2px solid #ddd;
-            margin: 16px 0;
-            overflow-x: auto;
-        }
-        
-        .tab-button {
-            padding: 12px 16px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: 600;
-            color: #666;
-            border-bottom: 3px solid transparent;
-            transition: all 0.3s;
-            white-space: nowrap;
-        }
-        
-        .tab-button.active {
-            color: #667eea;
-            border-bottom-color: #667eea;
-        }
-        
-        .tab-content {
-            display: none;
-        }
-        
-        .tab-content.active {
-            display: block;
-        }
-        
-        .source-list {
-            font-size: 12px;
-            color: #666;
-            margin-top: 16px;
-            padding-top: 16px;
-            border-top: 1px solid #ddd;
-        }
-        
-        .source-item {
-            margin-bottom: 8px;
-        }
-        
-        .source-item a {
-            color: #667eea;
-            text-decoration: none;
-        }
-        
-        .source-item a:hover {
-            text-decoration: underline;
-        }
-        
-        footer {
-            background: #f8f9fa;
-            padding: 16px;
-            text-align: center;
-            font-size: 12px;
-            color: #666;
-            border-top: 1px solid #ddd;
-        }
-        
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 24px;
-            }
-            
-            .metric-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            section h2 {
-                font-size: 18px;
-            }
-            
-            table {
-                font-size: 12px;
-            }
-            
-            table th, table td {
-                padding: 8px;
-            }
-        }
-    </style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft JhengHei', sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; font-size: 15px; }
+.container { max-width: 900px; margin: 0 auto; padding: 16px; }
+header { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 28px 20px; border-radius: 8px; margin-bottom: 20px; }
+.header-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+.header-title h1 { font-size: 26px; margin-bottom: 4px; }
+.header-title p { font-size: 13px; opacity: 0.85; }
+.header-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px; margin-top: 12px; }
+.metric-box { background: rgba(255,255,255,0.12); padding: 10px 12px; border-radius: 6px; }
+.metric-label { font-size: 11px; opacity: 0.8; text-transform: uppercase; letter-spacing: 0.5px; }
+.metric-value { font-size: 17px; font-weight: bold; margin-top: 2px; }
+.rating-buy { color: #10b981; }
+.rating-hold { color: #f59e0b; }
+.rating-sell { color: #ef4444; }
+section { background: white; padding: 22px; margin-bottom: 14px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+h2 { font-size: 18px; color: #1e3c72; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; }
+h3 { font-size: 15px; color: #2a5298; margin: 14px 0 8px 0; }
+.table-wrapper { overflow-x: auto; margin: 14px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 480px; }
+thead { background: #f3f4f6; }
+th { padding: 10px 12px; text-align: left; font-weight: 600; color: #374151; border-bottom: 2px solid #d1d5db; }
+td { padding: 10px 12px; border-bottom: 1px solid #e5e7eb; }
+tr:hover { background: #f9fafb; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin: 14px 0; }
+.card { background: linear-gradient(135deg, #f5f7fa, #c3cfe2); padding: 14px; border-radius: 6px; border-left: 4px solid #2a5298; }
+.card-title { font-weight: 600; color: #1e3c72; font-size: 12px; text-transform: uppercase; margin-bottom: 4px; }
+.card-value { font-size: 17px; font-weight: bold; color: #333; }
+.card-sub { font-size: 12px; color: #666; margin-top: 2px; }
+.highlight { background: #fef3c7; padding: 14px; border-left: 4px solid #f59e0b; border-radius: 4px; margin: 14px 0; font-size: 14px; }
+.highlight-green { background: #dcfce7; padding: 14px; border-left: 4px solid #10b981; border-radius: 4px; margin: 14px 0; }
+.positive { color: #059669; font-weight: 600; }
+.negative { color: #dc2626; font-weight: 600; }
+.score-row { display: flex; align-items: center; gap: 12px; margin: 8px 0; }
+.score-label { width: 140px; font-size: 13px; flex-shrink: 0; }
+.score-bar-bg { flex: 1; height: 8px; background: #e5e7eb; border-radius: 4px; overflow: hidden; }
+.score-bar-fill { height: 100%; background: linear-gradient(90deg, #059669, #10b981); }
+.score-num { width: 28px; text-align: right; font-weight: bold; font-size: 13px; }
+.ref-item { background: #f9fafb; padding: 7px 12px; border-radius: 4px; font-size: 12px; border-left: 3px solid #2a5298; margin: 4px 0; word-break: break-all; }
+.back-link { display: inline-block; margin: 16px 0; color: #2a5298; font-size: 13px; text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
+@media (max-width: 640px) {
+    header { padding: 18px 14px; }
+    .header-title h1 { font-size: 20px; }
+    .header-metrics { grid-template-columns: repeat(2, 1fr); }
+    section { padding: 14px; }
+    h2 { font-size: 16px; }
+    .card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>聯發科技 (2454)</h1>
-            <div class="subtitle">MediaTek Inc. | TSMC-invested 晶片設計龍頭</div>
-            <div class="date-info">投資分析報告 | 2026-03-17 | 數據基期：2025 全年實際 + 2026E 預估</div>
-        </header>
-        
-        <div class="content">
-            <!-- Executive Summary -->
-            <section>
-                <h2>Executive Summary | 執行摘要</h2>
-                
-                <div class="rating-badge rating-buy">BUY | 買入</div>
-                
-                <p><strong>投資論文：</strong>聯發科技以 AI 手機 Dimensity 處理器爆發為核心主題，2025 年 EPS 66.78 元成長 19.7%，逆勢超越市場預期。PE 25.75 倍雖處中等水位，但高達 24.6% 的 ROE 加上 Dimensity 8300 / 9400 在中高端機市佔率拉升，形成 PEG 0.68 的合理估值。目標價 1,937 元（+12.6%），風險報酬比 1.52:1，具備進場安全邊際。</p>
-                
-                <p><strong>核心論點：</strong></p>
-                <ul style="margin-left: 20px; margin-bottom: 12px;">
-                    <li>AI 手機晶片需求推動 2026 年 EPS 估增 16.3% 至 77.73 元（法人中位數）</li>
-                    <li>ROE 24.6% 顯著高於產業平均，理論合理 PB 達 3.89 倍</li>
-                    <li>法人融資餘額 32,840M 連續 3 月增長，機構持股積極佈局</li>
-                    <li>與高通、Apple A 系列形成差異化競爭，市場規模向上修正空間大</li>
-                </ul>
-                
-                <div class="metric-grid">
-                    <div class="metric-box positive">
-                        <div class="metric-label">目標價</div>
-                        <div class="metric-value">1,937元</div>
-                        <div class="metric-change">↑ 12.6% upside</div>
-                    </div>
-                    <div class="metric-box positive">
-                        <div class="metric-label">2025 EPS</div>
-                        <div class="metric-value">66.78元</div>
-                        <div class="metric-change">+19.7% YoY</div>
-                    </div>
-                    <div class="metric-box">
-                        <div class="metric-label">Trailing PE</div>
-                        <div class="metric-value">25.75倍</div>
-                        <div class="metric-change">vs PEG 0.68</div>
-                    </div>
-                    <div class="metric-box positive">
-                        <div class="metric-label">ROE / PB</div>
-                        <div class="metric-value">24.6% / 7.82</div>
-                        <div class="metric-change">↑ vs 理論 3.89倍</div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Company Overview -->
-            <section>
-                <h2>公司概況與事業群拆解</h2>
-                
-                <div class="card-grid">
-                    <div class="card">
-                        <h4>股價基本資訊</h4>
-                        <p><strong>代碼:</strong> 2454.TW<br>
-                        <strong>現價:</strong> TWD 1,720.65<br>
-                        <strong>市值:</strong> 2.8T<br>
-                        <strong>成交量:</strong> 日均 3.2M 張</p>
-                    </div>
-                    <div class="card">
-                        <h4>獲利能力</h4>
-                        <p><strong>2025 EPS:</strong> 66.78 元<br>
-                        <strong>YoY 成長:</strong> +19.7%<br>
-                        <strong>ROE:</strong> 24.6%<br>
-                        <strong>淨利率:</strong> 28.3%</p>
-                    </div>
-                    <div class="card">
-                        <h4>估值指標</h4>
-                        <p><strong>Trailing PE:</strong> 25.75 倍<br>
-                        <strong>Forward PE:</strong> 22.14 倍<br>
-                        <strong>PB:</strong> 7.82 倍<br>
-                        <strong>EV/EBITDA:</strong> 18.2 倍</p>
-                    </div>
-                </div>
-                
-                <h3>事業群拆解</h3>
-                
-                <p>聯發科技營收構成主要分為三大板塊：</p>
-                
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>事業群</th>
-                                <th>2025 營收占比 / 主要產品</th>
-                                <th>成長驅動</th>
-                                <th>競爭地位</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>智慧型手機 (55%)</strong></td>
-                                <td>Dimensity 9400 / 8300</td>
-                                <td>AI 手機滲透率提升</td>
-                                <td>第一梯隊，僅次高通</td>
-                            </tr>
-                            <tr>
-                                <td><strong>車用電子 (18%)</strong></td>
-                                <td>Automotive SoC, Infotainment</td>
-                                <td>EV 滲透率+自駕等級提升</td>
-                                <td>二線、持續搶食 TI / NXP</td>
-                            </tr>
-                            <tr>
-                                <td><strong>IoT / 其他 (27%)</strong></td>
-                                <td>WiFi / 5G / 邊緣運算</td>
-                                <td>數位轉型、5G 基站換代</td>
-                                <td>領先廣和、高通競爭</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <p>其中智慧型手機業務為最關鍵成長動能，2025 年在 AI 驅動下，Dimensity 系列在中國手機廠商（OPPO / Vivo / 小米）的市佔率提升至 28%，年度環比成長 6.3 個百分點。</p>
-            </section>
-            
-            <!-- Financial Health -->
-            <section>
-                <h2>財務健全度分析</h2>
-                
-                <h3>資本結構與流動性</h3>
-                
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>指標</th>
-                                <th>2023</th>
-                                <th>2024</th>
-                                <th>2025</th>
-                                <th>業界中位數</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Debt / Equity</strong></td>
-                                <td>0.18</td>
-                                <td>0.16</td>
-                                <td>0.12</td>
-                                <td>0.25</td>
-                            </tr>
-                            <tr>
-                                <td><strong>流動比</strong></td>
-                                <td>1.82</td>
-                                <td>1.95</td>
-                                <td>2.08</td>
-                                <td>1.50</td>
-                            </tr>
-                            <tr>
-                                <td><strong>速動比</strong></td>
-                                <td>1.65</td>
-                                <td>1.78</td>
-                                <td>1.92</td>
-                                <td>1.20</td>
-                            </tr>
-                            <tr>
-                                <td><strong>運營 FCF (億元)</strong></td>
-                                <td>128</td>
-                                <td>156</td>
-                                <td>189</td>
-                                <td>100-150</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <p>聯發科債務結構極為健全，Debt/Equity 0.12 倍遠低於產業平均，反映公司以內部現金流為主的自給自足模式。2025 年運營 FCF 達 189 億元，較 2024 年成長 21.2%，充分支撐研發投入與股利配發。</p>
-                
-                <h3>資本效率指標</h3>
-                
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>指標</th>
-                                <th>2023</th>
-                                <th>2024</th>
-                                <th>2025</th>
-                                <th>5年均值</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>ROE</strong></td>
-                                <td>21.2%</td>
-                                <td>23.1%</td>
-                                <td>24.6%</td>
-                                <td>22.4%</td>
-                            </tr>
-                            <tr>
-                                <td><strong>ROIC</strong></td>
-                                <td>19.8%</td>
-                                <td>21.4%</td>
-                                <td>23.2%</td>
-                                <td>21.1%</td>
-                            </tr>
-                            <tr>
-                                <td><strong>股東權益報酬率 (TTM)</strong></td>
-                                <td>20.6%</td>
-                                <td>22.8%</td>
-                                <td>24.6%</td>
-                                <td>22.7%</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <p>ROE 連續三年上升至 24.6%，反映管理層對資本配置的高效執行。ROIC 提升更快速（由 19.8% → 23.2%），意味著聯發科在新晶片開發上的資本投報率持續優化。</p>
-            </section>
-            
-            <!-- EPS Bridge Analysis -->
-            <section>
-                <h2>成長橋樑：EPS 由下往上推導</h2>
-                
-                <h3>2025 年度 EPS 推導（實現值 66.78 元）</h3>
-                
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>科目</th>
-                                <th>金額 (億元)</th>
-                                <th>備註</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>合併營收</strong></td>
-                                <td>1,892</td>
-                                <td>YoY +18.2%</td>
-                            </tr>
-                            <tr>
-                                <td>毛利</td>
-                                <td>642</td>
-                                <td>毛利率 33.9%</td>
-                            </tr>
-                            <tr>
-                                <td>營業費用</td>
-                                <td>-238</td>
-                                <td>R&D 占營收 11.2%</td>
-                            </tr>
-                            <tr>
-                                <td><strong>營業利益</strong></td>
-                                <td>404</td>
-                                <td>營益率 21.3%</td>
-                            </tr>
-                            <tr>
-                                <td>業外收入淨額</td>
-                                <td>+48</td>
-                                <td>主要為投資收益</td>
-                            </tr>
-                            <tr>
-                                <td><strong>稅前淨利</strong></td>
-                                <td>452</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>所得稅</td>
-                                <td>-78</td>
-                                <td>有效稅率 17.3%</td>
-                            </tr>
-                            <tr>
-                                <td><strong>稅後淨利</strong></td>
-                                <td>374</td>
-                                <td>淨利率 19.8%</td>
-                            </tr>
-                            <tr>
-                                <td>少數股東盈餘</td>
-                                <td>-16</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td><strong>母公司盈餘</strong></td>
-                                <td>358</td>
-                                <td></td>
-                            </tr>
-                            <tr style="font-weight: 700; background: #f0f0f0;">
-                                <td><strong>EPS（每股盈餘）</strong></td>
-                                <td><strong>66.78 元</strong></td>
-                                <td><strong>加權發行股數 5.36 億股</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <h3>2026 年度 EPS 預測（法人中位數 77.73 元）</h3>
-                
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>科目</th>
-                                <th>2026E (億元)</th>
-                                <th>變化假設</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>合併營收</strong></td>
-                                <td>2,205</td>
-                                <td>+16.6% （AI 手機率升至 42%）</td>
-                            </tr>
-                            <tr>
-                                <td>毛利率</td>
-                                <td>34.2%</td>
-                                <td>產能利用率提升 +30bps</td>
-                            </tr>
-                            <tr>
-                                <td><strong>毛利</strong></td>
-                                <td>754</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>營業費用</td>
-                                <td>-248</td>
-                                <td>R&D 維持 11.2% 強度</td>
-                            </tr>
-                            <tr>
-                                <td><strong>營業利益</strong></td>
-                                <td>506</td>
-                                <td>營益率 22.9%</td>
-                            </tr>
-                            <tr>
-                                <td>業外收入</td>
-                                <td>+52</td>
-                                <td>持續配息收益</td>
-                            </tr>
-                            <tr>
-                                <td><strong>稅前淨利</strong></td>
-                                <td>558</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>所得稅</td>
-                                <td>-95</td>
-                                <td>有效稅率 17.0%</td>
-                            </tr>
-                            <tr>
-                                <td><strong>母公司盈餘</strong></td>
-                                <td>416</td>
-                                <td>+16.3% YoY</td>
-                            </tr>
-                            <tr style="font-weight: 700; background: #f0f0f0;">
-                                <td><strong>EPS 預測</strong></td>
-                                <td><strong>77.73 元</strong></td>
-                                <td><strong>+16.3% YoY</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <p><strong>關鍵假設：</strong></p>
-                <ul style="margin-left: 20px;">
-                    <li>2026 年 AI 手機滲透率升至 42%（vs 現行 28%），Dimensity 9400 / 8300 市佔率達 32%</li>
-                    <li>汽車晶片業務年增 22%，驅動整體營收成長 16.6%</li>
-                    <li>製造成本逐步優化（晶圓成本 -2.1%），毛利率擴張 30 basis points</li>
-                </ul>
-            </section>
-            
-            <!-- Valuation Analysis -->
-            <section>
-                <h2>多元估值分析</h2>
-                
-                <h3>估值方法矩陣</h3>
-                
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>估值法</th>
-                                <th>應用倍數</th>
-                                <th>計算值</th>
-                                <th>vs 現價 (1,720.65)</th>
-                                <th>核心邏輯</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Trailing PE</strong></td>
-                                <td>25.75 倍</td>
-                                <td>1,720.65 元</td>
-                                <td>0% (當前價)</td>
-                                <td>基準估值，已反映 2025 業績</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Forward PE</strong></td>
-                                <td>22.14 倍 × 77.73 元</td>
-                                <td>1,719.82 元</td>
-                                <td>-0.1%</td>
-                                <td>略低於當前，反映進場安全邊際</td>
-                            </tr>
-                            <tr>
-                                <td><strong>PEG (5yr CAGR 12.2%)</strong></td>
-                                <td>0.68 倍</td>
-                                <td>1,761.26 元</td>
-                                <td>+2.4%</td>
-                                <td>EPS 成長快速度，倍數有向上空間</td>
-                            </tr>
-                            <tr>
-                                <td><strong>EV/EBITDA (18.2倍)</strong></td>
-                                <td>平均 EBITDA 486億</td>
-                                <td>1,834.72 元</td>
-                                <td>+6.6%</td>
-                                <td>對應資本結構與營運效率</td>
-                            </tr>
-                            <tr style="font-weight: 700; background: #f0f0f0;">
-                                <td><strong>目標價 (三角交叉)</strong></td>
-                                <td>1,720~1,835</td>
-                                <td><strong>1,937 元</strong></td>
-                                <td><strong>+12.6%</strong></td>
-                                <td>Bull case：Dimensity 爆發 + ROE 攀升</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <h3>Gordon Growth Model 辯證</h3>
-                
-                <p>理論 PB 值計算：<strong>PB = (ROE - g) / (CoE - g)</strong></p>
-                
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>參數</th>
-                                <th>數值</th>
-                                <th>說明</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>ROE</strong></td>
-                                <td>24.6%</td>
-                                <td>2025 實現值</td>
-                            </tr>
-                            <tr>
-                                <td><strong>長期成長率 (g)</strong></td>
-                                <td>7.0%</td>
-                                <td>法人 2026-2030E 平均年增長假設</td>
-                            </tr>
-                            <tr>
-                                <td><strong>無風險利率 (Rf)</strong></td>
-                                <td>1.8%</td>
-                                <td>台灣 10 年公債現殖</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Beta</strong></td>
-                                <td>0.92</td>
-                                <td>聯發科 vs TAIEX 歷史 5 年</td>
-                            </tr>
-                            <tr>
-                                <td><strong>市場風險溢酬 (ERP)</strong></td>
-                                <td>5.2%</td>
-                                <td>台股平均長期溢酬</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Cost of Equity (CoE)</strong></td>
-                                <td>6.56%</td>
-                                <td>1.8% + 0.92 × 5.2%</td>
-                            </tr>
-                            <tr style="font-weight: 700; background: #f0f0f0;">
-                                <td><strong>理論 PB</strong></td>
-                                <td><strong>3.89 倍</strong></td>
-                                <td>(24.6% - 7.0%) / (6.56% - 7.0%) = 3.89</td>
-                            </tr>
-                            <tr>
-                                <td><strong>實際 PB</strong></td>
-                                <td>7.82 倍</td>
-                                <td>當前股價 / 每股淨值</td>
-                            </tr>
-                            <tr>
-                                <td><strong>溢價幅度</strong></td>
-                                <td>+100.8%</td>
-                                <td>市場給予聯發科雙倍溢價</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <p><strong>溢價合理性分析：</strong> 實際 PB (7.82 倍) 相比理論值 (3.89 倍) 存在 100.8% 溢價，但這反映了聯發科作為晶片設計龍頭的稀缺性、AI 浪潮下的成長預期、以及管理團隊的優秀執行力。若 2026 年 ROE 進一步提升至 26%，理論 PB 將攀升至 4.28 倍，溢價幅度逐步合理化。</p>
-            </section>
-            
-            <!-- Comparable Analysis -->
-            <section>
-                <h2>同業對標估值分析</h2>
-                
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>公司</th>
-                                <th>股票代碼</th>
-                                <th>2025E PE</th>
-                                <th>PB</th>
-                                <th>ROE</th>
-                                <th>3yr CAGR</th>
-                                <th>優劣勢</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr style="font-weight: 700; background: #f0f0f0;">
-                                <td><strong>聯發科</strong></td>
-                                <td>2454.TW</td>
-                                <td>25.75</td>
-                                <td>7.82</td>
-                                <td>24.6%</td>
-                                <td>18.6%</td>
-                                <td>中檔 PE，頂級 ROE</td>
-                            </tr>
-                            <tr>
-                                <td>高通</td>
-                                <td>QCOM (US)</td>
-                                <td>24.12</td>
-                                <td>6.48</td>
-                                <td>25.2%</td>
-                                <td>12.1%</td>
-                                <td>相近 ROE，惟成長較緩</td>
-                            </tr>
-                            <tr>
-                                <td>Apple</td>
-                                <td>AAPL (US)</td>
-                                <td>34.28</td>
-                                <td>52.16</td>
-                                <td>118%*</td>
-                                <td>8.3%</td>
-                                <td>高倍數，成長成熟</td>
-                            </tr>
-                            <tr>
-                                <td>Nvidia</td>
-                                <td>NVDA (US)</td>
-                                <td>68.45</td>
-                                <td>34.82</td>
-                                <td>182%*</td>
-                                <td>52.4%</td>
-                                <td>AI 龍頭，估值極高</td>
-                            </tr>
-                            <tr>
-                                <td>博通</td>
-                                <td>AVGO (US)</td>
-                                <td>28.64</td>
-                                <td>8.12</td>
-                                <td>28.4%</td>
-                                <td>14.8%</td>
-                                <td>成長與 ROE 俱佳</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <p><em>* Apple / Nvidia ROE 計算中包含股票回購倍數效應，實質營運報酬率應折扣計算</em></p>
-                
-                <p>聯發科 PE 25.75 倍處於高通 (24.12) 與博通 (28.64) 之間，屬於晶片設計業合理區間。但在 ROE 維度，聯發科 24.6% 不遜於高通 25.2%，卻遠低於博通 28.4%，反映出聯發科在核心晶片設計競爭力上的優勢。</p>
-            </section>
-            
-            <!-- Risk Analysis -->
-            <section>
-                <h2>風險矩陣與情境分析</h2>
-                
-                <h3>核心風險清單</h3>
-                
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>風險類別</th>
-                                <th>風險要素</th>
-                                <th>影響程度</th>
-                                <th>概率評估</th>
-                                <th>應對措施</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td rowspan="2"><strong>市場風險</strong></td>
-                                <td>智慧型手機銷量不達預期（2026 出貨量 1.15B 台 vs 預期 1.32B）</td>
-                                <td>高</td>
-                                <td>中</td>
-                                <td>降低 EPS 至 71 元，PE 折價至 23 倍</td>
-                            </tr>
-                            <tr>
-                                <td>AI 晶片市場規模被高通 / Apple 蠶食</td>
-                                <td>中高</td>
-                                <td>低</td>
-                                <td>聚焦中端市場，強化 Dimensity 差異性</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2"><strong>營運風險</strong></td>
-                                <td>台積電產能吃緊，聯發科晶圓代工成本升幅超預期 (+8% vs 預估 +2%)</td>
-                                <td>中</td>
-                                <td>中高</td>
-                                <td>加強與台積電策略合作，鎖定供應額度</td>
-                            </tr>
-                            <tr>
-                                <td>汽車晶片業務競爭激化，毛利率被擠壓 (33% vs 預估 34%)</td>
-                                <td>低</td>
-                                <td>低</td>
-                                <td>強化車廠客戶認證，提升議價力</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2"><strong>政策風險</strong></td>
-                                <td>美國對中國晶片出口管制升級，影響聯發科中國客戶銷售</td>
-                                <td>中高</td>
-                                <td>中</td>
-                                <td>監控地緣政治，準備應對方案</td>
-                            </tr>
-                            <tr>
-                                <td>台灣晶片設計稅優政策調整</td>
-                                <td>低</td>
-                                <td>低</td>
-                                <td>有效稅率現為 17%，調整空間有限</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <h3>三情境股價模型</h3>
-                
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>情境</th>
-                                <th>2026E EPS</th>
-                                <th>PE 倍數</th>
-                                <th>目標股價</th>
-                                <th>相對現價</th>
-                                <th>情景假設</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr style="background: #d4edda;">
-                                <td><strong>Bull Case</strong></td>
-                                <td>84.26 元</td>
-                                <td>26.5 倍</td>
-                                <td><strong>2,233 元</strong></td>
-                                <td><strong>+29.8%</strong></td>
-                                <td>AI 手機率達 55%、Dimensity 市佔 38%、毛利率 35.1%</td>
-                            </tr>
-                            <tr style="background: #fff3cd;">
-                                <td><strong>Base Case</strong></td>
-                                <td>77.73 元</td>
-                                <td>24.9 倍</td>
-                                <td><strong>1,937 元</strong></td>
-                                <td><strong>+12.6%</strong></td>
-                                <td>AI 手機率 42%、Dimensity 市佔 32%、毛利率 34.2%</td>
-                            </tr>
-                            <tr style="background: #f8d7da;">
-                                <td><strong>Bear Case</strong></td>
-                                <td>69.54 元</td>
-                                <td>22.8 倍</td>
-                                <td><strong>1,585 元</strong></td>
-                                <td><strong>-7.9%</strong></td>
-                                <td>AI 手機率僅 28%、市佔 24%、毛利率 32.8%、晶圓漲價</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-            
-            <!-- Scoring System -->
-            <section>
-                <h2>投資評分系統 (MDVI)</h2>
-                
-                <p>綜合四大維度評分，聯發科總分 72 / 100，居於高成長晶片設計公司上游。</p>
-                
-                <div style="margin: 20px 0;">
-                    <div class="score-bar">
-                        <div class="score-label">Momentum (動能)</div>
-                        <div class="score-container">
-                            <div class="score-fill" style="width: 82%;">82</div>
-                        </div>
-                    </div>
-                    <p style="font-size: 12px; color: #666; margin-left: 120px; margin-bottom: 16px;">EPS 年增 19.7%，法人融資餘額連增 3 月，外資買超 2 周</p>
-                    
-                    <div class="score-bar">
-                        <div class="score-label">Disclosure (透明度)</div>
-                        <div class="score-container">
-                            <div class="score-fill" style="width: 76%;">76</div>
-                        </div>
-                    </div>
-                    <p style="font-size: 12px; color: #666; margin-left: 120px; margin-bottom: 16px;">季報完整，法人會議透明，惟缺乏長期量化指引</p>
-                    
-                    <div class="score-bar">
-                        <div class="score-label">Valuation (估值)</div>
-                        <div class="score-container">
-                            <div class="score-fill" style="width: 64%;">64</div>
-                        </div>
-                    </div>
-                    <p style="font-size: 12px; color: #666; margin-left: 120px; margin-bottom: 16px;">PE 25.75 倍中檔、PB 7.82 溢價 100%、PEG 0.68 偏低</p>
-                    
-                    <div class="score-bar">
-                        <div class="score-label">Industry (產業)</div>
-                        <div class="score-container">
-                            <div class="score-fill" style="width: 68%;">68</div>
-                        </div>
-                    </div>
-                    <p style="font-size: 12px; color: #666; margin-left: 120px; margin-bottom: 16px;">AI 手機浪潮強勁、晶片產能供不應求、惟競爭日趨激烈</p>
-                </div>
-                
-                <div class="rating-badge rating-buy">綜合評分：72 / 100 — BUY (買入)</div>
-            </section>
-            
-            <!-- Position Sizing -->
-            <section>
-                <h2>具體操作區間與風險報酬分析</h2>
-                
-                <h3>分批進場點位</h3>
-                
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>進場點位</th>
-                                <th>計算依據</th>
-                                <th>進場理由</th>
-                                <th>建議比重</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr style="background: #d4edda;">
-                                <td><strong>首批：1,620 元</strong></td>
-                                <td>Forward PE 21 倍 × 77.73 元</td>
-                                <td>最安全邊際，技術面突破整數關卡</td>
-                                <td>40%</td>
-                            </tr>
-                            <tr style="background: #fff3cd;">
-                                <td><strong>次批：1,750 元</strong></td>
-                                <td>Trailing PE 26.2 倍（中位數）</td>
-                                <td>補強倉位，等待季報確認</td>
-                                <td>35%</td>
-                            </tr>
-                            <tr style="background: #f8d7da;">
-                                <td><strong>機動：1,880 元以上</strong></td>
-                                <td>PEG 0.75 × 25 倍</td>
-                                <td>向上追價空間已限，需等待回檔</td>
-                                <td>25%</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <h3>停損與停利點位</h3>
-                
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>設定</th>
-                                <th>點位</th>
-                                <th>觸發條件</th>
-                                <th>說明</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr style="background: #f8d7da;">
-                                <td><strong>停損點</strong></td>
-                                <td>1,480 元</td>
-                                <td>Q2 營收年增低於 8%（vs 預估 16.6%）、毛利率跌破 33%</td>
-                                <td>下跌 -14% 止損，對應 EPS 調降至 66 元、PE 22 倍</td>
-                            </tr>
-                            <tr style="background: #d4edda;">
-                                <td><strong>分批停利</strong></td>
-                                <td>第一檔 1,920 元 (+11.6%)</td>
-                                <td>達成目標價上半段，獲利入袋</td>
-                                <td>可獲利出 40% 倉位，降低風險</td>
-                            </tr>
-                            <tr style="background: #d4edda;">
-                                <td><strong>全數停利</strong></td>
-                                <td>2,100 元 (+22%)</td>
-                                <td>確認 2026 EPS 達 80 元以上、PE 進一步擴張</td>
-                                <td>完全退出，回收全部獲利並鎖定上漲空間</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <h3>風險報酬比 (Risk / Reward Ratio)</h3>
-                
-                <div style="margin: 16px 0; padding: 16px; background: #f8f9fa; border-radius: 6px; border-left: 4px solid #667eea;">
-                    <p style="margin-bottom: 12px;"><strong>以 1,720.65 元進場為例：</strong></p>
-                    <p style="margin-bottom: 8px;">• 目標價 1,937 元 → 上漲空間 +216 元 (+12.6%)</p>
-                    <p style="margin-bottom: 8px;">• 停損點 1,480 元 → 下跌風險 -240 元 (-14.0%)</p>
-                    <p style="margin-bottom: 8px;"><strong>Risk / Reward Ratio = 240 / 216 = 1.11 : 1</strong></p>
-                    <p style="color: #28a745; font-weight: 700;">✓ 可接受的風險報酬配比（>0.8 : 1 為標準）</p>
-                </div>
-            </section>
-            
-            <!-- Chip Sector Analysis -->
-            <section>
-                <h2>籌碼面與技術分析</h2>
-                
-                <h3>法人持股動向（近期數據）</h3>
-                
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>類別</th>
-                                <th>5日買賣超</th>
-                                <th>20日買賣超</th>
-                                <th>60日買賣超</th>
-                                <th>評估</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>外資</strong></td>
-                                <td>+4,235K 張</td>
-                                <td>+18,642K 張</td>
-                                <td>+32,108K 張</td>
-                                <td>連續買超，長期看好趨勢明確</td>
-                            </tr>
-                            <tr>
-                                <td><strong>投信</strong></td>
-                                <td>+862K 張</td>
-                                <td>+3,126K 張</td>
-                                <td>+8,914K 張</td>
-                                <td>穩定佈局，惟買超幅度低於外資</td>
-                            </tr>
-                            <tr>
-                                <td><strong>自營商</strong></td>
-                                <td>-1,248K 張</td>
-                                <td>-4,852K 張</td>
-                                <td>-6,325K 張</td>
-                                <td>持續賣壓，反映本益比高危懸念</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <h3>融資融券狀況</h3>
-                
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>指標</th>
-                                <th>當前</th>
-                                <th>3個月前</th>
-                                <th>變化</th>
-                                <th>評估</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>融資餘額 (百萬)</strong></td>
-                                <td>32,840</td>
-                                <td>24,180</td>
-                                <td>+35.8%</td>
-                                <td>杠杆資金持續進場，樂觀態度濃厚</td>
-                            </tr>
-                            <tr>
-                                <td><strong>融券餘額 (百萬)</strong></td>
-                                <td>8,126</td>
-                                <td>9,420</td>
-                                <td>-13.8%</td>
-                                <td>空單回補，市場信心改善</td>
-                            </tr>
-                            <tr>
-                                <td><strong>券資比 (%)</strong></td>
-                                <td>24.7%</td>
-                                <td>38.9%</td>
-                                <td>-14.2pp</td>
-                                <td>融資多頭優勢擴大</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <h3>技術指標概覽</h3>
-                
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>指標</th>
-                                <th>當前值</th>
-                                <th>超買/超賣線</th>
-                                <th>訊號</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>5/20/60 MA 乖離率</strong></td>
-                                <td>+8.2%</td>
-                                <td>±10%</td>
-                                <td>接近超買，建議逢高減碼</td>
-                            </tr>
-                            <tr>
-                                <td><strong>RSI (14)</strong></td>
-                                <td>68</td>
-                                <td>70 (超買) / 30 (超賣)</td>
-                                <td>進入相對強勢區域，尚未超買</td>
-                            </tr>
-                            <tr>
-                                <td><strong>KD 指標 (K值)</strong></td>
-                                <td>76</td>
-                                <td>80 (鈍化) / 20 (衰弱)</td>
-                                <td>高檔鈍化，短期漲勢已過度，警惕回檔</td>
-                            </tr>
-                            <tr>
-                                <td><strong>MACD (12/26/9)</strong></td>
-                                <td>DIF > Signal</td>
-                                <td>0 軸上穿</td>
-                                <td>正向發散，上昇趨勢確立</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-            
-            <!-- Investment Conclusion -->
-            <section>
-                <h2>投資結論與建議</h2>
-                
-                <div class="rating-badge rating-buy">評級：BUY (買入) | 目標價：TWD 1,937 (+12.6%)</div>
-                
-                <h3>結論摘要</h3>
-                
-                <p>聯發科技以 AI 手機 Dimensity 系列的市場爆發為核心成長引擎，2025 年 EPS 66.78 元 (+19.7% YoY) 已超越法人預期。高達 24.6% 的 ROE 反映出公司在晶片設計領域的競爭力和管理效率，遠超產業平均水位。</p>
-                
-                <p>當前 PE 25.75 倍雖處中檔，但搭配 Forward PE 22.14 倍的 2026 預期，以及 PEG 0.68 的相對成長評價，進場風險報酬比達 1.11 : 1，具備充足的安全邊際。</p>
-                
-                <p>技術面而言，外資法人融資餘額連漲 3 月、60 日買超逾 3.2 億張，顯示機構投資者對聯發科 AI 題材的持續佈局。惟融資杠杆已升高、乖離率接近警戒，短期需警惕技術性回檔。</p>
-                
-                <h3>建議操作方案</h3>
-                
-                <ol style="margin-left: 20px; margin-bottom: 16px;">
-                    <li><strong>首批進場 (1,620 元)：</strong>配置 40% 倉位，在技術支撐和估值底層尋求最佳安全邊際</li>
-                    <li><strong>次批補強 (1,750 元)：</strong>投入 35% 倉位，待季報確認成長軌跡後加碼</li>
-                    <li><strong>機動追價 (1,880+ 元)：</strong>僅控制 25% 倉位，上漲過快時停止追價，等待回檔機會</li>
-                    <li><strong>分批獲利：</strong>目標價 1,937 元達成率 70% 時考慮分批停利，完全退出點設在 2,100 元</li>
-                    <li><strong>停損設在 1,480 元：</strong>若 Q2 營收成長失速或毛利率跌破 33%，堅決止損，不戀棧</li>
-                </ol>
-                
-                <h3>後續追蹤重點</h3>
-                
-                <div class="card-grid">
-                    <div class="card">
-                        <h4>季報檢視（Q1 2026）</h4>
-                        <p>• 營收環比與年增幅度<br>
-                        • 毛利率是否維持 33.5%+ 水位<br>
-                        • 客戶訂單及庫存狀況</p>
-                    </div>
-                    <div class="card">
-                        <h4>產業動態</h4>
-                        <p>• 2026 AI 手機滲透率進展<br>
-                        • 高通、Apple 新品競爭威脅<br>
-                        • 台積電晶圓產能供給狀況</p>
-                    </div>
-                    <div class="card">
-                        <h4>技術面監測</h4>
-                        <p>• 1,900 元關鍵阻力突破<br>
-                        • 融資餘額成長趨勢<br>
-                        • RSI、KD 超買情況調整</p>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Data Sources -->
-            <section>
-                <h2>數據來源與驗證</h2>
-                
-                <div class="source-list">
-                    <div class="source-item">
-                        [1] 聯發科技 2025 年度財務報告 | <a href="https://investor.mediatek.com/financial-statements" target="_blank">https://investor.mediatek.com/financial-statements</a>
-                    </div>
-                    <div class="source-item">
-                        [2] 台灣證交所 2454 聯發科技股價與融資融券統計 | <a href="https://www.twse.com.tw/zh/trading/exchange/MI_INDEX01.php?show=0091012H" target="_blank">https://www.twse.com.tw/zh/trading/exchange/MI_INDEX01.php</a>
-                    </div>
-                    <div class="source-item">
-                        [3] Factset 晶片設計業法人 EPS 預估中位數 | <a href="https://www.factset.com/" target="_blank">https://www.factset.com/</a>
-                    </div>
-                    <div class="source-item">
-                        [4] Bloomberg: MediaTek (2454.TW) 季度分析報告 | <a href="https://www.bloomberg.com/quote/2454:TT" target="_blank">https://www.bloomberg.com/quote/2454:TT</a>
-                    </div>
-                    <div class="source-item">
-                        [5] Morgan Stanley Research: "AI Smartphone Proliferation" (2026E 手機出貨量預測) | <a href="https://www.morganstanley.com/research" target="_blank">https://www.morganstanley.com/research</a>
-                    </div>
-                    <div class="source-item">
-                        [6] Broadcom (AVGO) 2025 年報 - 晶片設計業對標 | <a href="https://investor.broadcom.com/financial-information" target="_blank">https://investor.broadcom.com/financial-information</a>
-                    </div>
-                    <div class="source-item">
-                        [7] 證券期貨局 - 聯發科技融資融券餘額統計 | <a href="https://www.sfc.hk/web/TC/resources/statistics.html" target="_blank">https://www.sfc.hk/web/TC/resources/statistics.html</a>
-                    </div>
-                    <div class="source-item">
-                        [8] CMoney 技術分析工具 - 聯發科 MA 乖離、RSI、KD 指標 | <a href="https://www.cmoney.tw/" target="_blank">https://www.cmoney.tw/</a>
-                    </div>
-                </div>
-            </section>
-            
-            <hr style="margin: 32px 0; border: none; border-top: 1px solid #ddd;">
-            
-            <div style="background: #f8f9fa; padding: 16px; border-radius: 6px; margin-bottom: 16px;">
-                <p style="font-size: 12px; color: #666; margin: 0;">
-                    <strong>免責聲明：</strong> 本報告基於公開財務數據與法人共識預估編製，僅供參考。投資決策應綜合個人風險偏好、資金規模與時間周期進行。本分析師對未來市場變動不承擔責任。過往績效不保證未來表現。
-                </p>
-            </div>
+<div class="container">
+
+<a href="../../index.html" class="back-link">← 返回報告中心</a>
+
+<header>
+    <div class="header-top">
+        <div class="header-title">
+            <h1>2454 聯發科技</h1>
+            <p>MediaTek Inc.</p>
+            <p style="font-size:12px;opacity:0.7;margin-top:4px;">報告日期：2026-03-17 | 數據基期：2025 全年實際 EPS</p>
         </div>
-        
-        <footer>
-            <p>© 2026 Investment Research Division | Report Generated on 2026-03-17 | Data Baseline: 2025 Full Year + 2026E Forecast</p>
-            <p>聯發科技 (2454) 投資分析報告 | CFA 投資框架</p>
-        </footer>
+        <div style="text-align:right;">
+            <div class="metric-label">評級</div>
+            <div class="metric-value rating-buy">Buy</div>
+            <div style="font-size:12px;margin-top:4px;opacity:0.85;">MDVI 總分 39/60</div>
+        </div>
     </div>
+    <div class="header-metrics">
+        <div class="metric-box">
+            <div class="metric-label">股價</div>
+            <div class="metric-value">TWD 1,720.0</div>
+            <div style="font-size:11px;opacity:0.7;">2026-03-17</div>
+        </div>
+        <div class="metric-box">
+            <div class="metric-label">目標價</div>
+            <div class="metric-value">TWD 1,930</div>
+        </div>
+        <div class="metric-box">
+            <div class="metric-label">上檔幅度</div>
+            <div class="metric-value positive">+12.2%</div>
+        </div>
+        <div class="metric-box">
+            <div class="metric-label">Trailing PE</div>
+            <div class="metric-value">26.0x</div>
+        </div>
+        <div class="metric-box">
+            <div class="metric-label">2025 EPS</div>
+            <div class="metric-value">66.16 元</div>
+        </div>
+        <div class="metric-box">
+            <div class="metric-label">CoE</div>
+            <div class="metric-value">6.09%</div>
+        </div>
+    </div>
+</header>
+
+<!-- 1. 執行摘要 -->
+<section>
+    <h2>1. 執行摘要</h2>
+    <div class="highlight-green">2025 EPS 66.16元（已公布），AI 手機 SoC 市占率提升，Dimensity 9400 系列出貨強勁，Trailing PE 26.0x 低於歷史均值</div>
+    <p style="margin-top:12px;">聯發科 2025 EPS 66.16元年減 1.1%，但 AI 手機 SoC 動能強勁，Trailing PE 26.0x 仍具吸引力，目標價 1,930 元。</p>
+    <div class="card-grid" style="margin-top:16px;">
+        <div class="card">
+            <div class="card-title">目標價</div>
+            <div class="card-value">TWD 1,930</div>
+            <div class="card-sub">Trailing PE 29.2x × 2025 EPS 66.16 = 1,932元（取整 1,930）</div>
+        </div>
+        <div class="card">
+            <div class="card-title">停損建議</div>
+            <div class="card-value">TWD 1,548.0</div>
+            <div class="card-sub">現價 -10%（參考值）</div>
+        </div>
+        <div class="card">
+            <div class="card-title">R/R 比</div>
+            <div class="card-value">1.2:1</div>
+            <div class="card-sub">獲利/風險比率</div>
+        </div>
+    </div>
+</section>
+
+<!-- 2. MDVI v3 六維度評分 -->
+<section>
+    <h2>2. MDVI v3 六維度評分</h2>
+    <div style="font-size:28px;font-weight:bold;color:#1e3c72;margin-bottom:16px;">39 / 60</div>
+    <div class="score-row"><span class="score-label">基本面 Fundamental</span>
+            <div class="score-bar-bg"><div class="score-bar-fill" style="width:80%;background:#059669;"></div></div>
+            <span class="score-num">8</span></div>
+<div class="score-row"><span class="score-label">產業展望 Industry</span>
+            <div class="score-bar-bg"><div class="score-bar-fill" style="width:80%;background:#059669;"></div></div>
+            <span class="score-num">8</span></div>
+<div class="score-row"><span class="score-label">總經 Macro</span>
+            <div class="score-bar-bg"><div class="score-bar-fill" style="width:60%;background:#f59e0b;"></div></div>
+            <span class="score-num">6</span></div>
+<div class="score-row"><span class="score-label">技術面 Technical</span>
+            <div class="score-bar-bg"><div class="score-bar-fill" style="width:70%;background:#059669;"></div></div>
+            <span class="score-num">7</span></div>
+<div class="score-row"><span class="score-label">籌碼面 Chip</span>
+            <div class="score-bar-bg"><div class="score-bar-fill" style="width:50%;background:#f59e0b;"></div></div>
+            <span class="score-num">5</span></div>
+<div class="score-row"><span class="score-label">消息面 Catalyst</span>
+            <div class="score-bar-bg"><div class="score-bar-fill" style="width:50%;background:#f59e0b;"></div></div>
+            <span class="score-num">5</span></div>
+
+    <p style="margin-top:12px;font-size:13px;color:#666;">總分 39/60 | 各維度滿分 10 分</p>
+</section>
+
+<!-- 3. 公司概況 -->
+<section>
+    <h2>3. 公司概況與事業群</h2>
+    <p><strong>聯發科技</strong>（2454.TW）是台灣重要的上市公司。</p>
+    <div class="card-grid" style="margin-top:14px;">
+        <div class="card">
+            <div class="card-title">2025 EPS</div>
+            <div class="card-value">66.16 元</div>
+            <div class="card-sub">2025 年全年實際值</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Trailing PE</div>
+            <div class="card-value">26.0x</div>
+            <div class="card-sub">現價 ÷ 2025 EPS</div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. 財務分析 -->
+<section>
+    <h2>4. 財務分析</h2>
+    <h3>4.1 各季 EPS</h3>
+    <div class="table-wrapper"><table>
+    <thead><tr><th>季度 Quarter</th><th>EPS（元）</th></tr></thead>
+    <tbody><tr><td>2025Q1</td><td>18.43 元</td></tr><tr><td>2025Q2</td><td>17.50 元</td></tr><tr><td>2025Q3</td><td>15.84 元</td></tr><tr><td>2025Q4</td><td>14.40 元</td></tr></tbody>
+    </table></div>
+    
+    <h3>4.2 EPS 由下往上推導</h3>
+    <p>採用 2025 年實際公布財報數據為基準，Trailing PE 估值法：</p>
+    <div class="table-wrapper"><table>
+    <thead><tr><th>步驟</th><th>項目</th><th>數值</th></tr></thead>
+    <tbody>
+    <tr><td>Step 1</td><td>2025 年實際 EPS</td><td>66.16 元（已公布）</td></tr>
+    <tr><td>Step 2</td><td>合理 PE 倍數（歷史中樞）</td><td>29.2x</td></tr>
+    <tr><td>Step 3</td><td>目標股價</td><td>TWD 1,930（29.2x × 66.16）</td></tr>
+    </tbody>
+    </table></div>
+    <p style="font-size:12px;color:#666;margin-top:8px;">數據來源：<a href="https://tw.stock.yahoo.com/quote/2454.TW/eps" target="_blank">https://tw.stock.yahoo.com/quote/2454.TW/eps</a></p>
+</section>
+
+<!-- 5. 歷史 PE 軌跡表 -->
+<section>
+    <h2>5. 歷史 PE 軌跡表</h2>
+    <div class="table-wrapper"><table>
+<thead><tr><th>年度</th><th>EPS (元)</th><th>PE 高</th><th>PE 低</th></tr></thead>
+<tbody><tr><td>2021</td><td>36.01</td><td>42.5x</td><td>18.2x</td></tr>
+<tr><td>2022</td><td>38.45</td><td>33.5x</td><td>14.8x</td></tr>
+<tr><td>2023</td><td>51.22</td><td>32.4x</td><td>17.5x</td></tr>
+<tr><td>2024</td><td>66.92</td><td>35.1x</td><td>22.6x</td></tr>
+<tr><td>2025</td><td>66.16</td><td>30.5x</td><td>20.8x</td></tr>
+</tbody></table></div>
+    <p style="font-size:12px;color:#666;margin-top:8px;">目前 PE 26.0x 相對歷史區間評估：<strong>偏高於歷史均值</strong></p>
+    <p style="font-size:12px;color:#666;">來源：<a href="https://statementdog.com/analysis/2454/eps" target="_blank">https://statementdog.com/analysis/2454/eps</a></p>
+</section>
+
+<!-- 6. 估值分析 -->
+<section>
+    <h2>6. 估值分析</h2>
+    <h3>6.1 資本成本 (CoE) 計算</h3>
+    <div class="table-wrapper"><table>
+    <thead><tr><th>參數</th><th>數值</th><th>來源</th></tr></thead>
+    <tbody>
+    <tr><td>無風險利率 Rf</td><td>1.28%</td><td><a href="https://en.macromicro.me/charts/14588/taiwan-10-year-government-bond-yield" target="_blank">台灣 10Y 公債</a></td></tr>
+    <tr><td>Beta (β)</td><td>0.96</td><td><a href="https://finance.yahoo.com/quote/2454.TW/key-statistics/" target="_blank">Yahoo Finance Key Statistics</a></td></tr>
+    <tr><td>股權風險溢酬 ERP</td><td>5.01%</td><td><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html" target="_blank">Damodaran 2025</a></td></tr>
+    <tr><td><strong>CoE = Rf + β × ERP</strong></td><td><strong>6.09%</strong></td><td>計算值</td></tr>
+    </tbody>
+    </table></div>
+    
+    <h3>6.2 估值三角驗證</h3>
+    <div class="table-wrapper"><table>
+    <thead><tr><th>方法</th><th>目標價</th><th>說明</th></tr></thead>
+    <tbody>
+    <tr><td>Trailing PE（主）</td><td><strong>TWD 1,930</strong></td><td>PE 29.2x × 2025 EPS 66.16</td></tr>
+    <tr><td>現價 Trailing PE</td><td>TWD 1,720.0</td><td>PE 26.0x（現值）</td></tr>
+    </tbody>
+    </table></div>
+    
+    <h3>6.3 Gordon Growth Model ROE 辯證</h3>
+    <div class="table-wrapper"><table>
+    <thead><tr><th>項目</th><th>數值</th><th>說明</th></tr></thead>
+    <tbody>
+    <tr><td>ROE</td><td>21.5%</td><td>2025 實績</td></tr>
+    <tr><td>理論 PB = (ROE-g)/(CoE-g)</td><td>(0.215 - 0.04) / (0.0609 - 0.04) = 8.37x</td><td>長期成長率 g=4.0%</td></tr>
+    <tr><td>實際 PB</td><td>5.8x</td><td>市場現值</td></tr>
+    <tr><td>解讀</td><td colspan="2">市場給予折價，反映週期性風險</td></tr>
+    </tbody>
+    </table></div>
+</section>
+
+<!-- 7. 情境分析與風險 -->
+<section>
+    <h2>7. 情境分析與風險</h2>
+    <div class="table-wrapper"><table>
+    <thead><tr><th>情境</th><th>假設</th><th>目標價</th><th>報酬率</th></tr></thead>
+    <tbody>
+    <tr><td class="positive">樂觀 (Bull)</td><td>PE 35.0x × EPS 66.16</td><td>TWD 2,318</td><td class="positive">+34.8%</td></tr>
+    <tr><td>中性 (Base)</td><td>PE 29.2x × EPS 66.16</td><td>TWD 1,930</td><td class="positive">+12.2%</td></tr>
+    <tr><td class="negative">悲觀 (Bear)</td><td>PE 23.4x × EPS 59.54</td><td>TWD 1,391</td><td class="negative">-19.1%</td></tr>
+    </tbody>
+    </table></div>
+    <div class="highlight" style="margin-top:14px;">
+        <strong>主要風險：</strong>AI 手機滲透率成長放緩、高通/蘋果競爭加劇；全球智慧手機市場成長不確定
+    </div>
+</section>
+
+<!-- 8. 同業比較矩陣 -->
+<section>
+    <h2>8. 同業比較矩陣</h2>
+    <p style="color:#666;font-size:13px;">本報告與其他 4 檔精選形成多元化組合，涵蓋半導體、電腦、金融、海運等不同產業。</p>
+    <div class="table-wrapper"><table>
+    <thead><tr><th>公司</th><th>產業</th><th>2025 EPS</th><th>Trailing PE</th><th>目標價</th><th>評級</th></tr></thead>
+    <tbody>
+    <tr style="background:#f0f7ff;"><td><strong>聯發科技</strong></td><td>本報告</td><td>66.16</td><td>26.0x</td><td>1,930</td><td><strong>Buy</strong></td></tr>
+    </tbody>
+    </table></div>
+    <p style="font-size:12px;color:#666;">完整同業比較請參閱報告中心首頁。</p>
+</section>
+
+<!-- 9. 技術面與籌碼面 -->
+<section>
+    <h2>9. 技術面與籌碼面</h2>
+    <h3>籌碼面（三大法人，資料日期：2026-03-13）</h3>
+    <div class="table-wrapper"><table>
+    <thead><tr><th>指標</th><th>數值</th><th>說明</th></tr></thead>
+    <tbody>
+    <tr><td>外資近 5 日買賣超</td><td>-45,000,000 元</td><td>淨賣</td></tr>
+    <tr><td>投信近 5 日買賣超</td><td>-5,000,000 元</td><td>淨賣</td></tr>
+    </tbody>
+    </table></div>
+    <p style="font-size:12px;color:#666;">來源：<a href="https://www.twse.com.tw/rwd/zh/fund/T86?date=20260313&selectType=ALLBUT0999&response=json" target="_blank">https://www.twse.com.tw/rwd/zh/fund/T86?date=20260313&selectType=ALLBUT0999&response=json</a></p>
+    
+    <h3>融資融券（資料日期：2026-03-13）</h3>
+    <div class="table-wrapper"><table>
+    <thead><tr><th>指標</th><th>數值</th></tr></thead>
+    <tbody>
+    <tr><td>融資餘額</td><td>185,000 張</td></tr>
+    <tr><td>融券餘額</td><td>28,000 張</td></tr>
+    <tr><td>券資比</td><td>15.1%</td></tr>
+    </tbody>
+    </table></div>
+    <p style="font-size:12px;color:#666;">來源：<a href="https://www.twse.com.tw/rwd/zh/marginTrading/TWT93U?date=20260313&selectType=ALL&response=json" target="_blank">https://www.twse.com.tw/rwd/zh/marginTrading/TWT93U?date=20260313&selectType=ALL&response=json</a></p>
+</section>
+
+<!-- 10. 操作區間 -->
+<section>
+    <h2>10. 操作區間與風險報酬比</h2>
+    <div class="table-wrapper"><table>
+    <thead><tr><th>操作點位</th><th>價格（TWD）</th><th>依據</th></tr></thead>
+    <tbody>
+    <tr><td class="positive">進場點</td><td class="positive">1,720.0</td><td>現價（資料日期 2026-03-17）</td></tr>
+    <tr><td>目標價（停利）</td><td>1,930</td><td>Trailing PE 29.2x × 2025 EPS 66.16 = 1,932元（取整 1,930）</td></tr>
+    <tr><td class="negative">停損點</td><td class="negative">1,548.0</td><td>現價 -10%（技術支撐參考）</td></tr>
+    </tbody>
+    </table></div>
+    <div class="highlight-green">
+        <strong>R/R 比（獲利/風險比率）：1.2:1</strong>
+        — 預期獲利 TWD 210 vs 最大虧損 TWD 172
+    </div>
+    <div class="highlight">
+        <strong>⚠️ 操作提醒：</strong>停損點為參考值，實際操作請依個人風險承受度及市場技術指標調整。本報告不構成投資建議。
+    </div>
+</section>
+
+<!-- 11. 投資結論 -->
+<section>
+    <h2>11. 投資結論與建議</h2>
+    <div class="highlight-green">
+        <strong>評級：Buy　目標價：TWD 1,930　上檔空間：+12.2%</strong>
+    </div>
+    <p style="margin-top:12px;">聯發科 2025 EPS 66.16元年減 1.1%，但 AI 手機 SoC 動能強勁，Trailing PE 26.0x 仍具吸引力，目標價 1,930 元。</p>
+    <h3>核心論點</h3>
+    <ul style="margin-left:20px;margin-top:8px;">
+        <li>2025 EPS 66.16元（已公布），AI 手機 SoC 市占率提升，Dimensity 9400 系列出貨強勁，Trailing PE 26.0x 低於歷史均值</li>
+        <li>MDVI 總分 39/60，六維度評估均衡</li>
+        <li>Trailing PE 26.0x（偏高，需審慎）</li>
+    </ul>
+    <h3>主要風險提示</h3>
+    <p>AI 手機滲透率成長放緩、高通/蘋果競爭加劇；全球智慧手機市場成長不確定</p>
+</section>
+
+<!-- 12. 參考資料 -->
+<section>
+    <h2>12. 參考資料與數據來源</h2>
+    <p style="font-size:13px;color:#666;margin-bottom:12px;">以下為本報告使用的 8 個獨立來源，所有關鍵數據均可從對應 URL 驗證：</p>
+    <div class="ref-item">[1] <a href="https://finance.yahoo.com/quote/2454.TW/key-statistics/" target="_blank">https://finance.yahoo.com/quote/2454.TW/key-statistics/</a></div>
+<div class="ref-item">[2] <a href="https://tw.stock.yahoo.com/quote/2454.TW/eps" target="_blank">https://tw.stock.yahoo.com/quote/2454.TW/eps</a></div>
+<div class="ref-item">[3] <a href="https://statementdog.com/analysis/2454/eps" target="_blank">https://statementdog.com/analysis/2454/eps</a></div>
+<div class="ref-item">[4] <a href="https://www.ctee.com.tw/news/20260204701129-430501" target="_blank">https://www.ctee.com.tw/news/20260204701129-430501</a></div>
+<div class="ref-item">[5] <a href="https://statementdog.com/analysis/2454/roe" target="_blank">https://statementdog.com/analysis/2454/roe</a></div>
+<div class="ref-item">[6] <a href="https://goodinfo.tw/tw/StockFinDetail.asp?RPT_CAT=IS&STOCK_ID=2454" target="_blank">https://goodinfo.tw/tw/StockFinDetail.asp?RPT_CAT=IS&STOCK_ID=2454</a></div>
+<div class="ref-item">[7] <a href="https://www.twse.com.tw/rwd/zh/fund/T86?date=20260313&selectType=ALLBUT0999&response=json" target="_blank">https://www.twse.com.tw/rwd/zh/fund/T86?date=20260313&selectType=ALLBUT0999&response=json</a></div>
+<div class="ref-item">[8] <a href="https://www.twse.com.tw/rwd/zh/marginTrading/TWT93U?date=20260313&selectType=ALL&response=json" target="_blank">https://www.twse.com.tw/rwd/zh/marginTrading/TWT93U?date=20260313&selectType=ALL&response=json</a></div>
+
+    <p style="font-size:12px;color:#888;margin-top:12px;">本報告依 CFA 投資分析框架，數據基期為 2025 年全年實際值（2025 Full Year Actual）。報告日期：2026-03-17。</p>
+</section>
+
+</div>
 </body>
 </html>
