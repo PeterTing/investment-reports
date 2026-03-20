@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>6857 アドバンテスト 深度投資分析報告 | 2026-03-20</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    line-height: 1.7; color: #1a1a2e; background: #f8f9fa; font-size: 16px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.6rem; color: #0f3460; border-bottom: 3px solid #e94560; padding-bottom: 8px; margin: 24px 0 16px; }
+h2 { font-size: 1.3rem; color: #16213e; border-left: 4px solid #e94560; padding-left: 12px; margin: 28px 0 14px; }
+h3 { font-size: 1.1rem; color: #0f3460; margin: 20px 0 10px; }
+.header-box {
+    background: linear-gradient(135deg, #0f3460, #16213e); color: white;
+    padding: 24px; border-radius: 12px; margin-bottom: 24px;
+}
+.header-box h1 { color: white; border-bottom-color: #e94560; font-size: 1.5rem; }
+.rating-badge {
+    display: inline-block; padding: 6px 18px; border-radius: 20px;
+    font-weight: bold; font-size: 1.1rem; color: #fff; background: #2da44e;
+}
+.market-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.85rem; font-weight: 600; color: white; margin-left: 8px;
+    background: #ef4444;
+}
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 16px 0;
+}
+.info-card { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; }
+.info-card .label { font-size: 0.85rem; opacity: 0.8; }
+.info-card .value { font-size: 1.3rem; font-weight: bold; }
+.card {
+    background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px;
+    border: 1px solid #e0e0e0; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+th { background: #0f3460; color: white; padding: 10px 8px; text-align: left; white-space: nowrap; }
+td { padding: 8px; border-bottom: 1px solid #e0e0e0; }
+tr:nth-child(even) { background: #f5f5f5; }
+tr:hover { background: #e8eaf6; }
+.highlight { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.warning { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.action-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 14px 0;
+}
+.action-item { text-align: center; padding: 14px; border-radius: 8px; background: #f5f5f5; }
+.action-item .label { font-size: 0.82rem; color: #666; }
+.action-item .value { font-size: 1.3rem; font-weight: 700; margin-top: 4px; }
+.source { font-size: 0.85rem; color: #666; margin: 6px 0; font-style: italic; }
+.sources ol { padding-left: 20px; font-size: 0.82rem; }
+.sources li { margin-bottom: 4px; word-break: break-all; }
+.sources a { color: #1565c0; }
+.toc { background: #f0f4f8; padding: 16px 20px; border-radius: 10px; margin-bottom: 20px; }
+.toc a { color: #0f3460; text-decoration: none; display: block; padding: 3px 0; font-size: 0.92rem; }
+.toc a:hover { color: #e94560; }
+.footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem; border-top: 1px solid #e0e0e0; margin-top: 24px; }
+@media (max-width: 640px) {
+    .header-box { padding: 16px; }
+    .header-box h1 { font-size: 1.25rem; }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .action-grid { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 0.82rem; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.15rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header-box">
+    <h1>6857 アドバンテスト <span style="font-weight:400;font-size:0.9rem;">Advantest Corporation</span>
+        <span class="market-badge">🇯🇵 日股</span>
+    </h1>
+    <p style="color:#94a3b8;font-size:0.9rem;margin:4px 0;">CFA 深度研究報告 | 2026-03-20 | MDVI v3</p>
+    <div style="margin:12px 0;"><span class="rating-badge">Buy</span></div>
+    <div class="info-grid">
+        <div class="info-card"><div class="label">收盤價</div><div class="value">JPY 25130.0</div></div>
+        <div class="info-card"><div class="label">目標價</div><div class="value">JPY 29754</div></div>
+        <div class="info-card"><div class="label">潛在報酬</div><div class="value" style="color:#00e676;">+18.4%</div></div>
+        <div class="info-card"><div class="label">MDVI 總分</div><div class="value">45/60</div></div>
+        <div class="info-card"><div class="label">R/R Ratio</div><div class="value">1.8:1</div></div>
+    </div>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <strong>📋 目錄</strong>
+    <a href="#sec1">1. 執行摘要</a>
+    <a href="#sec2">2. MDVI v3 六維度評分</a>
+    <a href="#sec3">3. 公司概況與事業群拆解</a>
+    <a href="#sec4">4. 財務分析與 EPS 推導</a>
+    <a href="#sec5">5. 歷史 PE 軌跡表</a>
+    <a href="#sec6">6. 估值分析（三角交叉驗證）</a>
+    <a href="#sec7">7. DCF 模型與敏感度分析</a>
+    <a href="#sec8">8. Gordon Growth Model ROE 辯證</a>
+    <a href="#sec9">9. 產業分析與同業比較</a>
+    <a href="#sec10">10. 總經與政策環境</a>
+    <a href="#sec11">11. 技術面分析</a>
+    <a href="#sec12">12. 籌碼面分析</a>
+    <a href="#sec13">13. 消息面與催化劑</a>
+    <a href="#sec14">14. 風險評估與情境模擬</a>
+    <a href="#sec15">15. 投資建議與操作區間</a>
+    <a href="#sec16">16. 參考資料</a>
+</div>
+
+<!-- 1. Executive Summary -->
+<div class="card" id="sec1">
+    <h1>1. 執行摘要</h1>
+    <div class="highlight">全球半導體測試設備龍頭，AI 晶片測試需求爆發。FY2025 營收 ¥1.07T（+25.5%），ROE 49.3%，營業利益率 41.5%。高 PE 反映高成長。</div>
+    <p>Advantest Corporation（6857）為全球最大半導體自動測試設備（ATE）供應商，市佔率約 55%。AI 加速器（GPU、TPU）與 HBM 測試需求爆發是核心成長驅動力。FY2025 修正後 guidance：營收 ¥1.07T、營業利益 ¥454B、EPS ¥452。TTM EPS ¥355（含前期低基期）。ROE 49.3% 為全日股最高之一。主要客戶 NVIDIA、AMD、TSMC 持續擴大 AI 晶片投資，產能擴張計劃（2026 年底達 5,000 台系統，2 年內達 7,500 台）顯示需求能見度高。估值偏高（PE 67.6x），但 PEG 約 1.3（成長率 50%+）仍在合理範圍。適合對 AI 產業有高度信心的投資人。</p>
+</div>
+
+<!-- 2. MDVI Scores -->
+<div class="card" id="sec2">
+    <h1>2. MDVI v3 六維度評分</h1>
+    <div style="text-align:center;margin:12px 0;"><span style="font-size:2.5rem;font-weight:800;color:#0f3460;">45</span><span style="font-size:1.2rem;color:#666;"> / 60</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>維度</th><th>評分 (0-10)</th></tr>
+        <tr><td style="font-weight:500;">基本面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:90.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">9</span></div></td></tr>
+<tr><td style="font-weight:500;">產業展望</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:100.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">10</span></div></td></tr>
+<tr><td style="font-weight:500;">總經</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:50.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">5</span></div></td></tr>
+<tr><td style="font-weight:500;">技術面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">籌碼面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">消息面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:90.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">9</span></div></td></tr>
+
+    </table></div>
+    
+</div>
+
+<!-- 3. Company Overview -->
+<div class="card" id="sec3">
+    <h1>3. 公司概況與事業群拆解</h1>
+    <p>Advantest 為全球半導體自動測試設備（ATE）龍頭，市佔率約 55%。核心客戶包括 NVIDIA、AMD、TSMC 等 AI 晶片大廠。受惠 AI 加速器（GPU、HBM）測試需求爆發，FY2025 營收突破 ¥1T 大關。公司正快速擴產以應對需求。</p>
+    <h2>事業群營收拆解</h2><div class="table-wrap"><table><tr><th>事業群</th><th>營收佔比</th><th>成長驅動</th></tr><tr><td>半導體測試設備（SoC Tester）</td><td>60%</td><td>AI GPU/加速器測試需求爆發</td></tr><tr><td>記憶體測試設備</td><td>25%</td><td>HBM（高頻寬記憶體）測試需求</td></tr><tr><td>其他（量測/系統）</td><td>15%</td><td>Automotive、IoT 測試</td></tr></table></div>
+    
+    
+</div>
+
+<!-- 4. Financial Analysis -->
+<div class="card" id="sec4">
+    <h1>4. 財務分析與 EPS 推導</h1>
+
+    <h2>4.1 財務健全度</h2>
+    <div style="margin:8px 0;"><span style="display:inline-block;padding:4px 14px;border-radius:12px;font-weight:600;color:white;background:#00c853;">健康</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th><th>標準</th></tr>
+        <tr><td>D/E Ratio</td><td>13.5</td><td>&lt; 1.0 佳</td></tr>
+        <tr><td>流動比率</td><td>2.34</td><td>&gt; 1.5 佳</td></tr>
+        <tr><td>FCF 趨勢</td><td>高速成長</td><td>穩定正成長</td></tr>
+        <tr><td>利息保障倍數</td><td>充裕</td><td>&gt; 5x 佳</td></tr>
+    </table></div>
+
+    <h2>4.2 季度財務追蹤</h2>
+    <table><tr><th>季度</th><th>EPS (¥)</th><th>預估 (¥)</th><th>驚喜 %</th></tr><tr><td>FY25Q1</td><td>54.46</td><td>77.96</td><td>-30.1%</td></tr><tr><td>FY25Q2</td><td>123.14</td><td>94.31</td><td>+30.6%</td></tr><tr><td>FY25Q3</td><td>109.03</td><td>107.21</td><td>+1.7%</td></tr><tr><td>FY25Q4</td><td>108.41</td><td>67.19</td><td>+61.3%</td></tr></table>
+
+    <h2>4.3 獲利能力與 EPS 成長路徑</h2>
+    <p>D/E: 13.5、流動比: 2.34、FY2025 FCF ¥251B</p>
+
+    <h2>4.4 EPS 由下往上推導</h2>
+    <h4>Step 1: 營收拆解</h4><p>FY2025（修正後預估）營收 ¥1.07T，YoY +25.5%。SoC Tester 為主要成長引擎。</p>
+<div class="table-wrap"><table><tr><th>事業群</th><th>營收</th><th>YoY</th></tr><tr><td>SoC Tester</td><td>¥642B</td><td>+30%</td></tr><tr><td>Memory Tester</td><td>¥268B</td><td>+20%</td></tr><tr><td>Others</td><td>¥160B</td><td>+15%</td></tr></table></div>
+<h4>Step 2: 獲利率分析</h4><p>FY2025 毛利率 62.4%，營業利益率 41.5%。AI 高端測試設備利潤率極高。</p>
+<h4>Step 3: EPS 推導</h4><div class="table-wrap"><table><tr><th>項目</th><th>數值</th></tr><tr><td>revenue_2025</td><td>¥1,070B</td></tr><tr><td>gross_profit_2025</td><td>¥668B</td></tr><tr><td>operating_income_2025</td><td>¥454B</td></tr><tr><td>tax_rate</td><td>28%</td></tr><tr><td>net_income_2025</td><td>¥329B</td></tr><tr><td>shares_outstanding</td><td>726M</td></tr><tr><td>eps_calculated</td><td>¥453</td></tr><tr><td>eps_actual_reported</td><td>¥354.9 (TTM，含前期低基期)</td></tr><tr><td>variance</td><td>FY2025 全年 EPS 預估 ¥452（修正後 guidance），TTM 較低因含 FY2024 低基期季度</td></tr></table></div>
+</div>
+
+<!-- 5. PE History -->
+<div class="card" id="sec5">
+    <h1>5. 歷史 PE 軌跡表</h1>
+    <div class="table-wrap"><table>
+        <tr><th>年度</th><th>EPS</th><th>最高價</th><th>最低價</th><th>PE 高</th><th>PE 低</th></tr>
+        <tr>
+            <td>2021</td><td>65</td>
+            <td>2771</td><td>1815</td>
+            <td>42.6</td><td>27.9</td>
+        </tr><tr>
+            <td>2022</td><td>85</td>
+            <td>2742</td><td>1617</td>
+            <td>32.3</td><td>19.0</td>
+        </tr><tr>
+            <td>2023</td><td>100</td>
+            <td>5515</td><td>2007</td>
+            <td>55.2</td><td>20.1</td>
+        </tr><tr>
+            <td>2024</td><td>160</td>
+            <td>9957</td><td>4428</td>
+            <td>62.2</td><td>27.7</td>
+        </tr><tr>
+            <td>2025</td><td>355</td>
+            <td>23675</td><td>4694</td>
+            <td>66.7</td><td>13.2</td>
+        </tr>
+    </table></div>
+    <p style="margin-top:10px;">5 年平均 PE：<strong>38.7</strong> | 目前 PE：<strong>67.6</strong></p>
+</div>
+
+<!-- 6. Valuation -->
+<div class="card" id="sec6">
+    <h1>6. 估值分析（三角交叉驗證）</h1>
+
+    <h2>6.1 外部因素 → 公式參數對照表</h2>
+    <div class="table-wrap"><table>
+        <tr><th>分析面向</th><th>具體項目</th><th>影響參數</th><th>設定值</th><th>設定依據</th></tr>
+        
+    </table></div>
+
+    <h2>6.2 Cost of Equity (CoE)</h2>
+    <div class="table-wrap"><table>
+        <tr><th>參數</th><th>數值</th><th>來源</th></tr>
+        <tr><td>Rf (無風險利率)</td><td>2.27%</td><td>日本 10Y 國債殖利率</td></tr>
+        <tr><td>Beta</td><td>0.86</td><td>Yahoo Finance 5Y Monthly Beta</td></tr>
+        <tr><td>US Base ERP</td><td>4.23%</td><td rowspan="2">Damodaran US Base ERP Jan 2026</td></tr>
+        <tr><td>Country Risk Premium</td><td>0.58%</td></tr>
+        <tr><td>Total ERP</td><td>4.81%</td><td>計算值</td></tr>
+        <tr><td><strong>CoE</strong></td><td><strong>6.4%</strong></td><td>Rf + Beta × Total ERP</td></tr>
+    </table></div>
+
+    <h2>6.3 合理 PE 推導（PE法）</h2>
+    <p>CoE = 6.4%。EPS 成長率 120%+（FY2024→FY2025），PEG = PE 67.6 / 成長率 120 = 0.56（極低，顯示被低估）。但高成長不可能永續，取未來 3 年 CAGR 30-40% 更合理。PEG = 80 / 40 = 2.0（合理範圍上限）。目標 PE 80x。</p>
+    <div class="highlight">
+        合理 PE = <strong>80x</strong> |
+        Forward EPS = <strong>354.9</strong> |
+        目標價 = <strong>JPY 29754</strong>
+    </div>
+
+    <h2>6.4 交叉驗證矩陣</h2>
+    <div class="table-wrap"><table>
+        <tr><th>估值方法</th><th>隱含股價</th><th>vs PE 法偏差</th><th>狀態</th></tr>
+        <tr><td>Forward PE 法（主要）</td><td><strong>28392</strong></td><td>—</td><td>主要估值</td></tr>
+        <tr><td>EV/EBITDA 法</td><td>26000</td><td>-8.4%</td><td>驗證層</td></tr>
+        <tr><td>DCF 法</td><td>25000</td><td>-11.9%</td><td>高成長 DCF，FCF ¥251B 基礎，5 年 CAGR 20%</td></tr>
+    </table></div>
+</div>
+
+<!-- 7. DCF Model -->
+<div class="card" id="sec7">
+    <h1>7. DCF 模型與敏感度分析</h1>
+    <p>FCF ¥251B 基礎，假設 5 年 CAGR 20%（AI 需求驅動），WACC 6.0%，終值成長率 3.0%。DCF 每股價值約 ¥25,000。</p>
+    <h2>敏感度分析表</h2><table><tr><th>PE \ EPS</th><th>¥300</th><th>¥355</th><th>¥452</th></tr><tr><td>60x</td><td>¥18,000</td><td>¥21,300</td><td>¥27,120</td></tr><tr><td>80x</td><td>¥24,000</td><td><b>¥28,400</b></td><td>¥36,160</td></tr><tr><td>90x</td><td>¥27,000</td><td>¥31,950</td><td>¥40,680</td></tr></table>
+</div>
+
+<!-- 8. Gordon Growth Model -->
+<div class="card" id="sec8">
+    <h1>8. Gordon Growth Model ROE 辯證</h1>
+    <p>ROE = 49.3%，理論 PB = 13.6，實際 PB = 25.8，溢折價 = +89.7%</p><p>市場給予 89.7% 溢價，反映 AI 測試需求超級循環的成長期望。溢價幅度偏高，需持續高成長驗證。</p>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th></tr>
+        <tr><td>ROE</td><td>49.3%</td></tr>
+        <tr><td>理論 PB (Gordon)</td><td>13.6</td></tr>
+        <tr><td>實際 PB</td><td>25.8</td></tr>
+        <tr><td>解讀</td><td>市場給予 89.7% 溢價，反映 AI 測試需求超級循環的成長期望。溢價幅度偏高，需持續高成長驗證。</td></tr>
+    </table></div>
+</div>
+
+<!-- 9. Industry -->
+<div class="card" id="sec9">
+    <h1>9. 產業分析與同業比較</h1>
+    <p>全球 ATE 市場規模約 $8B（2025），預計 2026-2030 CAGR 12-15%（AI 驅動）。Advantest 與 Teradyne 雙寡頭壟斷市場。AI 晶片（GPU、TPU、HBM）對測試複雜度和精度的要求遠高於傳統晶片，推升 ASP 和利潤率。NVIDIA B300/R100 等下一代 GPU 將帶動新一輪測試需求。</p>
+    <h2>同業比較矩陣</h2><div class="table-wrap"><table><tr><th>指標</th><th>Advantest (6857)</th><th>Teradyne (TER)</th><th>ASML</th><th>Tokyo Electron (8035)</th></tr><tr><td>PE</td><td>67.6x</td><td>35.0x</td><td>28.0x</td><td>22.0x</td></tr><tr><td>ROE</td><td>49.3%</td><td>25.0%</td><td>55.0%</td><td>25.0%</td></tr><tr><td>營業利益率</td><td>41.5%</td><td>22.0%</td><td>35.0%</td><td>28.0%</td></tr><tr><td>營收成長</td><td>+25.5%</td><td>+8.0%</td><td>+12.0%</td><td>+15.0%</td></tr></table></div>
+</div>
+
+<!-- 10. Macro -->
+<div class="card" id="sec10">
+    <h1>10. 總經與政策環境</h1>
+    <p>AI 資本支出為全球科技產業核心驅動力。NVIDIA、Google、Microsoft、Meta 持續擴大 AI 基建投資，直接帶動半導體測試需求。中東衝突與 VIX 上升短期壓抑科技股估值，但 AI 結構性需求不受影響。日圓走弱對 Advantest 海外營收有利。</p>
+</div>
+
+<!-- 11. Technical -->
+<div class="card" id="sec11">
+    <h1>11. 技術面分析</h1>
+    <div class="table-wrap"><table><tr><th>指標</th><th>數值</th><th>乖離率</th><th>解讀</th></tr><tr><td>MA_20</td><td>25287</td><td>-5.2%</td><td>低於 20MA，短期回調</td></tr><tr><td>MA_60</td><td>23914</td><td>+0.3%</td><td>貼近 60MA 支撐</td></tr><tr><td>RSI(14)</td><td>39.3</td><td>—</td><td>中性偏弱，尚未超賣</td></tr><tr><td>KD</td><td>K=56.3 / D=56.3</td><td>—</td><td>KD 中性區間</td></tr></table></div>
+</div>
+
+<!-- 12. Chip -->
+<div class="card" id="sec12">
+    <h1>12. 籌碼面分析</h1>
+    <div class="table-wrap"><table><tr><th>籌碼指標</th><th>數值</th></tr><tr><td>外國人持股比例</td><td>數據不可得</td></tr></table></div><p>數據不可得，不做判斷</p>
+</div>
+
+<!-- 13. Catalyst -->
+<div class="card" id="sec13">
+    <h1>13. 消息面與催化劑</h1>
+    <h4>正面催化劑</h4><ul>
+<li><strong>FY2026 全年財報（2026/5 月）</strong> (2 個月內) — 若 FY2025 全年 EPS 達 ¥452+ 將驗證成長故事</li>
+<li><strong>NVIDIA B300/R100 新 GPU 帶動測試需求</strong> (2026 H2) — 下一代 AI 晶片測試設備訂單</li>
+<li><strong>HBM4 量產測試需求</strong> (2026-2027) — 記憶體測試營收爆發</li>
+</ul>
+<h4>負面催化劑</h4><ul>
+<li><strong>AI 資本支出放緩</strong> (不確定) — 測試設備訂單下滑</li>
+<li><strong>競爭對手泰瑞達搶單</strong> (持續) — 市佔率壓力</li>
+<li><strong>半導體景氣下行</strong> (2027 風險) — 整體產業需求下滑</li>
+</ul>
+</div>
+
+<!-- 14. Risk & Scenarios -->
+<div class="card" id="sec14">
+    <h1>14. 風險評估與情境模擬</h1>
+    <div class="table-wrap"><table><tr><th>風險</th><th>機率</th><th>影響</th><th>應對</th></tr><tr><td>AI 景氣反轉</td><td>medium</td><td>high</td><td>監控 NVIDIA/AMD 資本支出指引</td></tr><tr><td>高估值風險</td><td>high</td><td>high</td><td>嚴格停損紀律</td></tr><tr><td>匯率風險</td><td>medium</td><td>medium</td><td>海外營收佔比高，日圓走弱有利</td></tr></table></div>
+    <h2>Bull / Base / Bear 情境</h2>
+    <div class="table-wrap"><table>
+        <tr><th>情境</th><th>EPS</th><th>PE</th><th>目標價</th><th>觸發條件</th></tr>
+        <tr>
+            <td><strong>Bull 🐂</strong></td><td>500</td>
+            <td>90</td><td>45000</td>
+            <td>AI 資本支出超預期</td>
+        </tr><tr>
+            <td><strong>Base 📊</strong></td><td>355</td>
+            <td>80</td><td>28400</td>
+            <td>AI 需求穩定成長</td>
+        </tr><tr>
+            <td><strong>Bear 🐻</strong></td><td>250</td>
+            <td>40</td><td>10000</td>
+            <td>半導體景氣下行</td>
+        </tr>
+    </table></div>
+    
+</div>
+
+<!-- 15. Investment Recommendation -->
+<div class="card" id="sec15">
+    <h1>15. 投資建議與操作區間</h1>
+    <div style="text-align:center;margin:12px 0;">
+        <span class="rating-badge" style="font-size:1.2rem;padding:10px 28px;">Buy</span>
+        <p style="margin-top:10px;color:#666;">AI 半導體測試龍頭，回檔至 60MA 附近可佈局</p>
+    </div>
+    <div class="action-grid">
+        <div class="action-item"><div class="label">進場點</div><div class="value" style="color:#1565c0;">23000</div></div>
+        <div class="action-item"><div class="label">目標價</div><div class="value" style="color:#00c853;">29754</div></div>
+        <div class="action-item"><div class="label">停損點</div><div class="value" style="color:#ff1744;">20000</div></div>
+        <div class="action-item"><div class="label">停利點</div><div class="value" style="color:#00c853;">28392</div></div>
+    </div>
+    <p style="text-align:center;font-size:0.95rem;margin-top:10px;">
+        風險報酬比 R/R = <strong>1.8:1</strong>
+    </p>
+    <p>建議 ¥23,000 以下分批佈局（60MA 支撐附近），目標價 ¥28,392（Trailing PE 80x），停損 ¥20,000。R/R = (28392-23000)/(23000-20000) = 1.8:1。高成長高風險標的，適合承受波動的投資人。嚴格停損紀律。</p>
+</div>
+
+<!-- 16. Sources -->
+<div class="card sources" id="sec16">
+    <h1>16. 參考資料</h1>
+    <ol><li><a href="https://finance.yahoo.com/quote/6857.T/key-statistics/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/6857.T/key-statistics/</a></li>
+<li><a href="https://www.advantest.com/en/investors/financial-highlights/forecast/" target="_blank" rel="noopener">https://www.advantest.com/en/investors/financial-highlights/forecast/</a></li>
+<li><a href="https://tradingeconomics.com/6857:jp:eps" target="_blank" rel="noopener">https://tradingeconomics.com/6857:jp:eps</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html</a></li>
+<li><a href="https://tradingeconomics.com/japan/government-bond-yield" target="_blank" rel="noopener">https://tradingeconomics.com/japan/government-bond-yield</a></li>
+<li><a href="https://simplywall.st/stocks/jp/semiconductors/tse-6857/advantest-shares/news/advantest-full-year-2025-earnings-revenues-beat-expectations" target="_blank" rel="noopener">https://simplywall.st/stocks/jp/semiconductors/tse-6857/advantest-shares/news/advantest-full-year-2025-earnings-revenues-beat-expectations</a></li>
+<li><a href="https://www.dividendjapan.com/p/advantest-shares-surge-earnings-buyback-ai-2025" target="_blank" rel="noopener">https://www.dividendjapan.com/p/advantest-shares-surge-earnings-buyback-ai-2025</a></li>
+<li><a href="https://stockanalysis.com/quote/tyo/6857/revenue/" target="_blank" rel="noopener">https://stockanalysis.com/quote/tyo/6857/revenue/</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html</a></li></ol>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>CFA 深度研究報告 | MDVI v3 | 2026-03-20 16:22 | ARTOGO Investment Research</p>
+    <p>⚠️ 本報告僅供研究參考，不構成投資建議。投資有風險，入市需謹慎。</p>
+    <p><a href="../../index.html" style="color:#1565c0;">← 返回首頁</a></p>
+</div>
+
+</div>
+</body>
+</html>
