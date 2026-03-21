@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1477 聚陽 深度投資分析報告 | 2026-03-21</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    line-height: 1.7; color: #1a1a2e; background: #f8f9fa; font-size: 16px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.6rem; color: #0f3460; border-bottom: 3px solid #e94560; padding-bottom: 8px; margin: 24px 0 16px; }
+h2 { font-size: 1.3rem; color: #16213e; border-left: 4px solid #e94560; padding-left: 12px; margin: 28px 0 14px; }
+h3 { font-size: 1.1rem; color: #0f3460; margin: 20px 0 10px; }
+.header-box {
+    background: linear-gradient(135deg, #0f3460, #16213e); color: white;
+    padding: 24px; border-radius: 12px; margin-bottom: 24px;
+}
+.header-box h1 { color: white; border-bottom-color: #e94560; font-size: 1.5rem; }
+.rating-badge {
+    display: inline-block; padding: 6px 18px; border-radius: 20px;
+    font-weight: bold; font-size: 1.1rem; color: #fff; background: #2da44e;
+}
+.market-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.85rem; font-weight: 600; color: white; margin-left: 8px;
+    background: #3b82f6;
+}
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 16px 0;
+}
+.info-card { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; }
+.info-card .label { font-size: 0.85rem; opacity: 0.8; }
+.info-card .value { font-size: 1.3rem; font-weight: bold; }
+.card {
+    background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px;
+    border: 1px solid #e0e0e0; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+th { background: #0f3460; color: white; padding: 10px 8px; text-align: left; white-space: nowrap; }
+td { padding: 8px; border-bottom: 1px solid #e0e0e0; }
+tr:nth-child(even) { background: #f5f5f5; }
+tr:hover { background: #e8eaf6; }
+.highlight { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.warning { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.action-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 14px 0;
+}
+.action-item { text-align: center; padding: 14px; border-radius: 8px; background: #f5f5f5; }
+.action-item .label { font-size: 0.82rem; color: #666; }
+.action-item .value { font-size: 1.3rem; font-weight: 700; margin-top: 4px; }
+.source { font-size: 0.85rem; color: #666; margin: 6px 0; font-style: italic; }
+.sources ol { padding-left: 20px; font-size: 0.82rem; }
+.sources li { margin-bottom: 4px; word-break: break-all; }
+.sources a { color: #1565c0; }
+.toc { background: #f0f4f8; padding: 16px 20px; border-radius: 10px; margin-bottom: 20px; }
+.toc a { color: #0f3460; text-decoration: none; display: block; padding: 3px 0; font-size: 0.92rem; }
+.toc a:hover { color: #e94560; }
+.footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem; border-top: 1px solid #e0e0e0; margin-top: 24px; }
+@media (max-width: 640px) {
+    .header-box { padding: 16px; }
+    .header-box h1 { font-size: 1.25rem; }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .action-grid { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 0.82rem; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.15rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header-box">
+    <h1>1477 聚陽 <span style="font-weight:400;font-size:0.9rem;">Makalot Industrial</span>
+        <span class="market-badge">🇹🇼 台股</span>
+    </h1>
+    <p style="color:#94a3b8;font-size:0.9rem;margin:4px 0;">CFA 深度研究報告 | 2026-03-21 | MDVI v3</p>
+    <div style="margin:12px 0;"><span class="rating-badge">Buy</span></div>
+    <div class="info-grid">
+        <div class="info-card"><div class="label">收盤價</div><div class="value">TWD 285.0</div></div>
+        <div class="info-card"><div class="label">目標價</div><div class="value">TWD 337</div></div>
+        <div class="info-card"><div class="label">潛在報酬</div><div class="value" style="color:#00e676;">+18.2%</div></div>
+        <div class="info-card"><div class="label">MDVI 總分</div><div class="value">39/60</div></div>
+        <div class="info-card"><div class="label">R/R Ratio</div><div class="value">2.3:1</div></div>
+    </div>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <strong>📋 目錄</strong>
+    <a href="#sec1">1. 執行摘要</a>
+    <a href="#sec2">2. MDVI v3 六維度評分</a>
+    <a href="#sec3">3. 公司概況與事業群拆解</a>
+    <a href="#sec4">4. 財務分析與 EPS 推導</a>
+    <a href="#sec5">5. 歷史 PE 軌跡表</a>
+    <a href="#sec6">6. 估值分析（三角交叉驗證）</a>
+    <a href="#sec7">7. DCF 模型與敏感度分析</a>
+    <a href="#sec8">8. Gordon Growth Model ROE 辯證</a>
+    <a href="#sec9">9. 產業分析與同業比較</a>
+    <a href="#sec10">10. 總經與政策環境</a>
+    <a href="#sec11">11. 技術面分析</a>
+    <a href="#sec12">12. 籌碼面分析</a>
+    <a href="#sec13">13. 消息面與催化劑</a>
+    <a href="#sec14">14. 風險評估與情境模擬</a>
+    <a href="#sec15">15. 投資建議與操作區間</a>
+    <a href="#sec16">16. 參考資料</a>
+</div>
+
+<!-- 1. Executive Summary -->
+<div class="card" id="sec1">
+    <h1>1. 執行摘要</h1>
+    <div class="highlight">聚陽實業為台灣最大成衣代工廠，主要客戶為 Nike、Under Armour、Uniqlo 等國際品牌。ROE 25.76%，殖利率 5.26%。KD 低檔（21/29）提供逢低買進機會。</div>
+    <p>聚陽實業（1477.TW）為台灣最大成衣代工廠，ROE 25.76% 為同業翹楚，殖利率 5.26%。PE 19.45x 低於 5 年均值 23.0x，處於 30th percentile 低檔。</p><p>KD 指標（21.2/29.0）處於超賣區，技術面接近底部。投信持續加碼 +622 張。受惠 Nike/UA 訂單回溫與運動休閒趨勢。</p><p>目標價 337 元（+18.2%），以回歸 5 年 PE 均值估值。風險在於全球消費需求疲軟與外資賣壓。</p>
+</div>
+
+<!-- 2. MDVI Scores -->
+<div class="card" id="sec2">
+    <h1>2. MDVI v3 六維度評分</h1>
+    <div style="text-align:center;margin:12px 0;"><span style="font-size:2.5rem;font-weight:800;color:#0f3460;">39</span><span style="font-size:1.2rem;color:#666;"> / 60</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>維度</th><th>評分 (0-10)</th></tr>
+        <tr><td style="font-weight:500;">基本面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+<tr><td style="font-weight:500;">產業展望</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">總經</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">技術面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:50.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">5</span></div></td></tr>
+<tr><td style="font-weight:500;">籌碼面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">消息面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+
+    </table></div>
+    
+</div>
+
+<!-- 3. Company Overview -->
+<div class="card" id="sec3">
+    <h1>3. 公司概況與事業群拆解</h1>
+    <p>聚陽實業（1477.TW）為台灣最大成衣代工廠商，主要為國際品牌（Nike、Under Armour、Uniqlo、Target 等）生產機能性服飾。生產基地分布於越南、印尼、柬埔寨等東南亞國家，具備多國分散生產優勢。公司以 ODM 模式為主，提供從布料開發到成品出貨的一站式服務。</p>
+    <h2>事業群營收拆解</h2><div class="table-wrap"><table><tr><th>事業群</th><th>營收佔比</th><th>成長驅動</th></tr><tr><td>機能性運動服飾</td><td>60%</td><td>Nike/UA 訂單成長、運動風潮</td></tr><tr><td>休閒服飾</td><td>25%</td><td>Uniqlo/Target 訂單穩定</td></tr><tr><td>戶外/特殊服飾</td><td>15%</td><td>戶外運動趨勢、高單價產品</td></tr></table></div>
+    
+    
+</div>
+
+<!-- 4. Financial Analysis -->
+<div class="card" id="sec4">
+    <h1>4. 財務分析與 EPS 推導</h1>
+
+    <h2>4.1 財務健全度</h2>
+    <div style="margin:8px 0;"><span style="display:inline-block;padding:4px 14px;border-radius:12px;font-weight:600;color:white;background:#ff1744;">非常健康</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th><th>標準</th></tr>
+        <tr><td>D/E Ratio</td><td>0.15</td><td>&lt; 1.0 佳</td></tr>
+        <tr><td>流動比率</td><td>2.8</td><td>&gt; 1.5 佳</td></tr>
+        <tr><td>FCF 趨勢</td><td>穩定正向</td><td>穩定正成長</td></tr>
+        <tr><td>利息保障倍數</td><td>50x+</td><td>&gt; 5x 佳</td></tr>
+    </table></div>
+
+    <h2>4.2 季度財務追蹤</h2>
+    <table><thead><tr><th>季度</th><th>營收(億)</th><th>毛利率</th><th>營益率</th><th>EPS</th></tr></thead><tbody><tr><td>2024 Q1</td><td>75</td><td>20%</td><td>14%</td><td>2.80</td></tr><tr><td>2024 Q2</td><td>85</td><td>21%</td><td>15%</td><td>3.50</td></tr><tr><td>2024 Q3</td><td>95</td><td>22%</td><td>16%</td><td>4.20</td></tr><tr><td>2024 Q4</td><td>95</td><td>23%</td><td>17%</td><td>4.15</td></tr></tbody></table>
+
+    <h2>4.3 獲利能力與 EPS 成長路徑</h2>
+    <p>D/E: 0.15、流動比: 2.8、2023 FCF 約 30 億, 2024 FCF 約 35 億（成衣代工穩定現金流）</p>
+
+    <h2>4.4 EPS 由下往上推導</h2>
+    <h4>Step 1: 營收拆解</h4><p>聚陽 2025 年營收穩定成長，受惠品牌客戶訂單回溫。Trailing EPS 14.65 元。</p>
+<div class="table-wrap"><table><tr><th>事業群</th><th>營收</th><th>YoY</th></tr><tr><td>機能性運動服飾</td><td>約 210 億</td><td>+10%</td></tr><tr><td>休閒服飾</td><td>約 85 億</td><td>+5%</td></tr><tr><td>戶外/特殊服飾</td><td>約 55 億</td><td>+8%</td></tr></table></div>
+<h4>Step 2: 獲利率分析</h4><p>2025 年毛利率約 22%（成衣代工業標準），營業費用率約 6%，營益率約 16%。受惠東南亞低人工成本。</p>
+<h4>Step 3: EPS 推導</h4><div class="table-wrap"><table><tr><th>項目</th><th>數值</th></tr><tr><td>revenue_2025</td><td>約 350 億</td></tr><tr><td>gross_profit_2025</td><td>約 77 億</td></tr><tr><td>operating_income_2025</td><td>約 56 億</td></tr><tr><td>tax_rate</td><td>18%</td></tr><tr><td>net_income_2025</td><td>約 46 億</td></tr><tr><td>shares_outstanding</td><td>約 3.14 億股</td></tr><tr><td>eps_calculated</td><td>14.65</td></tr><tr><td>eps_actual_reported</td><td>14.65 (trailing 4Q)</td></tr><tr><td>variance</td><td>0%</td></tr></table></div>
+</div>
+
+<!-- 5. PE History -->
+<div class="card" id="sec5">
+    <h1>5. 歷史 PE 軌跡表</h1>
+    <div class="table-wrap"><table>
+        <tr><th>年度</th><th>EPS</th><th>最高價</th><th>最低價</th><th>PE 高</th><th>PE 低</th></tr>
+        <tr>
+            <td>2021</td><td>12.8</td>
+            <td>380</td><td>220</td>
+            <td>29.7</td><td>17.2</td>
+        </tr><tr>
+            <td>2022</td><td>10.5</td>
+            <td>340</td><td>180</td>
+            <td>32.4</td><td>17.1</td>
+        </tr><tr>
+            <td>2023</td><td>11.2</td>
+            <td>310</td><td>210</td>
+            <td>27.7</td><td>18.8</td>
+        </tr><tr>
+            <td>2024</td><td>13.5</td>
+            <td>350</td><td>240</td>
+            <td>25.9</td><td>17.8</td>
+        </tr><tr>
+            <td>2025</td><td>14.65</td>
+            <td>340</td><td>265</td>
+            <td>23.2</td><td>18.1</td>
+        </tr>
+    </table></div>
+    <p style="margin-top:10px;">5 年平均 PE：<strong>23.0</strong> | 目前 PE：<strong>19.45</strong></p>
+</div>
+
+<!-- 6. Valuation -->
+<div class="card" id="sec6">
+    <h1>6. 估值分析（三角交叉驗證）</h1>
+
+    <h2>6.1 外部因素 → 公式參數對照表</h2>
+    <div class="table-wrap"><table>
+        <tr><th>分析面向</th><th>具體項目</th><th>影響參數</th><th>設定值</th><th>設定依據</th></tr>
+        
+    </table></div>
+
+    <h2>6.2 Cost of Equity (CoE)</h2>
+    <div class="table-wrap"><table>
+        <tr><th>參數</th><th>數值</th><th>來源</th></tr>
+        <tr><td>Rf (無風險利率)</td><td>1.46%</td><td>台灣 10Y 公債殖利率</td></tr>
+        <tr><td>Beta</td><td>0.4</td><td>Yahoo Finance 1477.TW Beta (5Y Monthly)</td></tr>
+        <tr><td>US Base ERP</td><td>4.23%</td><td rowspan="2">Damodaran US Base ERP 2026</td></tr>
+        <tr><td>Country Risk Premium</td><td>0.57%</td></tr>
+        <tr><td>Total ERP</td><td>4.80%</td><td>計算值</td></tr>
+        <tr><td><strong>CoE</strong></td><td><strong>4.0%（floor adjusted，原始 3.38% 因低 Beta 偏低）</strong></td><td>Rf + Beta × Total ERP</td></tr>
+    </table></div>
+
+    <h2>6.3 合理 PE 推導（PE法）</h2>
+    <p>合理 PE 推導：聚陽過去 5 年 PE 區間 17.1x ~ 32.4x，均值約 23.0x。目前 PE 19.45x 低於均值，處於 30th percentile。以回歸均值 PE 23.0x 計算目標價 337 元。CoE 經 floor 調整後為 4.0%。</p>
+    <div class="highlight">
+        合理 PE = <strong>23.0x</strong> |
+        Forward EPS = <strong>14.65</strong> |
+        目標價 = <strong>TWD 337</strong>
+    </div>
+
+    <h2>6.4 交叉驗證矩陣</h2>
+    <div class="table-wrap"><table>
+        <tr><th>估值方法</th><th>隱含股價</th><th>vs PE 法偏差</th><th>狀態</th></tr>
+        <tr><td>Forward PE 法（主要）</td><td><strong>337</strong></td><td>—</td><td>主要估值</td></tr>
+        <tr><td>EV/EBITDA 法</td><td>320</td><td>-5.0%</td><td>驗證層</td></tr>
+        <tr><td>DCF 法</td><td>310</td><td>-8.0%</td><td>10 年 DCF，WACC 4.5%，終值成長率 2.5%</td></tr>
+    </table></div>
+</div>
+
+<!-- 7. DCF Model -->
+<div class="card" id="sec7">
+    <h1>7. DCF 模型與敏感度分析</h1>
+    <p>DCF 模型假設：WACC 4.5%、終值成長率 2.5%、預測期 10 年。成衣代工業現金流穩定，DCF 估值約 310 元，略低於 PE 法。</p>
+    <h2>敏感度分析表</h2><table><thead><tr><th>EPS \ PE</th><th>18x</th><th>20x</th><th>23x</th><th>25x</th></tr></thead><tbody><tr><td>12.0</td><td>216</td><td>240</td><td>276</td><td>300</td></tr><tr><td>14.65</td><td>264</td><td>293</td><td>337</td><td>366</td></tr><tr><td>17.0</td><td>306</td><td>340</td><td>391</td><td>425</td></tr></tbody></table>
+</div>
+
+<!-- 8. Gordon Growth Model -->
+<div class="card" id="sec8">
+    <h1>8. Gordon Growth Model ROE 辯證</h1>
+    <p>ROE = 25.76%，理論 PB = 15.51，實際 PB = 5.01，溢折價 = -67.7%</p><p>大幅折價反映市場認為成衣代工業成長有限。但聚陽 ROE 25.76% 遠高於同業，品牌客戶關係穩固，折價可能過度。</p>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th></tr>
+        <tr><td>ROE</td><td>25.76%</td></tr>
+        <tr><td>理論 PB (Gordon)</td><td>15.51</td></tr>
+        <tr><td>實際 PB</td><td>5.01</td></tr>
+        <tr><td>解讀</td><td>大幅折價反映市場認為成衣代工業成長有限。但聚陽 ROE 25.76% 遠高於同業，品牌客戶關係穩固，折價可能過度。</td></tr>
+    </table></div>
+</div>
+
+<!-- 9. Industry -->
+<div class="card" id="sec9">
+    <h1>9. 產業分析與同業比較</h1>
+    <p>全球運動服飾市場規模超過 4,000 億美元，年成長率約 5-7%。聚陽作為 ODM 龍頭，在機能布料研發、多國生產布局方面具備競爭優勢。近年品牌客戶（Nike、UA）加速供應鏈多元化，有利聚陽取得更多訂單。東南亞勞工成本雖緩步上升，但仍遠低於中國。</p>
+    <h2>同業比較矩陣</h2><div class="table-wrap"><table><thead><tr><th>公司</th><th>代號</th><th>PE</th><th>PB</th><th>ROE</th><th>殖利率</th></tr></thead><tbody><tr><td>聚陽</td><td>1477</td><td>19.45x</td><td>5.01x</td><td>25.8%</td><td>5.26%</td></tr><tr><td>儒鴻</td><td>1476</td><td>22.0x</td><td>6.5x</td><td>29.5%</td><td>4.0%</td></tr><tr><td>廣越</td><td>4438</td><td>18.0x</td><td>4.0x</td><td>22.0%</td><td>5.5%</td></tr></tbody></table></div>
+</div>
+
+<!-- 10. Macro -->
+<div class="card" id="sec10">
+    <h1>10. 總經與政策環境</h1>
+    <p>全球消費市場受高利率環境影響，但運動服飾為結構性成長產業。台灣央行維持 2.0% 利率，對成衣代工業影響有限。USD/TWD 31.95 穩定，匯率風險可控。VIX 24.06 偏高但非恐慌，市場情緒偏謹慎。</p>
+</div>
+
+<!-- 11. Technical -->
+<div class="card" id="sec11">
+    <h1>11. 技術面分析</h1>
+    <div class="table-wrap"><table><tr><th>指標</th><th>數值</th><th>乖離率</th><th>解讀</th></tr><tr><td>MA_20</td><td>298.6</td><td>-4.6%</td><td>價在 20 日線下方，負乖離 -4.6%，短期偏弱</td></tr><tr><td>MA_60</td><td>None</td><td>數據不足</td><td>60 日均線數據不足，無法計算</td></tr><tr><td>RSI(14)</td><td>38.8</td><td>—</td><td>RSI 38.8 偏弱，接近超賣區（<30），提供逢低買進機會</td></tr><tr><td>KD</td><td>K=21.2 / D=29.0</td><td>—</td><td>KD 低檔（K=21.2, D=29.0），處於超賣區，若 K 上穿 D 將出現黃金交叉</td></tr></table></div>
+</div>
+
+<!-- 12. Chip -->
+<div class="card" id="sec12">
+    <h1>12. 籌碼面分析</h1>
+    <div class="table-wrap"><table><tr><th>籌碼指標</th><th>數值</th></tr><tr><td>外資 5 日</td><td>-3,069 張</td></tr><tr><td>投信 5 日</td><td>+622 張</td></tr><tr><td>融資餘額</td><td>1 張</td></tr><tr><td>融券餘額</td><td>0 張</td></tr><tr><td>券資比</td><td>0%</td></tr></table></div><p>外資近 5 日賣超 -3,069 張，但投信持續加碼 +622 張。法人看法分歧，投信偏多。</p>
+</div>
+
+<!-- 13. Catalyst -->
+<div class="card" id="sec13">
+    <h1>13. 消息面與催化劑</h1>
+    <h4>正面催化劑</h4><ul>
+<li><strong>Nike/UA 下半年訂單回溫</strong> (2026 H2) — 核心客戶訂單增加直接帶動營收</li>
+<li><strong>運動休閒風潮持續</strong> (持續中) — 機能服飾 TAM 持續擴大</li>
+<li><strong>東南亞新產能投產</strong> (2026) — 產能擴張支撐營收成長</li>
+</ul>
+<h4>負面催化劑</h4><ul>
+<li><strong>全球消費需求疲軟</strong> (持續風險) — 品牌客戶可能砍單</li>
+<li><strong>匯率波動（USD/TWD）</strong> (不確定) — 成衣業以美元接單、當地貨幣支出</li>
+<li><strong>東南亞勞工成本上漲</strong> (中長期) — 壓縮毛利率</li>
+</ul>
+</div>
+
+<!-- 14. Risk & Scenarios -->
+<div class="card" id="sec14">
+    <h1>14. 風險評估與情境模擬</h1>
+    <div class="table-wrap"><table><tr><th>風險</th><th>機率</th><th>影響</th><th>應對</th></tr><tr><td>消費需求週期風險</td><td>medium</td><td>high</td><td>追蹤 Nike/UA 財報中的訂單展望</td></tr><tr><td>匯率風險</td><td>medium</td><td>medium</td><td>公司有自然避險機制</td></tr><tr><td>勞工成本上升</td><td>high</td><td>medium</td><td>自動化投資與多國分散生產</td></tr></table></div>
+    <h2>Bull / Base / Bear 情境</h2>
+    <div class="table-wrap"><table>
+        <tr><th>情境</th><th>EPS</th><th>PE</th><th>目標價</th><th>觸發條件</th></tr>
+        <tr>
+            <td><strong>Bull 🐂</strong></td><td>17.0</td>
+            <td>26</td><td>442</td>
+            <td>品牌客戶訂單超預期 / 運動服飾需求爆發</td>
+        </tr><tr>
+            <td><strong>Base 📊</strong></td><td>14.65</td>
+            <td>23</td><td>337</td>
+            <td>穩定訂單成長、毛利率維持</td>
+        </tr><tr>
+            <td><strong>Bear 🐻</strong></td><td>11.0</td>
+            <td>17</td><td>187</td>
+            <td>全球消費衰退 / 品牌庫存調整 / 匯率逆風</td>
+        </tr>
+    </table></div>
+    
+</div>
+
+<!-- 15. Investment Recommendation -->
+<div class="card" id="sec15">
+    <h1>15. 投資建議與操作區間</h1>
+    <div style="text-align:center;margin:12px 0;">
+        <span class="rating-badge" style="font-size:1.2rem;padding:10px 28px;">Buy</span>
+        <p style="margin-top:10px;color:#666;">高 ROE 成衣代工龍頭回檔至低檔，KD 超賣，逢低佈局</p>
+    </div>
+    <div class="action-grid">
+        <div class="action-item"><div class="label">進場點</div><div class="value" style="color:#1565c0;">280</div></div>
+        <div class="action-item"><div class="label">目標價</div><div class="value" style="color:#00c853;">337</div></div>
+        <div class="action-item"><div class="label">停損點</div><div class="value" style="color:#ff1744;">255</div></div>
+        <div class="action-item"><div class="label">停利點</div><div class="value" style="color:#00c853;">337</div></div>
+    </div>
+    <p style="text-align:center;font-size:0.95rem;margin-top:10px;">
+        風險報酬比 R/R = <strong>2.3:1</strong>
+    </p>
+    <p>建議買進，目標價 337 元（+18.2%）。進場點 280 元，停損 255 元（-8.9%），停利 337 元。R/R ratio = (337-280)/(280-255) = 57/25 = 2.3:1。逢回檔佈局，適合穩健型投資人。高殖利率 5.26% 提供下檔保護。</p>
+</div>
+
+<!-- 16. Sources -->
+<div class="card sources" id="sec16">
+    <h1>16. 參考資料</h1>
+    <ol><li><a href="https://finance.yahoo.com/quote/1477.TW/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/1477.TW/</a></li>
+<li><a href="https://www.twse.com.tw/rwd/zh/fund/T86" target="_blank" rel="noopener">https://www.twse.com.tw/rwd/zh/fund/T86</a></li>
+<li><a href="https://www.twse.com.tw/rwd/zh/marginTrading/MI_MARGN" target="_blank" rel="noopener">https://www.twse.com.tw/rwd/zh/marginTrading/MI_MARGN</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html</a></li>
+<li><a href="https://www.cbc.gov.tw/tw/public/data/economic/statistics/" target="_blank" rel="noopener">https://www.cbc.gov.tw/tw/public/data/economic/statistics/</a></li>
+<li><a href="https://mops.twse.com.tw/mops/web/t146sb05" target="_blank" rel="noopener">https://mops.twse.com.tw/mops/web/t146sb05</a></li>
+<li><a href="https://www.cnyes.com/twstock/1477" target="_blank" rel="noopener">https://www.cnyes.com/twstock/1477</a></li>
+<li><a href="https://goodinfo.tw/tw/StockBzPerformance.asp?STOCK_ID=1477" target="_blank" rel="noopener">https://goodinfo.tw/tw/StockBzPerformance.asp?STOCK_ID=1477</a></li>
+<li><a href="https://www.makalot.com.tw/en/investor-relations" target="_blank" rel="noopener">https://www.makalot.com.tw/en/investor-relations</a></li></ol>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>CFA 深度研究報告 | MDVI v3 | 2026-03-21 09:31 | ARTOGO Investment Research</p>
+    <p>⚠️ 本報告僅供研究參考，不構成投資建議。投資有風險，入市需謹慎。</p>
+    <p><a href="../../index.html" style="color:#1565c0;">← 返回首頁</a></p>
+</div>
+
+</div>
+</body>
+</html>

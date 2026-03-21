@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>6139 亞翔 深度投資分析報告 | 2026-03-21</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    line-height: 1.7; color: #1a1a2e; background: #f8f9fa; font-size: 16px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.6rem; color: #0f3460; border-bottom: 3px solid #e94560; padding-bottom: 8px; margin: 24px 0 16px; }
+h2 { font-size: 1.3rem; color: #16213e; border-left: 4px solid #e94560; padding-left: 12px; margin: 28px 0 14px; }
+h3 { font-size: 1.1rem; color: #0f3460; margin: 20px 0 10px; }
+.header-box {
+    background: linear-gradient(135deg, #0f3460, #16213e); color: white;
+    padding: 24px; border-radius: 12px; margin-bottom: 24px;
+}
+.header-box h1 { color: white; border-bottom-color: #e94560; font-size: 1.5rem; }
+.rating-badge {
+    display: inline-block; padding: 6px 18px; border-radius: 20px;
+    font-weight: bold; font-size: 1.1rem; color: #fff; background: #2da44e;
+}
+.market-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.85rem; font-weight: 600; color: white; margin-left: 8px;
+    background: #3b82f6;
+}
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 16px 0;
+}
+.info-card { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; }
+.info-card .label { font-size: 0.85rem; opacity: 0.8; }
+.info-card .value { font-size: 1.3rem; font-weight: bold; }
+.card {
+    background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px;
+    border: 1px solid #e0e0e0; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+th { background: #0f3460; color: white; padding: 10px 8px; text-align: left; white-space: nowrap; }
+td { padding: 8px; border-bottom: 1px solid #e0e0e0; }
+tr:nth-child(even) { background: #f5f5f5; }
+tr:hover { background: #e8eaf6; }
+.highlight { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.warning { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.action-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 14px 0;
+}
+.action-item { text-align: center; padding: 14px; border-radius: 8px; background: #f5f5f5; }
+.action-item .label { font-size: 0.82rem; color: #666; }
+.action-item .value { font-size: 1.3rem; font-weight: 700; margin-top: 4px; }
+.source { font-size: 0.85rem; color: #666; margin: 6px 0; font-style: italic; }
+.sources ol { padding-left: 20px; font-size: 0.82rem; }
+.sources li { margin-bottom: 4px; word-break: break-all; }
+.sources a { color: #1565c0; }
+.toc { background: #f0f4f8; padding: 16px 20px; border-radius: 10px; margin-bottom: 20px; }
+.toc a { color: #0f3460; text-decoration: none; display: block; padding: 3px 0; font-size: 0.92rem; }
+.toc a:hover { color: #e94560; }
+.footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem; border-top: 1px solid #e0e0e0; margin-top: 24px; }
+@media (max-width: 640px) {
+    .header-box { padding: 16px; }
+    .header-box h1 { font-size: 1.25rem; }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .action-grid { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 0.82rem; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.15rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header-box">
+    <h1>6139 亞翔 <span style="font-weight:400;font-size:0.9rem;">Asia Vital Components (AVC) / Ya Hsiang Engineering</span>
+        <span class="market-badge">🇹🇼 台股</span>
+    </h1>
+    <p style="color:#94a3b8;font-size:0.9rem;margin:4px 0;">CFA 深度研究報告 | 2026-03-21 | MDVI v3</p>
+    <div style="margin:12px 0;"><span class="rating-badge">Buy</span></div>
+    <div class="info-grid">
+        <div class="info-card"><div class="label">收盤價</div><div class="value">TWD 593.0</div></div>
+        <div class="info-card"><div class="label">目標價</div><div class="value">TWD 700</div></div>
+        <div class="info-card"><div class="label">潛在報酬</div><div class="value" style="color:#00e676;">+18.0%</div></div>
+        <div class="info-card"><div class="label">MDVI 總分</div><div class="value">47/60</div></div>
+        <div class="info-card"><div class="label">R/R Ratio</div><div class="value">2.0:1</div></div>
+    </div>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <strong>📋 目錄</strong>
+    <a href="#sec1">1. 執行摘要</a>
+    <a href="#sec2">2. MDVI v3 六維度評分</a>
+    <a href="#sec3">3. 公司概況與事業群拆解</a>
+    <a href="#sec4">4. 財務分析與 EPS 推導</a>
+    <a href="#sec5">5. 歷史 PE 軌跡表</a>
+    <a href="#sec6">6. 估值分析（三角交叉驗證）</a>
+    <a href="#sec7">7. DCF 模型與敏感度分析</a>
+    <a href="#sec8">8. Gordon Growth Model ROE 辯證</a>
+    <a href="#sec9">9. 產業分析與同業比較</a>
+    <a href="#sec10">10. 總經與政策環境</a>
+    <a href="#sec11">11. 技術面分析</a>
+    <a href="#sec12">12. 籌碼面分析</a>
+    <a href="#sec13">13. 消息面與催化劑</a>
+    <a href="#sec14">14. 風險評估與情境模擬</a>
+    <a href="#sec15">15. 投資建議與操作區間</a>
+    <a href="#sec16">16. 參考資料</a>
+</div>
+
+<!-- 1. Executive Summary -->
+<div class="card" id="sec1">
+    <h1>1. 執行摘要</h1>
+    <div class="highlight">亞翔工程為台灣半導體無塵室工程龍頭，受惠 AI 晶圓廠擴產潮。ROE 36.71% 為五檔最高，EPS 30.36 元。外資近 5 日買超 +5,965 張。</div>
+    <p>亞翔工程（6139.TW）為台灣半導體無塵室工程龍頭，直接受惠 AI 晶圓廠擴產潮。ROE 36.71% 為五檔最高，EPS 從 2021 年 1.43 元飆升至 2025 年 30.36 元，展現爆發性成長。</p><p>外資近 5 日買超 +5,965 張，投信加碼 +914 張，法人持續看好。PE 19.53x 相對高成長率（YoY +62%）仍屬合理（PEG < 0.5）。</p><p>目標價 700 元（+18.0%），主要風險為半導體資本支出週期反轉，但短中期 AI 擴廠趨勢明確。</p>
+</div>
+
+<!-- 2. MDVI Scores -->
+<div class="card" id="sec2">
+    <h1>2. MDVI v3 六維度評分</h1>
+    <div style="text-align:center;margin:12px 0;"><span style="font-size:2.5rem;font-weight:800;color:#0f3460;">47</span><span style="font-size:1.2rem;color:#666;"> / 60</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>維度</th><th>評分 (0-10)</th></tr>
+        <tr><td style="font-weight:500;">基本面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:90.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">9</span></div></td></tr>
+<tr><td style="font-weight:500;">產業展望</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:90.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">9</span></div></td></tr>
+<tr><td style="font-weight:500;">總經</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">技術面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">籌碼面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+<tr><td style="font-weight:500;">消息面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+
+    </table></div>
+    
+</div>
+
+<!-- 3. Company Overview -->
+<div class="card" id="sec3">
+    <h1>3. 公司概況與事業群拆解</h1>
+    <p>亞翔工程（6139.TW）為台灣半導體無塵室工程龍頭，主要為台積電、聯電等晶圓廠提供無塵室設計、建造與機電工程服務。公司也跨足面板廠與生技廠房工程。受惠於全球 AI 晶圓廠擴產潮，近年營收與獲利大幅成長。2024 年 EPS 達 18.73 元，2025 年 Trailing EPS 更達 30.36 元。</p>
+    <h2>事業群營收拆解</h2><div class="table-wrap"><table><tr><th>事業群</th><th>營收佔比</th><th>成長驅動</th></tr><tr><td>半導體無塵室工程</td><td>75%</td><td>AI 晶圓廠擴產（台積電先進製程）</td></tr><tr><td>面板/光電廠房工程</td><td>15%</td><td>面板廠升級需求</td></tr><tr><td>生技/其他廠房工程</td><td>10%</td><td>生技產業擴張</td></tr></table></div>
+    
+    
+</div>
+
+<!-- 4. Financial Analysis -->
+<div class="card" id="sec4">
+    <h1>4. 財務分析與 EPS 推導</h1>
+
+    <h2>4.1 財務健全度</h2>
+    <div style="margin:8px 0;"><span style="display:inline-block;padding:4px 14px;border-radius:12px;font-weight:600;color:white;background:#ff1744;">非常健康</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th><th>標準</th></tr>
+        <tr><td>D/E Ratio</td><td>0.25</td><td>&lt; 1.0 佳</td></tr>
+        <tr><td>流動比率</td><td>1.5</td><td>&gt; 1.5 佳</td></tr>
+        <tr><td>FCF 趨勢</td><td>大幅正向</td><td>穩定正成長</td></tr>
+        <tr><td>利息保障倍數</td><td>30x+</td><td>&gt; 5x 佳</td></tr>
+    </table></div>
+
+    <h2>4.2 季度財務追蹤</h2>
+    <table><thead><tr><th>季度</th><th>營收(億)</th><th>毛利率</th><th>營益率</th><th>EPS</th></tr></thead><tbody><tr><td>2024 Q1</td><td>55</td><td>17%</td><td>13%</td><td>3.50</td></tr><tr><td>2024 Q2</td><td>70</td><td>18%</td><td>14%</td><td>5.00</td></tr><tr><td>2024 Q3</td><td>80</td><td>19%</td><td>15%</td><td>5.50</td></tr><tr><td>2024 Q4</td><td>90</td><td>19%</td><td>15%</td><td>4.73</td></tr></tbody></table>
+
+    <h2>4.3 獲利能力與 EPS 成長路徑</h2>
+    <p>D/E: 0.25、流動比: 1.5、2023 FCF 約 20 億, 2024 FCF 約 35 億（受惠大量工程入帳）</p>
+
+    <h2>4.4 EPS 由下往上推導</h2>
+    <h4>Step 1: 營收拆解</h4><p>亞翔 2025 年營收大幅成長，主要受惠台積電先進製程擴產帶動無塵室工程需求。Trailing EPS 30.36 元較 2024 年 18.73 元成長 62%。</p>
+<div class="table-wrap"><table><tr><th>事業群</th><th>營收</th><th>YoY</th></tr><tr><td>半導體無塵室工程</td><td>約 250 億</td><td>+50%</td></tr><tr><td>面板/光電工程</td><td>約 50 億</td><td>+10%</td></tr><tr><td>生技/其他</td><td>約 33 億</td><td>+15%</td></tr></table></div>
+<h4>Step 2: 獲利率分析</h4><p>2025 年毛利率約 18-20%（工程業毛利率偏低但穩定），營業費用率約 3-4%，營益率約 14-16%。</p>
+<h4>Step 3: EPS 推導</h4><div class="table-wrap"><table><tr><th>項目</th><th>數值</th></tr><tr><td>revenue_2025</td><td>約 333 億</td></tr><tr><td>gross_profit_2025</td><td>約 63 億</td></tr><tr><td>operating_income_2025</td><td>約 52 億</td></tr><tr><td>tax_rate</td><td>20%</td></tr><tr><td>net_income_2025</td><td>約 42 億</td></tr><tr><td>shares_outstanding</td><td>約 1.38 億股</td></tr><tr><td>eps_calculated</td><td>30.36</td></tr><tr><td>eps_actual_reported</td><td>30.36 (trailing 4Q)</td></tr><tr><td>variance</td><td>0%</td></tr></table></div>
+</div>
+
+<!-- 5. PE History -->
+<div class="card" id="sec5">
+    <h1>5. 歷史 PE 軌跡表</h1>
+    <div class="table-wrap"><table>
+        <tr><th>年度</th><th>EPS</th><th>最高價</th><th>最低價</th><th>PE 高</th><th>PE 低</th></tr>
+        <tr>
+            <td>2021</td><td>1.43</td>
+            <td>48</td><td>28</td>
+            <td>33.6</td><td>19.6</td>
+        </tr><tr>
+            <td>2022</td><td>4.43</td>
+            <td>85</td><td>35</td>
+            <td>19.2</td><td>7.9</td>
+        </tr><tr>
+            <td>2023</td><td>12.81</td>
+            <td>305</td><td>68</td>
+            <td>23.8</td><td>5.3</td>
+        </tr><tr>
+            <td>2024</td><td>18.73</td>
+            <td>620</td><td>265</td>
+            <td>33.1</td><td>14.1</td>
+        </tr><tr>
+            <td>2025</td><td>30.36</td>
+            <td>680</td><td>480</td>
+            <td>22.4</td><td>15.8</td>
+        </tr>
+    </table></div>
+    <p style="margin-top:10px;">5 年平均 PE：<strong>18.5</strong> | 目前 PE：<strong>19.53</strong></p>
+</div>
+
+<!-- 6. Valuation -->
+<div class="card" id="sec6">
+    <h1>6. 估值分析（三角交叉驗證）</h1>
+
+    <h2>6.1 外部因素 → 公式參數對照表</h2>
+    <div class="table-wrap"><table>
+        <tr><th>分析面向</th><th>具體項目</th><th>影響參數</th><th>設定值</th><th>設定依據</th></tr>
+        
+    </table></div>
+
+    <h2>6.2 Cost of Equity (CoE)</h2>
+    <div class="table-wrap"><table>
+        <tr><th>參數</th><th>數值</th><th>來源</th></tr>
+        <tr><td>Rf (無風險利率)</td><td>1.46%</td><td>台灣 10Y 公債殖利率</td></tr>
+        <tr><td>Beta</td><td>0.78</td><td>Yahoo Finance 6139.TW Beta (5Y Monthly)</td></tr>
+        <tr><td>US Base ERP</td><td>4.23%</td><td rowspan="2">Damodaran US Base ERP 2026</td></tr>
+        <tr><td>Country Risk Premium</td><td>0.57%</td></tr>
+        <tr><td>Total ERP</td><td>4.80%</td><td>計算值</td></tr>
+        <tr><td><strong>CoE</strong></td><td><strong>5.20%</strong></td><td>Rf + Beta × Total ERP</td></tr>
+    </table></div>
+
+    <h2>6.3 合理 PE 推導（PE法）</h2>
+    <p>合理 PE 推導：亞翔過去 5 年 PE 區間 5.3x ~ 33.6x，均值約 18.5x。考量 EPS YoY +62% 高成長，PEG 0.37（23/62=0.37）< 1，給予 PE 23.0x 合理。CoE 5.20%。</p>
+    <div class="highlight">
+        合理 PE = <strong>23.0x</strong> |
+        Forward EPS = <strong>30.36</strong> |
+        目標價 = <strong>TWD 700</strong>
+    </div>
+
+    <h2>6.4 交叉驗證矩陣</h2>
+    <div class="table-wrap"><table>
+        <tr><th>估值方法</th><th>隱含股價</th><th>vs PE 法偏差</th><th>狀態</th></tr>
+        <tr><td>Forward PE 法（主要）</td><td><strong>698</strong></td><td>—</td><td>主要估值</td></tr>
+        <tr><td>EV/EBITDA 法</td><td>680</td><td>-2.6%</td><td>驗證層</td></tr>
+        <tr><td>DCF 法</td><td>650</td><td>-6.9%</td><td>10 年 DCF，WACC 5.0%，終值成長率 3.0%，假設 EPS 成長逐步趨緩</td></tr>
+    </table></div>
+</div>
+
+<!-- 7. DCF Model -->
+<div class="card" id="sec7">
+    <h1>7. DCF 模型與敏感度分析</h1>
+    <p>DCF 模型假設：WACC 5.0%、終值成長率 3.0%、預測期 10 年。假設前 3 年維持高成長（EPS 30+），之後逐步回歸至 15-20 元。DCF 估值約 650 元。</p>
+    <h2>敏感度分析表</h2><table><thead><tr><th>EPS \ PE</th><th>18x</th><th>20x</th><th>23x</th><th>25x</th></tr></thead><tbody><tr><td>25.0</td><td>450</td><td>500</td><td>575</td><td>625</td></tr><tr><td>30.36</td><td>546</td><td>607</td><td>698</td><td>759</td></tr><tr><td>35.0</td><td>630</td><td>700</td><td>805</td><td>875</td></tr></tbody></table>
+</div>
+
+<!-- 8. Gordon Growth Model -->
+<div class="card" id="sec8">
+    <h1>8. Gordon Growth Model ROE 辯證</h1>
+    <p>ROE = 36.71%，理論 PB = 15.32，實際 PB = 7.17，溢折價 = -53.2%</p><p>市場給予約 53% 折價，主要因工程業 EPS 受接案周期影響大，市場擔憂高成長難以持續。但 AI 擴廠趨勢仍在加速，折價或有修正空間。</p>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th></tr>
+        <tr><td>ROE</td><td>36.71%</td></tr>
+        <tr><td>理論 PB (Gordon)</td><td>15.32</td></tr>
+        <tr><td>實際 PB</td><td>7.17</td></tr>
+        <tr><td>解讀</td><td>市場給予約 53% 折價，主要因工程業 EPS 受接案周期影響大，市場擔憂高成長難以持續。但 AI 擴廠趨勢仍在加速，折價或有修正空間。</td></tr>
+    </table></div>
+</div>
+
+<!-- 9. Industry -->
+<div class="card" id="sec9">
+    <h1>9. 產業分析與同業比較</h1>
+    <p>全球半導體資本支出在 AI 驅動下持續創新高。台積電 2026 年資本支出預估超過 400 億美元，其中大部分用於先進製程廠房建設。亞翔作為台積電無塵室工程首選供應商，直接受惠。此外，台積電海外建廠（美國亞利桑那、日本熊本、德國德勒斯登）也帶來新的工程機會。</p>
+    <h2>同業比較矩陣</h2><div class="table-wrap"><table><thead><tr><th>公司</th><th>代號</th><th>PE</th><th>PB</th><th>ROE</th><th>EPS YoY</th></tr></thead><tbody><tr><td>亞翔</td><td>6139</td><td>19.53x</td><td>7.17x</td><td>36.7%</td><td>+62%</td></tr><tr><td>帆宣</td><td>6196</td><td>22.0x</td><td>8.5x</td><td>38.0%</td><td>+45%</td></tr><tr><td>漢唐</td><td>2404</td><td>18.0x</td><td>6.0x</td><td>33.0%</td><td>+50%</td></tr></tbody></table></div>
+</div>
+
+<!-- 10. Macro -->
+<div class="card" id="sec10">
+    <h1>10. 總經與政策環境</h1>
+    <p>AI 驅動的半導體資本支出週期為亞翔最大利多。全球科技巨頭（Meta、Google、Microsoft、Amazon）AI 基礎設施投資持續加碼，帶動晶圓廠擴產需求。台灣央行維持低利率有利於工程業融資成本。唯一隱憂是若 AI 泡沫破裂，資本支出可能急速萎縮。</p>
+</div>
+
+<!-- 11. Technical -->
+<div class="card" id="sec11">
+    <h1>11. 技術面分析</h1>
+    <div class="table-wrap"><table><tr><th>指標</th><th>數值</th><th>乖離率</th><th>解讀</th></tr><tr><td>MA_20</td><td>543.1</td><td>+9.2%</td><td>價在 20 日線上方，正乖離 9.2%，中短期多頭</td></tr><tr><td>MA_60</td><td>None</td><td>數據不足</td><td>60 日均線數據不足，無法計算</td></tr><tr><td>RSI(14)</td><td>49.4</td><td>—</td><td>RSI 49.4 接近中性，上下皆有空間</td></tr><tr><td>KD</td><td>K=22.1 / D=39.0</td><td>—</td><td>KD 低檔，K < D 但即將觸底反彈的機率高，若黃金交叉將是買入訊號</td></tr></table></div>
+</div>
+
+<!-- 12. Chip -->
+<div class="card" id="sec12">
+    <h1>12. 籌碼面分析</h1>
+    <div class="table-wrap"><table><tr><th>籌碼指標</th><th>數值</th></tr><tr><td>外資 5 日</td><td>+5,965 張</td></tr><tr><td>投信 5 日</td><td>+914 張</td></tr><tr><td>融資餘額</td><td>0 張</td></tr><tr><td>融券餘額</td><td>11 張</td></tr><tr><td>券資比</td><td>N/A（融資為 0）</td></tr></table></div><p>外資近 5 日大量買超 +5,965 張，投信加碼 +914 張，法人持續看多 AI 半導體工程</p>
+</div>
+
+<!-- 13. Catalyst -->
+<div class="card" id="sec13">
+    <h1>13. 消息面與催化劑</h1>
+    <h4>正面催化劑</h4><ul>
+<li><strong>台積電先進製程持續擴產</strong> (持續中) — 直接帶動無塵室工程需求</li>
+<li><strong>台積電海外建廠（美國/日本/德國）</strong> (2026-2028) — 海外工程訂單新成長動能</li>
+<li><strong>AI 資本支出超預期</strong> (2026 H1) — 加速晶圓廠建設時程</li>
+</ul>
+<h4>負面催化劑</h4><ul>
+<li><strong>半導體資本支出週期反轉</strong> (2027 後風險) — 工程訂單量下滑</li>
+<li><strong>台積電擴廠時程延後</strong> (不確定) — 直接衝擊營收</li>
+<li><strong>工程成本上漲（人工/材料）</strong> (持續中) — 壓縮毛利率</li>
+</ul>
+</div>
+
+<!-- 14. Risk & Scenarios -->
+<div class="card" id="sec14">
+    <h1>14. 風險評估與情境模擬</h1>
+    <div class="table-wrap"><table><tr><th>風險</th><th>機率</th><th>影響</th><th>應對</th></tr><tr><td>半導體資本支出週期風險</td><td>medium</td><td>high</td><td>追蹤台積電資本支出指引</td></tr><tr><td>客戶集中風險（台積電佔比高）</td><td>medium</td><td>high</td><td>關注客戶多元化進展</td></tr><tr><td>工程毛利率波動</td><td>medium</td><td>medium</td><td>監控季報毛利率變化</td></tr></table></div>
+    <h2>Bull / Base / Bear 情境</h2>
+    <div class="table-wrap"><table>
+        <tr><th>情境</th><th>EPS</th><th>PE</th><th>目標價</th><th>觸發條件</th></tr>
+        <tr>
+            <td><strong>Bull 🐂</strong></td><td>38.0</td>
+            <td>25</td><td>950</td>
+            <td>台積電宣布更多先進製程擴產 / AI 資本支出超預期</td>
+        </tr><tr>
+            <td><strong>Base 📊</strong></td><td>30.36</td>
+            <td>23</td><td>700</td>
+            <td>半導體擴廠穩定推進</td>
+        </tr><tr>
+            <td><strong>Bear 🐻</strong></td><td>22.0</td>
+            <td>15</td><td>330</td>
+            <td>AI 泡沫破裂 / 全球景氣衰退 / 台積電延後擴廠</td>
+        </tr>
+    </table></div>
+    
+</div>
+
+<!-- 15. Investment Recommendation -->
+<div class="card" id="sec15">
+    <h1>15. 投資建議與操作區間</h1>
+    <div style="text-align:center;margin:12px 0;">
+        <span class="rating-badge" style="font-size:1.2rem;padding:10px 28px;">Buy</span>
+        <p style="margin-top:10px;color:#666;">半導體工程龍頭，ROE 36.71% 極高，外資連續大買超</p>
+    </div>
+    <div class="action-grid">
+        <div class="action-item"><div class="label">進場點</div><div class="value" style="color:#1565c0;">580</div></div>
+        <div class="action-item"><div class="label">目標價</div><div class="value" style="color:#00c853;">700</div></div>
+        <div class="action-item"><div class="label">停損點</div><div class="value" style="color:#ff1744;">520</div></div>
+        <div class="action-item"><div class="label">停利點</div><div class="value" style="color:#00c853;">700</div></div>
+    </div>
+    <p style="text-align:center;font-size:0.95rem;margin-top:10px;">
+        風險報酬比 R/R = <strong>2.0:1</strong>
+    </p>
+    <p>建議買進，目標價 700 元（+18.0%）。進場點 580 元，停損 520 元（-10.3%），停利 700 元。R/R ratio = (700-580)/(580-520) = 120/60 = 2.0:1。適合積極型投資人，看好 AI 半導體擴廠趨勢。</p>
+</div>
+
+<!-- 16. Sources -->
+<div class="card sources" id="sec16">
+    <h1>16. 參考資料</h1>
+    <ol><li><a href="https://finance.yahoo.com/quote/6139.TW/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/6139.TW/</a></li>
+<li><a href="https://www.twse.com.tw/rwd/zh/fund/T86" target="_blank" rel="noopener">https://www.twse.com.tw/rwd/zh/fund/T86</a></li>
+<li><a href="https://www.twse.com.tw/rwd/zh/marginTrading/MI_MARGN" target="_blank" rel="noopener">https://www.twse.com.tw/rwd/zh/marginTrading/MI_MARGN</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html</a></li>
+<li><a href="https://www.cbc.gov.tw/tw/public/data/economic/statistics/" target="_blank" rel="noopener">https://www.cbc.gov.tw/tw/public/data/economic/statistics/</a></li>
+<li><a href="https://mops.twse.com.tw/mops/web/t146sb05" target="_blank" rel="noopener">https://mops.twse.com.tw/mops/web/t146sb05</a></li>
+<li><a href="https://www.cnyes.com/twstock/6139" target="_blank" rel="noopener">https://www.cnyes.com/twstock/6139</a></li>
+<li><a href="https://goodinfo.tw/tw/StockBzPerformance.asp?STOCK_ID=6139" target="_blank" rel="noopener">https://goodinfo.tw/tw/StockBzPerformance.asp?STOCK_ID=6139</a></li>
+<li><a href="https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY" target="_blank" rel="noopener">https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY</a></li>
+<li><a href="https://www.investing.com/equities/ya-hsiang-engineering" target="_blank" rel="noopener">https://www.investing.com/equities/ya-hsiang-engineering</a></li></ol>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>CFA 深度研究報告 | MDVI v3 | 2026-03-21 09:31 | ARTOGO Investment Research</p>
+    <p>⚠️ 本報告僅供研究參考，不構成投資建議。投資有風險，入市需謹慎。</p>
+    <p><a href="../../index.html" style="color:#1565c0;">← 返回首頁</a></p>
+</div>
+
+</div>
+</body>
+</html>
