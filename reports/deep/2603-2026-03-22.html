@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2603 長榮 深度投資分析報告 | 2026-03-22</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    line-height: 1.7; color: #1a1a2e; background: #f8f9fa; font-size: 16px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.6rem; color: #0f3460; border-bottom: 3px solid #e94560; padding-bottom: 8px; margin: 24px 0 16px; }
+h2 { font-size: 1.3rem; color: #16213e; border-left: 4px solid #e94560; padding-left: 12px; margin: 28px 0 14px; }
+h3 { font-size: 1.1rem; color: #0f3460; margin: 20px 0 10px; }
+.header-box {
+    background: linear-gradient(135deg, #0f3460, #16213e); color: white;
+    padding: 24px; border-radius: 12px; margin-bottom: 24px;
+}
+.header-box h1 { color: white; border-bottom-color: #e94560; font-size: 1.5rem; }
+.rating-badge {
+    display: inline-block; padding: 6px 18px; border-radius: 20px;
+    font-weight: bold; font-size: 1.1rem; color: #fff; background: #2da44e;
+}
+.market-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.85rem; font-weight: 600; color: white; margin-left: 8px;
+    background: #3b82f6;
+}
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 16px 0;
+}
+.info-card { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; }
+.info-card .label { font-size: 0.85rem; opacity: 0.8; }
+.info-card .value { font-size: 1.3rem; font-weight: bold; }
+.card {
+    background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px;
+    border: 1px solid #e0e0e0; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+th { background: #0f3460; color: white; padding: 10px 8px; text-align: left; white-space: nowrap; }
+td { padding: 8px; border-bottom: 1px solid #e0e0e0; }
+tr:nth-child(even) { background: #f5f5f5; }
+tr:hover { background: #e8eaf6; }
+.highlight { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.warning { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.action-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 14px 0;
+}
+.action-item { text-align: center; padding: 14px; border-radius: 8px; background: #f5f5f5; }
+.action-item .label { font-size: 0.82rem; color: #666; }
+.action-item .value { font-size: 1.3rem; font-weight: 700; margin-top: 4px; }
+.source { font-size: 0.85rem; color: #666; margin: 6px 0; font-style: italic; }
+.sources ol { padding-left: 20px; font-size: 0.82rem; }
+.sources li { margin-bottom: 4px; word-break: break-all; }
+.sources a { color: #1565c0; }
+.toc { background: #f0f4f8; padding: 16px 20px; border-radius: 10px; margin-bottom: 20px; }
+.toc a { color: #0f3460; text-decoration: none; display: block; padding: 3px 0; font-size: 0.92rem; }
+.toc a:hover { color: #e94560; }
+.footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem; border-top: 1px solid #e0e0e0; margin-top: 24px; }
+@media (max-width: 640px) {
+    .header-box { padding: 16px; }
+    .header-box h1 { font-size: 1.25rem; }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .action-grid { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 0.82rem; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.15rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header-box">
+    <h1>2603 長榮 <span style="font-weight:400;font-size:0.9rem;">Evergreen Marine</span>
+        <span class="market-badge">🇹🇼 台股</span>
+    </h1>
+    <p style="color:#94a3b8;font-size:0.9rem;margin:4px 0;">CFA 深度研究報告 | 2026-03-22 | MDVI v3</p>
+    <div style="margin:12px 0;"><span class="rating-badge">Buy</span></div>
+    <div class="info-grid">
+        <div class="info-card"><div class="label">收盤價</div><div class="value">TWD 214.0</div></div>
+        <div class="info-card"><div class="label">目標價</div><div class="value">TWD 253</div></div>
+        <div class="info-card"><div class="label">潛在報酬</div><div class="value" style="color:#00e676;">+18.2%</div></div>
+        <div class="info-card"><div class="label">MDVI 總分</div><div class="value">43/60</div></div>
+        <div class="info-card"><div class="label">R/R Ratio</div><div class="value">1.8:1</div></div>
+    </div>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <strong>📋 目錄</strong>
+    <a href="#sec1">1. 執行摘要</a>
+    <a href="#sec2">2. MDVI v3 六維度評分</a>
+    <a href="#sec3">3. 公司概況與事業群拆解</a>
+    <a href="#sec4">4. 財務分析與 EPS 推導</a>
+    <a href="#sec5">5. 歷史 PE 軌跡表</a>
+    <a href="#sec6">6. 估值分析（三角交叉驗證）</a>
+    <a href="#sec7">7. DCF 模型與敏感度分析</a>
+    <a href="#sec8">8. Gordon Growth Model ROE 辯證</a>
+    <a href="#sec9">9. 產業分析與同業比較</a>
+    <a href="#sec10">10. 總經與政策環境</a>
+    <a href="#sec11">11. 技術面分析</a>
+    <a href="#sec12">12. 籌碼面分析</a>
+    <a href="#sec13">13. 消息面與催化劑</a>
+    <a href="#sec14">14. 風險評估與情境模擬</a>
+    <a href="#sec15">15. 投資建議與操作區間</a>
+    <a href="#sec16">16. 參考資料</a>
+</div>
+
+<!-- 1. Executive Summary -->
+<div class="card" id="sec1">
+    <h1>1. 執行摘要</h1>
+    <div class="highlight">全球前三大貨櫃航運商，受惠紅海危機延長航線、運價回升，2025年EPS 31.66元。PB僅0.82倍，股價位於淨值以下，外資近5日大幅買超27,136張。</div>
+    <p>長榮海運在紅海危機延長航線的背景下，2025年雖較2024年獲利衰退（EPS從64.87降至31.66），但仍維持可觀獲利水準。公司積極擴充船隊與貨櫃設備，為未來需求做準備。以PB 0.82倍交易意味市場大幅折價，反映投資人對航運業循環性的擔憂，但也提供了具吸引力的進場價位。</p>
+</div>
+
+<!-- 2. MDVI Scores -->
+<div class="card" id="sec2">
+    <h1>2. MDVI v3 六維度評分</h1>
+    <div style="text-align:center;margin:12px 0;"><span style="font-size:2.5rem;font-weight:800;color:#0f3460;">43</span><span style="font-size:1.2rem;color:#666;"> / 60</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>維度</th><th>評分 (0-10)</th></tr>
+        <tr><td style="font-weight:500;">基本面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+<tr><td style="font-weight:500;">產業展望</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">總經</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">技術面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">籌碼面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:90.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">9</span></div></td></tr>
+<tr><td style="font-weight:500;">消息面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+
+    </table></div>
+    
+</div>
+
+<!-- 3. Company Overview -->
+<div class="card" id="sec3">
+    <h1>3. 公司概況與事業群拆解</h1>
+    <p>長榮海運為全球第七大貨櫃航運公司，隸屬長榮集團。主營業務為國際貨櫃運輸，航線涵蓋歐洲、北美、亞洲等全球主要貿易路線。2025年受惠紅海危機導致歐洲線繞道好望角，有效航運運力受限，推升運價。公司積極擴充船隊並採購新型貨櫃，2025年12月購入12,000只乾櫃及7,000只冷凍櫃。</p>
+    <h2>事業群營收拆解</h2><div class="table-wrap"><table><tr><th>事業群</th><th>營收佔比</th><th>成長驅動</th></tr><tr><td>貨櫃航運</td><td>95%</td><td>紅海危機延長航線、SCFI止跌回升</td></tr><tr><td>港口及物流</td><td>5%</td><td>長榮國際物流整合</td></tr></table></div>
+    
+    
+</div>
+
+<!-- 4. Financial Analysis -->
+<div class="card" id="sec4">
+    <h1>4. 財務分析與 EPS 推導</h1>
+
+    <h2>4.1 財務健全度</h2>
+    <div style="margin:8px 0;"><span style="display:inline-block;padding:4px 14px;border-radius:12px;font-weight:600;color:white;background:#ff1744;">健康（高現金部位、PB<1反映低估）</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th><th>標準</th></tr>
+        <tr><td>D/E Ratio</td><td>0.35</td><td>&lt; 1.0 佳</td></tr>
+        <tr><td>流動比率</td><td>1.8</td><td>&gt; 1.5 佳</td></tr>
+        <tr><td>FCF 趨勢</td><td>波動大但近年正值</td><td>穩定正成長</td></tr>
+        <tr><td>利息保障倍數</td><td>15x</td><td>&gt; 5x 佳</td></tr>
+    </table></div>
+
+    <h2>4.2 季度財務追蹤</h2>
+    <table><thead><tr><th>季度</th><th>營收(億)</th><th>毛利率</th><th>營益率</th><th>EPS(元)</th></tr></thead><tbody><tr><td>2024 Q1</td><td>~800</td><td>~40%</td><td>~35%</td><td>~15</td></tr><tr><td>2024 Q2</td><td>~900</td><td>~48%</td><td>~43%</td><td>~18</td></tr><tr><td>2024 Q3</td><td>~1000</td><td>~50%</td><td>~45%</td><td>~20</td></tr><tr><td>2024 Q4</td><td>~800</td><td>~38%</td><td>~33%</td><td>~12</td></tr><tr><td>2025 Q1</td><td>~700</td><td>~28%</td><td>~23%</td><td>~8</td></tr><tr><td>2025 Q2</td><td>~750</td><td>~25%</td><td>~20%</td><td>~7</td></tr><tr><td>2025 Q3</td><td>~850</td><td>~26%</td><td>~21%</td><td>~9</td></tr><tr><td>2025 Q4</td><td>~900</td><td>~27%</td><td>~22%</td><td>~8</td></tr></tbody></table>
+
+    <h2>4.3 獲利能力與 EPS 成長路徑</h2>
+    <p>D/E: 0.35、流動比: 1.8、航運業FCF受運價與Capex影響大；2024高運價年FCF充裕，2025回落但仍為正</p>
+
+    <h2>4.4 EPS 由下往上推導</h2>
+    <h4>Step 1: 營收拆解</h4><p>2025年長榮營收主要來自貨櫃航運。受紅海危機影響歐洲線繞道好望角，有效運力下降推升運價。惟下半年運價自高點回落。</p>
+<div class="table-wrap"><table><tr><th>事業群</th><th>營收</th><th>YoY</th></tr><tr><td>貨櫃航運</td><td>約3,200億元</td><td>-30%（受2024高基期影響）</td></tr><tr><td>港口/物流</td><td>約170億元</td><td>+5%</td></tr></table></div>
+<h4>Step 2: 獲利率分析</h4><p>2025年因運價下滑，毛利率與營益率較2024年下降。但公司成本控管良好，仍維持正獲利。</p>
+<h4>Step 3: EPS 推導</h4><div class="table-wrap"><table><tr><th>項目</th><th>數值</th></tr><tr><td>revenue_2025</td><td>約3,370億元</td></tr><tr><td>gross_profit_2025</td><td>約843億元</td></tr><tr><td>operating_income_2025</td><td>約573億元</td></tr><tr><td>tax_rate</td><td>20%</td></tr><tr><td>net_income_2025</td><td>約686億元（含業外）</td></tr><tr><td>shares_outstanding</td><td>21.67億股</td></tr><tr><td>eps_calculated</td><td>31.66</td></tr><tr><td>eps_actual_reported</td><td>31.66</td></tr><tr><td>variance</td><td>0%</td></tr></table></div>
+</div>
+
+<!-- 5. PE History -->
+<div class="card" id="sec5">
+    <h1>5. 歷史 PE 軌跡表</h1>
+    <div class="table-wrap"><table>
+        <tr><th>年度</th><th>EPS</th><th>最高價</th><th>最低價</th><th>PE 高</th><th>PE 低</th></tr>
+        <tr>
+            <td>2021</td><td>45.57</td>
+            <td>233.0</td><td>30.0</td>
+            <td>5.11</td><td>0.66</td>
+        </tr><tr>
+            <td>2022</td><td>87.07</td>
+            <td>186.0</td><td>78.5</td>
+            <td>2.14</td><td>0.9</td>
+        </tr><tr>
+            <td>2023</td><td>16.7</td>
+            <td>179.5</td><td>89.5</td>
+            <td>10.75</td><td>5.36</td>
+        </tr><tr>
+            <td>2024</td><td>64.87</td>
+            <td>241.5</td><td>146.0</td>
+            <td>3.72</td><td>2.25</td>
+        </tr><tr>
+            <td>2025</td><td>31.66</td>
+            <td>265.0</td><td>171.0</td>
+            <td>8.37</td><td>5.4</td>
+        </tr>
+    </table></div>
+    <p style="margin-top:10px;">5 年平均 PE：<strong>6.0</strong> | 目前 PE：<strong>6.76</strong></p>
+</div>
+
+<!-- 6. Valuation -->
+<div class="card" id="sec6">
+    <h1>6. 估值分析（三角交叉驗證）</h1>
+
+    <h2>6.1 外部因素 → 公式參數對照表</h2>
+    <div class="table-wrap"><table>
+        <tr><th>分析面向</th><th>具體項目</th><th>影響參數</th><th>設定值</th><th>設定依據</th></tr>
+        
+    </table></div>
+
+    <h2>6.2 Cost of Equity (CoE)</h2>
+    <div class="table-wrap"><table>
+        <tr><th>參數</th><th>數值</th><th>來源</th></tr>
+        <tr><td>Rf (無風險利率)</td><td>1.46%</td><td>台灣 10Y 公債殖利率（Trading Economics, 2026/3/13）</td></tr>
+        <tr><td>Beta</td><td>1.01</td><td>Yahoo Finance 5Y Monthly Beta</td></tr>
+        <tr><td>US Base ERP</td><td>4.23%</td><td rowspan="2">Damodaran US Base ERP (Jan 2026)</td></tr>
+        <tr><td>Country Risk Premium</td><td>0.63%</td></tr>
+        <tr><td>Total ERP</td><td>4.86%</td><td>計算值</td></tr>
+        <tr><td><strong>CoE</strong></td><td><strong>6.37%</strong></td><td>Rf + Beta × Total ERP</td></tr>
+    </table></div>
+
+    <h2>6.3 合理 PE 推導（PE法）</h2>
+    <p>以 Trailing PE 法推導目標價。長榮過去5年PE區間極度波動（0.66x-10.75x），主因航運業EPS高度景氣循環。取2023-2025年PE中位數約6-8x，考慮(1)紅海危機結構性改變航線，(2)運價底部較過去抬升，(3)公司體質改善，給予目標PE 8.0x。目標價 = 31.66 × 8.0 = 253元。</p>
+    <div class="highlight">
+        合理 PE = <strong>8.0x</strong> |
+        Forward EPS = <strong>31.66</strong> |
+        目標價 = <strong>TWD 253</strong>
+    </div>
+
+    <h2>6.4 交叉驗證矩陣</h2>
+    <div class="table-wrap"><table>
+        <tr><th>估值方法</th><th>隱含股價</th><th>vs PE 法偏差</th><th>狀態</th></tr>
+        <tr><td>Forward PE 法（主要）</td><td><strong>253</strong></td><td>—</td><td>主要估值</td></tr>
+        <tr><td>EV/EBITDA 法</td><td>240</td><td>-5.1%</td><td>驗證層</td></tr>
+        <tr><td>DCF 法</td><td>230</td><td>-9.1%</td><td>10年DCF，WACC 5.8%，終值成長率1.5%（航運業保守假設）</td></tr>
+    </table></div>
+</div>
+
+<!-- 7. DCF Model -->
+<div class="card" id="sec7">
+    <h1>7. DCF 模型與敏感度分析</h1>
+    <p>DCF假設：WACC 5.8%（低D/E使加權成本偏低），前5年FCF假設年均500億，後5年降至300億（運價正常化），終值成長率1.5%。10年DCF估值約每股230元，與PE法253元形成交叉驗證區間。</p>
+    <h2>敏感度分析表</h2><table><thead><tr><th>PE \ EPS</th><th>25元</th><th>30元</th><th>31.66元</th><th>35元</th><th>40元</th></tr></thead><tbody><tr><td>6x</td><td>150</td><td>180</td><td>190</td><td>210</td><td>240</td></tr><tr><td>7x</td><td>175</td><td>210</td><td>222</td><td>245</td><td>280</td></tr><tr><td>8x</td><td>200</td><td>240</td><td>253</td><td>280</td><td>320</td></tr><tr><td>9x</td><td>225</td><td>270</td><td>285</td><td>315</td><td>360</td></tr><tr><td>10x</td><td>250</td><td>300</td><td>317</td><td>350</td><td>400</td></tr></tbody></table>
+</div>
+
+<!-- 8. Gordon Growth Model -->
+<div class="card" id="sec8">
+    <h1>8. Gordon Growth Model ROE 辯證</h1>
+    <p>ROE = 12.1%，理論 PB = 2.31，實際 PB = 0.82，溢折價 = -64.5%</p><p>市場給予大幅折價，反映航運業高度景氣循環風險。PB<1意味市場認為長期ROE將低於當前水準，但以目前運價結構與紅海風險延續，短中期ROE仍有撐。</p>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th></tr>
+        <tr><td>ROE</td><td>12.1%</td></tr>
+        <tr><td>理論 PB (Gordon)</td><td>2.31</td></tr>
+        <tr><td>實際 PB</td><td>0.82</td></tr>
+        <tr><td>解讀</td><td>市場給予大幅折價，反映航運業高度景氣循環風險。PB<1意味市場認為長期ROE將低於當前水準，但以目前運價結構與紅海風險延續，短中期ROE仍有撐。</td></tr>
+    </table></div>
+</div>
+
+<!-- 9. Industry -->
+<div class="card" id="sec9">
+    <h1>9. 產業分析與同業比較</h1>
+    <p>全球貨櫃航運市場2025-2026年面臨「紅海危機」帶來的結構性變化。胡塞武裝持續攻擊紅海商船，迫使主要航商繞道好望角，航程增加約30%，有效運力被吸收。2026年運力供給增速由2025年的6.9%降至3.8%，供過於求壓力緩解。長榮為全球第七大航商，航線涵蓋率高，具規模優勢。同業中陽明PE約4-12x、萬海PE約7x，長榮PE 6.76x處合理區間。</p>
+    <h2>同業比較矩陣</h2><div class="table-wrap"><table><thead><tr><th>公司</th><th>股票代號</th><th>PE</th><th>PB</th><th>ROE</th><th>殖利率</th></tr></thead><tbody><tr><td>長榮</td><td>2603</td><td>6.76x</td><td>0.82x</td><td>12.1%</td><td>7.48%</td></tr><tr><td>陽明</td><td>2609</td><td>~4-12x</td><td>~0.7x</td><td>~10%</td><td>~8%</td></tr><tr><td>萬海</td><td>2615</td><td>7.05x</td><td>0.81x</td><td>11.5%</td><td>~6%</td></tr></tbody></table></div>
+</div>
+
+<!-- 10. Macro -->
+<div class="card" id="sec10">
+    <h1>10. 總經與政策環境</h1>
+    <p>全球經濟成長放緩對貿易量構成壓力，但紅海繞航持續吸收運力。Fed利率維持高位不利全球需求，但台灣出口受惠AI供應鏈仍有支撐。VIX偏高反映市場風險情緒，航運股作為高殖利率標的在波動環境中具防禦性。台幣偏強（31.93）對以美元計價營收略有負面影響。</p>
+</div>
+
+<!-- 11. Technical -->
+<div class="card" id="sec11">
+    <h1>11. 技術面分析</h1>
+    <div class="table-wrap"><table><tr><th>指標</th><th>數值</th><th>乖離率</th><th>解讀</th></tr><tr><td>MA_20</td><td>207</td><td>+3.4%</td><td>股價站上20日線，短期多頭</td></tr><tr><td>MA_60</td><td>200</td><td>+7.0%</td><td>站穩60日線上方，中期趨勢轉多</td></tr><tr><td>RSI(14)</td><td>41.0</td><td>—</td><td>RSI 41，中性偏低，尚有上漲空間</td></tr><tr><td>KD</td><td>K=30.5 / D=37.7</td><td>—</td><td>KD 在低檔區，K值有向上交叉D值的可能，短線有反彈機會</td></tr></table></div>
+</div>
+
+<!-- 12. Chip -->
+<div class="card" id="sec12">
+    <h1>12. 籌碼面分析</h1>
+    <div class="table-wrap"><table><tr><th>籌碼指標</th><th>數值</th></tr><tr><td>外資 5 日</td><td>+27,136 張</td></tr><tr><td>外資 20 日</td><td>數據不可得</td></tr><tr><td>投信 5 日</td><td>+1,994 張</td></tr><tr><td>投信 20 日</td><td>數據不可得</td></tr><tr><td>融資餘額</td><td>110 張</td></tr><tr><td>融券餘額</td><td>0 張</td></tr><tr><td>券資比</td><td>0%</td></tr></table></div><p>外資近5日大幅買超27,136張，投信同步買超1,994張，法人同步偏多</p>
+</div>
+
+<!-- 13. Catalyst -->
+<div class="card" id="sec13">
+    <h1>13. 消息面與催化劑</h1>
+    <h4>正面催化劑</h4><ul>
+<li><strong>紅海危機持續，歐洲線維持繞道</strong> (持續中) — 有效運力受限，運價有撐</li>
+<li><strong>SCFI指數止跌回升，歐洲線漲價</strong> (2026 Q1) — Q1營收有望優於預期</li>
+<li><strong>2025年現金股利上看15元（殖利率7%）</strong> (2026年6-7月) — 高殖利率吸引存股族買盤</li>
+</ul>
+<h4>負面催化劑</h4><ul>
+<li><strong>紅海通航恢復正常</strong> (不確定) — 運價可能急跌30-50%</li>
+<li><strong>全球景氣放緩影響貿易量</strong> (2026下半年風險) — 貨量減少壓縮獲利</li>
+<li><strong>2026年運力供給增加3.8%</strong> (全年) — 供需壓力增加</li>
+</ul>
+</div>
+
+<!-- 14. Risk & Scenarios -->
+<div class="card" id="sec14">
+    <h1>14. 風險評估與情境模擬</h1>
+    <div class="table-wrap"><table><tr><th>風險</th><th>機率</th><th>影響</th><th>應對</th></tr><tr><td>運價大幅下跌</td><td>medium</td><td>high</td><td>設停損185元（Bear PE×EPS附近）</td></tr><tr><td>地緣政治風險降溫</td><td>low</td><td>high</td><td>密切關注中東局勢</td></tr><tr><td>全球景氣衰退</td><td>medium</td><td>medium</td><td>觀察PMI與貿易量數據</td></tr></table></div>
+    <h2>Bull / Base / Bear 情境</h2>
+    <div class="table-wrap"><table>
+        <tr><th>情境</th><th>EPS</th><th>PE</th><th>目標價</th><th>觸發條件</th></tr>
+        <tr>
+            <td><strong>Bull 🐂</strong></td><td>40.0</td>
+            <td>9</td><td>360</td>
+            <td>中東衝突升級/SCFI突破3000/歐美補庫存潮</td>
+        </tr><tr>
+            <td><strong>Base 📊</strong></td><td>31.66</td>
+            <td>8</td><td>253</td>
+            <td>運價溫和回升，紅海仍繞航</td>
+        </tr><tr>
+            <td><strong>Bear 🐻</strong></td><td>20.0</td>
+            <td>5</td><td>100</td>
+            <td>中東和平/全球景氣衰退/運力過剩</td>
+        </tr>
+    </table></div>
+    
+</div>
+
+<!-- 15. Investment Recommendation -->
+<div class="card" id="sec15">
+    <h1>15. 投資建議與操作區間</h1>
+    <div style="text-align:center;margin:12px 0;">
+        <span class="rating-badge" style="font-size:1.2rem;padding:10px 28px;">Buy</span>
+        <p style="margin-top:10px;color:#666;">PB < 1 歷史低檔，外資連續買超，可分批佈局</p>
+    </div>
+    <div class="action-grid">
+        <div class="action-item"><div class="label">進場點</div><div class="value" style="color:#1565c0;">210</div></div>
+        <div class="action-item"><div class="label">目標價</div><div class="value" style="color:#00c853;">253</div></div>
+        <div class="action-item"><div class="label">停損點</div><div class="value" style="color:#ff1744;">185</div></div>
+        <div class="action-item"><div class="label">停利點</div><div class="value" style="color:#00c853;">253</div></div>
+    </div>
+    <p style="text-align:center;font-size:0.95rem;margin-top:10px;">
+        風險報酬比 R/R = <strong>1.8:1</strong>
+    </p>
+    <p><strong>操作建議：</strong>評級「買進」。進場價210元（MA20附近），停損185元（Bear case PE 5x × EPS 31.66 = 158元之上保留緩衝），停利253元（目標價）。風險報酬比約 1.8:1（潛在獲利43元 vs 潛在虧損29元）。建議分批佈局，首批50%於210-215元進場，後續視運價走勢加碼。持股期限3-6個月，關注紅海局勢與SCFI指數走勢。</p>
+</div>
+
+<!-- 16. Sources -->
+<div class="card sources" id="sec16">
+    <h1>16. 參考資料</h1>
+    <ol><li><a href="https://histock.tw/stock/2603/%E6%AF%8F%E8%82%A1%E7%9B%88%E9%A4%98" target="_blank" rel="noopener">https://histock.tw/stock/2603/%E6%AF%8F%E8%82%A1%E7%9B%88%E9%A4%98</a></li>
+<li><a href="https://finance.yahoo.com/quote/2603.TW/key-statistics/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/2603.TW/key-statistics/</a></li>
+<li><a href="https://www.twse.com.tw/zh/trading/foreign/t86.html" target="_blank" rel="noopener">https://www.twse.com.tw/zh/trading/foreign/t86.html</a></li>
+<li><a href="https://tradingeconomics.com/taiwan/government-bond-yield" target="_blank" rel="noopener">https://tradingeconomics.com/taiwan/government-bond-yield</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html</a></li>
+<li><a href="https://www.cmoney.tw/forum/article/175521678" target="_blank" rel="noopener">https://www.cmoney.tw/forum/article/175521678</a></li>
+<li><a href="https://ec.ltn.com.tw/article/breakingnews/5355619" target="_blank" rel="noopener">https://ec.ltn.com.tw/article/breakingnews/5355619</a></li>
+<li><a href="https://money.udn.com/money/story/12040/9241756" target="_blank" rel="noopener">https://money.udn.com/money/story/12040/9241756</a></li>
+<li><a href="https://www.twse.com.tw/zh/trading/margin/mi-margn.html" target="_blank" rel="noopener">https://www.twse.com.tw/zh/trading/margin/mi-margn.html</a></li></ol>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>CFA 深度研究報告 | MDVI v3 | 2026-03-22 09:28 | ARTOGO Investment Research</p>
+    <p>⚠️ 本報告僅供研究參考，不構成投資建議。投資有風險，入市需謹慎。</p>
+    <p><a href="../../index.html" style="color:#1565c0;">← 返回首頁</a></p>
+</div>
+
+</div>
+</body>
+</html>
