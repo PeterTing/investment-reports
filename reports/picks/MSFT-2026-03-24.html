@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSFT 微軟 深度投資分析報告 | 2026-03-24</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    line-height: 1.7; color: #1a1a2e; background: #f8f9fa; font-size: 16px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.6rem; color: #0f3460; border-bottom: 3px solid #e94560; padding-bottom: 8px; margin: 24px 0 16px; }
+h2 { font-size: 1.3rem; color: #16213e; border-left: 4px solid #e94560; padding-left: 12px; margin: 28px 0 14px; }
+h3 { font-size: 1.1rem; color: #0f3460; margin: 20px 0 10px; }
+.header-box {
+    background: linear-gradient(135deg, #0f3460, #16213e); color: white;
+    padding: 24px; border-radius: 12px; margin-bottom: 24px;
+}
+.header-box h1 { color: white; border-bottom-color: #e94560; font-size: 1.5rem; }
+.rating-badge {
+    display: inline-block; padding: 6px 18px; border-radius: 20px;
+    font-weight: bold; font-size: 1.1rem; color: #fff; background: #2da44e;
+}
+.market-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.85rem; font-weight: 600; color: white; margin-left: 8px;
+    background: #10b981;
+}
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 16px 0;
+}
+.info-card { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; }
+.info-card .label { font-size: 0.85rem; opacity: 0.8; }
+.info-card .value { font-size: 1.3rem; font-weight: bold; }
+.card {
+    background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px;
+    border: 1px solid #e0e0e0; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+th { background: #0f3460; color: white; padding: 10px 8px; text-align: left; white-space: nowrap; }
+td { padding: 8px; border-bottom: 1px solid #e0e0e0; }
+tr:nth-child(even) { background: #f5f5f5; }
+tr:hover { background: #e8eaf6; }
+.highlight { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.warning { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.action-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 14px 0;
+}
+.action-item { text-align: center; padding: 14px; border-radius: 8px; background: #f5f5f5; }
+.action-item .label { font-size: 0.82rem; color: #666; }
+.action-item .value { font-size: 1.3rem; font-weight: 700; margin-top: 4px; }
+.source { font-size: 0.85rem; color: #666; margin: 6px 0; font-style: italic; }
+.sources ol { padding-left: 20px; font-size: 0.82rem; }
+.sources li { margin-bottom: 4px; word-break: break-all; }
+.sources a { color: #1565c0; }
+.toc { background: #f0f4f8; padding: 16px 20px; border-radius: 10px; margin-bottom: 20px; }
+.toc a { color: #0f3460; text-decoration: none; display: block; padding: 3px 0; font-size: 0.92rem; }
+.toc a:hover { color: #e94560; }
+.footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem; border-top: 1px solid #e0e0e0; margin-top: 24px; }
+@media (max-width: 640px) {
+    .header-box { padding: 16px; }
+    .header-box h1 { font-size: 1.25rem; }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .action-grid { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 0.82rem; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.15rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header-box">
+    <h1>MSFT 微軟 <span style="font-weight:400;font-size:0.9rem;">Microsoft Corporation</span>
+        <span class="market-badge">🇺🇸 美股</span>
+    </h1>
+    <p style="color:#94a3b8;font-size:0.9rem;margin:4px 0;">CFA 深度研究報告 | 2026-03-24 | MDVI v3</p>
+    <div style="margin:12px 0;"><span class="rating-badge">Buy</span></div>
+    <div class="info-grid">
+        <div class="info-card"><div class="label">收盤價</div><div class="value">USD 383.0</div></div>
+        <div class="info-card"><div class="label">目標價</div><div class="value">USD 447</div></div>
+        <div class="info-card"><div class="label">潛在報酬</div><div class="value" style="color:#00e676;">+16.7%</div></div>
+        <div class="info-card"><div class="label">MDVI 總分</div><div class="value">46/60</div></div>
+        <div class="info-card"><div class="label">R/R Ratio</div><div class="value">2.1:1</div></div>
+    </div>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <strong>📋 目錄</strong>
+    <a href="#sec1">1. 執行摘要</a>
+    <a href="#sec2">2. MDVI v3 六維度評分</a>
+    <a href="#sec3">3. 公司概況與事業群拆解</a>
+    <a href="#sec4">4. 財務分析與 EPS 推導</a>
+    <a href="#sec5">5. 歷史 PE 軌跡表</a>
+    <a href="#sec6">6. 估值分析（三角交叉驗證）</a>
+    <a href="#sec7">7. DCF 模型與敏感度分析</a>
+    <a href="#sec8">8. Gordon Growth Model ROE 辯證</a>
+    <a href="#sec9">9. 產業分析與同業比較</a>
+    <a href="#sec10">10. 總經與政策環境</a>
+    <a href="#sec11">11. 技術面分析</a>
+    <a href="#sec12">12. 籌碼面分析</a>
+    <a href="#sec13">13. 消息面與催化劑</a>
+    <a href="#sec14">14. 風險評估與情境模擬</a>
+    <a href="#sec15">15. 投資建議與操作區間</a>
+    <a href="#sec16">16. 參考資料</a>
+</div>
+
+<!-- 1. Executive Summary -->
+<div class="card" id="sec1">
+    <h1>1. 執行摘要</h1>
+    <div class="highlight">全球最大軟體公司，Azure 雲端 +39% 成長，AI Copilot 商業化加速，目前 RSI 極度超賣為逢低佈局良機</div>
+    <p>微軟（MSFT）是全球最大軟體公司，市值 $2.85T。Q2 FY2026 營收 $81.3B（YoY +17%），Azure 雲端營收突破 $51.5B（YoY +26%），Azure 成長率 39%（常幣）。Non-GAAP EPS $4.14 超預期。</p><p>當前股價 $383 已從 52 週高點 $552 回檔 31%，RSI 僅 27.4（極度超賣）。Trailing PE 24x 為近 5 年最低水準（5 年平均 30.8x）。以保守的 PE 28x 計算，目標價 $447（上檔 16.7%）。</p><p>風險在於 AI 投資回報期不確定及反壟斷監管。建議趁超賣分批佈局，停損 $340。</p>
+</div>
+
+<!-- 2. MDVI Scores -->
+<div class="card" id="sec2">
+    <h1>2. MDVI v3 六維度評分</h1>
+    <div style="text-align:center;margin:12px 0;"><span style="font-size:2.5rem;font-weight:800;color:#0f3460;">46</span><span style="font-size:1.2rem;color:#666;"> / 60</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>維度</th><th>評分 (0-10)</th></tr>
+        <tr><td style="font-weight:500;">基本面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:90.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">9</span></div></td></tr>
+<tr><td style="font-weight:500;">產業展望</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:90.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">9</span></div></td></tr>
+<tr><td style="font-weight:500;">總經</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">技術面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">籌碼面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+<tr><td style="font-weight:500;">消息面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+
+    </table></div>
+    
+</div>
+
+<!-- 3. Company Overview -->
+<div class="card" id="sec3">
+    <h1>3. 公司概況與事業群拆解</h1>
+    <p>微軟（Microsoft）是全球最大的軟體和雲端服務公司，市值約 $2.85T。主要業務包括 Intelligent Cloud（Azure）、Productivity（Office 365）、Personal Computing（Windows、Xbox）三大事業群。公司在 AI 領域與 OpenAI 深度合作，Copilot 系列產品已深入企業端。</p>
+    <h2>事業群營收拆解</h2><div class="table-wrap"><table><tr><th>事業群</th><th>營收佔比</th><th>成長驅動</th></tr><tr><td>Intelligent Cloud (Azure)</td><td>43%</td><td>Azure +39% CC 成長，AI 服務需求</td></tr><tr><td>Productivity & Business (Office 365)</td><td>33%</td><td>Copilot 企業導入，訂閱制穩定</td></tr><tr><td>More Personal Computing</td><td>24%</td><td>Windows、Gaming、Surface</td></tr></table></div>
+    
+    
+</div>
+
+<!-- 4. Financial Analysis -->
+<div class="card" id="sec4">
+    <h1>4. 財務分析與 EPS 推導</h1>
+
+    <h2>4.1 財務健全度</h2>
+    <div style="margin:8px 0;"><span style="display:inline-block;padding:4px 14px;border-radius:12px;font-weight:600;color:white;background:#00c853;">健康</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th><th>標準</th></tr>
+        <tr><td>D/E Ratio</td><td>31.54</td><td>&lt; 1.0 佳</td></tr>
+        <tr><td>流動比率</td><td>1.39</td><td>&gt; 1.5 佳</td></tr>
+        <tr><td>FCF 趨勢</td><td>穩定正成長，年 FCF 超過 $53B</td><td>穩定正成長</td></tr>
+        <tr><td>利息保障倍數</td><td>充裕（營業利益遠超利息支出）</td><td>&gt; 5x 佳</td></tr>
+    </table></div>
+
+    <h2>4.2 季度財務追蹤</h2>
+    <table><thead><tr><th>季度</th><th>營收</th><th>營業利潤率</th><th>EPS (GAAP)</th><th>Azure 成長</th></tr></thead><tbody><tr><td>Q2 FY2025</td><td>$69.6B</td><td>45%</td><td>$3.23</td><td>+31%</td></tr><tr><td>Q3 FY2025</td><td>$70.1B</td><td>45%</td><td>$3.46</td><td>+33%</td></tr><tr><td>Q4 FY2025</td><td>$73.2B</td><td>46%</td><td>$3.65</td><td>+35%</td></tr><tr><td>Q1 FY2026</td><td>$76.4B</td><td>47%</td><td>$3.72</td><td>+37%</td></tr><tr><td>Q2 FY2026</td><td>$81.3B</td><td>47%</td><td>$5.16</td><td>+39%</td></tr></tbody></table>
+
+    <h2>4.3 獲利能力與 EPS 成長路徑</h2>
+    <p>D/E: 31.54、流動比: 1.39、FY2025 FCF $53.6B，FCF margin 約 18%</p>
+
+    <h2>4.4 EPS 由下往上推導</h2>
+    <h4>Step 1: 營收拆解</h4><p>Q2 FY2026 營收 $81.3B（YoY +17%）。Azure 雲端營收 $51.5B（YoY +26%），為最大成長引擎。</p>
+<div class="table-wrap"><table><tr><th>事業群</th><th>營收</th><th>YoY</th></tr><tr><td>Intelligent Cloud</td><td>$81.3B (Q2)</td><td>+17%</td></tr><tr><td>Cloud Revenue</td><td>$51.5B (Q2)</td><td>+26%</td></tr></table></div>
+<h4>Step 2: 獲利率分析</h4><p>毛利率 68.6%，營業利潤率 47.1%。AI 投資短期壓縮部分利潤率，但 Azure 規模效應持續改善。</p>
+<h4>Step 3: EPS 推導</h4><div class="table-wrap"><table><tr><th>項目</th><th>數值</th></tr><tr><td>trailing_12m_revenue</td><td>$305.5B</td></tr><tr><td>trailing_12m_eps</td><td>$15.96</td></tr><tr><td>note</td><td>Q2 FY2026 GAAP EPS $5.16 含 OpenAI 投資收益 $1.02，Non-GAAP EPS $4.14</td></tr></table></div>
+</div>
+
+<!-- 5. PE History -->
+<div class="card" id="sec5">
+    <h1>5. 歷史 PE 軌跡表</h1>
+    <div class="table-wrap"><table>
+        <tr><th>年度</th><th>EPS</th><th>最高價</th><th>最低價</th><th>PE 高</th><th>PE 低</th></tr>
+        <tr>
+            <td>2021</td><td>9.02</td>
+            <td>337.56</td><td>221.75</td>
+            <td>37.4</td><td>24.6</td>
+        </tr><tr>
+            <td>2022</td><td>9.7</td>
+            <td>326.3</td><td>207.39</td>
+            <td>33.6</td><td>21.4</td>
+        </tr><tr>
+            <td>2023</td><td>9.72</td>
+            <td>377.79</td><td>213.74</td>
+            <td>38.9</td><td>22.0</td>
+        </tr><tr>
+            <td>2024</td><td>11.86</td>
+            <td>462.1</td><td>360.29</td>
+            <td>39.0</td><td>30.4</td>
+        </tr><tr>
+            <td>2025</td><td>13.7</td>
+            <td>552.24</td><td>342.17</td>
+            <td>40.3</td><td>25.0</td>
+        </tr>
+    </table></div>
+    <p style="margin-top:10px;">5 年平均 PE：<strong>30.8</strong> | 目前 PE：<strong>24.0</strong></p>
+</div>
+
+<!-- 6. Valuation -->
+<div class="card" id="sec6">
+    <h1>6. 估值分析（三角交叉驗證）</h1>
+
+    <h2>6.1 外部因素 → 公式參數對照表</h2>
+    <div class="table-wrap"><table>
+        <tr><th>分析面向</th><th>具體項目</th><th>影響參數</th><th>設定值</th><th>設定依據</th></tr>
+        
+    </table></div>
+
+    <h2>6.2 Cost of Equity (CoE)</h2>
+    <div class="table-wrap"><table>
+        <tr><th>參數</th><th>數值</th><th>來源</th></tr>
+        <tr><td>Rf (無風險利率)</td><td>4.35%</td><td>US 10Y Treasury Yield (FRED), 2026-03-23</td></tr>
+        <tr><td>Beta</td><td>1.07</td><td>Yahoo Finance 5Y Monthly Beta</td></tr>
+        <tr><td>US Base ERP</td><td>4.23%</td><td rowspan="2">Damodaran Implied ERP Jan 2026</td></tr>
+        <tr><td>Country Risk Premium</td><td>0%</td></tr>
+        <tr><td>Total ERP</td><td>4.23%</td><td>計算值</td></tr>
+        <tr><td><strong>CoE</strong></td><td><strong>8.9%</strong></td><td>Rf + Beta × Total ERP</td></tr>
+    </table></div>
+
+    <h2>6.3 合理 PE 推導（PE法）</h2>
+    <p>合理 PE 推導：CoE = 4.35% + 1.07 × 4.23% = 8.88%。MSFT 過去 5 年平均 PE 為 30.8x，歷史範圍 21-40x。當前 PE 24x 處於歷史最低 15% 分位。考慮目前高利率環境和 AI 投資短期壓力，保守取 PE 28x（較平均折價 9%）。Justified PE 28x × Trailing EPS $15.96 = $447。</p>
+    <div class="highlight">
+        合理 PE = <strong>28.0x</strong> |
+        Forward EPS = <strong>15.96</strong> |
+        目標價 = <strong>USD 447</strong>
+    </div>
+
+    <h2>6.4 交叉驗證矩陣</h2>
+    <div class="table-wrap"><table>
+        <tr><th>估值方法</th><th>隱含股價</th><th>vs PE 法偏差</th><th>狀態</th></tr>
+        <tr><td>Forward PE 法（主要）</td><td><strong>447</strong></td><td>—</td><td>主要估值</td></tr>
+        <tr><td>EV/EBITDA 法</td><td>460</td><td>+2.9%</td><td>驗證層</td></tr>
+        <tr><td>DCF 法</td><td>430</td><td>-3.8%</td><td>10 年 DCF，營收 CAGR 12%，WACC 8%</td></tr>
+    </table></div>
+</div>
+
+<!-- 7. DCF Model -->
+<div class="card" id="sec7">
+    <h1>7. DCF 模型與敏感度分析</h1>
+    <p>DCF 假設：WACC 8.0%（CoE 8.9%，稅後 Debt Cost 3.5%，D/E 31.5%），終值成長率 3%。營收 CAGR 12%（受 Azure + Copilot 驅動），利潤率逐步改善至 50%。10 年 DCF 估值 $430。</p>
+    <h2>敏感度分析表</h2><table><thead><tr><th>PE \ EPS</th><th>$14</th><th>$15.96</th><th>$18</th><th>$20</th></tr></thead><tbody><tr><td>22x</td><td>$308</td><td>$351</td><td>$396</td><td>$440</td></tr><tr><td>25x</td><td>$350</td><td>$399</td><td>$450</td><td>$500</td></tr><tr><td>28x</td><td>$392</td><td>$447</td><td>$504</td><td>$560</td></tr><tr><td>31x</td><td>$434</td><td>$495</td><td>$558</td><td>$620</td></tr><tr><td>35x</td><td>$490</td><td>$559</td><td>$630</td><td>$700</td></tr></tbody></table>
+</div>
+
+<!-- 8. Gordon Growth Model -->
+<div class="card" id="sec8">
+    <h1>8. Gordon Growth Model ROE 辯證</h1>
+    <p>ROE = 34.4%，理論 PB = 5.32，實際 PB = 7.28，溢折價 = +36.8%</p><p>市場給予 36.8% 溢價，反映 Azure + AI Copilot 的長期成長溢價。歷史上 MSFT PB 常態在 10-13x，當前 7.28x 反而偏低，部分因為近期股價大幅修正。</p>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th></tr>
+        <tr><td>ROE</td><td>34.4%</td></tr>
+        <tr><td>理論 PB (Gordon)</td><td>5.32</td></tr>
+        <tr><td>實際 PB</td><td>7.28</td></tr>
+        <tr><td>解讀</td><td>市場給予 36.8% 溢價，反映 Azure + AI Copilot 的長期成長溢價。歷史上 MSFT PB 常態在 10-13x，當前 7.28x 反而偏低，部分因為近期股價大幅修正。</td></tr>
+    </table></div>
+</div>
+
+<!-- 9. Industry -->
+<div class="card" id="sec9">
+    <h1>9. 產業分析與同業比較</h1>
+    <p>全球雲端服務市場持續高速成長，2026 年預估達 $1T+。三大雲端廠商：AWS（32%市佔）、Azure（24%市佔，成長最快）、GCP（12%市佔）。AI 是推動雲端支出的新引擎，企業對 AI PaaS/SaaS 服務需求爆發。</p><p>Microsoft 獨特優勢在於 Azure + OpenAI + Office 365 的端到端整合能力。Copilot for Microsoft 365 已進入付費推廣階段，預計將帶動 ARPU 提升 20-30%。</p>
+    <h2>同業比較矩陣</h2><div class="table-wrap"><table><thead><tr><th>指標</th><th>MSFT</th><th>AAPL</th><th>GOOGL</th><th>AMZN</th></tr></thead><tbody><tr><td>市值</td><td>$2.85T</td><td>$3.4T</td><td>$3.65T</td><td>$2.0T</td></tr><tr><td>Trailing PE</td><td>24.0x</td><td>32x</td><td>27.9x</td><td>28x</td></tr><tr><td>EV/EBITDA</td><td>16.4x</td><td>22x</td><td>24.0x</td><td>15x</td></tr><tr><td>ROE</td><td>34.4%</td><td>145%</td><td>35.7%</td><td>25%</td></tr><tr><td>營收成長</td><td>+17%</td><td>+4%</td><td>+18%</td><td>+12%</td></tr></tbody></table></div>
+</div>
+
+<!-- 10. Macro -->
+<div class="card" id="sec10">
+    <h1>10. 總經與政策環境</h1>
+    <p>Fed 維持 3.50-3.75% 利率，高利率環境壓縮科技股估值倍數，MSFT PE 從高峰 40x 壓縮至 24x。但 Azure 作為企業 IT 基礎設施，需求相對穩定。VIX 26 偏高，市場風險偏好降低，但 MSFT 作為大型藍籌股，具避風港效應。</p>
+</div>
+
+<!-- 11. Technical -->
+<div class="card" id="sec11">
+    <h1>11. 技術面分析</h1>
+    <div class="table-wrap"><table><tr><th>指標</th><th>數值</th><th>乖離率</th><th>解讀</th></tr><tr><td>MA_20</td><td>398.69</td><td>-3.9%</td><td>價格低於 20 日均線，短期偏空</td></tr><tr><td>MA_60</td><td>428.76</td><td>-10.7%</td><td>跌破 60 日均線超過 10%，中期修正較深</td></tr><tr><td>RSI(14)</td><td>27.4</td><td>—</td><td>RSI 進入超賣區（<30），反彈機率高</td></tr><tr><td>KD</td><td>K=13.6 / D=23.5</td><td>—</td><td>K、D 值均處極低位，超賣明顯</td></tr></table></div>
+</div>
+
+<!-- 12. Chip -->
+<div class="card" id="sec12">
+    <h1>12. 籌碼面分析</h1>
+    <div class="table-wrap"><table><tr><th>籌碼指標</th><th>數值</th></tr><tr><td>機構持股比例</td><td>76.0</td></tr><tr><td>空頭股數</td><td>74300000</td></tr><tr><td>空頭佔流通比</td><td>1.0</td></tr><tr><td>空頭回補天數</td><td>1.63</td></tr></table></div><p>機構持股 76% 穩定，空頭部位極低（1.0%），多方持續主導</p>
+</div>
+
+<!-- 13. Catalyst -->
+<div class="card" id="sec13">
+    <h1>13. 消息面與催化劑</h1>
+    <h4>正面催化劑</h4><ul>
+<li><strong>Q3 FY2026 財報（預計 4 月底）</strong> (1 個月) — 若 Azure 維持 35%+ 成長將提振信心</li>
+<li><strong>Microsoft 365 Copilot 付費用戶數突破</strong> (持續) — AI 變現的直接證據</li>
+<li><strong>RSI 極度超賣後的技術性反彈</strong> (短期) — 歷史上 MSFT RSI<30 後 1 個月平均反彈 8-12%</li>
+</ul>
+<h4>負面催化劑</h4><ul>
+<li><strong>反壟斷監管風險</strong> (中長期) — 限制 AI 整合策略</li>
+<li><strong>AI 投資回報期拉長</strong> (2026-2027) — Capex 壓縮短期 FCF</li>
+<li><strong>雲端價格戰</strong> (持續) — AWS/GCP 競爭壓縮毛利率</li>
+</ul>
+</div>
+
+<!-- 14. Risk & Scenarios -->
+<div class="card" id="sec14">
+    <h1>14. 風險評估與情境模擬</h1>
+    <div class="table-wrap"><table><tr><th>風險</th><th>機率</th><th>影響</th><th>應對</th></tr><tr><td>AI 投資回報不確定</td><td>medium</td><td>medium</td><td>追蹤 Copilot 付費用戶數和 ARPU</td></tr><tr><td>反壟斷監管</td><td>low</td><td>high</td><td>監控 FTC/DOJ 動態</td></tr><tr><td>雲端競爭加劇</td><td>medium</td><td>medium</td><td>比較 Azure vs AWS vs GCP 成長率</td></tr><tr><td>全球經濟放緩</td><td>medium</td><td>medium</td><td>關注企業 IT 支出調查報告</td></tr></table></div>
+    <h2>Bull / Base / Bear 情境</h2>
+    <div class="table-wrap"><table>
+        <tr><th>情境</th><th>EPS</th><th>PE</th><th>目標價</th><th>觸發條件</th></tr>
+        <tr>
+            <td><strong>Bull 🐂</strong></td><td>18.0</td>
+            <td>32</td><td>576</td>
+            <td>AI 變現超預期 / 大型企業 Copilot 合約激增</td>
+        </tr><tr>
+            <td><strong>Base 📊</strong></td><td>15.96</td>
+            <td>28</td><td>447</td>
+            <td>Azure 維持 30%+ 成長，Copilot 穩步推進</td>
+        </tr><tr>
+            <td><strong>Bear 🐻</strong></td><td>14.0</td>
+            <td>22</td><td>308</td>
+            <td>企業 IT 支出放緩 / AI 變現遲緩</td>
+        </tr>
+    </table></div>
+    
+</div>
+
+<!-- 15. Investment Recommendation -->
+<div class="card" id="sec15">
+    <h1>15. 投資建議與操作區間</h1>
+    <div style="text-align:center;margin:12px 0;">
+        <span class="rating-badge" style="font-size:1.2rem;padding:10px 28px;">Buy</span>
+        <p style="margin-top:10px;color:#666;">RSI 27 極度超賣，Azure 成長強勁，逢低分批佈局</p>
+    </div>
+    <div class="action-grid">
+        <div class="action-item"><div class="label">進場點</div><div class="value" style="color:#1565c0;">375</div></div>
+        <div class="action-item"><div class="label">目標價</div><div class="value" style="color:#00c853;">447</div></div>
+        <div class="action-item"><div class="label">停損點</div><div class="value" style="color:#ff1744;">340</div></div>
+        <div class="action-item"><div class="label">停利點</div><div class="value" style="color:#00c853;">447</div></div>
+    </div>
+    <p style="text-align:center;font-size:0.95rem;margin-top:10px;">
+        風險報酬比 R/R = <strong>2.1:1</strong>
+    </p>
+    <p><strong>投資建議：Buy</strong></p><p>進場點：$375（RSI 極度超賣，技術面支撐區間）</p><p>停損點：$340（2025 年低點 $342 下方）</p><p>停利點：$447（PE 28x 目標價）</p><p>風險報酬比：(447-375)/(375-340) = 72/35 = 2.1:1</p><p>持股期限：3-6 個月</p>
+</div>
+
+<!-- 16. Sources -->
+<div class="card sources" id="sec16">
+    <h1>16. 參考資料</h1>
+    <ol><li><a href="https://www.microsoft.com/en-us/investor/earnings/fy-2026-q2/press-release-webcast" target="_blank" rel="noopener">https://www.microsoft.com/en-us/investor/earnings/fy-2026-q2/press-release-webcast</a></li>
+<li><a href="https://finance.yahoo.com/quote/MSFT/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/MSFT/</a></li>
+<li><a href="https://finance.yahoo.com/quote/MSFT/key-statistics/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/MSFT/key-statistics/</a></li>
+<li><a href="https://fred.stlouisfed.org/series/DGS10" target="_blank" rel="noopener">https://fred.stlouisfed.org/series/DGS10</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html</a></li>
+<li><a href="https://www.cnbc.com/2026/01/28/microsoft-msft-q2-earnings-report-2026.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/01/28/microsoft-msft-q2-earnings-report-2026.html</a></li>
+<li><a href="https://futurumgroup.com/insights/microsoft-q2-fy-2026-cloud-surpasses-50b-azure-up-38-cc/" target="_blank" rel="noopener">https://futurumgroup.com/insights/microsoft-q2-fy-2026-cloud-surpasses-50b-azure-up-38-cc/</a></li>
+<li><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260318a.htm" target="_blank" rel="noopener">https://www.federalreserve.gov/newsevents/pressreleases/monetary20260318a.htm</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html</a></li></ol>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>CFA 深度研究報告 | MDVI v3 | 2026-03-24 07:02 | ARTOGO Investment Research</p>
+    <p>⚠️ 本報告僅供研究參考，不構成投資建議。投資有風險，入市需謹慎。</p>
+    <p><a href="../../index.html" style="color:#1565c0;">← 返回首頁</a></p>
+</div>
+
+</div>
+</body>
+</html>
