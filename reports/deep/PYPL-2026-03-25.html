@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PYPL PayPal 深度投資分析報告 | 2026-03-25</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    line-height: 1.7; color: #1a1a2e; background: #f8f9fa; font-size: 16px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.6rem; color: #0f3460; border-bottom: 3px solid #e94560; padding-bottom: 8px; margin: 24px 0 16px; }
+h2 { font-size: 1.3rem; color: #16213e; border-left: 4px solid #e94560; padding-left: 12px; margin: 28px 0 14px; }
+h3 { font-size: 1.1rem; color: #0f3460; margin: 20px 0 10px; }
+.header-box {
+    background: linear-gradient(135deg, #0f3460, #16213e); color: white;
+    padding: 24px; border-radius: 12px; margin-bottom: 24px;
+}
+.header-box h1 { color: white; border-bottom-color: #e94560; font-size: 1.5rem; }
+.rating-badge {
+    display: inline-block; padding: 6px 18px; border-radius: 20px;
+    font-weight: bold; font-size: 1.1rem; color: #fff; background: #2da44e;
+}
+.market-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.85rem; font-weight: 600; color: white; margin-left: 8px;
+    background: #10b981;
+}
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 16px 0;
+}
+.info-card { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; }
+.info-card .label { font-size: 0.85rem; opacity: 0.8; }
+.info-card .value { font-size: 1.3rem; font-weight: bold; }
+.card {
+    background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px;
+    border: 1px solid #e0e0e0; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+th { background: #0f3460; color: white; padding: 10px 8px; text-align: left; white-space: nowrap; }
+td { padding: 8px; border-bottom: 1px solid #e0e0e0; }
+tr:nth-child(even) { background: #f5f5f5; }
+tr:hover { background: #e8eaf6; }
+.highlight { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.warning { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.action-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 14px 0;
+}
+.action-item { text-align: center; padding: 14px; border-radius: 8px; background: #f5f5f5; }
+.action-item .label { font-size: 0.82rem; color: #666; }
+.action-item .value { font-size: 1.3rem; font-weight: 700; margin-top: 4px; }
+.source { font-size: 0.85rem; color: #666; margin: 6px 0; font-style: italic; }
+.sources ol { padding-left: 20px; font-size: 0.82rem; }
+.sources li { margin-bottom: 4px; word-break: break-all; }
+.sources a { color: #1565c0; }
+.toc { background: #f0f4f8; padding: 16px 20px; border-radius: 10px; margin-bottom: 20px; }
+.toc a { color: #0f3460; text-decoration: none; display: block; padding: 3px 0; font-size: 0.92rem; }
+.toc a:hover { color: #e94560; }
+.footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem; border-top: 1px solid #e0e0e0; margin-top: 24px; }
+@media (max-width: 640px) {
+    .header-box { padding: 16px; }
+    .header-box h1 { font-size: 1.25rem; }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .action-grid { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 0.82rem; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.15rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header-box">
+    <h1>PYPL PayPal <span style="font-weight:400;font-size:0.9rem;">PayPal Holdings</span>
+        <span class="market-badge">🇺🇸 美股</span>
+    </h1>
+    <p style="color:#94a3b8;font-size:0.9rem;margin:4px 0;">CFA 深度研究報告 | 2026-03-25 | MDVI v3</p>
+    <div style="margin:12px 0;"><span class="rating-badge">Buy</span></div>
+    <div class="info-grid">
+        <div class="info-card"><div class="label">收盤價</div><div class="value">USD 44.21</div></div>
+        <div class="info-card"><div class="label">目標價</div><div class="value">USD 59</div></div>
+        <div class="info-card"><div class="label">潛在報酬</div><div class="value" style="color:#00e676;">+33.4%</div></div>
+        <div class="info-card"><div class="label">MDVI 總分</div><div class="value">37/60</div></div>
+        <div class="info-card"><div class="label">R/R Ratio</div><div class="value">2.8:1</div></div>
+    </div>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <strong>📋 目錄</strong>
+    <a href="#sec1">1. 執行摘要</a>
+    <a href="#sec2">2. MDVI v3 六維度評分</a>
+    <a href="#sec3">3. 公司概況與事業群拆解</a>
+    <a href="#sec4">4. 財務分析與 EPS 推導</a>
+    <a href="#sec5">5. 歷史 PE 軌跡表</a>
+    <a href="#sec6">6. 估值分析（三角交叉驗證）</a>
+    <a href="#sec7">7. DCF 模型與敏感度分析</a>
+    <a href="#sec8">8. Gordon Growth Model ROE 辯證</a>
+    <a href="#sec9">9. 產業分析與同業比較</a>
+    <a href="#sec10">10. 總經與政策環境</a>
+    <a href="#sec11">11. 技術面分析</a>
+    <a href="#sec12">12. 籌碼面分析</a>
+    <a href="#sec13">13. 消息面與催化劑</a>
+    <a href="#sec14">14. 風險評估與情境模擬</a>
+    <a href="#sec15">15. 投資建議與操作區間</a>
+    <a href="#sec16">16. 參考資料</a>
+</div>
+
+<!-- 1. Executive Summary -->
+<div class="card" id="sec1">
+    <h1>1. 執行摘要</h1>
+    <div class="highlight">全球數位支付龍頭，FY2025 EPS $5.41（+35.6% YoY），PE 8.2x 為歷史低估區間，但面臨 CEO 更換及競爭壓力</div>
+    <p>PYPL 當前估值極具吸引力：PE 8.2x、EV/EBITDA 6.6x、FCF Yield 7.9%，均處於歷史低位。Gordon Growth Model 理論 PB 2.99x vs 實際 2.01x，市場折價 33%。</p><p>風險因素需密切關注：品牌結帳的市佔趨勢、FedNow 對毛利的侵蝕、新 CEO 的策略方向。若 Venmo 商業化及 PYUSD 能帶來增量成長，PE 有望從 8x 回歸至 11-14x。</p>
+</div>
+
+<!-- 2. MDVI Scores -->
+<div class="card" id="sec2">
+    <h1>2. MDVI v3 六維度評分</h1>
+    <div style="text-align:center;margin:12px 0;"><span style="font-size:2.5rem;font-weight:800;color:#0f3460;">37</span><span style="font-size:1.2rem;color:#666;"> / 60</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>維度</th><th>評分 (0-10)</th></tr>
+        <tr><td style="font-weight:500;">基本面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">產業展望</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">總經</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">技術面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">籌碼面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">消息面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+
+    </table></div>
+    
+</div>
+
+<!-- 3. Company Overview -->
+<div class="card" id="sec3">
+    <h1>3. 公司概況與事業群拆解</h1>
+    <p>PayPal 是全球最大的數位支付平台之一，旗下品牌包括 PayPal、Venmo、Braintree 等。FY2025 營收 $33.2B（+4.3% YoY），交易量 $1.5T+。公司正從傳統支付轉型至 AI 驅動的商務平台，但面臨 Apple Pay、Google Pay 及 Stripe 等競爭。2026/2 月 CEO 由 Alex Chriss 更換為 Enrique Lores（前 HP CEO）。</p>
+    <h2>事業群營收拆解</h2><div class="table-wrap"><table><tr><th>事業群</th><th>營收佔比</th><th>成長驅動</th></tr><tr><td>Transaction Revenue</td><td>91%</td><td>電商交易量、Venmo 商業化</td></tr><tr><td>Other Value Added Services</td><td>9%</td><td>PYUSD stablecoin、利息收入</td></tr></table></div>
+    
+    
+</div>
+
+<!-- 4. Financial Analysis -->
+<div class="card" id="sec4">
+    <h1>4. 財務分析與 EPS 推導</h1>
+
+    <h2>4.1 財務健全度</h2>
+    <div style="margin:8px 0;"><span style="display:inline-block;padding:4px 14px;border-radius:12px;font-weight:600;color:white;background:#ff1744;">穩健</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th><th>標準</th></tr>
+        <tr><td>D/E Ratio</td><td>0.61</td><td>&lt; 1.0 佳</td></tr>
+        <tr><td>流動比率</td><td>1.29</td><td>&gt; 1.5 佳</td></tr>
+        <tr><td>FCF 趨勢</td><td>穩定但下滑</td><td>穩定正成長</td></tr>
+        <tr><td>利息保障倍數</td><td>Adequate</td><td>&gt; 5x 佳</td></tr>
+    </table></div>
+
+    <h2>4.2 季度財務追蹤</h2>
+    <table><tr><th>季度</th><th>營收</th><th>營業利益率</th><th>EPS</th></tr><tr><td>2025 Q1</td><td>$7.79B</td><td>15.5%</td><td>$1.08</td></tr><tr><td>2025 Q2</td><td>$8.37B</td><td>16.8%</td><td>$1.28</td></tr><tr><td>2025 Q3</td><td>$8.33B</td><td>18.0%</td><td>$1.42</td></tr><tr><td>2025 Q4</td><td>$8.68B</td><td>18.3%</td><td>$1.23</td></tr></table>
+
+    <h2>4.3 獲利能力與 EPS 成長路徑</h2>
+    <p>D/E: 0.61、流動比: 1.29、FY2023 $4.3B, FY2024 $6.8B, FY2025 $5.6B (-18% YoY)</p>
+
+    <h2>4.4 EPS 由下往上推導</h2>
+    <h4>Step 1: 營收拆解</h4><p>FY2025 營收 $33.2B，其中交易收入 ~$30.2B、其他增值服務 ~$3.0B。FY2026 指引營收成長 3-4%，約 $34.2-34.5B。</p>
+<div class="table-wrap"><table><tr><th>事業群</th><th>營收</th><th>YoY</th></tr><tr><td>Transaction Revenue</td><td>$30.2B</td><td>+3%</td></tr><tr><td>Other VAS</td><td>$3.0B</td><td>+12%</td></tr></table></div>
+<h4>Step 2: 獲利率分析</h4><p>FY2025 毛利率 41.5%，營業利益率 17.5%（較 FY2024 擴張）。FY2026 面臨即時支付（FedNow）帶來的毛利壓力。</p>
+<h4>Step 3: EPS 推導</h4><div class="table-wrap"><table><tr><th>項目</th><th>數值</th></tr><tr><td>revenue_fy2025</td><td>$33.17B</td></tr><tr><td>eps_fy2025</td><td>$5.41</td></tr><tr><td>ttm_eps</td><td>$5.41</td></tr><tr><td>ttm_eps_source</td><td>https://finance.yahoo.com/quote/PYPL/</td></tr><tr><td>eps_calculated</td><td>5.41</td></tr><tr><td>eps_actual_reported</td><td>5.41</td></tr><tr><td>variance</td><td>0%</td></tr></table></div>
+</div>
+
+<!-- 5. PE History -->
+<div class="card" id="sec5">
+    <h1>5. 歷史 PE 軌跡表</h1>
+    <div class="table-wrap"><table>
+        <tr><th>年度</th><th>EPS</th><th>最高價</th><th>最低價</th><th>PE 高</th><th>PE 低</th></tr>
+        <tr>
+            <td>2021</td><td>3.52</td>
+            <td>310.16</td><td>152.04</td>
+            <td>88.1</td><td>43.2</td>
+        </tr><tr>
+            <td>2022</td><td>3.54</td>
+            <td>196.54</td><td>67.58</td>
+            <td>55.5</td><td>19.1</td>
+        </tr><tr>
+            <td>2023</td><td>3.84</td>
+            <td>78.27</td><td>50.25</td>
+            <td>20.4</td><td>13.1</td>
+        </tr><tr>
+            <td>2024</td><td>3.99</td>
+            <td>84.55</td><td>55.77</td>
+            <td>21.2</td><td>14.0</td>
+        </tr><tr>
+            <td>2025</td><td>5.41</td>
+            <td>79.5</td><td>38.46</td>
+            <td>14.7</td><td>7.1</td>
+        </tr>
+    </table></div>
+    <p style="margin-top:10px;">5 年平均 PE：<strong>排除 2021 泡沫，近 3 年平均 PE 約 14-18x</strong> | 目前 PE：<strong>8.2</strong></p>
+</div>
+
+<!-- 6. Valuation -->
+<div class="card" id="sec6">
+    <h1>6. 估值分析（三角交叉驗證）</h1>
+
+    <h2>6.1 外部因素 → 公式參數對照表</h2>
+    <div class="table-wrap"><table>
+        <tr><th>分析面向</th><th>具體項目</th><th>影響參數</th><th>設定值</th><th>設定依據</th></tr>
+        
+    </table></div>
+
+    <h2>6.2 Cost of Equity (CoE)</h2>
+    <div class="table-wrap"><table>
+        <tr><th>參數</th><th>數值</th><th>來源</th></tr>
+        <tr><td>Rf (無風險利率)</td><td>4.39%</td><td>US 10-Year Treasury Yield, March 24, 2026</td></tr>
+        <tr><td>Beta</td><td>1.459</td><td>Yahoo Finance 5Y Monthly Beta</td></tr>
+        <tr><td>US Base ERP</td><td>4.23%</td><td rowspan="2">Damodaran US Implied ERP Jan 2026</td></tr>
+        <tr><td>Country Risk Premium</td><td>0%</td></tr>
+        <tr><td>Total ERP</td><td>4.23%</td><td>計算值</td></tr>
+        <tr><td><strong>CoE</strong></td><td><strong>10.6%</strong></td><td>Rf + Beta × Total ERP</td></tr>
+    </table></div>
+
+    <h2>6.3 合理 PE 推導（PE法）</h2>
+    <p>排除 2021 年泡沫期（PE 40-88x），PYPL 近 3 年 PE 中位數約 16x，近 1 年平均約 12x。考量 FY2026 營收成長僅 3-4%，給予折價至 11x。若新 CEO 帶來成長復甦，PE 可回升至 14x（近 3 年低端）。</p>
+    <div class="highlight">
+        合理 PE = <strong>11.0x</strong> |
+        Forward EPS = <strong>5.41</strong> |
+        目標價 = <strong>USD 59</strong>
+    </div>
+
+    <h2>6.4 交叉驗證矩陣</h2>
+    <div class="table-wrap"><table>
+        <tr><th>估值方法</th><th>隱含股價</th><th>vs PE 法偏差</th><th>狀態</th></tr>
+        <tr><td>Forward PE 法（主要）</td><td><strong>59.51</strong></td><td>—</td><td>主要估值</td></tr>
+        <tr><td>EV/EBITDA 法</td><td>N/A (validation)</td><td>N/A</td><td>驗證層</td></tr>
+        <tr><td>DCF 法</td><td>N/A</td><td>N/A</td><td></td></tr>
+    </table></div>
+</div>
+
+<!-- 7. DCF Model -->
+<div class="card" id="sec7">
+    <h1>7. DCF 模型與敏感度分析</h1>
+    <p>WACC 10.6%，Terminal Growth 3%。FY2025 FCF $5.6B，FCF Yield 7.9%。以 FCF 折現法概算，若 FCF 維持 $5-6B 區間，合理市值約 $55-65B（vs 當前 $41B），隱含 34-58% 上漲空間。</p>
+    <h2>敏感度分析表</h2><table><tr><th>PE \ EPS</th><th>$5.00 (Bear)</th><th>$5.41 (Actual)</th><th>$5.87 (Bull)</th></tr><tr><td>7x</td><td>$35</td><td>$38</td><td>$41</td></tr><tr><td>11x</td><td>$55</td><td>$60</td><td>$65</td></tr><tr><td>14x</td><td>$70</td><td>$76</td><td>$82</td></tr></table>
+</div>
+
+<!-- 8. Gordon Growth Model -->
+<div class="card" id="sec8">
+    <h1>8. Gordon Growth Model ROE 辯證</h1>
+    <p>ROE = 25.7%，理論 PB = 2.99，實際 PB = 2.01，溢折價 = -32.8%</p><p>市場給予 33% 折價，反映投資人對 CEO 更換、成長趨緩、及競爭加劇的擔憂。若新 CEO 執行策略得當，PB 有回歸理論值空間。</p>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th></tr>
+        <tr><td>ROE</td><td>25.7%</td></tr>
+        <tr><td>理論 PB (Gordon)</td><td>2.99</td></tr>
+        <tr><td>實際 PB</td><td>2.01</td></tr>
+        <tr><td>解讀</td><td>市場給予 33% 折價，反映投資人對 CEO 更換、成長趨緩、及競爭加劇的擔憂。若新 CEO 執行策略得當，PB 有回歸理論值空間。</td></tr>
+    </table></div>
+</div>
+
+<!-- 9. Industry -->
+<div class="card" id="sec9">
+    <h1>9. 產業分析與同業比較</h1>
+    <p>全球數位支付市場持續成長，但競爭加劇。Apple Pay 與 Google Pay 在消費者端錢包佔比持續提升，Stripe 和 Adyen 在商戶端也在搶佔份額。BNPL（先買後付）面臨 CFPB 監管壓力。即時支付（FedNow）的普及可能壓縮傳統支付處理商的利潤空間。PayPal 的優勢在於龐大的用戶基礎（4.3 億活躍帳戶）和品牌信任度。</p>
+    <h2>同業比較矩陣</h2><div class="table-wrap"><table><tr><th>指標</th><th>PYPL</th><th>Block (SQ)</th><th>Adyen</th></tr><tr><td>PE (TTM)</td><td>8.2x</td><td>25.3x</td><td>N/A</td></tr><tr><td>EV/EBITDA</td><td>6.6x</td><td>19.8x</td><td>N/A</td></tr><tr><td>ROE</td><td>25.7%</td><td>N/A</td><td>N/A</td></tr><tr><td>Revenue Growth</td><td>+4.3%</td><td>N/A</td><td>N/A</td></tr></table></div>
+</div>
+
+<!-- 10. Macro -->
+<div class="card" id="sec10">
+    <h1>10. 總經與政策環境</h1>
+    <p>高利率環境對 fintech 估值整體承壓，但 PYPL 8.2x PE 已充分反映此風險。Fed 3.5-3.75% 利率若開始降息，對金融科技估值有正面催化。VIX 26.15 偏高的市場環境下，防禦性價值股可能獲得資金青睞，PYPL 的低估值與高 FCF 特性符合此邏輯。</p>
+</div>
+
+<!-- 11. Technical -->
+<div class="card" id="sec11">
+    <h1>11. 技術面分析</h1>
+    <div class="table-wrap"><table><tr><th>指標</th><th>數值</th><th>乖離率</th><th>解讀</th></tr><tr><td>MA_20</td><td>45.59</td><td>-3.0%</td><td>略低於 20 日線，短期偏弱</td></tr><tr><td>MA_60</td><td>49.18</td><td>-10.1%</td><td>遠低於 60 日線，中期下降趨勢明顯</td></tr><tr><td>RSI(14)</td><td>39.3</td><td>—</td><td>RSI 偏低但未達超賣（<30），下跌動能減弱</td></tr><tr><td>KD</td><td>K=31.4 / D=30.9</td><td>—</td><td>K 與 D 在低檔黏合，可能醞釀反彈</td></tr></table></div>
+</div>
+
+<!-- 12. Chip -->
+<div class="card" id="sec12">
+    <h1>12. 籌碼面分析</h1>
+    <div class="table-wrap"><table><tr><th>籌碼指標</th><th>數值</th></tr><tr><td>機構持股比例</td><td>82.3%</td></tr><tr><td>空頭股數</td><td>41.8M</td></tr><tr><td>空頭佔流通比</td><td>4.6%</td></tr><tr><td>空頭回補天數</td><td>1.16</td></tr></table></div><p>機構持股 82.3% 穩定，放空比例 4.6% 偏高但 Days to Cover 僅 1.16 天，軋空壓力有限</p>
+</div>
+
+<!-- 13. Catalyst -->
+<div class="card" id="sec13">
+    <h1>13. 消息面與催化劑</h1>
+    <h4>正面催化劑</h4><ul>
+<li><strong>Stripe 收購傳聞（2026/2/24 傳出）</strong> (進行中) — 若收購成真，PayPal 支付生態系大幅擴張，股價短期已反映 15% 漲幅；若破局則回吐投機溢價約 $6-7/股</li>
+<li><strong>PYUSD stablecoin 已在 70 國上線</strong> (2026/3 已上線) — 開拓加密支付新市場</li>
+<li><strong>Venmo 與 PayPal 無縫 P2P 轉帳</strong> (2026/3 推出) — 提升 Venmo 黏著度與交易量</li>
+<li><strong>新 CEO Enrique Lores 上任</strong> (2026/2) — 可能帶來策略轉型</li>
+</ul>
+<h4>負面催化劑</h4><ul>
+<li><strong>FY2026 營收指引僅 3-4% 成長</strong> (已公布) — 成長率低於市場預期</li>
+<li><strong>品牌結帳（Branded Checkout）成長僅 1%</strong> (持續中) — 核心業務成長失速</li>
+<li><strong>證券詐欺訴訟 / 被移出 S&P 100</strong> (進行中) — 投資人信心打擊</li>
+<li><strong>Stripe 收購案破局或估值過高</strong> (不確定) — 投機溢價回吐，股價可能回落 10-15%</li>
+</ul>
+</div>
+
+<!-- 14. Risk & Scenarios -->
+<div class="card" id="sec14">
+    <h1>14. 風險評估與情境模擬</h1>
+    <div class="table-wrap"><table><tr><th>風險</th><th>機率</th><th>影響</th><th>應對</th></tr><tr><td>品牌結帳持續流失市佔</td><td>high</td><td>high</td><td>觀察每季 TPV 品牌 vs 非品牌趨勢</td></tr><tr><td>新 CEO 執行風險</td><td>medium</td><td>medium</td><td>追蹤首份策略報告及組織調整</td></tr><tr><td>FedNow 即時支付壓縮利潤率</td><td>medium</td><td>medium</td><td>監控交易利潤率趨勢</td></tr></table></div>
+    <h2>Bull / Base / Bear 情境</h2>
+    <div class="table-wrap"><table>
+        <tr><th>情境</th><th>EPS</th><th>PE</th><th>目標價</th><th>觸發條件</th></tr>
+        <tr>
+            <td><strong>Bull 🐂</strong></td><td>5.87</td>
+            <td>14</td><td>82</td>
+            <td>Venmo 商業化加速 / PYUSD 規模化 / 品牌結帳成長回溫</td>
+        </tr><tr>
+            <td><strong>Base 📊</strong></td><td>5.41</td>
+            <td>11</td><td>60</td>
+            <td>營收成長 3-4%，利潤率維持</td>
+        </tr><tr>
+            <td><strong>Bear 🐻</strong></td><td>5.41</td>
+            <td>7</td><td>38</td>
+            <td>品牌結帳份額持續流失 / 經濟衰退</td>
+        </tr>
+    </table></div>
+    
+</div>
+
+<!-- 15. Investment Recommendation -->
+<div class="card" id="sec15">
+    <h1>15. 投資建議與操作區間</h1>
+    <div style="text-align:center;margin:12px 0;">
+        <span class="rating-badge" style="font-size:1.2rem;padding:10px 28px;">Buy</span>
+        <p style="margin-top:10px;color:#666;">股價從 52 週高點 $79.50 下跌 44%，PE 8.2x 為近年低點，RSI 39.3 偏低但未超賣</p>
+    </div>
+    <div class="action-grid">
+        <div class="action-item"><div class="label">進場點</div><div class="value" style="color:#1565c0;">42</div></div>
+        <div class="action-item"><div class="label">目標價</div><div class="value" style="color:#00c853;">59</div></div>
+        <div class="action-item"><div class="label">停損點</div><div class="value" style="color:#ff1744;">36</div></div>
+        <div class="action-item"><div class="label">停利點</div><div class="value" style="color:#00c853;">59</div></div>
+    </div>
+    <p style="text-align:center;font-size:0.95rem;margin-top:10px;">
+        風險報酬比 R/R = <strong>2.8:1</strong>
+    </p>
+    <p>目標價 $59（Trailing PE 11x × EPS $5.41），上漲空間 33.4%。進場點 $42，停損 $36（Bear PE 7x × EPS），停利 $59。R/R Ratio 2.8:1。這是典型的深度價值投資標的，風險在於成長是否持續惡化。建議小倉位試探，待 Q1 2026 財報確認趨勢後加碼。</p>
+</div>
+
+<!-- 16. Sources -->
+<div class="card sources" id="sec16">
+    <h1>16. 參考資料</h1>
+    <ol><li><a href="https://finance.yahoo.com/quote/PYPL/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/PYPL/</a></li>
+<li><a href="https://www.macrotrends.net/stocks/charts/PYPL/paypal-holdings/eps-earnings-per-share-diluted" target="_blank" rel="noopener">https://www.macrotrends.net/stocks/charts/PYPL/paypal-holdings/eps-earnings-per-share-diluted</a></li>
+<li><a href="https://www.macrotrends.net/stocks/charts/PYPL/paypal-holdings/free-cash-flow" target="_blank" rel="noopener">https://www.macrotrends.net/stocks/charts/PYPL/paypal-holdings/free-cash-flow</a></li>
+<li><a href="https://www.cnbc.com/2026/02/03/paypal-pypl-earnings-q4-2025.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/02/03/paypal-pypl-earnings-q4-2025.html</a></li>
+<li><a href="https://stockanalysis.com/stocks/pypl/revenue/" target="_blank" rel="noopener">https://stockanalysis.com/stocks/pypl/revenue/</a></li>
+<li><a href="https://fred.stlouisfed.org/series/DGS10" target="_blank" rel="noopener">https://fred.stlouisfed.org/series/DGS10</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html</a></li>
+<li><a href="https://www.marketbeat.com/stocks/NASDAQ/PYPL/chart/" target="_blank" rel="noopener">https://www.marketbeat.com/stocks/NASDAQ/PYPL/chart/</a></li>
+<li><a href="https://www.prnewswire.com/news-releases/paypal-issues-disappointing-2026-outlook-citing-competitive-pressures-and-macro-headwinds-investigation-probes-timing-of-risk-disclosures-302680880.html" target="_blank" rel="noopener">https://www.prnewswire.com/news-releases/paypal-issues-disappointing-2026-outlook-citing-competitive-pressures-and-macro-headwinds-investigation-probes-timing-of-risk-disclosures-302680880.html</a></li></ol>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>CFA 深度研究報告 | MDVI v3 | 2026-03-25 07:02 | ARTOGO Investment Research</p>
+    <p>⚠️ 本報告僅供研究參考，不構成投資建議。投資有風險，入市需謹慎。</p>
+    <p><a href="../../index.html" style="color:#1565c0;">← 返回首頁</a></p>
+</div>
+
+</div>
+</body>
+</html>

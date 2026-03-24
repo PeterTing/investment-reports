@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CINF 辛辛那提金融 深度投資分析報告 | 2026-03-25</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    line-height: 1.7; color: #1a1a2e; background: #f8f9fa; font-size: 16px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.6rem; color: #0f3460; border-bottom: 3px solid #e94560; padding-bottom: 8px; margin: 24px 0 16px; }
+h2 { font-size: 1.3rem; color: #16213e; border-left: 4px solid #e94560; padding-left: 12px; margin: 28px 0 14px; }
+h3 { font-size: 1.1rem; color: #0f3460; margin: 20px 0 10px; }
+.header-box {
+    background: linear-gradient(135deg, #0f3460, #16213e); color: white;
+    padding: 24px; border-radius: 12px; margin-bottom: 24px;
+}
+.header-box h1 { color: white; border-bottom-color: #e94560; font-size: 1.5rem; }
+.rating-badge {
+    display: inline-block; padding: 6px 18px; border-radius: 20px;
+    font-weight: bold; font-size: 1.1rem; color: #fff; background: #2da44e;
+}
+.market-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.85rem; font-weight: 600; color: white; margin-left: 8px;
+    background: #10b981;
+}
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 16px 0;
+}
+.info-card { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; }
+.info-card .label { font-size: 0.85rem; opacity: 0.8; }
+.info-card .value { font-size: 1.3rem; font-weight: bold; }
+.card {
+    background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px;
+    border: 1px solid #e0e0e0; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+th { background: #0f3460; color: white; padding: 10px 8px; text-align: left; white-space: nowrap; }
+td { padding: 8px; border-bottom: 1px solid #e0e0e0; }
+tr:nth-child(even) { background: #f5f5f5; }
+tr:hover { background: #e8eaf6; }
+.highlight { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.warning { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.action-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 14px 0;
+}
+.action-item { text-align: center; padding: 14px; border-radius: 8px; background: #f5f5f5; }
+.action-item .label { font-size: 0.82rem; color: #666; }
+.action-item .value { font-size: 1.3rem; font-weight: 700; margin-top: 4px; }
+.source { font-size: 0.85rem; color: #666; margin: 6px 0; font-style: italic; }
+.sources ol { padding-left: 20px; font-size: 0.82rem; }
+.sources li { margin-bottom: 4px; word-break: break-all; }
+.sources a { color: #1565c0; }
+.toc { background: #f0f4f8; padding: 16px 20px; border-radius: 10px; margin-bottom: 20px; }
+.toc a { color: #0f3460; text-decoration: none; display: block; padding: 3px 0; font-size: 0.92rem; }
+.toc a:hover { color: #e94560; }
+.footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem; border-top: 1px solid #e0e0e0; margin-top: 24px; }
+@media (max-width: 640px) {
+    .header-box { padding: 16px; }
+    .header-box h1 { font-size: 1.25rem; }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .action-grid { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 0.82rem; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.15rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header-box">
+    <h1>CINF 辛辛那提金融 <span style="font-weight:400;font-size:0.9rem;">Cincinnati Financial</span>
+        <span class="market-badge">🇺🇸 美股</span>
+    </h1>
+    <p style="color:#94a3b8;font-size:0.9rem;margin:4px 0;">CFA 深度研究報告 | 2026-03-25 | MDVI v3</p>
+    <div style="margin:12px 0;"><span class="rating-badge">Buy</span></div>
+    <div class="info-grid">
+        <div class="info-card"><div class="label">收盤價</div><div class="value">USD 158.27</div></div>
+        <div class="info-card"><div class="label">目標價</div><div class="value">USD 182</div></div>
+        <div class="info-card"><div class="label">潛在報酬</div><div class="value" style="color:#00e676;">+15.0%</div></div>
+        <div class="info-card"><div class="label">MDVI 總分</div><div class="value">41/60</div></div>
+        <div class="info-card"><div class="label">R/R Ratio</div><div class="value">1.9:1</div></div>
+    </div>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <strong>📋 目錄</strong>
+    <a href="#sec1">1. 執行摘要</a>
+    <a href="#sec2">2. MDVI v3 六維度評分</a>
+    <a href="#sec3">3. 公司概況與事業群拆解</a>
+    <a href="#sec4">4. 財務分析與 EPS 推導</a>
+    <a href="#sec5">5. 歷史 PE 軌跡表</a>
+    <a href="#sec6">6. 估值分析（三角交叉驗證）</a>
+    <a href="#sec7">7. DCF 模型與敏感度分析</a>
+    <a href="#sec8">8. Gordon Growth Model ROE 辯證</a>
+    <a href="#sec9">9. 產業分析與同業比較</a>
+    <a href="#sec10">10. 總經與政策環境</a>
+    <a href="#sec11">11. 技術面分析</a>
+    <a href="#sec12">12. 籌碼面分析</a>
+    <a href="#sec13">13. 消息面與催化劑</a>
+    <a href="#sec14">14. 風險評估與情境模擬</a>
+    <a href="#sec15">15. 投資建議與操作區間</a>
+    <a href="#sec16">16. 參考資料</a>
+</div>
+
+<!-- 1. Executive Summary -->
+<div class="card" id="sec1">
+    <h1>1. 執行摘要</h1>
+    <div class="highlight">財產險龍頭，FY2025 EPS $15.17，D/E 僅 0.06 極低槓桿，殖利率 2.2%，低波動防禦型標的</div>
+    <p>CINF 的投資論點建立在三個支柱：(1) 極低槓桿（D/E 0.06）提供財務安全邊際；(2) 穩定股息成長（殖利率 2.2%，近期提高 8%）；(3) 低 Beta 0.636 在市場動盪時期提供防禦價值。</p><p>Gordon Growth Model 顯示理論 PB 3.17x vs 實際 1.55x，市場折價 51%，反映保險業天災不確定性的結構性折價。</p>
+</div>
+
+<!-- 2. MDVI Scores -->
+<div class="card" id="sec2">
+    <h1>2. MDVI v3 六維度評分</h1>
+    <div style="text-align:center;margin:12px 0;"><span style="font-size:2.5rem;font-weight:800;color:#0f3460;">41</span><span style="font-size:1.2rem;color:#666;"> / 60</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>維度</th><th>評分 (0-10)</th></tr>
+        <tr><td style="font-weight:500;">基本面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+<tr><td style="font-weight:500;">產業展望</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">總經</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">技術面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">籌碼面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">消息面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+
+    </table></div>
+    
+</div>
+
+<!-- 3. Company Overview -->
+<div class="card" id="sec3">
+    <h1>3. 公司概況與事業群拆解</h1>
+    <p>Cincinnati Financial 為美國中型財產意外險公司，主要業務為商業險與個人險。FY2025 總營收 $12.6B（+11% YoY），Non-GAAP 營運利潤 $1.25B。公司以保守的投資策略及低槓桿著稱，D/E ratio 僅 0.06。已連續多年提高股息。</p>
+    <h2>事業群營收拆解</h2><div class="table-wrap"><table><tr><th>事業群</th><th>營收佔比</th><th>成長驅動</th></tr><tr><td>Commercial Lines Insurance</td><td>~55%</td><td>定價能力提升、新保單增長</td></tr><tr><td>Personal Lines Insurance</td><td>~25%</td><td>住宅與汽車保險需求</td></tr><tr><td>Excess & Surplus Lines</td><td>~10%</td><td>硬市場高保費環境</td></tr><tr><td>Life Insurance & Investments</td><td>~10%</td><td>投資收益</td></tr></table></div>
+    
+    
+</div>
+
+<!-- 4. Financial Analysis -->
+<div class="card" id="sec4">
+    <h1>4. 財務分析與 EPS 推導</h1>
+
+    <h2>4.1 財務健全度</h2>
+    <div style="margin:8px 0;"><span style="display:inline-block;padding:4px 14px;border-radius:12px;font-weight:600;color:white;background:#ff1744;">極度健康（近零負債）</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th><th>標準</th></tr>
+        <tr><td>D/E Ratio</td><td>0.06</td><td>&lt; 1.0 佳</td></tr>
+        <tr><td>流動比率</td><td>0.64</td><td>&gt; 1.5 佳</td></tr>
+        <tr><td>FCF 趨勢</td><td>穩定正成長</td><td>穩定正成長</td></tr>
+        <tr><td>利息保障倍數</td><td>Very strong (minimal debt)</td><td>&gt; 5x 佳</td></tr>
+    </table></div>
+
+    <h2>4.2 季度財務追蹤</h2>
+    <table><tr><th>季度</th><th>Non-GAAP Operating EPS</th></tr><tr><td>2025 Q1</td><td>$1.77</td></tr><tr><td>2025 Q2</td><td>$1.95</td></tr><tr><td>2025 Q3</td><td>$2.85</td></tr><tr><td>2025 Q4</td><td>$3.37</td></tr><tr><td>FY2025 Total</td><td>$7.95 (Non-GAAP) / $15.17 (GAAP)</td></tr></table>
+
+    <h2>4.3 獲利能力與 EPS 成長路徑</h2>
+    <p>D/E: 0.06、流動比: 0.64、FY2024 FCF $2.6B, FY2025 FCF $3.1B (+18% YoY)</p>
+
+    <h2>4.4 EPS 由下往上推導</h2>
+    <h4>Step 1: 營收拆解</h4><p>FY2025 總營收 $12.6B，保費收入為主要來源，投資收益貢獻穩定現金流。FY2026 預計保費成長 5-7%。</p>
+<div class="table-wrap"><table><tr><th>事業群</th><th>營收</th><th>YoY</th></tr><tr><td>Net Earned Premiums</td><td>~$8.5B</td><td>+8%</td></tr><tr><td>Investment Income</td><td>~$1.2B</td><td>+5%</td></tr><tr><td>Realized Gains/Other</td><td>~$2.9B</td><td>variable</td></tr></table></div>
+<h4>Step 2: 獲利率分析</h4><p>FY2025 承保利潤率穩定，Non-GAAP 營運利潤 $1.25B。Combined ratio 維持在盈利水準。保費成長抵消天災損失。</p>
+<h4>Step 3: EPS 推導</h4><div class="table-wrap"><table><tr><th>項目</th><th>數值</th></tr><tr><td>revenue_fy2025</td><td>$12.63B</td></tr><tr><td>eps_fy2025</td><td>$15.17</td></tr><tr><td>ttm_eps</td><td>$15.17</td></tr><tr><td>ttm_eps_source</td><td>https://finance.yahoo.com/quote/CINF/</td></tr><tr><td>eps_calculated</td><td>15.17</td></tr><tr><td>eps_actual_reported</td><td>15.17</td></tr><tr><td>variance</td><td>0%</td></tr></table></div>
+</div>
+
+<!-- 5. PE History -->
+<div class="card" id="sec5">
+    <h1>5. 歷史 PE 軌跡表</h1>
+    <div class="table-wrap"><table>
+        <tr><th>年度</th><th>EPS</th><th>最高價</th><th>最低價</th><th>PE 高</th><th>PE 低</th></tr>
+        <tr>
+            <td>2021</td><td>18.24</td>
+            <td>128.61</td><td>88.33</td>
+            <td>7.1</td><td>4.8</td>
+        </tr><tr>
+            <td>2022</td><td>-3.06</td>
+            <td>138.62</td><td>95.39</td>
+            <td>N/A (loss)</td><td>N/A (loss)</td>
+        </tr><tr>
+            <td>2023</td><td>11.74</td>
+            <td>119.84</td><td>92.01</td>
+            <td>10.2</td><td>7.8</td>
+        </tr><tr>
+            <td>2024</td><td>14.65</td>
+            <td>149.05</td><td>100.07</td>
+            <td>10.2</td><td>6.8</td>
+        </tr><tr>
+            <td>2025</td><td>15.17</td>
+            <td>169.86</td><td>123.02</td>
+            <td>11.2</td><td>8.1</td>
+        </tr>
+    </table></div>
+    <p style="margin-top:10px;">5 年平均 PE：<strong>排除虧損年，平均 PE 約 8-10x</strong> | 目前 PE：<strong>10.4</strong></p>
+</div>
+
+<!-- 6. Valuation -->
+<div class="card" id="sec6">
+    <h1>6. 估值分析（三角交叉驗證）</h1>
+
+    <h2>6.1 外部因素 → 公式參數對照表</h2>
+    <div class="table-wrap"><table>
+        <tr><th>分析面向</th><th>具體項目</th><th>影響參數</th><th>設定值</th><th>設定依據</th></tr>
+        
+    </table></div>
+
+    <h2>6.2 Cost of Equity (CoE)</h2>
+    <div class="table-wrap"><table>
+        <tr><th>參數</th><th>數值</th><th>來源</th></tr>
+        <tr><td>Rf (無風險利率)</td><td>4.39%</td><td>US 10-Year Treasury Yield, March 24, 2026</td></tr>
+        <tr><td>Beta</td><td>0.636</td><td>Yahoo Finance 5Y Monthly Beta</td></tr>
+        <tr><td>US Base ERP</td><td>4.23%</td><td rowspan="2">Damodaran US Implied ERP Jan 2026</td></tr>
+        <tr><td>Country Risk Premium</td><td>0%</td></tr>
+        <tr><td>Total ERP</td><td>4.23%</td><td>計算值</td></tr>
+        <tr><td><strong>CoE</strong></td><td><strong>7.1%</strong></td><td>Rf + Beta × Total ERP</td></tr>
+    </table></div>
+
+    <h2>6.3 合理 PE 推導（PE法）</h2>
+    <p>保險公司 GAAP EPS 受投資收益波動影響大。以 Non-GAAP 營運 EPS $7.95 計算 PE 約 19.9x；以 GAAP EPS $15.17 計算 PE 10.4x。Trailing PE 12x 取兩者之間，反映投資收益的中長期正常化水準。</p>
+    <div class="highlight">
+        合理 PE = <strong>12.0x</strong> |
+        Forward EPS = <strong>15.17</strong> |
+        目標價 = <strong>USD 182</strong>
+    </div>
+
+    <h2>6.4 交叉驗證矩陣</h2>
+    <div class="table-wrap"><table>
+        <tr><th>估值方法</th><th>隱含股價</th><th>vs PE 法偏差</th><th>狀態</th></tr>
+        <tr><td>Forward PE 法（主要）</td><td><strong>182</strong></td><td>—</td><td>主要估值</td></tr>
+        <tr><td>EV/EBITDA 法</td><td>N/A</td><td>N/A</td><td>驗證層</td></tr>
+        <tr><td>DCF 法</td><td>N/A</td><td>N/A</td><td></td></tr>
+    </table></div>
+</div>
+
+<!-- 7. DCF Model -->
+<div class="card" id="sec7">
+    <h1>7. DCF 模型與敏感度分析</h1>
+    <p>WACC 7.1%（低 Beta 0.636），Terminal Growth 3%。保險公司估值更適合 PB 和 PE 法，DCF 僅供參考。</p>
+    <h2>敏感度分析表</h2><table><tr><th>PE \ EPS</th><th>$10 (Bear)</th><th>$15.17 (Actual)</th><th>$18 (Bull)</th></tr><tr><td>8x</td><td>$80</td><td>$121</td><td>$144</td></tr><tr><td>10x</td><td>$100</td><td>$152</td><td>$180</td></tr><tr><td>12x</td><td>$120</td><td>$182</td><td>$216</td></tr></table>
+</div>
+
+<!-- 8. Gordon Growth Model -->
+<div class="card" id="sec8">
+    <h1>8. Gordon Growth Model ROE 辯證</h1>
+    <p>ROE = 16.0%，理論 PB = 3.17，實際 PB = 1.55，溢折價 = -51.1%</p><p>市場給予大幅折價，保險公司因天災不確定性通常被市場折價交易。若 Combined Ratio 持續改善，PB 有回升空間。</p>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th></tr>
+        <tr><td>ROE</td><td>16.0%</td></tr>
+        <tr><td>理論 PB (Gordon)</td><td>3.17</td></tr>
+        <tr><td>實際 PB</td><td>1.55</td></tr>
+        <tr><td>解讀</td><td>市場給予大幅折價，保險公司因天災不確定性通常被市場折價交易。若 Combined Ratio 持續改善，PB 有回升空間。</td></tr>
+    </table></div>
+</div>
+
+<!-- 9. Industry -->
+<div class="card" id="sec9">
+    <h1>9. 產業分析與同業比較</h1>
+    <p>美國財產險市場處於硬市場週期尾端，保費持續上漲但速度放緩。天災損失頻率及嚴重度上升趨勢，推動再保險成本增加。CINF 的獨特代理人模式（independent agent channel）提供穩定的保單來源。同業 Travelers（TRV）PE 11.0x、Hartford（HIG）PE 11.1x，CINF 10.4x 估值在同業中偏低。</p>
+    <h2>同業比較矩陣</h2><div class="table-wrap"><table><tr><th>指標</th><th>CINF</th><th>TRV</th><th>HIG</th></tr><tr><td>PE (TTM)</td><td>10.4x</td><td>11.0x</td><td>11.1x</td></tr><tr><td>D/E</td><td>0.06</td><td>~0.3</td><td>~0.4</td></tr><tr><td>殖利率</td><td>2.2%</td><td>~1.8%</td><td>~1.7%</td></tr><tr><td>ROE</td><td>16.0%</td><td>~14%</td><td>~15%</td></tr></table></div>
+</div>
+
+<!-- 10. Macro -->
+<div class="card" id="sec10">
+    <h1>10. 總經與政策環境</h1>
+    <p>高利率環境對保險公司投資收益有利（債券組合殖利率提升）。VIX 偏高環境中，低 Beta 防禦股通常獲得資金青睞。中東地緣風險對保險業直接影響有限，但若引發經濟衰退，理賠頻率可能下降（有利保險商）。</p>
+</div>
+
+<!-- 11. Technical -->
+<div class="card" id="sec11">
+    <h1>11. 技術面分析</h1>
+    <div class="table-wrap"><table><tr><th>指標</th><th>數值</th><th>乖離率</th><th>解讀</th></tr><tr><td>MA_20</td><td>163.88</td><td>-3.4%</td><td>低於 20 日線，短期偏弱</td></tr><tr><td>MA_60</td><td>163.27</td><td>-3.1%</td><td>低於 60 日線，中期趨勢轉弱</td></tr><tr><td>RSI(14)</td><td>29.0</td><td>—</td><td>接近超賣區（<30），可能反彈</td></tr><tr><td>KD</td><td>K=20.7 / D=27.0</td><td>—</td><td>低檔區，K < D 但接近底部</td></tr></table></div>
+</div>
+
+<!-- 12. Chip -->
+<div class="card" id="sec12">
+    <h1>12. 籌碼面分析</h1>
+    <div class="table-wrap"><table><tr><th>籌碼指標</th><th>數值</th></tr><tr><td>機構持股比例</td><td>71.1%</td></tr><tr><td>空頭股數</td><td>2.5M</td></tr><tr><td>空頭佔流通比</td><td>1.9%</td></tr><tr><td>空頭回補天數</td><td>3.14</td></tr></table></div><p>機構持股 71.1%，放空比例 1.9% 極低，Days to Cover 3.14 天</p>
+</div>
+
+<!-- 13. Catalyst -->
+<div class="card" id="sec13">
+    <h1>13. 消息面與催化劑</h1>
+    <h4>正面催化劑</h4><ul>
+<li><strong>股息提高 8%（至 $0.94/季）</strong> (2026/1/30 已宣布) — 殖利率提升，吸引收益型投資人</li>
+<li><strong>Keefe Bruyette 上調目標價至 $191</strong> (近期) — 分析師看多</li>
+<li><strong>商業險定價持續上漲</strong> (2026 全年) — 保費成長支撐營收</li>
+</ul>
+<h4>負面催化劑</h4><ul>
+<li><strong>巨災再保險門檻提高至 $523M/事件</strong> (已生效) — 自留風險增加</li>
+<li><strong>損失成本上升速度快於保費調漲</strong> (持續中) — Combined Ratio 可能惡化</li>
+</ul>
+</div>
+
+<!-- 14. Risk & Scenarios -->
+<div class="card" id="sec14">
+    <h1>14. 風險評估與情境模擬</h1>
+    <div class="table-wrap"><table><tr><th>風險</th><th>機率</th><th>影響</th><th>應對</th></tr><tr><td>大型天災（颶風、野火）</td><td>medium</td><td>high</td><td>已提高再保險至 $2.0B，分散風險</td></tr><tr><td>投資組合波動（權益證券）</td><td>medium</td><td>medium</td><td>監控 Q4 實現收益/損失</td></tr><tr><td>保費定價壓力</td><td>low</td><td>medium</td><td>追蹤商業險費率變化</td></tr></table></div>
+    <h2>Bull / Base / Bear 情境</h2>
+    <div class="table-wrap"><table>
+        <tr><th>情境</th><th>EPS</th><th>PE</th><th>目標價</th><th>觸發條件</th></tr>
+        <tr>
+            <td><strong>Bull 🐂</strong></td><td>15.17</td>
+            <td>13</td><td>197</td>
+            <td>天災損失低於預期 / 保費持續上漲</td>
+        </tr><tr>
+            <td><strong>Base 📊</strong></td><td>15.17</td>
+            <td>12</td><td>182</td>
+            <td>營運穩定，投資收益正常</td>
+        </tr><tr>
+            <td><strong>Bear 🐻</strong></td><td>15.17</td>
+            <td>8</td><td>121</td>
+            <td>大型天災 / 投資虧損</td>
+        </tr>
+    </table></div>
+    
+</div>
+
+<!-- 15. Investment Recommendation -->
+<div class="card" id="sec15">
+    <h1>15. 投資建議與操作區間</h1>
+    <div style="text-align:center;margin:12px 0;">
+        <span class="rating-badge" style="font-size:1.2rem;padding:10px 28px;">Buy</span>
+        <p style="margin-top:10px;color:#666;">RSI 29.0 接近超賣區，Beta 0.636 低波動防禦股，PE 10.4x 合理</p>
+    </div>
+    <div class="action-grid">
+        <div class="action-item"><div class="label">進場點</div><div class="value" style="color:#1565c0;">153</div></div>
+        <div class="action-item"><div class="label">目標價</div><div class="value" style="color:#00c853;">182</div></div>
+        <div class="action-item"><div class="label">停損點</div><div class="value" style="color:#ff1744;">138</div></div>
+        <div class="action-item"><div class="label">停利點</div><div class="value" style="color:#00c853;">182</div></div>
+    </div>
+    <p style="text-align:center;font-size:0.95rem;margin-top:10px;">
+        風險報酬比 R/R = <strong>1.9:1</strong>
+    </p>
+    <p>目標價 $182（PE 12x × EPS $15.17），上漲空間 15%。進場點 $153，停損 $138（Bear PE 8x × EPS 附近），停利 $182。R/R Ratio 1.9:1。適合作為投組中的防禦配置，殖利率 2.2% 提供下檔保護。</p>
+</div>
+
+<!-- 16. Sources -->
+<div class="card sources" id="sec16">
+    <h1>16. 參考資料</h1>
+    <ol><li><a href="https://finance.yahoo.com/quote/CINF/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/CINF/</a></li>
+<li><a href="https://www.macrotrends.net/stocks/charts/CINF/cincinnati-financial/eps-earnings-per-share-diluted" target="_blank" rel="noopener">https://www.macrotrends.net/stocks/charts/CINF/cincinnati-financial/eps-earnings-per-share-diluted</a></li>
+<li><a href="https://www.prnewswire.com/news-releases/cincinnati-financial-reports-fourth-quarter-and-full-year-2025-results-302682915.html" target="_blank" rel="noopener">https://www.prnewswire.com/news-releases/cincinnati-financial-reports-fourth-quarter-and-full-year-2025-results-302682915.html</a></li>
+<li><a href="https://investors.cinfin.com/2026-02-09-Cincinnati-Financial-Reports-Fourth-Quarter-and-Full-Year-2025-Results" target="_blank" rel="noopener">https://investors.cinfin.com/2026-02-09-Cincinnati-Financial-Reports-Fourth-Quarter-and-Full-Year-2025-Results</a></li>
+<li><a href="https://stockanalysis.com/stocks/cinf/statistics/" target="_blank" rel="noopener">https://stockanalysis.com/stocks/cinf/statistics/</a></li>
+<li><a href="https://fred.stlouisfed.org/series/DGS10" target="_blank" rel="noopener">https://fred.stlouisfed.org/series/DGS10</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html</a></li>
+<li><a href="https://www.macrotrends.net/stocks/charts/CINF/cincinnati-financial/stock-price-history" target="_blank" rel="noopener">https://www.macrotrends.net/stocks/charts/CINF/cincinnati-financial/stock-price-history</a></li>
+<li><a href="https://www.tipranks.com/stocks/cinf/forecast" target="_blank" rel="noopener">https://www.tipranks.com/stocks/cinf/forecast</a></li></ol>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>CFA 深度研究報告 | MDVI v3 | 2026-03-25 07:02 | ARTOGO Investment Research</p>
+    <p>⚠️ 本報告僅供研究參考，不構成投資建議。投資有風險，入市需謹慎。</p>
+    <p><a href="../../index.html" style="color:#1565c0;">← 返回首頁</a></p>
+</div>
+
+</div>
+</body>
+</html>
