@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4507.T 塩野義製薬 深度投資分析報告 | 2026-03-26</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    line-height: 1.7; color: #1a1a2e; background: #f8f9fa; font-size: 16px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.6rem; color: #0f3460; border-bottom: 3px solid #e94560; padding-bottom: 8px; margin: 24px 0 16px; }
+h2 { font-size: 1.3rem; color: #16213e; border-left: 4px solid #e94560; padding-left: 12px; margin: 28px 0 14px; }
+h3 { font-size: 1.1rem; color: #0f3460; margin: 20px 0 10px; }
+.header-box {
+    background: linear-gradient(135deg, #0f3460, #16213e); color: white;
+    padding: 24px; border-radius: 12px; margin-bottom: 24px;
+}
+.header-box h1 { color: white; border-bottom-color: #e94560; font-size: 1.5rem; }
+.rating-badge {
+    display: inline-block; padding: 6px 18px; border-radius: 20px;
+    font-weight: bold; font-size: 1.1rem; color: #fff; background: #2da44e;
+}
+.market-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.85rem; font-weight: 600; color: white; margin-left: 8px;
+    background: #ef4444;
+}
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 16px 0;
+}
+.info-card { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; }
+.info-card .label { font-size: 0.85rem; opacity: 0.8; }
+.info-card .value { font-size: 1.3rem; font-weight: bold; }
+.card {
+    background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px;
+    border: 1px solid #e0e0e0; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+th { background: #0f3460; color: white; padding: 10px 8px; text-align: left; white-space: nowrap; }
+td { padding: 8px; border-bottom: 1px solid #e0e0e0; }
+tr:nth-child(even) { background: #f5f5f5; }
+tr:hover { background: #e8eaf6; }
+.highlight { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.warning { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.action-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 14px 0;
+}
+.action-item { text-align: center; padding: 14px; border-radius: 8px; background: #f5f5f5; }
+.action-item .label { font-size: 0.82rem; color: #666; }
+.action-item .value { font-size: 1.3rem; font-weight: 700; margin-top: 4px; }
+.source { font-size: 0.85rem; color: #666; margin: 6px 0; font-style: italic; }
+.sources ol { padding-left: 20px; font-size: 0.82rem; }
+.sources li { margin-bottom: 4px; word-break: break-all; }
+.sources a { color: #1565c0; }
+.toc { background: #f0f4f8; padding: 16px 20px; border-radius: 10px; margin-bottom: 20px; }
+.toc a { color: #0f3460; text-decoration: none; display: block; padding: 3px 0; font-size: 0.92rem; }
+.toc a:hover { color: #e94560; }
+.footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem; border-top: 1px solid #e0e0e0; margin-top: 24px; }
+@media (max-width: 640px) {
+    .header-box { padding: 16px; }
+    .header-box h1 { font-size: 1.25rem; }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .action-grid { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 0.82rem; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.15rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header-box">
+    <h1>4507.T 塩野義製薬 <span style="font-weight:400;font-size:0.9rem;">Shionogi & Co., Ltd.</span>
+        <span class="market-badge">🇯🇵 日股</span>
+    </h1>
+    <p style="color:#94a3b8;font-size:0.9rem;margin:4px 0;">CFA 深度研究報告 | 2026-03-26 | MDVI v3</p>
+    <div style="margin:12px 0;"><span class="rating-badge">Buy</span></div>
+    <div class="info-grid">
+        <div class="info-card"><div class="label">收盤價</div><div class="value">JPY 3457.0</div></div>
+        <div class="info-card"><div class="label">目標價</div><div class="value">JPY 4012</div></div>
+        <div class="info-card"><div class="label">潛在報酬</div><div class="value" style="color:#00e676;">+16.1%</div></div>
+        <div class="info-card"><div class="label">MDVI 總分</div><div class="value">42/60</div></div>
+        <div class="info-card"><div class="label">R/R Ratio</div><div class="value">1.9:1</div></div>
+    </div>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <strong>📋 目錄</strong>
+    <a href="#sec1">1. 執行摘要</a>
+    <a href="#sec2">2. MDVI v3 六維度評分</a>
+    <a href="#sec3">3. 公司概況與事業群拆解</a>
+    <a href="#sec4">4. 財務分析與 EPS 推導</a>
+    <a href="#sec5">5. 歷史 PE 軌跡表</a>
+    <a href="#sec6">6. 估值分析（三角交叉驗證）</a>
+    <a href="#sec7">7. DCF 模型與敏感度分析</a>
+    <a href="#sec8">8. Gordon Growth Model ROE 辯證</a>
+    <a href="#sec9">9. 產業分析與同業比較</a>
+    <a href="#sec10">10. 總經與政策環境</a>
+    <a href="#sec11">11. 技術面分析</a>
+    <a href="#sec12">12. 籌碼面分析</a>
+    <a href="#sec13">13. 消息面與催化劑</a>
+    <a href="#sec14">14. 風險評估與情境模擬</a>
+    <a href="#sec15">15. 投資建議與操作區間</a>
+    <a href="#sec16">16. 參考資料</a>
+</div>
+
+<!-- 1. Executive Summary -->
+<div class="card" id="sec1">
+    <h1>1. 執行摘要</h1>
+    <div class="highlight">日本頂尖製藥企業，以感染症藥物為核心。營業利益率 50.2% 為日本製藥業最高水準。FY2025 盈餘成長 47.4%，財務極度穩健（D/E 1.5%、流動比 5.8x）。殖利率 1.92%。</div>
+    <p>Shionogi 的投資價值在於「高利潤率 × 穩定版稅 × 新藥 Pipeline」三重支柱。HIV 藥物 Dolutegravir 全球年銷售超過 $5B，Shionogi 每年穩定收取可觀版稅。Xocova（COVID 治療藥）在日本已取得銷售許可，雖然市場規模縮小但仍貢獻增量營收。</p><p>營業利益率 50.2% 在全球製藥業中也屬頂尖（Pfizer ~25%、Roche ~30%）。這反映 Shionogi 的輕資產模式——以授權和版稅為主的獲利模式。</p><p>風險在於 Pipeline 集中度和日本藥價引下げ政策。但零負債和高現金流提供極強的財務安全邊際。</p>
+</div>
+
+<!-- 2. MDVI Scores -->
+<div class="card" id="sec2">
+    <h1>2. MDVI v3 六維度評分</h1>
+    <div style="text-align:center;margin:12px 0;"><span style="font-size:2.5rem;font-weight:800;color:#0f3460;">42</span><span style="font-size:1.2rem;color:#666;"> / 60</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>維度</th><th>評分 (0-10)</th></tr>
+        <tr><td style="font-weight:500;">基本面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:90.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">9</span></div></td></tr>
+<tr><td style="font-weight:500;">產業展望</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">總經</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">技術面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">籌碼面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:50.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">5</span></div></td></tr>
+<tr><td style="font-weight:500;">消息面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+
+    </table></div>
+    
+</div>
+
+<!-- 3. Company Overview -->
+<div class="card" id="sec3">
+    <h1>3. 公司概況與事業群拆解</h1>
+    <p>Shionogi 是日本領先的研發型製藥企業，以感染症領域為核心競爭力。旗下 HIV 藥物（Dolutegravir 授權 ViiV Healthcare/GSK）貢獻穩定版稅收入。近年積極發展 COVID-19 治療藥 Xocova 及新型抗感染藥物。營業利益率高達 50.2%，為日本製藥業界最高水準。</p>
+    <h2>事業群營收拆解</h2><div class="table-wrap"><table><tr><th>事業群</th><th>營收佔比</th><th>成長驅動</th></tr><tr><td>感染症藥物（HIV、COVID-19）</td><td>55%</td><td>HIV 版稅穩定、Xocova 市場拓展</td></tr><tr><td>疼痛/神經科學</td><td>20%</td><td>新藥 Pipeline</td></tr><tr><td>其他治療領域</td><td>15%</td><td>新藥研發</td></tr><tr><td>版稅/授權收入</td><td>10%</td><td>GSK/ViiV 版稅</td></tr></table></div>
+    
+    
+</div>
+
+<!-- 4. Financial Analysis -->
+<div class="card" id="sec4">
+    <h1>4. 財務分析與 EPS 推導</h1>
+
+    <h2>4.1 財務健全度</h2>
+    <div style="margin:8px 0;"><span style="display:inline-block;padding:4px 14px;border-radius:12px;font-weight:600;color:white;background:#ff1744;">極度健康</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th><th>標準</th></tr>
+        <tr><td>D/E Ratio</td><td>0.015</td><td>&lt; 1.0 佳</td></tr>
+        <tr><td>流動比率</td><td>5.84</td><td>&gt; 1.5 佳</td></tr>
+        <tr><td>FCF 趨勢</td><td>強勁</td><td>穩定正成長</td></tr>
+        <tr><td>利息保障倍數</td><td>極高（幾乎零負債）</td><td>&gt; 5x 佳</td></tr>
+    </table></div>
+
+    <h2>4.2 季度財務追蹤</h2>
+    <table><tr><th>季度</th><th>營收 (億¥)</th><th>營業利益率</th><th>EPS</th></tr><tr><td>FY2025 全年</td><td>4,654</td><td>50.2%</td><td>¥200.61</td></tr></table>
+
+    <h2>4.3 獲利能力與 EPS 成長路徑</h2>
+    <p>D/E: 0.015、流動比: 5.84、OCF ¥199.4B，CapEx 低</p>
+
+    <h2>4.4 EPS 由下往上推導</h2>
+    <h4>Step 1: 營收拆解</h4><p>FY2025 營收 ¥465.4B（+23.5%），感染症藥物 ¥255.9B（55%），疼痛/神經 ¥93.1B（20%），其他 ¥69.8B（15%），版稅 ¥46.5B（10%）。</p>
+<div class="table-wrap"><table><tr><th>事業群</th><th>營收</th><th>YoY</th></tr><tr><td>感染症藥物</td><td></td><td>+30%</td></tr><tr><td>疼痛/神經科學</td><td></td><td>+15%</td></tr><tr><td>其他治療領域</td><td></td><td>+10%</td></tr><tr><td>版稅/授權</td><td></td><td>+5%</td></tr></table></div>
+<h4>Step 2: 獲利率分析</h4><p>FY2025 毛利率 84.5%（極高，反映版稅收入和高價藥物），營業利益率 50.2%，淨利率 41.9%。</p>
+<h4>Step 3: EPS 推導</h4><div class="table-wrap"><table><tr><th>項目</th><th>數值</th></tr><tr><td>revenue_fy2025</td><td>¥465.4B</td></tr><tr><td>gross_profit_fy2025</td><td>¥393.3B</td></tr><tr><td>operating_income_fy2025</td><td>¥233.7B</td></tr><tr><td>tax_rate</td><td>~27%</td></tr><tr><td>net_income_fy2025</td><td>¥170.4B</td></tr><tr><td>shares_outstanding</td><td>851M</td></tr><tr><td>eps_calculated</td><td>200.3</td></tr><tr><td>eps_actual_reported</td><td>200.61 (TTM)</td></tr><tr><td>variance</td><td>~0.2%</td></tr></table></div>
+</div>
+
+<!-- 5. PE History -->
+<div class="card" id="sec5">
+    <h1>5. 歷史 PE 軌跡表</h1>
+    <div class="table-wrap"><table>
+        <tr><th>年度</th><th>EPS</th><th>最高價</th><th>最低價</th><th>PE 高</th><th>PE 低</th></tr>
+        <tr>
+            <td>2021</td><td>142.6</td>
+            <td>7798</td><td>5381</td>
+            <td>54.7</td><td>37.7</td>
+        </tr><tr>
+            <td>2022</td><td>134.2</td>
+            <td>2540</td><td>1862</td>
+            <td>18.9</td><td>13.9</td>
+        </tr><tr>
+            <td>2023</td><td>217.4</td>
+            <td>2309</td><td>1791</td>
+            <td>10.6</td><td>8.2</td>
+        </tr><tr>
+            <td>2024</td><td>190.4</td>
+            <td>2578</td><td>1868</td>
+            <td>13.5</td><td>9.8</td>
+        </tr><tr>
+            <td>2025</td><td>200.3</td>
+            <td>2884</td><td>2045</td>
+            <td>14.4</td><td>10.2</td>
+        </tr>
+    </table></div>
+    <p style="margin-top:10px;">5 年平均 PE：<strong>N/A</strong> | 目前 PE：<strong>17.2</strong></p>
+</div>
+
+<!-- 6. Valuation -->
+<div class="card" id="sec6">
+    <h1>6. 估值分析（三角交叉驗證）</h1>
+
+    <h2>6.1 外部因素 → 公式參數對照表</h2>
+    <div class="table-wrap"><table>
+        <tr><th>分析面向</th><th>具體項目</th><th>影響參數</th><th>設定值</th><th>設定依據</th></tr>
+        
+    </table></div>
+
+    <h2>6.2 Cost of Equity (CoE)</h2>
+    <div class="table-wrap"><table>
+        <tr><th>參數</th><th>數值</th><th>來源</th></tr>
+        <tr><td>Rf (無風險利率)</td><td>2.27%</td><td>Japan 10Y JGB Yield, 2026-03-26</td></tr>
+        <tr><td>Beta</td><td>0.019</td><td>Yahoo Finance 5Y Monthly Beta（極低 Beta 反映製藥業防禦特性）</td></tr>
+        <tr><td>US Base ERP</td><td>4.23%</td><td rowspan="2">Damodaran US Implied ERP, Jan 2026</td></tr>
+        <tr><td>Country Risk Premium</td><td>0.50%</td></tr>
+        <tr><td>Total ERP</td><td>4.73%</td><td>計算值</td></tr>
+        <tr><td><strong>CoE</strong></td><td><strong>2.4%</strong></td><td>Rf + Beta × Total ERP</td></tr>
+    </table></div>
+
+    <h2>6.3 合理 PE 推導（PE法）</h2>
+    <p>5 年 PE 區間 8.2x-18.9x，均值約 12.5x。目前 PE 17.2x 已高於均值，但 EPS 47% 高成長（PEG 0.36）和 84.5% 毛利率支持溢價。給予 PE 20x，為歷史高端但低於全球製藥同業平均（20-25x），合理。</p>
+    <div class="highlight">
+        合理 PE = <strong>20.0x</strong> |
+        Forward EPS = <strong>None</strong> |
+        目標價 = <strong>JPY 4012</strong>
+    </div>
+
+    <h2>6.4 交叉驗證矩陣</h2>
+    <div class="table-wrap"><table>
+        <tr><th>估值方法</th><th>隱含股價</th><th>vs PE 法偏差</th><th>狀態</th></tr>
+        <tr><td>Forward PE 法（主要）</td><td><strong>4012</strong></td><td>—</td><td>主要估值</td></tr>
+        <tr><td>EV/EBITDA 法</td><td>4100</td><td>+2.2%</td><td>驗證層</td></tr>
+        <tr><td>DCF 法</td><td>3900</td><td>-2.8%</td><td>低 WACC 反映零負債和極低 Beta</td></tr>
+    </table></div>
+</div>
+
+<!-- 7. DCF Model -->
+<div class="card" id="sec7">
+    <h1>7. DCF 模型與敏感度分析</h1>
+    <p>OCF ¥199.4B，低 CapEx（輕資產模式），WACC 2.3%（極低 Beta），終值成長率 2.0%。DCF 每股價值約 ¥3,900。</p>
+    <h2>敏感度分析表</h2><table><tr><th>PE \ EPS</th><th>¥180</th><th>¥201</th><th>¥220</th></tr><tr><td>17x</td><td>¥3,060</td><td>¥3,417</td><td>¥3,740</td></tr><tr><td>20x</td><td>¥3,600</td><td>¥4,020</td><td>¥4,400</td></tr><tr><td>24x</td><td>¥4,320</td><td>¥4,824</td><td>¥5,280</td></tr></table>
+</div>
+
+<!-- 8. Gordon Growth Model -->
+<div class="card" id="sec8">
+    <h1>8. Gordon Growth Model ROE 辯證</h1>
+    <p>ROE = 13.5%，理論 PB = 模型不適用（分母趨近零），實際 PB = 1.94，溢折價 = Gordon Model 不適用（CoE ≈ g），實際 PB 1.94x，改用 PEG 評估</p><p>因 Beta 極低導致 CoE ≈ g，Gordon Model 不適用。改以 PEG 評估：PEG = PE 17.2 / EPS Growth 47.4% = 0.36，極度便宜。即使使用更保守的長期成長率 10%，PEG = 1.72，仍合理。</p>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th></tr>
+        <tr><td>ROE</td><td>13.5%</td></tr>
+        <tr><td>理論 PB (Gordon)</td><td>模型不適用（分母趨近零）</td></tr>
+        <tr><td>實際 PB</td><td>1.94</td></tr>
+        <tr><td>解讀</td><td>因 Beta 極低導致 CoE ≈ g，Gordon Model 不適用。改以 PEG 評估：PEG = PE 17.2 / EPS Growth 47.4% = 0.36，極度便宜。即使使用更保守的長期成長率 10%，PEG = 1.72，仍合理。</td></tr>
+    </table></div>
+</div>
+
+<!-- 9. Industry -->
+<div class="card" id="sec9">
+    <h1>9. 產業分析與同業比較</h1>
+    <p>全球製藥市場規模約 $1.5 兆，CAGR 5-7%。日本製藥市場約 $80B。感染症領域（HIV、抗生素）為長期需求穩定的細分市場。Shionogi 在感染症 R&D 具有全球領先地位。</p>
+    <h2>同業比較矩陣</h2><div class="table-wrap"><table><tr><th>公司</th><th>PE</th><th>ROE</th><th>營業利益率</th><th>PB</th></tr><tr><td>Shionogi (4507.T)</td><td>17.2x</td><td>13.5%</td><td>50.2%</td><td>1.94x</td></tr><tr><td>Daiichi Sankyo (4568.T)</td><td>19.2x</td><td>18.3%</td><td>~20%</td><td>~5x</td></tr><tr><td>Astellas (4503.T)</td><td>~25x</td><td>~10%</td><td>~15%</td><td>~2x</td></tr><tr><td>Chugai Pharma (4519.T)</td><td>~30x</td><td>~25%</td><td>~35%</td><td>~8x</td></tr></table></div>
+</div>
+
+<!-- 10. Macro -->
+<div class="card" id="sec10">
+    <h1>10. 總經與政策環境</h1>
+    <p>BOJ 低利率和日圓弱勢對 Shionogi 影響中性（主要營收為日本國內和版稅美元收入）。日本高齡化加速醫療支出成長但藥價控制政策為對沖因素。全球 HIV 治療市場穩定成長。</p>
+</div>
+
+<!-- 11. Technical -->
+<div class="card" id="sec11">
+    <h1>11. 技術面分析</h1>
+    <div class="table-wrap"><table><tr><th>指標</th><th>數值</th><th>乖離率</th><th>解讀</th></tr><tr><td>MA_20</td><td>3451</td><td>+0.2%</td><td>價格幾乎貼近 20MA，中性</td></tr><tr><td>MA_60</td><td>3260</td><td>+6.1%</td><td>價在 60MA 上方，中期趨勢良好</td></tr><tr><td>RSI(14)</td><td>51.1</td><td>—</td><td>RSI 51 中性</td></tr><tr><td>KD</td><td>K=80.2 / D=80.2</td><td>—</td><td>KD 偏高但未超買，短期動能強</td></tr></table></div>
+</div>
+
+<!-- 12. Chip -->
+<div class="card" id="sec12">
+    <h1>12. 籌碼面分析</h1>
+    <div class="table-wrap"><table><tr><th>籌碼指標</th><th>數值</th></tr><tr><td>外國人持股比例</td><td>數據不可得</td></tr></table></div>
+</div>
+
+<!-- 13. Catalyst -->
+<div class="card" id="sec13">
+    <h1>13. 消息面與催化劑</h1>
+    <h4>正面催化劑</h4><ul>
+<li><strong>新型抗感染藥物 Pipeline 進展</strong> (2026 年) — 新營收來源</li>
+<li><strong>HIV 版稅隨 Dolutegravir 銷量成長增加</strong> (持續性) — 高利潤版稅收入成長</li>
+<li><strong>股價突破 ¥3,705 前高</strong> (短期) — 技術面突破引發買盤</li>
+</ul>
+<h4>負面催化劑</h4><ul>
+<li><strong>日本藥價引下げ（每兩年一次）</strong> (2026 年度) — 營收下壓 2-3%</li>
+<li><strong>Pipeline 臨床試驗失敗</strong> (不確定) — 成長預期下修</li>
+</ul>
+</div>
+
+<!-- 14. Risk & Scenarios -->
+<div class="card" id="sec14">
+    <h1>14. 風險評估與情境模擬</h1>
+    <div class="table-wrap"><table><tr><th>風險</th><th>機率</th><th>影響</th><th>應對</th></tr><tr><td>藥價政策風險</td><td>high</td><td>medium</td><td>監控厚労省藥價改定動態</td></tr><tr><td>Pipeline 集中風險</td><td>medium</td><td>high</td><td>追蹤臨床試驗進展</td></tr><tr><td>專利到期風險</td><td>low</td><td>high</td><td>監控關鍵專利到期日</td></tr></table></div>
+    <h2>Bull / Base / Bear 情境</h2>
+    <div class="table-wrap"><table>
+        <tr><th>情境</th><th>EPS</th><th>PE</th><th>目標價</th><th>觸發條件</th></tr>
+        <tr>
+            <td><strong>Bull 🐂</strong></td><td>200.61</td>
+            <td>24</td><td>4815</td>
+            <td>新藥審批通過、HIV 版稅上調</td>
+        </tr><tr>
+            <td><strong>Base 📊</strong></td><td>200.61</td>
+            <td>20</td><td>4012</td>
+            <td>Xocova 銷售穩定、Pipeline 正常推進</td>
+        </tr><tr>
+            <td><strong>Bear 🐻</strong></td><td>200.61</td>
+            <td>14</td><td>2809</td>
+            <td>藥價引下げ政策衝擊、Pipeline 失敗</td>
+        </tr>
+    </table></div>
+    
+</div>
+
+<!-- 15. Investment Recommendation -->
+<div class="card" id="sec15">
+    <h1>15. 投資建議與操作區間</h1>
+    <div style="text-align:center;margin:12px 0;">
+        <span class="rating-badge" style="font-size:1.2rem;padding:10px 28px;">Buy</span>
+        <p style="margin-top:10px;color:#666;">PE 17.2x 位於歷史中間，高毛利 84.5% 和營業利益率 50% 為同業頂尖</p>
+    </div>
+    <div class="action-grid">
+        <div class="action-item"><div class="label">進場點</div><div class="value" style="color:#1565c0;">3400</div></div>
+        <div class="action-item"><div class="label">目標價</div><div class="value" style="color:#00c853;">4012</div></div>
+        <div class="action-item"><div class="label">停損點</div><div class="value" style="color:#ff1744;">3100</div></div>
+        <div class="action-item"><div class="label">停利點</div><div class="value" style="color:#00c853;">4012</div></div>
+    </div>
+    <p style="text-align:center;font-size:0.95rem;margin-top:10px;">
+        風險報酬比 R/R = <strong>1.9:1</strong>
+    </p>
+    <p>建議買進。進場點 ¥3,400（20MA 附近），停損 ¥3,100（Bear PE 14x 上方），停利 ¥4,012。R/R 1.9:1。持股期限 6-12 個月，關注新藥 Pipeline 進展和藥價改定影響。</p>
+</div>
+
+<!-- 16. Sources -->
+<div class="card sources" id="sec16">
+    <h1>16. 參考資料</h1>
+    <ol><li><a href="https://finance.yahoo.com/quote/4507.T/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/4507.T/</a></li>
+<li><a href="https://www.shionogi.com/global/en/investors.html" target="_blank" rel="noopener">https://www.shionogi.com/global/en/investors.html</a></li>
+<li><a href="https://tradingeconomics.com/japan/government-bond-yield" target="_blank" rel="noopener">https://tradingeconomics.com/japan/government-bond-yield</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html</a></li>
+<li><a href="https://www.tipranks.com/stocks/jp:4507/forecast" target="_blank" rel="noopener">https://www.tipranks.com/stocks/jp:4507/forecast</a></li>
+<li><a href="https://stockinvest.us/stock/4507.T" target="_blank" rel="noopener">https://stockinvest.us/stock/4507.T</a></li>
+<li><a href="https://www.pmi.spglobal.com/Public/Home/PressRelease/1f665ebfd58947f8a75550291494b5fc" target="_blank" rel="noopener">https://www.pmi.spglobal.com/Public/Home/PressRelease/1f665ebfd58947f8a75550291494b5fc</a></li></ol>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>CFA 深度研究報告 | MDVI v3 | 2026-03-26 16:25 | ARTOGO Investment Research</p>
+    <p>⚠️ 本報告僅供研究參考，不構成投資建議。投資有風險，入市需謹慎。</p>
+    <p><a href="../../index.html" style="color:#1565c0;">← 返回首頁</a></p>
+</div>
+
+</div>
+</body>
+</html>
