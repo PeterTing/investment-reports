@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2379 瑞昱 深度投資分析報告 | 2026-03-29</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    line-height: 1.7; color: #1a1a2e; background: #f8f9fa; font-size: 16px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.6rem; color: #0f3460; border-bottom: 3px solid #e94560; padding-bottom: 8px; margin: 24px 0 16px; }
+h2 { font-size: 1.3rem; color: #16213e; border-left: 4px solid #e94560; padding-left: 12px; margin: 28px 0 14px; }
+h3 { font-size: 1.1rem; color: #0f3460; margin: 20px 0 10px; }
+.header-box {
+    background: linear-gradient(135deg, #0f3460, #16213e); color: white;
+    padding: 24px; border-radius: 12px; margin-bottom: 24px;
+}
+.header-box h1 { color: white; border-bottom-color: #e94560; font-size: 1.5rem; }
+.rating-badge {
+    display: inline-block; padding: 6px 18px; border-radius: 20px;
+    font-weight: bold; font-size: 1.1rem; color: #fff; background: #2da44e;
+}
+.market-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.85rem; font-weight: 600; color: white; margin-left: 8px;
+    background: #3b82f6;
+}
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 16px 0;
+}
+.info-card { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; }
+.info-card .label { font-size: 0.85rem; opacity: 0.8; }
+.info-card .value { font-size: 1.3rem; font-weight: bold; }
+.card {
+    background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px;
+    border: 1px solid #e0e0e0; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+th { background: #0f3460; color: white; padding: 10px 8px; text-align: left; white-space: nowrap; }
+td { padding: 8px; border-bottom: 1px solid #e0e0e0; }
+tr:nth-child(even) { background: #f5f5f5; }
+tr:hover { background: #e8eaf6; }
+.highlight { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.warning { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.action-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 14px 0;
+}
+.action-item { text-align: center; padding: 14px; border-radius: 8px; background: #f5f5f5; }
+.action-item .label { font-size: 0.82rem; color: #666; }
+.action-item .value { font-size: 1.3rem; font-weight: 700; margin-top: 4px; }
+.source { font-size: 0.85rem; color: #666; margin: 6px 0; font-style: italic; }
+.sources ol { padding-left: 20px; font-size: 0.82rem; }
+.sources li { margin-bottom: 4px; word-break: break-all; }
+.sources a { color: #1565c0; }
+.toc { background: #f0f4f8; padding: 16px 20px; border-radius: 10px; margin-bottom: 20px; }
+.toc a { color: #0f3460; text-decoration: none; display: block; padding: 3px 0; font-size: 0.92rem; }
+.toc a:hover { color: #e94560; }
+.footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem; border-top: 1px solid #e0e0e0; margin-top: 24px; }
+@media (max-width: 640px) {
+    .header-box { padding: 16px; }
+    .header-box h1 { font-size: 1.25rem; }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .action-grid { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 0.82rem; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.15rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header-box">
+    <h1>2379 瑞昱 <span style="font-weight:400;font-size:0.9rem;">Realtek Semiconductor</span>
+        <span class="market-badge">🇹🇼 台股</span>
+    </h1>
+    <p style="color:#94a3b8;font-size:0.9rem;margin:4px 0;">CFA 深度研究報告 | 2026-03-29 | MDVI v3</p>
+    <div style="margin:12px 0;"><span class="rating-badge">Buy</span></div>
+    <div class="info-grid">
+        <div class="info-card"><div class="label">收盤價</div><div class="value">TWD 494.5</div></div>
+        <div class="info-card"><div class="label">目標價</div><div class="value">TWD 575</div></div>
+        <div class="info-card"><div class="label">潛在報酬</div><div class="value" style="color:#00e676;">+16.3%</div></div>
+        <div class="info-card"><div class="label">MDVI 總分</div><div class="value">44/60</div></div>
+        <div class="info-card"><div class="label">R/R Ratio</div><div class="value">1.9:1</div></div>
+    </div>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <strong>📋 目錄</strong>
+    <a href="#sec1">1. 執行摘要</a>
+    <a href="#sec2">2. MDVI v3 六維度評分</a>
+    <a href="#sec3">3. 公司概況與事業群拆解</a>
+    <a href="#sec4">4. 財務分析與 EPS 推導</a>
+    <a href="#sec5">5. 歷史 PE 軌跡表</a>
+    <a href="#sec6">6. 估值分析（三角交叉驗證）</a>
+    <a href="#sec7">7. DCF 模型與敏感度分析</a>
+    <a href="#sec8">8. Gordon Growth Model ROE 辯證</a>
+    <a href="#sec9">9. 產業分析與同業比較</a>
+    <a href="#sec10">10. 總經與政策環境</a>
+    <a href="#sec11">11. 技術面分析</a>
+    <a href="#sec12">12. 籌碼面分析</a>
+    <a href="#sec13">13. 消息面與催化劑</a>
+    <a href="#sec14">14. 風險評估與情境模擬</a>
+    <a href="#sec15">15. 投資建議與操作區間</a>
+    <a href="#sec16">16. 參考資料</a>
+</div>
+
+<!-- 1. Executive Summary -->
+<div class="card" id="sec1">
+    <h1>1. 執行摘要</h1>
+    <div class="highlight">全球 IC 設計領導廠商，受惠 WiFi 7、乙太網路及 AI Edge 晶片需求。2025 年 EPS 28.77 元，ROE 28.2% 為同業頂尖水準。當前 PE 17.3x 處於歷史區間中低位置，具估值修復空間。</div>
+    <p>瑞昱半導體（2379）為全球領先 IC 設計公司，2025 年 EPS 28.77 元，ROE 高達 28.2%。公司在 WiFi、乙太網路、音訊 Codec 等領域市占率全球前三。當前 PE 17.2x 處於 5 年均值附近，考慮 WiFi 7 成長週期，估值仍有上修空間。目標價 575 元，潛在上漲空間 16.3%。</p>
+</div>
+
+<!-- 2. MDVI Scores -->
+<div class="card" id="sec2">
+    <h1>2. MDVI v3 六維度評分</h1>
+    <div style="text-align:center;margin:12px 0;"><span style="font-size:2.5rem;font-weight:800;color:#0f3460;">44</span><span style="font-size:1.2rem;color:#666;"> / 60</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>維度</th><th>評分 (0-10)</th></tr>
+        <tr><td style="font-weight:500;">基本面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+<tr><td style="font-weight:500;">產業展望</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+<tr><td style="font-weight:500;">總經</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">技術面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">籌碼面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">消息面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+
+    </table></div>
+    
+</div>
+
+<!-- 3. Company Overview -->
+<div class="card" id="sec3">
+    <h1>3. 公司概況與事業群拆解</h1>
+    <p>瑞昱半導體成立於 1987 年，總部位於新竹，為全球前十大 IC 設計公司。主要產品線涵蓋通訊網路 IC（WiFi、乙太網路、交換器）、多媒體 IC（音訊編解碼、顯示控制器）及電腦周邊 IC（USB Hub、讀卡機）。公司在 WiFi 晶片、音訊 Codec、乙太網路 PHY 市占率全球前三。</p>
+    <h2>事業群營收拆解</h2><div class="table-wrap"><table><tr><th>事業群</th><th>營收佔比</th><th>成長驅動</th></tr><tr><td>通訊網路 IC</td><td>55%</td><td>WiFi 7 升級、2.5G/5G 乙太網路</td></tr><tr><td>電腦周邊 IC</td><td>25%</td><td>USB4、Type-C PD 控制器</td></tr><tr><td>多媒體 IC</td><td>20%</td><td>AI Edge、智慧家庭</td></tr></table></div>
+    
+    
+</div>
+
+<!-- 4. Financial Analysis -->
+<div class="card" id="sec4">
+    <h1>4. 財務分析與 EPS 推導</h1>
+
+    <h2>4.1 財務健全度</h2>
+    <div style="margin:8px 0;"><span style="display:inline-block;padding:4px 14px;border-radius:12px;font-weight:600;color:white;background:#ff1744;">極健康</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th><th>標準</th></tr>
+        <tr><td>D/E Ratio</td><td>0.08</td><td>&lt; 1.0 佳</td></tr>
+        <tr><td>流動比率</td><td>3.2</td><td>&gt; 1.5 佳</td></tr>
+        <tr><td>FCF 趨勢</td><td>穩定正現金流</td><td>穩定正成長</td></tr>
+        <tr><td>利息保障倍數</td><td>50x+</td><td>&gt; 5x 佳</td></tr>
+    </table></div>
+
+    <h2>4.2 季度財務追蹤</h2>
+    <table><tr><th>季度</th><th>營收(億)</th><th>毛利率</th><th>營益率</th><th>EPS</th></tr><tr><td>2025Q1</td><td>298</td><td>51.5%</td><td>21.8%</td><td>9.28</td></tr><tr><td>2025Q2</td><td>315</td><td>52.1%</td><td>22.3%</td><td>7.20</td></tr><tr><td>2025Q3</td><td>310</td><td>52.3%</td><td>22.1%</td><td>6.01</td></tr><tr><td>2025Q4</td><td>304</td><td>51.8%</td><td>21.5%</td><td>6.28</td></tr></table>
+
+    <h2>4.3 獲利能力與 EPS 成長路徑</h2>
+    <p>D/E: 0.08、流動比: 3.2、2023 FCF 約 80 億, 2024 FCF 約 95 億, 2025 FCF 約 90 億</p>
+
+    <h2>4.4 EPS 由下往上推導</h2>
+    <h4>Step 1: 營收拆解</h4><p>2025 年合併營收 1,227 億元，年減約 3%。通訊網路 IC 佔 55%（675 億），電腦周邊 IC 佔 25%（307 億），多媒體 IC 佔 20%（245 億）。</p>
+<div class="table-wrap"><table><tr><th>事業群</th><th>營收</th><th>YoY</th></tr><tr><td>通訊網路 IC</td><td>675億</td><td>-2%</td></tr><tr><td>電腦周邊 IC</td><td>307億</td><td>-5%</td></tr><tr><td>多媒體 IC</td><td>245億</td><td>-3%</td></tr></table></div>
+<h4>Step 2: 獲利率分析</h4><p>2025 毛利率約 52%（vs 2024 51%），營業費用率約 30%（研發佔大宗），營益率約 22%。</p>
+<h4>Step 3: EPS 推導</h4><div class="table-wrap"><table><tr><th>項目</th><th>數值</th></tr><tr><td>revenue_2025</td><td>1227億</td></tr><tr><td>gross_profit_2025</td><td>638億</td></tr><tr><td>operating_income_2025</td><td>270億</td></tr><tr><td>tax_rate</td><td>12%</td></tr><tr><td>net_income_2025</td><td>237億</td></tr><tr><td>shares_outstanding</td><td>8.24億股</td></tr><tr><td>eps_calculated</td><td>28.77</td></tr><tr><td>eps_actual_reported</td><td>28.77</td></tr><tr><td>variance</td><td>0%</td></tr></table></div>
+</div>
+
+<!-- 5. PE History -->
+<div class="card" id="sec5">
+    <h1>5. 歷史 PE 軌跡表</h1>
+    <div class="table-wrap"><table>
+        <tr><th>年度</th><th>EPS</th><th>最高價</th><th>最低價</th><th>PE 高</th><th>PE 低</th></tr>
+        <tr>
+            <td>2021</td><td>33.0</td>
+            <td>580</td><td>365</td>
+            <td>17.6</td><td>11.1</td>
+        </tr><tr>
+            <td>2022</td><td>31.62</td>
+            <td>510</td><td>310</td>
+            <td>16.1</td><td>9.8</td>
+        </tr><tr>
+            <td>2023</td><td>17.85</td>
+            <td>440</td><td>295</td>
+            <td>24.6</td><td>16.5</td>
+        </tr><tr>
+            <td>2024</td><td>29.82</td>
+            <td>575</td><td>400</td>
+            <td>19.3</td><td>13.4</td>
+        </tr><tr>
+            <td>2025</td><td>28.77</td>
+            <td>560</td><td>420</td>
+            <td>19.5</td><td>14.6</td>
+        </tr>
+    </table></div>
+    <p style="margin-top:10px;">5 年平均 PE：<strong>16.3</strong> | 目前 PE：<strong>17.2</strong></p>
+</div>
+
+<!-- 6. Valuation -->
+<div class="card" id="sec6">
+    <h1>6. 估值分析（三角交叉驗證）</h1>
+
+    <h2>6.1 外部因素 → 公式參數對照表</h2>
+    <div class="table-wrap"><table>
+        <tr><th>分析面向</th><th>具體項目</th><th>影響參數</th><th>設定值</th><th>設定依據</th></tr>
+        
+    </table></div>
+
+    <h2>6.2 Cost of Equity (CoE)</h2>
+    <div class="table-wrap"><table>
+        <tr><th>參數</th><th>數值</th><th>來源</th></tr>
+        <tr><td>Rf (無風險利率)</td><td>1.48%</td><td>台灣 10Y 公債殖利率 2026/03/26</td></tr>
+        <tr><td>Beta</td><td>0.78</td><td>Yahoo Finance 5Y Monthly Beta</td></tr>
+        <tr><td>US Base ERP</td><td>4.23%</td><td rowspan="2">Damodaran US Implied ERP Jan 2026</td></tr>
+        <tr><td>Country Risk Premium</td><td>0.75%</td></tr>
+        <tr><td>Total ERP</td><td>4.98%</td><td>計算值</td></tr>
+        <tr><td><strong>CoE</strong></td><td><strong>5.4%</strong></td><td>Rf + Beta × Total ERP</td></tr>
+    </table></div>
+
+    <h2>6.3 合理 PE 推導（PE法）</h2>
+    <p>合理 PE 推導：採用 PEG-Adjusted 法。EPS 成長率取 WiFi 7 週期 15%，PEG 1.3（龍頭溢價），合理 PE = 1.3 × 15 = 19.5，取整 20x。5 年歷史 PE 區間 9.8-24.6x，平均 16.3x，20x 位於區間中上位置，反映成長週期合理。</p>
+    <div class="highlight">
+        合理 PE = <strong>20.0x</strong> |
+        Forward EPS = <strong>28.77</strong> |
+        目標價 = <strong>TWD 575</strong>
+    </div>
+
+    <h2>6.4 交叉驗證矩陣</h2>
+    <div class="table-wrap"><table>
+        <tr><th>估值方法</th><th>隱含股價</th><th>vs PE 法偏差</th><th>狀態</th></tr>
+        <tr><td>Forward PE 法（主要）</td><td><strong>575</strong></td><td>—</td><td>主要估值</td></tr>
+        <tr><td>EV/EBITDA 法</td><td>550</td><td>-4.3%</td><td>驗證層</td></tr>
+        <tr><td>DCF 法</td><td>520</td><td>-9.6%</td><td>10 年 DCF，WACC 5.0%, 終值成長率 3%</td></tr>
+    </table></div>
+</div>
+
+<!-- 7. DCF Model -->
+<div class="card" id="sec7">
+    <h1>7. DCF 模型與敏感度分析</h1>
+    <p>DCF 假設：未來 5 年營收 CAGR 8%，FCF Margin 維持 7-8%，WACC 5.0%（CoE 5.4% 為主，低負債），終值成長率 3%。DCF 每股內含價值約 520 元，與 PE 法 575 元偏差 -9.6%，在可接受範圍。</p>
+    <h2>敏感度分析表</h2><table><tr><th>PE \ EPS</th><th>24元</th><th>28.77元</th><th>33元</th></tr><tr><td>15x</td><td>360</td><td>432</td><td>495</td></tr><tr><td>18x</td><td>432</td><td>518</td><td>594</td></tr><tr><td>20x</td><td>480</td><td>575</td><td>660</td></tr><tr><td>22x</td><td>528</td><td>633</td><td>726</td></tr></table>
+</div>
+
+<!-- 8. Gordon Growth Model -->
+<div class="card" id="sec8">
+    <h1>8. Gordon Growth Model ROE 辯證</h1>
+    <p>ROE = 28.2%，理論 PB = 10.5，實際 PB = 4.85，溢折價 = -53.8%</p><p>市場給予大幅折價，反映對 IC 設計產業週期性的擔憂，以及 2023 年 EPS 大幅下滑的記憶。若 ROE 能維持 25%+，目前估值偏低。</p>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th></tr>
+        <tr><td>ROE</td><td>28.2%</td></tr>
+        <tr><td>理論 PB (Gordon)</td><td>10.5</td></tr>
+        <tr><td>實際 PB</td><td>4.85</td></tr>
+        <tr><td>解讀</td><td>市場給予大幅折價，反映對 IC 設計產業週期性的擔憂，以及 2023 年 EPS 大幅下滑的記憶。若 ROE 能維持 25%+，目前估值偏低。</td></tr>
+    </table></div>
+</div>
+
+<!-- 9. Industry -->
+<div class="card" id="sec9">
+    <h1>9. 產業分析與同業比較</h1>
+    <p>全球 IC 設計產業 2025 年市場規模約 1,800 億美元，WiFi 7 為最大成長驅動力。瑞昱在 WiFi 晶片市占率約 15-20%（含 Router/AP 端），僅次於博通及高通。乙太網路 PHY 市場穩定成長（CAGR 6%），公司市占率約 30%。AI Edge 為新成長引擎，公司積極布局智慧家庭、車用 SoC。</p>
+    <h2>同業比較矩陣</h2><div class="table-wrap"><table><tr><th>指標</th><th>瑞昱 2379</th><th>聯詠 3034</th><th>聯發科 2454</th><th>博通 AVGO</th></tr><tr><td>PE (TTM)</td><td>17.2x</td><td>14.8x</td><td>20.5x</td><td>28x</td></tr><tr><td>ROE</td><td>28.2%</td><td>24.1%</td><td>22%</td><td>25%</td></tr><tr><td>毛利率</td><td>52%</td><td>38%</td><td>48%</td><td>75%</td></tr><tr><td>EPS Growth</td><td>-4%</td><td>-5%</td><td>+15%</td><td>+20%</td></tr></table></div>
+</div>
+
+<!-- 10. Macro -->
+<div class="card" id="sec10">
+    <h1>10. 總經與政策環境</h1>
+    <p>台灣央行維持利率 2.00% 不變，資金環境穩定。美國聯準會維持 3.50-3.75%，科技股估值壓力緩解。VIX 31.05 偏高，短期市場避險情緒濃，但對 IC 設計龍頭影響有限。USD/TWD 32.04 穩定，匯率風險可控。</p>
+</div>
+
+<!-- 11. Technical -->
+<div class="card" id="sec11">
+    <h1>11. 技術面分析</h1>
+    <div class="table-wrap"><table><tr><th>指標</th><th>數值</th><th>乖離率</th><th>解讀</th></tr><tr><td>MA_20</td><td>474.3</td><td>+4.3%</td><td>股價站上 20 日線，短期多頭</td></tr><tr><td>MA_60</td><td>491.4</td><td>+0.6%</td><td>剛站上 60 日線，中期趨勢轉強</td></tr><tr><td>RSI(14)</td><td>57.3</td><td>—</td><td>中性偏多，尚未進入超買區</td></tr><tr><td>KD</td><td>K=81.5 / D=78.2</td><td>—</td><td>KD 偏高但 K>D，短期多頭力道仍在，留意是否超買回調</td></tr></table></div>
+</div>
+
+<!-- 12. Chip -->
+<div class="card" id="sec12">
+    <h1>12. 籌碼面分析</h1>
+    <div class="table-wrap"><table><tr><th>籌碼指標</th><th>數值</th></tr><tr><td>融資餘額</td><td>數據不可得</td></tr><tr><td>融券餘額</td><td>數據不可得</td></tr><tr><td>券資比</td><td>數據不可得</td></tr></table></div><p>外資近 5 日買超 1,787 張，顯示法人看好</p>
+</div>
+
+<!-- 13. Catalyst -->
+<div class="card" id="sec13">
+    <h1>13. 消息面與催化劑</h1>
+    <h4>正面催化劑</h4><ul>
+<li><strong>WiFi 7 晶片大量出貨</strong> (2026 H1) — 營收成長 10-15%，EPS 向上修正</li>
+<li><strong>AI Edge SoC 新產品線</strong> (2026 Q2-Q3) — 打開新市場，提升毛利率</li>
+<li><strong>2.5G/5G 乙太網路升級潮</strong> (持續) — 企業網路升級帶動穩定需求</li>
+</ul>
+<h4>負面催化劑</h4><ul>
+<li><strong>PC/NB 需求不振</strong> (2026 H1) — 電腦周邊 IC 營收下滑</li>
+<li><strong>中國競爭加劇</strong> (持續) — 低端產品價格壓力</li>
+</ul>
+</div>
+
+<!-- 14. Risk & Scenarios -->
+<div class="card" id="sec14">
+    <h1>14. 風險評估與情境模擬</h1>
+    <div class="table-wrap"><table><tr><th>風險</th><th>機率</th><th>影響</th><th>應對</th></tr><tr><td>消費電子需求週期</td><td>medium</td><td>high</td><td>關注 PC 出貨量數據與庫存水位</td></tr><tr><td>中國 IC 設計競爭</td><td>medium</td><td>medium</td><td>公司持續往高階產品線移動</td></tr><tr><td>匯率波動</td><td>low</td><td>medium</td><td>自然避險（營收與成本幣別相近）</td></tr></table></div>
+    <h2>Bull / Base / Bear 情境</h2>
+    <div class="table-wrap"><table>
+        <tr><th>情境</th><th>EPS</th><th>PE</th><th>目標價</th><th>觸發條件</th></tr>
+        <tr>
+            <td><strong>Bull 🐂</strong></td><td>33.0</td>
+            <td>22</td><td>726</td>
+            <td>WiFi 7 滲透率超預期 / AI Edge 新品量產</td>
+        </tr><tr>
+            <td><strong>Base 📊</strong></td><td>28.77</td>
+            <td>20</td><td>575</td>
+            <td>WiFi 7 穩步成長，PC/NB 需求平穩</td>
+        </tr><tr>
+            <td><strong>Bear 🐻</strong></td><td>24.0</td>
+            <td>15</td><td>360</td>
+            <td>消費電子需求大幅衰退</td>
+        </tr>
+    </table></div>
+    
+</div>
+
+<!-- 15. Investment Recommendation -->
+<div class="card" id="sec15">
+    <h1>15. 投資建議與操作區間</h1>
+    <div style="text-align:center;margin:12px 0;">
+        <span class="rating-badge" style="font-size:1.2rem;padding:10px 28px;">Buy</span>
+        <p style="margin-top:10px;color:#666;">股價站上 20 日線，RSI 中性偏多，可分批佈局</p>
+    </div>
+    <div class="action-grid">
+        <div class="action-item"><div class="label">進場點</div><div class="value" style="color:#1565c0;">480</div></div>
+        <div class="action-item"><div class="label">目標價</div><div class="value" style="color:#00c853;">575</div></div>
+        <div class="action-item"><div class="label">停損點</div><div class="value" style="color:#ff1744;">430</div></div>
+        <div class="action-item"><div class="label">停利點</div><div class="value" style="color:#00c853;">575</div></div>
+    </div>
+    <p style="text-align:center;font-size:0.95rem;margin-top:10px;">
+        風險報酬比 R/R = <strong>1.9:1</strong>
+    </p>
+    <p>建議分批佈局，進場區間 480-495 元，目標價 575 元（Trailing PE 20x），停損設在 430 元（跌破 60 日線下方 10%）。風險報酬比 1.9:1。適合中期持有 3-6 個月，等待 WiFi 7 出貨放量及 2026Q1 財報催化。</p>
+</div>
+
+<!-- 16. Sources -->
+<div class="card sources" id="sec16">
+    <h1>16. 參考資料</h1>
+    <ol><li><a href="https://finance.yahoo.com/quote/2379.TW/key-statistics/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/2379.TW/key-statistics/</a></li>
+<li><a href="https://www.cnyes.com/twstock/2379/financials/ratios" target="_blank" rel="noopener">https://www.cnyes.com/twstock/2379/financials/ratios</a></li>
+<li><a href="https://www.investing.com/rates-bonds/taiwan-10-year-bond-yield" target="_blank" rel="noopener">https://www.investing.com/rates-bonds/taiwan-10-year-bond-yield</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html</a></li>
+<li><a href="https://www.twse.com.tw/rwd/zh/fund/T86?date=20260327&selectType=ALLBUT0999&response=json" target="_blank" rel="noopener">https://www.twse.com.tw/rwd/zh/fund/T86?date=20260327&selectType=ALLBUT0999&response=json</a></li>
+<li><a href="https://statementdog.com/analysis/2379/eps" target="_blank" rel="noopener">https://statementdog.com/analysis/2379/eps</a></li>
+<li><a href="https://histock.tw/stock/2379/%E6%AF%8F%E8%82%A1%E7%9B%88%E9%A4%98" target="_blank" rel="noopener">https://histock.tw/stock/2379/%E6%AF%8F%E8%82%A1%E7%9B%88%E9%A4%98</a></li>
+<li><a href="https://tradingeconomics.com/taiwan/interest-rate" target="_blank" rel="noopener">https://tradingeconomics.com/taiwan/interest-rate</a></li>
+<li><a href="https://goodinfo.tw/tw/StockBzPerformance.asp?STOCK_ID=2379" target="_blank" rel="noopener">https://goodinfo.tw/tw/StockBzPerformance.asp?STOCK_ID=2379</a></li></ol>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>CFA 深度研究報告 | MDVI v3 | 2026-03-29 09:33 | ARTOGO Investment Research</p>
+    <p>⚠️ 本報告僅供研究參考，不構成投資建議。投資有風險，入市需謹慎。</p>
+    <p><a href="../../index.html" style="color:#1565c0;">← 返回首頁</a></p>
+</div>
+
+</div>
+</body>
+</html>

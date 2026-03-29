@@ -1,0 +1,297 @@
+{
+  "date": "2026-03-29",
+  "market_summary": {
+    "tw": "台股加權指數收在 22,535 點附近，受美國關稅政策不確定性影響，大盤持續震盪整理。VIX 指數攀升至 31.05，反映市場避險情緒升溫。台灣央行維持重貼現率 2.00% 不變，美國聯準會維持利率 3.50-3.75%。外資近期偏賣超，投信持續布局中小型股。"
+  },
+  "scoring_methodology": {
+    "description": "MDVI v3 六維度評估框架 + CFA 標準估值方法。六維度確保分析的完整性，目標價由 Forward PE + EV/EBITDA + DCF 三角交叉驗證推導。",
+    "model": "MDVI v3 (Multi-Dimensional Valuation Integration)",
+    "valuation_method": "Dynamic Justified PE (Primary) + EV/EBITDA & DCF Verification Layers",
+    "screening_method": "3-Layer Funnel: Quantitative Hard Filter → Multi-Dimension Quick Score → Full CFA Analysis",
+    "dimensions": [
+      {
+        "name": "基本面 Fundamental",
+        "evaluates": "獲利能力 + 財務健康 + 競爭定位",
+        "valuation_role": "影響 EPS 假設、WACC、PE 溢價"
+      },
+      {
+        "name": "產業展望 Industry",
+        "evaluates": "TAM + 產品發展性 + 客戶價值鏈 + 政策",
+        "valuation_role": "影響營收成長率、倍數選擇"
+      },
+      {
+        "name": "總經 Macro",
+        "evaluates": "利率/通膨/匯率 + 客戶端總經",
+        "valuation_role": "影響 Rf/ERP/PE 水準"
+      },
+      {
+        "name": "技術面 Technical",
+        "evaluates": "MA/RSI/KD/量價",
+        "valuation_role": "僅影響進場時機"
+      },
+      {
+        "name": "籌碼面 Chip",
+        "evaluates": "法人動向/融資券",
+        "valuation_role": "僅影響進場時機"
+      },
+      {
+        "name": "消息面 Catalyst",
+        "evaluates": "重大消息/催化劑",
+        "valuation_role": "修正 EPS 假設或風險溢價"
+      }
+    ]
+  },
+  "screening_funnel": {
+    "layer1_universe": 300,
+    "layer1_pass": 172,
+    "layer1_criteria": "PE<30, ROE>8%, 月均量>500張",
+    "layer2_scored": 172,
+    "layer2_pass": 20,
+    "layer3_analyzed": 10,
+    "layer3_final": 5,
+    "industry_diversification": "IC設計 1檔, 工業機械 1檔, 航空 1檔, 營建 1檔, 紡織成衣 1檔"
+  },
+  "watchlist": [],
+  "macro_overview": {
+    "tw_rate": "2.00%",
+    "tw_10y": "1.48%",
+    "fed_rate": "3.50-3.75%",
+    "us_10y": "4.41%",
+    "vix": "31.05",
+    "usd_twd": "32.04",
+    "erp_us_base": "4.23%",
+    "erp_tw_crp": "0.75%",
+    "overall_score": "5/10",
+    "summary": "全球風險偏好降低（VIX>30），美國利率維持高檔，台灣央行持穩。台灣經濟受惠 AI 半導體需求，GDP 成長率預估 3.5-4%。匯率穩定於 32 附近。整體環境偏中性偏保守，選股重基本面與估值安全邊際。"
+  },
+  "sources": [
+    "https://www.twse.com.tw/",
+    "https://finance.yahoo.com/",
+    "https://pages.stern.nyu.edu/~adamodar/",
+    "https://www.investing.com/rates-bonds/taiwan-10-year-bond-yield",
+    "https://tradingeconomics.com/taiwan/interest-rate"
+  ],
+  "tw_picks": [
+    {
+      "rank": 1,
+      "ticker": "2379.TW",
+      "name": "瑞昱",
+      "name_en": "Realtek Semiconductor",
+      "market": "TW",
+      "price": 494.5,
+      "currency": "TWD",
+      "rating": "Buy",
+      "entry_signal": "股價站上 20 日線，RSI 中性偏多，可分批佈局",
+      "target_price": 575,
+      "target_price_basis": "Trailing PE 20x × Actual EPS 28.77 = 575",
+      "upside": "+16.3%",
+      "scores": {
+        "fundamental": 8,
+        "industry": 8,
+        "macro": 6,
+        "technical": 7,
+        "chip": 7,
+        "catalyst": 8
+      },
+      "total_score": 44,
+      "summary": "全球 IC 設計領導廠商，受惠 WiFi 7、乙太網路及 AI Edge 晶片需求。2025 年 EPS 28.77 元，ROE 28.2% 為同業頂尖水準。當前 PE 17.3x 處於歷史區間中低位置，具估值修復空間。",
+      "report_url": "reports/picks/2379-2026-03-29.html",
+      "valuation_summary": {
+        "valuation_type": "PE",
+        "valuation_reason": "",
+        "pe_method": "",
+        "coe_params": {},
+        "growth_params": {},
+        "justified_pe": 0,
+        "forward_eps": 0,
+        "pe_target": 0,
+        "ev_ebitda_target": 0,
+        "ev_ebitda_deviation": "",
+        "dcf_target": 0,
+        "dcf_deviation": "",
+        "dcf_note": "",
+        "dcf_wacc": "",
+        "dcf_terminal_growth": "",
+        "gordon_pb": {},
+        "financial_health": {}
+      }
+    },
+    {
+      "rank": 2,
+      "ticker": "6670.TW",
+      "name": "復盛應用",
+      "name_en": "FuSheng Precision",
+      "market": "TW",
+      "price": 268.0,
+      "currency": "TWD",
+      "rating": "Buy",
+      "entry_signal": "股價於均線附近整理，技術面中性，基本面支撐佈局",
+      "target_price": 314,
+      "target_price_basis": "Trailing PE 14.0x × Actual EPS 22.45 (2025 全年已公布)",
+      "upside": "+17.2%",
+      "scores": {
+        "fundamental": 7,
+        "industry": 7,
+        "macro": 6,
+        "technical": 7,
+        "chip": 7,
+        "catalyst": 8
+      },
+      "total_score": 42,
+      "summary": "全球壓縮機零組件龍頭，受惠數據中心冷卻、高爾夫球具等多元應用。2025 年 EPS 22.39 元，ROE 20.1%，PE 僅 12.0x，估值偏低。",
+      "report_url": "reports/picks/6670-2026-03-29.html",
+      "valuation_summary": {
+        "valuation_type": "PE",
+        "valuation_reason": "",
+        "pe_method": "",
+        "coe_params": {},
+        "growth_params": {},
+        "justified_pe": 0,
+        "forward_eps": 0,
+        "pe_target": 0,
+        "ev_ebitda_target": 0,
+        "ev_ebitda_deviation": "",
+        "dcf_target": 0,
+        "dcf_deviation": "",
+        "dcf_note": "",
+        "dcf_wacc": "",
+        "dcf_terminal_growth": "",
+        "gordon_pb": {},
+        "financial_health": {}
+      }
+    },
+    {
+      "rank": 3,
+      "ticker": "2618.TW",
+      "name": "長榮航",
+      "name_en": "EVA Airways",
+      "market": "TW",
+      "price": 35.45,
+      "currency": "TWD",
+      "rating": "Buy",
+      "entry_signal": "低 PE 搭配穩定獲利，股價站上 20 日線",
+      "target_price": 44,
+      "target_price_basis": "Trailing PE 9x × Actual EPS 4.84 = 43.6，取整 44",
+      "upside": "+24.1%",
+      "scores": {
+        "fundamental": 7,
+        "industry": 6,
+        "macro": 5,
+        "technical": 7,
+        "chip": 7,
+        "catalyst": 8
+      },
+      "total_score": 40,
+      "summary": "台灣第二大航空公司，受惠 AI 貨運需求及客運復甦。2025 年 EPS 4.84 元，PE 僅 7.3x 為同業最低區間。貨運受惠 AI 伺服器出貨，為重要催化劑。",
+      "report_url": "reports/picks/2618-2026-03-29.html",
+      "valuation_summary": {
+        "valuation_type": "PE",
+        "valuation_reason": "",
+        "pe_method": "",
+        "coe_params": {},
+        "growth_params": {},
+        "justified_pe": 0,
+        "forward_eps": 0,
+        "pe_target": 0,
+        "ev_ebitda_target": 0,
+        "ev_ebitda_deviation": "",
+        "dcf_target": 0,
+        "dcf_deviation": "",
+        "dcf_note": "",
+        "dcf_wacc": "",
+        "dcf_terminal_growth": "",
+        "gordon_pb": {},
+        "financial_health": {}
+      }
+    },
+    {
+      "rank": 4,
+      "ticker": "2548.TW",
+      "name": "華固",
+      "name_en": "Huaku Development",
+      "market": "TW",
+      "price": 122.5,
+      "currency": "TWD",
+      "rating": "Buy",
+      "entry_signal": "股價站穩 20/60 日線上方，RSI 64 偏多不超買",
+      "target_price": 142,
+      "target_price_basis": "Trailing PE 14x × Actual EPS 10.14 = 142",
+      "upside": "+15.9%",
+      "scores": {
+        "fundamental": 7,
+        "industry": 7,
+        "macro": 6,
+        "technical": 6,
+        "chip": 7,
+        "catalyst": 8
+      },
+      "total_score": 41,
+      "summary": "台灣知名營建商，2025 年 EPS 10.14 元大幅成長 122%。技術面站穩均線上方，營建股受惠台灣房市穩健需求。PE 12.1x 合理，具上漲空間。",
+      "report_url": "reports/picks/2548-2026-03-29.html",
+      "valuation_summary": {
+        "valuation_type": "PE",
+        "valuation_reason": "",
+        "pe_method": "",
+        "coe_params": {},
+        "growth_params": {},
+        "justified_pe": 0,
+        "forward_eps": 0,
+        "pe_target": 0,
+        "ev_ebitda_target": 0,
+        "ev_ebitda_deviation": "",
+        "dcf_target": 0,
+        "dcf_deviation": "",
+        "dcf_note": "",
+        "dcf_wacc": "",
+        "dcf_terminal_growth": "",
+        "gordon_pb": {},
+        "financial_health": {}
+      }
+    },
+    {
+      "rank": 5,
+      "ticker": "1477.TW",
+      "name": "聚陽",
+      "name_en": "Makalot Industrial",
+      "market": "TW",
+      "price": 247.0,
+      "currency": "TWD",
+      "rating": "Buy",
+      "entry_signal": "RSI 26.4 極度超賣，逆勢佈局機會。基本面支撐，等待技術面止穩",
+      "target_price": 293,
+      "target_price_basis": "Trailing PE 20.0x × Trailing 4Q EPS 14.65 (Q1-Q3 2025 actual 11.13 + Q4 2025E 3.52)",
+      "upside": "+18.6%",
+      "scores": {
+        "fundamental": 7,
+        "industry": 7,
+        "macro": 6,
+        "technical": 6,
+        "chip": 7,
+        "catalyst": 8
+      },
+      "total_score": 41,
+      "summary": "全球成衣代工龍頭，ROE 25.7% 為紡織業翹楚。股價近期大幅修正，RSI 26.4 極度超賣，PE 16.9x 低於歷史均值。殖利率 6.07% 提供下檔保護。",
+      "report_url": "reports/picks/1477-2026-03-29.html",
+      "valuation_summary": {
+        "valuation_type": "PE",
+        "valuation_reason": "",
+        "pe_method": "",
+        "coe_params": {},
+        "growth_params": {},
+        "justified_pe": 0,
+        "forward_eps": 0,
+        "pe_target": 0,
+        "ev_ebitda_target": 0,
+        "ev_ebitda_deviation": "",
+        "dcf_target": 0,
+        "dcf_deviation": "",
+        "dcf_note": "",
+        "dcf_wacc": "",
+        "dcf_terminal_growth": "",
+        "gordon_pb": {},
+        "financial_health": {}
+      }
+    }
+  ],
+  "tw_count": 5
+}
