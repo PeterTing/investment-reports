@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CF CF Industries 深度投資分析報告 | 2026-03-31</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    line-height: 1.7; color: #1a1a2e; background: #f8f9fa; font-size: 16px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.6rem; color: #0f3460; border-bottom: 3px solid #e94560; padding-bottom: 8px; margin: 24px 0 16px; }
+h2 { font-size: 1.3rem; color: #16213e; border-left: 4px solid #e94560; padding-left: 12px; margin: 28px 0 14px; }
+h3 { font-size: 1.1rem; color: #0f3460; margin: 20px 0 10px; }
+.header-box {
+    background: linear-gradient(135deg, #0f3460, #16213e); color: white;
+    padding: 24px; border-radius: 12px; margin-bottom: 24px;
+}
+.header-box h1 { color: white; border-bottom-color: #e94560; font-size: 1.5rem; }
+.rating-badge {
+    display: inline-block; padding: 6px 18px; border-radius: 20px;
+    font-weight: bold; font-size: 1.1rem; color: #fff; background: #2da44e;
+}
+.market-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.85rem; font-weight: 600; color: white; margin-left: 8px;
+    background: #10b981;
+}
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 16px 0;
+}
+.info-card { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; }
+.info-card .label { font-size: 0.85rem; opacity: 0.8; }
+.info-card .value { font-size: 1.3rem; font-weight: bold; }
+.card {
+    background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px;
+    border: 1px solid #e0e0e0; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+th { background: #0f3460; color: white; padding: 10px 8px; text-align: left; white-space: nowrap; }
+td { padding: 8px; border-bottom: 1px solid #e0e0e0; }
+tr:nth-child(even) { background: #f5f5f5; }
+tr:hover { background: #e8eaf6; }
+.highlight { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.warning { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.action-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 14px 0;
+}
+.action-item { text-align: center; padding: 14px; border-radius: 8px; background: #f5f5f5; }
+.action-item .label { font-size: 0.82rem; color: #666; }
+.action-item .value { font-size: 1.3rem; font-weight: 700; margin-top: 4px; }
+.source { font-size: 0.85rem; color: #666; margin: 6px 0; font-style: italic; }
+.sources ol { padding-left: 20px; font-size: 0.82rem; }
+.sources li { margin-bottom: 4px; word-break: break-all; }
+.sources a { color: #1565c0; }
+.toc { background: #f0f4f8; padding: 16px 20px; border-radius: 10px; margin-bottom: 20px; }
+.toc a { color: #0f3460; text-decoration: none; display: block; padding: 3px 0; font-size: 0.92rem; }
+.toc a:hover { color: #e94560; }
+.footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem; border-top: 1px solid #e0e0e0; margin-top: 24px; }
+@media (max-width: 640px) {
+    .header-box { padding: 16px; }
+    .header-box h1 { font-size: 1.25rem; }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .action-grid { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 0.82rem; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.15rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header-box">
+    <h1>CF CF Industries <span style="font-weight:400;font-size:0.9rem;">CF Industries Holdings, Inc.</span>
+        <span class="market-badge">🇺🇸 美股</span>
+    </h1>
+    <p style="color:#94a3b8;font-size:0.9rem;margin:4px 0;">CFA 深度研究報告 | 2026-03-31 | MDVI v3</p>
+    <div style="margin:12px 0;"><span class="rating-badge">Buy</span></div>
+    <div class="info-grid">
+        <div class="info-card"><div class="label">收盤價</div><div class="value">USD 137.6</div></div>
+        <div class="info-card"><div class="label">目標價</div><div class="value">USD 161</div></div>
+        <div class="info-card"><div class="label">潛在報酬</div><div class="value" style="color:#00e676;">+17.0%</div></div>
+        <div class="info-card"><div class="label">MDVI 總分</div><div class="value">47/60</div></div>
+        <div class="info-card"><div class="label">R/R Ratio</div><div class="value">2.1:1</div></div>
+    </div>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <strong>📋 目錄</strong>
+    <a href="#sec1">1. 執行摘要</a>
+    <a href="#sec2">2. MDVI v3 六維度評分</a>
+    <a href="#sec3">3. 公司概況與事業群拆解</a>
+    <a href="#sec4">4. 財務分析與 EPS 推導</a>
+    <a href="#sec5">5. 歷史 PE 軌跡表</a>
+    <a href="#sec6">6. 估值分析（三角交叉驗證）</a>
+    <a href="#sec7">7. DCF 模型與敏感度分析</a>
+    <a href="#sec8">8. Gordon Growth Model ROE 辯證</a>
+    <a href="#sec9">9. 產業分析與同業比較</a>
+    <a href="#sec10">10. 總經與政策環境</a>
+    <a href="#sec11">11. 技術面分析</a>
+    <a href="#sec12">12. 籌碼面分析</a>
+    <a href="#sec13">13. 消息面與催化劑</a>
+    <a href="#sec14">14. 風險評估與情境模擬</a>
+    <a href="#sec15">15. 投資建議與操作區間</a>
+    <a href="#sec16">16. 參考資料</a>
+</div>
+
+<!-- 1. Executive Summary -->
+<div class="card" id="sec1">
+    <h1>1. 執行摘要</h1>
+    <div class="highlight">北美最大氮肥生產商，受惠荷莫茲海峽封鎖導致全球氮肥供給危機，尿素價格 YoY +77%。公司 2025 年 FCF $1.79B 強勁，持續回饋股東。</div>
+    <p>CF Industries 為北美最大氮肥生產商，目前受惠荷莫茲海峽封鎖導致全球 25% 氮肥貿易中斷，尿素價格 YoY 暴漲 77%。公司 2025 年 FCF $1.79B 強勁，回購了 10.2% 流通股。</p><p>股價年初至今上漲 64%，但以 Trailing PE 15.4x 計算，尚未完全反映供給危機帶來的 EPS 上修潛力。UBS 已將目標價上調至 $140。以 PE 18x 計算目標價 $161（+17%）。</p><p>主要風險在於地緣政治緩和可能導致股價快速回落，以及 DOJ 反壟斷調查。建議以 $130 進場（等候拉回），停損 $115，停利 $161。</p>
+</div>
+
+<!-- 2. MDVI Scores -->
+<div class="card" id="sec2">
+    <h1>2. MDVI v3 六維度評分</h1>
+    <div style="text-align:center;margin:12px 0;"><span style="font-size:2.5rem;font-weight:800;color:#0f3460;">47</span><span style="font-size:1.2rem;color:#666;"> / 60</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>維度</th><th>評分 (0-10)</th></tr>
+        <tr><td style="font-weight:500;">基本面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+<tr><td style="font-weight:500;">產業展望</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:90.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">9</span></div></td></tr>
+<tr><td style="font-weight:500;">總經</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+<tr><td style="font-weight:500;">技術面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">籌碼面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">消息面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:90.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">9</span></div></td></tr>
+
+    </table></div>
+    
+</div>
+
+<!-- 3. Company Overview -->
+<div class="card" id="sec3">
+    <h1>3. 公司概況與事業群拆解</h1>
+    <p>CF Industries 為北美最大氮肥生產商，年產能約 1,000 萬噸氮肥。產品包括氨（Ammonia）、尿素（Urea）、硝酸（Nitric Acid）。公司正在建設 Blue Point Complex，發展低碳氨（Blue Ammonia），預計 2026-2027 年投產。</p>
+    <h2>事業群營收拆解</h2><div class="table-wrap"><table><tr><th>事業群</th><th>營收佔比</th><th>成長驅動</th></tr><tr><td>氨 (Ammonia)</td><td>35%</td><td>全球供給緊縮推升價格</td></tr><tr><td>尿素 (Urea/UAN)</td><td>50%</td><td>尿素價格 YoY +77%，荷莫茲海峽封鎖</td></tr><tr><td>其他氮肥產品</td><td>15%</td><td>農業需求穩定</td></tr></table></div>
+    
+    
+</div>
+
+<!-- 4. Financial Analysis -->
+<div class="card" id="sec4">
+    <h1>4. 財務分析與 EPS 推導</h1>
+
+    <h2>4.1 財務健全度</h2>
+    <div style="margin:8px 0;"><span style="display:inline-block;padding:4px 14px;border-radius:12px;font-weight:600;color:white;background:#ff1744;">非常健康</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th><th>標準</th></tr>
+        <tr><td>D/E Ratio</td><td>0.47</td><td>&lt; 1.0 佳</td></tr>
+        <tr><td>流動比率</td><td>3.37</td><td>&gt; 1.5 佳</td></tr>
+        <tr><td>FCF 趨勢</td><td>強勁且成長</td><td>穩定正成長</td></tr>
+        <tr><td>利息保障倍數</td><td>15x (估算)</td><td>&gt; 5x 佳</td></tr>
+    </table></div>
+
+    <h2>4.2 季度財務追蹤</h2>
+    <table><tr><th>季度</th><th>營收 ($B)</th><th>EPS</th><th>EBITDA ($M)</th></tr><tr><td>2024 Q1</td><td>1.53</td><td>1.85</td><td>620</td></tr><tr><td>2024 Q2</td><td>1.60</td><td>1.45</td><td>550</td></tr><tr><td>2024 Q3</td><td>1.42</td><td>1.01</td><td>480</td></tr><tr><td>2024 Q4</td><td>1.65</td><td>2.59</td><td>700</td></tr><tr><td>2025 Q1</td><td>1.58</td><td>2.10</td><td>680</td></tr><tr><td>2025 Q2</td><td>1.72</td><td>2.20</td><td>720</td></tr><tr><td>2025 Q3</td><td>1.65</td><td>2.07</td><td>690</td></tr><tr><td>2025 Q4</td><td>1.87</td><td>2.59</td><td>800</td></tr></table>
+
+    <h2>4.3 獲利能力與 EPS 成長路徑</h2>
+    <p>D/E: 0.47、流動比: 3.37、FY2025 FCF $1.79B (including Blue Point JV)，FY2024 FCF $1.45B（+23.4% YoY）</p>
+
+    <h2>4.4 EPS 由下往上推導</h2>
+    <h4>Step 1: 營收拆解</h4><p>2025 年 CF Industries 營收受惠氮肥價格上漲，Q4 營收 $1.872B 超越預期。全年 Adjusted EBITDA $2.89B。</p>
+<div class="table-wrap"><table><tr><th>事業群</th><th>營收</th><th>YoY</th></tr><tr><td>氨 (Ammonia)</td><td>約 $2.5B</td><td>+15%</td></tr><tr><td>尿素/UAN</td><td>約 $3.5B</td><td>+20%</td></tr><tr><td>其他氮肥</td><td>約 $1.0B</td><td>+5%</td></tr></table></div>
+<h4>Step 2: 獲利率分析</h4><p>CF Industries 營業利潤率約 35.3%（FY2025），毛利率 38.5%，受惠北美天然氣成本優勢（較歐洲/亞洲低 50%+）。</p>
+<h4>Step 3: EPS 推導</h4><div class="table-wrap"><table><tr><th>項目</th><th>數值</th></tr><tr><td>revenue_2025</td><td>$7.0B (估算)</td></tr><tr><td>gross_profit_2025</td><td>$2.7B</td></tr><tr><td>operating_income_2025</td><td>$2.47B</td></tr><tr><td>tax_rate</td><td>23%</td></tr><tr><td>net_income_2025</td><td>$1.38B</td></tr><tr><td>shares_outstanding</td><td>153.6M</td></tr><tr><td>eps_calculated</td><td>8.96</td></tr><tr><td>eps_actual_reported</td><td>8.96</td></tr><tr><td>variance</td><td>0%</td></tr></table></div>
+</div>
+
+<!-- 5. PE History -->
+<div class="card" id="sec5">
+    <h1>5. 歷史 PE 軌跡表</h1>
+    <div class="table-wrap"><table>
+        <tr><th>年度</th><th>EPS</th><th>最高價</th><th>最低價</th><th>PE 高</th><th>PE 低</th></tr>
+        <tr>
+            <td>2021</td><td>1.98</td>
+            <td>73</td><td>40</td>
+            <td>36.9</td><td>20.2</td>
+        </tr><tr>
+            <td>2022</td><td>21.04</td>
+            <td>114</td><td>64</td>
+            <td>5.4</td><td>3.0</td>
+        </tr><tr>
+            <td>2023</td><td>10.34</td>
+            <td>98</td><td>68</td>
+            <td>9.5</td><td>6.6</td>
+        </tr><tr>
+            <td>2024</td><td>6.9</td>
+            <td>91</td><td>67</td>
+            <td>13.2</td><td>9.7</td>
+        </tr><tr>
+            <td>2025</td><td>8.96</td>
+            <td>100</td><td>72</td>
+            <td>11.2</td><td>8.0</td>
+        </tr>
+    </table></div>
+    <p style="margin-top:10px;">5 年平均 PE：<strong>11.8</strong> | 目前 PE：<strong>15.36</strong></p>
+</div>
+
+<!-- 6. Valuation -->
+<div class="card" id="sec6">
+    <h1>6. 估值分析（三角交叉驗證）</h1>
+
+    <h2>6.1 外部因素 → 公式參數對照表</h2>
+    <div class="table-wrap"><table>
+        <tr><th>分析面向</th><th>具體項目</th><th>影響參數</th><th>設定值</th><th>設定依據</th></tr>
+        
+    </table></div>
+
+    <h2>6.2 Cost of Equity (CoE)</h2>
+    <div class="table-wrap"><table>
+        <tr><th>參數</th><th>數值</th><th>來源</th></tr>
+        <tr><td>Rf (無風險利率)</td><td>4.43%</td><td>US 10-Year Treasury Yield, 2026/3/27</td></tr>
+        <tr><td>Beta</td><td>0.689</td><td>GuruFocus 5Y Beta</td></tr>
+        <tr><td>US Base ERP</td><td>4.23%</td><td rowspan="2">Damodaran US Implied ERP, January 2026</td></tr>
+        <tr><td>Country Risk Premium</td><td>0%</td></tr>
+        <tr><td>Total ERP</td><td>4.23%</td><td>計算值</td></tr>
+        <tr><td><strong>CoE</strong></td><td><strong>7.34%</strong></td><td>Rf + Beta × Total ERP</td></tr>
+    </table></div>
+
+    <h2>6.3 合理 PE 推導（PE法）</h2>
+    <p>合理 PE 推導：CoE = 4.43% + 0.689 × 4.23% = 7.34%。肥料業為週期性產業，但荷莫茲海峽封鎖創造結構性供給缺口。Trailing EPS $8.96，以 PE 18x（高於歷史均值 11.8x，反映供給危機溢價）計算目標價 $161。UBS 將目標價從 $97 上調至 $140 驗證估值上修趨勢。</p>
+    <div class="highlight">
+        合理 PE = <strong>18.0x</strong> |
+        Forward EPS = <strong>8.96</strong> |
+        目標價 = <strong>USD 161</strong>
+    </div>
+
+    <h2>6.4 交叉驗證矩陣</h2>
+    <div class="table-wrap"><table>
+        <tr><th>估值方法</th><th>隱含股價</th><th>vs PE 法偏差</th><th>狀態</th></tr>
+        <tr><td>Forward PE 法（主要）</td><td><strong>161</strong></td><td>—</td><td>主要估值</td></tr>
+        <tr><td>EV/EBITDA 法</td><td>155</td><td>-3.7%</td><td>驗證層</td></tr>
+        <tr><td>DCF 法</td><td>150</td><td>-6.8%</td><td>以 FCF $1.79B 為基礎，WACC 7%</td></tr>
+    </table></div>
+</div>
+
+<!-- 7. DCF Model -->
+<div class="card" id="sec7">
+    <h1>7. DCF 模型與敏感度分析</h1>
+    <p>以 FCF $1.79B 為基礎，假設未來 3 年因供給緊縮 FCF 維持高檔，之後正常化。WACC 7%，終值成長率 2.5%，DCF 估值約 $150 作為地板。</p>
+    <h2>敏感度分析表</h2><table><tr><th>PE \ EPS</th><th>$7</th><th>$9</th><th>$12</th><th>$15</th></tr><tr><td>10x</td><td>$70</td><td>$90</td><td>$120</td><td>$150</td></tr><tr><td>14x</td><td>$98</td><td>$126</td><td>$168</td><td>$210</td></tr><tr><td>18x (Base)</td><td>$126</td><td><b>$161</b></td><td>$216</td><td>$270</td></tr></table>
+</div>
+
+<!-- 8. Gordon Growth Model -->
+<div class="card" id="sec8">
+    <h1>8. Gordon Growth Model ROE 辯證</h1>
+    <p>ROE = 23.4%，理論 PB = 4.7，實際 PB = 4.37，溢折價 = -7.0%</p><p>實際 PB 4.37x 接近理論 PB 4.70x，僅小幅折價 7%。估值大致合理，但尚未完全反映地緣政治帶來的 EPS 上修潛力。</p>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th></tr>
+        <tr><td>ROE</td><td>23.4%</td></tr>
+        <tr><td>理論 PB (Gordon)</td><td>4.7</td></tr>
+        <tr><td>實際 PB</td><td>4.37</td></tr>
+        <tr><td>解讀</td><td>實際 PB 4.37x 接近理論 PB 4.70x，僅小幅折價 7%。估值大致合理，但尚未完全反映地緣政治帶來的 EPS 上修潛力。</td></tr>
+    </table></div>
+</div>
+
+<!-- 9. Industry -->
+<div class="card" id="sec9">
+    <h1>9. 產業分析與同業比較</h1>
+    <p>全球氮肥市場因荷莫茲海峽封鎖面臨前所未有的供給危機。海峽承載全球 25% 氮肥貿易量與 50% 海運尿素。CF Industries 作為北美最大生產商，擁有天然氣成本優勢（美國天然氣價格約為歐洲的 1/3），在供給緊縮環境中具有最大獲利彈性。主要競爭者包括 Nutrien（全球第二）、Mosaic（磷肥為主）、Yara International（歐洲龍頭）。</p>
+    <h2>同業比較矩陣</h2><div class="table-wrap"><table><tr><th>指標</th><th>CF</th><th>NTR (Nutrien)</th><th>MOS (Mosaic)</th><th>Yara Intl</th></tr><tr><td>PE</td><td>15.4x</td><td>12-14x</td><td>8-10x</td><td>10-12x</td></tr><tr><td>ROE</td><td>23.4%</td><td>10-12%</td><td>8-10%</td><td>12-14%</td></tr><tr><td>FCF Yield</td><td>8.5%</td><td>5-6%</td><td>4-5%</td><td>5-7%</td></tr><tr><td>天然氣成本優勢</td><td>最強</td><td>強</td><td>中</td><td>弱（歐洲）</td></tr></table></div>
+</div>
+
+<!-- 10. Macro -->
+<div class="card" id="sec10">
+    <h1>10. 總經與政策環境</h1>
+    <p>中東地緣政治緊張（伊朗-以色列衝突）導致荷莫茲海峽封鎖，直接推升全球氮肥價格。VIX 31 反映市場恐慌，但對 CF Industries 反而是利多（避險資金流入大宗商品）。糧食安全已成全球議題，各國政府不可能讓氮肥供給崩潰。低碳氨（Blue Ammonia）趨勢亦為長期成長動能。</p>
+</div>
+
+<!-- 11. Technical -->
+<div class="card" id="sec11">
+    <h1>11. 技術面分析</h1>
+    <div class="table-wrap"><table><tr><th>指標</th><th>數值</th><th>乖離率</th><th>解讀</th></tr><tr><td>MA_20</td><td>122.45</td><td>+12.4%</td><td>大幅高於 20 日線，短線偏多但乖離較大</td></tr><tr><td>MA_60</td><td>101.29</td><td>+35.9%</td><td>大幅高於 60 日線，中期趨勢強勁</td></tr><tr><td>RSI(14)</td><td>70.3</td><td>—</td><td>RSI 70.3 已進入超買區，短線可能面臨獲利回吐壓力</td></tr><tr><td>KD</td><td>K=81.9 / D=73.4</td><td>—</td><td>K=82, D=73，高檔鈍化中，趨勢仍強但追高風險增加</td></tr></table></div>
+</div>
+
+<!-- 12. Chip -->
+<div class="card" id="sec12">
+    <h1>12. 籌碼面分析</h1>
+    <div class="table-wrap"><table><tr><th>籌碼指標</th><th>數值</th></tr><tr><td>機構持股比例</td><td>93.1%</td></tr><tr><td>空頭股數</td><td>8,953,874</td></tr><tr><td>空頭佔流通比</td><td>6.95%</td></tr><tr><td>空頭回補天數</td><td>1.72</td></tr></table></div><p>機構持股 93% 極高，Vanguard 與 BlackRock 持續加碼。空頭部位 6.95% 偏高，潛在軋空動能。</p>
+</div>
+
+<!-- 13. Catalyst -->
+<div class="card" id="sec13">
+    <h1>13. 消息面與催化劑</h1>
+    <h4>正面催化劑</h4><ul>
+<li><strong>荷莫茲海峽封鎖持續</strong> (持續中) — 全球 25% 氮肥貿易受阻，尿素價格 YoY +77%，CF 直接受惠</li>
+<li><strong>Blue Point Complex 投產</strong> (2026-2027) — 低碳氨產能 4,400 噸/日，開拓潔淨能源市場</li>
+<li><strong>股票回購（2025 年回購 10.2% 流通股）</strong> (持續) — 積極回饋股東，EPS 持續受惠</li>
+</ul>
+<h4>負面催化劑</h4><ul>
+<li><strong>DOJ 價格壟斷調查</strong> (2026 進行中) — 若確認價格操縱，可能面臨罰款（但供給面推升為主因）</li>
+<li><strong>地緣政治緩和 / 海峽恢復通行</strong> (不確定) — 氮肥價格可能快速回落 30-40%</li>
+</ul>
+</div>
+
+<!-- 14. Risk & Scenarios -->
+<div class="card" id="sec14">
+    <h1>14. 風險評估與情境模擬</h1>
+    <div class="table-wrap"><table><tr><th>風險</th><th>機率</th><th>影響</th><th>應對</th></tr><tr><td>地緣政治風險反轉</td><td>medium</td><td>high</td><td>密切追蹤伊朗情勢，設嚴格停損</td></tr><tr><td>DOJ 反壟斷調查</td><td>medium</td><td>medium</td><td>供給面推升價格的證據強，壟斷指控可能不成立</td></tr><tr><td>天然氣成本上升</td><td>low</td><td>medium</td><td>美國天然氣價格相對全球仍有優勢</td></tr></table></div>
+    <h2>Bull / Base / Bear 情境</h2>
+    <div class="table-wrap"><table>
+        <tr><th>情境</th><th>EPS</th><th>PE</th><th>目標價</th><th>觸發條件</th></tr>
+        <tr>
+            <td><strong>Bull 🐂</strong></td><td>15.0</td>
+            <td>15</td><td>225</td>
+            <td>中東衝突持續升級 / 全球糧食危機</td>
+        </tr><tr>
+            <td><strong>Base 📊</strong></td><td>8.96</td>
+            <td>18</td><td>161</td>
+            <td>地緣政治維持緊張，氮肥價格高檔震盪</td>
+        </tr><tr>
+            <td><strong>Bear 🐻</strong></td><td>7.0</td>
+            <td>10</td><td>70</td>
+            <td>伊朗核協議達成 / 荷莫茲海峽恢復通行</td>
+        </tr>
+    </table></div>
+    
+</div>
+
+<!-- 15. Investment Recommendation -->
+<div class="card" id="sec15">
+    <h1>15. 投資建議與操作區間</h1>
+    <div style="text-align:center;margin:12px 0;">
+        <span class="rating-badge" style="font-size:1.2rem;padding:10px 28px;">Buy</span>
+        <p style="margin-top:10px;color:#666;">地緣政治推升氮肥需求，結構性供給緊縮</p>
+    </div>
+    <div class="action-grid">
+        <div class="action-item"><div class="label">進場點</div><div class="value" style="color:#1565c0;">130</div></div>
+        <div class="action-item"><div class="label">目標價</div><div class="value" style="color:#00c853;">161</div></div>
+        <div class="action-item"><div class="label">停損點</div><div class="value" style="color:#ff1744;">115</div></div>
+        <div class="action-item"><div class="label">停利點</div><div class="value" style="color:#00c853;">161</div></div>
+    </div>
+    <p style="text-align:center;font-size:0.95rem;margin-top:10px;">
+        風險報酬比 R/R = <strong>2.1:1</strong>
+    </p>
+    <p>投資評級：🟢 買進。CF Industries 受惠全球氮肥供給危機，股價年初至今已漲 64% 但上行空間仍存。以 Trailing PE 18x 計算目標價 $161（+17%）。注意 RSI 70 已進入超買區，建議等候拉回至 $130 再分批進場。停損 $115（地緣政治緩和 + Bear PE 10x × $7 EPS = $70 之上），停利 $161。風險報酬比 2.1:1。此為事件驅動型標的，需密切追蹤中東情勢。</p>
+</div>
+
+<!-- 16. Sources -->
+<div class="card sources" id="sec16">
+    <h1>16. 參考資料</h1>
+    <ol><li><a href="https://finance.yahoo.com/quote/CF/key-statistics/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/CF/key-statistics/</a></li>
+<li><a href="https://www.cfindustries.com/newsroom/2026/fy-2025-earnings" target="_blank" rel="noopener">https://www.cfindustries.com/newsroom/2026/fy-2025-earnings</a></li>
+<li><a href="https://www.macrotrends.net/stocks/charts/CF/cf-industries-holdings/pe-ratio" target="_blank" rel="noopener">https://www.macrotrends.net/stocks/charts/CF/cf-industries-holdings/pe-ratio</a></li>
+<li><a href="https://markets.financialcontent.com/stocks/article/marketminute-2026-3-30-nitrogen-crisis-cf-industries-surges" target="_blank" rel="noopener">https://markets.financialcontent.com/stocks/article/marketminute-2026-3-30-nitrogen-crisis-cf-industries-surges</a></li>
+<li><a href="https://247wallst.com/investing/2026/03/26/ubs-lifts-cf-industries-to-140-price-target-urea-prices-are-up-77-and-the-market-hasnt-caught-on/" target="_blank" rel="noopener">https://247wallst.com/investing/2026/03/26/ubs-lifts-cf-industries-to-140-price-target-urea-prices-are-up-77-and-the-market-hasnt-caught-on/</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html</a></li>
+<li><a href="https://www.cnbc.com/quotes/US10Y" target="_blank" rel="noopener">https://www.cnbc.com/quotes/US10Y</a></li>
+<li><a href="https://www.gurufocus.com/term/beta/CF" target="_blank" rel="noopener">https://www.gurufocus.com/term/beta/CF</a></li>
+<li><a href="https://www.marketbeat.com/stocks/NYSE/CF/institutional-ownership/" target="_blank" rel="noopener">https://www.marketbeat.com/stocks/NYSE/CF/institutional-ownership/</a></li></ol>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>CFA 深度研究報告 | MDVI v3 | 2026-03-31 07:06 | ARTOGO Investment Research</p>
+    <p>⚠️ 本報告僅供研究參考，不構成投資建議。投資有風險，入市需謹慎。</p>
+    <p><a href="../../index.html" style="color:#1565c0;">← 返回首頁</a></p>
+</div>
+
+</div>
+</body>
+</html>

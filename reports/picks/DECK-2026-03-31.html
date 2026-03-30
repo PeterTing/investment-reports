@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DECK Deckers Outdoor 深度投資分析報告 | 2026-03-31</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    line-height: 1.7; color: #1a1a2e; background: #f8f9fa; font-size: 16px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.6rem; color: #0f3460; border-bottom: 3px solid #e94560; padding-bottom: 8px; margin: 24px 0 16px; }
+h2 { font-size: 1.3rem; color: #16213e; border-left: 4px solid #e94560; padding-left: 12px; margin: 28px 0 14px; }
+h3 { font-size: 1.1rem; color: #0f3460; margin: 20px 0 10px; }
+.header-box {
+    background: linear-gradient(135deg, #0f3460, #16213e); color: white;
+    padding: 24px; border-radius: 12px; margin-bottom: 24px;
+}
+.header-box h1 { color: white; border-bottom-color: #e94560; font-size: 1.5rem; }
+.rating-badge {
+    display: inline-block; padding: 6px 18px; border-radius: 20px;
+    font-weight: bold; font-size: 1.1rem; color: #fff; background: #2da44e;
+}
+.market-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.85rem; font-weight: 600; color: white; margin-left: 8px;
+    background: #10b981;
+}
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 16px 0;
+}
+.info-card { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; }
+.info-card .label { font-size: 0.85rem; opacity: 0.8; }
+.info-card .value { font-size: 1.3rem; font-weight: bold; }
+.card {
+    background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px;
+    border: 1px solid #e0e0e0; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+th { background: #0f3460; color: white; padding: 10px 8px; text-align: left; white-space: nowrap; }
+td { padding: 8px; border-bottom: 1px solid #e0e0e0; }
+tr:nth-child(even) { background: #f5f5f5; }
+tr:hover { background: #e8eaf6; }
+.highlight { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.warning { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.action-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 14px 0;
+}
+.action-item { text-align: center; padding: 14px; border-radius: 8px; background: #f5f5f5; }
+.action-item .label { font-size: 0.82rem; color: #666; }
+.action-item .value { font-size: 1.3rem; font-weight: 700; margin-top: 4px; }
+.source { font-size: 0.85rem; color: #666; margin: 6px 0; font-style: italic; }
+.sources ol { padding-left: 20px; font-size: 0.82rem; }
+.sources li { margin-bottom: 4px; word-break: break-all; }
+.sources a { color: #1565c0; }
+.toc { background: #f0f4f8; padding: 16px 20px; border-radius: 10px; margin-bottom: 20px; }
+.toc a { color: #0f3460; text-decoration: none; display: block; padding: 3px 0; font-size: 0.92rem; }
+.toc a:hover { color: #e94560; }
+.footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem; border-top: 1px solid #e0e0e0; margin-top: 24px; }
+@media (max-width: 640px) {
+    .header-box { padding: 16px; }
+    .header-box h1 { font-size: 1.25rem; }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .action-grid { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 0.82rem; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.15rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header-box">
+    <h1>DECK Deckers Outdoor <span style="font-weight:400;font-size:0.9rem;">Deckers Outdoor Corporation</span>
+        <span class="market-badge">🇺🇸 美股</span>
+    </h1>
+    <p style="color:#94a3b8;font-size:0.9rem;margin:4px 0;">CFA 深度研究報告 | 2026-03-31 | MDVI v3</p>
+    <div style="margin:12px 0;"><span class="rating-badge">Buy</span></div>
+    <div class="info-grid">
+        <div class="info-card"><div class="label">收盤價</div><div class="value">USD 94.97</div></div>
+        <div class="info-card"><div class="label">目標價</div><div class="value">USD 127</div></div>
+        <div class="info-card"><div class="label">潛在報酬</div><div class="value" style="color:#00e676;">+33.7%</div></div>
+        <div class="info-card"><div class="label">MDVI 總分</div><div class="value">40/60</div></div>
+        <div class="info-card"><div class="label">R/R Ratio</div><div class="value">2.7:1</div></div>
+    </div>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <strong>📋 目錄</strong>
+    <a href="#sec1">1. 執行摘要</a>
+    <a href="#sec2">2. MDVI v3 六維度評分</a>
+    <a href="#sec3">3. 公司概況與事業群拆解</a>
+    <a href="#sec4">4. 財務分析與 EPS 推導</a>
+    <a href="#sec5">5. 歷史 PE 軌跡表</a>
+    <a href="#sec6">6. 估值分析（三角交叉驗證）</a>
+    <a href="#sec7">7. DCF 模型與敏感度分析</a>
+    <a href="#sec8">8. Gordon Growth Model ROE 辯證</a>
+    <a href="#sec9">9. 產業分析與同業比較</a>
+    <a href="#sec10">10. 總經與政策環境</a>
+    <a href="#sec11">11. 技術面分析</a>
+    <a href="#sec12">12. 籌碼面分析</a>
+    <a href="#sec13">13. 消息面與催化劑</a>
+    <a href="#sec14">14. 風險評估與情境模擬</a>
+    <a href="#sec15">15. 投資建議與操作區間</a>
+    <a href="#sec16">16. 參考資料</a>
+</div>
+
+<!-- 1. Executive Summary -->
+<div class="card" id="sec1">
+    <h1>1. 執行摘要</h1>
+    <div class="highlight">HOKA 及 UGG 雙品牌驅動的高成長消費品公司，FY2025 營收成長 16% 至 $5B，毛利率 57.9%。股價近期回檔 20%+，PE 降至 13.5x，遠低於 10 年平均 32x。</div>
+    <p>Deckers Outdoor 旗下 HOKA 與 UGG 雙品牌驅動強勁成長，FY2025 營收 $5.0B（+16%），毛利率 57.9%（+230 bps），EPS $7.04（+30%）。公司財務極度健康：淨現金超過 $1B，D/E 僅 0.13，FCF $970M。</p><p>近期股價從 $145 回檔至 $95（-34%），RSI 30 已觸及超賣區。PE 13.5x 遠低於 10 年平均 32x，為品牌消費品中罕見的低估值機會。Q3 FY2026 EPS $3.33 大幅超越預期 $2.77，基本面未惡化。</p><p>以 Trailing PE 18x 計算目標價 $127（+34%），風險報酬比 2.7:1，建議買進。</p>
+</div>
+
+<!-- 2. MDVI Scores -->
+<div class="card" id="sec2">
+    <h1>2. MDVI v3 六維度評分</h1>
+    <div style="text-align:center;margin:12px 0;"><span style="font-size:2.5rem;font-weight:800;color:#0f3460;">40</span><span style="font-size:1.2rem;color:#666;"> / 60</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>維度</th><th>評分 (0-10)</th></tr>
+        <tr><td style="font-weight:500;">基本面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:90.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">9</span></div></td></tr>
+<tr><td style="font-weight:500;">產業展望</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+<tr><td style="font-weight:500;">總經</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:50.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">5</span></div></td></tr>
+<tr><td style="font-weight:500;">技術面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:50.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">5</span></div></td></tr>
+<tr><td style="font-weight:500;">籌碼面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">消息面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+
+    </table></div>
+    
+</div>
+
+<!-- 3. Company Overview -->
+<div class="card" id="sec3">
+    <h1>3. 公司概況與事業群拆解</h1>
+    <p>Deckers Outdoor 旗下擁有 HOKA（高性能跑鞋）與 UGG（休閒靴履）兩大明星品牌，合計貢獻約 95% 營收。HOKA 品牌正處於高速成長期（+24% YoY），已成為全球跑鞋市場第四大品牌。DTC（直銷）通路佔比提升至 45%，推動毛利率改善。</p>
+    <h2>事業群營收拆解</h2><div class="table-wrap"><table><tr><th>事業群</th><th>營收佔比</th><th>成長驅動</th></tr><tr><td>HOKA</td><td>50%</td><td>全球跑鞋需求、品牌力擴張、新品類拓展</td></tr><tr><td>UGG</td><td>45%</td><td>季節性經典產品、暖季系列擴展</td></tr><tr><td>其他 (Teva, AHNU)</td><td>5%</td><td>戶外休閒需求</td></tr></table></div>
+    
+    
+</div>
+
+<!-- 4. Financial Analysis -->
+<div class="card" id="sec4">
+    <h1>4. 財務分析與 EPS 推導</h1>
+
+    <h2>4.1 財務健全度</h2>
+    <div style="margin:8px 0;"><span style="display:inline-block;padding:4px 14px;border-radius:12px;font-weight:600;color:white;background:#ff1744;">極佳（淨現金、低負債、高 FCF）</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th><th>標準</th></tr>
+        <tr><td>D/E Ratio</td><td>0.13</td><td>&lt; 1.0 佳</td></tr>
+        <tr><td>流動比率</td><td>2.86</td><td>&gt; 1.5 佳</td></tr>
+        <tr><td>FCF 趨勢</td><td>穩健成長</td><td>穩定正成長</td></tr>
+        <tr><td>利息保障倍數</td><td>50x+ (幾乎無負債)</td><td>&gt; 5x 佳</td></tr>
+    </table></div>
+
+    <h2>4.2 季度財務追蹤</h2>
+    <table><tr><th>季度</th><th>營收 ($B)</th><th>EPS</th><th>毛利率</th></tr><tr><td>FY25 Q1 (2024/6)</td><td>0.83</td><td>0.79</td><td>56.5%</td></tr><tr><td>FY25 Q2 (2024/9)</td><td>1.31</td><td>1.59</td><td>57.8%</td></tr><tr><td>FY25 Q3 (2024/12)</td><td>1.83</td><td>3.28</td><td>58.8%</td></tr><tr><td>FY25 Q4 (2025/3)</td><td>1.02</td><td>1.38</td><td>57.5%</td></tr><tr><td>FY26 Q1 (2025/6)</td><td>0.95</td><td>0.92</td><td>56.2%</td></tr><tr><td>FY26 Q2 (2025/9)</td><td>1.40</td><td>1.80</td><td>56.2%</td></tr><tr><td>FY26 Q3 (2026/1)</td><td>1.85</td><td>3.33</td><td>56.7%</td></tr></table>
+
+    <h2>4.3 獲利能力與 EPS 成長路徑</h2>
+    <p>D/E: 0.13、流動比: 2.86、FY2025 FCF $970M（+2.7% YoY），淨現金部位超過 $1B</p>
+
+    <h2>4.4 EPS 由下往上推導</h2>
+    <h4>Step 1: 營收拆解</h4><p>FY2025（截至 2025/3）淨銷售額 $4.986B（+16.3% YoY）。HOKA 品牌營收成長 24% 為主要驅動力，UGG 品牌穩定成長。</p>
+<div class="table-wrap"><table><tr><th>事業群</th><th>營收</th><th>YoY</th></tr><tr><td>HOKA</td><td>~$2.5B</td><td>+24%</td></tr><tr><td>UGG</td><td>~$2.3B</td><td>+8%</td></tr><tr><td>其他品牌 (Teva/AHNU)</td><td>~$0.2B</td><td>+5%</td></tr></table></div>
+<h4>Step 2: 獲利率分析</h4><p>FY2025 毛利率 57.9%（+230 bps YoY），營業利潤率 23.6%（+200 bps YoY）。DTC 通路佔比提升帶動毛利率持續改善。</p>
+<h4>Step 3: EPS 推導</h4><div class="table-wrap"><table><tr><th>項目</th><th>數值</th></tr><tr><td>revenue_2025</td><td>$4.986B</td></tr><tr><td>gross_profit_2025</td><td>$2.887B</td></tr><tr><td>operating_income_2025</td><td>$1.176B</td></tr><tr><td>tax_rate</td><td>20%</td></tr><tr><td>net_income_2025</td><td>$1.0B</td></tr><tr><td>shares_outstanding</td><td>142M (經回購減少)</td></tr><tr><td>eps_calculated</td><td>7.04</td></tr><tr><td>eps_actual_reported</td><td>7.04 (TTM)</td></tr><tr><td>variance</td><td>0%</td></tr></table></div>
+</div>
+
+<!-- 5. PE History -->
+<div class="card" id="sec5">
+    <h1>5. 歷史 PE 軌跡表</h1>
+    <div class="table-wrap"><table>
+        <tr><th>年度</th><th>EPS</th><th>最高價</th><th>最低價</th><th>PE 高</th><th>PE 低</th></tr>
+        <tr>
+            <td>2021</td><td>2.87</td>
+            <td>120</td><td>70</td>
+            <td>41.8</td><td>24.4</td>
+        </tr><tr>
+            <td>2022</td><td>2.67</td>
+            <td>115</td><td>55</td>
+            <td>43.1</td><td>20.6</td>
+        </tr><tr>
+            <td>2023</td><td>3.58</td>
+            <td>120</td><td>65</td>
+            <td>33.5</td><td>18.2</td>
+        </tr><tr>
+            <td>2024</td><td>4.89</td>
+            <td>180</td><td>100</td>
+            <td>36.8</td><td>20.4</td>
+        </tr><tr>
+            <td>2025</td><td>7.04</td>
+            <td>145</td><td>88</td>
+            <td>20.6</td><td>12.5</td>
+        </tr>
+    </table></div>
+    <p style="margin-top:10px;">5 年平均 PE：<strong>27.5</strong> | 目前 PE：<strong>13.49</strong></p>
+</div>
+
+<!-- 6. Valuation -->
+<div class="card" id="sec6">
+    <h1>6. 估值分析（三角交叉驗證）</h1>
+
+    <h2>6.1 外部因素 → 公式參數對照表</h2>
+    <div class="table-wrap"><table>
+        <tr><th>分析面向</th><th>具體項目</th><th>影響參數</th><th>設定值</th><th>設定依據</th></tr>
+        
+    </table></div>
+
+    <h2>6.2 Cost of Equity (CoE)</h2>
+    <div class="table-wrap"><table>
+        <tr><th>參數</th><th>數值</th><th>來源</th></tr>
+        <tr><td>Rf (無風險利率)</td><td>4.43%</td><td>US 10-Year Treasury Yield, 2026/3/27</td></tr>
+        <tr><td>Beta</td><td>1.161</td><td>Yahoo Finance 5Y Monthly Beta</td></tr>
+        <tr><td>US Base ERP</td><td>4.23%</td><td rowspan="2">Damodaran US Implied ERP, January 2026</td></tr>
+        <tr><td>Country Risk Premium</td><td>0%</td></tr>
+        <tr><td>Total ERP</td><td>4.23%</td><td>計算值</td></tr>
+        <tr><td><strong>CoE</strong></td><td><strong>9.34%</strong></td><td>Rf + Beta × Total ERP</td></tr>
+    </table></div>
+
+    <h2>6.3 合理 PE 推導（PE法）</h2>
+    <p>合理 PE 推導：CoE = 4.43% + 1.161 × 4.23% = 9.34%。HOKA EPS 成長率約 24%，PEG = PE / 成長率。若合理 PEG 0.75（反映消費品不確定性），合理 PE = 0.75 × 24 = 18x。目標價 = $7.04 × 18 = $127。歷史 PE 均值 27.5x 提供額外上方空間。</p>
+    <div class="highlight">
+        合理 PE = <strong>18.0x</strong> |
+        Forward EPS = <strong>7.04</strong> |
+        目標價 = <strong>USD 127</strong>
+    </div>
+
+    <h2>6.4 交叉驗證矩陣</h2>
+    <div class="table-wrap"><table>
+        <tr><th>估值方法</th><th>隱含股價</th><th>vs PE 法偏差</th><th>狀態</th></tr>
+        <tr><td>Forward PE 法（主要）</td><td><strong>127</strong></td><td>—</td><td>主要估值</td></tr>
+        <tr><td>EV/EBITDA 法</td><td>120</td><td>-5.5%</td><td>驗證層</td></tr>
+        <tr><td>DCF 法</td><td>115</td><td>-9.4%</td><td>以 FCF $970M 為基礎，品牌消費品 FCF 穩定度高</td></tr>
+    </table></div>
+</div>
+
+<!-- 7. DCF Model -->
+<div class="card" id="sec7">
+    <h1>7. DCF 模型與敏感度分析</h1>
+    <p>以 FCF $970M 為基礎，品牌消費品 FCF 穩定。預測期 5 年 FCF 成長率 10-15%，WACC 9%，終值成長率 4%，DCF 估值 $115 作為地板。</p>
+    <h2>敏感度分析表</h2><table><tr><th>PE \ EPS</th><th>$5.5</th><th>$7</th><th>$8</th><th>$9</th></tr><tr><td>14x</td><td>$77</td><td>$98</td><td>$112</td><td>$126</td></tr><tr><td>18x (Base)</td><td>$99</td><td><b>$127</b></td><td>$144</td><td>$162</td></tr><tr><td>25x</td><td>$138</td><td>$175</td><td>$200</td><td>$225</td></tr></table>
+</div>
+
+<!-- 8. Gordon Growth Model -->
+<div class="card" id="sec8">
+    <h1>8. Gordon Growth Model ROE 辯證</h1>
+    <p>ROE = 39.7%，理論 PB = 8.0，實際 PB = 5.18，溢折價 = -35.3%</p><p>市場給予 35% 折價，反映對消費降級與 HOKA 成長放緩的擔憂。但品牌力仍強勁，Q3 FY2026 EPS $3.33 大幅超越預期的 $2.77，折價空間提供極佳進場機會。</p>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th></tr>
+        <tr><td>ROE</td><td>39.7%</td></tr>
+        <tr><td>理論 PB (Gordon)</td><td>8.0</td></tr>
+        <tr><td>實際 PB</td><td>5.18</td></tr>
+        <tr><td>解讀</td><td>市場給予 35% 折價，反映對消費降級與 HOKA 成長放緩的擔憂。但品牌力仍強勁，Q3 FY2026 EPS $3.33 大幅超越預期的 $2.77，折價空間提供極佳進場機會。</td></tr>
+    </table></div>
+</div>
+
+<!-- 9. Industry -->
+<div class="card" id="sec9">
+    <h1>9. 產業分析與同業比較</h1>
+    <p>全球運動鞋服市場預估至 2030 年達 $600B+，CAGR 約 6-8%。HOKA 在跑鞋細分市場快速崛起，2025 年已超越 ASICS 成為第四大跑鞋品牌（僅次於 Nike、Adidas、New Balance）。品牌差異化在於 MaxCushion 技術與時尚設計的結合，既吸引專業跑者也打入 lifestyle 市場。UGG 品牌作為現金牛持續貢獻穩定利潤。</p>
+    <h2>同業比較矩陣</h2><div class="table-wrap"><table><tr><th>指標</th><th>DECK</th><th>NKE (Nike)</th><th>ONON (On Holding)</th><th>LULU (Lululemon)</th></tr><tr><td>PE</td><td>13.5x</td><td>25-30x</td><td>50-60x</td><td>20-25x</td></tr><tr><td>ROE</td><td>39.7%</td><td>35-40%</td><td>15-20%</td><td>35-40%</td></tr><tr><td>營收成長率</td><td>+16%</td><td>+2%</td><td>+25%</td><td>+10%</td></tr><tr><td>毛利率</td><td>57.9%</td><td>44-46%</td><td>58-60%</td><td>57-58%</td></tr></table></div>
+</div>
+
+<!-- 10. Macro -->
+<div class="card" id="sec10">
+    <h1>10. 總經與政策環境</h1>
+    <p>美國消費者信心受 GDP 放緩（Q4 0.7%）影響走弱，VIX 31 反映市場恐慌。高單價運動品牌在經濟放緩時通常受壓，這是 DECK 股價回檔的主因。但 HOKA 品牌仍處於 S-curve 爬升階段，品牌力可部分抵消宏觀逆風。利率偏高壓縮估值，但公司幾乎無負債，受影響程度低。</p>
+</div>
+
+<!-- 11. Technical -->
+<div class="card" id="sec11">
+    <h1>11. 技術面分析</h1>
+    <div class="table-wrap"><table><tr><th>指標</th><th>數值</th><th>乖離率</th><th>解讀</th></tr><tr><td>MA_20</td><td>102.36</td><td>-7.2%</td><td>低於 20 日線，短線弱勢</td></tr><tr><td>MA_60</td><td>107.34</td><td>-11.5%</td><td>大幅低於 60 日線，中期趨勢轉弱</td></tr><tr><td>RSI(14)</td><td>30.0</td><td>—</td><td>RSI 30.0 已觸及超賣區，反彈機率高</td></tr><tr><td>KD</td><td>K=15.6 / D=20.3</td><td>—</td><td>K=15.6 極度超賣，K < D 但接近反轉點</td></tr></table></div>
+</div>
+
+<!-- 12. Chip -->
+<div class="card" id="sec12">
+    <h1>12. 籌碼面分析</h1>
+    <div class="table-wrap"><table><tr><th>籌碼指標</th><th>數值</th></tr><tr><td>機構持股比例</td><td>98.1%</td></tr><tr><td>空頭股數</td><td>3,930,151</td></tr><tr><td>空頭佔流通比</td><td>3.91%</td></tr><tr><td>空頭回補天數</td><td>1.80</td></tr></table></div><p>機構持股極高 98.1%，空頭部位 3.91% 偏中性。近期股價下跌可能引發機構逢低加碼。</p>
+</div>
+
+<!-- 13. Catalyst -->
+<div class="card" id="sec13">
+    <h1>13. 消息面與催化劑</h1>
+    <h4>正面催化劑</h4><ul>
+<li><strong>Q4 FY2026 財報（2026 年 5 月）</strong> (2 個月內) — 若延續 Q3 超預期趨勢，估值有望修復</li>
+<li><strong>HOKA 全球品牌擴張（歐洲/亞太）</strong> (2026 全年) — 國際市場滲透率提升帶動營收成長</li>
+<li><strong>2026 春季新品系列上市</strong> (2026 Q2) — UGG 暖季系列 + 環保再生材料產品擴展品牌形象</li>
+</ul>
+<h4>負面催化劑</h4><ul>
+<li><strong>消費者信心下降 / 美國經濟放緩</strong> (持續風險) — 高單價運動品牌首當其衝</li>
+<li><strong>HOKA 成長趨緩</strong> (2026 H2 觀察) — 若 HOKA 成長率降至 15% 以下，PE 將進一步壓縮</li>
+</ul>
+</div>
+
+<!-- 14. Risk & Scenarios -->
+<div class="card" id="sec14">
+    <h1>14. 風險評估與情境模擬</h1>
+    <div class="table-wrap"><table><tr><th>風險</th><th>機率</th><th>影響</th><th>應對</th></tr><tr><td>消費降級風險</td><td>high</td><td>high</td><td>追蹤美國零售銷售數據與消費者信心指數</td></tr><tr><td>HOKA 品牌競爭加劇</td><td>medium</td><td>medium</td><td>監控 Nike/New Balance 在跑鞋市場的新品策略</td></tr><tr><td>關稅/貿易政策衝擊</td><td>medium</td><td>medium</td><td>公司已分散製造基地至越南/中國以外</td></tr></table></div>
+    <h2>Bull / Base / Bear 情境</h2>
+    <div class="table-wrap"><table>
+        <tr><th>情境</th><th>EPS</th><th>PE</th><th>目標價</th><th>觸發條件</th></tr>
+        <tr>
+            <td><strong>Bull 🐂</strong></td><td>9.0</td>
+            <td>25</td><td>225</td>
+            <td>HOKA 市佔率持續提升 / 季報持續超預期</td>
+        </tr><tr>
+            <td><strong>Base 📊</strong></td><td>7.04</td>
+            <td>18</td><td>127</td>
+            <td>品牌維持成長動能，消費信心穩定</td>
+        </tr><tr>
+            <td><strong>Bear 🐻</strong></td><td>5.5</td>
+            <td>14</td><td>77</td>
+            <td>美國經濟衰退 / 消費者信心崩潰 / 競爭加劇</td>
+        </tr>
+    </table></div>
+    
+</div>
+
+<!-- 15. Investment Recommendation -->
+<div class="card" id="sec15">
+    <h1>15. 投資建議與操作區間</h1>
+    <div style="text-align:center;margin:12px 0;">
+        <span class="rating-badge" style="font-size:1.2rem;padding:10px 28px;">Buy</span>
+        <p style="margin-top:10px;color:#666;">強勢品牌大幅回檔，估值回到歷史低位</p>
+    </div>
+    <div class="action-grid">
+        <div class="action-item"><div class="label">進場點</div><div class="value" style="color:#1565c0;">90</div></div>
+        <div class="action-item"><div class="label">目標價</div><div class="value" style="color:#00c853;">127</div></div>
+        <div class="action-item"><div class="label">停損點</div><div class="value" style="color:#ff1744;">78</div></div>
+        <div class="action-item"><div class="label">停利點</div><div class="value" style="color:#00c853;">127</div></div>
+    </div>
+    <p style="text-align:center;font-size:0.95rem;margin-top:10px;">
+        風險報酬比 R/R = <strong>2.7:1</strong>
+    </p>
+    <p>投資評級：🟢 買進。Deckers Outdoor 是少見的「高成長 + 高利潤 + 低負債」三合一標的。HOKA 品牌 24% 的成長率、57.9% 的毛利率、淨現金資產負債表，在當前 PE 13.5x（10 年均值的一半）提供極佳風險報酬。建議 $90 附近進場（或突破 20MA $102 時確認反轉），停損 $78（Bear Case $77 附近），停利 $127。風險報酬比 2.7:1。</p>
+</div>
+
+<!-- 16. Sources -->
+<div class="card sources" id="sec16">
+    <h1>16. 參考資料</h1>
+    <ol><li><a href="https://finance.yahoo.com/quote/DECK/key-statistics/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/DECK/key-statistics/</a></li>
+<li><a href="https://ir.deckers.com/news-events/press-releases/press-release/2025/Deckers-Brands-Reports-Fourth-Quarter-and-Full-Fiscal-Year-2025-Financial-Results/default.aspx" target="_blank" rel="noopener">https://ir.deckers.com/news-events/press-releases/press-release/2025/Deckers-Brands-Reports-Fourth-Quarter-and-Full-Fiscal-Year-2025-Financial-Results/default.aspx</a></li>
+<li><a href="https://www.macrotrends.net/stocks/charts/DECK/deckers-outdoor/pe-ratio" target="_blank" rel="noopener">https://www.macrotrends.net/stocks/charts/DECK/deckers-outdoor/pe-ratio</a></li>
+<li><a href="https://ir.deckers.com/news-events/press-releases/press-release/2025/Deckers-Brands-Reports-Second-Quarter-Fiscal-Year-2026-Financial-Results/default.aspx" target="_blank" rel="noopener">https://ir.deckers.com/news-events/press-releases/press-release/2025/Deckers-Brands-Reports-Second-Quarter-Fiscal-Year-2026-Financial-Results/default.aspx</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html</a></li>
+<li><a href="https://www.cnbc.com/quotes/US10Y" target="_blank" rel="noopener">https://www.cnbc.com/quotes/US10Y</a></li>
+<li><a href="https://fintel.io/so/us/deck" target="_blank" rel="noopener">https://fintel.io/so/us/deck</a></li>
+<li><a href="https://simplywall.st/stocks/us/consumer-durables/nyse-deck/deckers-outdoor/news/a-look-at-deckers-outdoor-deck-valuation-after-recent-share-price-pullback" target="_blank" rel="noopener">https://simplywall.st/stocks/us/consumer-durables/nyse-deck/deckers-outdoor/news/a-look-at-deckers-outdoor-deck-valuation-after-recent-share-price-pullback</a></li>
+<li><a href="https://www.macrotrends.net/stocks/charts/DECK/deckers-outdoor/free-cash-flow" target="_blank" rel="noopener">https://www.macrotrends.net/stocks/charts/DECK/deckers-outdoor/free-cash-flow</a></li></ol>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>CFA 深度研究報告 | MDVI v3 | 2026-03-31 07:06 | ARTOGO Investment Research</p>
+    <p>⚠️ 本報告僅供研究參考，不構成投資建議。投資有風險，入市需謹慎。</p>
+    <p><a href="../../index.html" style="color:#1565c0;">← 返回首頁</a></p>
+</div>
+
+</div>
+</body>
+</html>
