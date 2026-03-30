@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1477 聚陽 深度投資分析報告 | 2026-03-30</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    line-height: 1.7; color: #1a1a2e; background: #f8f9fa; font-size: 16px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.6rem; color: #0f3460; border-bottom: 3px solid #e94560; padding-bottom: 8px; margin: 24px 0 16px; }
+h2 { font-size: 1.3rem; color: #16213e; border-left: 4px solid #e94560; padding-left: 12px; margin: 28px 0 14px; }
+h3 { font-size: 1.1rem; color: #0f3460; margin: 20px 0 10px; }
+.header-box {
+    background: linear-gradient(135deg, #0f3460, #16213e); color: white;
+    padding: 24px; border-radius: 12px; margin-bottom: 24px;
+}
+.header-box h1 { color: white; border-bottom-color: #e94560; font-size: 1.5rem; }
+.rating-badge {
+    display: inline-block; padding: 6px 18px; border-radius: 20px;
+    font-weight: bold; font-size: 1.1rem; color: #fff; background: #2da44e;
+}
+.market-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.85rem; font-weight: 600; color: white; margin-left: 8px;
+    background: #3b82f6;
+}
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 16px 0;
+}
+.info-card { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; }
+.info-card .label { font-size: 0.85rem; opacity: 0.8; }
+.info-card .value { font-size: 1.3rem; font-weight: bold; }
+.card {
+    background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px;
+    border: 1px solid #e0e0e0; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+th { background: #0f3460; color: white; padding: 10px 8px; text-align: left; white-space: nowrap; }
+td { padding: 8px; border-bottom: 1px solid #e0e0e0; }
+tr:nth-child(even) { background: #f5f5f5; }
+tr:hover { background: #e8eaf6; }
+.highlight { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.warning { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.action-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 14px 0;
+}
+.action-item { text-align: center; padding: 14px; border-radius: 8px; background: #f5f5f5; }
+.action-item .label { font-size: 0.82rem; color: #666; }
+.action-item .value { font-size: 1.3rem; font-weight: 700; margin-top: 4px; }
+.source { font-size: 0.85rem; color: #666; margin: 6px 0; font-style: italic; }
+.sources ol { padding-left: 20px; font-size: 0.82rem; }
+.sources li { margin-bottom: 4px; word-break: break-all; }
+.sources a { color: #1565c0; }
+.toc { background: #f0f4f8; padding: 16px 20px; border-radius: 10px; margin-bottom: 20px; }
+.toc a { color: #0f3460; text-decoration: none; display: block; padding: 3px 0; font-size: 0.92rem; }
+.toc a:hover { color: #e94560; }
+.footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem; border-top: 1px solid #e0e0e0; margin-top: 24px; }
+@media (max-width: 640px) {
+    .header-box { padding: 16px; }
+    .header-box h1 { font-size: 1.25rem; }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .action-grid { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 0.82rem; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.15rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header-box">
+    <h1>1477 聚陽 <span style="font-weight:400;font-size:0.9rem;">Makalot Industrial</span>
+        <span class="market-badge">🇹🇼 台股</span>
+    </h1>
+    <p style="color:#94a3b8;font-size:0.9rem;margin:4px 0;">CFA 深度研究報告 | 2026-03-30 | MDVI v3</p>
+    <div style="margin:12px 0;"><span class="rating-badge">Buy</span></div>
+    <div class="info-grid">
+        <div class="info-card"><div class="label">收盤價</div><div class="value">TWD 247.0</div></div>
+        <div class="info-card"><div class="label">目標價</div><div class="value">TWD 271.0</div></div>
+        <div class="info-card"><div class="label">潛在報酬</div><div class="value" style="color:#00e676;">+9.7%</div></div>
+        <div class="info-card"><div class="label">MDVI 總分</div><div class="value">43/60</div></div>
+        <div class="info-card"><div class="label">R/R Ratio</div><div class="value">1.7:1</div></div>
+    </div>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <strong>📋 目錄</strong>
+    <a href="#sec1">1. 執行摘要</a>
+    <a href="#sec2">2. MDVI v3 六維度評分</a>
+    <a href="#sec3">3. 公司概況與事業群拆解</a>
+    <a href="#sec4">4. 財務分析與 EPS 推導</a>
+    <a href="#sec5">5. 歷史 PE 軌跡表</a>
+    <a href="#sec6">6. 估值分析（三角交叉驗證）</a>
+    <a href="#sec7">7. DCF 模型與敏感度分析</a>
+    <a href="#sec8">8. Gordon Growth Model ROE 辯證</a>
+    <a href="#sec9">9. 產業分析與同業比較</a>
+    <a href="#sec10">10. 總經與政策環境</a>
+    <a href="#sec11">11. 技術面分析</a>
+    <a href="#sec12">12. 籌碼面分析</a>
+    <a href="#sec13">13. 消息面與催化劑</a>
+    <a href="#sec14">14. 風險評估與情境模擬</a>
+    <a href="#sec15">15. 投資建議與操作區間</a>
+    <a href="#sec16">16. 參考資料</a>
+</div>
+
+<!-- 1. Executive Summary -->
+<div class="card" id="sec1">
+    <h1>1. 執行摘要</h1>
+    <div class="highlight">聚陽的接單能見度與股利能力穩健，成衣代工龍頭在景氣波動中仍有防禦性。</div>
+    <p>聚陽的接單能見度與股利能力穩健，成衣代工龍頭在景氣波動中仍有防禦性。</p><p>若品牌客戶補庫延續且單價改善，股價有機會往歷史中位 PE 靠攏。</p><p>若歐美消費需求轉弱或匯率不利，成衣代工的營益率可能先受壓。</p>
+</div>
+
+<!-- 2. MDVI Scores -->
+<div class="card" id="sec2">
+    <h1>2. MDVI v3 六維度評分</h1>
+    <div style="text-align:center;margin:12px 0;"><span style="font-size:2.5rem;font-weight:800;color:#0f3460;">43</span><span style="font-size:1.2rem;color:#666;"> / 60</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>維度</th><th>評分 (0-10)</th></tr>
+        <tr><td style="font-weight:500;">基本面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:90.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">9</span></div></td></tr>
+<tr><td style="font-weight:500;">產業展望</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">總經</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">技術面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">籌碼面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+<tr><td style="font-weight:500;">消息面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+
+    </table></div>
+    
+</div>
+
+<!-- 3. Company Overview -->
+<div class="card" id="sec3">
+    <h1>3. 公司概況與事業群拆解</h1>
+    <p>聚陽屬於成衣代工，目前股價 247.0 元、trailing PE 16.86x、PB 4.34x。聚陽的接單能見度與股利能力穩健，成衣代工龍頭在景氣波動中仍有防禦性。</p>
+    <h2>事業群營收拆解</h2><div class="table-wrap"><table><tr><th>事業群</th><th>營收佔比</th><th>成長驅動</th></tr><tr><td>成衣代工</td><td>88%</td><td>歐美品牌訂單與新品季拉貨</td></tr><tr><td>布料/配件</td><td>7%</td><td>垂直整合提升效率</td></tr><tr><td>其他</td><td>5%</td><td>多元品類與區域布局</td></tr></table></div>
+    
+    
+</div>
+
+<!-- 4. Financial Analysis -->
+<div class="card" id="sec4">
+    <h1>4. 財務分析與 EPS 推導</h1>
+
+    <h2>4.1 財務健全度</h2>
+    <div style="margin:8px 0;"><span style="display:inline-block;padding:4px 14px;border-radius:12px;font-weight:600;color:white;background:#00c853;">健康</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th><th>標準</th></tr>
+        <tr><td>D/E Ratio</td><td>0.17</td><td>&lt; 1.0 佳</td></tr>
+        <tr><td>流動比率</td><td>1.86</td><td>&gt; 1.5 佳</td></tr>
+        <tr><td>FCF 趨勢</td><td>近 4 年整體為正</td><td>穩定正成長</td></tr>
+        <tr><td>利息保障倍數</td><td>66.0x</td><td>&gt; 5x 佳</td></tr>
+    </table></div>
+
+    <h2>4.2 季度財務追蹤</h2>
+    <table><tr><th>項目</th><th>2025</th></tr><tr><td>營收</td><td>34.43B</td></tr><tr><td>毛利</td><td>8.56B</td></tr><tr><td>營業利益</td><td>4.68B</td></tr><tr><td>淨利</td><td>3.61B</td></tr><tr><td>Diluted EPS</td><td>14.65</td></tr></table>
+
+    <h2>4.3 獲利能力與 EPS 成長路徑</h2>
+    <p>D/E: 0.17、流動比: 1.86、2025 FCF 3.34B，OCF 4.06B，CapEx 716.65M</p>
+
+    <h2>4.4 EPS 由下往上推導</h2>
+    <h4>Step 1: 營收拆解</h4><p>2025 年營收 34.43B，年增 -3.1%。</p>
+<div class="table-wrap"><table><tr><th>事業群</th><th>營收</th><th>YoY</th></tr><tr><td>成衣代工</td><td>88%</td><td>歐美品牌訂單與新品季拉貨</td></tr><tr><td>布料/配件</td><td>7%</td><td>垂直整合提升效率</td></tr><tr><td>其他</td><td>5%</td><td>多元品類與區域布局</td></tr></table></div>
+<h4>Step 2: 獲利率分析</h4><p>毛利率 24.9%，營業利益率 13.6%。</p>
+<h4>Step 3: EPS 推導</h4><div class="table-wrap"><table><tr><th>項目</th><th>數值</th></tr><tr><td>revenue_2025</td><td>34.43B</td></tr><tr><td>gross_profit_2025</td><td>8.56B</td></tr><tr><td>operating_income_2025</td><td>4.68B</td></tr><tr><td>tax_rate</td><td>20.1%</td></tr><tr><td>net_income_2025</td><td>3.61B</td></tr><tr><td>shares_outstanding</td><td>0.25B</td></tr><tr><td>eps_calculated</td><td>14.65</td></tr><tr><td>eps_actual_reported</td><td>14.65</td></tr><tr><td>variance</td><td>0%</td></tr></table></div>
+</div>
+
+<!-- 5. PE History -->
+<div class="card" id="sec5">
+    <h1>5. 歷史 PE 軌跡表</h1>
+    <div class="table-wrap"><table>
+        <tr><th>年度</th><th>EPS</th><th>最高價</th><th>最低價</th><th>PE 高</th><th>PE 低</th></tr>
+        <tr>
+            <td>2021</td><td>10.93</td>
+            <td>285.78</td><td>200.49</td>
+            <td>26.1</td><td>18.3</td>
+        </tr><tr>
+            <td>2022</td><td>14.17</td>
+            <td>266.67</td><td>131.37</td>
+            <td>18.8</td><td>9.3</td>
+        </tr><tr>
+            <td>2023</td><td>16.11</td>
+            <td>395.1</td><td>197.06</td>
+            <td>24.5</td><td>12.2</td>
+        </tr><tr>
+            <td>2024</td><td>16.61</td>
+            <td>458.33</td><td>303.5</td>
+            <td>27.6</td><td>18.3</td>
+        </tr>
+    </table></div>
+    <p style="margin-top:10px;">5 年平均 PE：<strong>19.4</strong> | 目前 PE：<strong>16.86</strong></p>
+</div>
+
+<!-- 6. Valuation -->
+<div class="card" id="sec6">
+    <h1>6. 估值分析（三角交叉驗證）</h1>
+
+    <h2>6.1 外部因素 → 公式參數對照表</h2>
+    <div class="table-wrap"><table>
+        <tr><th>分析面向</th><th>具體項目</th><th>影響參數</th><th>設定值</th><th>設定依據</th></tr>
+        
+    </table></div>
+
+    <h2>6.2 Cost of Equity (CoE)</h2>
+    <div class="table-wrap"><table>
+        <tr><th>參數</th><th>數值</th><th>來源</th></tr>
+        <tr><td>Rf (無風險利率)</td><td>1.50%</td><td>Taiwan 10Y bond yield</td></tr>
+        <tr><td>Beta</td><td>0.398</td><td>Yahoo Finance 5Y Monthly Beta</td></tr>
+        <tr><td>US Base ERP</td><td>4.23%</td><td rowspan="2">Damodaran implied ERP</td></tr>
+        <tr><td>Country Risk Premium</td><td>0.77%</td></tr>
+        <tr><td>Total ERP</td><td>5.00%</td><td>計算值</td></tr>
+        <tr><td><strong>CoE</strong></td><td><strong>8.0%</strong></td><td>Rf + Beta × Total ERP</td></tr>
+    </table></div>
+
+    <h2>6.3 合理 PE 推導（PE法）</h2>
+    <p>本次不用預估 EPS，直接以最新已公布實際 EPS 14.65 元為基準。考量產業屬性與現金流品質，給予 trailing PE 18.5x，得到目標價 271.0 元。</p>
+    <div class="highlight">
+        合理 PE = <strong>18.5x</strong> |
+        Forward EPS = <strong>14.65</strong> |
+        目標價 = <strong>TWD 271.0</strong>
+    </div>
+
+    <h2>6.4 交叉驗證矩陣</h2>
+    <div class="table-wrap"><table>
+        <tr><th>估值方法</th><th>隱含股價</th><th>vs PE 法偏差</th><th>狀態</th></tr>
+        <tr><td>Forward PE 法（主要）</td><td><strong>271.0</strong></td><td>—</td><td>主要估值</td></tr>
+        <tr><td>EV/EBITDA 法</td><td>257.4</td><td>-5.0%</td><td>驗證層</td></tr>
+        <tr><td>DCF 法</td><td>243.9</td><td>-10.0%</td><td>以近年 FCF 均值保守折現，作為下檔地板</td></tr>
+    </table></div>
+</div>
+
+<!-- 7. DCF Model -->
+<div class="card" id="sec7">
+    <h1>7. DCF 模型與敏感度分析</h1>
+    <p>DCF 僅作保守交叉檢查：以近年 FCF 均值與 CoE 8.0% 折現，終值成長率 2.8% ，得出的估值略低於 PE 法，因此本次仍以 trailing PE 為主。</p>
+    <h2>敏感度分析表</h2><table><tr><th>PE\EPS</th><th>13.19</th><th>14.65</th><th>16.12</th></tr><tr><td>16.7x</td><td>219.5</td><td>243.9</td><td>268.3</td></tr><tr><td>18.5x</td><td>243.9</td><td>271.0</td><td>298.1</td></tr><tr><td>20.4x</td><td>268.3</td><td>298.1</td><td>327.9</td></tr></table>
+</div>
+
+<!-- 8. Gordon Growth Model -->
+<div class="card" id="sec8">
+    <h1>8. Gordon Growth Model ROE 辯證</h1>
+    <p>ROE = 25.7%，理論 PB = 4.41，實際 PB = 4.34，溢折價 = -1.6%</p><p>實際 PB 高於理論值代表市場願意為品質或穩定度付溢價；低於理論值則反映週期疑慮。</p>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th></tr>
+        <tr><td>ROE</td><td>25.7%</td></tr>
+        <tr><td>理論 PB (Gordon)</td><td>4.41</td></tr>
+        <tr><td>實際 PB</td><td>4.34</td></tr>
+        <tr><td>解讀</td><td>實際 PB 高於理論值代表市場願意為品質或穩定度付溢價；低於理論值則反映週期疑慮。</td></tr>
+    </table></div>
+</div>
+
+<!-- 9. Industry -->
+<div class="card" id="sec9">
+    <h1>9. 產業分析與同業比較</h1>
+    <p>成衣代工產業的關鍵不是故事，而是週期/需求/現金流。聚陽的接單能見度與股利能力穩健，成衣代工龍頭在景氣波動中仍有防禦性。</p>
+    <h2>同業比較矩陣</h2><div class="table-wrap"><table><tr><th>公司</th><th>股價</th><th>PE</th><th>PB</th><th>ROE</th></tr><tr><td>聚陽</td><td>247.0</td><td>16.86</td><td>4.34</td><td>25.7%</td></tr></table></div>
+</div>
+
+<!-- 10. Macro -->
+<div class="card" id="sec10">
+    <h1>10. 總經與政策環境</h1>
+    <p>台灣利率仍低、10Y 公債殖利率約 1.5% 左右；但美國長天期利率仍高，代表估值不宜過度擴張，因此本次只採溫和 PE 修復。</p>
+</div>
+
+<!-- 11. Technical -->
+<div class="card" id="sec11">
+    <h1>11. 技術面分析</h1>
+    <div class="table-wrap"><table><tr><th>指標</th><th>數值</th><th>乖離率</th><th>解讀</th></tr><tr><td>MA_20</td><td>287.77</td><td>-14.2%</td><td>短線整理</td></tr><tr><td>MA_60</td><td>303.3</td><td>-18.6%</td><td>中期仍待站回</td></tr><tr><td>RSI(14)</td><td>25.1</td><td>—</td><td>偏弱/近超賣</td></tr><tr><td>KD</td><td>K=11.3 / D=16.8</td><td>—</td><td>K<D 短線整理</td></tr></table></div>
+</div>
+
+<!-- 12. Chip -->
+<div class="card" id="sec12">
+    <h1>12. 籌碼面分析</h1>
+    <div class="table-wrap"><table><tr><th>籌碼指標</th><th>數值</th></tr><tr><td>外資 5 日</td><td>+937 張</td></tr><tr><td>外資 20 日</td><td>+0 張</td></tr><tr><td>投信 5 日</td><td>+20 張</td></tr><tr><td>投信 20 日</td><td>+0 張</td></tr><tr><td>融資餘額</td><td>1 張</td></tr><tr><td>融券餘額</td><td>0 張</td></tr><tr><td>券資比</td><td>0.0%</td></tr></table></div><p>外資與投信同步偏多</p>
+</div>
+
+<!-- 13. Catalyst -->
+<div class="card" id="sec13">
+    <h1>13. 消息面與催化劑</h1>
+    <h4>正面催化劑</h4><ul>
+<li><strong>若品牌客戶補庫延續且單價改善，股價有機會往歷史中位 PE 靠攏。</strong> (1-3 個月) — 有助 PE 折價收斂</li>
+</ul>
+<h4>負面催化劑</h4><ul>
+<li><strong>若歐美消費需求轉弱或匯率不利，成衣代工的營益率可能先受壓。</strong> (任何時間) — 可能壓低 EPS 與估值倍數</li>
+</ul>
+</div>
+
+<!-- 14. Risk & Scenarios -->
+<div class="card" id="sec14">
+    <h1>14. 風險評估與情境模擬</h1>
+    <div class="table-wrap"><table><tr><th>風險</th><th>機率</th><th>影響</th><th>應對</th></tr><tr><td>需求不及預期</td><td>medium</td><td>high</td><td>嚴守 stop loss</td></tr><tr><td>成本/匯率波動</td><td>medium</td><td>medium</td><td>追蹤月營收與毛利率</td></tr><tr><td>產業估值下修</td><td>medium</td><td>medium</td><td>不追價、分批進場</td></tr></table></div>
+    <h2>Bull / Base / Bear 情境</h2>
+    <div class="table-wrap"><table>
+        <tr><th>情境</th><th>EPS</th><th>PE</th><th>目標價</th><th>觸發條件</th></tr>
+        <tr>
+            <td><strong>Bull 🐂</strong></td><td>15.82</td>
+            <td>20.0</td><td>316.1</td>
+            <td>若品牌客戶補庫延續且單價改善，股價有機會往歷史中位 PE 靠攏。</td>
+        </tr><tr>
+            <td><strong>Base 📊</strong></td><td>14.65</td>
+            <td>18.5</td><td>271.0</td>
+            <td>基本面維持、估值折價收斂</td>
+        </tr><tr>
+            <td><strong>Bear 🐻</strong></td><td>12.89</td>
+            <td>15.2</td><td>195.6</td>
+            <td>若歐美消費需求轉弱或匯率不利，成衣代工的營益率可能先受壓。</td>
+        </tr>
+    </table></div>
+    
+</div>
+
+<!-- 15. Investment Recommendation -->
+<div class="card" id="sec15">
+    <h1>15. 投資建議與操作區間</h1>
+    <div style="text-align:center;margin:12px 0;">
+        <span class="rating-badge" style="font-size:1.2rem;padding:10px 28px;">Buy</span>
+        <p style="margin-top:10px;color:#666;">股價跌破20日線；近5日法人合計 +554 張</p>
+    </div>
+    <div class="action-grid">
+        <div class="action-item"><div class="label">進場點</div><div class="value" style="color:#1565c0;">242.1</div></div>
+        <div class="action-item"><div class="label">目標價</div><div class="value" style="color:#00c853;">271.0</div></div>
+        <div class="action-item"><div class="label">停損點</div><div class="value" style="color:#ff1744;">225.2</div></div>
+        <div class="action-item"><div class="label">停利點</div><div class="value" style="color:#00c853;">271.0</div></div>
+    </div>
+    <p style="text-align:center;font-size:0.95rem;margin-top:10px;">
+        風險報酬比 R/R = <strong>1.7:1</strong>
+    </p>
+    <p>建議在 242.1 元附近分批，若跌破 225.2 元紀律停損；基本面不變時，上看 271.0 元。R/R 約 1.7:1。</p>
+</div>
+
+<!-- 16. Sources -->
+<div class="card sources" id="sec16">
+    <h1>16. 參考資料</h1>
+    <ol><li><a href="https://finance.yahoo.com/quote/1477.TW/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/1477.TW/</a></li>
+<li><a href="https://finance.yahoo.com/quote/1477.TW/key-statistics/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/1477.TW/key-statistics/</a></li>
+<li><a href="https://finance.yahoo.com/quote/1477.TW/financials/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/1477.TW/financials/</a></li>
+<li><a href="https://finance.yahoo.com/quote/1477.TW/balance-sheet/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/1477.TW/balance-sheet/</a></li>
+<li><a href="https://finance.yahoo.com/quote/1477.TW/cash-flow/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/1477.TW/cash-flow/</a></li>
+<li><a href="https://www.twse.com.tw/rwd/zh/fund/T86?date=20260327&selectType=ALLBUT0999&response=json" target="_blank" rel="noopener">https://www.twse.com.tw/rwd/zh/fund/T86?date=20260327&selectType=ALLBUT0999&response=json</a></li>
+<li><a href="https://www.twse.com.tw/rwd/zh/marginTrading/MI_MARGN?selectType=ALL&response=json" target="_blank" rel="noopener">https://www.twse.com.tw/rwd/zh/marginTrading/MI_MARGN?selectType=ALL&response=json</a></li>
+<li><a href="https://www.cbc.gov.tw/tw/cp-302-71975-06189-1.html" target="_blank" rel="noopener">https://www.cbc.gov.tw/tw/cp-302-71975-06189-1.html</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html</a></li>
+<li><a href="https://tradingeconomics.com/taiwan/government-bond-yield" target="_blank" rel="noopener">https://tradingeconomics.com/taiwan/government-bond-yield</a></li>
+<li><a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank" rel="noopener">https://tradingeconomics.com/united-states/government-bond-yield</a></li>
+<li><a href="https://www.taifex.com.tw/cht/3/vix" target="_blank" rel="noopener">https://www.taifex.com.tw/cht/3/vix</a></li></ol>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>CFA 深度研究報告 | MDVI v3 | 2026-03-30 09:08 | ARTOGO Investment Research</p>
+    <p>⚠️ 本報告僅供研究參考，不構成投資建議。投資有風險，入市需謹慎。</p>
+    <p><a href="../../index.html" style="color:#1565c0;">← 返回首頁</a></p>
+</div>
+
+</div>
+</body>
+</html>
