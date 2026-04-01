@@ -1,0 +1,320 @@
+{
+  "date": "2026-04-01",
+  "market_summary": {
+    "us": "美股三大指數在關稅不確定性與地緣政治風險下震盪。VIX 維持在 25-30 高位，反映投資人對關稅政策與伊朗局勢的擔憂。Fed 維持利率 3.50-3.75%，市場預期年底前僅降息一次。ISM 製造業 PMI 52.4 仍在擴張區間，但芝加哥 PMI 大跌至 45.4 暗示製造業趨緩。CPI 年增 2.4% 通膨壓力溫和。S&P 500 YTD 表現疲弱，科技股受 AI 基建支出疑慮拖累。"
+  },
+  "scoring_methodology": {
+    "description": "MDVI v3 六維度評估框架 + CFA 標準估值方法。六維度確保分析的完整性，目標價由 Forward PE + EV/EBITDA + DCF 三角交叉驗證推導。",
+    "model": "MDVI v3 (Multi-Dimensional Valuation Integration)",
+    "valuation_method": "Dynamic Justified PE (Primary) + EV/EBITDA & DCF Verification Layers",
+    "screening_method": "3-Layer Funnel: Quantitative Hard Filter → Multi-Dimension Quick Score → Full CFA Analysis",
+    "dimensions": [
+      {
+        "name": "基本面 Fundamental",
+        "evaluates": "獲利能力 + 財務健康 + 競爭定位",
+        "valuation_role": "影響 EPS 假設、WACC、PE 溢價"
+      },
+      {
+        "name": "產業展望 Industry",
+        "evaluates": "TAM + 產品發展性 + 客戶價值鏈 + 政策",
+        "valuation_role": "影響營收成長率、倍數選擇"
+      },
+      {
+        "name": "總經 Macro",
+        "evaluates": "利率/通膨/匯率 + 客戶端總經",
+        "valuation_role": "影響 Rf/ERP/PE 水準"
+      },
+      {
+        "name": "技術面 Technical",
+        "evaluates": "MA/RSI/KD/量價",
+        "valuation_role": "僅影響進場時機"
+      },
+      {
+        "name": "籌碼面 Chip",
+        "evaluates": "法人動向/融資券",
+        "valuation_role": "僅影響進場時機"
+      },
+      {
+        "name": "消息面 Catalyst",
+        "evaluates": "重大消息/催化劑",
+        "valuation_role": "修正 EPS 假設或風險溢價"
+      }
+    ]
+  },
+  "screening_funnel": {
+    "layer1_universe": 503,
+    "layer1_pass": 390,
+    "layer1_criteria": "PE<30, ROE>8%, avg daily volume filter, market cap filter",
+    "layer2_scored": 390,
+    "layer2_pass": 20,
+    "layer3_analyzed": 10,
+    "layer3_final": 5,
+    "industry_diversification": "Fertilizer 1檔, Semiconductors 1檔, Healthcare 1檔, Software 1檔, Consumer/Footwear 1檔"
+  },
+  "watchlist": [
+    {
+      "ticker": "GOOG",
+      "reason": "PE 26.5x 偏高，但 Cloud 成長 34% 值得觀察"
+    },
+    {
+      "ticker": "ALL",
+      "reason": "PE 5.45x 極低但 Goldman 已 downgrade，觀望"
+    },
+    {
+      "ticker": "PYPL",
+      "reason": "CEO 更換 + 弱指引，等穩定後再評估"
+    },
+    {
+      "ticker": "EIX",
+      "reason": "高殖利率但 FCF 為負，需改善"
+    },
+    {
+      "ticker": "SPG",
+      "reason": "CEO 過世、領導層變動風險"
+    }
+  ],
+  "macro_overview": {
+    "fed_rate": "3.50-3.75%",
+    "us_10y": "4.31%",
+    "vix": "25.25",
+    "us_gdp": "0.7% (Q4 2025 revised)",
+    "ism_pmi": "52.4 (Feb 2026)",
+    "us_cpi": "2.4% YoY (Feb 2026)",
+    "usd_twd": "32.06",
+    "erp_us_base": "4.23%",
+    "erp_us_base_source": "Damodaran Jan 2026 (pages.stern.nyu.edu)",
+    "overall_score": "5/10",
+    "summary": "總經環境偏中性偏弱。GDP 成長放緩至 0.7%，但 ISM PMI 仍在擴張。通膨溫和但關稅政策可能推升物價。VIX 偏高反映不確定性。Fed 按兵不動，市場預期 2026 年底前僅降息一次至 3.0-3.25%。"
+  },
+  "sources": [
+    "https://fred.stlouisfed.org/series/DGS10",
+    "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html",
+    "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html",
+    "https://www.bls.gov/news.release/cpi.nr0.htm",
+    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260128a.htm",
+    "https://fred.stlouisfed.org/series/VIXCLS"
+  ],
+  "us_picks": [
+    {
+      "rank": 1,
+      "ticker": "CF",
+      "name": "CF Industries Holdings",
+      "name_en": "CF Industries Holdings, Inc.",
+      "market": "US",
+      "price": 129.84,
+      "currency": "USD",
+      "rating": "Buy",
+      "entry_signal": "突破前高，動能強勁，可分批佈局",
+      "target_price": 152,
+      "target_price_basis": "Trailing PE 17x × Actual EPS $8.97 = $152.49",
+      "upside": "+17.1%",
+      "scores": {
+        "fundamental": 8,
+        "industry": 7,
+        "macro": 7,
+        "technical": 8,
+        "chip": 6,
+        "catalyst": 7
+      },
+      "total_score": 43,
+      "summary": "全球最大氮肥生產商之一，受惠於伊朗局勢封鎖荷莫茲海峽推升肥料價格。FY2025 營收年增 22.8%，EPS 年增 33%。Section 45Q 碳權收入開啟新獲利引擎。三月份 S&P 500 表現最佳個股。",
+      "report_url": "reports/picks/CF-2026-04-01.html",
+      "valuation_summary": {
+        "valuation_type": "PE",
+        "valuation_reason": "",
+        "pe_method": "",
+        "coe_params": {},
+        "growth_params": {},
+        "justified_pe": 0,
+        "forward_eps": 0,
+        "pe_target": 0,
+        "ev_ebitda_target": 0,
+        "ev_ebitda_deviation": "",
+        "dcf_target": 0,
+        "dcf_deviation": "",
+        "dcf_note": "",
+        "dcf_wacc": "",
+        "dcf_terminal_growth": "",
+        "gordon_pb": {},
+        "financial_health": {}
+      }
+    },
+    {
+      "rank": 2,
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "name_en": "Micron Technology, Inc.",
+      "market": "US",
+      "price": 337.84,
+      "currency": "USD",
+      "rating": "Buy",
+      "entry_signal": "RSI 超賣區反彈，回檔提供進場機會",
+      "target_price": 420,
+      "target_price_basis": "Trailing PE 20x × TTM EPS $21.1 = $422",
+      "upside": "+24.3%",
+      "scores": {
+        "fundamental": 8,
+        "industry": 8,
+        "macro": 7,
+        "technical": 7,
+        "chip": 7,
+        "catalyst": 8
+      },
+      "total_score": 45,
+      "summary": "記憶體龍頭，受惠 AI/HBM 需求爆發。Q2 FY2026 營收 $23.86B 近乎三倍成長，HBM4 已量產出貨予 Nvidia。股價自高點 $471 回檔 28%，提供進場機會。",
+      "report_url": "reports/picks/MU-2026-04-01.html",
+      "valuation_summary": {
+        "valuation_type": "PE",
+        "valuation_reason": "",
+        "pe_method": "",
+        "coe_params": {},
+        "growth_params": {},
+        "justified_pe": 0,
+        "forward_eps": 0,
+        "pe_target": 0,
+        "ev_ebitda_target": 0,
+        "ev_ebitda_deviation": "",
+        "dcf_target": 0,
+        "dcf_deviation": "",
+        "dcf_note": "",
+        "dcf_wacc": "",
+        "dcf_terminal_growth": "",
+        "gordon_pb": {},
+        "financial_health": {}
+      }
+    },
+    {
+      "rank": 3,
+      "ticker": "UHS",
+      "name": "Universal Health Services",
+      "name_en": "Universal Health Services, Inc.",
+      "market": "US",
+      "price": 178.97,
+      "currency": "USD",
+      "rating": "Buy",
+      "entry_signal": "RSI 超賣 27.1，逢低佈局",
+      "target_price": 231,
+      "target_price_basis": "Trailing PE 10x × TTM EPS $23.12 = $231",
+      "upside": "+29.1%",
+      "scores": {
+        "fundamental": 7,
+        "industry": 7,
+        "macro": 6,
+        "technical": 7,
+        "chip": 6,
+        "catalyst": 7
+      },
+      "total_score": 40,
+      "summary": "美國最大醫院營運商之一，FY2025 營收 $17.4B（+9.7%），受惠急性照護與行為健康需求成長。PE 僅 7.7x，顯著低於同業 HCA (19x)。Talkspace 收購拓展數位心理健康市場。",
+      "report_url": "reports/picks/UHS-2026-04-01.html",
+      "valuation_summary": {
+        "valuation_type": "PE",
+        "valuation_reason": "",
+        "pe_method": "",
+        "coe_params": {},
+        "growth_params": {},
+        "justified_pe": 0,
+        "forward_eps": 0,
+        "pe_target": 0,
+        "ev_ebitda_target": 0,
+        "ev_ebitda_deviation": "",
+        "dcf_target": 0,
+        "dcf_deviation": "",
+        "dcf_note": "",
+        "dcf_wacc": "",
+        "dcf_terminal_growth": "",
+        "gordon_pb": {},
+        "financial_health": {}
+      }
+    },
+    {
+      "rank": 4,
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "name_en": "Microsoft Corporation",
+      "market": "US",
+      "price": 370.17,
+      "currency": "USD",
+      "rating": "Buy",
+      "entry_signal": "優質股回檔 21% YTD，逢低佈局",
+      "target_price": 432,
+      "target_price_basis": "Trailing PE 27x × TTM EPS $15.99 = $432",
+      "upside": "+16.7%",
+      "scores": {
+        "fundamental": 8,
+        "industry": 8,
+        "macro": 6,
+        "technical": 7,
+        "chip": 7,
+        "catalyst": 7
+      },
+      "total_score": 43,
+      "summary": "全球軟體龍頭，Azure Cloud + AI Copilot 雙引擎驅動成長。TTM EPS $15.99，FY2025 營收成長 16%+。股價 YTD 下跌 21%（2008 年以來最差開局），提供優質股折價買進機會。",
+      "report_url": "reports/picks/MSFT-2026-04-01.html",
+      "valuation_summary": {
+        "valuation_type": "PE",
+        "valuation_reason": "",
+        "pe_method": "",
+        "coe_params": {},
+        "growth_params": {},
+        "justified_pe": 0,
+        "forward_eps": 0,
+        "pe_target": 0,
+        "ev_ebitda_target": 0,
+        "ev_ebitda_deviation": "",
+        "dcf_target": 0,
+        "dcf_deviation": "",
+        "dcf_note": "",
+        "dcf_wacc": "",
+        "dcf_terminal_growth": "",
+        "gordon_pb": {},
+        "financial_health": {}
+      }
+    },
+    {
+      "rank": 5,
+      "ticker": "DECK",
+      "name": "Deckers Outdoor (HOKA)",
+      "name_en": "Deckers Outdoor Corporation",
+      "market": "US",
+      "price": 100.09,
+      "currency": "USD",
+      "rating": "Buy",
+      "entry_signal": "高成長股回檔至合理估值區間",
+      "target_price": 120,
+      "target_price_basis": "Trailing PE 19x × Actual EPS $6.33 = $120",
+      "upside": "+19.9%",
+      "scores": {
+        "fundamental": 7,
+        "industry": 7,
+        "macro": 6,
+        "technical": 7,
+        "chip": 7,
+        "catalyst": 7
+      },
+      "total_score": 41,
+      "summary": "HOKA 品牌驅動高成長，FY2025 營收 $4.99B（+16.3%），HOKA 單品牌營收 $2.23B（+23.6%）。D/E 僅 0.13，淨現金 $1.74B。股價自 ATH $223 回檔 55%，估值已大幅壓縮。",
+      "report_url": "reports/picks/DECK-2026-04-01.html",
+      "valuation_summary": {
+        "valuation_type": "PE",
+        "valuation_reason": "",
+        "pe_method": "",
+        "coe_params": {},
+        "growth_params": {},
+        "justified_pe": 0,
+        "forward_eps": 0,
+        "pe_target": 0,
+        "ev_ebitda_target": 0,
+        "ev_ebitda_deviation": "",
+        "dcf_target": 0,
+        "dcf_deviation": "",
+        "dcf_note": "",
+        "dcf_wacc": "",
+        "dcf_terminal_growth": "",
+        "gordon_pb": {},
+        "financial_health": {}
+      }
+    }
+  ],
+  "us_count": 5
+}
