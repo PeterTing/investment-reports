@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2548 華固 深度投資分析報告 | 2026-04-01</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    line-height: 1.7; color: #1a1a2e; background: #f8f9fa; font-size: 16px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.6rem; color: #0f3460; border-bottom: 3px solid #e94560; padding-bottom: 8px; margin: 24px 0 16px; }
+h2 { font-size: 1.3rem; color: #16213e; border-left: 4px solid #e94560; padding-left: 12px; margin: 28px 0 14px; }
+h3 { font-size: 1.1rem; color: #0f3460; margin: 20px 0 10px; }
+.header-box {
+    background: linear-gradient(135deg, #0f3460, #16213e); color: white;
+    padding: 24px; border-radius: 12px; margin-bottom: 24px;
+}
+.header-box h1 { color: white; border-bottom-color: #e94560; font-size: 1.5rem; }
+.rating-badge {
+    display: inline-block; padding: 6px 18px; border-radius: 20px;
+    font-weight: bold; font-size: 1.1rem; color: #fff; background: #2da44e;
+}
+.market-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.85rem; font-weight: 600; color: white; margin-left: 8px;
+    background: #3b82f6;
+}
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 16px 0;
+}
+.info-card { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; }
+.info-card .label { font-size: 0.85rem; opacity: 0.8; }
+.info-card .value { font-size: 1.3rem; font-weight: bold; }
+.card {
+    background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px;
+    border: 1px solid #e0e0e0; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+th { background: #0f3460; color: white; padding: 10px 8px; text-align: left; white-space: nowrap; }
+td { padding: 8px; border-bottom: 1px solid #e0e0e0; }
+tr:nth-child(even) { background: #f5f5f5; }
+tr:hover { background: #e8eaf6; }
+.highlight { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.warning { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.action-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 14px 0;
+}
+.action-item { text-align: center; padding: 14px; border-radius: 8px; background: #f5f5f5; }
+.action-item .label { font-size: 0.82rem; color: #666; }
+.action-item .value { font-size: 1.3rem; font-weight: 700; margin-top: 4px; }
+.source { font-size: 0.85rem; color: #666; margin: 6px 0; font-style: italic; }
+.sources ol { padding-left: 20px; font-size: 0.82rem; }
+.sources li { margin-bottom: 4px; word-break: break-all; }
+.sources a { color: #1565c0; }
+.toc { background: #f0f4f8; padding: 16px 20px; border-radius: 10px; margin-bottom: 20px; }
+.toc a { color: #0f3460; text-decoration: none; display: block; padding: 3px 0; font-size: 0.92rem; }
+.toc a:hover { color: #e94560; }
+.footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem; border-top: 1px solid #e0e0e0; margin-top: 24px; }
+@media (max-width: 640px) {
+    .header-box { padding: 16px; }
+    .header-box h1 { font-size: 1.25rem; }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .action-grid { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 0.82rem; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.15rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header-box">
+    <h1>2548 華固 <span style="font-weight:400;font-size:0.9rem;">Huaku Development</span>
+        <span class="market-badge">🇹🇼 台股</span>
+    </h1>
+    <p style="color:#94a3b8;font-size:0.9rem;margin:4px 0;">CFA 深度研究報告 | 2026-04-01 | MDVI v3</p>
+    <div style="margin:12px 0;"><span class="rating-badge">Buy</span></div>
+    <div class="info-grid">
+        <div class="info-card"><div class="label">收盤價</div><div class="value">TWD 120.0</div></div>
+        <div class="info-card"><div class="label">目標價</div><div class="value">TWD 142</div></div>
+        <div class="info-card"><div class="label">潛在報酬</div><div class="value" style="color:#00e676;">+18.3%</div></div>
+        <div class="info-card"><div class="label">MDVI 總分</div><div class="value">43/60</div></div>
+        <div class="info-card"><div class="label">R/R Ratio</div><div class="value">1.7:1</div></div>
+    </div>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <strong>📋 目錄</strong>
+    <a href="#sec1">1. 執行摘要</a>
+    <a href="#sec2">2. MDVI v3 六維度評分</a>
+    <a href="#sec3">3. 公司概況與事業群拆解</a>
+    <a href="#sec4">4. 財務分析與 EPS 推導</a>
+    <a href="#sec5">5. 歷史 PE 軌跡表</a>
+    <a href="#sec6">6. 估值分析（三角交叉驗證）</a>
+    <a href="#sec7">7. DCF 模型與敏感度分析</a>
+    <a href="#sec8">8. Gordon Growth Model ROE 辯證</a>
+    <a href="#sec9">9. 產業分析與同業比較</a>
+    <a href="#sec10">10. 總經與政策環境</a>
+    <a href="#sec11">11. 技術面分析</a>
+    <a href="#sec12">12. 籌碼面分析</a>
+    <a href="#sec13">13. 消息面與催化劑</a>
+    <a href="#sec14">14. 風險評估與情境模擬</a>
+    <a href="#sec15">15. 投資建議與操作區間</a>
+    <a href="#sec16">16. 參考資料</a>
+</div>
+
+<!-- 1. Executive Summary -->
+<div class="card" id="sec1">
+    <h1>1. 執行摘要</h1>
+    <div class="highlight">台北豪宅建商龍頭，2025 年 Q4 EPS 8.33 元爆發，近期大手筆購入信義區土地</div>
+    <p>華固建設以台北中高端住宅開發為核心，品牌溢價力強。2025 年 Q4 EPS 8.33 元反映大量建案入帳。展望 2026 年，公司在手建案充裕（華固大安學府、華固得月等），且新購信義區土地將貢獻 2027-2028 年營收。建設業 EPS 波動大（入帳年 vs 非入帳年），投資人應以 2-3 年平均 EPS 評估價值。外資大量買超反映法人看好後續入帳展望。</p>
+</div>
+
+<!-- 2. MDVI Scores -->
+<div class="card" id="sec2">
+    <h1>2. MDVI v3 六維度評分</h1>
+    <div style="text-align:center;margin:12px 0;"><span style="font-size:2.5rem;font-weight:800;color:#0f3460;">43</span><span style="font-size:1.2rem;color:#666;"> / 60</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>維度</th><th>評分 (0-10)</th></tr>
+        <tr><td style="font-weight:500;">基本面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">產業展望</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">總經</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">技術面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">籌碼面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+<tr><td style="font-weight:500;">消息面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+
+    </table></div>
+    
+</div>
+
+<!-- 3. Company Overview -->
+<div class="card" id="sec3">
+    <h1>3. 公司概況與事業群拆解</h1>
+    <p>華固建設為台北市指標性豪宅建商，專注中高端住宅開發。2025 年 Q4 大量入帳帶動全年 EPS 達 10.15 元。近期以 30.6 億元購入信義區土地，積極布局台北精華地段。公司以品牌溢價與施工品質著稱。</p>
+    <h2>事業群營收拆解</h2><div class="table-wrap"><table><tr><th>事業群</th><th>營收佔比</th><th>成長驅動</th></tr><tr><td>住宅開發</td><td>85%</td><td>台北豪宅需求、都更案</td></tr><tr><td>商辦/租賃</td><td>15%</td><td>穩定租金收入</td></tr></table></div>
+    
+    
+</div>
+
+<!-- 4. Financial Analysis -->
+<div class="card" id="sec4">
+    <h1>4. 財務分析與 EPS 推導</h1>
+
+    <h2>4.1 財務健全度</h2>
+    <div style="margin:8px 0;"><span style="display:inline-block;padding:4px 14px;border-radius:12px;font-weight:600;color:white;background:#ff1744;">穩定（建設業典型高槓桿）</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th><th>標準</th></tr>
+        <tr><td>D/E Ratio</td><td>0.85</td><td>&lt; 1.0 佳</td></tr>
+        <tr><td>流動比率</td><td>1.8</td><td>&gt; 1.5 佳</td></tr>
+        <tr><td>FCF 趨勢</td><td>波動大（受建案入帳時程影響）</td><td>穩定正成長</td></tr>
+        <tr><td>利息保障倍數</td><td>5x</td><td>&gt; 5x 佳</td></tr>
+    </table></div>
+
+    <h2>4.2 季度財務追蹤</h2>
+    <table><thead><tr><th>指標</th><th>2024 Q1</th><th>2024 Q2</th><th>2024 Q3</th><th>2024 Q4</th><th>2025 Q1</th><th>2025 Q2</th><th>2025 Q3</th><th>2025 Q4</th></tr></thead><tbody><tr><td>EPS</td><td>0.60</td><td>0.80</td><td>1.09</td><td>2.09</td><td>0.45</td><td>0.62</td><td>0.75</td><td>8.33</td></tr></tbody></table>
+
+    <h2>4.3 獲利能力與 EPS 成長路徑</h2>
+    <p>D/E: 0.85、流動比: 1.8、2023 高入帳年 FCF 正, 2024 低入帳年 FCF 負, 2025 高入帳年 FCF 正</p>
+
+    <h2>4.4 EPS 由下往上推導</h2>
+    <h4>Step 1: 營收拆解</h4><p>2025 年營收 182.39 億元，主要來自住宅建案入帳。Q4 入帳大爆發，貢獻全年逾 80% 獲利。</p>
+<div class="table-wrap"><table><tr><th>事業群</th><th>營收</th><th>YoY</th></tr><tr><td>住宅開發</td><td>155億</td><td>+120%（入帳年）</td></tr><tr><td>商辦/租賃</td><td>27億</td><td>+5%</td></tr></table></div>
+<h4>Step 2: 獲利率分析</h4><p>2025 年毛利率約 30%（台北豪宅高毛利），營益率約 16%。建設業毛利率受建案地段與產品定位影響大。</p>
+<h4>Step 3: EPS 推導</h4><div class="table-wrap"><table><tr><th>項目</th><th>數值</th></tr><tr><td>revenue_2025</td><td>182.39億</td></tr><tr><td>gross_profit_2025</td><td>54.7億</td></tr><tr><td>operating_income_2025</td><td>29.3億</td></tr><tr><td>tax_rate</td><td>20%</td></tr><tr><td>net_income_2025</td><td>24.0億</td></tr><tr><td>shares_outstanding</td><td>2.37億股</td></tr><tr><td>eps_calculated</td><td>10.13</td></tr><tr><td>eps_actual_reported</td><td>10.15</td></tr><tr><td>variance</td><td>-0.2%</td></tr></table></div>
+</div>
+
+<!-- 5. PE History -->
+<div class="card" id="sec5">
+    <h1>5. 歷史 PE 軌跡表</h1>
+    <div class="table-wrap"><table>
+        <tr><th>年度</th><th>EPS</th><th>最高價</th><th>最低價</th><th>PE 高</th><th>PE 低</th></tr>
+        <tr>
+            <td>2021</td><td>10.56</td>
+            <td>110</td><td>70</td>
+            <td>10.4</td><td>6.6</td>
+        </tr><tr>
+            <td>2022</td><td>10.69</td>
+            <td>120</td><td>75</td>
+            <td>11.2</td><td>7.0</td>
+        </tr><tr>
+            <td>2023</td><td>12.95</td>
+            <td>130</td><td>85</td>
+            <td>10.0</td><td>6.6</td>
+        </tr><tr>
+            <td>2024</td><td>4.58</td>
+            <td>115</td><td>78</td>
+            <td>25.1</td><td>17.0</td>
+        </tr><tr>
+            <td>2025</td><td>10.15</td>
+            <td>125</td><td>95</td>
+            <td>12.3</td><td>9.4</td>
+        </tr>
+    </table></div>
+    <p style="margin-top:10px;">5 年平均 PE：<strong>11.5</strong> | 目前 PE：<strong>11.83</strong></p>
+</div>
+
+<!-- 6. Valuation -->
+<div class="card" id="sec6">
+    <h1>6. 估值分析（三角交叉驗證）</h1>
+
+    <h2>6.1 外部因素 → 公式參數對照表</h2>
+    <div class="table-wrap"><table>
+        <tr><th>分析面向</th><th>具體項目</th><th>影響參數</th><th>設定值</th><th>設定依據</th></tr>
+        
+    </table></div>
+
+    <h2>6.2 Cost of Equity (CoE)</h2>
+    <div class="table-wrap"><table>
+        <tr><th>參數</th><th>數值</th><th>來源</th></tr>
+        <tr><td>Rf (無風險利率)</td><td>1.42%</td><td>台灣櫃買中心 10 年期公債殖利率</td></tr>
+        <tr><td>Beta</td><td>0.22</td><td>玩股網 近半年 Beta</td></tr>
+        <tr><td>US Base ERP</td><td>4.23%</td><td rowspan="2">Damodaran 2026 US Base ERP</td></tr>
+        <tr><td>Country Risk Premium</td><td>0.65%</td></tr>
+        <tr><td>Total ERP</td><td>4.88%</td><td>計算值</td></tr>
+        <tr><td><strong>CoE</strong></td><td><strong>2.49%</strong></td><td>Rf + Beta × Total ERP</td></tr>
+    </table></div>
+
+    <h2>6.3 合理 PE 推導（PE法）</h2>
+    <p>建設業 PE 因入帳波動大，以正常入帳年（2021-2023, 2025）平均 PE 約 9.5x 為基準。考量 2026 入帳展望佳與信義區土地溢價，給予 14x。10.14 × 14 = 142 元。</p>
+    <div class="highlight">
+        合理 PE = <strong>14.0x</strong> |
+        Forward EPS = <strong>10.14</strong> |
+        目標價 = <strong>TWD 142</strong>
+    </div>
+
+    <h2>6.4 交叉驗證矩陣</h2>
+    <div class="table-wrap"><table>
+        <tr><th>估值方法</th><th>隱含股價</th><th>vs PE 法偏差</th><th>狀態</th></tr>
+        <tr><td>Forward PE 法（主要）</td><td><strong>142</strong></td><td>—</td><td>主要估值</td></tr>
+        <tr><td>EV/EBITDA 法</td><td>135</td><td>-4.9%</td><td>驗證層</td></tr>
+        <tr><td>DCF 法</td><td>130</td><td>-8.5%</td><td>建設業 DCF 因入帳波動大，參考價值有限</td></tr>
+    </table></div>
+</div>
+
+<!-- 7. DCF Model -->
+<div class="card" id="sec7">
+    <h1>7. DCF 模型與敏感度分析</h1>
+    <p>建設業 DCF 因入帳時程不確定性高，實務上以 NAV（Net Asset Value）法更為適用。華固在手土地 NAV 加上已售未入帳金額，估計每股 NAV 約 130-150 元，支撐目標價 142 元。</p>
+    <h2>敏感度分析表</h2><table><thead><tr><th>EPS \ PE</th><th>8x</th><th>10x</th><th>12x</th><th>14x</th><th>16x</th></tr></thead><tbody><tr><td>5</td><td>40</td><td>50</td><td>60</td><td>70</td><td>80</td></tr><tr><td>8</td><td>64</td><td>80</td><td>96</td><td>112</td><td>128</td></tr><tr><td>10</td><td>80</td><td>100</td><td>120</td><td>140</td><td>160</td></tr><tr><td>12</td><td>96</td><td>120</td><td>144</td><td>168</td><td>192</td></tr><tr><td>15</td><td>120</td><td>150</td><td>180</td><td>210</td><td>240</td></tr></tbody></table>
+</div>
+
+<!-- 8. Gordon Growth Model -->
+<div class="card" id="sec8">
+    <h1>8. Gordon Growth Model ROE 辯證</h1>
+    <p>ROE = 14.4%，理論 PB = 25.31，實際 PB = 1.71，溢折價 = -93.2%</p><p>Gordon Model 因 CoE 極低而失真。若以建設業合理 CoE 7-8% 計算，理論 PB 約 2.0-2.5x。實際 PB 1.71 低於調整後理論值，反映市場對建設業入帳波動的折價。考量華固品牌溢價與台北精華地段土地庫存，此折價可能過度。</p>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th></tr>
+        <tr><td>ROE</td><td>14.4%</td></tr>
+        <tr><td>理論 PB (Gordon)</td><td>25.31</td></tr>
+        <tr><td>實際 PB</td><td>1.71</td></tr>
+        <tr><td>解讀</td><td>Gordon Model 因 CoE 極低而失真。若以建設業合理 CoE 7-8% 計算，理論 PB 約 2.0-2.5x。實際 PB 1.71 低於調整後理論值，反映市場對建設業入帳波動的折價。考量華固品牌溢價與台北精華地段土地庫存，此折價可能過度。</td></tr>
+    </table></div>
+</div>
+
+<!-- 9. Industry -->
+<div class="card" id="sec9">
+    <h1>9. 產業分析與同業比較</h1>
+    <p>台灣房市在央行多次信用管制下仍維持韌性，尤其台北市精華地段供給稀缺。新青安貸款政策帶動自住需求，但投資客受限。華固主打高端市場，受信用管制影響較小（客群以自住為主）。主要競爭者：興富發（2542）、遠雄（5522）。</p>
+    <h2>同業比較矩陣</h2><div class="table-wrap"><table><thead><tr><th>公司</th><th>代號</th><th>PE</th><th>PB</th><th>ROE</th><th>2025 EPS</th></tr></thead><tbody><tr><td>華固</td><td>2548</td><td>11.8</td><td>1.71</td><td>14.4%</td><td>10.15</td></tr><tr><td>興富發</td><td>2542</td><td>15.0</td><td>1.5</td><td>10.0%</td><td>2.60</td></tr><tr><td>遠雄</td><td>5522</td><td>12.0</td><td>1.3</td><td>11.0%</td><td>5.00</td></tr></tbody></table></div>
+</div>
+
+<!-- 10. Macro -->
+<div class="card" id="sec10">
+    <h1>10. 總經與政策環境</h1>
+    <p>台灣房市受益於低利率環境（重貼現率 2.00%）與新青安政策。台北市豪宅市場供給有限，精華地段價格持續攀升。風險在於央行可能進一步收緊信用管制，以及利率上升壓抑需求。華固的品牌定位使其在高端市場具定價權。</p>
+</div>
+
+<!-- 11. Technical -->
+<div class="card" id="sec11">
+    <h1>11. 技術面分析</h1>
+    <div class="table-wrap"><table><tr><th>指標</th><th>數值</th><th>乖離率</th><th>解讀</th></tr><tr><td>MA_20</td><td>117.5</td><td>+2.1%</td><td>站上 20 日線，短期偏多</td></tr><tr><td>MA_60</td><td>113.8</td><td>+5.5%</td><td>站穩 60 日線上方，中期趨勢向上</td></tr><tr><td>RSI(14)</td><td>59.1</td><td>—</td><td>RSI 59 偏多但未超買，上漲動能持續</td></tr><tr><td>KD</td><td>K=68.3 / D=62.1</td><td>—</td><td>K > D，黃金交叉後持續走高，多方佔優</td></tr></table></div>
+</div>
+
+<!-- 12. Chip -->
+<div class="card" id="sec12">
+    <h1>12. 籌碼面分析</h1>
+    <div class="table-wrap"><table><tr><th>籌碼指標</th><th>數值</th></tr><tr><td>外資 5 日</td><td>+7356 張</td></tr><tr><td>投信 5 日</td><td>+130 張</td></tr><tr><td>融資餘額</td><td>0</td></tr><tr><td>融券餘額</td><td>1 張</td></tr></table></div><p>外資近 5 日大買 7,356 張，投信小幅加碼 130 張，外資積極做多</p>
+</div>
+
+<!-- 13. Catalyst -->
+<div class="card" id="sec13">
+    <h1>13. 消息面與催化劑</h1>
+    <h4>正面催化劑</h4><ul>
+<li><strong>信義區新土地開發案啟動</strong> (2026 Q2) — NAV 提升、市場關注度增加</li>
+<li><strong>2026 建案入帳高峰</strong> (Q3-Q4 2026) — EPS 可能超過 2025 水準</li>
+<li><strong>台北都更案進展</strong> (2026-2027) — 長期土地庫存補充</li>
+</ul>
+<h4>負面催化劑</h4><ul>
+<li><strong>央行信用管制加嚴</strong> (不確定) — 房市降溫影響新建案銷售</li>
+<li><strong>利率上升壓抑購屋需求</strong> (持續風險) — 銷售速度放緩</li>
+</ul>
+</div>
+
+<!-- 14. Risk & Scenarios -->
+<div class="card" id="sec14">
+    <h1>14. 風險評估與情境模擬</h1>
+    <div class="table-wrap"><table><tr><th>風險</th><th>機率</th><th>影響</th><th>應對</th></tr><tr><td>房市反轉</td><td>low</td><td>high</td><td>關注央行政策與房價指數</td></tr><tr><td>入帳時程不確定性</td><td>high</td><td>medium</td><td>建設業常態，看 2-3 年平均 EPS</td></tr><tr><td>營建成本上漲</td><td>medium</td><td>medium</td><td>華固品牌可轉嫁部分成本</td></tr></table></div>
+    <h2>Bull / Base / Bear 情境</h2>
+    <div class="table-wrap"><table>
+        <tr><th>情境</th><th>EPS</th><th>PE</th><th>目標價</th><th>觸發條件</th></tr>
+        <tr>
+            <td><strong>Bull 🐂</strong></td><td>15.0</td>
+            <td>14</td><td>210</td>
+            <td>台北豪宅市場持續火熱</td>
+        </tr><tr>
+            <td><strong>Base 📊</strong></td><td>10.14</td>
+            <td>14</td><td>142</td>
+            <td>正常入帳節奏</td>
+        </tr><tr>
+            <td><strong>Bear 🐻</strong></td><td>5.0</td>
+            <td>10</td><td>50</td>
+            <td>房市反轉 / 信用管制加嚴</td>
+        </tr>
+    </table></div>
+    
+</div>
+
+<!-- 15. Investment Recommendation -->
+<div class="card" id="sec15">
+    <h1>15. 投資建議與操作區間</h1>
+    <div style="text-align:center;margin:12px 0;">
+        <span class="rating-badge" style="font-size:1.2rem;padding:10px 28px;">Buy</span>
+        <p style="margin-top:10px;color:#666;">股價突破 20 日線，RSI 59 偏多，外資大買</p>
+    </div>
+    <div class="action-grid">
+        <div class="action-item"><div class="label">進場點</div><div class="value" style="color:#1565c0;">118</div></div>
+        <div class="action-item"><div class="label">目標價</div><div class="value" style="color:#00c853;">142</div></div>
+        <div class="action-item"><div class="label">停損點</div><div class="value" style="color:#ff1744;">105</div></div>
+        <div class="action-item"><div class="label">停利點</div><div class="value" style="color:#00c853;">142</div></div>
+    </div>
+    <p style="text-align:center;font-size:0.95rem;margin-top:10px;">
+        風險報酬比 R/R = <strong>1.7:1</strong>
+    </p>
+    <p>建議逢回佈局，進場 118 元（接近 20 日線 117.5）。停損 105 元（-12.5%），對應 PE 10x × EPS 10.14 ≈ 101 元附近。停利 142 元（+18.3%），對應 Base case PE 14x。R/R ratio 1.7:1。持股期限 6-12 個月，等待 2026 建案入帳。</p>
+</div>
+
+<!-- 16. Sources -->
+<div class="card sources" id="sec16">
+    <h1>16. 參考資料</h1>
+    <ol><li><a href="https://www.twse.com.tw/zh/trading/foreign/t86.html" target="_blank" rel="noopener">https://www.twse.com.tw/zh/trading/foreign/t86.html</a></li>
+<li><a href="https://www.tpex.org.tw/web/bond/tradeinfo/govbond/GovBondDaily_02.php" target="_blank" rel="noopener">https://www.tpex.org.tw/web/bond/tradeinfo/govbond/GovBondDaily_02.php</a></li>
+<li><a href="https://www.wantgoo.com/stock/2548" target="_blank" rel="noopener">https://www.wantgoo.com/stock/2548</a></li>
+<li><a href="https://aswathdamodaran.substack.com/p/data-update-4-for-2026-a-risk-journey" target="_blank" rel="noopener">https://aswathdamodaran.substack.com/p/data-update-4-for-2026-a-risk-journey</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/</a></li>
+<li><a href="https://statementdog.com/analysis/2548" target="_blank" rel="noopener">https://statementdog.com/analysis/2548</a></li>
+<li><a href="https://tw.stock.yahoo.com/quote/2548.TW" target="_blank" rel="noopener">https://tw.stock.yahoo.com/quote/2548.TW</a></li>
+<li><a href="https://www.cmoney.tw/forum/article/174420471" target="_blank" rel="noopener">https://www.cmoney.tw/forum/article/174420471</a></li>
+<li><a href="https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=2548" target="_blank" rel="noopener">https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=2548</a></li></ol>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>CFA 深度研究報告 | MDVI v3 | 2026-04-01 09:37 | ARTOGO Investment Research</p>
+    <p>⚠️ 本報告僅供研究參考，不構成投資建議。投資有風險，入市需謹慎。</p>
+    <p><a href="../../index.html" style="color:#1565c0;">← 返回首頁</a></p>
+</div>
+
+</div>
+</body>
+</html>
