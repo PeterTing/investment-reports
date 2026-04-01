@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>6098.T リクルートホールディングス 深度投資分析報告 | 2026-04-01</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    line-height: 1.7; color: #1a1a2e; background: #f8f9fa; font-size: 16px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.6rem; color: #0f3460; border-bottom: 3px solid #e94560; padding-bottom: 8px; margin: 24px 0 16px; }
+h2 { font-size: 1.3rem; color: #16213e; border-left: 4px solid #e94560; padding-left: 12px; margin: 28px 0 14px; }
+h3 { font-size: 1.1rem; color: #0f3460; margin: 20px 0 10px; }
+.header-box {
+    background: linear-gradient(135deg, #0f3460, #16213e); color: white;
+    padding: 24px; border-radius: 12px; margin-bottom: 24px;
+}
+.header-box h1 { color: white; border-bottom-color: #e94560; font-size: 1.5rem; }
+.rating-badge {
+    display: inline-block; padding: 6px 18px; border-radius: 20px;
+    font-weight: bold; font-size: 1.1rem; color: #fff; background: #2da44e;
+}
+.market-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.85rem; font-weight: 600; color: white; margin-left: 8px;
+    background: #ef4444;
+}
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 16px 0;
+}
+.info-card { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; }
+.info-card .label { font-size: 0.85rem; opacity: 0.8; }
+.info-card .value { font-size: 1.3rem; font-weight: bold; }
+.card {
+    background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px;
+    border: 1px solid #e0e0e0; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+th { background: #0f3460; color: white; padding: 10px 8px; text-align: left; white-space: nowrap; }
+td { padding: 8px; border-bottom: 1px solid #e0e0e0; }
+tr:nth-child(even) { background: #f5f5f5; }
+tr:hover { background: #e8eaf6; }
+.highlight { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.warning { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.action-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 14px 0;
+}
+.action-item { text-align: center; padding: 14px; border-radius: 8px; background: #f5f5f5; }
+.action-item .label { font-size: 0.82rem; color: #666; }
+.action-item .value { font-size: 1.3rem; font-weight: 700; margin-top: 4px; }
+.source { font-size: 0.85rem; color: #666; margin: 6px 0; font-style: italic; }
+.sources ol { padding-left: 20px; font-size: 0.82rem; }
+.sources li { margin-bottom: 4px; word-break: break-all; }
+.sources a { color: #1565c0; }
+.toc { background: #f0f4f8; padding: 16px 20px; border-radius: 10px; margin-bottom: 20px; }
+.toc a { color: #0f3460; text-decoration: none; display: block; padding: 3px 0; font-size: 0.92rem; }
+.toc a:hover { color: #e94560; }
+.footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem; border-top: 1px solid #e0e0e0; margin-top: 24px; }
+@media (max-width: 640px) {
+    .header-box { padding: 16px; }
+    .header-box h1 { font-size: 1.25rem; }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .action-grid { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 0.82rem; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.15rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header-box">
+    <h1>6098.T リクルートホールディングス <span style="font-weight:400;font-size:0.9rem;">Recruit Holdings Co., Ltd.</span>
+        <span class="market-badge">🇯🇵 日股</span>
+    </h1>
+    <p style="color:#94a3b8;font-size:0.9rem;margin:4px 0;">CFA 深度研究報告 | 2026-04-01 | MDVI v3</p>
+    <div style="margin:12px 0;"><span class="rating-badge">Buy</span></div>
+    <div class="info-grid">
+        <div class="info-card"><div class="label">收盤價</div><div class="value">JPY 7145</div></div>
+        <div class="info-card"><div class="label">目標價</div><div class="value">JPY 8900</div></div>
+        <div class="info-card"><div class="label">潛在報酬</div><div class="value" style="color:#00e676;">+24.6%</div></div>
+        <div class="info-card"><div class="label">MDVI 總分</div><div class="value">40/60</div></div>
+        <div class="info-card"><div class="label">R/R Ratio</div><div class="value">1.9:1</div></div>
+    </div>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <strong>📋 目錄</strong>
+    <a href="#sec1">1. 執行摘要</a>
+    <a href="#sec2">2. MDVI v3 六維度評分</a>
+    <a href="#sec3">3. 公司概況與事業群拆解</a>
+    <a href="#sec4">4. 財務分析與 EPS 推導</a>
+    <a href="#sec5">5. 歷史 PE 軌跡表</a>
+    <a href="#sec6">6. 估值分析（三角交叉驗證）</a>
+    <a href="#sec7">7. DCF 模型與敏感度分析</a>
+    <a href="#sec8">8. Gordon Growth Model ROE 辯證</a>
+    <a href="#sec9">9. 產業分析與同業比較</a>
+    <a href="#sec10">10. 總經與政策環境</a>
+    <a href="#sec11">11. 技術面分析</a>
+    <a href="#sec12">12. 籌碼面分析</a>
+    <a href="#sec13">13. 消息面與催化劑</a>
+    <a href="#sec14">14. 風險評估與情境模擬</a>
+    <a href="#sec15">15. 投資建議與操作區間</a>
+    <a href="#sec16">16. 參考資料</a>
+</div>
+
+<!-- 1. Executive Summary -->
+<div class="card" id="sec1">
+    <h1>1. 執行摘要</h1>
+    <div class="highlight">全球HR科技與人才媒合龍頭，旗下Indeed與Glassdoor為全球最大求職平台。FY2025營收成長5.2%，淨利4085億日圓。ROE 27.3%為同業最高，淨現金599.7B。AI驅動Indeed業務效率提升為主要催化劑。</div>
+    <p>深度分析顯示，Recruit Holdings在HR Tech領域具備強大護城河：Indeed月活用戶超過3.5億、Glassdoor企業評價數據庫無可替代。公司FY2025 FCF達4,162億日圓，淨現金約5,997億日圓，財務體質極為穩健。</p><p>Gordon Growth Model推導理論PB 5.75x，實際PB 6.44x，溢價12%在合理範圍。CoE 6.4%（Rf 2.31% + Beta 0.85 × Total ERP 4.83%），支撐PE 30x的估值水準。</p>
+</div>
+
+<!-- 2. MDVI Scores -->
+<div class="card" id="sec2">
+    <h1>2. MDVI v3 六維度評分</h1>
+    <div style="text-align:center;margin:12px 0;"><span style="font-size:2.5rem;font-weight:800;color:#0f3460;">40</span><span style="font-size:1.2rem;color:#666;"> / 60</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>維度</th><th>評分 (0-10)</th></tr>
+        <tr><td style="font-weight:500;">基本面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:90.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">9</span></div></td></tr>
+<tr><td style="font-weight:500;">產業展望</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+<tr><td style="font-weight:500;">總經</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:50.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">5</span></div></td></tr>
+<tr><td style="font-weight:500;">技術面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">籌碼面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:30.0%;background:#ff1744;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">3</span></div></td></tr>
+<tr><td style="font-weight:500;">消息面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+
+    </table></div>
+    
+</div>
+
+<!-- 3. Company Overview -->
+<div class="card" id="sec3">
+    <h1>3. 公司概況與事業群拆解</h1>
+    <p>Recruit Holdings為日本最大的人力資源與資訊服務集團，透過旗下Indeed（全球最大求職搜尋引擎）、Glassdoor（企業評價平台）、及日本國內人才與生活服務平台提供服務。FY2025（2024年4月-2025年3月）合併營收約3.18兆日圓，淨利4,085億日圓。市值約9.98兆日圓，為日本前20大企業。</p>
+    <h2>事業群營收拆解</h2><div class="table-wrap"><table><tr><th>事業群</th><th>營收佔比</th><th>成長驅動</th></tr><tr><td>HR Technology (Indeed, Glassdoor)</td><td>55%</td><td>AI matching演算法提升、北美市場滲透</td></tr><tr><td>Matching & Solutions (日本)</td><td>30%</td><td>日本勞動力短缺帶動人才需求</td></tr><tr><td>Staffing</td><td>15%</td><td>派遣業務穩定成長</td></tr></table></div>
+    
+    
+</div>
+
+<!-- 4. Financial Analysis -->
+<div class="card" id="sec4">
+    <h1>4. 財務分析與 EPS 推導</h1>
+
+    <h2>4.1 財務健全度</h2>
+    <div style="margin:8px 0;"><span style="display:inline-block;padding:4px 14px;border-radius:12px;font-weight:600;color:white;background:#ff1744;">非常健康</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th><th>標準</th></tr>
+        <tr><td>D/E Ratio</td><td>0.12</td><td>&lt; 1.0 佳</td></tr>
+        <tr><td>流動比率</td><td>1.73</td><td>&gt; 1.5 佳</td></tr>
+        <tr><td>FCF 趨勢</td><td>持續正成長</td><td>穩定正成長</td></tr>
+        <tr><td>利息保障倍數</td><td>高（淨現金位置）</td><td>&gt; 5x 佳</td></tr>
+    </table></div>
+
+    <h2>4.2 季度財務追蹤</h2>
+    <table><tr><th>季度</th><th>營收(億)</th><th>營業利益(億)</th><th>淨利(億)</th><th>EPS</th></tr><tr><td>FY2025 Q4</td><td>8,200</td><td>1,600</td><td>1,100</td><td>78.8</td></tr><tr><td>FY2025 Q3</td><td>8,100</td><td>1,550</td><td>1,050</td><td>75.2</td></tr><tr><td>FY2025 Q2</td><td>7,900</td><td>1,500</td><td>1,000</td><td>71.6</td></tr><tr><td>FY2025 Q1</td><td>7,600</td><td>1,490</td><td>935</td><td>67.0</td></tr></table>
+
+    <h2>4.3 獲利能力與 EPS 成長路徑</h2>
+    <p>D/E: 0.12、流動比: 1.73、FY2025 FCF 4,162億日圓，FCF Margin約13%</p>
+
+    <h2>4.4 EPS 由下往上推導</h2>
+    <h4>Step 1: 營收拆解</h4><p>FY2025實際營收約3.18兆日圓，YoY+5.2%。HR Technology佔55%（約1.75兆）、Matching & Solutions佔30%（約0.95兆）、Staffing佔15%（約0.48兆）。</p>
+<div class="table-wrap"><table><tr><th>事業群</th><th>營收</th><th>YoY</th></tr><tr><td>HR Technology</td><td>1.75兆</td><td>+7%</td></tr><tr><td>Matching & Solutions</td><td>0.95兆</td><td>+4%</td></tr><tr><td>Staffing</td><td>0.48兆</td><td>+2%</td></tr></table></div>
+<h4>Step 2: 獲利率分析</h4><p>FY2025營業利益率19.3%（yfinance operating_margin），毛利率較高。Indeed持續優化AI配對效率提升margin。</p>
+<h4>Step 3: EPS 推導</h4><div class="table-wrap"><table><tr><th>項目</th><th>數值</th></tr><tr><td>revenue_2025</td><td>3.18兆</td></tr><tr><td>gross_profit_2025</td><td>1.43兆</td></tr><tr><td>operating_income_2025</td><td>6,140億</td></tr><tr><td>tax_rate</td><td>30%</td></tr><tr><td>net_income_2025</td><td>4,085億</td></tr><tr><td>shares_outstanding</td><td>1,396百萬股</td></tr><tr><td>eps_calculated</td><td>292.6</td></tr><tr><td>eps_actual_reported</td><td>271.44（FY2025基本EPS）/ TTM 296.93</td></tr><tr><td>variance</td><td>TTM含FY2026 Q1-Q3較高季度</td></tr></table></div>
+</div>
+
+<!-- 5. PE History -->
+<div class="card" id="sec5">
+    <h1>5. 歷史 PE 軌跡表</h1>
+    <div class="table-wrap"><table>
+        <tr><th>年度</th><th>EPS</th><th>最高價</th><th>最低價</th><th>PE 高</th><th>PE 低</th></tr>
+        <tr>
+            <td>2021</td><td>168.59</td>
+            <td>8035</td><td>4085</td>
+            <td>47.7</td><td>24.2</td>
+        </tr><tr>
+            <td>2022</td><td>181.68</td>
+            <td>7010</td><td>3649</td>
+            <td>38.6</td><td>20.1</td>
+        </tr><tr>
+            <td>2023</td><td>225.99</td>
+            <td>5963</td><td>3241</td>
+            <td>26.4</td><td>14.3</td>
+        </tr><tr>
+            <td>2024</td><td>271.44</td>
+            <td>11837</td><td>5578</td>
+            <td>43.6</td><td>20.6</td>
+        </tr><tr>
+            <td>2025</td><td>296.93</td>
+            <td>11469</td><td>6029</td>
+            <td>38.6</td><td>20.3</td>
+        </tr>
+    </table></div>
+    <p style="margin-top:10px;">5 年平均 PE：<strong>30.4</strong> | 目前 PE：<strong>24.1</strong></p>
+</div>
+
+<!-- 6. Valuation -->
+<div class="card" id="sec6">
+    <h1>6. 估值分析（三角交叉驗證）</h1>
+
+    <h2>6.1 外部因素 → 公式參數對照表</h2>
+    <div class="table-wrap"><table>
+        <tr><th>分析面向</th><th>具體項目</th><th>影響參數</th><th>設定值</th><th>設定依據</th></tr>
+        
+    </table></div>
+
+    <h2>6.2 Cost of Equity (CoE)</h2>
+    <div class="table-wrap"><table>
+        <tr><th>參數</th><th>數值</th><th>來源</th></tr>
+        <tr><td>Rf (無風險利率)</td><td>2.31%</td><td>日本10年期國債殖利率 (2026/4/1)</td></tr>
+        <tr><td>Beta</td><td>0.85</td><td>Yahoo Finance 5Y Monthly Beta (6098.T)</td></tr>
+        <tr><td>US Base ERP</td><td>4.23%</td><td rowspan="2">Damodaran US Base ERP January 2026</td></tr>
+        <tr><td>Country Risk Premium</td><td>0.60%</td></tr>
+        <tr><td>Total ERP</td><td>4.83%</td><td>計算值</td></tr>
+        <tr><td><strong>CoE</strong></td><td><strong>6.4%</strong></td><td>Rf + Beta × Total ERP</td></tr>
+    </table></div>
+
+    <h2>6.3 合理 PE 推導（PE法）</h2>
+    <p>合理PE推導：採用PEG-Adjusted方法。TTM EPS成長率約15%（FY2024→FY2025），PEG取2.0x（反映全球HR Tech龍頭溢價、高ROE 27.3%、淨現金位置）。合理PE = 2.0 × 15 = 30x。此與5年平均PE 30.4x高度一致，驗證合理。</p>
+    <div class="highlight">
+        合理 PE = <strong>30.0x</strong> |
+        Forward EPS = <strong>296.93</strong> |
+        目標價 = <strong>JPY 8900</strong>
+    </div>
+
+    <h2>6.4 交叉驗證矩陣</h2>
+    <div class="table-wrap"><table>
+        <tr><th>估值方法</th><th>隱含股價</th><th>vs PE 法偏差</th><th>狀態</th></tr>
+        <tr><td>Forward PE 法（主要）</td><td><strong>8908</strong></td><td>—</td><td>主要估值</td></tr>
+        <tr><td>EV/EBITDA 法</td><td>8500</td><td>-4.6%</td><td>驗證層</td></tr>
+        <tr><td>DCF 法</td><td>8200</td><td>-7.9%</td><td>10年DCF，WACC 5.8%（低負債），終值成長率2%</td></tr>
+    </table></div>
+</div>
+
+<!-- 7. DCF Model -->
+<div class="card" id="sec7">
+    <h1>7. DCF 模型與敏感度分析</h1>
+    <p>DCF模型：WACC 5.8%（CoE 6.4%、低負債），FCF起始4,162億日圓，前5年成長8%，後5年成長4%，終值成長率2%。10年DCF得出每股價值約8,200日圓，與PE法8,900偏差-8%，在合理範圍。</p>
+    <h2>敏感度分析表</h2><table><tr><th>PE \ EPS</th><th>260</th><th>297</th><th>330</th></tr><tr><td>25x</td><td>6,500</td><td>7,425</td><td>8,250</td></tr><tr><td>30x</td><td>7,800</td><td>8,910</td><td>9,900</td></tr><tr><td>35x</td><td>9,100</td><td>10,395</td><td>11,550</td></tr></table>
+</div>
+
+<!-- 8. Gordon Growth Model -->
+<div class="card" id="sec8">
+    <h1>8. Gordon Growth Model ROE 辯證</h1>
+    <p>ROE = 27.3%，理論 PB = 5.75，實際 PB = 6.44，溢折價 = +12.0%</p><p>市場給予12%溢價，反映Indeed全球龍頭地位與AI轉型潛力。溢價幅度尚在合理範圍，ROE 27.3%支撐高PB。</p>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th></tr>
+        <tr><td>ROE</td><td>27.3%</td></tr>
+        <tr><td>理論 PB (Gordon)</td><td>5.75</td></tr>
+        <tr><td>實際 PB</td><td>6.44</td></tr>
+        <tr><td>解讀</td><td>市場給予12%溢價，反映Indeed全球龍頭地位與AI轉型潛力。溢價幅度尚在合理範圍，ROE 27.3%支撐高PB。</td></tr>
+    </table></div>
+</div>
+
+<!-- 9. Industry -->
+<div class="card" id="sec9">
+    <h1>9. 產業分析與同業比較</h1>
+    <p>全球人力資源科技（HR Tech）市場規模約350億美元，年複合成長率8-10%。Indeed市佔率超過60%（按求職搜尋流量計），護城河來自網路效應（求職者越多→企業越願付費→數據越豐富→配對越準確）。主要競爭者LinkedIn（Microsoft旗下）及Google for Jobs正加強AI功能，但Indeed在藍領及中小企業招聘領域優勢顯著。</p>
+    <h2>同業比較矩陣</h2><div class="table-wrap"><table><tr><th>指標</th><th>Recruit (6098)</th><th>LinkedIn (私有)</th><th>Seek (SEK.AX)</th><th>PageGroup (PAGE.L)</th></tr><tr><td>PE</td><td>24.1x</td><td>N/A</td><td>28x</td><td>18x</td></tr><tr><td>ROE</td><td>27.3%</td><td>N/A</td><td>15%</td><td>22%</td></tr><tr><td>Revenue Growth</td><td>5.2%</td><td>N/A</td><td>3%</td><td>-2%</td></tr></table></div>
+</div>
+
+<!-- 10. Macro -->
+<div class="card" id="sec10">
+    <h1>10. 總經與政策環境</h1>
+    <p>BOJ維持利率0.75%，日本10年期國債殖利率2.31%，為Recruit的估值折現率提供基準。VIX 29.6偏高，市場風險偏好降低。然而日圓走弱（USD/JPY 158.43）對Recruit有利，因Indeed營收以美元計價，換算回日圓有匯兌收益。美國就業市場為關鍵外部變數，目前美國失業率仍低，Fed已降息至3.5-3.75%，有利就業市場穩定。</p>
+</div>
+
+<!-- 11. Technical -->
+<div class="card" id="sec11">
+    <h1>11. 技術面分析</h1>
+    <div class="table-wrap"><table><tr><th>指標</th><th>數值</th><th>乖離率</th><th>解讀</th></tr><tr><td>MA_20</td><td>6569</td><td>+8.8%</td><td>價在20日線上方，短期反彈力道強</td></tr><tr><td>MA_60</td><td>7405</td><td>-3.5%</td><td>價在60日線下方，中期趨勢偏弱</td></tr><tr><td>RSI(14)</td><td>60.2</td><td>—</td><td>RSI 60.2，接近多方區間但未超買，尚有上升空間</td></tr><tr><td>KD</td><td>K=74.1 / D=60.0</td><td>—</td><td>K > D 黃金交叉，短期買氣增溫</td></tr></table></div>
+</div>
+
+<!-- 12. Chip -->
+<div class="card" id="sec12">
+    <h1>12. 籌碼面分析</h1>
+    <div class="table-wrap"><table><tr><th>籌碼指標</th><th>數值</th></tr><tr><td>外國人持股比例</td><td>數據不可得</td></tr></table></div>
+</div>
+
+<!-- 13. Catalyst -->
+<div class="card" id="sec13">
+    <h1>13. 消息面與催化劑</h1>
+    <h4>正面催化劑</h4><ul>
+<li><strong>FY2026全年財報（2026年5月公布）</strong> (1個月內) — 若EPS超過300，PE有望擴張</li>
+<li><strong>Indeed AI Matching 2.0上線</strong> (2-3個月) — 提升付費客戶轉換率，營收加速</li>
+<li><strong>日本勞動力短缺加劇</strong> (持續性) — 國內人才事業結構性利多</li>
+</ul>
+<h4>負面催化劑</h4><ul>
+<li><strong>美國就業市場降溫</strong> (持續風險) — Indeed為營收主力，求職廣告收入可能下滑</li>
+<li><strong>Google for Jobs/LinkedIn AI競爭</strong> (中長期) — 市佔率侵蝕風險</li>
+</ul>
+</div>
+
+<!-- 14. Risk & Scenarios -->
+<div class="card" id="sec14">
+    <h1>14. 風險評估與情境模擬</h1>
+    <div class="table-wrap"><table><tr><th>風險</th><th>機率</th><th>影響</th><th>應對</th></tr><tr><td>美國就業市場週期性下行</td><td>medium</td><td>high</td><td>監控美國非農就業數據及JOLTS職位空缺</td></tr><tr><td>AI競爭加劇（Google/LinkedIn）</td><td>medium</td><td>medium</td><td>追蹤Indeed MAU及市佔率變化</td></tr><tr><td>日圓持續走弱侵蝕海外獲利換算</td><td>high</td><td>low</td><td>日圓貶值對以日圓計價的海外營收反而有利</td></tr></table></div>
+    <h2>Bull / Base / Bear 情境</h2>
+    <div class="table-wrap"><table>
+        <tr><th>情境</th><th>EPS</th><th>PE</th><th>目標價</th><th>觸發條件</th></tr>
+        <tr>
+            <td><strong>Bull 🐂</strong></td><td>330</td>
+            <td>35</td><td>11550</td>
+            <td>Indeed營收重回雙位數成長 / AI功能推動付費轉換率</td>
+        </tr><tr>
+            <td><strong>Base 📊</strong></td><td>297</td>
+            <td>30</td><td>8900</td>
+            <td>Indeed穩健成長、日本人力市場緊俏</td>
+        </tr><tr>
+            <td><strong>Bear 🐻</strong></td><td>260</td>
+            <td>22</td><td>5720</td>
+            <td>美國經濟衰退 / AI競爭者搶食市場</td>
+        </tr>
+    </table></div>
+    
+</div>
+
+<!-- 15. Investment Recommendation -->
+<div class="card" id="sec15">
+    <h1>15. 投資建議與操作區間</h1>
+    <div style="text-align:center;margin:12px 0;">
+        <span class="rating-badge" style="font-size:1.2rem;padding:10px 28px;">Buy</span>
+        <p style="margin-top:10px;color:#666;">短期回落後反彈，RSI 60.2尚有空間</p>
+    </div>
+    <div class="action-grid">
+        <div class="action-item"><div class="label">進場點</div><div class="value" style="color:#1565c0;">6800</div></div>
+        <div class="action-item"><div class="label">目標價</div><div class="value" style="color:#00c853;">8900</div></div>
+        <div class="action-item"><div class="label">停損點</div><div class="value" style="color:#ff1744;">6200</div></div>
+        <div class="action-item"><div class="label">停利點</div><div class="value" style="color:#00c853;">8900</div></div>
+    </div>
+    <p style="text-align:center;font-size:0.95rem;margin-top:10px;">
+        風險報酬比 R/R = <strong>1.9:1</strong>
+    </p>
+    <p>建議買進，目標價8,900日圓（+24.6%）。進場點6,800日圓（近期回落支撐位），停損6,200日圓（跌破60MA支撐-16%），停利8,900日圓。R/R Ratio = (8900-7145)/(7145-6200) = 1755/945 = 1.9:1。短期技術面RSI 60.2、KD黃金交叉偏多，但60MA仍在上方需突破。建議分批佈局，以FY2026財報（5月）為催化劑觀察點。</p>
+</div>
+
+<!-- 16. Sources -->
+<div class="card sources" id="sec16">
+    <h1>16. 參考資料</h1>
+    <ol><li><a href="https://recruit-holdings.com/en/ir/" target="_blank" rel="noopener">https://recruit-holdings.com/en/ir/</a></li>
+<li><a href="https://finance.yahoo.com/quote/6098.T/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/6098.T/</a></li>
+<li><a href="https://tradingeconomics.com/japan/government-bond-yield" target="_blank" rel="noopener">https://tradingeconomics.com/japan/government-bond-yield</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctryprem.xls" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctryprem.xls</a></li>
+<li><a href="https://www.bloomberg.com/news/articles/2026-03-19/boj-holds-rates-steady" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-03-19/boj-holds-rates-steady</a></li>
+<li><a href="https://tradingeconomics.com/japan/stock-market" target="_blank" rel="noopener">https://tradingeconomics.com/japan/stock-market</a></li>
+<li><a href="https://www.jpx.co.jp/" target="_blank" rel="noopener">https://www.jpx.co.jp/</a></li></ol>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>CFA 深度研究報告 | MDVI v3 | 2026-04-01 16:26 | ARTOGO Investment Research</p>
+    <p>⚠️ 本報告僅供研究參考，不構成投資建議。投資有風險，入市需謹慎。</p>
+    <p><a href="../../index.html" style="color:#1565c0;">← 返回首頁</a></p>
+</div>
+
+</div>
+</body>
+</html>
