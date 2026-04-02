@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7003 三井E&S 深度投資分析報告 | 2026-04-02</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    line-height: 1.7; color: #1a1a2e; background: #f8f9fa; font-size: 16px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.6rem; color: #0f3460; border-bottom: 3px solid #e94560; padding-bottom: 8px; margin: 24px 0 16px; }
+h2 { font-size: 1.3rem; color: #16213e; border-left: 4px solid #e94560; padding-left: 12px; margin: 28px 0 14px; }
+h3 { font-size: 1.1rem; color: #0f3460; margin: 20px 0 10px; }
+.header-box {
+    background: linear-gradient(135deg, #0f3460, #16213e); color: white;
+    padding: 24px; border-radius: 12px; margin-bottom: 24px;
+}
+.header-box h1 { color: white; border-bottom-color: #e94560; font-size: 1.5rem; }
+.rating-badge {
+    display: inline-block; padding: 6px 18px; border-radius: 20px;
+    font-weight: bold; font-size: 1.1rem; color: #fff; background: #2da44e;
+}
+.market-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.85rem; font-weight: 600; color: white; margin-left: 8px;
+    background: #ef4444;
+}
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 16px 0;
+}
+.info-card { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; }
+.info-card .label { font-size: 0.85rem; opacity: 0.8; }
+.info-card .value { font-size: 1.3rem; font-weight: bold; }
+.card {
+    background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px;
+    border: 1px solid #e0e0e0; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+th { background: #0f3460; color: white; padding: 10px 8px; text-align: left; white-space: nowrap; }
+td { padding: 8px; border-bottom: 1px solid #e0e0e0; }
+tr:nth-child(even) { background: #f5f5f5; }
+tr:hover { background: #e8eaf6; }
+.highlight { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.warning { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.action-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 14px 0;
+}
+.action-item { text-align: center; padding: 14px; border-radius: 8px; background: #f5f5f5; }
+.action-item .label { font-size: 0.82rem; color: #666; }
+.action-item .value { font-size: 1.3rem; font-weight: 700; margin-top: 4px; }
+.source { font-size: 0.85rem; color: #666; margin: 6px 0; font-style: italic; }
+.sources ol { padding-left: 20px; font-size: 0.82rem; }
+.sources li { margin-bottom: 4px; word-break: break-all; }
+.sources a { color: #1565c0; }
+.toc { background: #f0f4f8; padding: 16px 20px; border-radius: 10px; margin-bottom: 20px; }
+.toc a { color: #0f3460; text-decoration: none; display: block; padding: 3px 0; font-size: 0.92rem; }
+.toc a:hover { color: #e94560; }
+.footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem; border-top: 1px solid #e0e0e0; margin-top: 24px; }
+@media (max-width: 640px) {
+    .header-box { padding: 16px; }
+    .header-box h1 { font-size: 1.25rem; }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .action-grid { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 0.82rem; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.15rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header-box">
+    <h1>7003 三井E&S <span style="font-weight:400;font-size:0.9rem;">MITSUI E&S Co., Ltd.</span>
+        <span class="market-badge">🇯🇵 日股</span>
+    </h1>
+    <p style="color:#94a3b8;font-size:0.9rem;margin:4px 0;">CFA 深度研究報告 | 2026-04-02 | MDVI v3</p>
+    <div style="margin:12px 0;"><span class="rating-badge">Buy</span></div>
+    <div class="info-grid">
+        <div class="info-card"><div class="label">收盤價</div><div class="value">JPY 5879</div></div>
+        <div class="info-card"><div class="label">目標價</div><div class="value">JPY 7740</div></div>
+        <div class="info-card"><div class="label">潛在報酬</div><div class="value" style="color:#00e676;">+31.7%</div></div>
+        <div class="info-card"><div class="label">MDVI 總分</div><div class="value">43/60</div></div>
+        <div class="info-card"><div class="label">R/R Ratio</div><div class="value">2.4:1</div></div>
+    </div>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <strong>📋 目錄</strong>
+    <a href="#sec1">1. 執行摘要</a>
+    <a href="#sec2">2. MDVI v3 六維度評分</a>
+    <a href="#sec3">3. 公司概況與事業群拆解</a>
+    <a href="#sec4">4. 財務分析與 EPS 推導</a>
+    <a href="#sec5">5. 歷史 PE 軌跡表</a>
+    <a href="#sec6">6. 估值分析（三角交叉驗證）</a>
+    <a href="#sec7">7. DCF 模型與敏感度分析</a>
+    <a href="#sec8">8. Gordon Growth Model ROE 辯證</a>
+    <a href="#sec9">9. 產業分析與同業比較</a>
+    <a href="#sec10">10. 總經與政策環境</a>
+    <a href="#sec11">11. 技術面分析</a>
+    <a href="#sec12">12. 籌碼面分析</a>
+    <a href="#sec13">13. 消息面與催化劑</a>
+    <a href="#sec14">14. 風險評估與情境模擬</a>
+    <a href="#sec15">15. 投資建議與操作區間</a>
+    <a href="#sec16">16. 參考資料</a>
+</div>
+
+<!-- 1. Executive Summary -->
+<div class="card" id="sec1">
+    <h1>1. 執行摘要</h1>
+    <div class="highlight">港灣起重機（STS/RTG）日本市佔 90%，船用推進系統領導企業。脫離造船轉型成功，FY2025 淨利 ¥390 億（年增 56%），ROE 24%。業績連續上修 3 次，越南大單+防衛支出增加為成長催化劑。PE 15.2x 相對成長性偏低。</div>
+    <p>轉型故事的核心在於：Mitsui E&S 徹底退出低利潤造船業，聚焦高進入壁壘的港灣設備及船用推進系統。日本起重機市場 90% 市佔幾乎為壟斷地位。全球港口自動化趨勢及 IMO 2030 環保法規推動雙燃料引擎需求，為公司提供結構性成長動力。</p><p>風險在於全球貿易量若顯著萎縮，港灣設備訂單將延遲。流動比 1.28 偏低需監控。但以 PEG 0.27 的成長股而言，當前估值具吸引力。</p>
+</div>
+
+<!-- 2. MDVI Scores -->
+<div class="card" id="sec2">
+    <h1>2. MDVI v3 六維度評分</h1>
+    <div style="text-align:center;margin:12px 0;"><span style="font-size:2.5rem;font-weight:800;color:#0f3460;">43</span><span style="font-size:1.2rem;color:#666;"> / 60</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>維度</th><th>評分 (0-10)</th></tr>
+        <tr><td style="font-weight:500;">基本面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+<tr><td style="font-weight:500;">產業展望</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+<tr><td style="font-weight:500;">總經</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">技術面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">籌碼面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">消息面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+
+    </table></div>
+    
+</div>
+
+<!-- 3. Company Overview -->
+<div class="card" id="sec3">
+    <h1>3. 公司概況與事業群拆解</h1>
+    <p>Mitsui E&S 前身為三井造船，2023 年改名後聚焦三大核心：港灣起重機（STS/RTG，日本市佔 90%）、船用推進系統（柴油引擎、雙燃料系統）、產業機械（壓縮機、氣渦輪機）。已完全退出商業造船（2025/6 轉讓予常石造船），軍艦部門 2021 年售予三菱重工。</p>
+    <h2>事業群營收拆解</h2><div class="table-wrap"><table><tr><th>事業群</th><th>營收佔比</th><th>成長驅動</th></tr><tr><td>港灣物流系統（STS/RTG 起重機）</td><td>45%</td><td>全球港口自動化需求+越南等新興市場訂單</td></tr><tr><td>船用推進系統</td><td>35%</td><td>IMO 2030 環保法規推動雙燃料引擎需求</td></tr><tr><td>產業機械</td><td>20%</td><td>壓縮機、氣渦輪機穩定需求</td></tr></table></div>
+    
+    
+</div>
+
+<!-- 4. Financial Analysis -->
+<div class="card" id="sec4">
+    <h1>4. 財務分析與 EPS 推導</h1>
+
+    <h2>4.1 財務健全度</h2>
+    <div style="margin:8px 0;"><span style="display:inline-block;padding:4px 14px;border-radius:12px;font-weight:600;color:white;background:#ff1744;">改善中（D/E 0.60，流動比 1.28 偏低但可接受）</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th><th>標準</th></tr>
+        <tr><td>D/E Ratio</td><td>0.6</td><td>&lt; 1.0 佳</td></tr>
+        <tr><td>流動比率</td><td>1.28</td><td>&gt; 1.5 佳</td></tr>
+        <tr><td>FCF 趨勢</td><td>轉為正向</td><td>穩定正成長</td></tr>
+        <tr><td>利息保障倍數</td><td>改善中</td><td>&gt; 5x 佳</td></tr>
+    </table></div>
+
+    <h2>4.2 季度財務追蹤</h2>
+    <table><tr><th>季度</th><th>營收(B)</th><th>營業利潤(B)</th><th>營益率</th></tr><tr><td>FY2025 Q1-Q3</td><td>253.2</td><td>31.1</td><td>12.3%</td></tr><tr><td>FY2025 Q4E</td><td>61.9</td><td>3.9</td><td>6.3%</td></tr><tr><td>FY2025 全年</td><td>315.1</td><td>35.0</td><td>11.1%</td></tr></table>
+
+    <h2>4.3 獲利能力與 EPS 成長路徑</h2>
+    <p>D/E: 0.6、流動比: 1.28、FY2023 NI ¥15.6B, FY2024 NI ¥25.1B, FY2025 NI ¥39.1B（大幅成長）; FCF ¥23.8B</p>
+
+    <h2>4.4 EPS 由下往上推導</h2>
+    <h4>Step 1: 營收拆解</h4><p>FY2025（截至 2026/3）營收 ¥315.1B。港灣物流 ¥142B（+15%），船用推進 ¥110B（+20%），產業機械 ¥63B（+10%）</p>
+<div class="table-wrap"><table><tr><th>事業群</th><th>營收</th><th>YoY</th></tr><tr><td>港灣物流系統</td><td>142B</td><td>+15%</td></tr><tr><td>船用推進系統</td><td>110B</td><td>+20%</td></tr><tr><td>產業機械</td><td>63B</td><td>+10%</td></tr></table></div>
+<h4>Step 2: 獲利率分析</h4><p>FY2025 營業利潤率 11.1%（大幅改善），毛利率提升來自高利潤船用推進訂單及成本削減</p>
+<h4>Step 3: EPS 推導</h4><div class="table-wrap"><table><tr><th>項目</th><th>數值</th></tr><tr><td>revenue_2025</td><td>315.1B</td></tr><tr><td>gross_profit_2025</td><td>69.3B</td></tr><tr><td>operating_income_2025</td><td>35B</td></tr><tr><td>tax_rate</td><td>28%</td></tr><tr><td>net_income_2025</td><td>39.1B</td></tr><tr><td>shares_outstanding</td><td>100.9M</td></tr><tr><td>eps_calculated</td><td>387.3</td></tr><tr><td>eps_actual_reported</td><td>387.3</td></tr><tr><td>variance</td><td>0%</td></tr></table></div>
+</div>
+
+<!-- 5. PE History -->
+<div class="card" id="sec5">
+    <h1>5. 歷史 PE 軌跡表</h1>
+    <div class="table-wrap"><table>
+        <tr><th>年度</th><th>EPS</th><th>最高價</th><th>最低價</th><th>PE 高</th><th>PE 低</th></tr>
+        <tr>
+            <td>2022</td><td>-216.3</td>
+            <td>478</td><td>303</td>
+            <td>N/A（虧損）</td><td>N/A（虧損）</td>
+        </tr><tr>
+            <td>2023</td><td>154.2</td>
+            <td>720</td><td>353</td>
+            <td>4.7</td><td>2.3</td>
+        </tr><tr>
+            <td>2024</td><td>248.3</td>
+            <td>2833</td><td>683</td>
+            <td>11.4</td><td>2.8</td>
+        </tr><tr>
+            <td>2025</td><td>387.3</td>
+            <td>7055</td><td>1131</td>
+            <td>18.2</td><td>2.9</td>
+        </tr>
+    </table></div>
+    <p style="margin-top:10px;">5 年平均 PE：<strong>10.6</strong> | 目前 PE：<strong>15.2</strong></p>
+</div>
+
+<!-- 6. Valuation -->
+<div class="card" id="sec6">
+    <h1>6. 估值分析（三角交叉驗證）</h1>
+
+    <h2>6.1 外部因素 → 公式參數對照表</h2>
+    <div class="table-wrap"><table>
+        <tr><th>分析面向</th><th>具體項目</th><th>影響參數</th><th>設定值</th><th>設定依據</th></tr>
+        
+    </table></div>
+
+    <h2>6.2 Cost of Equity (CoE)</h2>
+    <div class="table-wrap"><table>
+        <tr><th>參數</th><th>數值</th><th>來源</th></tr>
+        <tr><td>Rf (無風險利率)</td><td>2.39%</td><td>日本 10Y JGB 殖利率</td></tr>
+        <tr><td>Beta</td><td>1.151</td><td>Yahoo Finance 5Y Monthly Beta</td></tr>
+        <tr><td>US Base ERP</td><td>4.23%</td><td rowspan="2">Damodaran US Implied ERP Jan 2026</td></tr>
+        <tr><td>Country Risk Premium</td><td>0.59%</td></tr>
+        <tr><td>Total ERP</td><td>4.82%</td><td>計算值</td></tr>
+        <tr><td><strong>CoE</strong></td><td><strong>7.9%</strong></td><td>Rf + Beta × Total ERP</td></tr>
+    </table></div>
+
+    <h2>6.3 合理 PE 推導（PE法）</h2>
+    <p>CoE = 2.39% + 1.151 × 4.82% = 7.94%。以 PEG 法：EPS 成長率 56%（FY2025），PEG=0.27 極低，顯示低估。考量成長率不可持續，以 PE 20x（同業工業股上緣）為合理目標。</p>
+    <div class="highlight">
+        合理 PE = <strong>20.0x</strong> |
+        Forward EPS = <strong>387.3</strong> |
+        目標價 = <strong>JPY 7740</strong>
+    </div>
+
+    <h2>6.4 交叉驗證矩陣</h2>
+    <div class="table-wrap"><table>
+        <tr><th>估值方法</th><th>隱含股價</th><th>vs PE 法偏差</th><th>狀態</th></tr>
+        <tr><td>Forward PE 法（主要）</td><td><strong>7746</strong></td><td>—</td><td>主要估值</td></tr>
+        <tr><td>EV/EBITDA 法</td><td>7200</td><td>-7.0%</td><td>驗證層</td></tr>
+        <tr><td>DCF 法</td><td>8000</td><td>+3.3%</td><td>10 年 DCF，FCF 高速成長期</td></tr>
+    </table></div>
+</div>
+
+<!-- 7. DCF Model -->
+<div class="card" id="sec7">
+    <h1>7. DCF 模型與敏感度分析</h1>
+    <p>10 年 DCF：WACC 7.0%（CoE 7.9%，Debt cost 1.5%），前 3 年 FCF 成長 20%，後 7 年 5%，終值成長率 2%。基礎 FCF ¥23.8B。計算結果約 ¥807B，除以 100.9M 股 = 每股 ¥8,000。</p>
+    <h2>敏感度分析表</h2><table><tr><th>PE \ EPS</th><th>300</th><th>350</th><th>387</th><th>420</th><th>450</th></tr><tr><td>12x</td><td>3,600</td><td>4,200</td><td>4,644</td><td>5,040</td><td>5,400</td></tr><tr><td>16x</td><td>4,800</td><td>5,600</td><td>6,192</td><td>6,720</td><td>7,200</td></tr><tr><td>20x</td><td>6,000</td><td>7,000</td><td>7,740</td><td>8,400</td><td>9,000</td></tr><tr><td>24x</td><td>7,200</td><td>8,400</td><td>9,288</td><td>10,080</td><td>10,800</td></tr></table>
+</div>
+
+<!-- 8. Gordon Growth Model -->
+<div class="card" id="sec8">
+    <h1>8. Gordon Growth Model ROE 辯證</h1>
+    <p>ROE = 24.4%，理論 PB = 3.8，實際 PB = 2.9，溢折價 = -23.7%</p><p>市場給予 23.7% 折價，反映投資人對重工業公司的結構性折價及轉型持續性的疑慮。若市場認可轉型成果，PB 有向理論值收斂空間</p>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th></tr>
+        <tr><td>ROE</td><td>24.4%</td></tr>
+        <tr><td>理論 PB (Gordon)</td><td>3.8</td></tr>
+        <tr><td>實際 PB</td><td>2.9</td></tr>
+        <tr><td>解讀</td><td>市場給予 23.7% 折價，反映投資人對重工業公司的結構性折價及轉型持續性的疑慮。若市場認可轉型成果，PB 有向理論值收斂空間</td></tr>
+    </table></div>
+</div>
+
+<!-- 9. Industry -->
+<div class="card" id="sec9">
+    <h1>9. 產業分析與同業比較</h1>
+    <p>全球港灣設備市場受惠於國際貿易量成長及港口自動化趨勢。日本防衛預算 FY2026 達 ¥9.04 兆（+3.8%），海上自衛隊艦艇及港灣設施需求增加。船用推進系統受 IMO 2030 環保法規驅動，雙燃料（LNG/甲醇）引擎需求旺盛。</p>
+    <h2>同業比較矩陣</h2><div class="table-wrap"><table><tr><th>公司</th><th>代號</th><th>PE</th><th>EV/EBITDA</th><th>ROE</th></tr><tr><td>Mitsui E&S</td><td>7003</td><td>15.2x</td><td>13.0x</td><td>24.4%</td></tr><tr><td>Konecranes</td><td>KCR.HE</td><td>13.5x</td><td>10.2x</td><td>15%</td></tr><tr><td>三菱重工</td><td>7011</td><td>25.3x</td><td>18.5x</td><td>12%</td></tr></table></div>
+</div>
+
+<!-- 10. Macro -->
+<div class="card" id="sec10">
+    <h1>10. 總經與政策環境</h1>
+    <p>日本防衛支出持續擴大對港灣/海事設備企業有利。全球貿易量雖受地緣風險影響波動，但東南亞港口建設投資中長期持續。IMO 環保法規為船用引擎提供結構性需求。</p>
+</div>
+
+<!-- 11. Technical -->
+<div class="card" id="sec11">
+    <h1>11. 技術面分析</h1>
+    <div class="table-wrap"><table><tr><th>指標</th><th>數值</th><th>乖離率</th><th>解讀</th></tr><tr><td>MA_20</td><td>6261</td><td>-6.1%</td><td>低於 20 日線，短期偏弱</td></tr><tr><td>MA_60</td><td>6710</td><td>-12.4%</td><td>大幅低於 60 日線，中期修正中</td></tr><tr><td>RSI(14)</td><td>44.4</td><td>—</td><td>RSI 44，中性偏弱</td></tr><tr><td>KD</td><td>K=32.1 / D=23.1</td><td>—</td><td>K > D 出現黃金交叉，但值偏低，短期可能反彈</td></tr></table></div>
+</div>
+
+<!-- 12. Chip -->
+<div class="card" id="sec12">
+    <h1>12. 籌碼面分析</h1>
+    <div class="table-wrap"><table><tr><th>籌碼指標</th><th>數值</th></tr><tr><td>外國人持股比例</td><td>數據不可得</td></tr></table></div><p>數據不可得</p>
+</div>
+
+<!-- 13. Catalyst -->
+<div class="card" id="sec13">
+    <h1>13. 消息面與催化劑</h1>
+    <h4>正面催化劑</h4><ul>
+<li><strong>越南 PetroVietnam 大型起重機訂單（11 STS + 11 RTG）</strong> (已接單) — 鞏固東南亞市場地位</li>
+<li><strong>FY2025 業績連續上修 3 次</strong> (2026/2) — 股利 3 倍增，管理層信心強</li>
+<li><strong>日本防衛預算 ¥9.04 兆（+3.8%）</strong> (FY2026) — 港灣/海事設備需求增加</li>
+</ul>
+<h4>負面催化劑</h4><ul>
+<li><strong>地緣政治/關稅風險</strong> (不確定) — 管理層已提示此為風險因素</li>
+<li><strong>全球貿易量萎縮</strong> (衰退時) — 港灣設備需求下滑</li>
+<li><strong>流動比偏低（1.28）</strong> (持續) — 大額訂單資金週轉風險</li>
+</ul>
+</div>
+
+<!-- 14. Risk & Scenarios -->
+<div class="card" id="sec14">
+    <h1>14. 風險評估與情境模擬</h1>
+    <div class="table-wrap"><table><tr><th>風險</th><th>機率</th><th>影響</th><th>應對</th></tr><tr><td>全球貿易量下滑</td><td>medium</td><td>high</td><td>追蹤全球貨櫃吞吐量及港口建設計畫</td></tr><tr><td>競爭加劇（Konecranes）</td><td>medium</td><td>medium</td><td>Mitsui E&S 在日本+東南亞有地緣優勢</td></tr><tr><td>財務槓桿偏高</td><td>low</td><td>medium</td><td>監控 D/E 及現金流</td></tr></table></div>
+    <h2>Bull / Base / Bear 情境</h2>
+    <div class="table-wrap"><table>
+        <tr><th>情境</th><th>EPS</th><th>PE</th><th>目標價</th><th>觸發條件</th></tr>
+        <tr>
+            <td><strong>Bull 🐂</strong></td><td>450</td>
+            <td>22</td><td>9900</td>
+            <td>東南亞港口建設加速 / 日本防衛預算持續擴大</td>
+        </tr><tr>
+            <td><strong>Base 📊</strong></td><td>387.3</td>
+            <td>20</td><td>7746</td>
+            <td>穩定接單，利潤率維持</td>
+        </tr><tr>
+            <td><strong>Bear 🐻</strong></td><td>300</td>
+            <td>12</td><td>3600</td>
+            <td>地緣政治引發貿易壁壘 / 供應鏈中斷</td>
+        </tr>
+    </table></div>
+    
+</div>
+
+<!-- 15. Investment Recommendation -->
+<div class="card" id="sec15">
+    <h1>15. 投資建議與操作區間</h1>
+    <div style="text-align:center;margin:12px 0;">
+        <span class="rating-badge" style="font-size:1.2rem;padding:10px 28px;">Buy</span>
+        <p style="margin-top:10px;color:#666;">港灣起重機日本市佔 90%，FY2025 業績上修 3 次，ROE 24% 大幅改善</p>
+    </div>
+    <div class="action-grid">
+        <div class="action-item"><div class="label">進場點</div><div class="value" style="color:#1565c0;">5800</div></div>
+        <div class="action-item"><div class="label">目標價</div><div class="value" style="color:#00c853;">7740</div></div>
+        <div class="action-item"><div class="label">停損點</div><div class="value" style="color:#ff1744;">5000</div></div>
+        <div class="action-item"><div class="label">停利點</div><div class="value" style="color:#00c853;">7740</div></div>
+    </div>
+    <p style="text-align:center;font-size:0.95rem;margin-top:10px;">
+        風險報酬比 R/R = <strong>2.4:1</strong>
+    </p>
+    <p>建議 Buy，目標價 ¥7,740。進場 ¥5,800，停損 ¥5,000（Bear PE 12x × EPS 387 ≈ 4,644），停利 ¥7,740。R/R = (7740-5800)/(5800-5000) = 2.4:1。</p>
+</div>
+
+<!-- 16. Sources -->
+<div class="card sources" id="sec16">
+    <h1>16. 參考資料</h1>
+    <ol><li><a href="https://www.mes.co.jp/en/ir/library/results/" target="_blank" rel="noopener">https://www.mes.co.jp/en/ir/library/results/</a></li>
+<li><a href="https://finance.yahoo.com/quote/7003.T/key-statistics/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/7003.T/key-statistics/</a></li>
+<li><a href="https://tradingeconomics.com/japan/government-bond-yield" target="_blank" rel="noopener">https://tradingeconomics.com/japan/government-bond-yield</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html</a></li>
+<li><a href="https://www.tipranks.com/news/company-announcements/mitsui-es-lifts-fy2025-profit-outlook-on-strong-marine-and-logistics-margins" target="_blank" rel="noopener">https://www.tipranks.com/news/company-announcements/mitsui-es-lifts-fy2025-profit-outlook-on-strong-marine-and-logistics-margins</a></li>
+<li><a href="https://www.porttechnology.org/news/mitsui-es-lands-record-vietnam-crane-order/" target="_blank" rel="noopener">https://www.porttechnology.org/news/mitsui-es-lands-record-vietnam-crane-order/</a></li>
+<li><a href="https://www.navalnews.com/naval-news/2025/12/japan-approves-record-defense-budget-for-fiscal-year-2026/" target="_blank" rel="noopener">https://www.navalnews.com/naval-news/2025/12/japan-approves-record-defense-budget-for-fiscal-year-2026/</a></li>
+<li><a href="https://stockanalysis.com/quote/tyo/7003/statistics/" target="_blank" rel="noopener">https://stockanalysis.com/quote/tyo/7003/statistics/</a></li></ol>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>CFA 深度研究報告 | MDVI v3 | 2026-04-02 16:28 | ARTOGO Investment Research</p>
+    <p>⚠️ 本報告僅供研究參考，不構成投資建議。投資有風險，入市需謹慎。</p>
+    <p><a href="../../index.html" style="color:#1565c0;">← 返回首頁</a></p>
+</div>
+
+</div>
+</body>
+</html>

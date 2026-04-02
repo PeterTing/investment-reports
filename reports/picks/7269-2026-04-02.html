@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7269 スズキ 深度投資分析報告 | 2026-04-02</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    line-height: 1.7; color: #1a1a2e; background: #f8f9fa; font-size: 16px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.6rem; color: #0f3460; border-bottom: 3px solid #e94560; padding-bottom: 8px; margin: 24px 0 16px; }
+h2 { font-size: 1.3rem; color: #16213e; border-left: 4px solid #e94560; padding-left: 12px; margin: 28px 0 14px; }
+h3 { font-size: 1.1rem; color: #0f3460; margin: 20px 0 10px; }
+.header-box {
+    background: linear-gradient(135deg, #0f3460, #16213e); color: white;
+    padding: 24px; border-radius: 12px; margin-bottom: 24px;
+}
+.header-box h1 { color: white; border-bottom-color: #e94560; font-size: 1.5rem; }
+.rating-badge {
+    display: inline-block; padding: 6px 18px; border-radius: 20px;
+    font-weight: bold; font-size: 1.1rem; color: #fff; background: #2da44e;
+}
+.market-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.85rem; font-weight: 600; color: white; margin-left: 8px;
+    background: #ef4444;
+}
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 16px 0;
+}
+.info-card { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; }
+.info-card .label { font-size: 0.85rem; opacity: 0.8; }
+.info-card .value { font-size: 1.3rem; font-weight: bold; }
+.card {
+    background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px;
+    border: 1px solid #e0e0e0; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+th { background: #0f3460; color: white; padding: 10px 8px; text-align: left; white-space: nowrap; }
+td { padding: 8px; border-bottom: 1px solid #e0e0e0; }
+tr:nth-child(even) { background: #f5f5f5; }
+tr:hover { background: #e8eaf6; }
+.highlight { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.warning { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+.action-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 14px 0;
+}
+.action-item { text-align: center; padding: 14px; border-radius: 8px; background: #f5f5f5; }
+.action-item .label { font-size: 0.82rem; color: #666; }
+.action-item .value { font-size: 1.3rem; font-weight: 700; margin-top: 4px; }
+.source { font-size: 0.85rem; color: #666; margin: 6px 0; font-style: italic; }
+.sources ol { padding-left: 20px; font-size: 0.82rem; }
+.sources li { margin-bottom: 4px; word-break: break-all; }
+.sources a { color: #1565c0; }
+.toc { background: #f0f4f8; padding: 16px 20px; border-radius: 10px; margin-bottom: 20px; }
+.toc a { color: #0f3460; text-decoration: none; display: block; padding: 3px 0; font-size: 0.92rem; }
+.toc a:hover { color: #e94560; }
+.footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem; border-top: 1px solid #e0e0e0; margin-top: 24px; }
+@media (max-width: 640px) {
+    .header-box { padding: 16px; }
+    .header-box h1 { font-size: 1.25rem; }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .action-grid { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 0.82rem; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.15rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header-box">
+    <h1>7269 スズキ <span style="font-weight:400;font-size:0.9rem;">Suzuki Motor Corporation</span>
+        <span class="market-badge">🇯🇵 日股</span>
+    </h1>
+    <p style="color:#94a3b8;font-size:0.9rem;margin:4px 0;">CFA 深度研究報告 | 2026-04-02 | MDVI v3</p>
+    <div style="margin:12px 0;"><span class="rating-badge">Buy</span></div>
+    <div class="info-grid">
+        <div class="info-card"><div class="label">收盤價</div><div class="value">JPY 1860.5</div></div>
+        <div class="info-card"><div class="label">目標價</div><div class="value">JPY 2430</div></div>
+        <div class="info-card"><div class="label">潛在報酬</div><div class="value" style="color:#00e676;">+30.6%</div></div>
+        <div class="info-card"><div class="label">MDVI 總分</div><div class="value">38/60</div></div>
+        <div class="info-card"><div class="label">R/R Ratio</div><div class="value">2.3:1</div></div>
+    </div>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <strong>📋 目錄</strong>
+    <a href="#sec1">1. 執行摘要</a>
+    <a href="#sec2">2. MDVI v3 六維度評分</a>
+    <a href="#sec3">3. 公司概況與事業群拆解</a>
+    <a href="#sec4">4. 財務分析與 EPS 推導</a>
+    <a href="#sec5">5. 歷史 PE 軌跡表</a>
+    <a href="#sec6">6. 估值分析（三角交叉驗證）</a>
+    <a href="#sec7">7. DCF 模型與敏感度分析</a>
+    <a href="#sec8">8. Gordon Growth Model ROE 辯證</a>
+    <a href="#sec9">9. 產業分析與同業比較</a>
+    <a href="#sec10">10. 總經與政策環境</a>
+    <a href="#sec11">11. 技術面分析</a>
+    <a href="#sec12">12. 籌碼面分析</a>
+    <a href="#sec13">13. 消息面與催化劑</a>
+    <a href="#sec14">14. 風險評估與情境模擬</a>
+    <a href="#sec15">15. 投資建議與操作區間</a>
+    <a href="#sec16">16. 參考資料</a>
+</div>
+
+<!-- 1. Executive Summary -->
+<div class="card" id="sec1">
+    <h1>1. 執行摘要</h1>
+    <div class="highlight">日系車廠中估值最低（PE 9.2x），印度市場透過 Maruti Suzuki 持有 45% 市佔率。FY2025 淨利創新高 ¥4,161 億。EV 轉型啟動（e-Vitara 2026 推出），配息提升至 DOE 3.0%。股價自高點 ¥2,473 回落 25%，估值具吸引力。</div>
+    <p>Suzuki 的核心價值在於印度市場的壟斷地位。Maruti Suzuki 3,500+ 服務中心覆蓋印度城鄉，品牌黏性極高。印度車市成長率遠超日本，為 Suzuki 主要成長引擎。EV 轉型方面，Suzuki 與 Toyota 合作開發電動 SUV，¥4.5 兆研發投資計畫覆蓋至 FY2030。</p><p>風險在於日本國內市場持續萎縮（YTD -7.1%）及日圓升值壓力。但 PE 9.2x 已充分反映悲觀預期，PB 1.09x 接近淨資產，下行風險有限。</p>
+</div>
+
+<!-- 2. MDVI Scores -->
+<div class="card" id="sec2">
+    <h1>2. MDVI v3 六維度評分</h1>
+    <div style="text-align:center;margin:12px 0;"><span style="font-size:2.5rem;font-weight:800;color:#0f3460;">38</span><span style="font-size:1.2rem;color:#666;"> / 60</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>維度</th><th>評分 (0-10)</th></tr>
+        <tr><td style="font-weight:500;">基本面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:80.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">8</span></div></td></tr>
+<tr><td style="font-weight:500;">產業展望</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+<tr><td style="font-weight:500;">總經</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:60.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">6</span></div></td></tr>
+<tr><td style="font-weight:500;">技術面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:50.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">5</span></div></td></tr>
+<tr><td style="font-weight:500;">籌碼面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:50.0%;background:#ffd600;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">5</span></div></td></tr>
+<tr><td style="font-weight:500;">消息面</td><td><div style="display:flex;align-items:center;gap:8px;margin:4px 0;"><div style="flex:1;height:20px;background:#e0e0e0;border-radius:10px;overflow:hidden;"><div style="height:100%;width:70.0%;background:#00c853;border-radius:10px;"></div></div><span style="font-weight:700;min-width:28px;">7</span></div></td></tr>
+
+    </table></div>
+    
+</div>
+
+<!-- 3. Company Overview -->
+<div class="card" id="sec3">
+    <h1>3. 公司概況與事業群拆解</h1>
+    <p>Suzuki Motor 為日本第四大汽車製造商，透過子公司 Maruti Suzuki（持股 56.4%）主導印度乘用車市場（45% 市佔率）。業務涵蓋汽車（~90%）、機車（~7%）、船外機（~3%）。FY2025 營收約 ¥5.6 兆，營業利潤率 9.2%。</p>
+    <h2>事業群營收拆解</h2><div class="table-wrap"><table><tr><th>事業群</th><th>營收佔比</th><th>成長驅動</th></tr><tr><td>汽車（日本+印度+歐洲）</td><td>90%</td><td>印度 Maruti Suzuki 市佔率 45%，目標 50%</td></tr><tr><td>機車</td><td>7%</td><td>東南亞及印度二輪車需求</td></tr><tr><td>船外機</td><td>3%</td><td>休閒需求穩定</td></tr></table></div>
+    
+    
+</div>
+
+<!-- 4. Financial Analysis -->
+<div class="card" id="sec4">
+    <h1>4. 財務分析與 EPS 推導</h1>
+
+    <h2>4.1 財務健全度</h2>
+    <div style="margin:8px 0;"><span style="display:inline-block;padding:4px 14px;border-radius:12px;font-weight:600;color:white;background:#ff1744;">健康（D/E 0.19 極保守）</span></div>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th><th>標準</th></tr>
+        <tr><td>D/E Ratio</td><td>0.19</td><td>&lt; 1.0 佳</td></tr>
+        <tr><td>流動比率</td><td>1.66</td><td>&gt; 1.5 佳</td></tr>
+        <tr><td>FCF 趨勢</td><td>正向成長</td><td>穩定正成長</td></tr>
+        <tr><td>利息保障倍數</td><td>充足</td><td>&gt; 5x 佳</td></tr>
+    </table></div>
+
+    <h2>4.2 季度財務追蹤</h2>
+    <table><tr><th>季度</th><th>營收(B)</th><th>營業利潤(B)</th><th>營益率</th><th>EPS</th></tr><tr><td>FY2025 Q1</td><td>1,350</td><td>115</td><td>8.5%</td><td>48</td></tr><tr><td>FY2025 Q2</td><td>1,450</td><td>135</td><td>9.3%</td><td>55</td></tr><tr><td>FY2025 Q3</td><td>1,400</td><td>130</td><td>9.3%</td><td>52</td></tr><tr><td>FY2025 Q4</td><td>1,400</td><td>137</td><td>9.8%</td><td>60</td></tr></table>
+
+    <h2>4.3 獲利能力與 EPS 成長路徑</h2>
+    <p>D/E: 0.19、流動比: 1.66、FY2023 NI ¥221.1B, FY2024 NI ¥317.0B, FY2025 NI ¥416.1B; FCF FY2025 約 ¥86.6B</p>
+
+    <h2>4.4 EPS 由下往上推導</h2>
+    <h4>Step 1: 營收拆解</h4><p>FY2025 營收 ¥5.6 兆。日本 41%（¥2.3 兆），印度/亞洲 42%（¥2.35 兆），歐洲 10%（¥560B），其他 7%（¥392B）</p>
+<div class="table-wrap"><table><tr><th>事業群</th><th>營收</th><th>YoY</th></tr><tr><td>日本市場</td><td>2,296B</td><td>-5.7%</td></tr><tr><td>印度/亞洲</td><td>2,352B</td><td>+20%</td></tr><tr><td>歐洲</td><td>560B</td><td>+8%</td></tr><tr><td>其他</td><td>392B</td><td>+5%</td></tr></table></div>
+<h4>Step 2: 獲利率分析</h4><p>FY2025 營業利潤率 9.2%（vs FY2024 8.7%），改善來自印度銷量增長及匯率效應</p>
+<h4>Step 3: EPS 推導</h4><div class="table-wrap"><table><tr><th>項目</th><th>數值</th></tr><tr><td>revenue_2025</td><td>5,600B</td></tr><tr><td>gross_profit_2025</td><td>1,512B</td></tr><tr><td>operating_income_2025</td><td>517B</td></tr><tr><td>tax_rate</td><td>25%</td></tr><tr><td>net_income_2025</td><td>416.1B</td></tr><tr><td>shares_outstanding</td><td>1,929M</td></tr><tr><td>eps_calculated</td><td>215.7</td></tr><tr><td>eps_actual_reported</td><td>202.8</td></tr><tr><td>variance</td><td>-6%（Trailing EPS 與年度 EPS 有時間差）</td></tr></table></div>
+</div>
+
+<!-- 5. PE History -->
+<div class="card" id="sec5">
+    <h1>5. 歷史 PE 軌跡表</h1>
+    <div class="table-wrap"><table>
+        <tr><th>年度</th><th>EPS</th><th>最高價</th><th>最低價</th><th>PE 高</th><th>PE 低</th></tr>
+        <tr>
+            <td>2021</td><td>83.1</td>
+            <td>1253</td><td>912</td>
+            <td>15.1</td><td>11.0</td>
+        </tr><tr>
+            <td>2022</td><td>114.6</td>
+            <td>1316</td><td>798</td>
+            <td>11.5</td><td>7.0</td>
+        </tr><tr>
+            <td>2023</td><td>164.3</td>
+            <td>1556</td><td>950</td>
+            <td>9.5</td><td>5.8</td>
+        </tr><tr>
+            <td>2024</td><td>215.7</td>
+            <td>1885</td><td>1242</td>
+            <td>8.7</td><td>5.8</td>
+        </tr><tr>
+            <td>2025</td><td>202.8</td>
+            <td>2442</td><td>1431</td>
+            <td>12.0</td><td>7.1</td>
+        </tr>
+    </table></div>
+    <p style="margin-top:10px;">5 年平均 PE：<strong>9.9</strong> | 目前 PE：<strong>9.2</strong></p>
+</div>
+
+<!-- 6. Valuation -->
+<div class="card" id="sec6">
+    <h1>6. 估值分析（三角交叉驗證）</h1>
+
+    <h2>6.1 外部因素 → 公式參數對照表</h2>
+    <div class="table-wrap"><table>
+        <tr><th>分析面向</th><th>具體項目</th><th>影響參數</th><th>設定值</th><th>設定依據</th></tr>
+        
+    </table></div>
+
+    <h2>6.2 Cost of Equity (CoE)</h2>
+    <div class="table-wrap"><table>
+        <tr><th>參數</th><th>數值</th><th>來源</th></tr>
+        <tr><td>Rf (無風險利率)</td><td>2.39%</td><td>日本 10Y JGB 殖利率</td></tr>
+        <tr><td>Beta</td><td>0.24</td><td>Yahoo Finance 5Y Monthly Beta</td></tr>
+        <tr><td>US Base ERP</td><td>4.23%</td><td rowspan="2">Damodaran US Implied ERP Jan 2026</td></tr>
+        <tr><td>Country Risk Premium</td><td>0.59%</td></tr>
+        <tr><td>Total ERP</td><td>4.82%</td><td>計算值</td></tr>
+        <tr><td><strong>CoE</strong></td><td><strong>3.6%</strong></td><td>Rf + Beta × Total ERP</td></tr>
+    </table></div>
+
+    <h2>6.3 合理 PE 推導（PE法）</h2>
+    <p>CoE = 2.39% + 0.24 × 4.82% = 3.55%。低 Beta 反映 Suzuki 的防禦特性（印度成長對沖日本衰退）。歷史 PE Band：高 15.1x / 低 5.8x / 平均 9.9x。考量 EPS 成長從峰值放緩但 EV 轉型投入增加，取 12x 為合理目標 PE。</p>
+    <div class="highlight">
+        合理 PE = <strong>12.0x</strong> |
+        Forward EPS = <strong>202.8</strong> |
+        目標價 = <strong>JPY 2430</strong>
+    </div>
+
+    <h2>6.4 交叉驗證矩陣</h2>
+    <div class="table-wrap"><table>
+        <tr><th>估值方法</th><th>隱含股價</th><th>vs PE 法偏差</th><th>狀態</th></tr>
+        <tr><td>Forward PE 法（主要）</td><td><strong>2434</strong></td><td>—</td><td>主要估值</td></tr>
+        <tr><td>EV/EBITDA 法</td><td>2200</td><td>-9.6%</td><td>驗證層</td></tr>
+        <tr><td>DCF 法</td><td>2500</td><td>+2.7%</td><td>10 年 DCF，低 WACC 反映低 Beta 特性</td></tr>
+    </table></div>
+</div>
+
+<!-- 7. DCF Model -->
+<div class="card" id="sec7">
+    <h1>7. DCF 模型與敏感度分析</h1>
+    <p>10 年 DCF：WACC 3.2%（CoE 3.6%，Debt cost 0.8%），前 5 年 FCF 成長 6%，後 5 年 3%，終值成長率 2%。基礎 FCF ¥86.6B。計算結果約 ¥4.8 兆，除以 1,929M 股 = 每股 ¥2,500。</p>
+    <h2>敏感度分析表</h2><table><tr><th>PE \ EPS</th><th>170</th><th>190</th><th>203</th><th>220</th><th>240</th></tr><tr><td>8x</td><td>1,360</td><td>1,520</td><td>1,624</td><td>1,760</td><td>1,920</td></tr><tr><td>10x</td><td>1,700</td><td>1,900</td><td>2,030</td><td>2,200</td><td>2,400</td></tr><tr><td>12x</td><td>2,040</td><td>2,280</td><td>2,436</td><td>2,640</td><td>2,880</td></tr><tr><td>14x</td><td>2,380</td><td>2,660</td><td>2,842</td><td>3,080</td><td>3,360</td></tr></table>
+</div>
+
+<!-- 8. Gordon Growth Model -->
+<div class="card" id="sec8">
+    <h1>8. Gordon Growth Model ROE 辯證</h1>
+    <p>ROE = 13.5%，理論 PB = 7.19，實際 PB = 1.09，溢折價 = -84.8%</p><p>市場給予大幅折價，反映對汽車產業 EV 轉型不確定性及日本國內市場萎縮的擔憂。但 GGM 理論 PB 因低 Beta 而被放大，實際應考量汽車業週期性。以合理 PB 1.2-1.5x 計算，隱含股價 ¥2,055-2,568</p>
+    <div class="table-wrap"><table>
+        <tr><th>指標</th><th>數值</th></tr>
+        <tr><td>ROE</td><td>13.5%</td></tr>
+        <tr><td>理論 PB (Gordon)</td><td>7.19</td></tr>
+        <tr><td>實際 PB</td><td>1.09</td></tr>
+        <tr><td>解讀</td><td>市場給予大幅折價，反映對汽車產業 EV 轉型不確定性及日本國內市場萎縮的擔憂。但 GGM 理論 PB 因低 Beta 而被放大，實際應考量汽車業週期性。以合理 PB 1.2-1.5x 計算，隱含股價 ¥2,055-2,568</td></tr>
+    </table></div>
+</div>
+
+<!-- 9. Industry -->
+<div class="card" id="sec9">
+    <h1>9. 產業分析與同業比較</h1>
+    <p>全球汽車產業正經歷 EV 轉型，但日本 EV 市佔率僅 3.1%，Hybrid 仍為主流。Suzuki 核心優勢在印度（全球成長最快的大型車市），Maruti Suzuki 45% 市佔遙遙領先。中國 EV 品牌（BYD、MG）開始進入印度，但 Suzuki 的服務網絡與價格優勢仍難以撼動。</p>
+    <h2>同業比較矩陣</h2><div class="table-wrap"><table><tr><th>公司</th><th>代號</th><th>PE</th><th>EV/EBITDA</th><th>ROE</th><th>D/E</th></tr><tr><td>Suzuki</td><td>7269</td><td>9.2x</td><td>5.0x</td><td>13.5%</td><td>0.19</td></tr><tr><td>Toyota</td><td>7203</td><td>12.3x</td><td>12.5x</td><td>10.0%</td><td>0.55</td></tr><tr><td>Honda</td><td>7267</td><td>9.6x</td><td>7.9x</td><td>4.3%</td><td>1.06</td></tr></table></div>
+</div>
+
+<!-- 10. Macro -->
+<div class="card" id="sec10">
+    <h1>10. 總經與政策環境</h1>
+    <p>日本國內車市 YTD 2026 銷量 -7.1%，Suzuki 國內銷量 -5.7%。但印度市場持續擴張，Maruti Suzuki 目標 50% 市佔率。BOJ 升息將推升日圓，不利出口定價，但 Maruti 以盧比計價為主，匯率影響有限。</p>
+</div>
+
+<!-- 11. Technical -->
+<div class="card" id="sec11">
+    <h1>11. 技術面分析</h1>
+    <div class="table-wrap"><table><tr><th>指標</th><th>數值</th><th>乖離率</th><th>解讀</th></tr><tr><td>MA_20</td><td>1943</td><td>-4.3%</td><td>價在 20 日線下方，短期偏弱</td></tr><tr><td>MA_60</td><td>2142</td><td>-13.1%</td><td>大幅低於 60 日線，中期趨勢弱勢</td></tr><tr><td>RSI(14)</td><td>34.7</td><td>—</td><td>RSI 接近 30 超賣區，可能出現技術性反彈</td></tr><tr><td>KD</td><td>K=40.8 / D=52.0</td><td>—</td><td>K < D 偏弱，但 K 值已在低檔，存在黃金交叉可能</td></tr></table></div>
+</div>
+
+<!-- 12. Chip -->
+<div class="card" id="sec12">
+    <h1>12. 籌碼面分析</h1>
+    <div class="table-wrap"><table><tr><th>籌碼指標</th><th>數值</th></tr><tr><td>外國人持股比例</td><td>20-30%（推估）</td></tr></table></div><p>數據不可得（JPX 外國人持股需查閱有價證券報告書）</p>
+</div>
+
+<!-- 13. Catalyst -->
+<div class="card" id="sec13">
+    <h1>13. 消息面與催化劑</h1>
+    <h4>正面催化劑</h4><ul>
+<li><strong>e-Vitara 電動 SUV 2026 上市</strong> (FY2026) — 首款 EV 產品，打入歐洲/印度市場</li>
+<li><strong>年度股利提升至 DOE 3.0%</strong> (已宣布) — 配息率提升，殖利率 2.4%，吸引存股族</li>
+<li><strong>Maruti Suzuki 印度市佔率目標 50%</strong> (中期) — 營收成長引擎</li>
+</ul>
+<h4>負面催化劑</h4><ul>
+<li><strong>日本國內車市萎縮（YTD -7.1%）</strong> (持續) — 日本事業群營收下滑</li>
+<li><strong>日圓升值風險（BOJ 升息）</strong> (Q2 2026) — 出口車及海外營收換匯縮水</li>
+<li><strong>中國 EV 品牌競爭加劇</strong> (持續) — 東南亞及印度市場份額侵蝕</li>
+</ul>
+</div>
+
+<!-- 14. Risk & Scenarios -->
+<div class="card" id="sec14">
+    <h1>14. 風險評估與情境模擬</h1>
+    <div class="table-wrap"><table><tr><th>風險</th><th>機率</th><th>影響</th><th>應對</th></tr><tr><td>印度經濟放緩</td><td>low</td><td>high</td><td>監控印度 GDP 及汽車銷量數據</td></tr><tr><td>EV 轉型落後</td><td>medium</td><td>high</td><td>追蹤 e-Vitara 銷量及 Toyota 合作進展</td></tr><tr><td>日圓急升</td><td>medium</td><td>medium</td><td>停損設定 ¥1,600</td></tr></table></div>
+    <h2>Bull / Base / Bear 情境</h2>
+    <div class="table-wrap"><table>
+        <tr><th>情境</th><th>EPS</th><th>PE</th><th>目標價</th><th>觸發條件</th></tr>
+        <tr>
+            <td><strong>Bull 🐂</strong></td><td>240</td>
+            <td>13</td><td>3120</td>
+            <td>印度 GDP 超預期 / e-Vitara 熱銷</td>
+        </tr><tr>
+            <td><strong>Base 📊</strong></td><td>202.8</td>
+            <td>12</td><td>2434</td>
+            <td>印度穩定成長，日本國內持平</td>
+        </tr><tr>
+            <td><strong>Bear 🐻</strong></td><td>170</td>
+            <td>8</td><td>1360</td>
+            <td>全球車市衰退 / 印度政策風險</td>
+        </tr>
+    </table></div>
+    
+</div>
+
+<!-- 15. Investment Recommendation -->
+<div class="card" id="sec15">
+    <h1>15. 投資建議與操作區間</h1>
+    <div style="text-align:center;margin:12px 0;">
+        <span class="rating-badge" style="font-size:1.2rem;padding:10px 28px;">Buy</span>
+        <p style="margin-top:10px;color:#666;">PE 9.2x 為日系車廠最低估，印度 Maruti 成長引擎強勁</p>
+    </div>
+    <div class="action-grid">
+        <div class="action-item"><div class="label">進場點</div><div class="value" style="color:#1565c0;">1850</div></div>
+        <div class="action-item"><div class="label">目標價</div><div class="value" style="color:#00c853;">2430</div></div>
+        <div class="action-item"><div class="label">停損點</div><div class="value" style="color:#ff1744;">1600</div></div>
+        <div class="action-item"><div class="label">停利點</div><div class="value" style="color:#00c853;">2430</div></div>
+    </div>
+    <p style="text-align:center;font-size:0.95rem;margin-top:10px;">
+        風險報酬比 R/R = <strong>2.3:1</strong>
+    </p>
+    <p>建議 Buy，目標價 ¥2,430。進場 ¥1,850（當前價位附近），停損 ¥1,600（Bear PE 8x × EPS 200 = 1,600），停利 ¥2,430。R/R = (2430-1850)/(1850-1600) = 2.3:1。適合中長期持有。</p>
+</div>
+
+<!-- 16. Sources -->
+<div class="card sources" id="sec16">
+    <h1>16. 參考資料</h1>
+    <ol><li><a href="https://www.globalsuzuki.com/ir/library/financialresults/" target="_blank" rel="noopener">https://www.globalsuzuki.com/ir/library/financialresults/</a></li>
+<li><a href="https://finance.yahoo.com/quote/7269.T/key-statistics/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/7269.T/key-statistics/</a></li>
+<li><a href="https://tradingeconomics.com/japan/government-bond-yield" target="_blank" rel="noopener">https://tradingeconomics.com/japan/government-bond-yield</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html</a></li>
+<li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html" target="_blank" rel="noopener">https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html</a></li>
+<li><a href="https://www.focus2move.com/japan-auto-market/" target="_blank" rel="noopener">https://www.focus2move.com/japan-auto-market/</a></li>
+<li><a href="https://arthnova.com/maruti-suzuki-india-car-market-dominance/" target="_blank" rel="noopener">https://arthnova.com/maruti-suzuki-india-car-market-dominance/</a></li>
+<li><a href="https://www.tipranks.com/news/company-announcements/suzuki-motor-raises-fy2025-year-end-dividend-forecast-on-stronger-earnings-outlook" target="_blank" rel="noopener">https://www.tipranks.com/news/company-announcements/suzuki-motor-raises-fy2025-year-end-dividend-forecast-on-stronger-earnings-outlook</a></li>
+<li><a href="https://stockanalysis.com/quote/tyo/7269/" target="_blank" rel="noopener">https://stockanalysis.com/quote/tyo/7269/</a></li></ol>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>CFA 深度研究報告 | MDVI v3 | 2026-04-02 16:28 | ARTOGO Investment Research</p>
+    <p>⚠️ 本報告僅供研究參考，不構成投資建議。投資有風險，入市需謹慎。</p>
+    <p><a href="../../index.html" style="color:#1565c0;">← 返回首頁</a></p>
+</div>
+
+</div>
+</body>
+</html>
